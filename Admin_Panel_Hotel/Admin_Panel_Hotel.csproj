@@ -58,6 +58,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCustomer.Designer.cs">
+      <DependentUpon>AddCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddEditApplication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEditApplication.Designer.cs">
+      <DependentUpon>AddEditApplication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Applications.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applications.Designer.cs">
+      <DependentUpon>Applications.cs</DependentUpon>
+    </Compile>
     <Compile Include="Customers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +90,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddCustomer.resx">
+      <DependentUpon>AddCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddEditApplication.resx">
+      <DependentUpon>AddEditApplication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Applications.resx">
+      <DependentUpon>Applications.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Customers.resx">
       <DependentUpon>Customers.cs</DependentUpon>
     </EmbeddedResource>
