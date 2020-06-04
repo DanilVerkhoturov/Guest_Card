@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Admin_Panel_Hotel
 {
-    public partial class Applications_new : Form
+    public partial class NewApplications : Form
     {
-        public Applications_new()
+        public NewApplications()
         {
             InitializeComponent();
         }
