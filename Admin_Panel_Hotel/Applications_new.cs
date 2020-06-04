@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Admin_Panel_Hotel
 {
-    public partial class Applications : Form
+    public partial class Applications_new : Form
     {
-        public Applications()
+        public Applications_new()
         {
             InitializeComponent();
+        }
+
+        private void NewApplicationsMetroGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
