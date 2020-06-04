@@ -16,5 +16,10 @@ namespace Admin_Panel_Hotel
         {
             InitializeComponent();
         }
+
+        private void panel_left_menu_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
