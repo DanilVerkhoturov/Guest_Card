@@ -29,8 +29,26 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Мои заказчики");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Добавить заказчика");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Заказчики", new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode2});
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Новые");
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Текущие");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Добавить заявку");
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("История заявок");
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Черновики");
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Заявки", new System.Windows.Forms.TreeNode[] {
+            treeNode4,
+            treeNode5,
+            treeNode6,
+            treeNode7,
+            treeNode8});
             this.panel_left_menu = new System.Windows.Forms.Panel();
             this.panel_sbbutton_2 = new System.Windows.Forms.Panel();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
@@ -42,8 +60,7 @@
             this.panel_logo = new System.Windows.Forms.Panel();
             this.panel_window = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
+            this.treeView1 = new System.Windows.Forms.TreeView();
             this.panel_left_menu.SuspendLayout();
             this.panel_sbbutton_2.SuspendLayout();
             this.panel_subbutton_1.SuspendLayout();
@@ -78,6 +95,36 @@
             this.panel_sbbutton_2.Name = "panel_sbbutton_2";
             this.panel_sbbutton_2.Size = new System.Drawing.Size(200, 131);
             this.panel_sbbutton_2.TabIndex = 4;
+            // 
+            // button9
+            // 
+            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button9.FlatAppearance.BorderSize = 0;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Location = new System.Drawing.Point(0, 101);
+            this.button9.Name = "button9";
+            this.button9.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.button9.Size = new System.Drawing.Size(200, 26);
+            this.button9.TabIndex = 6;
+            this.button9.Text = "Черновики";
+            this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button9.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Location = new System.Drawing.Point(0, 75);
+            this.button4.Name = "button4";
+            this.button4.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.button4.Size = new System.Drawing.Size(200, 26);
+            this.button4.TabIndex = 5;
+            this.button4.Text = "История заявок";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.UseVisualStyleBackColor = true;
             // 
             // button6
             // 
@@ -208,6 +255,7 @@
             // panel_window
             // 
             this.panel_window.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panel_window.Controls.Add(this.treeView1);
             this.panel_window.Controls.Add(this.pictureBox1);
             this.panel_window.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_window.Location = new System.Drawing.Point(200, 0);
@@ -226,35 +274,39 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // button4
+            // treeView1
             // 
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(0, 75);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.button4.Size = new System.Drawing.Size(200, 26);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "История заявок";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Location = new System.Drawing.Point(0, 101);
-            this.button9.Name = "button9";
-            this.button9.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.button9.Size = new System.Drawing.Size(200, 26);
-            this.button9.TabIndex = 6;
-            this.button9.Text = "Черновики";
-            this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button9.UseVisualStyleBackColor = true;
+            this.treeView1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.treeView1.Indent = 19;
+            this.treeView1.ItemHeight = 30;
+            this.treeView1.Location = new System.Drawing.Point(35, 100);
+            this.treeView1.Name = "treeView1";
+            treeNode1.Name = "MyCustomersNode";
+            treeNode1.Text = "Мои заказчики";
+            treeNode2.Name = "AddCustomerNode";
+            treeNode2.Text = "Добавить заказчика";
+            treeNode3.Name = "CustomersNode";
+            treeNode3.Text = "Заказчики";
+            treeNode4.Name = "NewApplicationsNode";
+            treeNode4.Text = "Новые";
+            treeNode5.Name = "CurrentApplicationsNode";
+            treeNode5.Text = "Текущие";
+            treeNode6.Name = "AddApplicationsNode";
+            treeNode6.Text = "Добавить заявку";
+            treeNode7.Name = "HistoryApplicationsNode";
+            treeNode7.Text = "История заявок";
+            treeNode8.Name = "DraftApplicationsNode";
+            treeNode8.Text = "Черновики";
+            treeNode9.Name = "ApplicationsNode";
+            treeNode9.Text = "Заявки";
+            this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            treeNode3,
+            treeNode9});
+            this.treeView1.ShowLines = false;
+            this.treeView1.ShowNodeToolTips = true;
+            this.treeView1.ShowRootLines = false;
+            this.treeView1.Size = new System.Drawing.Size(217, 370);
+            this.treeView1.TabIndex = 1;
             // 
             // Form1
             // 
@@ -291,6 +343,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.TreeView treeView1;
     }
 }
 

@@ -70,11 +70,11 @@
     <Compile Include="AddEditApplication.Designer.cs">
       <DependentUpon>AddEditApplication.cs</DependentUpon>
     </Compile>
-    <Compile Include="Applications_new.cs">
+    <Compile Include="NewApplications.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Applications_new.Designer.cs">
-      <DependentUpon>Applications_new.cs</DependentUpon>
+    <Compile Include="NewApplications.Designer.cs">
+      <DependentUpon>NewApplications.cs</DependentUpon>
     </Compile>
     <Compile Include="Customers.cs">
       <SubType>Form</SubType>
@@ -96,8 +96,8 @@
     <EmbeddedResource Include="AddEditApplication.resx">
       <DependentUpon>AddEditApplication.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Applications_new.resx">
-      <DependentUpon>Applications_new.cs</DependentUpon>
+    <EmbeddedResource Include="NewApplications.resx">
+      <DependentUpon>NewApplications.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Customers.resx">
       <DependentUpon>Customers.cs</DependentUpon>
