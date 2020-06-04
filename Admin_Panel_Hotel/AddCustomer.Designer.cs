@@ -29,15 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddCustomer));
-            this.NameMetroTextBox = new MetroFramework.Controls.MetroTextBox();
-            this.AddressMetroTextBox = new MetroFramework.Controls.MetroTextBox();
-            this.INNMetroTextBox = new MetroFramework.Controls.MetroTextBox();
-            this.OGRNMetroTextBox = new MetroFramework.Controls.MetroTextBox();
-            this.NumContractMetroTextBox = new MetroFramework.Controls.MetroTextBox();
-            this.EmailMetroTextBox = new MetroFramework.Controls.MetroTextBox();
-            this.AddCustomerMetroButton = new MetroFramework.Controls.MetroButton();
-            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
-            this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
+           
             this.AddLocationButton = new System.Windows.Forms.PictureBox();
             this.Allcheckbox = new XanderUI.XUICheckBox();
             this.xuiCheckBox2 = new XanderUI.XUICheckBox();
@@ -56,274 +48,59 @@
             // 
             // 
             // 
-            this.NameMetroTextBox.CustomButton.AutoEllipsis = true;
-            this.NameMetroTextBox.CustomButton.Image = null;
-            this.NameMetroTextBox.CustomButton.Location = new System.Drawing.Point(452, 1);
-            this.NameMetroTextBox.CustomButton.Name = "";
-            this.NameMetroTextBox.CustomButton.Size = new System.Drawing.Size(23, 23);
-            this.NameMetroTextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.NameMetroTextBox.CustomButton.TabIndex = 1;
-            this.NameMetroTextBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.NameMetroTextBox.CustomButton.UseSelectable = true;
-            this.NameMetroTextBox.CustomButton.Visible = false;
-            this.NameMetroTextBox.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.NameMetroTextBox.Lines = new string[0];
-            this.NameMetroTextBox.Location = new System.Drawing.Point(50, 50);
-            this.NameMetroTextBox.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
-            this.NameMetroTextBox.MaxLength = 32767;
-            this.NameMetroTextBox.Name = "NameMetroTextBox";
-            this.NameMetroTextBox.PasswordChar = '\0';
-            this.NameMetroTextBox.PromptText = "Наименование организации";
-            this.NameMetroTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.NameMetroTextBox.SelectedText = "";
-            this.NameMetroTextBox.SelectionLength = 0;
-            this.NameMetroTextBox.SelectionStart = 0;
-            this.NameMetroTextBox.ShortcutsEnabled = true;
-            this.NameMetroTextBox.ShowClearButton = true;
-            this.NameMetroTextBox.Size = new System.Drawing.Size(476, 25);
-            this.NameMetroTextBox.TabIndex = 0;
-            this.NameMetroTextBox.UseSelectable = true;
-            this.NameMetroTextBox.WaterMark = "Наименование организации";
-            this.NameMetroTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.NameMetroTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            // 
+           
             // AddressMetroTextBox
             // 
             // 
             // 
             // 
-            this.AddressMetroTextBox.CustomButton.Image = null;
-            this.AddressMetroTextBox.CustomButton.Location = new System.Drawing.Point(452, 1);
-            this.AddressMetroTextBox.CustomButton.Name = "";
-            this.AddressMetroTextBox.CustomButton.Size = new System.Drawing.Size(23, 23);
-            this.AddressMetroTextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.AddressMetroTextBox.CustomButton.TabIndex = 1;
-            this.AddressMetroTextBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.AddressMetroTextBox.CustomButton.UseSelectable = true;
-            this.AddressMetroTextBox.CustomButton.Visible = false;
-            this.AddressMetroTextBox.Lines = new string[0];
-            this.AddressMetroTextBox.Location = new System.Drawing.Point(50, 80);
-            this.AddressMetroTextBox.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
-            this.AddressMetroTextBox.MaxLength = 32767;
-            this.AddressMetroTextBox.Name = "AddressMetroTextBox";
-            this.AddressMetroTextBox.PasswordChar = '\0';
-            this.AddressMetroTextBox.PromptText = "Адрес";
-            this.AddressMetroTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.AddressMetroTextBox.SelectedText = "";
-            this.AddressMetroTextBox.SelectionLength = 0;
-            this.AddressMetroTextBox.SelectionStart = 0;
-            this.AddressMetroTextBox.ShortcutsEnabled = true;
-            this.AddressMetroTextBox.Size = new System.Drawing.Size(476, 25);
-            this.AddressMetroTextBox.TabIndex = 2;
-            this.AddressMetroTextBox.UseSelectable = true;
-            this.AddressMetroTextBox.WaterMark = "Адрес";
-            this.AddressMetroTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.AddressMetroTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+           
             // 
             // INNMetroTextBox
             // 
             // 
             // 
             // 
-            this.INNMetroTextBox.CustomButton.Image = null;
-            this.INNMetroTextBox.CustomButton.Location = new System.Drawing.Point(452, 1);
-            this.INNMetroTextBox.CustomButton.Name = "";
-            this.INNMetroTextBox.CustomButton.Size = new System.Drawing.Size(23, 23);
-            this.INNMetroTextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.INNMetroTextBox.CustomButton.TabIndex = 1;
-            this.INNMetroTextBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.INNMetroTextBox.CustomButton.UseSelectable = true;
-            this.INNMetroTextBox.CustomButton.Visible = false;
-            this.INNMetroTextBox.Lines = new string[0];
-            this.INNMetroTextBox.Location = new System.Drawing.Point(50, 113);
-            this.INNMetroTextBox.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
-            this.INNMetroTextBox.MaxLength = 16;
-            this.INNMetroTextBox.Name = "INNMetroTextBox";
-            this.INNMetroTextBox.PasswordChar = '\0';
-            this.INNMetroTextBox.PromptText = "ИНН";
-            this.INNMetroTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.INNMetroTextBox.SelectedText = "";
-            this.INNMetroTextBox.SelectionLength = 0;
-            this.INNMetroTextBox.SelectionStart = 0;
-            this.INNMetroTextBox.ShortcutsEnabled = true;
-            this.INNMetroTextBox.Size = new System.Drawing.Size(476, 25);
-            this.INNMetroTextBox.TabIndex = 6;
-            this.INNMetroTextBox.UseSelectable = true;
-            this.INNMetroTextBox.WaterMark = "ИНН";
-            this.INNMetroTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.INNMetroTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+           
             // 
             // OGRNMetroTextBox
             // 
             // 
             // 
             // 
-            this.OGRNMetroTextBox.CustomButton.Image = null;
-            this.OGRNMetroTextBox.CustomButton.Location = new System.Drawing.Point(452, 1);
-            this.OGRNMetroTextBox.CustomButton.Name = "";
-            this.OGRNMetroTextBox.CustomButton.Size = new System.Drawing.Size(23, 23);
-            this.OGRNMetroTextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.OGRNMetroTextBox.CustomButton.TabIndex = 1;
-            this.OGRNMetroTextBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.OGRNMetroTextBox.CustomButton.UseSelectable = true;
-            this.OGRNMetroTextBox.CustomButton.Visible = false;
-            this.OGRNMetroTextBox.Lines = new string[0];
-            this.OGRNMetroTextBox.Location = new System.Drawing.Point(50, 146);
-            this.OGRNMetroTextBox.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
-            this.OGRNMetroTextBox.MaxLength = 16;
-            this.OGRNMetroTextBox.Name = "OGRNMetroTextBox";
-            this.OGRNMetroTextBox.PasswordChar = '\0';
-            this.OGRNMetroTextBox.PromptText = "ОГРН";
-            this.OGRNMetroTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.OGRNMetroTextBox.SelectedText = "";
-            this.OGRNMetroTextBox.SelectionLength = 0;
-            this.OGRNMetroTextBox.SelectionStart = 0;
-            this.OGRNMetroTextBox.ShortcutsEnabled = true;
-            this.OGRNMetroTextBox.Size = new System.Drawing.Size(476, 25);
-            this.OGRNMetroTextBox.TabIndex = 8;
-            this.OGRNMetroTextBox.UseSelectable = true;
-            this.OGRNMetroTextBox.WaterMark = "ОГРН";
-            this.OGRNMetroTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.OGRNMetroTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+           
             // 
             // NumContractMetroTextBox
             // 
             // 
             // 
             // 
-            this.NumContractMetroTextBox.CustomButton.Image = null;
-            this.NumContractMetroTextBox.CustomButton.Location = new System.Drawing.Point(452, 1);
-            this.NumContractMetroTextBox.CustomButton.Name = "";
-            this.NumContractMetroTextBox.CustomButton.Size = new System.Drawing.Size(23, 23);
-            this.NumContractMetroTextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.NumContractMetroTextBox.CustomButton.TabIndex = 1;
-            this.NumContractMetroTextBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.NumContractMetroTextBox.CustomButton.UseSelectable = true;
-            this.NumContractMetroTextBox.CustomButton.Visible = false;
-            this.NumContractMetroTextBox.Lines = new string[0];
-            this.NumContractMetroTextBox.Location = new System.Drawing.Point(50, 177);
-            this.NumContractMetroTextBox.MaxLength = 16;
-            this.NumContractMetroTextBox.Name = "NumContractMetroTextBox";
-            this.NumContractMetroTextBox.PasswordChar = '\0';
-            this.NumContractMetroTextBox.PromptText = "Номер договора";
-            this.NumContractMetroTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.NumContractMetroTextBox.SelectedText = "";
-            this.NumContractMetroTextBox.SelectionLength = 0;
-            this.NumContractMetroTextBox.SelectionStart = 0;
-            this.NumContractMetroTextBox.ShortcutsEnabled = true;
-            this.NumContractMetroTextBox.Size = new System.Drawing.Size(476, 25);
-            this.NumContractMetroTextBox.TabIndex = 10;
-            this.NumContractMetroTextBox.UseSelectable = true;
-            this.NumContractMetroTextBox.WaterMark = "Номер договора";
-            this.NumContractMetroTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.NumContractMetroTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            
             // 
             // EmailMetroTextBox
             // 
             // 
             // 
             // 
-            this.EmailMetroTextBox.CustomButton.Image = null;
-            this.EmailMetroTextBox.CustomButton.Location = new System.Drawing.Point(452, 1);
-            this.EmailMetroTextBox.CustomButton.Name = "";
-            this.EmailMetroTextBox.CustomButton.Size = new System.Drawing.Size(23, 23);
-            this.EmailMetroTextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.EmailMetroTextBox.CustomButton.TabIndex = 1;
-            this.EmailMetroTextBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.EmailMetroTextBox.CustomButton.UseSelectable = true;
-            this.EmailMetroTextBox.CustomButton.Visible = false;
-            this.EmailMetroTextBox.Lines = new string[0];
-            this.EmailMetroTextBox.Location = new System.Drawing.Point(50, 270);
-            this.EmailMetroTextBox.MaxLength = 16;
-            this.EmailMetroTextBox.Name = "EmailMetroTextBox";
-            this.EmailMetroTextBox.PasswordChar = '\0';
-            this.EmailMetroTextBox.PromptText = "Электронная почта заказчика";
-            this.EmailMetroTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.EmailMetroTextBox.SelectedText = "";
-            this.EmailMetroTextBox.SelectionLength = 0;
-            this.EmailMetroTextBox.SelectionStart = 0;
-            this.EmailMetroTextBox.ShortcutsEnabled = true;
-            this.EmailMetroTextBox.Size = new System.Drawing.Size(476, 25);
-            this.EmailMetroTextBox.TabIndex = 17;
-            this.EmailMetroTextBox.UseSelectable = true;
-            this.EmailMetroTextBox.WaterMark = "Электронная почта заказчика";
-            this.EmailMetroTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.EmailMetroTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
+            
             // AddCustomerMetroButton
             // 
-            this.AddCustomerMetroButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.AddCustomerMetroButton.Location = new System.Drawing.Point(641, 489);
-            this.AddCustomerMetroButton.Name = "AddCustomerMetroButton";
-            this.AddCustomerMetroButton.Size = new System.Drawing.Size(138, 33);
-            this.AddCustomerMetroButton.TabIndex = 20;
-            this.AddCustomerMetroButton.Text = "Добавить";
-            this.AddCustomerMetroButton.UseSelectable = true;
+           
             // 
             // metroTextBox1
             // 
             // 
             // 
             // 
-            this.metroTextBox1.CustomButton.Image = null;
-            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(452, 1);
-            this.metroTextBox1.CustomButton.Name = "";
-            this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(23, 23);
-            this.metroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox1.CustomButton.TabIndex = 1;
-            this.metroTextBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox1.CustomButton.UseSelectable = true;
-            this.metroTextBox1.CustomButton.Visible = false;
-            this.metroTextBox1.Lines = new string[0];
-            this.metroTextBox1.Location = new System.Drawing.Point(50, 239);
-            this.metroTextBox1.MaxLength = 16;
-            this.metroTextBox1.Name = "metroTextBox1";
-            this.metroTextBox1.PasswordChar = '\0';
-            this.metroTextBox1.PromptText = "Срок договора";
-            this.metroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox1.SelectedText = "";
-            this.metroTextBox1.SelectionLength = 0;
-            this.metroTextBox1.SelectionStart = 0;
-            this.metroTextBox1.ShortcutsEnabled = true;
-            this.metroTextBox1.Size = new System.Drawing.Size(476, 25);
-            this.metroTextBox1.TabIndex = 15;
-            this.metroTextBox1.UseSelectable = true;
-            this.metroTextBox1.WaterMark = "Срок договора";
-            this.metroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+           
             // 
             // metroTextBox2
             // 
-            this.metroTextBox2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            
             // 
             // 
             // 
-            this.metroTextBox2.CustomButton.Image = null;
-            this.metroTextBox2.CustomButton.Location = new System.Drawing.Point(452, 1);
-            this.metroTextBox2.CustomButton.Name = "";
-            this.metroTextBox2.CustomButton.Size = new System.Drawing.Size(23, 23);
-            this.metroTextBox2.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox2.CustomButton.TabIndex = 1;
-            this.metroTextBox2.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox2.CustomButton.UseSelectable = true;
-            this.metroTextBox2.CustomButton.Visible = false;
-            this.metroTextBox2.Lines = new string[0];
-            this.metroTextBox2.Location = new System.Drawing.Point(50, 208);
-            this.metroTextBox2.MaxLength = 16;
-            this.metroTextBox2.Name = "metroTextBox2";
-            this.metroTextBox2.PasswordChar = '\0';
-            this.metroTextBox2.PromptText = "Локация";
-            this.metroTextBox2.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox2.SelectedText = "";
-            this.metroTextBox2.SelectionLength = 0;
-            this.metroTextBox2.SelectionStart = 0;
-            this.metroTextBox2.ShortcutsEnabled = true;
-            this.metroTextBox2.Size = new System.Drawing.Size(476, 25);
-            this.metroTextBox2.TabIndex = 21;
-            this.metroTextBox2.UseSelectable = true;
-            this.metroTextBox2.WaterMark = "Локация";
-            this.metroTextBox2.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox2.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+          
             // 
             // AddLocationButton
             // 
@@ -482,15 +259,7 @@
             this.Controls.Add(this.xuiCheckBox2);
             this.Controls.Add(this.Allcheckbox);
             this.Controls.Add(this.AddLocationButton);
-            this.Controls.Add(this.metroTextBox2);
-            this.Controls.Add(this.AddCustomerMetroButton);
-            this.Controls.Add(this.EmailMetroTextBox);
-            this.Controls.Add(this.metroTextBox1);
-            this.Controls.Add(this.NumContractMetroTextBox);
-            this.Controls.Add(this.OGRNMetroTextBox);
-            this.Controls.Add(this.INNMetroTextBox);
-            this.Controls.Add(this.AddressMetroTextBox);
-            this.Controls.Add(this.NameMetroTextBox);
+           
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddCustomer";
             this.Text = "AddCustomer";
@@ -502,15 +271,7 @@
 
         #endregion
 
-        private MetroFramework.Controls.MetroTextBox NameMetroTextBox;
-        private MetroFramework.Controls.MetroTextBox AddressMetroTextBox;
-        private MetroFramework.Controls.MetroTextBox INNMetroTextBox;
-        private MetroFramework.Controls.MetroTextBox OGRNMetroTextBox;
-        private MetroFramework.Controls.MetroTextBox NumContractMetroTextBox;
-        private MetroFramework.Controls.MetroTextBox EmailMetroTextBox;
-        private MetroFramework.Controls.MetroButton AddCustomerMetroButton;
-        private MetroFramework.Controls.MetroTextBox metroTextBox1;
-        private MetroFramework.Controls.MetroTextBox metroTextBox2;
+        
         private System.Windows.Forms.PictureBox AddLocationButton;
         private XanderUI.XUICheckBox Allcheckbox;
         private XanderUI.XUICheckBox xuiCheckBox2;
