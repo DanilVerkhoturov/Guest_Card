@@ -1,6 +1,6 @@
 ﻿namespace Admin_Panel_Hotel
 {
-    partial class Applications_new
+    partial class NewApplications
     {
         /// <summary>
         /// Required designer variable.
