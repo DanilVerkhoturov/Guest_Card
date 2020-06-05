@@ -1,6 +1,6 @@
 ﻿namespace Admin_Panel_Hotel
 {
-    partial class NewApplications
+    partial class CurrentApplications
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewApplications));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CurrentApplications));
             this.Castomer = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Location = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
@@ -59,9 +59,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(29, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(135, 24);
+            this.label1.Size = new System.Drawing.Size(152, 24);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Новые заявки";
+            this.label1.Text = "Текущие заявки";
             // 
             // ApplicationsNameTextBox1
             // 
@@ -72,7 +72,7 @@
             this.ApplicationsNameTextBox1.Margin = new System.Windows.Forms.Padding(3, 3, 3, 12);
             this.ApplicationsNameTextBox1.Multiline = true;
             this.ApplicationsNameTextBox1.Name = "ApplicationsNameTextBox1";
-            this.ApplicationsNameTextBox1.Size = new System.Drawing.Size(287, 29);
+            this.ApplicationsNameTextBox1.Size = new System.Drawing.Size(287, 25);
             this.ApplicationsNameTextBox1.TabIndex = 3;
             this.ApplicationsNameTextBox1.Text = "Заявка-1";
             // 
@@ -85,7 +85,7 @@
             this.ApplicationsNameTextBox2.Margin = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.ApplicationsNameTextBox2.Multiline = true;
             this.ApplicationsNameTextBox2.Name = "ApplicationsNameTextBox2";
-            this.ApplicationsNameTextBox2.Size = new System.Drawing.Size(287, 29);
+            this.ApplicationsNameTextBox2.Size = new System.Drawing.Size(287, 25);
             this.ApplicationsNameTextBox2.TabIndex = 6;
             this.ApplicationsNameTextBox2.Text = "Заявка-2";
             // 
@@ -96,7 +96,7 @@
             this.ShowApplicationButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ShowApplicationButton1.Location = new System.Drawing.Point(326, 65);
             this.ShowApplicationButton1.Name = "ShowApplicationButton1";
-            this.ShowApplicationButton1.Size = new System.Drawing.Size(29, 29);
+            this.ShowApplicationButton1.Size = new System.Drawing.Size(25, 25);
             this.ShowApplicationButton1.TabIndex = 7;
             this.ShowApplicationButton1.UseVisualStyleBackColor = false;
             this.ShowApplicationButton1.Click += new System.EventHandler(this.ShowApplicationButton1_Click);
@@ -108,11 +108,11 @@
             this.ShowApplicationsButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ShowApplicationsButton2.Location = new System.Drawing.Point(326, 102);
             this.ShowApplicationsButton2.Name = "ShowApplicationsButton2";
-            this.ShowApplicationsButton2.Size = new System.Drawing.Size(29, 29);
+            this.ShowApplicationsButton2.Size = new System.Drawing.Size(25, 25);
             this.ShowApplicationsButton2.TabIndex = 8;
             this.ShowApplicationsButton2.UseVisualStyleBackColor = false;
             // 
-            // NewApplications
+            // CurrentApplications
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -125,7 +125,7 @@
             this.Controls.Add(this.ApplicationsNameTextBox1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "NewApplications";
+            this.Name = "CurrentApplications";
             this.Text = "Applications";
             this.ResumeLayout(false);
             this.PerformLayout();

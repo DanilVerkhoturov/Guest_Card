@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Admin_Panel_Hotel
 {
-    public partial class MainForm : Form
+    public partial class MainForm : System.Windows.Forms.Form
     {
         public static Panel ContP = null;
         public MainForm()

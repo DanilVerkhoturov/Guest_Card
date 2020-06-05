@@ -55,11 +55,29 @@
     <Compile Include="AddCustomer.Designer.cs">
       <DependentUpon>AddCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddApplication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddApplication.Designer.cs">
+      <DependentUpon>AddApplication.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddEditApplication.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AddEditApplication.Designer.cs">
       <DependentUpon>AddEditApplication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CurrentApplications.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CurrentApplications.Designer.cs">
+      <DependentUpon>CurrentApplications.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NotificationsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotificationsForm.Designer.cs">
+      <DependentUpon>NotificationsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Functions.cs" />
     <Compile Include="NewApplications.cs">
@@ -91,8 +109,17 @@
     <EmbeddedResource Include="AddCustomer.resx">
       <DependentUpon>AddCustomer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddApplication.resx">
+      <DependentUpon>AddApplication.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddEditApplication.resx">
       <DependentUpon>AddEditApplication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CurrentApplications.resx">
+      <DependentUpon>CurrentApplications.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotificationsForm.resx">
+      <DependentUpon>NotificationsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NewApplications.resx">
       <DependentUpon>NewApplications.cs</DependentUpon>

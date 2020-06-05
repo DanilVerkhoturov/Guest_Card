@@ -60,6 +60,7 @@
             // 
             // AddLocationButton
             // 
+            this.AddLocationButton.BackColor = System.Drawing.Color.Transparent;
             this.AddLocationButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddLocationButton.BackgroundImage")));
             this.AddLocationButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.AddLocationButton.FlatAppearance.BorderSize = 0;
@@ -69,7 +70,7 @@
             this.AddLocationButton.Name = "AddLocationButton";
             this.AddLocationButton.Size = new System.Drawing.Size(25, 25);
             this.AddLocationButton.TabIndex = 32;
-            this.AddLocationButton.UseVisualStyleBackColor = true;
+            this.AddLocationButton.UseVisualStyleBackColor = false;
             // 
             // CardProperties_Customer_Panel
             // 
@@ -95,7 +96,7 @@
             // AddCustomerButton
             // 
             this.AddCustomerButton.BackColor = System.Drawing.SystemColors.Highlight;
-            this.AddCustomerButton.FlatAppearance.BorderSize = 0;
+            this.AddCustomerButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.AddCustomerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddCustomerButton.ForeColor = System.Drawing.Color.White;
             this.AddCustomerButton.Location = new System.Drawing.Point(365, 192);
@@ -228,12 +229,14 @@
             // 
             // Email_Customer_TextBox
             // 
-            this.Email_Customer_TextBox.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.Email_Customer_TextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Email_Customer_TextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Email_Customer_TextBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Email_Customer_TextBox.Location = new System.Drawing.Point(55, 336);
             this.Email_Customer_TextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Email_Customer_TextBox.Multiline = true;
             this.Email_Customer_TextBox.Name = "Email_Customer_TextBox";
-            this.Email_Customer_TextBox.Size = new System.Drawing.Size(480, 25);
+            this.Email_Customer_TextBox.Size = new System.Drawing.Size(480, 29);
             this.Email_Customer_TextBox.TabIndex = 30;
             this.Email_Customer_TextBox.Tag = "Наименование организации";
             this.Email_Customer_TextBox.Text = "Электронная почта заказчика";
@@ -241,12 +244,14 @@
             // 
             // Location_Customer_TextBox
             // 
-            this.Location_Customer_TextBox.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.Location_Customer_TextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Location_Customer_TextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Location_Customer_TextBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Location_Customer_TextBox.Location = new System.Drawing.Point(55, 255);
             this.Location_Customer_TextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Location_Customer_TextBox.Multiline = true;
             this.Location_Customer_TextBox.Name = "Location_Customer_TextBox";
-            this.Location_Customer_TextBox.Size = new System.Drawing.Size(480, 25);
+            this.Location_Customer_TextBox.Size = new System.Drawing.Size(480, 29);
             this.Location_Customer_TextBox.TabIndex = 28;
             this.Location_Customer_TextBox.Tag = "Наименование организации";
             this.Location_Customer_TextBox.Text = "Локация";
@@ -254,12 +259,14 @@
             // 
             // ContractNumber_Customer_TextBox
             // 
-            this.ContractNumber_Customer_TextBox.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.ContractNumber_Customer_TextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ContractNumber_Customer_TextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ContractNumber_Customer_TextBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ContractNumber_Customer_TextBox.Location = new System.Drawing.Point(55, 219);
             this.ContractNumber_Customer_TextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ContractNumber_Customer_TextBox.Multiline = true;
             this.ContractNumber_Customer_TextBox.Name = "ContractNumber_Customer_TextBox";
-            this.ContractNumber_Customer_TextBox.Size = new System.Drawing.Size(480, 25);
+            this.ContractNumber_Customer_TextBox.Size = new System.Drawing.Size(480, 29);
             this.ContractNumber_Customer_TextBox.TabIndex = 27;
             this.ContractNumber_Customer_TextBox.Tag = "Наименование организации";
             this.ContractNumber_Customer_TextBox.Text = "Номер договора";
@@ -267,12 +274,14 @@
             // 
             // OGRN_Customer_TextBox
             // 
-            this.OGRN_Customer_TextBox.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.OGRN_Customer_TextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.OGRN_Customer_TextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.OGRN_Customer_TextBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.OGRN_Customer_TextBox.Location = new System.Drawing.Point(55, 186);
             this.OGRN_Customer_TextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.OGRN_Customer_TextBox.Multiline = true;
             this.OGRN_Customer_TextBox.Name = "OGRN_Customer_TextBox";
-            this.OGRN_Customer_TextBox.Size = new System.Drawing.Size(480, 25);
+            this.OGRN_Customer_TextBox.Size = new System.Drawing.Size(480, 29);
             this.OGRN_Customer_TextBox.TabIndex = 25;
             this.OGRN_Customer_TextBox.Tag = "Наименование организации";
             this.OGRN_Customer_TextBox.Text = "ОГРН";
@@ -280,12 +289,14 @@
             // 
             // INN_Customer_TextBox
             // 
-            this.INN_Customer_TextBox.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.INN_Customer_TextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.INN_Customer_TextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.INN_Customer_TextBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.INN_Customer_TextBox.Location = new System.Drawing.Point(55, 153);
             this.INN_Customer_TextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.INN_Customer_TextBox.Multiline = true;
             this.INN_Customer_TextBox.Name = "INN_Customer_TextBox";
-            this.INN_Customer_TextBox.Size = new System.Drawing.Size(480, 25);
+            this.INN_Customer_TextBox.Size = new System.Drawing.Size(480, 29);
             this.INN_Customer_TextBox.TabIndex = 24;
             this.INN_Customer_TextBox.Tag = "Наименование организации";
             this.INN_Customer_TextBox.Text = "ИНН";
@@ -293,12 +304,14 @@
             // 
             // Address_Customer_TextBox
             // 
-            this.Address_Customer_TextBox.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.Address_Customer_TextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Address_Customer_TextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Address_Customer_TextBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Address_Customer_TextBox.Location = new System.Drawing.Point(55, 120);
             this.Address_Customer_TextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Address_Customer_TextBox.Multiline = true;
             this.Address_Customer_TextBox.Name = "Address_Customer_TextBox";
-            this.Address_Customer_TextBox.Size = new System.Drawing.Size(480, 25);
+            this.Address_Customer_TextBox.Size = new System.Drawing.Size(480, 29);
             this.Address_Customer_TextBox.TabIndex = 23;
             this.Address_Customer_TextBox.Tag = "Наименование организации";
             this.Address_Customer_TextBox.Text = "Адрес";
@@ -306,12 +319,14 @@
             // 
             // Name_Customer_TextBox
             // 
-            this.Name_Customer_TextBox.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.Name_Customer_TextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Name_Customer_TextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Name_Customer_TextBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Name_Customer_TextBox.Location = new System.Drawing.Point(55, 87);
             this.Name_Customer_TextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Name_Customer_TextBox.Multiline = true;
             this.Name_Customer_TextBox.Name = "Name_Customer_TextBox";
-            this.Name_Customer_TextBox.Size = new System.Drawing.Size(480, 25);
+            this.Name_Customer_TextBox.Size = new System.Drawing.Size(480, 29);
             this.Name_Customer_TextBox.TabIndex = 22;
             this.Name_Customer_TextBox.Tag = "Наименование организации";
             this.Name_Customer_TextBox.Text = "Наименование организации";
@@ -339,7 +354,8 @@
             // FromContractTime_Customer_DateTimePicker
             // 
             this.FromContractTime_Customer_DateTimePicker.CalendarForeColor = System.Drawing.Color.Black;
-            this.FromContractTime_Customer_DateTimePicker.CalendarMonthBackground = System.Drawing.SystemColors.InactiveCaption;
+            this.FromContractTime_Customer_DateTimePicker.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.FromContractTime_Customer_DateTimePicker.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.FromContractTime_Customer_DateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.FromContractTime_Customer_DateTimePicker.Location = new System.Drawing.Point(84, 304);
             this.FromContractTime_Customer_DateTimePicker.Name = "FromContractTime_Customer_DateTimePicker";
@@ -367,7 +383,8 @@
             // 
             // ToContractTime_Customer_DateTimePicker
             // 
-            this.ToContractTime_Customer_DateTimePicker.CalendarMonthBackground = System.Drawing.SystemColors.InactiveCaption;
+            this.ToContractTime_Customer_DateTimePicker.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ToContractTime_Customer_DateTimePicker.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ToContractTime_Customer_DateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.ToContractTime_Customer_DateTimePicker.Location = new System.Drawing.Point(276, 302);
             this.ToContractTime_Customer_DateTimePicker.Name = "ToContractTime_Customer_DateTimePicker";
@@ -378,7 +395,7 @@
             // AddCustomer
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(597, 707);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.ToContractTime_Customer_DateTimePicker);

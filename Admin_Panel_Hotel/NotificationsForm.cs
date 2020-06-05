@@ -10,19 +10,24 @@ using System.Windows.Forms;
 
 namespace Admin_Panel_Hotel
 {
-    public partial class AddEditApplication : System.Windows.Forms.Form
+    public partial class NotificationsForm : System.Windows.Forms.Form
     {
-        public AddEditApplication()
+        public NotificationsForm()
         {
             InitializeComponent();
         }
 
-        private void NewApplication_Click(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
-            Functions.OpenChildForm(new NewApplications(), MainForm.ContP);
+
         }
 
-        private void Number1_TextChanged(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ApplicationAddText_Click(object sender, EventArgs e)
         {
 
         }

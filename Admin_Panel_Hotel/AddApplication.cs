@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Admin_Panel_Hotel
 {
-    public partial class AddEditApplication : System.Windows.Forms.Form
+    public partial class AddApplication : System.Windows.Forms.Form
     {
-        public AddEditApplication()
+        public AddApplication()
         {
             InitializeComponent();
         }
@@ -23,6 +23,11 @@ namespace Admin_Panel_Hotel
         }
 
         private void Number1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

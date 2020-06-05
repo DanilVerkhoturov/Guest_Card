@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Admin_Panel_Hotel
 {
-    public partial class Customers : System.Windows.Forms.Form
+    public partial class CurrentApplications : Form
     {
-        public Customers()
+        public CurrentApplications()
         {
             InitializeComponent();
+        }
+
+        private void ShowApplicationButton1_Click(object sender, EventArgs e)
+        {
+            Functions.OpenChildForm(new AddEditApplication(), MainForm.ContP);
         }
     }
 }

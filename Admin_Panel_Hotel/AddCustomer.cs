@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Admin_Panel_Hotel
 {
-    public partial class AddCustomer : Form
+    public partial class AddCustomer : System.Windows.Forms.Form
     {
         public AddCustomer()
         {

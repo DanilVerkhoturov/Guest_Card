@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Admin_Panel_Hotel
 {
-    public partial class PatternForm : Form
+    public partial class PatternForm : System.Windows.Forms.Form
     {
         public PatternForm()
         {

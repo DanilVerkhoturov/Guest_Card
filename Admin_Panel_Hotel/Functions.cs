@@ -4,14 +4,14 @@ namespace Admin_Panel_Hotel
 {
     class Functions
     {
-        static Form ActiveForm = null;
+        static System.Windows.Forms.Form ActiveForm = null;
 
         /// <summary>
         /// Открыть дочернюю форму на форме.
         /// </summary>
         /// <param name="childForm">Дочерняя форма.</param>
         /// <param name="contentPanel">Панель на которой требуется отобразить форму.</param>
-        public static void OpenChildForm(Form childForm, Panel contentPanel)
+        public static void OpenChildForm(System.Windows.Forms.Form childForm, Panel contentPanel)
         {
             if (ActiveForm != null)
                 ActiveForm.Close();
