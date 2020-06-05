@@ -29,263 +29,192 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddCustomer));
-            this.label1 = new System.Windows.Forms.Label();
-            this.CustomerNameTextBox = new System.Windows.Forms.TextBox();
-            this.AddressTextBox = new System.Windows.Forms.TextBox();
-            this.INNTextBox = new System.Windows.Forms.TextBox();
-            this.OGRNTextBox = new System.Windows.Forms.TextBox();
-            this.EmailTextBox = new System.Windows.Forms.TextBox();
-            this.ContractTimetextBox = new System.Windows.Forms.TextBox();
-            this.LocationTextBox = new System.Windows.Forms.TextBox();
-            this.ContractNumberTextBox = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.Set1HelpButton = new System.Windows.Forms.Button();
-            this.Set2HelpButton = new System.Windows.Forms.Button();
-            this.Set2checkBox = new System.Windows.Forms.CheckBox();
-            this.Set1CheckBox = new System.Windows.Forms.CheckBox();
-            this.FireSafetyCheckBox = new System.Windows.Forms.CheckBox();
-            this.ResidenceRulesCheckBox = new System.Windows.Forms.CheckBox();
-            this.InstructedCheckBox = new System.Windows.Forms.CheckBox();
-            this.GiveOutLinenCheckBox = new System.Windows.Forms.CheckBox();
-            this.AllPropertiesCheckBox = new System.Windows.Forms.CheckBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.AddLocationButton = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
+            this.CardProperties_Customer_Panel = new System.Windows.Forms.Panel();
+            this.AddCustomerButton = new System.Windows.Forms.Button();
+            this.Set1Help_Customer_Button = new System.Windows.Forms.Button();
+            this.Set2Help_Customer_Button = new System.Windows.Forms.Button();
+            this.Set2_Customer_CheckBox = new System.Windows.Forms.CheckBox();
+            this.Set1_Customer_CheckBox = new System.Windows.Forms.CheckBox();
+            this.FireSafety_Customer_CheckBox = new System.Windows.Forms.CheckBox();
+            this.ResidenceRules_Customer_CheckBox = new System.Windows.Forms.CheckBox();
+            this.Instructed_Customer_CheckBox = new System.Windows.Forms.CheckBox();
+            this.GiveOutLinen_Customer_CheckBox = new System.Windows.Forms.CheckBox();
+            this.AllProperties_Customer_CheckBox = new System.Windows.Forms.CheckBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.Email_Customer_TextBox = new System.Windows.Forms.TextBox();
+            this.Location_Customer_TextBox = new System.Windows.Forms.TextBox();
+            this.ContractNumber_Customer_TextBox = new System.Windows.Forms.TextBox();
+            this.OGRN_Customer_TextBox = new System.Windows.Forms.TextBox();
+            this.INN_Customer_TextBox = new System.Windows.Forms.TextBox();
+            this.Address_Customer_TextBox = new System.Windows.Forms.TextBox();
+            this.Name_Customer_TextBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.FromContractTime_Customer_DateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.ToContractTime_Customer_DateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.CardProperties_Customer_Panel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // AddLocationButton
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(27, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(171, 21);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Добавить заказчика";
+            this.AddLocationButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddLocationButton.BackgroundImage")));
+            this.AddLocationButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.AddLocationButton.FlatAppearance.BorderSize = 0;
+            this.AddLocationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddLocationButton.Location = new System.Drawing.Point(541, 255);
+            this.AddLocationButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.AddLocationButton.Name = "AddLocationButton";
+            this.AddLocationButton.Size = new System.Drawing.Size(25, 25);
+            this.AddLocationButton.TabIndex = 32;
+            this.AddLocationButton.UseVisualStyleBackColor = true;
             // 
-            // CustomerNameTextBox
+            // CardProperties_Customer_Panel
             // 
-            this.CustomerNameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.CustomerNameTextBox.Location = new System.Drawing.Point(49, 70);
-            this.CustomerNameTextBox.Name = "CustomerNameTextBox";
-            this.CustomerNameTextBox.Size = new System.Drawing.Size(412, 25);
-            this.CustomerNameTextBox.TabIndex = 1;
-            this.CustomerNameTextBox.Tag = "Наименование организации";
-            this.CustomerNameTextBox.Text = "Наименование организации";
-            this.CustomerNameTextBox.Enter += new System.EventHandler(this.CustomerNameTextBox_Enter);
+            this.CardProperties_Customer_Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CardProperties_Customer_Panel.Controls.Add(this.AddCustomerButton);
+            this.CardProperties_Customer_Panel.Controls.Add(this.Set1Help_Customer_Button);
+            this.CardProperties_Customer_Panel.Controls.Add(this.Set2Help_Customer_Button);
+            this.CardProperties_Customer_Panel.Controls.Add(this.Set2_Customer_CheckBox);
+            this.CardProperties_Customer_Panel.Controls.Add(this.Set1_Customer_CheckBox);
+            this.CardProperties_Customer_Panel.Controls.Add(this.FireSafety_Customer_CheckBox);
+            this.CardProperties_Customer_Panel.Controls.Add(this.ResidenceRules_Customer_CheckBox);
+            this.CardProperties_Customer_Panel.Controls.Add(this.Instructed_Customer_CheckBox);
+            this.CardProperties_Customer_Panel.Controls.Add(this.GiveOutLinen_Customer_CheckBox);
+            this.CardProperties_Customer_Panel.Controls.Add(this.AllProperties_Customer_CheckBox);
+            this.CardProperties_Customer_Panel.Controls.Add(this.label2);
+            this.CardProperties_Customer_Panel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CardProperties_Customer_Panel.Location = new System.Drawing.Point(55, 405);
+            this.CardProperties_Customer_Panel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.CardProperties_Customer_Panel.Name = "CardProperties_Customer_Panel";
+            this.CardProperties_Customer_Panel.Size = new System.Drawing.Size(480, 257);
+            this.CardProperties_Customer_Panel.TabIndex = 31;
             // 
-            // AddressTextBox
+            // AddCustomerButton
             // 
-            this.AddressTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.AddressTextBox.Location = new System.Drawing.Point(49, 101);
-            this.AddressTextBox.Name = "AddressTextBox";
-            this.AddressTextBox.Size = new System.Drawing.Size(412, 25);
-            this.AddressTextBox.TabIndex = 2;
-            this.AddressTextBox.Tag = "Наименование организации";
-            this.AddressTextBox.Text = "Адрес";
-            this.AddressTextBox.Enter += new System.EventHandler(this.AddressTextBox_Enter);
+            this.AddCustomerButton.BackColor = System.Drawing.SystemColors.Highlight;
+            this.AddCustomerButton.FlatAppearance.BorderSize = 0;
+            this.AddCustomerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddCustomerButton.ForeColor = System.Drawing.Color.White;
+            this.AddCustomerButton.Location = new System.Drawing.Point(365, 192);
+            this.AddCustomerButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.AddCustomerButton.Name = "AddCustomerButton";
+            this.AddCustomerButton.Size = new System.Drawing.Size(103, 47);
+            this.AddCustomerButton.TabIndex = 21;
+            this.AddCustomerButton.Text = "Добавить";
+            this.AddCustomerButton.UseVisualStyleBackColor = false;
             // 
-            // INNTextBox
+            // Set1Help_Customer_Button
             // 
-            this.INNTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.INNTextBox.Location = new System.Drawing.Point(49, 132);
-            this.INNTextBox.Name = "INNTextBox";
-            this.INNTextBox.Size = new System.Drawing.Size(412, 25);
-            this.INNTextBox.TabIndex = 3;
-            this.INNTextBox.Tag = "Наименование организации";
-            this.INNTextBox.Text = "ИНН";
-            this.INNTextBox.Enter += new System.EventHandler(this.INNTextBox_Enter);
+            this.Set1Help_Customer_Button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Set1Help_Customer_Button.BackgroundImage")));
+            this.Set1Help_Customer_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Set1Help_Customer_Button.FlatAppearance.BorderSize = 0;
+            this.Set1Help_Customer_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Set1Help_Customer_Button.Location = new System.Drawing.Point(285, 44);
+            this.Set1Help_Customer_Button.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Set1Help_Customer_Button.Name = "Set1Help_Customer_Button";
+            this.Set1Help_Customer_Button.Size = new System.Drawing.Size(22, 20);
+            this.Set1Help_Customer_Button.TabIndex = 20;
+            this.Set1Help_Customer_Button.UseVisualStyleBackColor = true;
             // 
-            // OGRNTextBox
+            // Set2Help_Customer_Button
             // 
-            this.OGRNTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.OGRNTextBox.Location = new System.Drawing.Point(49, 163);
-            this.OGRNTextBox.Name = "OGRNTextBox";
-            this.OGRNTextBox.Size = new System.Drawing.Size(412, 25);
-            this.OGRNTextBox.TabIndex = 4;
-            this.OGRNTextBox.Tag = "Наименование организации";
-            this.OGRNTextBox.Text = "ОГРН";
-            this.OGRNTextBox.Enter += new System.EventHandler(this.OGRNTextBox_Enter);
+            this.Set2Help_Customer_Button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Set2Help_Customer_Button.BackgroundImage")));
+            this.Set2Help_Customer_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Set2Help_Customer_Button.FlatAppearance.BorderSize = 0;
+            this.Set2Help_Customer_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Set2Help_Customer_Button.Location = new System.Drawing.Point(438, 44);
+            this.Set2Help_Customer_Button.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Set2Help_Customer_Button.Name = "Set2Help_Customer_Button";
+            this.Set2Help_Customer_Button.Size = new System.Drawing.Size(21, 20);
+            this.Set2Help_Customer_Button.TabIndex = 19;
+            this.Set2Help_Customer_Button.UseVisualStyleBackColor = true;
             // 
-            // EmailTextBox
+            // Set2_Customer_CheckBox
             // 
-            this.EmailTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.EmailTextBox.Location = new System.Drawing.Point(49, 287);
-            this.EmailTextBox.Name = "EmailTextBox";
-            this.EmailTextBox.Size = new System.Drawing.Size(412, 25);
-            this.EmailTextBox.TabIndex = 8;
-            this.EmailTextBox.Tag = "Наименование организации";
-            this.EmailTextBox.Text = "Электронная почта заказчика";
-            this.EmailTextBox.Enter += new System.EventHandler(this.EmailTextBox_Enter);
+            this.Set2_Customer_CheckBox.AutoSize = true;
+            this.Set2_Customer_CheckBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Set2_Customer_CheckBox.Location = new System.Drawing.Point(331, 44);
+            this.Set2_Customer_CheckBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Set2_Customer_CheckBox.Name = "Set2_Customer_CheckBox";
+            this.Set2_Customer_CheckBox.Size = new System.Drawing.Size(101, 21);
+            this.Set2_Customer_CheckBox.TabIndex = 18;
+            this.Set2_Customer_CheckBox.Text = "Комплект-2";
+            this.Set2_Customer_CheckBox.UseVisualStyleBackColor = true;
             // 
-            // ContractTimetextBox
+            // Set1_Customer_CheckBox
             // 
-            this.ContractTimetextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ContractTimetextBox.Location = new System.Drawing.Point(49, 256);
-            this.ContractTimetextBox.Name = "ContractTimetextBox";
-            this.ContractTimetextBox.Size = new System.Drawing.Size(412, 25);
-            this.ContractTimetextBox.TabIndex = 7;
-            this.ContractTimetextBox.Tag = "Наименование организации";
-            this.ContractTimetextBox.Text = "Срок договора";
-            this.ContractTimetextBox.Enter += new System.EventHandler(this.ContractTimetextBox_Enter);
+            this.Set1_Customer_CheckBox.AutoSize = true;
+            this.Set1_Customer_CheckBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Set1_Customer_CheckBox.Location = new System.Drawing.Point(178, 44);
+            this.Set1_Customer_CheckBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Set1_Customer_CheckBox.Name = "Set1_Customer_CheckBox";
+            this.Set1_Customer_CheckBox.Size = new System.Drawing.Size(101, 21);
+            this.Set1_Customer_CheckBox.TabIndex = 17;
+            this.Set1_Customer_CheckBox.Text = "Комплект-1";
+            this.Set1_Customer_CheckBox.UseVisualStyleBackColor = true;
             // 
-            // LocationTextBox
+            // FireSafety_Customer_CheckBox
             // 
-            this.LocationTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.LocationTextBox.Location = new System.Drawing.Point(49, 225);
-            this.LocationTextBox.Name = "LocationTextBox";
-            this.LocationTextBox.Size = new System.Drawing.Size(412, 25);
-            this.LocationTextBox.TabIndex = 6;
-            this.LocationTextBox.Tag = "Наименование организации";
-            this.LocationTextBox.Text = "Локация";
-            this.LocationTextBox.Enter += new System.EventHandler(this.LocationTextBox_Enter);
+            this.FireSafety_Customer_CheckBox.AutoSize = true;
+            this.FireSafety_Customer_CheckBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.FireSafety_Customer_CheckBox.Location = new System.Drawing.Point(44, 162);
+            this.FireSafety_Customer_CheckBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.FireSafety_Customer_CheckBox.Name = "FireSafety_Customer_CheckBox";
+            this.FireSafety_Customer_CheckBox.Size = new System.Drawing.Size(188, 21);
+            this.FireSafety_Customer_CheckBox.TabIndex = 16;
+            this.FireSafety_Customer_CheckBox.Text = "Пожарная безопастность";
+            this.FireSafety_Customer_CheckBox.UseVisualStyleBackColor = true;
             // 
-            // ContractNumberTextBox
+            // ResidenceRules_Customer_CheckBox
             // 
-            this.ContractNumberTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ContractNumberTextBox.Location = new System.Drawing.Point(49, 194);
-            this.ContractNumberTextBox.Name = "ContractNumberTextBox";
-            this.ContractNumberTextBox.Size = new System.Drawing.Size(412, 25);
-            this.ContractNumberTextBox.TabIndex = 5;
-            this.ContractNumberTextBox.Tag = "Наименование организации";
-            this.ContractNumberTextBox.Text = "Номер договора";
-            this.ContractNumberTextBox.Enter += new System.EventHandler(this.ContractNumberTextBox_Enter);
+            this.ResidenceRules_Customer_CheckBox.AutoSize = true;
+            this.ResidenceRules_Customer_CheckBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ResidenceRules_Customer_CheckBox.Location = new System.Drawing.Point(44, 127);
+            this.ResidenceRules_Customer_CheckBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ResidenceRules_Customer_CheckBox.Name = "ResidenceRules_Customer_CheckBox";
+            this.ResidenceRules_Customer_CheckBox.Size = new System.Drawing.Size(168, 21);
+            this.ResidenceRules_Customer_CheckBox.TabIndex = 15;
+            this.ResidenceRules_Customer_CheckBox.Text = "Правила проживания";
+            this.ResidenceRules_Customer_CheckBox.UseVisualStyleBackColor = true;
             // 
-            // panel1
+            // Instructed_Customer_CheckBox
             // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.Set1HelpButton);
-            this.panel1.Controls.Add(this.Set2HelpButton);
-            this.panel1.Controls.Add(this.Set2checkBox);
-            this.panel1.Controls.Add(this.Set1CheckBox);
-            this.panel1.Controls.Add(this.FireSafetyCheckBox);
-            this.panel1.Controls.Add(this.ResidenceRulesCheckBox);
-            this.panel1.Controls.Add(this.InstructedCheckBox);
-            this.panel1.Controls.Add(this.GiveOutLinenCheckBox);
-            this.panel1.Controls.Add(this.AllPropertiesCheckBox);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.panel1.Location = new System.Drawing.Point(49, 348);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(412, 197);
-            this.panel1.TabIndex = 9;
+            this.Instructed_Customer_CheckBox.AutoSize = true;
+            this.Instructed_Customer_CheckBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Instructed_Customer_CheckBox.Location = new System.Drawing.Point(8, 92);
+            this.Instructed_Customer_CheckBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Instructed_Customer_CheckBox.Name = "Instructed_Customer_CheckBox";
+            this.Instructed_Customer_CheckBox.Size = new System.Drawing.Size(175, 21);
+            this.Instructed_Customer_CheckBox.TabIndex = 14;
+            this.Instructed_Customer_CheckBox.Text = "Проходить инструктаж";
+            this.Instructed_Customer_CheckBox.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // GiveOutLinen_Customer_CheckBox
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.Highlight;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(313, 147);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(88, 36);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "Добавить";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.GiveOutLinen_Customer_CheckBox.AutoSize = true;
+            this.GiveOutLinen_Customer_CheckBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.GiveOutLinen_Customer_CheckBox.Location = new System.Drawing.Point(8, 44);
+            this.GiveOutLinen_Customer_CheckBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.GiveOutLinen_Customer_CheckBox.Name = "GiveOutLinen_Customer_CheckBox";
+            this.GiveOutLinen_Customer_CheckBox.Size = new System.Drawing.Size(130, 21);
+            this.GiveOutLinen_Customer_CheckBox.TabIndex = 13;
+            this.GiveOutLinen_Customer_CheckBox.Text = "Выдавать бельё";
+            this.GiveOutLinen_Customer_CheckBox.UseVisualStyleBackColor = true;
             // 
-            // Set1HelpButton
+            // AllProperties_Customer_CheckBox
             // 
-            this.Set1HelpButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Set1HelpButton.BackgroundImage")));
-            this.Set1HelpButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Set1HelpButton.FlatAppearance.BorderSize = 0;
-            this.Set1HelpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Set1HelpButton.Location = new System.Drawing.Point(248, 34);
-            this.Set1HelpButton.Name = "Set1HelpButton";
-            this.Set1HelpButton.Size = new System.Drawing.Size(20, 21);
-            this.Set1HelpButton.TabIndex = 20;
-            this.Set1HelpButton.UseVisualStyleBackColor = true;
-            // 
-            // Set2HelpButton
-            // 
-            this.Set2HelpButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Set2HelpButton.BackgroundImage")));
-            this.Set2HelpButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Set2HelpButton.FlatAppearance.BorderSize = 0;
-            this.Set2HelpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Set2HelpButton.Location = new System.Drawing.Point(381, 34);
-            this.Set2HelpButton.Name = "Set2HelpButton";
-            this.Set2HelpButton.Size = new System.Drawing.Size(20, 21);
-            this.Set2HelpButton.TabIndex = 19;
-            this.Set2HelpButton.UseVisualStyleBackColor = true;
-            // 
-            // Set2checkBox
-            // 
-            this.Set2checkBox.AutoSize = true;
-            this.Set2checkBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Set2checkBox.Location = new System.Drawing.Point(284, 34);
-            this.Set2checkBox.Name = "Set2checkBox";
-            this.Set2checkBox.Size = new System.Drawing.Size(101, 21);
-            this.Set2checkBox.TabIndex = 18;
-            this.Set2checkBox.Text = "Комплект-2";
-            this.Set2checkBox.UseVisualStyleBackColor = true;
-            // 
-            // Set1CheckBox
-            // 
-            this.Set1CheckBox.AutoSize = true;
-            this.Set1CheckBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Set1CheckBox.Location = new System.Drawing.Point(153, 34);
-            this.Set1CheckBox.Name = "Set1CheckBox";
-            this.Set1CheckBox.Size = new System.Drawing.Size(101, 21);
-            this.Set1CheckBox.TabIndex = 17;
-            this.Set1CheckBox.Text = "Комплект-1";
-            this.Set1CheckBox.UseVisualStyleBackColor = true;
-            // 
-            // FireSafetyCheckBox
-            // 
-            this.FireSafetyCheckBox.AutoSize = true;
-            this.FireSafetyCheckBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.FireSafetyCheckBox.Location = new System.Drawing.Point(38, 124);
-            this.FireSafetyCheckBox.Name = "FireSafetyCheckBox";
-            this.FireSafetyCheckBox.Size = new System.Drawing.Size(188, 21);
-            this.FireSafetyCheckBox.TabIndex = 16;
-            this.FireSafetyCheckBox.Text = "Пожарная безопастность";
-            this.FireSafetyCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // ResidenceRulesCheckBox
-            // 
-            this.ResidenceRulesCheckBox.AutoSize = true;
-            this.ResidenceRulesCheckBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ResidenceRulesCheckBox.Location = new System.Drawing.Point(38, 97);
-            this.ResidenceRulesCheckBox.Name = "ResidenceRulesCheckBox";
-            this.ResidenceRulesCheckBox.Size = new System.Drawing.Size(168, 21);
-            this.ResidenceRulesCheckBox.TabIndex = 15;
-            this.ResidenceRulesCheckBox.Text = "Правила проживания";
-            this.ResidenceRulesCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // InstructedCheckBox
-            // 
-            this.InstructedCheckBox.AutoSize = true;
-            this.InstructedCheckBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.InstructedCheckBox.Location = new System.Drawing.Point(7, 70);
-            this.InstructedCheckBox.Name = "InstructedCheckBox";
-            this.InstructedCheckBox.Size = new System.Drawing.Size(175, 21);
-            this.InstructedCheckBox.TabIndex = 14;
-            this.InstructedCheckBox.Text = "Проходить инструктаж";
-            this.InstructedCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // GiveOutLinenCheckBox
-            // 
-            this.GiveOutLinenCheckBox.AutoSize = true;
-            this.GiveOutLinenCheckBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.GiveOutLinenCheckBox.Location = new System.Drawing.Point(7, 34);
-            this.GiveOutLinenCheckBox.Name = "GiveOutLinenCheckBox";
-            this.GiveOutLinenCheckBox.Size = new System.Drawing.Size(130, 21);
-            this.GiveOutLinenCheckBox.TabIndex = 13;
-            this.GiveOutLinenCheckBox.Text = "Выдавать бельё";
-            this.GiveOutLinenCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // AllPropertiesCheckBox
-            // 
-            this.AllPropertiesCheckBox.AutoSize = true;
-            this.AllPropertiesCheckBox.Location = new System.Drawing.Point(165, 2);
-            this.AllPropertiesCheckBox.Name = "AllPropertiesCheckBox";
-            this.AllPropertiesCheckBox.Size = new System.Drawing.Size(48, 21);
-            this.AllPropertiesCheckBox.TabIndex = 12;
-            this.AllPropertiesCheckBox.Text = "Все";
-            this.AllPropertiesCheckBox.UseVisualStyleBackColor = true;
-            this.AllPropertiesCheckBox.CheckedChanged += new System.EventHandler(this.AllPropertiesCheckBox_CheckedChanged);
+            this.AllProperties_Customer_CheckBox.AutoSize = true;
+            this.AllProperties_Customer_CheckBox.Location = new System.Drawing.Point(192, 3);
+            this.AllProperties_Customer_CheckBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.AllProperties_Customer_CheckBox.Name = "AllProperties_Customer_CheckBox";
+            this.AllProperties_Customer_CheckBox.Size = new System.Drawing.Size(48, 21);
+            this.AllProperties_Customer_CheckBox.TabIndex = 12;
+            this.AllProperties_Customer_CheckBox.Text = "Все";
+            this.AllProperties_Customer_CheckBox.UseVisualStyleBackColor = true;
+            this.AllProperties_Customer_CheckBox.CheckedChanged += new System.EventHandler(this.AllProperties_Customer_CheckBox_CheckedChanged);
             // 
             // label2
             // 
@@ -297,68 +226,214 @@
             this.label2.TabIndex = 11;
             this.label2.Text = "Свойства карт";
             // 
-            // AddLocationButton
+            // Email_Customer_TextBox
             // 
-            this.AddLocationButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddLocationButton.BackgroundImage")));
-            this.AddLocationButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.AddLocationButton.FlatAppearance.BorderSize = 0;
-            this.AddLocationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddLocationButton.Location = new System.Drawing.Point(467, 225);
-            this.AddLocationButton.Name = "AddLocationButton";
-            this.AddLocationButton.Size = new System.Drawing.Size(26, 25);
-            this.AddLocationButton.TabIndex = 10;
-            this.AddLocationButton.UseVisualStyleBackColor = true;
+            this.Email_Customer_TextBox.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.Email_Customer_TextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Email_Customer_TextBox.Location = new System.Drawing.Point(55, 336);
+            this.Email_Customer_TextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Email_Customer_TextBox.Name = "Email_Customer_TextBox";
+            this.Email_Customer_TextBox.Size = new System.Drawing.Size(480, 25);
+            this.Email_Customer_TextBox.TabIndex = 30;
+            this.Email_Customer_TextBox.Tag = "Наименование организации";
+            this.Email_Customer_TextBox.Text = "Электронная почта заказчика";
+            this.Email_Customer_TextBox.Enter += new System.EventHandler(this.Email_Customer_TextBox_Enter);
+            // 
+            // Location_Customer_TextBox
+            // 
+            this.Location_Customer_TextBox.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.Location_Customer_TextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Location_Customer_TextBox.Location = new System.Drawing.Point(55, 255);
+            this.Location_Customer_TextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Location_Customer_TextBox.Name = "Location_Customer_TextBox";
+            this.Location_Customer_TextBox.Size = new System.Drawing.Size(480, 25);
+            this.Location_Customer_TextBox.TabIndex = 28;
+            this.Location_Customer_TextBox.Tag = "Наименование организации";
+            this.Location_Customer_TextBox.Text = "Локация";
+            this.Location_Customer_TextBox.Enter += new System.EventHandler(this.Location_Customer_TextBox_Enter);
+            // 
+            // ContractNumber_Customer_TextBox
+            // 
+            this.ContractNumber_Customer_TextBox.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.ContractNumber_Customer_TextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ContractNumber_Customer_TextBox.Location = new System.Drawing.Point(55, 219);
+            this.ContractNumber_Customer_TextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ContractNumber_Customer_TextBox.Name = "ContractNumber_Customer_TextBox";
+            this.ContractNumber_Customer_TextBox.Size = new System.Drawing.Size(480, 25);
+            this.ContractNumber_Customer_TextBox.TabIndex = 27;
+            this.ContractNumber_Customer_TextBox.Tag = "Наименование организации";
+            this.ContractNumber_Customer_TextBox.Text = "Номер договора";
+            this.ContractNumber_Customer_TextBox.Enter += new System.EventHandler(this.ContractNumber_Customer_TextBox_Enter);
+            // 
+            // OGRN_Customer_TextBox
+            // 
+            this.OGRN_Customer_TextBox.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.OGRN_Customer_TextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.OGRN_Customer_TextBox.Location = new System.Drawing.Point(55, 186);
+            this.OGRN_Customer_TextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.OGRN_Customer_TextBox.Name = "OGRN_Customer_TextBox";
+            this.OGRN_Customer_TextBox.Size = new System.Drawing.Size(480, 25);
+            this.OGRN_Customer_TextBox.TabIndex = 25;
+            this.OGRN_Customer_TextBox.Tag = "Наименование организации";
+            this.OGRN_Customer_TextBox.Text = "ОГРН";
+            this.OGRN_Customer_TextBox.Enter += new System.EventHandler(this.OGRN_Customer_TextBox_Enter);
+            // 
+            // INN_Customer_TextBox
+            // 
+            this.INN_Customer_TextBox.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.INN_Customer_TextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.INN_Customer_TextBox.Location = new System.Drawing.Point(55, 153);
+            this.INN_Customer_TextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.INN_Customer_TextBox.Name = "INN_Customer_TextBox";
+            this.INN_Customer_TextBox.Size = new System.Drawing.Size(480, 25);
+            this.INN_Customer_TextBox.TabIndex = 24;
+            this.INN_Customer_TextBox.Tag = "Наименование организации";
+            this.INN_Customer_TextBox.Text = "ИНН";
+            this.INN_Customer_TextBox.Enter += new System.EventHandler(this.INN_Customer_TextBox_Enter);
+            // 
+            // Address_Customer_TextBox
+            // 
+            this.Address_Customer_TextBox.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.Address_Customer_TextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Address_Customer_TextBox.Location = new System.Drawing.Point(55, 120);
+            this.Address_Customer_TextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Address_Customer_TextBox.Name = "Address_Customer_TextBox";
+            this.Address_Customer_TextBox.Size = new System.Drawing.Size(480, 25);
+            this.Address_Customer_TextBox.TabIndex = 23;
+            this.Address_Customer_TextBox.Tag = "Наименование организации";
+            this.Address_Customer_TextBox.Text = "Адрес";
+            this.Address_Customer_TextBox.Enter += new System.EventHandler(this.Address_Customer_TextBox_Enter);
+            // 
+            // Name_Customer_TextBox
+            // 
+            this.Name_Customer_TextBox.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.Name_Customer_TextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Name_Customer_TextBox.Location = new System.Drawing.Point(55, 87);
+            this.Name_Customer_TextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Name_Customer_TextBox.Name = "Name_Customer_TextBox";
+            this.Name_Customer_TextBox.Size = new System.Drawing.Size(480, 25);
+            this.Name_Customer_TextBox.TabIndex = 22;
+            this.Name_Customer_TextBox.Tag = "Наименование организации";
+            this.Name_Customer_TextBox.Text = "Наименование организации";
+            this.Name_Customer_TextBox.Enter += new System.EventHandler(this.Name_Customer_TextBox_Enter);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(30, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(171, 21);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "Добавить заказчика";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(52, 284);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(103, 17);
+            this.label3.TabIndex = 33;
+            this.label3.Text = "Срок договора:";
+            // 
+            // FromContractTime_Customer_DateTimePicker
+            // 
+            this.FromContractTime_Customer_DateTimePicker.CalendarForeColor = System.Drawing.Color.Black;
+            this.FromContractTime_Customer_DateTimePicker.CalendarMonthBackground = System.Drawing.SystemColors.InactiveCaption;
+            this.FromContractTime_Customer_DateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.FromContractTime_Customer_DateTimePicker.Location = new System.Drawing.Point(84, 304);
+            this.FromContractTime_Customer_DateTimePicker.Name = "FromContractTime_Customer_DateTimePicker";
+            this.FromContractTime_Customer_DateTimePicker.Size = new System.Drawing.Size(125, 25);
+            this.FromContractTime_Customer_DateTimePicker.TabIndex = 34;
+            this.FromContractTime_Customer_DateTimePicker.Value = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(52, 310);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(26, 17);
+            this.label4.TabIndex = 35;
+            this.label4.Text = "От:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(244, 308);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(28, 17);
+            this.label5.TabIndex = 37;
+            this.label5.Text = "До:";
+            // 
+            // ToContractTime_Customer_DateTimePicker
+            // 
+            this.ToContractTime_Customer_DateTimePicker.CalendarMonthBackground = System.Drawing.SystemColors.InactiveCaption;
+            this.ToContractTime_Customer_DateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.ToContractTime_Customer_DateTimePicker.Location = new System.Drawing.Point(276, 302);
+            this.ToContractTime_Customer_DateTimePicker.Name = "ToContractTime_Customer_DateTimePicker";
+            this.ToContractTime_Customer_DateTimePicker.Size = new System.Drawing.Size(125, 25);
+            this.ToContractTime_Customer_DateTimePicker.TabIndex = 36;
+            this.ToContractTime_Customer_DateTimePicker.Value = new System.DateTime(2020, 1, 2, 0, 0, 0, 0);
             // 
             // AddCustomer
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(524, 571);
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.ClientSize = new System.Drawing.Size(597, 707);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.ToContractTime_Customer_DateTimePicker);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.FromContractTime_Customer_DateTimePicker);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.AddLocationButton);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.EmailTextBox);
-            this.Controls.Add(this.ContractTimetextBox);
-            this.Controls.Add(this.LocationTextBox);
-            this.Controls.Add(this.ContractNumberTextBox);
-            this.Controls.Add(this.OGRNTextBox);
-            this.Controls.Add(this.INNTextBox);
-            this.Controls.Add(this.AddressTextBox);
-            this.Controls.Add(this.CustomerNameTextBox);
+            this.Controls.Add(this.CardProperties_Customer_Panel);
+            this.Controls.Add(this.Email_Customer_TextBox);
+            this.Controls.Add(this.Location_Customer_TextBox);
+            this.Controls.Add(this.ContractNumber_Customer_TextBox);
+            this.Controls.Add(this.OGRN_Customer_TextBox);
+            this.Controls.Add(this.INN_Customer_TextBox);
+            this.Controls.Add(this.Address_Customer_TextBox);
+            this.Controls.Add(this.Name_Customer_TextBox);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "AddCustomer";
-            this.Text = "AddCustomer";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.Text = "Добавление заказчика";
+            this.CardProperties_Customer_Panel.ResumeLayout(false);
+            this.CardProperties_Customer_Panel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox CustomerNameTextBox;
-        private System.Windows.Forms.TextBox AddressTextBox;
-        private System.Windows.Forms.TextBox INNTextBox;
-        private System.Windows.Forms.TextBox OGRNTextBox;
-        private System.Windows.Forms.TextBox EmailTextBox;
-        private System.Windows.Forms.TextBox ContractTimetextBox;
-        private System.Windows.Forms.TextBox LocationTextBox;
-        private System.Windows.Forms.TextBox ContractNumberTextBox;
-        private System.Windows.Forms.Panel panel1;
+
         private System.Windows.Forms.Button AddLocationButton;
-        private System.Windows.Forms.Button Set1HelpButton;
-        private System.Windows.Forms.Button Set2HelpButton;
-        private System.Windows.Forms.CheckBox Set2checkBox;
-        private System.Windows.Forms.CheckBox Set1CheckBox;
-        private System.Windows.Forms.CheckBox FireSafetyCheckBox;
-        private System.Windows.Forms.CheckBox ResidenceRulesCheckBox;
-        private System.Windows.Forms.CheckBox InstructedCheckBox;
-        private System.Windows.Forms.CheckBox GiveOutLinenCheckBox;
-        private System.Windows.Forms.CheckBox AllPropertiesCheckBox;
+        private System.Windows.Forms.Panel CardProperties_Customer_Panel;
+        private System.Windows.Forms.Button AddCustomerButton;
+        private System.Windows.Forms.Button Set1Help_Customer_Button;
+        private System.Windows.Forms.Button Set2Help_Customer_Button;
+        private System.Windows.Forms.CheckBox Set2_Customer_CheckBox;
+        private System.Windows.Forms.CheckBox Set1_Customer_CheckBox;
+        private System.Windows.Forms.CheckBox FireSafety_Customer_CheckBox;
+        private System.Windows.Forms.CheckBox ResidenceRules_Customer_CheckBox;
+        private System.Windows.Forms.CheckBox Instructed_Customer_CheckBox;
+        private System.Windows.Forms.CheckBox GiveOutLinen_Customer_CheckBox;
+        private System.Windows.Forms.CheckBox AllProperties_Customer_CheckBox;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox Email_Customer_TextBox;
+        private System.Windows.Forms.TextBox Location_Customer_TextBox;
+        private System.Windows.Forms.TextBox ContractNumber_Customer_TextBox;
+        private System.Windows.Forms.TextBox OGRN_Customer_TextBox;
+        private System.Windows.Forms.TextBox INN_Customer_TextBox;
+        private System.Windows.Forms.TextBox Address_Customer_TextBox;
+        private System.Windows.Forms.TextBox Name_Customer_TextBox;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DateTimePicker FromContractTime_Customer_DateTimePicker;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DateTimePicker ToContractTime_Customer_DateTimePicker;
     }
 }
