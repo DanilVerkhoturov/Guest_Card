@@ -78,7 +78,7 @@
             // 
             // panel_left_menu
             // 
-            this.panel_left_menu.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel_left_menu.BackColor = System.Drawing.Color.White;
             this.panel_left_menu.Controls.Add(this.panel_sbbutton_2);
             this.panel_left_menu.Controls.Add(this.button5);
             this.panel_left_menu.Controls.Add(this.panel_subbutton_1);
@@ -99,10 +99,10 @@
             this.panel_sbbutton_2.Controls.Add(this.button7);
             this.panel_sbbutton_2.Controls.Add(this.button8);
             this.panel_sbbutton_2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_sbbutton_2.Location = new System.Drawing.Point(0, 321);
+            this.panel_sbbutton_2.Location = new System.Drawing.Point(0, 272);
             this.panel_sbbutton_2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel_sbbutton_2.Name = "panel_sbbutton_2";
-            this.panel_sbbutton_2.Size = new System.Drawing.Size(229, 171);
+            this.panel_sbbutton_2.Size = new System.Drawing.Size(229, 150);
             this.panel_sbbutton_2.TabIndex = 4;
             // 
             // button9
@@ -111,11 +111,11 @@
             this.button9.Dock = System.Windows.Forms.DockStyle.Top;
             this.button9.FlatAppearance.BorderSize = 0;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Location = new System.Drawing.Point(0, 133);
+            this.button9.Location = new System.Drawing.Point(0, 120);
             this.button9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button9.Name = "button9";
             this.button9.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
-            this.button9.Size = new System.Drawing.Size(229, 34);
+            this.button9.Size = new System.Drawing.Size(229, 30);
             this.button9.TabIndex = 6;
             this.button9.Text = "Черновики";
             this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -127,11 +127,11 @@
             this.button4.Dock = System.Windows.Forms.DockStyle.Top;
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(0, 99);
+            this.button4.Location = new System.Drawing.Point(0, 90);
             this.button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button4.Name = "button4";
             this.button4.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
-            this.button4.Size = new System.Drawing.Size(229, 34);
+            this.button4.Size = new System.Drawing.Size(229, 30);
             this.button4.TabIndex = 5;
             this.button4.Text = "История заявок";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -143,11 +143,11 @@
             this.button6.Dock = System.Windows.Forms.DockStyle.Top;
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Location = new System.Drawing.Point(0, 66);
+            this.button6.Location = new System.Drawing.Point(0, 60);
             this.button6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button6.Name = "button6";
             this.button6.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
-            this.button6.Size = new System.Drawing.Size(229, 33);
+            this.button6.Size = new System.Drawing.Size(229, 30);
             this.button6.TabIndex = 4;
             this.button6.Text = "Добавить заявку";
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -159,11 +159,11 @@
             this.button7.Dock = System.Windows.Forms.DockStyle.Top;
             this.button7.FlatAppearance.BorderSize = 0;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Location = new System.Drawing.Point(0, 33);
+            this.button7.Location = new System.Drawing.Point(0, 30);
             this.button7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button7.Name = "button7";
             this.button7.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
-            this.button7.Size = new System.Drawing.Size(229, 33);
+            this.button7.Size = new System.Drawing.Size(229, 30);
             this.button7.TabIndex = 3;
             this.button7.Text = "Текущие";
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -179,7 +179,7 @@
             this.button8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button8.Name = "button8";
             this.button8.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
-            this.button8.Size = new System.Drawing.Size(229, 33);
+            this.button8.Size = new System.Drawing.Size(229, 30);
             this.button8.TabIndex = 2;
             this.button8.Text = "Новые";
             this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -191,11 +191,11 @@
             this.button5.Dock = System.Windows.Forms.DockStyle.Top;
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(0, 262);
+            this.button5.Location = new System.Drawing.Point(0, 232);
             this.button5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button5.Name = "button5";
             this.button5.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.button5.Size = new System.Drawing.Size(229, 59);
+            this.button5.Size = new System.Drawing.Size(229, 40);
             this.button5.TabIndex = 3;
             this.button5.Text = "Заявки";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -206,10 +206,10 @@
             this.panel_subbutton_1.Controls.Add(this.button3);
             this.panel_subbutton_1.Controls.Add(this.button2);
             this.panel_subbutton_1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_subbutton_1.Location = new System.Drawing.Point(0, 190);
+            this.panel_subbutton_1.Location = new System.Drawing.Point(0, 171);
             this.panel_subbutton_1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel_subbutton_1.Name = "panel_subbutton_1";
-            this.panel_subbutton_1.Size = new System.Drawing.Size(229, 72);
+            this.panel_subbutton_1.Size = new System.Drawing.Size(229, 61);
             this.panel_subbutton_1.TabIndex = 2;
             // 
             // button3
@@ -218,11 +218,11 @@
             this.button3.Dock = System.Windows.Forms.DockStyle.Top;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(0, 33);
+            this.button3.Location = new System.Drawing.Point(0, 30);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button3.Name = "button3";
             this.button3.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(229, 33);
+            this.button3.Size = new System.Drawing.Size(229, 30);
             this.button3.TabIndex = 3;
             this.button3.Text = "Добавить заказчика";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -238,7 +238,7 @@
             this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
             this.button2.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(229, 33);
+            this.button2.Size = new System.Drawing.Size(229, 30);
             this.button2.TabIndex = 2;
             this.button2.Text = "Мои заказчики";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -254,7 +254,7 @@
             this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
             this.button1.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(229, 59);
+            this.button1.Size = new System.Drawing.Size(229, 40);
             this.button1.TabIndex = 1;
             this.button1.Text = "Заказчики";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;

@@ -13,7 +13,7 @@ namespace Admin_Panel_Hotel
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            Application.Run(new AddEditApplication());
         }
     }
 }

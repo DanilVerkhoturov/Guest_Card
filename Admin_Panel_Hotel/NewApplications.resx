@@ -123,4 +123,27 @@
   <metadata name="Location.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="WatchApplicationsButton1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABcAAAAXCAYAAADgKtSgAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EwAACxMBAJqcGAAAATFJREFUSEvt07FKA1EQRuEFH0BBsJS8gCBYBGwU7IO9hQFRsAoS22A6xcbaSgt7
+        waCt6AtYilVIfAADFmIVz9lkcFlWjWi5P3yEO+7OvXcSkzJl/i0zaOACj+jiATfYQgW/jk2P8YYhXmDT
+        Dm7Ha+s6w8SbLKEHX7TRCswuTrGNeVRhY597xjq+zQbe0Uc0NVe4hmOxmZ9uYDx11PcsFGUBNvbB7DU9
+        kTcwjssmOrIwziwcm/U1C/kcwD8epqvPWHfGi2gjmseGEb946yfpqiD38IFmuhqlhmiY5bwjy/AA3nra
+        QlG83hN82VNG7pBtnB3dDgbIj7MwzvUc0WQTU6jD07Ywh1U4mvxmE8VmvuTLr7CRzf0Hit+5n34nX47i
+        p7jJJfw1uJlc78Nblinz5yTJB5S6WIt+88d0AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="WatchApplicationsButton2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABcAAAAXCAYAAADgKtSgAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EwAACxMBAJqcGAAAATFJREFUSEvt07FKA1EQRuEFH0BBsJS8gCBYBGwU7IO9hQFRsAoS22A6xcbaSgt7
+        waCt6AtYilVIfAADFmIVz9lkcFlWjWi5P3yEO+7OvXcSkzJl/i0zaOACj+jiATfYQgW/jk2P8YYhXmDT
+        Dm7Ha+s6w8SbLKEHX7TRCswuTrGNeVRhY597xjq+zQbe0Uc0NVe4hmOxmZ9uYDx11PcsFGUBNvbB7DU9
+        kTcwjssmOrIwziwcm/U1C/kcwD8epqvPWHfGi2gjmseGEb946yfpqiD38IFmuhqlhmiY5bwjy/AA3nra
+        QlG83hN82VNG7pBtnB3dDgbIj7MwzvUc0WQTU6jD07Ywh1U4mvxmE8VmvuTLr7CRzf0Hit+5n34nX47i
+        p7jJJfw1uJlc78Nblinz5yTJB5S6WIt+88d0AAAAAElFTkSuQmCC
+</value>
+  </data>
 </root>
