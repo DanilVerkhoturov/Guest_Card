@@ -15,37 +15,11 @@ namespace Admin_Panel_Hotel
         public AddEditApplication()
         {
             InitializeComponent();
-           
-        }
-       
-        private void label4_Click(object sender, EventArgs e)
-        {
-
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void NewApplication_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
+            Functions.OpenChildForm(new NewApplications(), MainForm.ContP);
         }
     }
 }

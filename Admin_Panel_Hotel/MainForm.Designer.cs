@@ -127,7 +127,6 @@
             this.AddApplicationsButton.Text = "Добавить заявку";
             this.AddApplicationsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.AddApplicationsButton.UseVisualStyleBackColor = true;
-            this.AddApplicationsButton.Click += new System.EventHandler(this.AddApplicationsButton_Click);
             // 
             // button7
             // 
@@ -296,7 +295,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel_left_menu;
-        private System.Windows.Forms.Panel ContentPanel;
         private System.Windows.Forms.Panel panel_subbutton_1;
         private System.Windows.Forms.Button AddCustomerButton;
         private System.Windows.Forms.Button button2;
@@ -310,6 +308,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button9;
+        public System.Windows.Forms.Panel ContentPanel;
     }
 }
 

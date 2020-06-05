@@ -17,9 +17,9 @@ namespace Admin_Panel_Hotel
             InitializeComponent();
         }
 
-        private void NewApplicationsMetroGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void ShowApplicationButton1_Click(object sender, EventArgs e)
         {
-
+            Functions.OpenChildForm(new AddEditApplication(), MainForm.ContP);
         }
     }
 }

@@ -12,39 +12,21 @@ namespace Admin_Panel_Hotel
 {
     public partial class MainForm : Form
     {
-        Form ActiveForm = null;
+        public static Panel ContP = null;
         public MainForm()
         {
             InitializeComponent();
-        }
-
-        private void OpenChildForm(Form childForm)
-        {
-            if (ActiveForm != null)
-                ActiveForm.Close();
-            ActiveForm = childForm;
-            childForm.TopLevel = false;
-            childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.Fill;
-            this.ContentPanel.Controls.Add(childForm);
-            this.ContentPanel.Tag = childForm;
-            childForm.BringToFront();
-            childForm.Show();
+            ContP = ContentPanel;
         }
 
         private void AddCustomerButton_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new AddCustomer());
-        }
-
-        private void AddApplicationsButton_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new AddEditApplication());
+            Functions.OpenChildForm(new AddCustomer(), ContentPanel);
         }
 
         private void NewApplicationsButton_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new NewApplications());
+            Functions.OpenChildForm(new NewApplications(), ContentPanel);
         }
     }
 }

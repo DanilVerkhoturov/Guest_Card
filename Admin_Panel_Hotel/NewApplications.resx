@@ -124,7 +124,7 @@
     <value>True</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="WatchApplicationsButton1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="ShowApplicationButton1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABcAAAAXCAYAAADgKtSgAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         EwAACxMBAJqcGAAAATFJREFUSEvt07FKA1EQRuEFH0BBsJS8gCBYBGwU7IO9hQFRsAoS22A6xcbaSgt7
@@ -135,7 +135,7 @@
         p7jJJfw1uJlc78Nblinz5yTJB5S6WIt+88d0AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="WatchApplicationsButton2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="ShowApplicationsButton2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABcAAAAXCAYAAADgKtSgAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         EwAACxMBAJqcGAAAATFJREFUSEvt07FKA1EQRuEFH0BBsJS8gCBYBGwU7IO9hQFRsAoS22A6xcbaSgt7

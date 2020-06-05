@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddEditApplication));
-            this.NewApplocation = new System.Windows.Forms.Label();
+            this.NewApplication = new System.Windows.Forms.Label();
             this.NameCustomer = new System.Windows.Forms.Label();
             this.DateAplication = new System.Windows.Forms.Label();
             this.Number1 = new System.Windows.Forms.TextBox();
@@ -53,15 +53,16 @@
             this.Number2 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // NewApplocation
+            // NewApplication
             // 
-            this.NewApplocation.AutoSize = true;
-            this.NewApplocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.NewApplocation.Location = new System.Drawing.Point(25, 25);
-            this.NewApplocation.Name = "NewApplocation";
-            this.NewApplocation.Size = new System.Drawing.Size(156, 24);
-            this.NewApplocation.TabIndex = 0;
-            this.NewApplocation.Text = "Новые заявки  >";
+            this.NewApplication.AutoSize = true;
+            this.NewApplication.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.NewApplication.Location = new System.Drawing.Point(25, 25);
+            this.NewApplication.Name = "NewApplication";
+            this.NewApplication.Size = new System.Drawing.Size(156, 24);
+            this.NewApplication.TabIndex = 0;
+            this.NewApplication.Text = "Новые заявки  >";
+            this.NewApplication.Click += new System.EventHandler(this.NewApplication_Click);
             // 
             // NameCustomer
             // 
@@ -92,7 +93,6 @@
             this.Number1.Name = "Number1";
             this.Number1.Size = new System.Drawing.Size(43, 25);
             this.Number1.TabIndex = 3;
-            this.Number1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label4
             // 
@@ -103,7 +103,6 @@
             this.label4.Size = new System.Drawing.Size(22, 16);
             this.label4.TabIndex = 4;
             this.label4.Text = "№";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // FullName1
             // 
@@ -114,7 +113,6 @@
             this.FullName1.Name = "FullName1";
             this.FullName1.Size = new System.Drawing.Size(193, 25);
             this.FullName1.TabIndex = 5;
-            this.FullName1.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label5
             // 
@@ -125,7 +123,6 @@
             this.label5.Size = new System.Drawing.Size(39, 16);
             this.label5.TabIndex = 6;
             this.label5.Text = "ФИО";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
@@ -172,7 +169,6 @@
             this.DateStart1.Name = "DateStart1";
             this.DateStart1.Size = new System.Drawing.Size(117, 26);
             this.DateStart1.TabIndex = 10;
-            this.DateStart1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // DateEnd1
             // 
@@ -330,7 +326,7 @@
             this.Controls.Add(this.Number1);
             this.Controls.Add(this.DateAplication);
             this.Controls.Add(this.NameCustomer);
-            this.Controls.Add(this.NewApplocation);
+            this.Controls.Add(this.NewApplication);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddEditApplication";
             this.ResumeLayout(false);
@@ -340,7 +336,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label NewApplocation;
+        private System.Windows.Forms.Label NewApplication;
         private System.Windows.Forms.Label NameCustomer;
         private System.Windows.Forms.Label DateAplication;
         private System.Windows.Forms.TextBox Number1;

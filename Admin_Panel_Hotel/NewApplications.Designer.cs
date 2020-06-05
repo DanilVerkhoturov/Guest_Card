@@ -34,8 +34,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.ApplicationsNameTextBox1 = new System.Windows.Forms.TextBox();
             this.ApplicationsNameTextBox2 = new System.Windows.Forms.TextBox();
-            this.WatchApplicationsButton1 = new System.Windows.Forms.Button();
-            this.WatchApplicationsButton2 = new System.Windows.Forms.Button();
+            this.ShowApplicationButton1 = new System.Windows.Forms.Button();
+            this.ShowApplicationsButton2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Castomer
@@ -73,6 +73,7 @@
             this.ApplicationsNameTextBox1.Name = "ApplicationsNameTextBox1";
             this.ApplicationsNameTextBox1.Size = new System.Drawing.Size(287, 25);
             this.ApplicationsNameTextBox1.TabIndex = 3;
+            this.ApplicationsNameTextBox1.Text = "Заявка-1";
             // 
             // ApplicationsNameTextBox2
             // 
@@ -84,28 +85,30 @@
             this.ApplicationsNameTextBox2.Name = "ApplicationsNameTextBox2";
             this.ApplicationsNameTextBox2.Size = new System.Drawing.Size(287, 25);
             this.ApplicationsNameTextBox2.TabIndex = 6;
+            this.ApplicationsNameTextBox2.Text = "Заявка-2";
             // 
-            // WatchApplicationsButton1
+            // ShowApplicationButton1
             // 
-            this.WatchApplicationsButton1.BackColor = System.Drawing.Color.Transparent;
-            this.WatchApplicationsButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("WatchApplicationsButton1.BackgroundImage")));
-            this.WatchApplicationsButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.WatchApplicationsButton1.Location = new System.Drawing.Point(326, 65);
-            this.WatchApplicationsButton1.Name = "WatchApplicationsButton1";
-            this.WatchApplicationsButton1.Size = new System.Drawing.Size(25, 25);
-            this.WatchApplicationsButton1.TabIndex = 7;
-            this.WatchApplicationsButton1.UseVisualStyleBackColor = false;
+            this.ShowApplicationButton1.BackColor = System.Drawing.Color.Transparent;
+            this.ShowApplicationButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ShowApplicationButton1.BackgroundImage")));
+            this.ShowApplicationButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ShowApplicationButton1.Location = new System.Drawing.Point(326, 65);
+            this.ShowApplicationButton1.Name = "ShowApplicationButton1";
+            this.ShowApplicationButton1.Size = new System.Drawing.Size(25, 25);
+            this.ShowApplicationButton1.TabIndex = 7;
+            this.ShowApplicationButton1.UseVisualStyleBackColor = false;
+            this.ShowApplicationButton1.Click += new System.EventHandler(this.ShowApplicationButton1_Click);
             // 
-            // WatchApplicationsButton2
+            // ShowApplicationsButton2
             // 
-            this.WatchApplicationsButton2.BackColor = System.Drawing.Color.Transparent;
-            this.WatchApplicationsButton2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("WatchApplicationsButton2.BackgroundImage")));
-            this.WatchApplicationsButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.WatchApplicationsButton2.Location = new System.Drawing.Point(326, 102);
-            this.WatchApplicationsButton2.Name = "WatchApplicationsButton2";
-            this.WatchApplicationsButton2.Size = new System.Drawing.Size(25, 25);
-            this.WatchApplicationsButton2.TabIndex = 8;
-            this.WatchApplicationsButton2.UseVisualStyleBackColor = false;
+            this.ShowApplicationsButton2.BackColor = System.Drawing.Color.Transparent;
+            this.ShowApplicationsButton2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ShowApplicationsButton2.BackgroundImage")));
+            this.ShowApplicationsButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ShowApplicationsButton2.Location = new System.Drawing.Point(326, 102);
+            this.ShowApplicationsButton2.Name = "ShowApplicationsButton2";
+            this.ShowApplicationsButton2.Size = new System.Drawing.Size(25, 25);
+            this.ShowApplicationsButton2.TabIndex = 8;
+            this.ShowApplicationsButton2.UseVisualStyleBackColor = false;
             // 
             // NewApplications
             // 
@@ -114,8 +117,8 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(759, 745);
-            this.Controls.Add(this.WatchApplicationsButton2);
-            this.Controls.Add(this.WatchApplicationsButton1);
+            this.Controls.Add(this.ShowApplicationsButton2);
+            this.Controls.Add(this.ShowApplicationButton1);
             this.Controls.Add(this.ApplicationsNameTextBox2);
             this.Controls.Add(this.ApplicationsNameTextBox1);
             this.Controls.Add(this.label1);
@@ -133,7 +136,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox ApplicationsNameTextBox1;
         private System.Windows.Forms.TextBox ApplicationsNameTextBox2;
-        private System.Windows.Forms.Button WatchApplicationsButton1;
-        private System.Windows.Forms.Button WatchApplicationsButton2;
+        private System.Windows.Forms.Button ShowApplicationButton1;
+        private System.Windows.Forms.Button ShowApplicationsButton2;
     }
 }

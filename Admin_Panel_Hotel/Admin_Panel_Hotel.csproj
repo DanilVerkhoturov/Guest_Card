@@ -61,6 +61,7 @@
     <Compile Include="AddEditApplication.Designer.cs">
       <DependentUpon>AddEditApplication.cs</DependentUpon>
     </Compile>
+    <Compile Include="Functions.cs" />
     <Compile Include="NewApplications.cs">
       <SubType>Form</SubType>
     </Compile>
