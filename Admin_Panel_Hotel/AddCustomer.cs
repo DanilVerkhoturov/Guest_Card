@@ -66,5 +66,10 @@ namespace Admin_Panel_Hotel
         {
             EmailTextBox.Text = null;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

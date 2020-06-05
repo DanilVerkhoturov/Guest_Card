@@ -49,13 +49,10 @@
             // 
             // treeView1
             // 
-            this.treeView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
             this.treeView1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.treeView1.Indent = 19;
             this.treeView1.ItemHeight = 30;
-            this.treeView1.Location = new System.Drawing.Point(0, 0);
-            this.treeView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.treeView1.Location = new System.Drawing.Point(44, 27);
             this.treeView1.Name = "treeView1";
             treeNode1.Name = "MyCustomersNode";
             treeNode1.Text = "Мои заказчики";
@@ -81,7 +78,7 @@
             this.treeView1.ShowLines = false;
             this.treeView1.ShowNodeToolTips = true;
             this.treeView1.ShowRootLines = false;
-            this.treeView1.Size = new System.Drawing.Size(252, 666);
+            this.treeView1.Size = new System.Drawing.Size(196, 370);
             this.treeView1.TabIndex = 2;
             // 
             // PatternForm
