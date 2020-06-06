@@ -111,6 +111,7 @@
             this.ShowApplicationsButton2.Size = new System.Drawing.Size(25, 25);
             this.ShowApplicationsButton2.TabIndex = 8;
             this.ShowApplicationsButton2.UseVisualStyleBackColor = false;
+            this.ShowApplicationsButton2.Click += new System.EventHandler(this.ShowApplicationsButton2_Click);
             // 
             // CurrentApplications
             // 

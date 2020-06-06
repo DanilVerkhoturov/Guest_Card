@@ -21,5 +21,10 @@ namespace Admin_Panel_Hotel
         {
             Functions.OpenChildForm(new ShowApplication(), MainForm.ContP);
         }
+
+        private void ShowApplicationsButton2_Click(object sender, EventArgs e)
+        {
+            Functions.OpenChildForm(new ShowApplicationVer2(), MainForm.ContP);
+        }
     }
 }

@@ -61,6 +61,12 @@
     <Compile Include="AddApplication.Designer.cs">
       <DependentUpon>AddApplication.cs</DependentUpon>
     </Compile>
+    <Compile Include="ShowApplicationVer2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowApplicationVer2.Designer.cs">
+      <DependentUpon>ShowApplicationVer2.cs</DependentUpon>
+    </Compile>
     <Compile Include="ShowApplication.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +117,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddApplication.resx">
       <DependentUpon>AddApplication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowApplicationVer2.resx">
+      <DependentUpon>ShowApplicationVer2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ShowApplication.resx">
       <DependentUpon>ShowApplication.cs</DependentUpon>
