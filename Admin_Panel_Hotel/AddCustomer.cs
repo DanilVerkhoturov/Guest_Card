@@ -91,5 +91,16 @@ namespace Admin_Panel_Hotel
                 return false;
             }
         }
+
+        private void AddCustomer_Load(object sender, EventArgs e)
+        {
+            // Установка подсказки для первого комплекта белья.
+            ToolTip set1Help = new ToolTip();
+            set1Help.SetToolTip(Set1Help_Customer_Button, "В \"Комплект-1\" входит:\nНаволочка, подушка, одеяло, пододеяльник.");
+
+            // Установка подсказки для второго комплекта белья.
+            ToolTip set2Help = new ToolTip();
+            set2Help.SetToolTip(Set2Help_Customer_Button, "В \"Комплект-2\" входит:\nПростыня, подушка, одеяло.");
+        }
     }
 }

@@ -289,7 +289,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MinimumSize = new System.Drawing.Size(1133, 784);
             this.Name = "MainForm";
-            this.Text = "Form1";
+            this.Text = "Главное меню";
             this.LeftMenu.ResumeLayout(false);
             this.ApplicationsSubMenu.ResumeLayout(false);
             this.CustomersSubMenu.ResumeLayout(false);

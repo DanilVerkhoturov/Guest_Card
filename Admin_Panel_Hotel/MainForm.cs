@@ -1,43 +1,49 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Admin_Panel_Hotel
 {
-    public partial class MainForm : System.Windows.Forms.Form
+    public partial class MainForm : Form
     {
         public static Panel ContP = null;
+
         public MainForm()
         {
             InitializeComponent();
-            customizeDesign();
+
+            CustomizeDesign();
             ContP = ContentPanel;
-            
         }
-        //При открытии программы под меню скрыто
-        private void customizeDesign()
+
+        /// <summary>
+        /// При открытии программы подменю скрыто.
+        /// </summary>
+        private void CustomizeDesign()
         {
             CustomersSubMenu.Visible = false;
             ApplicationsSubMenu.Visible = false;
         } 
-        private void hideSubMenu()
+
+        /// <summary>
+        /// Скрыть подменю.
+        /// </summary>
+        private void HideSubMenu()
         {
             if (CustomersSubMenu.Visible == true)
                 CustomersSubMenu.Visible = false;
             if (ApplicationsSubMenu.Visible == true)
                 ApplicationsSubMenu.Visible = false;
         }
-        private void showSubMenu(Panel subMenu)
+
+        /// <summary>
+        /// Отобразить подменю.
+        /// </summary>
+        /// <param name="subMenu">Объект подменю.</param>
+        private void ShowSubMenu(Panel subMenu)
         {
             if (subMenu.Visible == false)
             {
-                hideSubMenu();
+                HideSubMenu();
                 subMenu.Visible = true;
             }
             else
@@ -68,12 +74,12 @@ namespace Admin_Panel_Hotel
 
         private void Customers_Click(object sender, EventArgs e)
         {
-            showSubMenu(CustomersSubMenu);
+            ShowSubMenu(CustomersSubMenu);
         }
 
         private void Applications_Click(object sender, EventArgs e)
         {
-            showSubMenu(ApplicationsSubMenu);
+            ShowSubMenu(ApplicationsSubMenu);
         }
     }
 }

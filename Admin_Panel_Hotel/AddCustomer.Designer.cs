@@ -417,6 +417,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "AddCustomer";
             this.Text = "Добавление заказчика";
+            this.Load += new System.EventHandler(this.AddCustomer_Load);
             this.CardProperties_Customer_Panel.ResumeLayout(false);
             this.CardProperties_Customer_Panel.PerformLayout();
             this.ResumeLayout(false);
