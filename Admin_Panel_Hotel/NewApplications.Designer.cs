@@ -72,7 +72,7 @@
             this.ApplicationsNameTextBox1.Margin = new System.Windows.Forms.Padding(3, 3, 3, 12);
             this.ApplicationsNameTextBox1.Multiline = true;
             this.ApplicationsNameTextBox1.Name = "ApplicationsNameTextBox1";
-            this.ApplicationsNameTextBox1.Size = new System.Drawing.Size(287, 29);
+            this.ApplicationsNameTextBox1.Size = new System.Drawing.Size(287, 25);
             this.ApplicationsNameTextBox1.TabIndex = 3;
             this.ApplicationsNameTextBox1.Text = "Заявка-1";
             // 
@@ -85,7 +85,7 @@
             this.ApplicationsNameTextBox2.Margin = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.ApplicationsNameTextBox2.Multiline = true;
             this.ApplicationsNameTextBox2.Name = "ApplicationsNameTextBox2";
-            this.ApplicationsNameTextBox2.Size = new System.Drawing.Size(287, 29);
+            this.ApplicationsNameTextBox2.Size = new System.Drawing.Size(287, 25);
             this.ApplicationsNameTextBox2.TabIndex = 6;
             this.ApplicationsNameTextBox2.Text = "Заявка-2";
             // 
@@ -96,7 +96,7 @@
             this.ShowApplicationButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ShowApplicationButton1.Location = new System.Drawing.Point(326, 65);
             this.ShowApplicationButton1.Name = "ShowApplicationButton1";
-            this.ShowApplicationButton1.Size = new System.Drawing.Size(29, 29);
+            this.ShowApplicationButton1.Size = new System.Drawing.Size(25, 25);
             this.ShowApplicationButton1.TabIndex = 7;
             this.ShowApplicationButton1.UseVisualStyleBackColor = false;
             this.ShowApplicationButton1.Click += new System.EventHandler(this.ShowApplicationButton1_Click);
@@ -108,7 +108,7 @@
             this.ShowApplicationsButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ShowApplicationsButton2.Location = new System.Drawing.Point(326, 102);
             this.ShowApplicationsButton2.Name = "ShowApplicationsButton2";
-            this.ShowApplicationsButton2.Size = new System.Drawing.Size(29, 29);
+            this.ShowApplicationsButton2.Size = new System.Drawing.Size(25, 25);
             this.ShowApplicationsButton2.TabIndex = 8;
             this.ShowApplicationsButton2.UseVisualStyleBackColor = false;
             // 
