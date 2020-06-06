@@ -10,26 +10,28 @@ using System.Windows.Forms;
 
 namespace Admin_Panel_Hotel
 {
-    public partial class NotificationsForm : System.Windows.Forms.Form
+    public partial class NotificationsForm : Form
     {
+        public static string NotificationText = null;
+
         public NotificationsForm()
         {
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void CurrentApplicationsLabel_Click(object sender, EventArgs e)
         {
-
+            Functions.OpenChildForm(new CurrentApplications(), MainForm.ContP);
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void AddApplicationsLabel_Click(object sender, EventArgs e)
         {
-
+            Functions.OpenChildForm(new AddApplication(), MainForm.ContP);
         }
 
-        private void ApplicationAddText_Click(object sender, EventArgs e)
+        private void ClosePictureBox_Click(object sender, EventArgs e)
         {
-
+            Close();
         }
     }
 }

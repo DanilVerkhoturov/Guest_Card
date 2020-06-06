@@ -19,7 +19,7 @@ namespace Admin_Panel_Hotel
 
         private void ShowApplicationButton1_Click(object sender, EventArgs e)
         {
-            Functions.OpenChildForm(new AddEditApplication(), MainForm.ContP);
+            Functions.OpenChildForm(new ShowApplication(), MainForm.ContP);
         }
     }
 }

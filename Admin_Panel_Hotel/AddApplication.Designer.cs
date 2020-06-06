@@ -234,6 +234,7 @@
             this.AcceptButton.TabIndex = 16;
             this.AcceptButton.Text = "Подтвердить";
             this.AcceptButton.UseVisualStyleBackColor = false;
+            this.AcceptButton.Click += new System.EventHandler(this.AcceptButton_Click);
             // 
             // AddUserButton
             // 
@@ -261,7 +262,6 @@
             this.CustomersComboBox.Size = new System.Drawing.Size(200, 28);
             this.CustomersComboBox.TabIndex = 34;
             this.CustomersComboBox.Text = "Заказчик";
-            this.CustomersComboBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // LocationComboBox
             // 

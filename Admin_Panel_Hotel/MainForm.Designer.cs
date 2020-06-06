@@ -33,7 +33,7 @@
             this.panel_sbbutton_2 = new System.Windows.Forms.Panel();
             this.button9 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.AddApplicationsButton = new System.Windows.Forms.Button();
+            this.AddApplicationButton = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.NewApplicationsButton = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -70,7 +70,7 @@
             // 
             this.panel_sbbutton_2.Controls.Add(this.button9);
             this.panel_sbbutton_2.Controls.Add(this.button4);
-            this.panel_sbbutton_2.Controls.Add(this.AddApplicationsButton);
+            this.panel_sbbutton_2.Controls.Add(this.AddApplicationButton);
             this.panel_sbbutton_2.Controls.Add(this.button7);
             this.panel_sbbutton_2.Controls.Add(this.NewApplicationsButton);
             this.panel_sbbutton_2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -112,21 +112,22 @@
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // AddApplicationsButton
+            // AddApplicationButton
             // 
-            this.AddApplicationsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.AddApplicationsButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.AddApplicationsButton.FlatAppearance.BorderSize = 0;
-            this.AddApplicationsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddApplicationsButton.Location = new System.Drawing.Point(0, 60);
-            this.AddApplicationsButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.AddApplicationsButton.Name = "AddApplicationsButton";
-            this.AddApplicationsButton.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
-            this.AddApplicationsButton.Size = new System.Drawing.Size(229, 30);
-            this.AddApplicationsButton.TabIndex = 4;
-            this.AddApplicationsButton.Text = "Добавить заявку";
-            this.AddApplicationsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AddApplicationsButton.UseVisualStyleBackColor = true;
+            this.AddApplicationButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.AddApplicationButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.AddApplicationButton.FlatAppearance.BorderSize = 0;
+            this.AddApplicationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddApplicationButton.Location = new System.Drawing.Point(0, 60);
+            this.AddApplicationButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.AddApplicationButton.Name = "AddApplicationButton";
+            this.AddApplicationButton.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
+            this.AddApplicationButton.Size = new System.Drawing.Size(229, 30);
+            this.AddApplicationButton.TabIndex = 4;
+            this.AddApplicationButton.Text = "Добавить заявку";
+            this.AddApplicationButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AddApplicationButton.UseVisualStyleBackColor = true;
+            this.AddApplicationButton.Click += new System.EventHandler(this.AddApplicationButton_Click);
             // 
             // button7
             // 
@@ -302,7 +303,7 @@
         private System.Windows.Forms.Panel panel_logo;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Panel panel_sbbutton_2;
-        private System.Windows.Forms.Button AddApplicationsButton;
+        private System.Windows.Forms.Button AddApplicationButton;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button NewApplicationsButton;
         private System.Windows.Forms.PictureBox pictureBox1;

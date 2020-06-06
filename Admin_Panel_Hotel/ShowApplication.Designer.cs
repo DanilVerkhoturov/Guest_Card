@@ -1,6 +1,6 @@
 ﻿namespace Admin_Panel_Hotel
 {
-    partial class AddEditApplication
+    partial class ShowApplication
     {
         /// <summary>
         /// Required designer variable.
@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddEditApplication));
-            this.NewApplication = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ShowApplication));
+            this.NewApplicationsLabel = new System.Windows.Forms.Label();
             this.NameCustomer = new System.Windows.Forms.Label();
             this.DateAplication = new System.Windows.Forms.Label();
             this.Number1 = new System.Windows.Forms.TextBox();
@@ -53,16 +53,17 @@
             this.Number2 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // NewApplication
+            // NewApplicationsLabel
             // 
-            this.NewApplication.AutoSize = true;
-            this.NewApplication.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.NewApplication.Location = new System.Drawing.Point(25, 25);
-            this.NewApplication.Name = "NewApplication";
-            this.NewApplication.Size = new System.Drawing.Size(156, 24);
-            this.NewApplication.TabIndex = 0;
-            this.NewApplication.Text = "Новые заявки  >";
-            this.NewApplication.Click += new System.EventHandler(this.NewApplication_Click);
+            this.NewApplicationsLabel.AutoSize = true;
+            this.NewApplicationsLabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.NewApplicationsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.NewApplicationsLabel.Location = new System.Drawing.Point(25, 25);
+            this.NewApplicationsLabel.Name = "NewApplicationsLabel";
+            this.NewApplicationsLabel.Size = new System.Drawing.Size(156, 24);
+            this.NewApplicationsLabel.TabIndex = 0;
+            this.NewApplicationsLabel.Text = "Новые заявки  >";
+            this.NewApplicationsLabel.Click += new System.EventHandler(this.NewApplicationsLabel_Click);
             // 
             // NameCustomer
             // 
@@ -96,7 +97,6 @@
             this.Number1.Size = new System.Drawing.Size(43, 25);
             this.Number1.TabIndex = 3;
             this.Number1.Text = "1";
-            this.Number1.TextChanged += new System.EventHandler(this.Number1_TextChanged);
             // 
             // label4
             // 
@@ -258,6 +258,7 @@
             this.AcceptButton.TabIndex = 16;
             this.AcceptButton.Text = "Подтвердить";
             this.AcceptButton.UseVisualStyleBackColor = false;
+            this.AcceptButton.Click += new System.EventHandler(this.AcceptButton_Click);
             // 
             // DateEnd2
             // 
@@ -329,7 +330,7 @@
             this.Number2.TabIndex = 17;
             this.Number2.Text = "2";
             // 
-            // AddEditApplication
+            // ShowApplication
             // 
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(743, 706);
@@ -354,9 +355,9 @@
             this.Controls.Add(this.Number1);
             this.Controls.Add(this.DateAplication);
             this.Controls.Add(this.NameCustomer);
-            this.Controls.Add(this.NewApplication);
+            this.Controls.Add(this.NewApplicationsLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "AddEditApplication";
+            this.Name = "ShowApplication";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -364,7 +365,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label NewApplication;
+        private System.Windows.Forms.Label NewApplicationsLabel;
         private System.Windows.Forms.Label NameCustomer;
         private System.Windows.Forms.Label DateAplication;
         private System.Windows.Forms.TextBox Number1;

@@ -10,24 +10,23 @@ using System.Windows.Forms;
 
 namespace Admin_Panel_Hotel
 {
-    public partial class AddApplication : System.Windows.Forms.Form
+    public partial class ShowApplication : System.Windows.Forms.Form
     {
-        public AddApplication()
+        public ShowApplication()
         {
             InitializeComponent();
         }
 
-        private void NewApplication_Click(object sender, EventArgs e)
+        private void NewApplicationsLabel_Click(object sender, EventArgs e)
         {
             Functions.OpenChildForm(new NewApplications(), MainForm.ContP);
         }
 
         private void AcceptButton_Click(object sender, EventArgs e)
         {
-            // TODO: Сделать проверку корректности введённых данных.
-            // Открытие формы уведомления о созданной заявке.
+            // Открытие формы уведомления о подтверждённой заявке.
             var notification = new NotificationsForm();
-            notification.NotificationLabel.Text = "Заявка добавлена";
+            notification.NotificationLabel.Text = "Заявка подтверждена";
             notification.Owner = this;
             notification.StartPosition = FormStartPosition.CenterParent;
             notification.ShowDialog();

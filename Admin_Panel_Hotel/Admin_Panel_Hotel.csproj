@@ -61,11 +61,11 @@
     <Compile Include="AddApplication.Designer.cs">
       <DependentUpon>AddApplication.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddEditApplication.cs">
+    <Compile Include="ShowApplication.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddEditApplication.Designer.cs">
-      <DependentUpon>AddEditApplication.cs</DependentUpon>
+    <Compile Include="ShowApplication.Designer.cs">
+      <DependentUpon>ShowApplication.cs</DependentUpon>
     </Compile>
     <Compile Include="CurrentApplications.cs">
       <SubType>Form</SubType>
@@ -112,8 +112,8 @@
     <EmbeddedResource Include="AddApplication.resx">
       <DependentUpon>AddApplication.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddEditApplication.resx">
-      <DependentUpon>AddEditApplication.cs</DependentUpon>
+    <EmbeddedResource Include="ShowApplication.resx">
+      <DependentUpon>ShowApplication.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CurrentApplications.resx">
       <DependentUpon>CurrentApplications.cs</DependentUpon>
