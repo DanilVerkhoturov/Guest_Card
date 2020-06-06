@@ -34,7 +34,7 @@
             this.button9 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.AddApplicationButton = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.CurrentApplicationsButton = new System.Windows.Forms.Button();
             this.NewApplicationsButton = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.panel_subbutton_1 = new System.Windows.Forms.Panel();
@@ -71,7 +71,7 @@
             this.panel_sbbutton_2.Controls.Add(this.button9);
             this.panel_sbbutton_2.Controls.Add(this.button4);
             this.panel_sbbutton_2.Controls.Add(this.AddApplicationButton);
-            this.panel_sbbutton_2.Controls.Add(this.button7);
+            this.panel_sbbutton_2.Controls.Add(this.CurrentApplicationsButton);
             this.panel_sbbutton_2.Controls.Add(this.NewApplicationsButton);
             this.panel_sbbutton_2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_sbbutton_2.Location = new System.Drawing.Point(0, 272);
@@ -129,21 +129,22 @@
             this.AddApplicationButton.UseVisualStyleBackColor = true;
             this.AddApplicationButton.Click += new System.EventHandler(this.AddApplicationButton_Click);
             // 
-            // button7
+            // CurrentApplicationsButton
             // 
-            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Location = new System.Drawing.Point(0, 30);
-            this.button7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button7.Name = "button7";
-            this.button7.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
-            this.button7.Size = new System.Drawing.Size(229, 30);
-            this.button7.TabIndex = 3;
-            this.button7.Text = "Текущие";
-            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.UseVisualStyleBackColor = true;
+            this.CurrentApplicationsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.CurrentApplicationsButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.CurrentApplicationsButton.FlatAppearance.BorderSize = 0;
+            this.CurrentApplicationsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CurrentApplicationsButton.Location = new System.Drawing.Point(0, 30);
+            this.CurrentApplicationsButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.CurrentApplicationsButton.Name = "CurrentApplicationsButton";
+            this.CurrentApplicationsButton.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
+            this.CurrentApplicationsButton.Size = new System.Drawing.Size(229, 30);
+            this.CurrentApplicationsButton.TabIndex = 3;
+            this.CurrentApplicationsButton.Text = "Текущие";
+            this.CurrentApplicationsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CurrentApplicationsButton.UseVisualStyleBackColor = true;
+            this.CurrentApplicationsButton.Click += new System.EventHandler(this.CurrentApplicationsButton_Click);
             // 
             // NewApplicationsButton
             // 
@@ -304,7 +305,7 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Panel panel_sbbutton_2;
         private System.Windows.Forms.Button AddApplicationButton;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button CurrentApplicationsButton;
         private System.Windows.Forms.Button NewApplicationsButton;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button4;

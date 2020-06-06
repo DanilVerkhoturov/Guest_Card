@@ -33,5 +33,10 @@ namespace Admin_Panel_Hotel
         {
             Functions.OpenChildForm(new AddApplication(), ContentPanel);
         }
+
+        private void CurrentApplicationsButton_Click(object sender, EventArgs e)
+        {
+            Functions.OpenChildForm(new CurrentApplications(), ContentPanel);
+        }
     }
 }
