@@ -1,20 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Admin_Panel_Hotel
 {
-    public partial class AddCustomer : System.Windows.Forms.Form
+    public partial class AddCustomer : Form
     {
         public AddCustomer()
         {
             InitializeComponent();
+
+            Functions.SetWaterMark(Name_Customer_TextBox, "Наименование организации");
+            Functions.SetWaterMark(Address_Customer_TextBox, "Адрес");
+            Functions.SetWaterMark(INN_Customer_TextBox, "ИНН");
+            Functions.SetWaterMark(OGRN_Customer_TextBox, "ОГРН");
+            Functions.SetWaterMark(ContractNumber_Customer_TextBox, "Номер договора");
+            Functions.SetWaterMark(Location_Customer_TextBox, "Локация");
+            Functions.SetWaterMark(Email_Customer_TextBox, "Электронная почта заказчика");
         }
 
         private void AllProperties_Customer_CheckBox_CheckedChanged(object sender, EventArgs e)
@@ -25,41 +27,6 @@ namespace Admin_Panel_Hotel
             Instructed_Customer_CheckBox.Checked = AllProperties_Customer_CheckBox.Checked;
             ResidenceRules_Customer_CheckBox.Checked = AllProperties_Customer_CheckBox.Checked;
             FireSafety_Customer_CheckBox.Checked = AllProperties_Customer_CheckBox.Checked;
-        }
-
-        private void Name_Customer_TextBox_Enter(object sender, EventArgs e)
-        {
-            Name_Customer_TextBox.Text = null;
-        }
-
-        private void Address_Customer_TextBox_Enter(object sender, EventArgs e)
-        {
-            Address_Customer_TextBox.Text = null;
-        }
-
-        private void INN_Customer_TextBox_Enter(object sender, EventArgs e)
-        {
-            INN_Customer_TextBox.Text = null;
-        }
-
-        private void OGRN_Customer_TextBox_Enter(object sender, EventArgs e)
-        {
-            OGRN_Customer_TextBox.Text = null;
-        }
-
-        private void ContractNumber_Customer_TextBox_Enter(object sender, EventArgs e)
-        {
-            ContractNumber_Customer_TextBox.Text = null;
-        }
-
-        private void Location_Customer_TextBox_Enter(object sender, EventArgs e)
-        {
-            Location_Customer_TextBox.Text = null;
-        }
-
-        private void Email_Customer_TextBox_Enter(object sender, EventArgs e)
-        {
-            Email_Customer_TextBox.Text = null;
         }
 
         private void AddCustomerButton_Click(object sender, EventArgs e)

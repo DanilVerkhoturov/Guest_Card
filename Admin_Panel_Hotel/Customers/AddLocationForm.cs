@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Admin_Panel_Hotel
@@ -17,6 +10,15 @@ namespace Admin_Panel_Hotel
         public AddLocationFrom()
         {
             InitializeComponent();
+
+            Functions.SetWaterMark(RegionComboBox, "Регион");
+            Functions.SetWaterMark(StateComboBox, "Область");
+            Functions.SetWaterMark(CityComboBox, "Город");
+            Functions.SetWaterMark(StreetTypeComboBox, "Тип улицы");
+            Functions.SetWaterMark(StreetNameComboBox, "Улица");
+            Functions.SetWaterMark(HouseTextBox, "Дом");
+            Functions.SetWaterMark(CorpsTextBox, "Корпус");
+            Functions.SetWaterMark(BuildTextBox, "Строение");
         }
 
         private void CurrentApplicationsLabel_Click(object sender, EventArgs e)
@@ -32,11 +34,6 @@ namespace Admin_Panel_Hotel
         private void ClosePictureBox_Click(object sender, EventArgs e)
         {
             Close();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

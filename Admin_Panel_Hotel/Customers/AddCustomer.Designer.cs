@@ -240,8 +240,6 @@
             this.Email_Customer_TextBox.Size = new System.Drawing.Size(480, 29);
             this.Email_Customer_TextBox.TabIndex = 30;
             this.Email_Customer_TextBox.Tag = "Наименование организации";
-            this.Email_Customer_TextBox.Text = "Электронная почта заказчика";
-            this.Email_Customer_TextBox.Enter += new System.EventHandler(this.Email_Customer_TextBox_Enter);
             // 
             // Location_Customer_TextBox
             // 
@@ -255,8 +253,6 @@
             this.Location_Customer_TextBox.Size = new System.Drawing.Size(480, 29);
             this.Location_Customer_TextBox.TabIndex = 28;
             this.Location_Customer_TextBox.Tag = "Наименование организации";
-            this.Location_Customer_TextBox.Text = "Локация";
-            this.Location_Customer_TextBox.Enter += new System.EventHandler(this.Location_Customer_TextBox_Enter);
             // 
             // ContractNumber_Customer_TextBox
             // 
@@ -270,8 +266,6 @@
             this.ContractNumber_Customer_TextBox.Size = new System.Drawing.Size(480, 29);
             this.ContractNumber_Customer_TextBox.TabIndex = 27;
             this.ContractNumber_Customer_TextBox.Tag = "Наименование организации";
-            this.ContractNumber_Customer_TextBox.Text = "Номер договора";
-            this.ContractNumber_Customer_TextBox.Enter += new System.EventHandler(this.ContractNumber_Customer_TextBox_Enter);
             // 
             // OGRN_Customer_TextBox
             // 
@@ -285,8 +279,6 @@
             this.OGRN_Customer_TextBox.Size = new System.Drawing.Size(480, 29);
             this.OGRN_Customer_TextBox.TabIndex = 25;
             this.OGRN_Customer_TextBox.Tag = "Наименование организации";
-            this.OGRN_Customer_TextBox.Text = "ОГРН";
-            this.OGRN_Customer_TextBox.Enter += new System.EventHandler(this.OGRN_Customer_TextBox_Enter);
             // 
             // INN_Customer_TextBox
             // 
@@ -300,8 +292,6 @@
             this.INN_Customer_TextBox.Size = new System.Drawing.Size(480, 29);
             this.INN_Customer_TextBox.TabIndex = 24;
             this.INN_Customer_TextBox.Tag = "Наименование организации";
-            this.INN_Customer_TextBox.Text = "ИНН";
-            this.INN_Customer_TextBox.Enter += new System.EventHandler(this.INN_Customer_TextBox_Enter);
             // 
             // Address_Customer_TextBox
             // 
@@ -315,8 +305,6 @@
             this.Address_Customer_TextBox.Size = new System.Drawing.Size(480, 29);
             this.Address_Customer_TextBox.TabIndex = 23;
             this.Address_Customer_TextBox.Tag = "Наименование организации";
-            this.Address_Customer_TextBox.Text = "Адрес";
-            this.Address_Customer_TextBox.Enter += new System.EventHandler(this.Address_Customer_TextBox_Enter);
             // 
             // Name_Customer_TextBox
             // 
@@ -330,8 +318,6 @@
             this.Name_Customer_TextBox.Size = new System.Drawing.Size(480, 29);
             this.Name_Customer_TextBox.TabIndex = 22;
             this.Name_Customer_TextBox.Tag = "Наименование организации";
-            this.Name_Customer_TextBox.Text = "Наименование организации";
-            this.Name_Customer_TextBox.Enter += new System.EventHandler(this.Name_Customer_TextBox_Enter);
             // 
             // label1
             // 
