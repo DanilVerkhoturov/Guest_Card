@@ -11,6 +11,21 @@
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -49,34 +64,58 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddCustomer.cs">
+    <Compile Include="Applications\HistoryApplications.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddCustomer.Designer.cs">
+    <Compile Include="Applications\HistoryApplications.Designer.cs">
+      <DependentUpon>HistoryApplications.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customers\AddCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customers\AddCustomer.Designer.cs">
       <DependentUpon>AddCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddApplication.cs">
+    <Compile Include="Applications\AddApplication.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddApplication.Designer.cs">
+    <Compile Include="Applications\AddApplication.Designer.cs">
       <DependentUpon>AddApplication.cs</DependentUpon>
     </Compile>
-    <Compile Include="ShowApplicationVer2.cs">
+    <Compile Include="Applications\DraftApplications.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ShowApplicationVer2.Designer.cs">
+    <Compile Include="Applications\DraftApplications.Designer.cs">
+      <DependentUpon>DraftApplications.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customers\AddLocationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customers\AddLocationForm.Designer.cs">
+      <DependentUpon>AddLocationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditApplications\ShowApplicationDraft.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditApplications\ShowApplicationDraft.Designer.cs">
+      <DependentUpon>ShowApplicationDraft.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditApplications\ShowApplicationVer2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditApplications\ShowApplicationVer2.Designer.cs">
       <DependentUpon>ShowApplicationVer2.cs</DependentUpon>
     </Compile>
-    <Compile Include="ShowApplication.cs">
+    <Compile Include="EditApplications\ShowApplication.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ShowApplication.Designer.cs">
+    <Compile Include="EditApplications\ShowApplication.Designer.cs">
       <DependentUpon>ShowApplication.cs</DependentUpon>
     </Compile>
-    <Compile Include="CurrentApplications.cs">
+    <Compile Include="Applications\CurrentApplications.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CurrentApplications.Designer.cs">
+    <Compile Include="Applications\CurrentApplications.Designer.cs">
       <DependentUpon>CurrentApplications.cs</DependentUpon>
     </Compile>
     <Compile Include="NotificationsForm.cs">
@@ -86,16 +125,16 @@
       <DependentUpon>NotificationsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Functions.cs" />
-    <Compile Include="NewApplications.cs">
+    <Compile Include="Applications\NewApplications.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NewApplications.Designer.cs">
+    <Compile Include="Applications\NewApplications.Designer.cs">
       <DependentUpon>NewApplications.cs</DependentUpon>
     </Compile>
-    <Compile Include="Customers.cs">
+    <Compile Include="Customers\Customers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Customers.Designer.cs">
+    <Compile Include="Customers\Customers.Designer.cs">
       <DependentUpon>Customers.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
@@ -112,28 +151,40 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AddCustomer.resx">
+    <EmbeddedResource Include="Applications\HistoryApplications.resx">
+      <DependentUpon>HistoryApplications.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customers\AddCustomer.resx">
       <DependentUpon>AddCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddApplication.resx">
+    <EmbeddedResource Include="Applications\AddApplication.resx">
       <DependentUpon>AddApplication.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ShowApplicationVer2.resx">
+    <EmbeddedResource Include="Applications\DraftApplications.resx">
+      <DependentUpon>DraftApplications.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customers\AddLocationForm.resx">
+      <DependentUpon>AddLocationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditApplications\ShowApplicationDraft.resx">
+      <DependentUpon>ShowApplicationDraft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditApplications\ShowApplicationVer2.resx">
       <DependentUpon>ShowApplicationVer2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ShowApplication.resx">
+    <EmbeddedResource Include="EditApplications\ShowApplication.resx">
       <DependentUpon>ShowApplication.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CurrentApplications.resx">
+    <EmbeddedResource Include="Applications\CurrentApplications.resx">
       <DependentUpon>CurrentApplications.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NotificationsForm.resx">
       <DependentUpon>NotificationsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NewApplications.resx">
+    <EmbeddedResource Include="Applications\NewApplications.resx">
       <DependentUpon>NewApplications.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Customers.resx">
+    <EmbeddedResource Include="Customers\Customers.resx">
       <DependentUpon>Customers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
@@ -150,6 +201,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -163,6 +215,28 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ExitPlus1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ExitPlus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GroupPlus1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngflow 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing 8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

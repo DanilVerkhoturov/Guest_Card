@@ -71,6 +71,7 @@
             this.AddLocationButton.Size = new System.Drawing.Size(25, 25);
             this.AddLocationButton.TabIndex = 32;
             this.AddLocationButton.UseVisualStyleBackColor = false;
+            this.AddLocationButton.Click += new System.EventHandler(this.AddLocationButton_Click);
             // 
             // CardProperties_Customer_Panel
             // 

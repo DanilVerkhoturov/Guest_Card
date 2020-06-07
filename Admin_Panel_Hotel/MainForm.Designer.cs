@@ -96,6 +96,7 @@
             this.DraftButton.Text = "Черновики";
             this.DraftButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.DraftButton.UseVisualStyleBackColor = true;
+            this.DraftButton.Click += new System.EventHandler(this.DraftButton_Click);
             // 
             // HistoryApplicationsButton
             // 
@@ -112,6 +113,7 @@
             this.HistoryApplicationsButton.Text = "История заявок";
             this.HistoryApplicationsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.HistoryApplicationsButton.UseVisualStyleBackColor = true;
+            this.HistoryApplicationsButton.Click += new System.EventHandler(this.HistoryApplicationsButton_Click);
             // 
             // AddApplicationButton
             // 

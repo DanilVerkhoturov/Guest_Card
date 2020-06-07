@@ -32,5 +32,10 @@ namespace Admin_Panel_Hotel
             notification.StartPosition = FormStartPosition.CenterParent;
             notification.ShowDialog();
         }
+
+        private void AddUserButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

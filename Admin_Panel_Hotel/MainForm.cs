@@ -81,5 +81,15 @@ namespace Admin_Panel_Hotel
         {
             ShowSubMenu(ApplicationsSubMenu);
         }
+
+        private void DraftButton_Click(object sender, EventArgs e)
+        {
+            Functions.OpenChildForm(new DraftApplications(), ContentPanel);
+        }
+
+        private void HistoryApplicationsButton_Click(object sender, EventArgs e)
+        {
+            Functions.OpenChildForm(new HistoryApplications(), ContentPanel);
+        }
     }
 }

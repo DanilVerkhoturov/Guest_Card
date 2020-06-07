@@ -102,5 +102,14 @@ namespace Admin_Panel_Hotel
             ToolTip set2Help = new ToolTip();
             set2Help.SetToolTip(Set2Help_Customer_Button, "В \"Комплект-2\" входит:\nПростыня, подушка, одеяло.");
         }
+
+        private void AddLocationButton_Click(object sender, EventArgs e)
+        {
+            // Открытие формы добавления локации
+            var addLocation = new AddLocationFrom();
+            addLocation.Owner = this;
+            addLocation.StartPosition = FormStartPosition.CenterParent;
+            addLocation.ShowDialog();
+        }
     }
 }
