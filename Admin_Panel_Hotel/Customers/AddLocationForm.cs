@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Windows.Forms;
 
 namespace Admin_Panel_Hotel
@@ -19,6 +20,11 @@ namespace Admin_Panel_Hotel
             Functions.SetWaterMark(HouseTextBox, "Дом");
             Functions.SetWaterMark(CorpsTextBox, "Корпус");
             Functions.SetWaterMark(BuildTextBox, "Строение");
+
+            //using (MySqlConnection connection = new MySqlConnection($"server=u78479.netangels.ru;userid=u78479@10.19.0.80;pass=hmAsKtPcTHsrK1w;database=u78479_hotel"))
+            //{
+            //    MySqlCommand select = new MySqlCommand("Select * FROM region", connection);
+            //}
         }
 
         private void CurrentApplicationsLabel_Click(object sender, EventArgs e)
