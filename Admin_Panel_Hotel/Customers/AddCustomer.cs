@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -15,8 +16,43 @@ namespace Admin_Panel_Hotel
             Functions.SetWaterMark(INN_Customer_TextBox, "ИНН");
             Functions.SetWaterMark(OGRN_Customer_TextBox, "ОГРН");
             Functions.SetWaterMark(ContractNumber_Customer_TextBox, "Номер договора");
-            Functions.SetWaterMark(Location_Customer_TextBox, "Локация");
+            Functions.SetWaterMark(LocationName_Customer_TextBox, "Локация");
             Functions.SetWaterMark(Email_Customer_TextBox, "Электронная почта заказчика");
+            Functions.SetWaterMark(RegionComboBox, "Регион");
+            Functions.SetWaterMark(StateComboBox, "Область");
+            Functions.SetWaterMark(CityComboBox, "Город");
+            Functions.SetWaterMark(StreetTypeComboBox, "Тип улицы");
+            Functions.SetWaterMark(StreetNameComboBox, "Улица");
+            Functions.SetWaterMark(HouseTextBox, "Дом");
+            Functions.SetWaterMark(CorpsTextBox, "Корпус");
+            Functions.SetWaterMark(BuildTextBox, "Строение");
+            Functions.SetWaterMark(RoomCountTextBox, "Количество комнат");
+            Functions.SetWaterMark(BedsCountTextBox, "Количество мест");
+
+            ErrorProvider.SetError(Name_Customer_TextBox, "* - обязательное поле");
+            ErrorProvider.SetError(ContractNumber_Customer_TextBox, "* - обязательное поле");
+            ErrorProvider.SetError(ToContractTime_Customer_DateTimePicker, "* - обязательное поле");
+            ErrorProvider.SetError(FromContractTime_Customer_DateTimePicker, "* - обязательное поле");
+            ErrorProvider.SetError(Email_Customer_TextBox, "* - обязательное поле");
+            ErrorProvider.SetError(LocationName_Customer_TextBox, "* - обязательное поле");
+            ErrorProvider.SetError(RoomCountTextBox, "* - обязательное поле");
+            ErrorProvider.SetError(BedsCountTextBox, "* - обязательное поле");
+
+            // Подсказки для комплектов белья.
+            HelpProvider.SetError(Set1_Customer_CheckBox, "В \"Комплект-1\" входит:\nНаволочка, подушка, одеяло, пододеяльник.");
+            HelpProvider.SetError(Set2_Customer_CheckBox, "В \"Комплект-2\" входит:\nПростыня, подушка, одеяло.");
+
+            // TODO: попробовать вписать ссылку на бд в параметр "server".
+            //using (MySqlConnection connection = new MySqlConnection($"server=localhost;userid=u78479;password=hmAsKtPcTHsrK1w;database=u78479_hotel"))
+            //{
+            //    MySqlCommand select = new MySqlCommand("Select * FROM region", connection);
+            //    MySqlDataReader reader = select.ExecuteReader();
+
+            //    while (reader.Read())
+            //    {
+            //        RegionComboBox.Items.Add(reader[1].ToString());
+            //    }
+            //}
         }
 
         private void AllProperties_Customer_CheckBox_CheckedChanged(object sender, EventArgs e)
@@ -31,6 +67,7 @@ namespace Admin_Panel_Hotel
 
         private void AddCustomerButton_Click(object sender, EventArgs e)
         {
+            ErrorProvider.Clear();
             CheckCustomerAddInfo();
             // TODO: Добавление заказчика в базу данных.
         }
@@ -47,7 +84,7 @@ namespace Admin_Panel_Hotel
                             && INN_Customer_TextBox.TextLength > 0 && INN_Customer_TextBox.Text != "ИНН"
                             && OGRN_Customer_TextBox.TextLength > 0 && OGRN_Customer_TextBox.Text != "ОГРН"
                             && ContractNumber_Customer_TextBox.TextLength > 0 && ContractNumber_Customer_TextBox.Text != "Номер договора"
-                            && Location_Customer_TextBox.TextLength > 0 && Location_Customer_TextBox.Text != "Локация"
+                            && LocationName_Customer_TextBox.TextLength > 0 && LocationName_Customer_TextBox.Text != "Локация"
                             && Email_Customer_TextBox.TextLength > 0 && Email_Customer_TextBox.Text != "Электронная почта заказчика") // Если все обязательные поля заполнены корректно.
             {
                 // TODO: Проверка корректности эл.почты и срока договора.
@@ -55,19 +92,10 @@ namespace Admin_Panel_Hotel
             }
             else // Если какое-либо или все обязательные поля незаполнены.
             {
+                ErrorProvider.SetError(Name_Customer_TextBox, "Введите наименование организации!");
+                ErrorProvider.SetError(ContractNumber_Customer_TextBox, "Введите номер договора!");
                 return false;
             }
-        }
-
-        private void AddCustomer_Load(object sender, EventArgs e)
-        {
-            // Установка подсказки для первого комплекта белья.
-            ToolTip set1Help = new ToolTip();
-            set1Help.SetToolTip(Set1Help_Customer_Button, "В \"Комплект-1\" входит:\nНаволочка, подушка, одеяло, пододеяльник.");
-
-            // Установка подсказки для второго комплекта белья.
-            ToolTip set2Help = new ToolTip();
-            set2Help.SetToolTip(Set2Help_Customer_Button, "В \"Комплект-2\" входит:\nПростыня, подушка, одеяло.");
         }
 
         private void AddLocationButton_Click(object sender, EventArgs e)
@@ -77,6 +105,14 @@ namespace Admin_Panel_Hotel
             addLocation.Owner = this;
             addLocation.StartPosition = FormStartPosition.CenterParent;
             addLocation.ShowDialog();
+        }
+
+        private void BedsCountTextBox_Leave(object sender, EventArgs e)
+        {
+            if (int.TryParse(BedsCountTextBox.Text, out int bedsCount))
+            {
+                CardCountTextBox.Text = (((bedsCount * 10) / 100) + bedsCount).ToString(); // Расчёт количества карт по формуле: количество мест + 10%.
+            }
         }
     }
 }

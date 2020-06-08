@@ -12,29 +12,25 @@ namespace Admin_Panel_Hotel
         {
             InitializeComponent();
 
-            Functions.SetWaterMark(RegionComboBox, "Регион");
-            Functions.SetWaterMark(StateComboBox, "Область");
-            Functions.SetWaterMark(CityComboBox, "Город");
-            Functions.SetWaterMark(StreetTypeComboBox, "Тип улицы");
-            Functions.SetWaterMark(StreetNameComboBox, "Улица");
-            Functions.SetWaterMark(HouseTextBox, "Дом");
-            Functions.SetWaterMark(CorpsTextBox, "Корпус");
-            Functions.SetWaterMark(BuildTextBox, "Строение");
+            //Functions.SetWaterMark(RegionComboBox, "Регион");
+            //Functions.SetWaterMark(StateComboBox, "Область");
+            //Functions.SetWaterMark(CityComboBox, "Город");
+            //Functions.SetWaterMark(StreetTypeComboBox, "Тип улицы");
+            //Functions.SetWaterMark(StreetNameComboBox, "Улица");
+            //Functions.SetWaterMark(HouseTextBox, "Дом");
+            //Functions.SetWaterMark(CorpsTextBox, "Корпус");
+            //Functions.SetWaterMark(BuildTextBox, "Строение");
 
-            //using (MySqlConnection connection = new MySqlConnection($"server=u78479.netangels.ru;userid=u78479@10.19.0.80;pass=hmAsKtPcTHsrK1w;database=u78479_hotel"))
+            //using (MySqlConnection connection = new MySqlConnection($"server=localhost;userid=u78479;password=hmAsKtPcTHsrK1w;database=u78479_hotel"))
             //{
             //    MySqlCommand select = new MySqlCommand("Select * FROM region", connection);
+            //    MySqlDataReader reader = select.ExecuteReader();
+
+            //    while (reader.Read())
+            //    {
+            //        RegionComboBox.Items.Add(reader[1].ToString());
+            //    }
             //}
-        }
-
-        private void CurrentApplicationsLabel_Click(object sender, EventArgs e)
-        {
-            Functions.OpenChildForm(new CurrentApplications(), MainForm.ContP);
-        }
-
-        private void AddApplicationsLabel_Click(object sender, EventArgs e)
-        {
-            Functions.OpenChildForm(new AddApplication(), MainForm.ContP);
         }
 
         private void ClosePictureBox_Click(object sender, EventArgs e)

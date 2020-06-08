@@ -54,7 +54,7 @@ namespace Admin_Panel_Hotel
         {
             Control textbox = sender as Control;
 
-            if (textbox.Text.Trim() == textbox.Tag.ToString())
+            if (textbox.Text.Trim() == textbox.Tag.ToString()) // Если в текстовом поле написан текст подсказки.
             {
                 textbox.Text = null;
                 textbox.ForeColor = SystemColors.WindowText;
@@ -70,7 +70,7 @@ namespace Admin_Panel_Hotel
         {
             Control textbox = sender as Control;
 
-            if (textbox.Text.Trim().Length == 0)
+            if (textbox.Text.Trim().Length == 0) // Если текстовое поле пустое.
             {
                 textbox.Text = textbox.Tag.ToString();
                 textbox.ForeColor = SystemColors.GrayText;
