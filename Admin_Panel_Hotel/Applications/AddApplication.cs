@@ -1,16 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Admin_Panel_Hotel
 {
-    public partial class AddApplication : System.Windows.Forms.Form
+    public partial class AddApplication : Form
     {
         public AddApplication()
         {
@@ -25,6 +18,7 @@ namespace Admin_Panel_Hotel
         private void AcceptButton_Click(object sender, EventArgs e)
         {
             // TODO: Сделать проверку корректности введённых данных.
+
             // Открытие формы уведомления о созданной заявке.
             var notification = new NotificationsForm();
             notification.NotificationLabel.Text = "Заявка добавлена";
@@ -36,6 +30,11 @@ namespace Admin_Panel_Hotel
         private void AddUserButton_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void ApplicationUserDataGridView_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            //ApplicationUserDataGridView[1, e.RowIndex].Value
         }
     }
 }

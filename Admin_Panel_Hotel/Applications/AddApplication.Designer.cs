@@ -43,13 +43,13 @@
             this.CustomersComboBox = new System.Windows.Forms.ComboBox();
             this.LocationComboBox = new System.Windows.Forms.ComboBox();
             this.ImportFileButton = new System.Windows.Forms.Button();
-            this.GridTeble = new System.Windows.Forms.DataGridView();
+            this.ApplicationUserDataGridView = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.GridTeble)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ApplicationUserDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // NewApplication
@@ -168,27 +168,26 @@
             this.ImportFileButton.Text = "Импорт документа";
             this.ImportFileButton.UseVisualStyleBackColor = false;
             // 
-            // GridTeble
+            // ApplicationUserDataGridView
             // 
-            this.GridTeble.AllowUserToResizeRows = false;
+            this.ApplicationUserDataGridView.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.GridTeble.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.GridTeble.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.GridTeble.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.GridTeble.BackgroundColor = System.Drawing.Color.White;
-            this.GridTeble.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.GridTeble.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.GridTeble.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.ApplicationUserDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.ApplicationUserDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.ApplicationUserDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.ApplicationUserDataGridView.BackgroundColor = System.Drawing.Color.White;
+            this.ApplicationUserDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ApplicationUserDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(172)))), ((int)(((byte)(218)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(172)))), ((int)(((byte)(218)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.GridTeble.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.GridTeble.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GridTeble.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ApplicationUserDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.ApplicationUserDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ApplicationUserDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
@@ -196,35 +195,36 @@
             this.Column5});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.GridTeble.DefaultCellStyle = dataGridViewCellStyle3;
-            this.GridTeble.EnableHeadersVisualStyles = false;
-            this.GridTeble.Location = new System.Drawing.Point(19, 133);
-            this.GridTeble.Name = "GridTeble";
-            this.GridTeble.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            this.ApplicationUserDataGridView.DefaultCellStyle = dataGridViewCellStyle3;
+            this.ApplicationUserDataGridView.EnableHeadersVisualStyles = false;
+            this.ApplicationUserDataGridView.Location = new System.Drawing.Point(19, 133);
+            this.ApplicationUserDataGridView.Name = "ApplicationUserDataGridView";
+            this.ApplicationUserDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.GridTeble.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.GridTeble.RowHeadersVisible = false;
+            this.ApplicationUserDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.ApplicationUserDataGridView.RowHeadersVisible = false;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle5.NullValue = null;
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            this.GridTeble.RowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.GridTeble.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.GridTeble.Size = new System.Drawing.Size(712, 426);
-            this.GridTeble.TabIndex = 37;
+            this.ApplicationUserDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.ApplicationUserDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.ApplicationUserDataGridView.Size = new System.Drawing.Size(712, 426);
+            this.ApplicationUserDataGridView.TabIndex = 37;
+            this.ApplicationUserDataGridView.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.ApplicationUserDataGridView_RowsAdded);
             // 
             // Column1
             // 
@@ -274,7 +274,7 @@
             // 
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(743, 706);
-            this.Controls.Add(this.GridTeble);
+            this.Controls.Add(this.ApplicationUserDataGridView);
             this.Controls.Add(this.ImportFileButton);
             this.Controls.Add(this.LocationComboBox);
             this.Controls.Add(this.CustomersComboBox);
@@ -284,9 +284,10 @@
             this.Controls.Add(this.PrintButton);
             this.Controls.Add(this.EditButton);
             this.Controls.Add(this.NewApplication);
+            this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddApplication";
-            ((System.ComponentModel.ISupportInitialize)(this.GridTeble)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ApplicationUserDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -303,7 +304,7 @@
         private System.Windows.Forms.ComboBox CustomersComboBox;
         private System.Windows.Forms.ComboBox LocationComboBox;
         private System.Windows.Forms.Button ImportFileButton;
-        private System.Windows.Forms.DataGridView GridTeble;
+        private System.Windows.Forms.DataGridView ApplicationUserDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;

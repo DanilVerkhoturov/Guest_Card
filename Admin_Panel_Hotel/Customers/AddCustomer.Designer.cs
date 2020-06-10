@@ -569,7 +569,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(226, 51);
+            this.pictureBox3.Location = new System.Drawing.Point(226, 63);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(297, 15);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -751,7 +751,7 @@
             this.AddLocationsButton.FlatAppearance.BorderSize = 0;
             this.AddLocationsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddLocationsButton.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.AddLocationsButton.Location = new System.Drawing.Point(358, 47);
+            this.AddLocationsButton.Location = new System.Drawing.Point(358, 59);
             this.AddLocationsButton.Name = "AddLocationsButton";
             this.AddLocationsButton.Size = new System.Drawing.Size(24, 23);
             this.AddLocationsButton.TabIndex = 47;
@@ -766,7 +766,7 @@
             this.CustomerInfoButton.FlatAppearance.BorderSize = 0;
             this.CustomerInfoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CustomerInfoButton.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CustomerInfoButton.Location = new System.Drawing.Point(226, 47);
+            this.CustomerInfoButton.Location = new System.Drawing.Point(226, 59);
             this.CustomerInfoButton.Name = "CustomerInfoButton";
             this.CustomerInfoButton.Size = new System.Drawing.Size(24, 23);
             this.CustomerInfoButton.TabIndex = 48;
@@ -781,7 +781,7 @@
             this.CardPropertiesButton.FlatAppearance.BorderSize = 0;
             this.CardPropertiesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CardPropertiesButton.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CardPropertiesButton.Location = new System.Drawing.Point(499, 47);
+            this.CardPropertiesButton.Location = new System.Drawing.Point(499, 59);
             this.CardPropertiesButton.Name = "CardPropertiesButton";
             this.CardPropertiesButton.Size = new System.Drawing.Size(24, 23);
             this.CardPropertiesButton.TabIndex = 49;
