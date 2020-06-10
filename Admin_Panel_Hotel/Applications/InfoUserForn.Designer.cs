@@ -1,6 +1,6 @@
 ﻿namespace Admin_Panel_Hotel
 {
-    partial class InfoUserForn
+    partial class InfoUserForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InfoUserForn));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InfoUserForm));
             this.FullNameTextLabel = new System.Windows.Forms.Label();
             this.FullNameInfoLabel = new System.Windows.Forms.Label();
             this.TabNumberTextLabel = new System.Windows.Forms.Label();
@@ -237,7 +237,6 @@
             this.label17.Size = new System.Drawing.Size(43, 17);
             this.label17.TabIndex = 16;
             this.label17.Text = "Карта";
-            this.label17.Click += new System.EventHandler(this.label17_Click);
             // 
             // label18
             // 
@@ -268,7 +267,6 @@
             this.label20.Size = new System.Drawing.Size(43, 17);
             this.label20.TabIndex = 18;
             this.label20.Text = "Белье";
-            this.label20.Click += new System.EventHandler(this.label20_Click);
             // 
             // label21
             // 
@@ -280,7 +278,6 @@
             this.label21.TabIndex = 23;
             this.label21.Text = "-";
             this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label21.Click += new System.EventHandler(this.label21_Click);
             // 
             // label22
             // 
@@ -386,7 +383,6 @@
             this.label31.Size = new System.Drawing.Size(99, 17);
             this.label31.TabIndex = 28;
             this.label31.Text = "Инструктаж ПП";
-            this.label31.Click += new System.EventHandler(this.label31_Click);
             // 
             // label32
             // 
@@ -407,7 +403,6 @@
             this.label33.Size = new System.Drawing.Size(95, 17);
             this.label33.TabIndex = 26;
             this.label33.Text = "Инструктаж ТБ";
-            this.label33.Click += new System.EventHandler(this.label33_Click);
             // 
             // pictureBox1
             // 
@@ -429,8 +424,9 @@
             this.ClosePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ClosePictureBox.TabIndex = 35;
             this.ClosePictureBox.TabStop = false;
+            this.ClosePictureBox.Click += new System.EventHandler(this.ClosePictureBox_Click);
             // 
-            // InfoUserForn
+            // InfoUserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -471,9 +467,8 @@
             this.Controls.Add(this.FullNameInfoLabel);
             this.Controls.Add(this.FullNameTextLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "InfoUserForn";
+            this.Name = "InfoUserForm";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.InfoUserForn_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ClosePictureBox)).EndInit();
             this.ResumeLayout(false);

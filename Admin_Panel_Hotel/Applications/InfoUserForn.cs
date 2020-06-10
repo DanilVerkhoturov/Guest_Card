@@ -10,41 +10,16 @@ using System.Windows.Forms;
 
 namespace Admin_Panel_Hotel
 {
-    public partial class InfoUserForn : Form
+    public partial class InfoUserForm : Form
     {
-        public InfoUserForn()
+        public InfoUserForm()
         {
             InitializeComponent();
         }
 
-        private void label21_Click(object sender, EventArgs e)
+        private void ClosePictureBox_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void InfoUserForn_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label17_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label20_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label33_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label31_Click(object sender, EventArgs e)
-        {
-
+            Close();
         }
     }
 }

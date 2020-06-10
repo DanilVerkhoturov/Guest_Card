@@ -42,5 +42,16 @@ namespace Admin_Panel_Hotel
             GridTable.ReadOnly = false;
 
         }
+
+        private void GridTable_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 5)
+            {
+                var form = new InfoUserForm();
+                form.Owner = this;
+                form.StartPosition = FormStartPosition.CenterParent;
+                form.ShowDialog();
+            }
+        }
     }
 }
