@@ -252,14 +252,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -299,9 +293,8 @@
   <ItemGroup>
     <Content Include="Customers\Bitmap1.bmp" />
     <Content Include="Resources\Line 47.png" />
-    <Content Include="Resources\BlueCircle.png" />
-    <None Include="Resources\Rectangle 181.png" />
-    <Content Include="Resources\GreyCircle.png" />
+    <Content Include="Resources\GrayCircle.png" />
+    <None Include="Resources\BlueCircle.png" />
     <None Include="Resources\Line 471.png" />
     <Content Include="Resources\question_icon.png" />
   </ItemGroup>
