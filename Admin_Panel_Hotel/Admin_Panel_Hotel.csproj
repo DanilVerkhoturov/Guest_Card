@@ -251,14 +251,20 @@
       <DependentUpon>PatternForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -292,11 +298,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Customers\Bitmap1.bmp" />
+    <None Include="Resources\GrayCircle.png" />
     <Content Include="Resources\Line 47.png" />
-    <Content Include="Resources\GrayCircle.png" />
     <None Include="Resources\BlueCircle.png" />
     <None Include="Resources\Line 471.png" />
     <Content Include="Resources\question_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources11\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -168,9 +168,9 @@ namespace Admin_Panel_Hotel
             AddCustomerLocationPanel.Visible = true;
             CardPropertiesPanel.Visible = false;
 
-            CustomerInfoButton.BackgroundImage = Properties.Resources.GreyCircle;
+            CustomerInfoButton.BackgroundImage = Properties.Resources.GrayCircle;
             AddLocationsButton.BackgroundImage = Properties.Resources.BlueCircle;
-            CardPropertiesButton.BackgroundImage = Properties.Resources.GreyCircle;
+            CardPropertiesButton.BackgroundImage = Properties.Resources.GrayCircle;
         }
 
         private void AddLocationNextButton_Click(object sender, EventArgs e)
@@ -187,8 +187,8 @@ namespace Admin_Panel_Hotel
             AddCustomerLocationPanel.Visible = false;
             CardPropertiesPanel.Visible = true;
 
-            CustomerInfoButton.BackgroundImage = Properties.Resources.GreyCircle;
-            AddLocationsButton.BackgroundImage = Properties.Resources.GreyCircle;
+            CustomerInfoButton.BackgroundImage = Properties.Resources.GrayCircle;
+            AddLocationsButton.BackgroundImage = Properties.Resources.GrayCircle;
             CardPropertiesButton.BackgroundImage = Properties.Resources.BlueCircle;
         }
 
@@ -202,8 +202,8 @@ namespace Admin_Panel_Hotel
             CardPropertiesPanel.Visible = false;
 
             CustomerInfoButton.BackgroundImage = Properties.Resources.BlueCircle;
-            AddLocationsButton.BackgroundImage = Properties.Resources.GreyCircle;
-            CardPropertiesButton.BackgroundImage = Properties.Resources.GreyCircle;
+            AddLocationsButton.BackgroundImage = Properties.Resources.GrayCircle;
+            CardPropertiesButton.BackgroundImage = Properties.Resources.GrayCircle;
         }
 
         private void AddLocationButton_Click(object sender, EventArgs e)
