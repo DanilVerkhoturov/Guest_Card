@@ -168,9 +168,9 @@ namespace Admin_Panel_Hotel
             AddCustomerLocationPanel.Visible = true;
             CardPropertiesPanel.Visible = false;
 
-            CustomerInfoPictureBox.Image = Properties.Resources.GreyCircle;
-            AddCustomerLocationPictureBox.Image = Properties.Resources.BlueCircle;
-            CardPropertiesPictureBox.Image = Properties.Resources.GreyCircle;
+            CustomerInfoButton.BackgroundImage = Properties.Resources.GreyCircle;
+            AddLocationsButton.BackgroundImage = Properties.Resources.BlueCircle;
+            CardPropertiesButton.BackgroundImage = Properties.Resources.GreyCircle;
         }
 
         private void AddLocationNextButton_Click(object sender, EventArgs e)
@@ -187,14 +187,9 @@ namespace Admin_Panel_Hotel
             AddCustomerLocationPanel.Visible = false;
             CardPropertiesPanel.Visible = true;
 
-            CustomerInfoPictureBox.Image = Properties.Resources.GreyCircle;
-            AddCustomerLocationPictureBox.Image = Properties.Resources.GreyCircle;
-            CardPropertiesPictureBox.Image = Properties.Resources.BlueCircle;
-        }
-
-        private void CustomerInfoPictureBox_Click(object sender, EventArgs e)
-        {
-            OpenCustomerInfoPanel();
+            CustomerInfoButton.BackgroundImage = Properties.Resources.GreyCircle;
+            AddLocationsButton.BackgroundImage = Properties.Resources.GreyCircle;
+            CardPropertiesButton.BackgroundImage = Properties.Resources.BlueCircle;
         }
 
         /// <summary>
@@ -206,19 +201,9 @@ namespace Admin_Panel_Hotel
             AddCustomerLocationPanel.Visible = false;
             CardPropertiesPanel.Visible = false;
 
-            CustomerInfoPictureBox.Image = Properties.Resources.BlueCircle;
-            AddCustomerLocationPictureBox.Image = Properties.Resources.GreyCircle;
-            CardPropertiesPictureBox.Image = Properties.Resources.GreyCircle;
-        }
-
-        private void AddCustomerLocationPictureBox_Click(object sender, EventArgs e)
-        {
-            OpenAddCustomerLocationPanel();
-        }
-
-        private void CardPropertiesPictureBox_Click(object sender, EventArgs e)
-        {
-            OpenCardPropertiesPanel();
+            CustomerInfoButton.BackgroundImage = Properties.Resources.BlueCircle;
+            AddLocationsButton.BackgroundImage = Properties.Resources.GreyCircle;
+            CardPropertiesButton.BackgroundImage = Properties.Resources.GreyCircle;
         }
 
         private void AddLocationButton_Click(object sender, EventArgs e)
@@ -233,6 +218,21 @@ namespace Admin_Panel_Hotel
             {
                 LocationsDataGridView.Rows.Add(1, LocationNameTextBox.Text);
             }
+        }
+
+        private void CustomerInfoButton_Click(object sender, EventArgs e)
+        {
+            OpenCustomerInfoPanel();
+        }
+
+        private void AddLocationsButton_Click(object sender, EventArgs e)
+        {
+            OpenAddCustomerLocationPanel();
+        }
+
+        private void CardPropertiesButton_Click(object sender, EventArgs e)
+        {
+            OpenCardPropertiesPanel();
         }
     }
 }

@@ -30,11 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddCustomer));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
             this.AddCustomerButton = new System.Windows.Forms.Button();
             this.Set2_Customer_CheckBox = new System.Windows.Forms.CheckBox();
             this.Set1_Customer_CheckBox = new System.Windows.Forms.CheckBox();
@@ -77,25 +77,22 @@
             this.LocationNameTextBox = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.HelpProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            this.CustomerInfoPictureBox = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.AddCustomerLocationPictureBox = new System.Windows.Forms.PictureBox();
-            this.CardPropertiesPictureBox = new System.Windows.Forms.PictureBox();
             this.CustomerInfoPanel = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.AddCustomerLocationPanel = new System.Windows.Forms.Panel();
-            this.LocationsDataGridView = new System.Windows.Forms.DataGridView();
             this.label9 = new System.Windows.Forms.Label();
-            this.CardPropertiesPanel = new System.Windows.Forms.Panel();
+            this.LocationsDataGridView = new System.Windows.Forms.DataGridView();
             this.Num = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LocationName = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.CardPropertiesPanel = new System.Windows.Forms.Panel();
+            this.AddLocationsButton = new System.Windows.Forms.Button();
+            this.CustomerInfoButton = new System.Windows.Forms.Button();
+            this.CardPropertiesButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HelpProvider)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CustomerInfoPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AddCustomerLocationPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CardPropertiesPictureBox)).BeginInit();
             this.CustomerInfoPanel.SuspendLayout();
             this.AddCustomerLocationPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LocationsDataGridView)).BeginInit();
@@ -568,51 +565,15 @@
             this.HelpProvider.ContainerControl = this;
             this.HelpProvider.Icon = ((System.Drawing.Icon)(resources.GetObject("HelpProvider.Icon")));
             // 
-            // CustomerInfoPictureBox
-            // 
-            this.CustomerInfoPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CustomerInfoPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("CustomerInfoPictureBox.Image")));
-            this.CustomerInfoPictureBox.Location = new System.Drawing.Point(239, 51);
-            this.CustomerInfoPictureBox.Name = "CustomerInfoPictureBox";
-            this.CustomerInfoPictureBox.Size = new System.Drawing.Size(15, 15);
-            this.CustomerInfoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.CustomerInfoPictureBox.TabIndex = 40;
-            this.CustomerInfoPictureBox.TabStop = false;
-            this.CustomerInfoPictureBox.Click += new System.EventHandler(this.CustomerInfoPictureBox_Click);
-            // 
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(239, 50);
+            this.pictureBox3.Location = new System.Drawing.Point(226, 51);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(251, 15);
+            this.pictureBox3.Size = new System.Drawing.Size(297, 15);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox3.TabIndex = 41;
             this.pictureBox3.TabStop = false;
-            // 
-            // AddCustomerLocationPictureBox
-            // 
-            this.AddCustomerLocationPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.AddCustomerLocationPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("AddCustomerLocationPictureBox.Image")));
-            this.AddCustomerLocationPictureBox.Location = new System.Drawing.Point(357, 50);
-            this.AddCustomerLocationPictureBox.Name = "AddCustomerLocationPictureBox";
-            this.AddCustomerLocationPictureBox.Size = new System.Drawing.Size(15, 15);
-            this.AddCustomerLocationPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.AddCustomerLocationPictureBox.TabIndex = 42;
-            this.AddCustomerLocationPictureBox.TabStop = false;
-            this.AddCustomerLocationPictureBox.Click += new System.EventHandler(this.AddCustomerLocationPictureBox_Click);
-            // 
-            // CardPropertiesPictureBox
-            // 
-            this.CardPropertiesPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CardPropertiesPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("CardPropertiesPictureBox.Image")));
-            this.CardPropertiesPictureBox.Location = new System.Drawing.Point(475, 50);
-            this.CardPropertiesPictureBox.Name = "CardPropertiesPictureBox";
-            this.CardPropertiesPictureBox.Size = new System.Drawing.Size(15, 15);
-            this.CardPropertiesPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.CardPropertiesPictureBox.TabIndex = 43;
-            this.CardPropertiesPictureBox.TabStop = false;
-            this.CardPropertiesPictureBox.Click += new System.EventHandler(this.CardPropertiesPictureBox_Click);
             // 
             // CustomerInfoPanel
             // 
@@ -673,68 +634,6 @@
             this.AddCustomerLocationPanel.TabIndex = 45;
             this.AddCustomerLocationPanel.Visible = false;
             // 
-            // LocationsDataGridView
-            // 
-            this.LocationsDataGridView.AllowUserToAddRows = false;
-            this.LocationsDataGridView.AllowUserToDeleteRows = false;
-            this.LocationsDataGridView.AllowUserToResizeColumns = false;
-            this.LocationsDataGridView.AllowUserToResizeRows = false;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.LocationsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
-            this.LocationsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.LocationsDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.LocationsDataGridView.BackgroundColor = System.Drawing.Color.White;
-            this.LocationsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.LocationsDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.LocationsDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(172)))), ((int)(((byte)(218)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(172)))), ((int)(((byte)(218)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.LocationsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
-            this.LocationsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.LocationsDataGridView.ColumnHeadersVisible = false;
-            this.LocationsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Num,
-            this.LocationName});
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.LocationsDataGridView.DefaultCellStyle = dataGridViewCellStyle13;
-            this.LocationsDataGridView.EnableHeadersVisualStyles = false;
-            this.LocationsDataGridView.Location = new System.Drawing.Point(453, 49);
-            this.LocationsDataGridView.MultiSelect = false;
-            this.LocationsDataGridView.Name = "LocationsDataGridView";
-            this.LocationsDataGridView.ReadOnly = true;
-            this.LocationsDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.LocationsDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
-            this.LocationsDataGridView.RowHeadersVisible = false;
-            this.LocationsDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle15.NullValue = null;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Black;
-            this.LocationsDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle15;
-            this.LocationsDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.LocationsDataGridView.Size = new System.Drawing.Size(185, 288);
-            this.LocationsDataGridView.TabIndex = 47;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -745,22 +644,67 @@
             this.label9.TabIndex = 46;
             this.label9.Text = "Добавить локацию заказчика";
             // 
-            // CardPropertiesPanel
+            // LocationsDataGridView
             // 
-            this.CardPropertiesPanel.Controls.Add(this.AddCustomerButton);
-            this.CardPropertiesPanel.Controls.Add(this.label2);
-            this.CardPropertiesPanel.Controls.Add(this.FireSafety_Customer_CheckBox);
-            this.CardPropertiesPanel.Controls.Add(this.AllProperties_Customer_CheckBox);
-            this.CardPropertiesPanel.Controls.Add(this.ResidenceRules_Customer_CheckBox);
-            this.CardPropertiesPanel.Controls.Add(this.GiveOutLinen_Customer_CheckBox);
-            this.CardPropertiesPanel.Controls.Add(this.Set1_Customer_CheckBox);
-            this.CardPropertiesPanel.Controls.Add(this.Set2_Customer_CheckBox);
-            this.CardPropertiesPanel.Controls.Add(this.Instructed_Customer_CheckBox);
-            this.CardPropertiesPanel.Location = new System.Drawing.Point(34, 98);
-            this.CardPropertiesPanel.Name = "CardPropertiesPanel";
-            this.CardPropertiesPanel.Size = new System.Drawing.Size(644, 400);
-            this.CardPropertiesPanel.TabIndex = 46;
-            this.CardPropertiesPanel.Visible = false;
+            this.LocationsDataGridView.AllowUserToAddRows = false;
+            this.LocationsDataGridView.AllowUserToDeleteRows = false;
+            this.LocationsDataGridView.AllowUserToResizeColumns = false;
+            this.LocationsDataGridView.AllowUserToResizeRows = false;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.LocationsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle26;
+            this.LocationsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.LocationsDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.LocationsDataGridView.BackgroundColor = System.Drawing.Color.White;
+            this.LocationsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.LocationsDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.LocationsDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(172)))), ((int)(((byte)(218)))));
+            dataGridViewCellStyle27.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle27.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(172)))), ((int)(((byte)(218)))));
+            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.LocationsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle27;
+            this.LocationsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.LocationsDataGridView.ColumnHeadersVisible = false;
+            this.LocationsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Num,
+            this.LocationName});
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle28.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle28.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle28.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.LocationsDataGridView.DefaultCellStyle = dataGridViewCellStyle28;
+            this.LocationsDataGridView.EnableHeadersVisualStyles = false;
+            this.LocationsDataGridView.Location = new System.Drawing.Point(453, 49);
+            this.LocationsDataGridView.MultiSelect = false;
+            this.LocationsDataGridView.Name = "LocationsDataGridView";
+            this.LocationsDataGridView.ReadOnly = true;
+            this.LocationsDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle29.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle29.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.LocationsDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle29;
+            this.LocationsDataGridView.RowHeadersVisible = false;
+            this.LocationsDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle30.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle30.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle30.NullValue = null;
+            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.Color.Black;
+            this.LocationsDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle30;
+            this.LocationsDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.LocationsDataGridView.Size = new System.Drawing.Size(185, 288);
+            this.LocationsDataGridView.TabIndex = 47;
             // 
             // Num
             // 
@@ -781,14 +725,79 @@
             this.LocationName.ReadOnly = true;
             this.LocationName.Width = 5;
             // 
+            // CardPropertiesPanel
+            // 
+            this.CardPropertiesPanel.Controls.Add(this.AddCustomerButton);
+            this.CardPropertiesPanel.Controls.Add(this.label2);
+            this.CardPropertiesPanel.Controls.Add(this.FireSafety_Customer_CheckBox);
+            this.CardPropertiesPanel.Controls.Add(this.AllProperties_Customer_CheckBox);
+            this.CardPropertiesPanel.Controls.Add(this.ResidenceRules_Customer_CheckBox);
+            this.CardPropertiesPanel.Controls.Add(this.GiveOutLinen_Customer_CheckBox);
+            this.CardPropertiesPanel.Controls.Add(this.Set1_Customer_CheckBox);
+            this.CardPropertiesPanel.Controls.Add(this.Set2_Customer_CheckBox);
+            this.CardPropertiesPanel.Controls.Add(this.Instructed_Customer_CheckBox);
+            this.CardPropertiesPanel.Location = new System.Drawing.Point(34, 98);
+            this.CardPropertiesPanel.Name = "CardPropertiesPanel";
+            this.CardPropertiesPanel.Size = new System.Drawing.Size(644, 400);
+            this.CardPropertiesPanel.TabIndex = 46;
+            this.CardPropertiesPanel.Visible = false;
+            // 
+            // AddLocationsButton
+            // 
+            this.AddLocationsButton.BackColor = System.Drawing.Color.White;
+            this.AddLocationsButton.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.GreyCircle;
+            this.AddLocationsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.AddLocationsButton.FlatAppearance.BorderSize = 0;
+            this.AddLocationsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddLocationsButton.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AddLocationsButton.Location = new System.Drawing.Point(358, 47);
+            this.AddLocationsButton.Name = "AddLocationsButton";
+            this.AddLocationsButton.Size = new System.Drawing.Size(24, 23);
+            this.AddLocationsButton.TabIndex = 47;
+            this.AddLocationsButton.Text = "2";
+            this.AddLocationsButton.UseVisualStyleBackColor = false;
+            this.AddLocationsButton.Click += new System.EventHandler(this.AddLocationsButton_Click);
+            // 
+            // CustomerInfoButton
+            // 
+            this.CustomerInfoButton.BackColor = System.Drawing.Color.White;
+            this.CustomerInfoButton.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.BlueCircle;
+            this.CustomerInfoButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CustomerInfoButton.FlatAppearance.BorderSize = 0;
+            this.CustomerInfoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CustomerInfoButton.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CustomerInfoButton.Location = new System.Drawing.Point(226, 47);
+            this.CustomerInfoButton.Name = "CustomerInfoButton";
+            this.CustomerInfoButton.Size = new System.Drawing.Size(24, 23);
+            this.CustomerInfoButton.TabIndex = 48;
+            this.CustomerInfoButton.Text = "1";
+            this.CustomerInfoButton.UseVisualStyleBackColor = false;
+            this.CustomerInfoButton.Click += new System.EventHandler(this.CustomerInfoButton_Click);
+            // 
+            // CardPropertiesButton
+            // 
+            this.CardPropertiesButton.BackColor = System.Drawing.Color.White;
+            this.CardPropertiesButton.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.GreyCircle;
+            this.CardPropertiesButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CardPropertiesButton.FlatAppearance.BorderSize = 0;
+            this.CardPropertiesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CardPropertiesButton.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CardPropertiesButton.Location = new System.Drawing.Point(499, 47);
+            this.CardPropertiesButton.Name = "CardPropertiesButton";
+            this.CardPropertiesButton.Size = new System.Drawing.Size(24, 23);
+            this.CardPropertiesButton.TabIndex = 49;
+            this.CardPropertiesButton.Text = "3";
+            this.CardPropertiesButton.UseVisualStyleBackColor = false;
+            this.CardPropertiesButton.Click += new System.EventHandler(this.CardPropertiesButton_Click);
+            // 
             // AddCustomer
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(711, 535);
-            this.Controls.Add(this.CardPropertiesPictureBox);
-            this.Controls.Add(this.AddCustomerLocationPictureBox);
-            this.Controls.Add(this.CustomerInfoPictureBox);
+            this.Controls.Add(this.CardPropertiesButton);
+            this.Controls.Add(this.CustomerInfoButton);
+            this.Controls.Add(this.AddLocationsButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.CustomerInfoPanel);
@@ -802,10 +811,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HelpProvider)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CustomerInfoPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AddCustomerLocationPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CardPropertiesPictureBox)).EndInit();
             this.CustomerInfoPanel.ResumeLayout(false);
             this.CustomerInfoPanel.PerformLayout();
             this.AddCustomerLocationPanel.ResumeLayout(false);
@@ -862,9 +868,6 @@
         private System.Windows.Forms.TextBox BedsCountTextBox;
         private System.Windows.Forms.TextBox RoomCountTextBox;
         private System.Windows.Forms.ErrorProvider HelpProvider;
-        private System.Windows.Forms.PictureBox CustomerInfoPictureBox;
-        private System.Windows.Forms.PictureBox CardPropertiesPictureBox;
-        private System.Windows.Forms.PictureBox AddCustomerLocationPictureBox;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel AddCustomerLocationPanel;
         private System.Windows.Forms.Label label9;
@@ -874,5 +877,8 @@
         private System.Windows.Forms.DataGridView LocationsDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn Num;
         private System.Windows.Forms.DataGridViewLinkColumn LocationName;
+        private System.Windows.Forms.Button AddLocationsButton;
+        private System.Windows.Forms.Button CardPropertiesButton;
+        private System.Windows.Forms.Button CustomerInfoButton;
     }
 }
