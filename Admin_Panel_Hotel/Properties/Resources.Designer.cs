@@ -63,6 +63,16 @@ namespace Admin_Panel_Hotel.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BlueCircle {
+            get {
+                object obj = ResourceManager.GetObject("BlueCircle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ExitPlus {
             get {
                 object obj = ResourceManager.GetObject("ExitPlus", resourceCulture);
@@ -83,9 +93,39 @@ namespace Admin_Panel_Hotel.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap GreyCircle {
+            get {
+                object obj = ResourceManager.GetObject("GreyCircle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap GroupPlus1 {
             get {
                 object obj = ResourceManager.GetObject("GroupPlus1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Line_47 {
+            get {
+                object obj = ResourceManager.GetObject("Line 47", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Line_471 {
+            get {
+                object obj = ResourceManager.GetObject("Line_471", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

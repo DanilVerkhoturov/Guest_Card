@@ -72,9 +72,11 @@
             this.ApplicationsNameTextBox1.Margin = new System.Windows.Forms.Padding(3, 3, 3, 12);
             this.ApplicationsNameTextBox1.Multiline = true;
             this.ApplicationsNameTextBox1.Name = "ApplicationsNameTextBox1";
+            this.ApplicationsNameTextBox1.ReadOnly = true;
             this.ApplicationsNameTextBox1.Size = new System.Drawing.Size(287, 25);
             this.ApplicationsNameTextBox1.TabIndex = 3;
             this.ApplicationsNameTextBox1.Text = "Заявка-1";
+            this.ApplicationsNameTextBox1.TextChanged += new System.EventHandler(this.ApplicationsNameTextBox1_TextChanged);
             // 
             // ApplicationsNameTextBox2
             // 
@@ -85,9 +87,11 @@
             this.ApplicationsNameTextBox2.Margin = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.ApplicationsNameTextBox2.Multiline = true;
             this.ApplicationsNameTextBox2.Name = "ApplicationsNameTextBox2";
+            this.ApplicationsNameTextBox2.ReadOnly = true;
             this.ApplicationsNameTextBox2.Size = new System.Drawing.Size(287, 25);
             this.ApplicationsNameTextBox2.TabIndex = 6;
             this.ApplicationsNameTextBox2.Text = "Заявка-2";
+            this.ApplicationsNameTextBox2.TextChanged += new System.EventHandler(this.ApplicationsNameTextBox2_TextChanged);
             // 
             // ShowApplicationButton1
             // 
@@ -111,6 +115,7 @@
             this.ShowApplicationsButton2.Size = new System.Drawing.Size(25, 25);
             this.ShowApplicationsButton2.TabIndex = 8;
             this.ShowApplicationsButton2.UseVisualStyleBackColor = false;
+            this.ShowApplicationsButton2.Click += new System.EventHandler(this.ShowApplicationsButton2_Click);
             // 
             // NewApplications
             // 

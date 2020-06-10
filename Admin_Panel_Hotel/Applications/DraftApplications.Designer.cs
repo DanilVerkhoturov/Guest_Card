@@ -68,33 +68,37 @@
             this.ApplicationsNameTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ApplicationsNameTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ApplicationsNameTextBox1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ApplicationsNameTextBox1.Location = new System.Drawing.Point(33, 65);
+            this.ApplicationsNameTextBox1.Location = new System.Drawing.Point(33, 67);
             this.ApplicationsNameTextBox1.Margin = new System.Windows.Forms.Padding(3, 3, 3, 12);
             this.ApplicationsNameTextBox1.Multiline = true;
             this.ApplicationsNameTextBox1.Name = "ApplicationsNameTextBox1";
+            this.ApplicationsNameTextBox1.ReadOnly = true;
             this.ApplicationsNameTextBox1.Size = new System.Drawing.Size(287, 25);
             this.ApplicationsNameTextBox1.TabIndex = 3;
             this.ApplicationsNameTextBox1.Text = "Заявка-1";
+            this.ApplicationsNameTextBox1.TextChanged += new System.EventHandler(this.ApplicationsNameTextBox1_TextChanged);
             // 
             // ApplicationsNameTextBox2
             // 
             this.ApplicationsNameTextBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ApplicationsNameTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ApplicationsNameTextBox2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ApplicationsNameTextBox2.Location = new System.Drawing.Point(33, 102);
+            this.ApplicationsNameTextBox2.Location = new System.Drawing.Point(33, 104);
             this.ApplicationsNameTextBox2.Margin = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.ApplicationsNameTextBox2.Multiline = true;
             this.ApplicationsNameTextBox2.Name = "ApplicationsNameTextBox2";
+            this.ApplicationsNameTextBox2.ReadOnly = true;
             this.ApplicationsNameTextBox2.Size = new System.Drawing.Size(287, 25);
             this.ApplicationsNameTextBox2.TabIndex = 6;
             this.ApplicationsNameTextBox2.Text = "Заявка-2";
+            this.ApplicationsNameTextBox2.TextChanged += new System.EventHandler(this.ApplicationsNameTextBox2_TextChanged);
             // 
             // ShowApplicationButton1
             // 
             this.ShowApplicationButton1.BackColor = System.Drawing.Color.Transparent;
             this.ShowApplicationButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ShowApplicationButton1.BackgroundImage")));
             this.ShowApplicationButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ShowApplicationButton1.Location = new System.Drawing.Point(326, 65);
+            this.ShowApplicationButton1.Location = new System.Drawing.Point(326, 67);
             this.ShowApplicationButton1.Name = "ShowApplicationButton1";
             this.ShowApplicationButton1.Size = new System.Drawing.Size(25, 25);
             this.ShowApplicationButton1.TabIndex = 7;
@@ -106,13 +110,14 @@
             this.ShowApplicationsButton2.BackColor = System.Drawing.Color.Transparent;
             this.ShowApplicationsButton2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ShowApplicationsButton2.BackgroundImage")));
             this.ShowApplicationsButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ShowApplicationsButton2.Location = new System.Drawing.Point(326, 102);
+            this.ShowApplicationsButton2.Location = new System.Drawing.Point(326, 104);
             this.ShowApplicationsButton2.Name = "ShowApplicationsButton2";
             this.ShowApplicationsButton2.Size = new System.Drawing.Size(25, 25);
             this.ShowApplicationsButton2.TabIndex = 8;
             this.ShowApplicationsButton2.UseVisualStyleBackColor = false;
+            this.ShowApplicationsButton2.Click += new System.EventHandler(this.ShowApplicationsButton2_Click);
             // 
-            // DartApplications
+            // DraftApplications
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -125,7 +130,7 @@
             this.Controls.Add(this.ApplicationsNameTextBox1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "DartApplications";
+            this.Name = "DraftApplications";
             this.Text = "Applications";
             this.ResumeLayout(false);
             this.PerformLayout();
