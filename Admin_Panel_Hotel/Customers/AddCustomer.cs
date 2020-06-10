@@ -42,17 +42,20 @@ namespace Admin_Panel_Hotel
             HelpProvider.SetError(Set1_Customer_CheckBox, "В \"Комплект-1\" входит:\nНаволочка, подушка, одеяло, пододеяльник.");
             HelpProvider.SetError(Set2_Customer_CheckBox, "В \"Комплект-2\" входит:\nПростыня, подушка, одеяло.");
 
-            // TODO: попробовать вписать ссылку на бд в параметр "server".
-            //using (MySqlConnection connection = new MySqlConnection($"server=localhost;userid=u78479;password=hmAsKtPcTHsrK1w;database=u78479_hotel"))
-            //{
-            //    MySqlCommand select = new MySqlCommand("Select * FROM region", connection);
-            //    MySqlDataReader reader = select.ExecuteReader();
 
-            //    while (reader.Read())
-            //    {
-            //        RegionComboBox.Items.Add(reader[1].ToString());
-            //    }
-            //}
+            using (MySqlConnection connection = new MySqlConnection(Functions.ConnectionString))
+            {
+                connection.Open();
+                MySqlCommand select = new MySqlCommand("Select * FROM region", connection);
+                MySqlDataReader reader = select.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    RegionComboBox.Items.Add(reader[1].ToString());
+                }
+
+                connection.Close();
+            }
         }
 
         private void AllProperties_Customer_CheckBox_CheckedChanged(object sender, EventArgs e)
