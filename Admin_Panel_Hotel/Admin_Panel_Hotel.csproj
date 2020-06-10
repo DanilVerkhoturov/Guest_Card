@@ -166,6 +166,12 @@
     <Compile Include="Applications\CurrentApplications.Designer.cs">
       <DependentUpon>CurrentApplications.cs</DependentUpon>
     </Compile>
+    <Compile Include="Applications\InfoUserForn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applications\InfoUserForn.Designer.cs">
+      <DependentUpon>InfoUserForn.cs</DependentUpon>
+    </Compile>
     <Compile Include="NotificationsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -201,6 +207,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Applications\HistoryApplications.resx">
       <DependentUpon>HistoryApplications.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Applications\InfoUserForn.resx">
+      <DependentUpon>InfoUserForn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Customers\AddCustomer.resx">
       <DependentUpon>AddCustomer.cs</DependentUpon>
@@ -288,6 +297,12 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Customers\Bitmap1.bmp" />
+    <Content Include="Resources\Line 47.png" />
+    <Content Include="Resources\BlueCircle.png" />
+    <None Include="Resources\Rectangle 181.png" />
+    <Content Include="Resources\GreyCircle.png" />
+    <None Include="Resources\Line 471.png" />
     <Content Include="Resources\question_icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -15,6 +15,8 @@ namespace Admin_Panel_Hotel
         public ShowApplicationDraft()
         {
             InitializeComponent();
+            this.GridTable.Rows.Add("1", "Иванов Иван Иванович", "ННГ/Цех 136/112", "06.06.2020", "06.06.2020");
+            this.GridTable.Rows.Add("2", "Петров Петр Петрович", "ННГ/Цех 136/113", "06.06.2020", "06.06.2020");
         }
 
         private void NewApplicationsLabel_Click(object sender, EventArgs e)
@@ -30,6 +32,24 @@ namespace Admin_Panel_Hotel
             notification.Owner = this;
             notification.StartPosition = FormStartPosition.CenterParent;
             notification.ShowDialog();
+        }
+
+        private void SaveButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EditButton_Click(object sender, EventArgs e)
+        {
+            GridTable.AllowUserToAddRows = true;
+            GridTable.AllowUserToDeleteRows = true;
+            GridTable.AllowUserToResizeColumns = true;
+            GridTable.ReadOnly = false;
+        }
+
+        private void GridTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

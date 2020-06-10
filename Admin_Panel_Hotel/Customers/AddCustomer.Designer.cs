@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddCustomer));
-            this.AddEmailButton = new System.Windows.Forms.Button();
             this.AddCustomerButton = new System.Windows.Forms.Button();
             this.Set2_Customer_CheckBox = new System.Windows.Forms.CheckBox();
             this.Set1_Customer_CheckBox = new System.Windows.Forms.CheckBox();
@@ -55,9 +54,17 @@
             this.ErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.AddCustomerTabControl = new System.Windows.Forms.TabControl();
             this.CustomerInfoTabPage = new System.Windows.Forms.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
+            this.AddEmailButton = new System.Windows.Forms.Button();
             this.AddCustomerLocationTabPage = new System.Windows.Forms.TabPage();
-            this.AddCardPropertiesTabPage = new System.Windows.Forms.TabPage();
-            this.LocationName_Customer_TextBox = new System.Windows.Forms.TextBox();
+            this.BedsCountTextBox = new System.Windows.Forms.TextBox();
+            this.RoomCountTextBox = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.AddLocationButton = new System.Windows.Forms.Button();
+            this.CardCountTextBox = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.BuildTextBox = new System.Windows.Forms.TextBox();
             this.CorpsTextBox = new System.Windows.Forms.TextBox();
             this.HouseTextBox = new System.Windows.Forms.TextBox();
             this.StreetNameComboBox = new System.Windows.Forms.ComboBox();
@@ -65,40 +72,26 @@
             this.CityComboBox = new System.Windows.Forms.ComboBox();
             this.StateComboBox = new System.Windows.Forms.ComboBox();
             this.RegionComboBox = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.BuildTextBox = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.CardCountTextBox = new System.Windows.Forms.TextBox();
-            this.AddLocationButton = new System.Windows.Forms.Button();
+            this.LocationName_Customer_TextBox = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.RoomCountTextBox = new System.Windows.Forms.TextBox();
-            this.BedsCountTextBox = new System.Windows.Forms.TextBox();
+            this.AddCardPropertiesTabPage = new System.Windows.Forms.TabPage();
             this.HelpProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             this.AddCustomerTabControl.SuspendLayout();
             this.CustomerInfoTabPage.SuspendLayout();
             this.AddCustomerLocationTabPage.SuspendLayout();
-            this.AddCardPropertiesTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.AddCardPropertiesTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HelpProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
-            // 
-            // AddEmailButton
-            // 
-            this.AddEmailButton.BackColor = System.Drawing.Color.Transparent;
-            this.AddEmailButton.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.GroupPlus1;
-            this.AddEmailButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.AddEmailButton.FlatAppearance.BorderSize = 0;
-            this.AddEmailButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddEmailButton.Location = new System.Drawing.Point(506, 267);
-            this.AddEmailButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.AddEmailButton.Name = "AddEmailButton";
-            this.AddEmailButton.Size = new System.Drawing.Size(31, 29);
-            this.AddEmailButton.TabIndex = 32;
-            this.AddEmailButton.UseVisualStyleBackColor = false;
-            this.AddEmailButton.Click += new System.EventHandler(this.AddLocationButton_Click);
             // 
             // AddCustomerButton
             // 
@@ -360,7 +353,7 @@
             this.AddCustomerTabControl.Controls.Add(this.CustomerInfoTabPage);
             this.AddCustomerTabControl.Controls.Add(this.AddCustomerLocationTabPage);
             this.AddCustomerTabControl.Controls.Add(this.AddCardPropertiesTabPage);
-            this.AddCustomerTabControl.Location = new System.Drawing.Point(47, 63);
+            this.AddCustomerTabControl.Location = new System.Drawing.Point(46, 77);
             this.AddCustomerTabControl.Name = "AddCustomerTabControl";
             this.AddCustomerTabControl.SelectedIndex = 0;
             this.AddCustomerTabControl.Size = new System.Drawing.Size(652, 422);
@@ -389,13 +382,40 @@
             this.CustomerInfoTabPage.Text = "Данные заказчика";
             this.CustomerInfoTabPage.UseVisualStyleBackColor = true;
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(535, 350);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(103, 35);
+            this.button2.TabIndex = 45;
+            this.button2.Text = "Далее";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // AddEmailButton
+            // 
+            this.AddEmailButton.BackColor = System.Drawing.Color.Transparent;
+            this.AddEmailButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.AddEmailButton.FlatAppearance.BorderSize = 0;
+            this.AddEmailButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddEmailButton.Location = new System.Drawing.Point(506, 267);
+            this.AddEmailButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.AddEmailButton.Name = "AddEmailButton";
+            this.AddEmailButton.Size = new System.Drawing.Size(31, 29);
+            this.AddEmailButton.TabIndex = 32;
+            this.AddEmailButton.UseVisualStyleBackColor = false;
+            this.AddEmailButton.Click += new System.EventHandler(this.AddLocationButton_Click);
+            // 
             // AddCustomerLocationTabPage
             // 
             this.AddCustomerLocationTabPage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.AddCustomerLocationTabPage.Controls.Add(this.BedsCountTextBox);
             this.AddCustomerLocationTabPage.Controls.Add(this.RoomCountTextBox);
             this.AddCustomerLocationTabPage.Controls.Add(this.button1);
-            this.AddCustomerLocationTabPage.Controls.Add(this.pictureBox1);
             this.AddCustomerLocationTabPage.Controls.Add(this.AddLocationButton);
             this.AddCustomerLocationTabPage.Controls.Add(this.CardCountTextBox);
             this.AddCustomerLocationTabPage.Controls.Add(this.label7);
@@ -409,44 +429,98 @@
             this.AddCustomerLocationTabPage.Controls.Add(this.StateComboBox);
             this.AddCustomerLocationTabPage.Controls.Add(this.RegionComboBox);
             this.AddCustomerLocationTabPage.Controls.Add(this.LocationName_Customer_TextBox);
-            this.AddCustomerLocationTabPage.Location = new System.Drawing.Point(4, 26);
+            this.AddCustomerLocationTabPage.Controls.Add(this.pictureBox1);
+            this.AddCustomerLocationTabPage.Location = new System.Drawing.Point(4, 22);
             this.AddCustomerLocationTabPage.Name = "AddCustomerLocationTabPage";
             this.AddCustomerLocationTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.AddCustomerLocationTabPage.Size = new System.Drawing.Size(644, 392);
+            this.AddCustomerLocationTabPage.Size = new System.Drawing.Size(644, 396);
             this.AddCustomerLocationTabPage.TabIndex = 1;
             this.AddCustomerLocationTabPage.Text = "Добавить локацию заказчика";
             this.AddCustomerLocationTabPage.UseVisualStyleBackColor = true;
             // 
-            // AddCardPropertiesTabPage
+            // BedsCountTextBox
             // 
-            this.AddCardPropertiesTabPage.Controls.Add(this.AddCustomerButton);
-            this.AddCardPropertiesTabPage.Controls.Add(this.label2);
-            this.AddCardPropertiesTabPage.Controls.Add(this.AllProperties_Customer_CheckBox);
-            this.AddCardPropertiesTabPage.Controls.Add(this.GiveOutLinen_Customer_CheckBox);
-            this.AddCardPropertiesTabPage.Controls.Add(this.Set2_Customer_CheckBox);
-            this.AddCardPropertiesTabPage.Controls.Add(this.Instructed_Customer_CheckBox);
-            this.AddCardPropertiesTabPage.Controls.Add(this.Set1_Customer_CheckBox);
-            this.AddCardPropertiesTabPage.Controls.Add(this.ResidenceRules_Customer_CheckBox);
-            this.AddCardPropertiesTabPage.Controls.Add(this.FireSafety_Customer_CheckBox);
-            this.AddCardPropertiesTabPage.Location = new System.Drawing.Point(4, 26);
-            this.AddCardPropertiesTabPage.Name = "AddCardPropertiesTabPage";
-            this.AddCardPropertiesTabPage.Size = new System.Drawing.Size(644, 392);
-            this.AddCardPropertiesTabPage.TabIndex = 2;
-            this.AddCardPropertiesTabPage.Text = "Добавить свойства карт";
-            this.AddCardPropertiesTabPage.UseVisualStyleBackColor = true;
+            this.BedsCountTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.BedsCountTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.BedsCountTextBox.Location = new System.Drawing.Point(144, 275);
+            this.BedsCountTextBox.Name = "BedsCountTextBox";
+            this.BedsCountTextBox.Size = new System.Drawing.Size(119, 25);
+            this.BedsCountTextBox.TabIndex = 46;
+            this.BedsCountTextBox.Leave += new System.EventHandler(this.BedsCountTextBox_Leave);
             // 
-            // LocationName_Customer_TextBox
+            // RoomCountTextBox
             // 
-            this.LocationName_Customer_TextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.LocationName_Customer_TextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.LocationName_Customer_TextBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LocationName_Customer_TextBox.Location = new System.Drawing.Point(6, 43);
-            this.LocationName_Customer_TextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.LocationName_Customer_TextBox.Multiline = true;
-            this.LocationName_Customer_TextBox.Name = "LocationName_Customer_TextBox";
-            this.LocationName_Customer_TextBox.Size = new System.Drawing.Size(393, 29);
-            this.LocationName_Customer_TextBox.TabIndex = 29;
-            this.LocationName_Customer_TextBox.Tag = "";
+            this.RoomCountTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.RoomCountTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.RoomCountTextBox.Location = new System.Drawing.Point(6, 275);
+            this.RoomCountTextBox.Name = "RoomCountTextBox";
+            this.RoomCountTextBox.Size = new System.Drawing.Size(119, 25);
+            this.RoomCountTextBox.TabIndex = 45;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(535, 350);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(103, 35);
+            this.button1.TabIndex = 44;
+            this.button1.Text = "Далее";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // AddLocationButton
+            // 
+            this.AddLocationButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.AddLocationButton.FlatAppearance.BorderSize = 0;
+            this.AddLocationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddLocationButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AddLocationButton.Location = new System.Drawing.Point(11, 337);
+            this.AddLocationButton.Name = "AddLocationButton";
+            this.AddLocationButton.Size = new System.Drawing.Size(286, 32);
+            this.AddLocationButton.TabIndex = 42;
+            this.AddLocationButton.Text = "Добавить ещё локацию";
+            this.AddLocationButton.UseVisualStyleBackColor = true;
+            // 
+            // CardCountTextBox
+            // 
+            this.CardCountTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.CardCountTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CardCountTextBox.Location = new System.Drawing.Point(203, 306);
+            this.CardCountTextBox.Name = "CardCountTextBox";
+            this.CardCountTextBox.Size = new System.Drawing.Size(119, 25);
+            this.CardCountTextBox.TabIndex = 41;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.Location = new System.Drawing.Point(8, 308);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(189, 17);
+            this.label7.TabIndex = 40;
+            this.label7.Text = "Количество карт для локации:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.Location = new System.Drawing.Point(450, 13);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(156, 17);
+            this.label6.TabIndex = 38;
+            this.label6.Text = "Добавленные локации";
+            // 
+            // BuildTextBox
+            // 
+            this.BuildTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.BuildTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.BuildTextBox.Location = new System.Drawing.Point(280, 244);
+            this.BuildTextBox.Name = "BuildTextBox";
+            this.BuildTextBox.Size = new System.Drawing.Size(119, 25);
+            this.BuildTextBox.TabIndex = 37;
             // 
             // CorpsTextBox
             // 
@@ -516,60 +590,21 @@
             this.RegionComboBox.Size = new System.Drawing.Size(393, 25);
             this.RegionComboBox.TabIndex = 30;
             // 
-            // label6
+            // LocationName_Customer_TextBox
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(450, 13);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(156, 17);
-            this.label6.TabIndex = 38;
-            this.label6.Text = "Добавленные локации";
-            // 
-            // BuildTextBox
-            // 
-            this.BuildTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.BuildTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.BuildTextBox.Location = new System.Drawing.Point(280, 244);
-            this.BuildTextBox.Name = "BuildTextBox";
-            this.BuildTextBox.Size = new System.Drawing.Size(119, 25);
-            this.BuildTextBox.TabIndex = 37;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.Location = new System.Drawing.Point(8, 308);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(189, 17);
-            this.label7.TabIndex = 40;
-            this.label7.Text = "Количество карт для локации:";
-            // 
-            // CardCountTextBox
-            // 
-            this.CardCountTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.CardCountTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.CardCountTextBox.Location = new System.Drawing.Point(203, 306);
-            this.CardCountTextBox.Name = "CardCountTextBox";
-            this.CardCountTextBox.Size = new System.Drawing.Size(119, 25);
-            this.CardCountTextBox.TabIndex = 41;
-            // 
-            // AddLocationButton
-            // 
-            this.AddLocationButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.AddLocationButton.FlatAppearance.BorderSize = 0;
-            this.AddLocationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddLocationButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AddLocationButton.Location = new System.Drawing.Point(11, 337);
-            this.AddLocationButton.Name = "AddLocationButton";
-            this.AddLocationButton.Size = new System.Drawing.Size(286, 32);
-            this.AddLocationButton.TabIndex = 42;
-            this.AddLocationButton.Text = "Добавить ещё локацию";
-            this.AddLocationButton.UseVisualStyleBackColor = true;
+            this.LocationName_Customer_TextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.LocationName_Customer_TextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LocationName_Customer_TextBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LocationName_Customer_TextBox.Location = new System.Drawing.Point(6, 43);
+            this.LocationName_Customer_TextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.LocationName_Customer_TextBox.Multiline = true;
+            this.LocationName_Customer_TextBox.Name = "LocationName_Customer_TextBox";
+            this.LocationName_Customer_TextBox.Size = new System.Drawing.Size(393, 29);
+            this.LocationName_Customer_TextBox.TabIndex = 29;
+            this.LocationName_Customer_TextBox.Tag = "";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.GroupPlus1;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(11, 337);
             this.pictureBox1.Name = "pictureBox1";
@@ -577,52 +612,23 @@
             this.pictureBox1.TabIndex = 43;
             this.pictureBox1.TabStop = false;
             // 
-            // button1
+            // AddCardPropertiesTabPage
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.Highlight;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(535, 350);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(103, 35);
-            this.button1.TabIndex = 44;
-            this.button1.Text = "Далее";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.SystemColors.Highlight;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(535, 350);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(103, 35);
-            this.button2.TabIndex = 45;
-            this.button2.Text = "Далее";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // RoomCountTextBox
-            // 
-            this.RoomCountTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.RoomCountTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.RoomCountTextBox.Location = new System.Drawing.Point(6, 275);
-            this.RoomCountTextBox.Name = "RoomCountTextBox";
-            this.RoomCountTextBox.Size = new System.Drawing.Size(119, 25);
-            this.RoomCountTextBox.TabIndex = 45;
-            // 
-            // BedsCountTextBox
-            // 
-            this.BedsCountTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.BedsCountTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.BedsCountTextBox.Location = new System.Drawing.Point(144, 275);
-            this.BedsCountTextBox.Name = "BedsCountTextBox";
-            this.BedsCountTextBox.Size = new System.Drawing.Size(119, 25);
-            this.BedsCountTextBox.TabIndex = 46;
-            this.BedsCountTextBox.Leave += new System.EventHandler(this.BedsCountTextBox_Leave);
+            this.AddCardPropertiesTabPage.Controls.Add(this.AddCustomerButton);
+            this.AddCardPropertiesTabPage.Controls.Add(this.label2);
+            this.AddCardPropertiesTabPage.Controls.Add(this.AllProperties_Customer_CheckBox);
+            this.AddCardPropertiesTabPage.Controls.Add(this.GiveOutLinen_Customer_CheckBox);
+            this.AddCardPropertiesTabPage.Controls.Add(this.Set2_Customer_CheckBox);
+            this.AddCardPropertiesTabPage.Controls.Add(this.Instructed_Customer_CheckBox);
+            this.AddCardPropertiesTabPage.Controls.Add(this.Set1_Customer_CheckBox);
+            this.AddCardPropertiesTabPage.Controls.Add(this.ResidenceRules_Customer_CheckBox);
+            this.AddCardPropertiesTabPage.Controls.Add(this.FireSafety_Customer_CheckBox);
+            this.AddCardPropertiesTabPage.Location = new System.Drawing.Point(4, 22);
+            this.AddCardPropertiesTabPage.Name = "AddCardPropertiesTabPage";
+            this.AddCardPropertiesTabPage.Size = new System.Drawing.Size(644, 396);
+            this.AddCardPropertiesTabPage.TabIndex = 2;
+            this.AddCardPropertiesTabPage.Text = "Добавить свойства карт";
+            this.AddCardPropertiesTabPage.UseVisualStyleBackColor = true;
             // 
             // HelpProvider
             // 
@@ -630,13 +636,57 @@
             this.HelpProvider.ContainerControl = this;
             this.HelpProvider.Icon = ((System.Drawing.Icon)(resources.GetObject("HelpProvider.Icon")));
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(239, 51);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(15, 15);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 40;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(239, 50);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(251, 15);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox3.TabIndex = 41;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(364, 50);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(15, 15);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 42;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(475, 50);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(15, 15);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 43;
+            this.pictureBox5.TabStop = false;
+            // 
             // AddCustomer
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(731, 511);
+            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.AddCustomerTabControl);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox3);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -648,10 +698,14 @@
             this.CustomerInfoTabPage.PerformLayout();
             this.AddCustomerLocationTabPage.ResumeLayout(false);
             this.AddCustomerLocationTabPage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.AddCardPropertiesTabPage.ResumeLayout(false);
             this.AddCardPropertiesTabPage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HelpProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -705,5 +759,9 @@
         private System.Windows.Forms.TextBox BedsCountTextBox;
         private System.Windows.Forms.TextBox RoomCountTextBox;
         private System.Windows.Forms.ErrorProvider HelpProvider;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

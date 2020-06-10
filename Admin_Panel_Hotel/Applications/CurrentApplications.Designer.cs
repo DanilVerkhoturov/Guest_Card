@@ -36,6 +36,8 @@
             this.ApplicationsNameTextBox2 = new System.Windows.Forms.TextBox();
             this.ShowApplicationButton1 = new System.Windows.Forms.Button();
             this.ShowApplicationsButton2 = new System.Windows.Forms.Button();
+            this.CustomersComboBox = new System.Windows.Forms.ComboBox();
+            this.LocationComboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // Castomer
@@ -68,7 +70,7 @@
             this.ApplicationsNameTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ApplicationsNameTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ApplicationsNameTextBox1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ApplicationsNameTextBox1.Location = new System.Drawing.Point(33, 65);
+            this.ApplicationsNameTextBox1.Location = new System.Drawing.Point(33, 120);
             this.ApplicationsNameTextBox1.Margin = new System.Windows.Forms.Padding(3, 3, 3, 12);
             this.ApplicationsNameTextBox1.Multiline = true;
             this.ApplicationsNameTextBox1.Name = "ApplicationsNameTextBox1";
@@ -81,7 +83,7 @@
             this.ApplicationsNameTextBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ApplicationsNameTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ApplicationsNameTextBox2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ApplicationsNameTextBox2.Location = new System.Drawing.Point(33, 102);
+            this.ApplicationsNameTextBox2.Location = new System.Drawing.Point(33, 157);
             this.ApplicationsNameTextBox2.Margin = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.ApplicationsNameTextBox2.Multiline = true;
             this.ApplicationsNameTextBox2.Name = "ApplicationsNameTextBox2";
@@ -94,7 +96,7 @@
             this.ShowApplicationButton1.BackColor = System.Drawing.Color.Transparent;
             this.ShowApplicationButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ShowApplicationButton1.BackgroundImage")));
             this.ShowApplicationButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ShowApplicationButton1.Location = new System.Drawing.Point(326, 65);
+            this.ShowApplicationButton1.Location = new System.Drawing.Point(326, 120);
             this.ShowApplicationButton1.Name = "ShowApplicationButton1";
             this.ShowApplicationButton1.Size = new System.Drawing.Size(25, 25);
             this.ShowApplicationButton1.TabIndex = 7;
@@ -106,12 +108,38 @@
             this.ShowApplicationsButton2.BackColor = System.Drawing.Color.Transparent;
             this.ShowApplicationsButton2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ShowApplicationsButton2.BackgroundImage")));
             this.ShowApplicationsButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ShowApplicationsButton2.Location = new System.Drawing.Point(326, 102);
+            this.ShowApplicationsButton2.Location = new System.Drawing.Point(326, 157);
             this.ShowApplicationsButton2.Name = "ShowApplicationsButton2";
             this.ShowApplicationsButton2.Size = new System.Drawing.Size(25, 25);
             this.ShowApplicationsButton2.TabIndex = 8;
             this.ShowApplicationsButton2.UseVisualStyleBackColor = false;
             this.ShowApplicationsButton2.Click += new System.EventHandler(this.ShowApplicationsButton2_Click);
+            // 
+            // CustomersComboBox
+            // 
+            this.CustomersComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.CustomersComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CustomersComboBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CustomersComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
+            this.CustomersComboBox.FormattingEnabled = true;
+            this.CustomersComboBox.Location = new System.Drawing.Point(33, 73);
+            this.CustomersComboBox.Name = "CustomersComboBox";
+            this.CustomersComboBox.Size = new System.Drawing.Size(200, 28);
+            this.CustomersComboBox.TabIndex = 35;
+            this.CustomersComboBox.Text = "Заказчик";
+            // 
+            // LocationComboBox
+            // 
+            this.LocationComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.LocationComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LocationComboBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LocationComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
+            this.LocationComboBox.FormattingEnabled = true;
+            this.LocationComboBox.Location = new System.Drawing.Point(257, 73);
+            this.LocationComboBox.Name = "LocationComboBox";
+            this.LocationComboBox.Size = new System.Drawing.Size(200, 28);
+            this.LocationComboBox.TabIndex = 36;
+            this.LocationComboBox.Text = "Локация";
             // 
             // CurrentApplications
             // 
@@ -120,6 +148,8 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(759, 745);
+            this.Controls.Add(this.LocationComboBox);
+            this.Controls.Add(this.CustomersComboBox);
             this.Controls.Add(this.ShowApplicationsButton2);
             this.Controls.Add(this.ShowApplicationButton1);
             this.Controls.Add(this.ApplicationsNameTextBox2);
@@ -141,5 +171,7 @@
         private System.Windows.Forms.TextBox ApplicationsNameTextBox2;
         private System.Windows.Forms.Button ShowApplicationButton1;
         private System.Windows.Forms.Button ShowApplicationsButton2;
+        private System.Windows.Forms.ComboBox CustomersComboBox;
+        private System.Windows.Forms.ComboBox LocationComboBox;
     }
 }
