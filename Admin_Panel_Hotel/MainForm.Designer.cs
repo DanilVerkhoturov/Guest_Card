@@ -289,7 +289,6 @@
             this.Controls.Add(this.LeftMenu);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.MinimumSize = new System.Drawing.Size(1133, 784);
             this.Name = "MainForm";
             this.Text = "Главное меню";
             this.LeftMenu.ResumeLayout(false);
