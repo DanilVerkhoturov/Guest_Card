@@ -10,6 +10,8 @@ namespace Admin_Panel_Hotel
         {
             InitializeComponent();
 
+            Functions.NewlineProcessing(EmailsDataGridView);
+
             OpenCustomerInfoPanel();
 
             // Установка подсказок в текстовых полях.
@@ -19,7 +21,7 @@ namespace Admin_Panel_Hotel
             Functions.SetWaterMark(OGRNTextBox, "ОГРН");
             Functions.SetWaterMark(ContractNumberTextBox, "Номер договора");
             Functions.SetWaterMark(LocationNameTextBox, "Локация");
-            Functions.SetWaterMark(EmailTextBox, "Электронная почта заказчика");
+            //Functions.SetWaterMark(EmailTextBox, "Электронная почта заказчика");
             Functions.SetWaterMark(RegionComboBox, "Регион");
             Functions.SetWaterMark(StateComboBox, "Область");
             Functions.SetWaterMark(CityComboBox, "Город");
@@ -36,7 +38,7 @@ namespace Admin_Panel_Hotel
             ErrorProvider.SetError(ContractNumberTextBox, "* - обязательное поле");
             ErrorProvider.SetError(ToContractTime_Customer_DateTimePicker, "* - обязательное поле");
             ErrorProvider.SetError(FromContractTime_Customer_DateTimePicker, "* - обязательное поле");
-            ErrorProvider.SetError(EmailTextBox, "* - обязательное поле");
+            //ErrorProvider.SetError(EmailsPanel, "* - обязательное поле");
             ErrorProvider.SetError(LocationNameTextBox, "* - обязательное поле");
             ErrorProvider.SetError(RoomCountTextBox, "* - обязательное поле");
             ErrorProvider.SetError(BedsCountTextBox, "* - обязательное поле");
@@ -133,7 +135,7 @@ namespace Admin_Panel_Hotel
                             && OGRNTextBox.TextLength > 0 && OGRNTextBox.Text != "ОГРН"
                             && ContractNumberTextBox.TextLength > 0 && ContractNumberTextBox.Text != "Номер договора"
                             && LocationNameTextBox.TextLength > 0 && LocationNameTextBox.Text != "Локация"
-                            && EmailTextBox.TextLength > 0 && EmailTextBox.Text != "Электронная почта заказчика") // Если все обязательные поля заполнены корректно.
+                            /*&& EmailTextBox.TextLength > 0 && EmailTextBox.Text != "Электронная почта заказчика"*/) // Если все обязательные поля заполнены корректно.
             {
                 // TODO: Проверка корректности эл.почты и срока договора.
                 return true;
@@ -210,14 +212,7 @@ namespace Admin_Panel_Hotel
         {
             // TODO: Проверка заполнения обязательных полей.
             int lastRow = LocationsDataGridView.Rows.GetLastRow(DataGridViewElementStates.Visible);
-            if (lastRow >= 0)
-            {
-                LocationsDataGridView.Rows.Add(lastRow + 2, LocationNameTextBox.Text);
-            }
-            else
-            {
-                LocationsDataGridView.Rows.Add(1, LocationNameTextBox.Text);
-            }
+            LocationsDataGridView.Rows.Add(lastRow + 2, LocationNameTextBox.Text);
         }
 
         private void CustomerInfoButton_Click(object sender, EventArgs e)
@@ -233,6 +228,11 @@ namespace Admin_Panel_Hotel
         private void CardPropertiesButton_Click(object sender, EventArgs e)
         {
             OpenCardPropertiesPanel();
+        }
+
+        private void AddEmailButton_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

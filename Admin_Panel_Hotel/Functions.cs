@@ -52,7 +52,7 @@ namespace Admin_Panel_Hotel
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        static void TextBox_Enter(object sender, EventArgs e)
+        private static void TextBox_Enter(object sender, EventArgs e)
         {
             Control textbox = sender as Control;
 
@@ -68,7 +68,7 @@ namespace Admin_Panel_Hotel
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        static void TextBox_Leave(object sender, EventArgs e)
+        private static void TextBox_Leave(object sender, EventArgs e)
         {
             Control textbox = sender as Control;
 
@@ -76,6 +76,71 @@ namespace Admin_Panel_Hotel
             {
                 textbox.Text = textbox.Tag.ToString();
                 textbox.ForeColor = SystemColors.GrayText;
+            }
+        }
+    
+        /// <summary>
+        /// Обработка добавления новых строк: установка номера новой строки, заполнение подсказок.
+        /// </summary>
+        /// <param name="dgv">Объект таблицы для обработки.</param>
+        public static void NewlineProcessing(DataGridView dgv)
+        {
+            dgv.Columns[1].ToolTipText = "Введите имя";
+            dgv.Columns[2].ToolTipText = "Введите электронную почту";
+
+            if (dgv.Rows.Count == 1)
+            {
+                dgv[0, 0].Value = 1;
+                dgv[1, 0].Value = dgv.Columns[1].ToolTipText;
+                dgv[2, 0].Value = dgv.Columns[2].ToolTipText;
+            }
+
+            dgv.RowsAdded += new DataGridViewRowsAddedEventHandler(RowsAdded);
+            dgv.CellEnter += new DataGridViewCellEventHandler(CellEnter);
+            dgv.CellLeave += new DataGridViewCellEventHandler(CellLeave);
+        }
+
+        /// <summary>
+        /// Обработка события добавления новой строки.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private static void RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            DataGridView dgv = sender as DataGridView;
+
+            dgv[0, e.RowIndex].Value = e.RowIndex + 1;
+            dgv[1, e.RowIndex].Value = dgv.Columns[1].ToolTipText;
+            dgv[2, e.RowIndex].Value = dgv.Columns[2].ToolTipText;
+        }
+
+        /// <summary>
+        /// Обработка события начала редактирования ячейки.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private static void CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridView dgv = sender as DataGridView;
+
+            if (e.ColumnIndex != 0 && dgv[e.ColumnIndex, e.RowIndex].Value.ToString() == dgv.Columns[e.ColumnIndex].ToolTipText)
+            {
+                dgv[e.ColumnIndex, e.RowIndex].Value = null;
+            }
+        }
+
+        /// <summary>
+        /// Обработка окончания редактирования ячейки.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private static void CellLeave(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridView dgv = sender as DataGridView;
+
+            if (e.ColumnIndex != 0 && dgv[e.ColumnIndex, e.RowIndex].Value == null)
+            {
+                dgv[e.ColumnIndex, e.RowIndex].Value = dgv.Columns[e.ColumnIndex].ToolTipText;
             }
         }
     }

@@ -34,6 +34,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddCustomer));
             this.AddCustomerButton = new System.Windows.Forms.Button();
             this.Set2_Customer_CheckBox = new System.Windows.Forms.CheckBox();
@@ -44,7 +49,6 @@
             this.GiveOutLinen_Customer_CheckBox = new System.Windows.Forms.CheckBox();
             this.AllProperties_Customer_CheckBox = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.EmailTextBox = new System.Windows.Forms.TextBox();
             this.ContractNumberTextBox = new System.Windows.Forms.TextBox();
             this.OGRNTextBox = new System.Windows.Forms.TextBox();
             this.INNTextBox = new System.Windows.Forms.TextBox();
@@ -79,6 +83,10 @@
             this.HelpProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.CustomerInfoPanel = new System.Windows.Forms.Panel();
+            this.EmailsDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EmailColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label8 = new System.Windows.Forms.Label();
             this.AddCustomerLocationPanel = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
@@ -94,6 +102,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.HelpProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.CustomerInfoPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.EmailsDataGridView)).BeginInit();
             this.AddCustomerLocationPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LocationsDataGridView)).BeginInit();
             this.CardPropertiesPanel.SuspendLayout();
@@ -207,19 +216,6 @@
             this.label2.Size = new System.Drawing.Size(121, 21);
             this.label2.TabIndex = 11;
             this.label2.Text = "Свойства карт";
-            // 
-            // EmailTextBox
-            // 
-            this.EmailTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.EmailTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.EmailTextBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.EmailTextBox.Location = new System.Drawing.Point(9, 288);
-            this.EmailTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.EmailTextBox.Multiline = true;
-            this.EmailTextBox.Name = "EmailTextBox";
-            this.EmailTextBox.Size = new System.Drawing.Size(480, 29);
-            this.EmailTextBox.TabIndex = 30;
-            this.EmailTextBox.Tag = "";
             // 
             // ContractNumberTextBox
             // 
@@ -360,7 +356,7 @@
             this.CustomerInfoNextButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.CustomerInfoNextButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CustomerInfoNextButton.ForeColor = System.Drawing.Color.White;
-            this.CustomerInfoNextButton.Location = new System.Drawing.Point(535, 356);
+            this.CustomerInfoNextButton.Location = new System.Drawing.Point(535, 372);
             this.CustomerInfoNextButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.CustomerInfoNextButton.Name = "CustomerInfoNextButton";
             this.CustomerInfoNextButton.Size = new System.Drawing.Size(103, 35);
@@ -376,12 +372,13 @@
             this.AddEmailButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.AddEmailButton.FlatAppearance.BorderSize = 0;
             this.AddEmailButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddEmailButton.Location = new System.Drawing.Point(509, 286);
+            this.AddEmailButton.Location = new System.Drawing.Point(510, 287);
             this.AddEmailButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.AddEmailButton.Name = "AddEmailButton";
             this.AddEmailButton.Size = new System.Drawing.Size(31, 29);
             this.AddEmailButton.TabIndex = 32;
             this.AddEmailButton.UseVisualStyleBackColor = false;
+            this.AddEmailButton.Click += new System.EventHandler(this.AddEmailButton_Click);
             // 
             // BedsCountTextBox
             // 
@@ -578,10 +575,10 @@
             // 
             // CustomerInfoPanel
             // 
+            this.CustomerInfoPanel.Controls.Add(this.EmailsDataGridView);
             this.CustomerInfoPanel.Controls.Add(this.label8);
             this.CustomerInfoPanel.Controls.Add(this.CustomerInfoNextButton);
             this.CustomerInfoPanel.Controls.Add(this.NameTextBox);
-            this.CustomerInfoPanel.Controls.Add(this.EmailTextBox);
             this.CustomerInfoPanel.Controls.Add(this.AddEmailButton);
             this.CustomerInfoPanel.Controls.Add(this.label3);
             this.CustomerInfoPanel.Controls.Add(this.AddressTextBox);
@@ -594,9 +591,90 @@
             this.CustomerInfoPanel.Controls.Add(this.OGRNTextBox);
             this.CustomerInfoPanel.Location = new System.Drawing.Point(34, 98);
             this.CustomerInfoPanel.Name = "CustomerInfoPanel";
-            this.CustomerInfoPanel.Size = new System.Drawing.Size(644, 400);
+            this.CustomerInfoPanel.Size = new System.Drawing.Size(644, 411);
             this.CustomerInfoPanel.TabIndex = 44;
             this.CustomerInfoPanel.Visible = false;
+            // 
+            // EmailsDataGridView
+            // 
+            this.EmailsDataGridView.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.EmailsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.EmailsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.EmailsDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.EmailsDataGridView.BackgroundColor = System.Drawing.Color.White;
+            this.EmailsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.EmailsDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(172)))), ((int)(((byte)(218)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(172)))), ((int)(((byte)(218)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.EmailsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.EmailsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.EmailsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.NameColumn,
+            this.EmailColumn});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.EmailsDataGridView.DefaultCellStyle = dataGridViewCellStyle3;
+            this.EmailsDataGridView.EnableHeadersVisualStyles = false;
+            this.EmailsDataGridView.Location = new System.Drawing.Point(9, 287);
+            this.EmailsDataGridView.MultiSelect = false;
+            this.EmailsDataGridView.Name = "EmailsDataGridView";
+            this.EmailsDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.EmailsDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.EmailsDataGridView.RowHeadersVisible = false;
+            this.EmailsDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.NullValue = null;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            this.EmailsDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.EmailsDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.EmailsDataGridView.Size = new System.Drawing.Size(480, 74);
+            this.EmailsDataGridView.TabIndex = 48;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn1.Frozen = true;
+            this.dataGridViewTextBoxColumn1.HeaderText = "№";
+            this.dataGridViewTextBoxColumn1.MaxInputLength = 3;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 47;
+            // 
+            // NameColumn
+            // 
+            this.NameColumn.HeaderText = "Имя";
+            this.NameColumn.Name = "NameColumn";
+            this.NameColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.NameColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.NameColumn.ToolTipText = "Введите имя";
+            // 
+            // EmailColumn
+            // 
+            this.EmailColumn.HeaderText = "Электронная почта";
+            this.EmailColumn.Name = "EmailColumn";
+            this.EmailColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.EmailColumn.ToolTipText = "Введите электронную почту";
             // 
             // label8
             // 
@@ -631,7 +709,7 @@
             this.AddCustomerLocationPanel.Controls.Add(this.LocationsDataGridView);
             this.AddCustomerLocationPanel.Location = new System.Drawing.Point(34, 98);
             this.AddCustomerLocationPanel.Name = "AddCustomerLocationPanel";
-            this.AddCustomerLocationPanel.Size = new System.Drawing.Size(644, 400);
+            this.AddCustomerLocationPanel.Size = new System.Drawing.Size(644, 411);
             this.AddCustomerLocationPanel.TabIndex = 45;
             this.AddCustomerLocationPanel.Visible = false;
             // 
@@ -651,58 +729,58 @@
             this.LocationsDataGridView.AllowUserToDeleteRows = false;
             this.LocationsDataGridView.AllowUserToResizeColumns = false;
             this.LocationsDataGridView.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.LocationsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.LocationsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             this.LocationsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.LocationsDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.LocationsDataGridView.BackgroundColor = System.Drawing.Color.White;
             this.LocationsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.LocationsDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.LocationsDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(172)))), ((int)(((byte)(218)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(172)))), ((int)(((byte)(218)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.LocationsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(172)))), ((int)(((byte)(218)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(172)))), ((int)(((byte)(218)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.LocationsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.LocationsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.LocationsDataGridView.ColumnHeadersVisible = false;
             this.LocationsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Num,
             this.LocationName});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.LocationsDataGridView.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.LocationsDataGridView.DefaultCellStyle = dataGridViewCellStyle8;
             this.LocationsDataGridView.EnableHeadersVisualStyles = false;
             this.LocationsDataGridView.Location = new System.Drawing.Point(453, 49);
             this.LocationsDataGridView.MultiSelect = false;
             this.LocationsDataGridView.Name = "LocationsDataGridView";
             this.LocationsDataGridView.ReadOnly = true;
             this.LocationsDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.LocationsDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.LocationsDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.LocationsDataGridView.RowHeadersVisible = false;
             this.LocationsDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.NullValue = null;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            this.LocationsDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.NullValue = null;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black;
+            this.LocationsDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.LocationsDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.LocationsDataGridView.Size = new System.Drawing.Size(185, 288);
             this.LocationsDataGridView.TabIndex = 47;
@@ -739,7 +817,7 @@
             this.CardPropertiesPanel.Controls.Add(this.Instructed_Customer_CheckBox);
             this.CardPropertiesPanel.Location = new System.Drawing.Point(34, 98);
             this.CardPropertiesPanel.Name = "CardPropertiesPanel";
-            this.CardPropertiesPanel.Size = new System.Drawing.Size(644, 400);
+            this.CardPropertiesPanel.Size = new System.Drawing.Size(644, 411);
             this.CardPropertiesPanel.TabIndex = 46;
             this.CardPropertiesPanel.Visible = false;
             // 
@@ -792,7 +870,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(711, 535);
+            this.ClientSize = new System.Drawing.Size(711, 552);
             this.Controls.Add(this.CardPropertiesButton);
             this.Controls.Add(this.CustomerInfoButton);
             this.Controls.Add(this.AddLocationsButton);
@@ -812,6 +890,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.CustomerInfoPanel.ResumeLayout(false);
             this.CustomerInfoPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.EmailsDataGridView)).EndInit();
             this.AddCustomerLocationPanel.ResumeLayout(false);
             this.AddCustomerLocationPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LocationsDataGridView)).EndInit();
@@ -834,7 +913,6 @@
         private System.Windows.Forms.CheckBox GiveOutLinen_Customer_CheckBox;
         private System.Windows.Forms.CheckBox AllProperties_Customer_CheckBox;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox EmailTextBox;
         private System.Windows.Forms.TextBox ContractNumberTextBox;
         private System.Windows.Forms.TextBox OGRNTextBox;
         private System.Windows.Forms.TextBox INNTextBox;
@@ -878,5 +956,9 @@
         private System.Windows.Forms.Button AddLocationsButton;
         private System.Windows.Forms.Button CardPropertiesButton;
         private System.Windows.Forms.Button CustomerInfoButton;
+        private System.Windows.Forms.DataGridView EmailsDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NameColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EmailColumn;
     }
 }

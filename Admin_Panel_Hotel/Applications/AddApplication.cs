@@ -27,14 +27,9 @@ namespace Admin_Panel_Hotel
             notification.ShowDialog();
         }
 
-        private void AddUserButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void ApplicationUserDataGridView_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
         {
-            //ApplicationUserDataGridView[1, e.RowIndex].Value
+            //ApplicationUserDataGridView = "";
         }
     }
 }
