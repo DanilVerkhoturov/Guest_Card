@@ -149,5 +149,10 @@ namespace Admin_Panel_Hotel
                 Functions.Connection.Close();
             }
         }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            Functions.OpenChildForm(new NewApplications(), ContentPanel);
+        }
     }
 }

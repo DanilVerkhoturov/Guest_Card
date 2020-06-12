@@ -42,14 +42,17 @@
             this.NameApplication = new System.Windows.Forms.Label();
             this.AcceptButton = new System.Windows.Forms.Button();
             this.GridTable = new System.Windows.Forms.DataGridView();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.EditButton = new System.Windows.Forms.Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UserPost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Division = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SubDivision = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ShowUserInfo = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.EditButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.GridTable)).BeginInit();
             this.SuspendLayout();
             // 
@@ -128,7 +131,7 @@
             this.AcceptButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AcceptButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.AcceptButton.ForeColor = System.Drawing.Color.White;
-            this.AcceptButton.Location = new System.Drawing.Point(613, 539);
+            this.AcceptButton.Location = new System.Drawing.Point(844, 539);
             this.AcceptButton.Name = "AcceptButton";
             this.AcceptButton.Size = new System.Drawing.Size(107, 29);
             this.AcceptButton.TabIndex = 16;
@@ -162,6 +165,9 @@
             this.Column1,
             this.Column2,
             this.Column3,
+            this.UserPost,
+            this.Division,
+            this.SubDivision,
             this.Column4,
             this.Column5,
             this.ShowUserInfo});
@@ -195,77 +201,11 @@
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ControlText;
             this.GridTable.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.GridTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.GridTable.Size = new System.Drawing.Size(743, 426);
+            this.GridTable.Size = new System.Drawing.Size(932, 426);
             this.GridTable.TabIndex = 17;
             this.GridTable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridTable_CellClick);
             this.GridTable.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridTable_CellMouseEnter);
             this.GridTable.CellMouseLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridTable_CellMouseLeave);
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column1.FillWeight = 20F;
-            this.Column1.Frozen = true;
-            this.Column1.HeaderText = "№";
-            this.Column1.MinimumWidth = 50;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 50;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column2.FillWeight = 112.3096F;
-            this.Column2.Frozen = true;
-            this.Column2.HeaderText = "ФИО";
-            this.Column2.MinimumWidth = 200;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 212;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column3.FillWeight = 112.3096F;
-            this.Column3.Frozen = true;
-            this.Column3.HeaderText = "Табельный номер";
-            this.Column3.MinimumWidth = 150;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 150;
-            // 
-            // Column4
-            // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column4.FillWeight = 112.3096F;
-            this.Column4.Frozen = true;
-            this.Column4.HeaderText = "Дата от";
-            this.Column4.MinimumWidth = 150;
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 150;
-            // 
-            // Column5
-            // 
-            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column5.FillWeight = 112.3096F;
-            this.Column5.Frozen = true;
-            this.Column5.HeaderText = "Дата до";
-            this.Column5.MinimumWidth = 150;
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 150;
-            // 
-            // ShowUserInfo
-            // 
-            this.ShowUserInfo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.ShowUserInfo.Frozen = true;
-            this.ShowUserInfo.HeaderText = "";
-            this.ShowUserInfo.Image = global::Admin_Panel_Hotel.Properties.Resources.pngwing_8;
-            this.ShowUserInfo.Name = "ShowUserInfo";
-            this.ShowUserInfo.ReadOnly = true;
-            this.ShowUserInfo.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ShowUserInfo.Width = 30;
             // 
             // dataGridViewImageColumn1
             // 
@@ -292,10 +232,97 @@
             this.EditButton.UseVisualStyleBackColor = false;
             this.EditButton.Click += new System.EventHandler(this.EditButton_Click);
             // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column1.FillWeight = 20F;
+            this.Column1.Frozen = true;
+            this.Column1.HeaderText = "№";
+            this.Column1.MinimumWidth = 50;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 50;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column2.FillWeight = 112.3096F;
+            this.Column2.Frozen = true;
+            this.Column2.HeaderText = "ФИО";
+            this.Column2.MinimumWidth = 200;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 212;
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Column3.FillWeight = 112.3096F;
+            this.Column3.Frozen = true;
+            this.Column3.HeaderText = "Табельный номер";
+            this.Column3.MinimumWidth = 150;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 150;
+            // 
+            // UserPost
+            // 
+            this.UserPost.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.UserPost.HeaderText = "Должность";
+            this.UserPost.Name = "UserPost";
+            this.UserPost.ReadOnly = true;
+            this.UserPost.Width = 98;
+            // 
+            // Division
+            // 
+            this.Division.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Division.HeaderText = "Организация";
+            this.Division.Name = "Division";
+            this.Division.ReadOnly = true;
+            this.Division.Width = 110;
+            // 
+            // SubDivision
+            // 
+            this.SubDivision.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.SubDivision.HeaderText = "Подразделение";
+            this.SubDivision.Name = "SubDivision";
+            this.SubDivision.ReadOnly = true;
+            this.SubDivision.Width = 126;
+            // 
+            // Column4
+            // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Column4.FillWeight = 112.3096F;
+            this.Column4.HeaderText = "Дата от";
+            this.Column4.MinimumWidth = 10;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 77;
+            // 
+            // Column5
+            // 
+            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Column5.FillWeight = 112.3096F;
+            this.Column5.HeaderText = "Дата до";
+            this.Column5.MinimumWidth = 10;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 79;
+            // 
+            // ShowUserInfo
+            // 
+            this.ShowUserInfo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ShowUserInfo.HeaderText = "";
+            this.ShowUserInfo.Image = global::Admin_Panel_Hotel.Properties.Resources.pngwing_8;
+            this.ShowUserInfo.Name = "ShowUserInfo";
+            this.ShowUserInfo.ReadOnly = true;
+            this.ShowUserInfo.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ShowUserInfo.Width = 30;
+            // 
             // ShowApplicationVer2
             // 
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(888, 711);
+            this.ClientSize = new System.Drawing.Size(969, 711);
             this.Controls.Add(this.GridTable);
             this.Controls.Add(this.AcceptButton);
             this.Controls.Add(this.NameApplication);
@@ -325,12 +352,15 @@
         private System.Windows.Forms.Label NameApplication;
         private System.Windows.Forms.Button AcceptButton;
         private System.Windows.Forms.DataGridView GridTable;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UserPost;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Division;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SubDivision;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewImageColumn ShowUserInfo;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
     }
 }
