@@ -96,21 +96,19 @@ namespace Admin_Panel_Hotel
         {
             Functions.OpenChildForm(new HistoryApplications(), ContentPanel);
         }
-
-        private void button5_Click(object sender, EventArgs e)
+        private void AllCard_Click(object sender, EventArgs e)
         {
             Functions.OpenChildForm(new AllCard(), ContentPanel);
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void AddCard_Click(object sender, EventArgs e)
+        {
+            Functions.OpenChildForm(new AddCard(), ContentPanel);
+        }
+        private void MovingCard_Click(object sender, EventArgs e)
         {
             Functions.OpenChildForm(new MovingGards(), ContentPanel);
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            Functions.OpenChildForm(new AddApplication(), ContentPanel);
-        }
 
         private void CardButton_Click(object sender, EventArgs e)
         {
@@ -150,9 +148,13 @@ namespace Admin_Panel_Hotel
             }
         }
 
+<<<<<<< HEAD
         private void MainForm_Load(object sender, EventArgs e)
         {
             Functions.OpenChildForm(new NewApplications(), ContentPanel);
         }
+=======
+       
+>>>>>>> 778b50d30b5249f85eba8397f3e4885c94445ea1
     }
 }
