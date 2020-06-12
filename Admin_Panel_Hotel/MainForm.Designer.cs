@@ -30,6 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.LeftMenu = new System.Windows.Forms.Panel();
+            this.CardSubMenu = new System.Windows.Forms.Panel();
+            this.MovingCard = new System.Windows.Forms.Button();
+            this.AddCard = new System.Windows.Forms.Button();
+            this.AllCard = new System.Windows.Forms.Button();
+            this.CardButton = new System.Windows.Forms.Button();
             this.ApplicationsSubMenu = new System.Windows.Forms.Panel();
             this.DraftButton = new System.Windows.Forms.Button();
             this.HistoryApplicationsButton = new System.Windows.Forms.Button();
@@ -41,24 +46,19 @@
             this.AddCustomerButton = new System.Windows.Forms.Button();
             this.MyCustomersButton = new System.Windows.Forms.Button();
             this.Customers = new System.Windows.Forms.Button();
+            this.PanelLogo = new System.Windows.Forms.Panel();
             this.ContentPanel = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.TopPanel = new System.Windows.Forms.Panel();
-            this.CardSubMenu = new System.Windows.Forms.Panel();
-            this.MovingCard = new System.Windows.Forms.Button();
-            this.AddCard = new System.Windows.Forms.Button();
-            this.AllCard = new System.Windows.Forms.Button();
-            this.CardButton = new System.Windows.Forms.Button();
             this.OutButton = new System.Windows.Forms.Button();
             this.UserButton = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.PanelLogo = new System.Windows.Forms.Panel();
             this.LeftMenu.SuspendLayout();
+            this.CardSubMenu.SuspendLayout();
             this.ApplicationsSubMenu.SuspendLayout();
             this.CustomersSubMenu.SuspendLayout();
             this.ContentPanel.SuspendLayout();
-            this.TopPanel.SuspendLayout();
-            this.CardSubMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.TopPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // LeftMenu
@@ -78,6 +78,86 @@
             this.LeftMenu.Name = "LeftMenu";
             this.LeftMenu.Size = new System.Drawing.Size(229, 745);
             this.LeftMenu.TabIndex = 0;
+            // 
+            // CardSubMenu
+            // 
+            this.CardSubMenu.Controls.Add(this.MovingCard);
+            this.CardSubMenu.Controls.Add(this.AddCard);
+            this.CardSubMenu.Controls.Add(this.AllCard);
+            this.CardSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.CardSubMenu.Location = new System.Drawing.Point(0, 366);
+            this.CardSubMenu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.CardSubMenu.Name = "CardSubMenu";
+            this.CardSubMenu.Size = new System.Drawing.Size(229, 95);
+            this.CardSubMenu.TabIndex = 6;
+            // 
+            // MovingCard
+            // 
+            this.MovingCard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.MovingCard.Dock = System.Windows.Forms.DockStyle.Top;
+            this.MovingCard.FlatAppearance.BorderSize = 0;
+            this.MovingCard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MovingCard.Location = new System.Drawing.Point(0, 60);
+            this.MovingCard.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MovingCard.Name = "MovingCard";
+            this.MovingCard.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
+            this.MovingCard.Size = new System.Drawing.Size(229, 30);
+            this.MovingCard.TabIndex = 6;
+            this.MovingCard.Text = "Перемещение";
+            this.MovingCard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.MovingCard.UseVisualStyleBackColor = true;
+            this.MovingCard.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // AddCard
+            // 
+            this.AddCard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.AddCard.Dock = System.Windows.Forms.DockStyle.Top;
+            this.AddCard.FlatAppearance.BorderSize = 0;
+            this.AddCard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddCard.Location = new System.Drawing.Point(0, 30);
+            this.AddCard.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.AddCard.Name = "AddCard";
+            this.AddCard.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
+            this.AddCard.Size = new System.Drawing.Size(229, 30);
+            this.AddCard.TabIndex = 3;
+            this.AddCard.Text = "Добавить карты";
+            this.AddCard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AddCard.UseVisualStyleBackColor = true;
+            this.AddCard.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // AllCard
+            // 
+            this.AllCard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.AllCard.Dock = System.Windows.Forms.DockStyle.Top;
+            this.AllCard.FlatAppearance.BorderSize = 0;
+            this.AllCard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AllCard.Location = new System.Drawing.Point(0, 0);
+            this.AllCard.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.AllCard.Name = "AllCard";
+            this.AllCard.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
+            this.AllCard.Size = new System.Drawing.Size(229, 30);
+            this.AllCard.TabIndex = 2;
+            this.AllCard.Text = "Все карты";
+            this.AllCard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AllCard.UseVisualStyleBackColor = true;
+            this.AllCard.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // CardButton
+            // 
+            this.CardButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.CardButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.CardButton.FlatAppearance.BorderSize = 0;
+            this.CardButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CardButton.Location = new System.Drawing.Point(0, 326);
+            this.CardButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.CardButton.Name = "CardButton";
+            this.CardButton.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.CardButton.Size = new System.Drawing.Size(229, 40);
+            this.CardButton.TabIndex = 5;
+            this.CardButton.Text = "Карты";
+            this.CardButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CardButton.UseVisualStyleBackColor = true;
+            this.CardButton.Click += new System.EventHandler(this.CardButton_Click);
             // 
             // ApplicationsSubMenu
             // 
@@ -256,6 +336,18 @@
             this.Customers.UseVisualStyleBackColor = true;
             this.Customers.Click += new System.EventHandler(this.Customers_Click);
             // 
+            // PanelLogo
+            // 
+            this.PanelLogo.BackColor = System.Drawing.Color.Transparent;
+            this.PanelLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PanelLogo.BackgroundImage")));
+            this.PanelLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.PanelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PanelLogo.Location = new System.Drawing.Point(0, 0);
+            this.PanelLogo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.PanelLogo.Name = "PanelLogo";
+            this.PanelLogo.Size = new System.Drawing.Size(229, 35);
+            this.PanelLogo.TabIndex = 0;
+            // 
             // ContentPanel
             // 
             this.ContentPanel.AutoSize = true;
@@ -269,6 +361,18 @@
             this.ContentPanel.Size = new System.Drawing.Size(888, 711);
             this.ContentPanel.TabIndex = 1;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(888, 711);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // TopPanel
             // 
             this.TopPanel.AutoSize = true;
@@ -281,86 +385,6 @@
             this.TopPanel.Name = "TopPanel";
             this.TopPanel.Size = new System.Drawing.Size(888, 34);
             this.TopPanel.TabIndex = 1;
-            // 
-            // CardSubMenu
-            // 
-            this.CardSubMenu.Controls.Add(this.MovingCard);
-            this.CardSubMenu.Controls.Add(this.AddCard);
-            this.CardSubMenu.Controls.Add(this.AllCard);
-            this.CardSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.CardSubMenu.Location = new System.Drawing.Point(0, 366);
-            this.CardSubMenu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.CardSubMenu.Name = "CardSubMenu";
-            this.CardSubMenu.Size = new System.Drawing.Size(229, 95);
-            this.CardSubMenu.TabIndex = 6;
-            // 
-            // MovingCard
-            // 
-            this.MovingCard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.MovingCard.Dock = System.Windows.Forms.DockStyle.Top;
-            this.MovingCard.FlatAppearance.BorderSize = 0;
-            this.MovingCard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MovingCard.Location = new System.Drawing.Point(0, 60);
-            this.MovingCard.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.MovingCard.Name = "MovingCard";
-            this.MovingCard.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
-            this.MovingCard.Size = new System.Drawing.Size(229, 30);
-            this.MovingCard.TabIndex = 6;
-            this.MovingCard.Text = "Перемещение";
-            this.MovingCard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.MovingCard.UseVisualStyleBackColor = true;
-            this.MovingCard.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // AddCard
-            // 
-            this.AddCard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.AddCard.Dock = System.Windows.Forms.DockStyle.Top;
-            this.AddCard.FlatAppearance.BorderSize = 0;
-            this.AddCard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddCard.Location = new System.Drawing.Point(0, 30);
-            this.AddCard.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.AddCard.Name = "AddCard";
-            this.AddCard.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
-            this.AddCard.Size = new System.Drawing.Size(229, 30);
-            this.AddCard.TabIndex = 3;
-            this.AddCard.Text = "Добавить карты";
-            this.AddCard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AddCard.UseVisualStyleBackColor = true;
-            this.AddCard.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // AllCard
-            // 
-            this.AllCard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.AllCard.Dock = System.Windows.Forms.DockStyle.Top;
-            this.AllCard.FlatAppearance.BorderSize = 0;
-            this.AllCard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AllCard.Location = new System.Drawing.Point(0, 0);
-            this.AllCard.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.AllCard.Name = "AllCard";
-            this.AllCard.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
-            this.AllCard.Size = new System.Drawing.Size(229, 30);
-            this.AllCard.TabIndex = 2;
-            this.AllCard.Text = "Все карты";
-            this.AllCard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AllCard.UseVisualStyleBackColor = true;
-            this.AllCard.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // CardButton
-            // 
-            this.CardButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.CardButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.CardButton.FlatAppearance.BorderSize = 0;
-            this.CardButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CardButton.Location = new System.Drawing.Point(0, 326);
-            this.CardButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.CardButton.Name = "CardButton";
-            this.CardButton.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.CardButton.Size = new System.Drawing.Size(229, 40);
-            this.CardButton.TabIndex = 5;
-            this.CardButton.Text = "Карты";
-            this.CardButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.CardButton.UseVisualStyleBackColor = true;
-            this.CardButton.Click += new System.EventHandler(this.CardButton_Click);
             // 
             // OutButton
             // 
@@ -386,30 +410,6 @@
             this.UserButton.TabIndex = 0;
             this.UserButton.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(888, 711);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // PanelLogo
-            // 
-            this.PanelLogo.BackColor = System.Drawing.Color.Transparent;
-            this.PanelLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PanelLogo.BackgroundImage")));
-            this.PanelLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.PanelLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelLogo.Location = new System.Drawing.Point(0, 0);
-            this.PanelLogo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.PanelLogo.Name = "PanelLogo";
-            this.PanelLogo.Size = new System.Drawing.Size(229, 35);
-            this.PanelLogo.TabIndex = 0;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -422,13 +422,15 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "MainForm";
             this.Text = "Главное меню";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
+            this.Shown += new System.EventHandler(this.MainForm_Shown);
             this.LeftMenu.ResumeLayout(false);
+            this.CardSubMenu.ResumeLayout(false);
             this.ApplicationsSubMenu.ResumeLayout(false);
             this.CustomersSubMenu.ResumeLayout(false);
             this.ContentPanel.ResumeLayout(false);
-            this.TopPanel.ResumeLayout(false);
-            this.CardSubMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.TopPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

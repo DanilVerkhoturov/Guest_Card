@@ -10,7 +10,7 @@ namespace Admin_Panel_Hotel
         {
             InitializeComponent();
 
-            Functions.NewlineProcessing(EmailsDataGridView);
+            Functions.NewlineProcessing(EmailsDataGridView, new string[] { "1", "Введите имя", "Введите электронную почту" });
 
             OpenCustomerInfoPanel();
 
@@ -46,63 +46,64 @@ namespace Admin_Panel_Hotel
             // Подсказки для комплектов белья.
             HelpProvider.SetError(Set1_Customer_CheckBox, "В \"Комплект-1\" входит:\nНаволочка, подушка, одеяло, пододеяльник.");
             HelpProvider.SetError(Set2_Customer_CheckBox, "В \"Комплект-2\" входит:\nПростыня, подушка, одеяло.");
+            
+            LoadLocationsData();
+        }
 
+        /// <summary>
+        /// Заполнение данных локаций.
+        /// </summary>
+        private void LoadLocationsData()
+        {
+            MySqlCommand select = new MySqlCommand("Select name FROM region", Functions.Connection);
+            MySqlDataReader reader = select.ExecuteReader();
 
-            using (MySqlConnection connection = new MySqlConnection(Functions.ConnectionString))
+            // Заполнение названий регонов.
+            while (reader.Read())
             {
-                connection.Open();
-                MySqlCommand select = new MySqlCommand("Select name FROM region", connection);
-                MySqlDataReader reader = select.ExecuteReader();
-
-                // Заполнение названий регонов.
-                while (reader.Read())
-                {
-                    RegionComboBox.Items.Add(reader[0].ToString());
-                }
-                reader.Close();
-
-                select.CommandText = "Select name FROM state";
-                reader = select.ExecuteReader();
-
-                // Заполнение названий областей.
-                while (reader.Read())
-                {
-                    StateComboBox.Items.Add(reader[0].ToString());
-                }
-                reader.Close();
-
-                select.CommandText = "Select name FROM city";
-                reader = select.ExecuteReader();
-
-                // Заполнение названий городов.
-                while (reader.Read())
-                {
-                    CityComboBox.Items.Add(reader[0].ToString());
-                }
-                reader.Close();
-
-                select.CommandText = "Select name FROM street_type";
-                reader = select.ExecuteReader();
-
-                // Заполнение типов улиц.
-                while (reader.Read())
-                {
-                    StreetTypeComboBox.Items.Add(reader[0].ToString());
-                }
-                reader.Close();
-
-                select.CommandText = "Select name FROM street_name";
-                reader = select.ExecuteReader();
-
-                // Заполнение названий улиц.
-                while (reader.Read())
-                {
-                    StreetNameComboBox.Items.Add(reader[0].ToString());
-                }
-                reader.Close();
-
-                connection.Close();
+                RegionComboBox.Items.Add(reader[0].ToString());
             }
+            reader.Close();
+
+            select.CommandText = "Select name FROM state";
+            reader = select.ExecuteReader();
+
+            // Заполнение названий областей.
+            while (reader.Read())
+            {
+                StateComboBox.Items.Add(reader[0].ToString());
+            }
+            reader.Close();
+
+            select.CommandText = "Select name FROM city";
+            reader = select.ExecuteReader();
+
+            // Заполнение названий городов.
+            while (reader.Read())
+            {
+                CityComboBox.Items.Add(reader[0].ToString());
+            }
+            reader.Close();
+
+            select.CommandText = "Select name FROM street_type";
+            reader = select.ExecuteReader();
+
+            // Заполнение типов улиц.
+            while (reader.Read())
+            {
+                StreetTypeComboBox.Items.Add(reader[0].ToString());
+            }
+            reader.Close();
+
+            select.CommandText = "Select name FROM street_name";
+            reader = select.ExecuteReader();
+
+            // Заполнение названий улиц.
+            while (reader.Read())
+            {
+                StreetNameComboBox.Items.Add(reader[0].ToString());
+            }
+            reader.Close();
         }
 
         private void AllProperties_Customer_CheckBox_CheckedChanged(object sender, EventArgs e)
@@ -228,11 +229,6 @@ namespace Admin_Panel_Hotel
         private void CardPropertiesButton_Click(object sender, EventArgs e)
         {
             OpenCardPropertiesPanel();
-        }
-
-        private void AddEmailButton_Click(object sender, EventArgs e)
-        {
-            
         }
     }
 }

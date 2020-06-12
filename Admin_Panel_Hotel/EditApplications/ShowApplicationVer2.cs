@@ -10,8 +10,10 @@ using System.Windows.Forms;
 
 namespace Admin_Panel_Hotel
 {
-    public partial class ShowApplicationVer2 : System.Windows.Forms.Form
+    public partial class ShowApplicationVer2 : Form
     {
+        InfoUserForm DialogForm = null;
+
         public ShowApplicationVer2()
         {
             InitializeComponent();
@@ -29,9 +31,8 @@ namespace Admin_Panel_Hotel
             // Открытие формы уведомления о подтверждённой заявке.
             var notification = new NotificationsForm();
             notification.NotificationLabel.Text = "Заявка подтверждена";
-            notification.Owner = this;
             notification.StartPosition = FormStartPosition.CenterParent;
-            notification.ShowDialog();
+            notification.ShowDialog(this);
         }
 
         private void EditButton_Click(object sender, EventArgs e)
@@ -40,7 +41,6 @@ namespace Admin_Panel_Hotel
             GridTable.AllowUserToDeleteRows = true;
             GridTable.AllowUserToResizeColumns = true;
             GridTable.ReadOnly = false;
-
         }
 
         private void GridTable_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -48,9 +48,32 @@ namespace Admin_Panel_Hotel
             if (e.ColumnIndex == 5)
             {
                 var form = new InfoUserForm();
-                form.Owner = this;
                 form.StartPosition = FormStartPosition.CenterParent;
-                form.ShowDialog();
+                form.ShowDialog(this);
+            }
+        }
+
+        private void GridTable_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 5)
+            {
+                if (DialogForm == null)
+                {
+                    // Открытие окна с информацией пользователя на координатах мыши +15 в каждую сторону.
+                    DialogForm = new InfoUserForm();
+                    DialogForm.StartPosition = FormStartPosition.Manual;
+                    DialogForm.Location = new Point(MousePosition.X + 15, MousePosition.Y + 15);
+                    DialogForm.Show(this);
+                }
+            }
+        }
+
+        private void GridTable_CellMouseLeave(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 5)
+            {
+                DialogForm.Close();
+                DialogForm = null;
             }
         }
     }

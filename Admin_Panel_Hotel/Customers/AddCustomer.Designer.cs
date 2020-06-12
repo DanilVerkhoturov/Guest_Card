@@ -62,7 +62,6 @@
             this.ToContractTime_Customer_DateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.ErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.CustomerInfoNextButton = new System.Windows.Forms.Button();
-            this.AddEmailButton = new System.Windows.Forms.Button();
             this.BedsCountTextBox = new System.Windows.Forms.TextBox();
             this.RoomCountTextBox = new System.Windows.Forms.TextBox();
             this.AddLocationNextButton = new System.Windows.Forms.Button();
@@ -365,21 +364,6 @@
             this.CustomerInfoNextButton.UseVisualStyleBackColor = false;
             this.CustomerInfoNextButton.Click += new System.EventHandler(this.CustomerInfoNextButton_Click);
             // 
-            // AddEmailButton
-            // 
-            this.AddEmailButton.BackColor = System.Drawing.Color.Transparent;
-            this.AddEmailButton.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.GroupPlus1;
-            this.AddEmailButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.AddEmailButton.FlatAppearance.BorderSize = 0;
-            this.AddEmailButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddEmailButton.Location = new System.Drawing.Point(510, 287);
-            this.AddEmailButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.AddEmailButton.Name = "AddEmailButton";
-            this.AddEmailButton.Size = new System.Drawing.Size(31, 29);
-            this.AddEmailButton.TabIndex = 32;
-            this.AddEmailButton.UseVisualStyleBackColor = false;
-            this.AddEmailButton.Click += new System.EventHandler(this.AddEmailButton_Click);
-            // 
             // BedsCountTextBox
             // 
             this.BedsCountTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -579,7 +563,6 @@
             this.CustomerInfoPanel.Controls.Add(this.label8);
             this.CustomerInfoPanel.Controls.Add(this.CustomerInfoNextButton);
             this.CustomerInfoPanel.Controls.Add(this.NameTextBox);
-            this.CustomerInfoPanel.Controls.Add(this.AddEmailButton);
             this.CustomerInfoPanel.Controls.Add(this.label3);
             this.CustomerInfoPanel.Controls.Add(this.AddressTextBox);
             this.CustomerInfoPanel.Controls.Add(this.FromContractTime_Customer_DateTimePicker);
@@ -902,8 +885,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button AddEmailButton;
         private System.Windows.Forms.Button AddCustomerButton;
         private System.Windows.Forms.CheckBox Set2_Customer_CheckBox;
         private System.Windows.Forms.CheckBox Set1_Customer_CheckBox;

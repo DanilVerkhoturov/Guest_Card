@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -7,6 +8,7 @@ namespace Admin_Panel_Hotel
     class Functions
     {
         public static string ConnectionString = "Data Source=82.202.172.129; User Id=u117511_hotel; Password=wjkbc0r7; Database=u117511_hotel";
+        public static MySqlConnection Connection = new MySqlConnection(ConnectionString);
 
         /// <summary>
         /// Активная форма в панели контента.
@@ -78,21 +80,22 @@ namespace Admin_Panel_Hotel
                 textbox.ForeColor = SystemColors.GrayText;
             }
         }
-    
+
         /// <summary>
-        /// Обработка добавления новых строк: установка номера новой строки, заполнение подсказок.
+        /// Обработка добавления новых строк: установка номера новой строки (в первый столбец!!), заполнение подсказок.
         /// </summary>
         /// <param name="dgv">Объект таблицы для обработки.</param>
-        public static void NewlineProcessing(DataGridView dgv)
+        /// <param name="helpTexts">Тексты для подсказок столбцов (вписать попорядку для каждого столбца). Если текст для столбца не нужен - писать null!</param>
+        public static void NewlineProcessing(DataGridView dgv, string[] helpTexts)
         {
-            dgv.Columns[1].ToolTipText = "Введите имя";
-            dgv.Columns[2].ToolTipText = "Введите электронную почту";
-
-            if (dgv.Rows.Count == 1)
+            for (int c = 0; c < dgv.Columns.Count; c++)
             {
-                dgv[0, 0].Value = 1;
-                dgv[1, 0].Value = dgv.Columns[1].ToolTipText;
-                dgv[2, 0].Value = dgv.Columns[2].ToolTipText;
+                dgv.Columns[c].ToolTipText = helpTexts[c];
+
+                if (dgv.Rows.Count == 1)
+                {
+                    dgv[c, 0].Value = helpTexts[c];
+                }
             }
 
             dgv.RowsAdded += new DataGridViewRowsAddedEventHandler(RowsAdded);
@@ -109,9 +112,14 @@ namespace Admin_Panel_Hotel
         {
             DataGridView dgv = sender as DataGridView;
 
+            // Заполнение номера строки в первый столбец.
             dgv[0, e.RowIndex].Value = e.RowIndex + 1;
-            dgv[1, e.RowIndex].Value = dgv.Columns[1].ToolTipText;
-            dgv[2, e.RowIndex].Value = dgv.Columns[2].ToolTipText;
+
+            // Заполнение подсказок в новые поля.
+            for (int c = 1; c < dgv.Columns.Count; c++)
+            {
+                dgv[c, e.RowIndex].Value = dgv.Columns[c].ToolTipText;
+            }
         }
 
         /// <summary>

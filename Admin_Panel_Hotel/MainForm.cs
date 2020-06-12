@@ -1,5 +1,6 @@
 ﻿using Admin_Panel_Hotel.Card;
 using System;
+using System.Data;
 using System.Windows.Forms;
 
 namespace Admin_Panel_Hotel
@@ -109,12 +110,44 @@ namespace Admin_Panel_Hotel
         private void button4_Click(object sender, EventArgs e)
         {
             Functions.OpenChildForm(new AddApplication(), ContentPanel);
-
         }
 
         private void CardButton_Click(object sender, EventArgs e)
         {
             ShowSubMenu(CardSubMenu);
+        }
+
+        private void MainForm_Shown(object sender, EventArgs e)
+        {
+            // Если соединение с БД закрыто, то подключаемся ещё раз.
+            if (Functions.Connection.State == ConnectionState.Closed)
+            {
+                Functions.Connection.Open();
+                Functions.Connection.StateChange += MySQLConnectionStateChange;
+            }
+        }
+
+        /// <summary>
+        /// Обработка изменения статуса подключения к БД.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void MySQLConnectionStateChange(object sender, StateChangeEventArgs e)
+        {
+            // Если подключение к БД стало закрытым, то открываем его.
+            if (e.CurrentState == ConnectionState.Closed)
+            {
+                Functions.Connection.Open();
+            }
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // Если подключение к БД открыто, тогда закрываем его.
+            if (Functions.Connection.State == ConnectionState.Open)
+            {
+                Functions.Connection.Close();
+            }
         }
     }
 }
