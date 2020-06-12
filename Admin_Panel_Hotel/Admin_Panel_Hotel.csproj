@@ -118,6 +118,24 @@
     <Compile Include="Applications\HistoryApplications.Designer.cs">
       <DependentUpon>HistoryApplications.cs</DependentUpon>
     </Compile>
+    <Compile Include="Card\AddCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Card\AddCard.Designer.cs">
+      <DependentUpon>AddCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Card\AllCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Card\AllCard.Designer.cs">
+      <DependentUpon>AllCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Card\MovingGards.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Card\MovingGards.Designer.cs">
+      <DependentUpon>MovingGards.cs</DependentUpon>
+    </Compile>
     <Compile Include="Customers\AddCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -211,6 +229,15 @@
     <EmbeddedResource Include="Applications\InfoUserForn.resx">
       <DependentUpon>InfoUserForn.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Card\AddCard.resx">
+      <DependentUpon>AddCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Card\AllCard.resx">
+      <DependentUpon>AllCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Card\MovingGards.resx">
+      <DependentUpon>MovingGards.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Customers\AddCustomer.resx">
       <DependentUpon>AddCustomer.cs</DependentUpon>
     </EmbeddedResource>
@@ -298,10 +325,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Customers\Bitmap1.bmp" />
+    <None Include="Resources\User.png" />
     <None Include="Resources\GrayCircle.png" />
     <Content Include="Resources\Line 47.png" />
     <None Include="Resources\BlueCircle.png" />
     <None Include="Resources\Line 471.png" />
+    <None Include="Resources\Out.png" />
+    <None Include="Resources\pngwing 14.png" />
     <Content Include="Resources\question_icon.png" />
   </ItemGroup>
   <ItemGroup>

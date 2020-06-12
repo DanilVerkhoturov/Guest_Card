@@ -34,10 +34,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.ApplicationsNameTextBox1 = new System.Windows.Forms.TextBox();
             this.ApplicationsNameTextBox2 = new System.Windows.Forms.TextBox();
-            this.ShowApplicationButton1 = new System.Windows.Forms.Button();
-            this.ShowApplicationsButton2 = new System.Windows.Forms.Button();
             this.CustomersComboBox = new System.Windows.Forms.ComboBox();
             this.LocationComboBox = new System.Windows.Forms.ComboBox();
+            this.ShowApplicationsButton2 = new System.Windows.Forms.Button();
+            this.ShowApplicationButton1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Castomer
@@ -91,30 +91,6 @@
             this.ApplicationsNameTextBox2.TabIndex = 6;
             this.ApplicationsNameTextBox2.Text = "Заявка-2";
             // 
-            // ShowApplicationButton1
-            // 
-            this.ShowApplicationButton1.BackColor = System.Drawing.Color.Transparent;
-            this.ShowApplicationButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ShowApplicationButton1.BackgroundImage")));
-            this.ShowApplicationButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ShowApplicationButton1.Location = new System.Drawing.Point(326, 120);
-            this.ShowApplicationButton1.Name = "ShowApplicationButton1";
-            this.ShowApplicationButton1.Size = new System.Drawing.Size(25, 25);
-            this.ShowApplicationButton1.TabIndex = 7;
-            this.ShowApplicationButton1.UseVisualStyleBackColor = false;
-            this.ShowApplicationButton1.Click += new System.EventHandler(this.ShowApplicationButton1_Click);
-            // 
-            // ShowApplicationsButton2
-            // 
-            this.ShowApplicationsButton2.BackColor = System.Drawing.Color.Transparent;
-            this.ShowApplicationsButton2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ShowApplicationsButton2.BackgroundImage")));
-            this.ShowApplicationsButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ShowApplicationsButton2.Location = new System.Drawing.Point(326, 157);
-            this.ShowApplicationsButton2.Name = "ShowApplicationsButton2";
-            this.ShowApplicationsButton2.Size = new System.Drawing.Size(25, 25);
-            this.ShowApplicationsButton2.TabIndex = 8;
-            this.ShowApplicationsButton2.UseVisualStyleBackColor = false;
-            this.ShowApplicationsButton2.Click += new System.EventHandler(this.ShowApplicationsButton2_Click);
-            // 
             // CustomersComboBox
             // 
             this.CustomersComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -141,13 +117,37 @@
             this.LocationComboBox.TabIndex = 36;
             this.LocationComboBox.Text = "Локация";
             // 
+            // ShowApplicationsButton2
+            // 
+            this.ShowApplicationsButton2.BackColor = System.Drawing.Color.Transparent;
+            this.ShowApplicationsButton2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ShowApplicationsButton2.BackgroundImage")));
+            this.ShowApplicationsButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ShowApplicationsButton2.Location = new System.Drawing.Point(326, 157);
+            this.ShowApplicationsButton2.Name = "ShowApplicationsButton2";
+            this.ShowApplicationsButton2.Size = new System.Drawing.Size(25, 25);
+            this.ShowApplicationsButton2.TabIndex = 8;
+            this.ShowApplicationsButton2.UseVisualStyleBackColor = false;
+            this.ShowApplicationsButton2.Click += new System.EventHandler(this.ShowApplicationsButton2_Click);
+            // 
+            // ShowApplicationButton1
+            // 
+            this.ShowApplicationButton1.BackColor = System.Drawing.Color.Transparent;
+            this.ShowApplicationButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ShowApplicationButton1.BackgroundImage")));
+            this.ShowApplicationButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ShowApplicationButton1.Location = new System.Drawing.Point(326, 120);
+            this.ShowApplicationButton1.Name = "ShowApplicationButton1";
+            this.ShowApplicationButton1.Size = new System.Drawing.Size(25, 25);
+            this.ShowApplicationButton1.TabIndex = 7;
+            this.ShowApplicationButton1.UseVisualStyleBackColor = false;
+            this.ShowApplicationButton1.Click += new System.EventHandler(this.ShowApplicationButton1_Click);
+            // 
             // CurrentApplications
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(759, 745);
+            this.ClientSize = new System.Drawing.Size(888, 711);
             this.Controls.Add(this.LocationComboBox);
             this.Controls.Add(this.CustomersComboBox);
             this.Controls.Add(this.ShowApplicationsButton2);

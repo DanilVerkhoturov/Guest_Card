@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Admin_Panel_Hotel.Card;
+using System;
 using System.Windows.Forms;
 
 namespace Admin_Panel_Hotel
@@ -22,6 +23,7 @@ namespace Admin_Panel_Hotel
         {
             CustomersSubMenu.Visible = false;
             ApplicationsSubMenu.Visible = false;
+            CardSubMenu.Visible = false;
         } 
 
         /// <summary>
@@ -33,6 +35,8 @@ namespace Admin_Panel_Hotel
                 CustomersSubMenu.Visible = false;
             if (ApplicationsSubMenu.Visible == true)
                 ApplicationsSubMenu.Visible = false;
+            if (CardSubMenu.Visible == true)
+                CardSubMenu.Visible = false;
         }
 
         /// <summary>
@@ -90,6 +94,27 @@ namespace Admin_Panel_Hotel
         private void HistoryApplicationsButton_Click(object sender, EventArgs e)
         {
             Functions.OpenChildForm(new HistoryApplications(), ContentPanel);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Functions.OpenChildForm(new AllCard(), ContentPanel);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Functions.OpenChildForm(new MovingGards(), ContentPanel);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Functions.OpenChildForm(new AddApplication(), ContentPanel);
+
+        }
+
+        private void CardButton_Click(object sender, EventArgs e)
+        {
+            ShowSubMenu(CardSubMenu);
         }
     }
 }

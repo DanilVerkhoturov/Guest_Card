@@ -43,7 +43,7 @@ namespace Admin_Panel_Hotel
 
         }
 
-        private void GridTable_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void GridTable_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == 5)
             {
