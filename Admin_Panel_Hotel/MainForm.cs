@@ -148,13 +148,9 @@ namespace Admin_Panel_Hotel
             }
         }
 
-<<<<<<< HEAD
         private void MainForm_Load(object sender, EventArgs e)
         {
             Functions.OpenChildForm(new NewApplications(), ContentPanel);
         }
-=======
-       
->>>>>>> 778b50d30b5249f85eba8397f3e4885c94445ea1
     }
 }
