@@ -52,6 +52,8 @@
             this.TopPanel = new System.Windows.Forms.Panel();
             this.OutButton = new System.Windows.Forms.Button();
             this.UserButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.LeftMenu.SuspendLayout();
             this.CardSubMenu.SuspendLayout();
             this.ApplicationsSubMenu.SuspendLayout();
@@ -161,6 +163,8 @@
             // 
             // ApplicationsSubMenu
             // 
+            this.ApplicationsSubMenu.Controls.Add(this.label2);
+            this.ApplicationsSubMenu.Controls.Add(this.label1);
             this.ApplicationsSubMenu.Controls.Add(this.DraftButton);
             this.ApplicationsSubMenu.Controls.Add(this.HistoryApplicationsButton);
             this.ApplicationsSubMenu.Controls.Add(this.AddApplicationButton);
@@ -410,6 +414,36 @@
             this.UserButton.TabIndex = 0;
             this.UserButton.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(112, 127);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(15, 17);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "4";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Location = new System.Drawing.Point(89, 7);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(15, 17);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "4";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -427,6 +461,7 @@
             this.LeftMenu.ResumeLayout(false);
             this.CardSubMenu.ResumeLayout(false);
             this.ApplicationsSubMenu.ResumeLayout(false);
+            this.ApplicationsSubMenu.PerformLayout();
             this.CustomersSubMenu.ResumeLayout(false);
             this.ContentPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -461,6 +496,8 @@
         private System.Windows.Forms.Button AllCard;
         private System.Windows.Forms.Button CardButton;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }
 

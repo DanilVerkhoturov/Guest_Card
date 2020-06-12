@@ -1,6 +1,7 @@
 ﻿using Admin_Panel_Hotel.Card;
 using System;
 using System.Data;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace Admin_Panel_Hotel
@@ -57,6 +58,8 @@ namespace Admin_Panel_Hotel
             }
         }
         
+       
+
         private void AddCustomerButton_Click(object sender, EventArgs e)
         {
             Functions.OpenChildForm(new AddCustomer(), ContentPanel);
@@ -75,6 +78,7 @@ namespace Admin_Panel_Hotel
         private void CurrentApplicationsButton_Click(object sender, EventArgs e)
         {
             Functions.OpenChildForm(new CurrentApplications(), ContentPanel);
+           
         }
 
         private void Customers_Click(object sender, EventArgs e)
@@ -90,15 +94,18 @@ namespace Admin_Panel_Hotel
         private void DraftButton_Click(object sender, EventArgs e)
         {
             Functions.OpenChildForm(new DraftApplications(), ContentPanel);
+           
         }
 
         private void HistoryApplicationsButton_Click(object sender, EventArgs e)
         {
             Functions.OpenChildForm(new HistoryApplications(), ContentPanel);
+            
         }
         private void AllCard_Click(object sender, EventArgs e)
         {
             Functions.OpenChildForm(new AllCard(), ContentPanel);
+           
         }
         private void AddCard_Click(object sender, EventArgs e)
         {
@@ -113,8 +120,9 @@ namespace Admin_Panel_Hotel
         private void CardButton_Click(object sender, EventArgs e)
         {
             ShowSubMenu(CardSubMenu);
-        }
 
+        }
+         
         private void MainForm_Shown(object sender, EventArgs e)
         {
             // Если соединение с БД закрыто, то подключаемся ещё раз.
