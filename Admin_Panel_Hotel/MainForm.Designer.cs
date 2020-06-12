@@ -106,7 +106,7 @@
             this.MovingCard.Text = "Перемещение";
             this.MovingCard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.MovingCard.UseVisualStyleBackColor = true;
-            this.MovingCard.Click += new System.EventHandler(this.button1_Click);
+            this.MovingCard.Click += new System.EventHandler(this.MovingCard_Click);
             // 
             // AddCard
             // 
@@ -123,7 +123,7 @@
             this.AddCard.Text = "Добавить карты";
             this.AddCard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.AddCard.UseVisualStyleBackColor = true;
-            this.AddCard.Click += new System.EventHandler(this.button4_Click);
+            this.AddCard.Click += new System.EventHandler(this.AddCard_Click);
             // 
             // AllCard
             // 
@@ -140,7 +140,7 @@
             this.AllCard.Text = "Все карты";
             this.AllCard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.AllCard.UseVisualStyleBackColor = true;
-            this.AllCard.Click += new System.EventHandler(this.button5_Click);
+            this.AllCard.Click += new System.EventHandler(this.AllCard_Click);
             // 
             // CardButton
             // 
