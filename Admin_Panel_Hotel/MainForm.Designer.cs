@@ -36,6 +36,8 @@
             this.AllCard = new System.Windows.Forms.Button();
             this.CardButton = new System.Windows.Forms.Button();
             this.ApplicationsSubMenu = new System.Windows.Forms.Panel();
+            this.NewCount = new System.Windows.Forms.Label();
+            this.DraftCount = new System.Windows.Forms.Label();
             this.DraftButton = new System.Windows.Forms.Button();
             this.HistoryApplicationsButton = new System.Windows.Forms.Button();
             this.AddApplicationButton = new System.Windows.Forms.Button();
@@ -52,8 +54,6 @@
             this.TopPanel = new System.Windows.Forms.Panel();
             this.OutButton = new System.Windows.Forms.Button();
             this.UserButton = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.LeftMenu.SuspendLayout();
             this.CardSubMenu.SuspendLayout();
             this.ApplicationsSubMenu.SuspendLayout();
@@ -163,8 +163,8 @@
             // 
             // ApplicationsSubMenu
             // 
-            this.ApplicationsSubMenu.Controls.Add(this.label2);
-            this.ApplicationsSubMenu.Controls.Add(this.label1);
+            this.ApplicationsSubMenu.Controls.Add(this.NewCount);
+            this.ApplicationsSubMenu.Controls.Add(this.DraftCount);
             this.ApplicationsSubMenu.Controls.Add(this.DraftButton);
             this.ApplicationsSubMenu.Controls.Add(this.HistoryApplicationsButton);
             this.ApplicationsSubMenu.Controls.Add(this.AddApplicationButton);
@@ -176,6 +176,36 @@
             this.ApplicationsSubMenu.Name = "ApplicationsSubMenu";
             this.ApplicationsSubMenu.Size = new System.Drawing.Size(229, 150);
             this.ApplicationsSubMenu.TabIndex = 4;
+            // 
+            // NewCount
+            // 
+            this.NewCount.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.NewCount.AutoSize = true;
+            this.NewCount.BackColor = System.Drawing.Color.Transparent;
+            this.NewCount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NewCount.ForeColor = System.Drawing.Color.Red;
+            this.NewCount.Location = new System.Drawing.Point(89, 7);
+            this.NewCount.Name = "NewCount";
+            this.NewCount.Size = new System.Drawing.Size(15, 17);
+            this.NewCount.TabIndex = 8;
+            this.NewCount.Text = "2";
+            // 
+            // DraftCount
+            // 
+            this.DraftCount.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DraftCount.AutoSize = true;
+            this.DraftCount.BackColor = System.Drawing.Color.Transparent;
+            this.DraftCount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DraftCount.ForeColor = System.Drawing.Color.Red;
+            this.DraftCount.Location = new System.Drawing.Point(112, 127);
+            this.DraftCount.Name = "DraftCount";
+            this.DraftCount.Size = new System.Drawing.Size(15, 17);
+            this.DraftCount.TabIndex = 7;
+            this.DraftCount.Text = "2";
             // 
             // DraftButton
             // 
@@ -362,7 +392,7 @@
             this.ContentPanel.Location = new System.Drawing.Point(229, 34);
             this.ContentPanel.Margin = new System.Windows.Forms.Padding(0);
             this.ContentPanel.Name = "ContentPanel";
-            this.ContentPanel.Size = new System.Drawing.Size(888, 711);
+            this.ContentPanel.Size = new System.Drawing.Size(950, 711);
             this.ContentPanel.TabIndex = 1;
             // 
             // pictureBox1
@@ -372,14 +402,13 @@
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(888, 711);
+            this.pictureBox1.Size = new System.Drawing.Size(950, 711);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // TopPanel
             // 
-            this.TopPanel.AutoSize = true;
             this.TopPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.TopPanel.BackColor = System.Drawing.Color.White;
             this.TopPanel.Controls.Add(this.OutButton);
@@ -387,16 +416,19 @@
             this.TopPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.TopPanel.Location = new System.Drawing.Point(229, 0);
             this.TopPanel.Name = "TopPanel";
-            this.TopPanel.Size = new System.Drawing.Size(888, 34);
+            this.TopPanel.Size = new System.Drawing.Size(950, 34);
             this.TopPanel.TabIndex = 1;
             // 
             // OutButton
             // 
+            this.OutButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.OutButton.AutoSize = true;
             this.OutButton.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.Out;
             this.OutButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.OutButton.FlatAppearance.BorderSize = 0;
             this.OutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.OutButton.Location = new System.Drawing.Point(838, 6);
+            this.OutButton.Location = new System.Drawing.Point(918, 6);
             this.OutButton.Name = "OutButton";
             this.OutButton.Size = new System.Drawing.Size(20, 25);
             this.OutButton.TabIndex = 1;
@@ -404,51 +436,24 @@
             // 
             // UserButton
             // 
+            this.UserButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.UserButton.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.User;
             this.UserButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.UserButton.FlatAppearance.BorderSize = 0;
             this.UserButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.UserButton.Location = new System.Drawing.Point(792, 6);
+            this.UserButton.Location = new System.Drawing.Point(883, 6);
             this.UserButton.Name = "UserButton";
             this.UserButton.Size = new System.Drawing.Size(20, 25);
             this.UserButton.TabIndex = 0;
             this.UserButton.UseVisualStyleBackColor = true;
             // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(112, 127);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(15, 17);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "4";
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(89, 7);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(15, 17);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "4";
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1117, 745);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(1179, 745);
             this.Controls.Add(this.ContentPanel);
             this.Controls.Add(this.TopPanel);
             this.Controls.Add(this.LeftMenu);
@@ -467,6 +472,7 @@
             this.ContentPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.TopPanel.ResumeLayout(false);
+            this.TopPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -497,8 +503,8 @@
         private System.Windows.Forms.Button AllCard;
         private System.Windows.Forms.Button CardButton;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label NewCount;
+        private System.Windows.Forms.Label DraftCount;
     }
 }
 

@@ -36,9 +36,12 @@
             this.ApplicationsNameTextBox2 = new System.Windows.Forms.TextBox();
             this.LocationComboBox = new System.Windows.Forms.ComboBox();
             this.CustomersComboBox = new System.Windows.Forms.ComboBox();
-            this.DateStart1 = new System.Windows.Forms.DateTimePicker();
+            this.DateEnd = new System.Windows.Forms.DateTimePicker();
             this.ShowApplicationsButton2 = new System.Windows.Forms.Button();
             this.ShowApplicationButton1 = new System.Windows.Forms.Button();
+            this.DateStart = new System.Windows.Forms.DateTimePicker();
+            this.DateStartLabel = new System.Windows.Forms.Label();
+            this.DateEndLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Castomer
@@ -78,7 +81,7 @@
             this.ApplicationsNameTextBox1.ReadOnly = true;
             this.ApplicationsNameTextBox1.Size = new System.Drawing.Size(287, 25);
             this.ApplicationsNameTextBox1.TabIndex = 3;
-            this.ApplicationsNameTextBox1.Text = "Заявка-1";
+            this.ApplicationsNameTextBox1.Text = "ННГ_12.04.2020";
             // 
             // ApplicationsNameTextBox2
             // 
@@ -92,7 +95,7 @@
             this.ApplicationsNameTextBox2.ReadOnly = true;
             this.ApplicationsNameTextBox2.Size = new System.Drawing.Size(287, 25);
             this.ApplicationsNameTextBox2.TabIndex = 6;
-            this.ApplicationsNameTextBox2.Text = "Заявка-2";
+            this.ApplicationsNameTextBox2.Text = "Газпром_10.03.2020";
             // 
             // LocationComboBox
             // 
@@ -120,21 +123,21 @@
             this.CustomersComboBox.TabIndex = 37;
             this.CustomersComboBox.Text = "Заказчик";
             // 
-            // DateStart1
+            // DateEnd
             // 
-            this.DateStart1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DateStart1.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.DateStart1.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.DateStart1.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.DateStart1.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.DateStart1.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.DateStart1.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.DateStart1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DateStart1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DateStart1.Location = new System.Drawing.Point(492, 70);
-            this.DateStart1.Name = "DateStart1";
-            this.DateStart1.Size = new System.Drawing.Size(145, 26);
-            this.DateStart1.TabIndex = 39;
+            this.DateEnd.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DateEnd.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.DateEnd.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.DateEnd.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.DateEnd.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.DateEnd.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.DateEnd.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.DateEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DateEnd.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DateEnd.Location = new System.Drawing.Point(681, 70);
+            this.DateEnd.Name = "DateEnd";
+            this.DateEnd.Size = new System.Drawing.Size(145, 26);
+            this.DateEnd.TabIndex = 39;
             // 
             // ShowApplicationsButton2
             // 
@@ -160,6 +163,40 @@
             this.ShowApplicationButton1.UseVisualStyleBackColor = false;
             this.ShowApplicationButton1.Click += new System.EventHandler(this.ShowApplicationButton1_Click);
             // 
+            // DateStart
+            // 
+            this.DateStart.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DateStart.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.DateStart.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.DateStart.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.DateStart.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.DateStart.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.DateStart.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.DateStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DateStart.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DateStart.Location = new System.Drawing.Point(506, 70);
+            this.DateStart.Name = "DateStart";
+            this.DateStart.Size = new System.Drawing.Size(145, 26);
+            this.DateStart.TabIndex = 40;
+            // 
+            // DateStartLabel
+            // 
+            this.DateStartLabel.AutoSize = true;
+            this.DateStartLabel.Location = new System.Drawing.Point(506, 51);
+            this.DateStartLabel.Name = "DateStartLabel";
+            this.DateStartLabel.Size = new System.Drawing.Size(42, 13);
+            this.DateStartLabel.TabIndex = 41;
+            this.DateStartLabel.Text = "Дата с";
+            // 
+            // DateEndLabel
+            // 
+            this.DateEndLabel.AutoSize = true;
+            this.DateEndLabel.Location = new System.Drawing.Point(678, 51);
+            this.DateEndLabel.Name = "DateEndLabel";
+            this.DateEndLabel.Size = new System.Drawing.Size(48, 13);
+            this.DateEndLabel.TabIndex = 42;
+            this.DateEndLabel.Text = "Дата по";
+            // 
             // HistoryApplications
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -167,7 +204,10 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(888, 711);
-            this.Controls.Add(this.DateStart1);
+            this.Controls.Add(this.DateEndLabel);
+            this.Controls.Add(this.DateStartLabel);
+            this.Controls.Add(this.DateStart);
+            this.Controls.Add(this.DateEnd);
             this.Controls.Add(this.LocationComboBox);
             this.Controls.Add(this.CustomersComboBox);
             this.Controls.Add(this.ShowApplicationsButton2);
@@ -175,7 +215,6 @@
             this.Controls.Add(this.ApplicationsNameTextBox2);
             this.Controls.Add(this.ApplicationsNameTextBox1);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "HistoryApplications";
             this.Text = "Applications";
             this.ResumeLayout(false);
@@ -193,6 +232,9 @@
         private System.Windows.Forms.Button ShowApplicationsButton2;
         private System.Windows.Forms.ComboBox LocationComboBox;
         private System.Windows.Forms.ComboBox CustomersComboBox;
-        private System.Windows.Forms.DateTimePicker DateStart1;
+        private System.Windows.Forms.DateTimePicker DateEnd;
+        private System.Windows.Forms.DateTimePicker DateStart;
+        private System.Windows.Forms.Label DateStartLabel;
+        private System.Windows.Forms.Label DateEndLabel;
     }
 }

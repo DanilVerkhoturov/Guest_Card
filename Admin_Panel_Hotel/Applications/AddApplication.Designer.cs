@@ -43,17 +43,21 @@
             this.LocationComboBox = new System.Windows.Forms.ComboBox();
             this.ImportFileButton = new System.Windows.Forms.Button();
             this.ApplicationUserDataGridView = new System.Windows.Forms.DataGridView();
+            this.EditButton = new System.Windows.Forms.Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EditButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ApplicationUserDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // NewApplication
             // 
+            this.NewApplication.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.NewApplication.AutoSize = true;
             this.NewApplication.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.NewApplication.Location = new System.Drawing.Point(25, 25);
@@ -64,12 +68,14 @@
             // 
             // PrintButton
             // 
+            this.PrintButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.PrintButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.PrintButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
             this.PrintButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PrintButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.PrintButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
-            this.PrintButton.Location = new System.Drawing.Point(577, 25);
+            this.PrintButton.Location = new System.Drawing.Point(704, 25);
             this.PrintButton.Name = "PrintButton";
             this.PrintButton.Size = new System.Drawing.Size(67, 29);
             this.PrintButton.TabIndex = 13;
@@ -78,12 +84,14 @@
             // 
             // DraftButton
             // 
+            this.DraftButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.DraftButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.DraftButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
             this.DraftButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DraftButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.DraftButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
-            this.DraftButton.Location = new System.Drawing.Point(650, 25);
+            this.DraftButton.Location = new System.Drawing.Point(777, 25);
             this.DraftButton.Name = "DraftButton";
             this.DraftButton.Size = new System.Drawing.Size(81, 29);
             this.DraftButton.TabIndex = 14;
@@ -92,6 +100,8 @@
             // 
             // NameApplication
             // 
+            this.NameApplication.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.NameApplication.AutoSize = true;
             this.NameApplication.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.NameApplication.Location = new System.Drawing.Point(179, 25);
@@ -102,12 +112,14 @@
             // 
             // AcceptButton
             // 
+            this.AcceptButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.AcceptButton.BackColor = System.Drawing.SystemColors.Highlight;
             this.AcceptButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.AcceptButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AcceptButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.AcceptButton.ForeColor = System.Drawing.Color.White;
-            this.AcceptButton.Location = new System.Drawing.Point(614, 581);
+            this.AcceptButton.Location = new System.Drawing.Point(751, 584);
             this.AcceptButton.Name = "AcceptButton";
             this.AcceptButton.Size = new System.Drawing.Size(107, 29);
             this.AcceptButton.TabIndex = 16;
@@ -117,6 +129,8 @@
             // 
             // CustomersComboBox
             // 
+            this.CustomersComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.CustomersComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.CustomersComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CustomersComboBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -130,6 +144,8 @@
             // 
             // LocationComboBox
             // 
+            this.LocationComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.LocationComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.LocationComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LocationComboBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -143,6 +159,8 @@
             // 
             // ImportFileButton
             // 
+            this.ImportFileButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.ImportFileButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ImportFileButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
             this.ImportFileButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -177,7 +195,9 @@
             this.ApplicationUserDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
+            this.Column7,
             this.Column3,
+            this.Column6,
             this.Column4,
             this.Column5});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -209,9 +229,24 @@
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ControlText;
             this.ApplicationUserDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.ApplicationUserDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.ApplicationUserDataGridView.Size = new System.Drawing.Size(712, 426);
+            this.ApplicationUserDataGridView.Size = new System.Drawing.Size(857, 426);
             this.ApplicationUserDataGridView.TabIndex = 37;
             this.ApplicationUserDataGridView.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.ApplicationUserDataGridView_RowsAdded);
+            // 
+            // EditButton
+            // 
+            this.EditButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.EditButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.EditButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("EditButton.BackgroundImage")));
+            this.EditButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.EditButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
+            this.EditButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EditButton.Location = new System.Drawing.Point(669, 25);
+            this.EditButton.Name = "EditButton";
+            this.EditButton.Size = new System.Drawing.Size(29, 29);
+            this.EditButton.TabIndex = 12;
+            this.EditButton.UseVisualStyleBackColor = false;
             // 
             // Column1
             // 
@@ -230,6 +265,11 @@
             this.Column2.MinimumWidth = 200;
             this.Column2.Name = "Column2";
             // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Цех";
+            this.Column7.Name = "Column7";
+            // 
             // Column3
             // 
             this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
@@ -238,6 +278,11 @@
             this.Column3.MinimumWidth = 150;
             this.Column3.Name = "Column3";
             this.Column3.Width = 150;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Должность";
+            this.Column6.Name = "Column6";
             // 
             // Column4
             // 
@@ -257,21 +302,10 @@
             this.Column5.Name = "Column5";
             this.Column5.Width = 150;
             // 
-            // EditButton
-            // 
-            this.EditButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.EditButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("EditButton.BackgroundImage")));
-            this.EditButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.EditButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
-            this.EditButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EditButton.Location = new System.Drawing.Point(542, 25);
-            this.EditButton.Name = "EditButton";
-            this.EditButton.Size = new System.Drawing.Size(29, 29);
-            this.EditButton.TabIndex = 12;
-            this.EditButton.UseVisualStyleBackColor = false;
-            // 
             // AddApplication
             // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(888, 711);
             this.Controls.Add(this.ApplicationUserDataGridView);
@@ -285,7 +319,6 @@
             this.Controls.Add(this.EditButton);
             this.Controls.Add(this.NewApplication);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddApplication";
             ((System.ComponentModel.ISupportInitialize)(this.ApplicationUserDataGridView)).EndInit();
             this.ResumeLayout(false);
@@ -307,7 +340,9 @@
         private System.Windows.Forms.DataGridView ApplicationUserDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
     }
