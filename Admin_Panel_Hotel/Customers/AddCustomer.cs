@@ -1,5 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace Admin_Panel_Hotel
@@ -20,7 +21,7 @@ namespace Admin_Panel_Hotel
             Functions.SetWaterMark(INNTextBox, "ИНН");
             Functions.SetWaterMark(OGRNTextBox, "ОГРН");
             Functions.SetWaterMark(ContractNumberTextBox, "Номер договора");
-            Functions.SetWaterMark(LocationNameTextBox, "Локация");
+            Functions.SetWaterMark(LocationNameTextBox, "Название локации");
             //Functions.SetWaterMark(EmailTextBox, "Электронная почта заказчика");
             Functions.SetWaterMark(RegionComboBox, "Регион");
             Functions.SetWaterMark(StateComboBox, "Область");
@@ -104,6 +105,7 @@ namespace Admin_Panel_Hotel
                 StreetNameComboBox.Items.Add(reader[0].ToString());
             }
             reader.Close();
+            select.Cancel();
         }
 
         private void AllProperties_Customer_CheckBox_CheckedChanged(object sender, EventArgs e)
@@ -172,8 +174,13 @@ namespace Admin_Panel_Hotel
             CardPropertiesPanel.Visible = false;
 
             CustomerInfoButton.BackgroundImage = Properties.Resources.GrayCircle;
+            CustomerInfoButton.ForeColor = Color.Black;
+
             AddLocationsButton.BackgroundImage = Properties.Resources.BlueCircle;
+            AddLocationsButton.ForeColor = Color.White;
+
             CardPropertiesButton.BackgroundImage = Properties.Resources.GrayCircle;
+            CardPropertiesButton.ForeColor = Color.Black;
         }
 
         private void AddLocationNextButton_Click(object sender, EventArgs e)
@@ -191,8 +198,13 @@ namespace Admin_Panel_Hotel
             CardPropertiesPanel.Visible = true;
 
             CustomerInfoButton.BackgroundImage = Properties.Resources.GrayCircle;
+            CustomerInfoButton.ForeColor = Color.Black;
+
             AddLocationsButton.BackgroundImage = Properties.Resources.GrayCircle;
+            AddLocationsButton.ForeColor = Color.Black;
+
             CardPropertiesButton.BackgroundImage = Properties.Resources.BlueCircle;
+            CardPropertiesButton.ForeColor = Color.White;
         }
 
         /// <summary>
@@ -205,8 +217,13 @@ namespace Admin_Panel_Hotel
             CardPropertiesPanel.Visible = false;
 
             CustomerInfoButton.BackgroundImage = Properties.Resources.BlueCircle;
+            CustomerInfoButton.ForeColor = Color.White;
+
             AddLocationsButton.BackgroundImage = Properties.Resources.GrayCircle;
+            AddLocationsButton.ForeColor = Color.Black;
+
             CardPropertiesButton.BackgroundImage = Properties.Resources.GrayCircle;
+            CardPropertiesButton.ForeColor = Color.Black;
         }
 
         private void AddLocationButton_Click(object sender, EventArgs e)
