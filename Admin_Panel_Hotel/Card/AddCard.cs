@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Admin_Panel_Hotel.Card
@@ -15,8 +8,13 @@ namespace Admin_Panel_Hotel.Card
         public AddCard()
         {
             InitializeComponent();
+
+            Functions.NewlineProcessing(CardsDataGridView, new string[] { "1", "Введите номер карты", null, null });
         }
 
-       
+        private void AddCardButton_Click(object sender, EventArgs e)
+        {
+            CardsDataGridView.Rows.Add();
+        }
     }
 }

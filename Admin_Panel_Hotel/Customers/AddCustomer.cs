@@ -34,6 +34,10 @@ namespace Admin_Panel_Hotel
             Functions.SetWaterMark(RoomCountTextBox, "Количество комнат");
             Functions.SetWaterMark(BedsCountTextBox, "Количество мест");
 
+            // Установка ограничений для текстовых полей.
+            Functions.OnlyNumbersInTextBox(INNTextBox);
+            Functions.OnlyNumbersInTextBox(OGRNTextBox);
+
             // Установка подсказок обязательных полей.
             ErrorProvider.SetError(NameTextBox, "* - обязательное поле");
             ErrorProvider.SetError(ContractNumberTextBox, "* - обязательное поле");
