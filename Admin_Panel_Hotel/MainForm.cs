@@ -1,7 +1,6 @@
 ﻿using Admin_Panel_Hotel.Card;
 using System;
 using System.Data;
-using System.Drawing;
 using System.Windows.Forms;
 
 namespace Admin_Panel_Hotel
@@ -112,5 +111,7 @@ namespace Admin_Panel_Hotel
         }
 
         private void MainForm_Load(object sender, EventArgs e) => Functions.OpenChildForm(new NewApplications(), ContentPanel);
+
+        private void MyCustomersButton_Click(object sender, EventArgs e) => Functions.OpenChildForm(new Customers(), ContentPanel);
     }
 }

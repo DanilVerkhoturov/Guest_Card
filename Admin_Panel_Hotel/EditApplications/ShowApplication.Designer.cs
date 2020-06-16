@@ -28,186 +28,52 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ShowApplication));
-            this.NewApplicationsLabel = new System.Windows.Forms.Label();
-            this.NameCustomer = new System.Windows.Forms.Label();
-            this.DateAplication = new System.Windows.Forms.Label();
-            this.Number1 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.FullName1 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.TabNumber1 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.DateStart1 = new System.Windows.Forms.DateTimePicker();
-            this.DateEnd1 = new System.Windows.Forms.DateTimePicker();
-            this.EditButton = new System.Windows.Forms.Button();
+            this.FormNameLabel = new System.Windows.Forms.Label();
+            this.CustomerNameLabel = new System.Windows.Forms.Label();
             this.PrintButton = new System.Windows.Forms.Button();
             this.DraftButton = new System.Windows.Forms.Button();
-            this.NameApplication = new System.Windows.Forms.Label();
             this.AcceptButton = new System.Windows.Forms.Button();
-            this.DateEnd2 = new System.Windows.Forms.DateTimePicker();
-            this.DateStart2 = new System.Windows.Forms.DateTimePicker();
-            this.TabNumber2 = new System.Windows.Forms.TextBox();
-            this.FullName2 = new System.Windows.Forms.TextBox();
-            this.Number2 = new System.Windows.Forms.TextBox();
+            this.UsersDataGridView = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Division = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UserPost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ShowUserInfo = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.EditButton = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.UsersDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // NewApplicationsLabel
+            // FormNameLabel
             // 
-            this.NewApplicationsLabel.AutoSize = true;
-            this.NewApplicationsLabel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.NewApplicationsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.NewApplicationsLabel.Location = new System.Drawing.Point(25, 25);
-            this.NewApplicationsLabel.Name = "NewApplicationsLabel";
-            this.NewApplicationsLabel.Size = new System.Drawing.Size(156, 24);
-            this.NewApplicationsLabel.TabIndex = 0;
-            this.NewApplicationsLabel.Text = "Новые заявки  >";
-            this.NewApplicationsLabel.Click += new System.EventHandler(this.NewApplicationsLabel_Click);
+            this.FormNameLabel.AutoSize = true;
+            this.FormNameLabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.FormNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.FormNameLabel.Location = new System.Drawing.Point(11, 22);
+            this.FormNameLabel.Name = "FormNameLabel";
+            this.FormNameLabel.Size = new System.Drawing.Size(356, 24);
+            this.FormNameLabel.TabIndex = 0;
+            this.FormNameLabel.Text = "Новые заявки > Заявка-1 от 02.07.2020";
+            this.FormNameLabel.Click += new System.EventHandler(this.NewApplicationsLabel_Click);
             // 
-            // NameCustomer
+            // CustomerNameLabel
             // 
-            this.NameCustomer.AutoSize = true;
-            this.NameCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.NameCustomer.Location = new System.Drawing.Point(26, 77);
-            this.NameCustomer.Name = "NameCustomer";
-            this.NameCustomer.Size = new System.Drawing.Size(101, 16);
-            this.NameCustomer.TabIndex = 1;
-            this.NameCustomer.Text = "Заказчик ННГ";
-            // 
-            // DateAplication
-            // 
-            this.DateAplication.AutoSize = true;
-            this.DateAplication.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DateAplication.Location = new System.Drawing.Point(144, 77);
-            this.DateAplication.Name = "DateAplication";
-            this.DateAplication.Size = new System.Drawing.Size(108, 16);
-            this.DateAplication.TabIndex = 2;
-            this.DateAplication.Text = "Дата: 02.07.2020";
-            // 
-            // Number1
-            // 
-            this.Number1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.Number1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Number1.Enabled = false;
-            this.Number1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Number1.Location = new System.Drawing.Point(29, 125);
-            this.Number1.Multiline = true;
-            this.Number1.Name = "Number1";
-            this.Number1.Size = new System.Drawing.Size(43, 25);
-            this.Number1.TabIndex = 3;
-            this.Number1.Text = "1";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(39, 106);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(22, 16);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "№";
-            // 
-            // FullName1
-            // 
-            this.FullName1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.FullName1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.FullName1.Enabled = false;
-            this.FullName1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.FullName1.Location = new System.Drawing.Point(88, 125);
-            this.FullName1.Multiline = true;
-            this.FullName1.Name = "FullName1";
-            this.FullName1.Size = new System.Drawing.Size(193, 25);
-            this.FullName1.TabIndex = 5;
-            this.FullName1.Text = "Иванов Иван Иванович";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(85, 106);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(39, 16);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "ФИО";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(293, 106);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(116, 16);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Табельнй номер";
-            // 
-            // TabNumber1
-            // 
-            this.TabNumber1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.TabNumber1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TabNumber1.Enabled = false;
-            this.TabNumber1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TabNumber1.Location = new System.Drawing.Point(296, 125);
-            this.TabNumber1.Multiline = true;
-            this.TabNumber1.Name = "TabNumber1";
-            this.TabNumber1.Size = new System.Drawing.Size(113, 25);
-            this.TabNumber1.TabIndex = 7;
-            this.TabNumber1.Text = "ННГ/Цех 136/112";
-            this.TabNumber1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.Location = new System.Drawing.Point(427, 106);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(81, 16);
-            this.label7.TabIndex = 9;
-            this.label7.Text = "Дата: от/до";
-            // 
-            // DateStart1
-            // 
-            this.DateStart1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DateStart1.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.DateStart1.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.DateStart1.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.DateStart1.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.DateStart1.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.DateStart1.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.DateStart1.Enabled = false;
-            this.DateStart1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DateStart1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DateStart1.Location = new System.Drawing.Point(430, 125);
-            this.DateStart1.Name = "DateStart1";
-            this.DateStart1.Size = new System.Drawing.Size(117, 27);
-            this.DateStart1.TabIndex = 10;
-            // 
-            // DateEnd1
-            // 
-            this.DateEnd1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DateEnd1.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.DateEnd1.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.DateEnd1.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.DateEnd1.Enabled = false;
-            this.DateEnd1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DateEnd1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DateEnd1.Location = new System.Drawing.Point(553, 125);
-            this.DateEnd1.Name = "DateEnd1";
-            this.DateEnd1.Size = new System.Drawing.Size(117, 27);
-            this.DateEnd1.TabIndex = 11;
-            // 
-            // EditButton
-            // 
-            this.EditButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.EditButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("EditButton.BackgroundImage")));
-            this.EditButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.EditButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
-            this.EditButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EditButton.Location = new System.Drawing.Point(542, 25);
-            this.EditButton.Name = "EditButton";
-            this.EditButton.Size = new System.Drawing.Size(29, 29);
-            this.EditButton.TabIndex = 12;
-            this.EditButton.UseVisualStyleBackColor = false;
+            this.CustomerNameLabel.AutoSize = true;
+            this.CustomerNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CustomerNameLabel.Location = new System.Drawing.Point(12, 68);
+            this.CustomerNameLabel.Name = "CustomerNameLabel";
+            this.CustomerNameLabel.Size = new System.Drawing.Size(101, 16);
+            this.CustomerNameLabel.TabIndex = 1;
+            this.CustomerNameLabel.Text = "Заказчик ННГ";
             // 
             // PrintButton
             // 
@@ -215,9 +81,9 @@
             this.PrintButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
             this.PrintButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PrintButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.PrintButton.Location = new System.Drawing.Point(577, 25);
+            this.PrintButton.Location = new System.Drawing.Point(783, 21);
             this.PrintButton.Name = "PrintButton";
-            this.PrintButton.Size = new System.Drawing.Size(67, 29);
+            this.PrintButton.Size = new System.Drawing.Size(67, 26);
             this.PrintButton.TabIndex = 13;
             this.PrintButton.Text = "Печать";
             this.PrintButton.UseVisualStyleBackColor = false;
@@ -228,22 +94,12 @@
             this.DraftButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
             this.DraftButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DraftButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DraftButton.Location = new System.Drawing.Point(650, 25);
+            this.DraftButton.Location = new System.Drawing.Point(856, 21);
             this.DraftButton.Name = "DraftButton";
-            this.DraftButton.Size = new System.Drawing.Size(81, 29);
+            this.DraftButton.Size = new System.Drawing.Size(81, 26);
             this.DraftButton.TabIndex = 14;
             this.DraftButton.Text = "Черновик";
             this.DraftButton.UseVisualStyleBackColor = false;
-            // 
-            // NameApplication
-            // 
-            this.NameApplication.AutoSize = true;
-            this.NameApplication.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.NameApplication.Location = new System.Drawing.Point(179, 25);
-            this.NameApplication.Name = "NameApplication";
-            this.NameApplication.Size = new System.Drawing.Size(94, 24);
-            this.NameApplication.TabIndex = 15;
-            this.NameApplication.Text = "Заявка -1";
             // 
             // AcceptButton
             // 
@@ -252,112 +108,196 @@
             this.AcceptButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AcceptButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.AcceptButton.ForeColor = System.Drawing.Color.White;
-            this.AcceptButton.Location = new System.Drawing.Point(563, 211);
+            this.AcceptButton.Location = new System.Drawing.Point(830, 461);
             this.AcceptButton.Name = "AcceptButton";
-            this.AcceptButton.Size = new System.Drawing.Size(107, 29);
+            this.AcceptButton.Size = new System.Drawing.Size(107, 26);
             this.AcceptButton.TabIndex = 16;
             this.AcceptButton.Text = "Подтвердить";
             this.AcceptButton.UseVisualStyleBackColor = false;
             this.AcceptButton.Click += new System.EventHandler(this.AcceptButton_Click);
             // 
-            // DateEnd2
+            // UsersDataGridView
             // 
-            this.DateEnd2.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DateEnd2.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.DateEnd2.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.DateEnd2.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.DateEnd2.Enabled = false;
-            this.DateEnd2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DateEnd2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DateEnd2.Location = new System.Drawing.Point(553, 163);
-            this.DateEnd2.Name = "DateEnd2";
-            this.DateEnd2.Size = new System.Drawing.Size(117, 27);
-            this.DateEnd2.TabIndex = 21;
+            this.UsersDataGridView.AllowUserToAddRows = false;
+            this.UsersDataGridView.AllowUserToDeleteRows = false;
+            this.UsersDataGridView.AllowUserToResizeRows = false;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.UsersDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.UsersDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.UsersDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.UsersDataGridView.BackgroundColor = System.Drawing.Color.White;
+            this.UsersDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.UsersDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.UsersDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(172)))), ((int)(((byte)(218)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(172)))), ((int)(((byte)(218)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.UsersDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.UsersDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.UsersDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Division,
+            this.Column3,
+            this.UserPost,
+            this.Column4,
+            this.Column5,
+            this.ShowUserInfo});
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.UsersDataGridView.DefaultCellStyle = dataGridViewCellStyle8;
+            this.UsersDataGridView.EnableHeadersVisualStyles = false;
+            this.UsersDataGridView.Location = new System.Drawing.Point(12, 87);
+            this.UsersDataGridView.Name = "UsersDataGridView";
+            this.UsersDataGridView.ReadOnly = true;
+            this.UsersDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.UsersDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.UsersDataGridView.RowHeadersVisible = false;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.NullValue = null;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            this.UsersDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            this.UsersDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.UsersDataGridView.Size = new System.Drawing.Size(925, 371);
+            this.UsersDataGridView.TabIndex = 17;
+            this.UsersDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridTable_CellClick);
             // 
-            // DateStart2
+            // Column1
             // 
-            this.DateStart2.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DateStart2.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.DateStart2.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.DateStart2.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.DateStart2.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.DateStart2.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.DateStart2.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.DateStart2.Enabled = false;
-            this.DateStart2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DateStart2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DateStart2.Location = new System.Drawing.Point(430, 163);
-            this.DateStart2.Name = "DateStart2";
-            this.DateStart2.Size = new System.Drawing.Size(117, 27);
-            this.DateStart2.TabIndex = 20;
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Column1.FillWeight = 20F;
+            this.Column1.Frozen = true;
+            this.Column1.HeaderText = "№";
+            this.Column1.MinimumWidth = 50;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 50;
             // 
-            // TabNumber2
+            // Column2
             // 
-            this.TabNumber2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.TabNumber2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TabNumber2.Enabled = false;
-            this.TabNumber2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TabNumber2.Location = new System.Drawing.Point(296, 165);
-            this.TabNumber2.Multiline = true;
-            this.TabNumber2.Name = "TabNumber2";
-            this.TabNumber2.Size = new System.Drawing.Size(113, 25);
-            this.TabNumber2.TabIndex = 19;
-            this.TabNumber2.Text = "ННГ/Цех 136/113";
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column2.FillWeight = 112.3096F;
+            this.Column2.Frozen = true;
+            this.Column2.HeaderText = "ФИО";
+            this.Column2.MinimumWidth = 200;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 200;
             // 
-            // FullName2
+            // Division
             // 
-            this.FullName2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.FullName2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.FullName2.Enabled = false;
-            this.FullName2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.FullName2.Location = new System.Drawing.Point(88, 165);
-            this.FullName2.Multiline = true;
-            this.FullName2.Name = "FullName2";
-            this.FullName2.Size = new System.Drawing.Size(193, 25);
-            this.FullName2.TabIndex = 18;
-            this.FullName2.Text = "Петров Петр Петрович";
+            this.Division.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Division.FillWeight = 150F;
+            this.Division.HeaderText = "Цех";
+            this.Division.Name = "Division";
+            this.Division.ReadOnly = true;
             // 
-            // Number2
+            // Column3
             // 
-            this.Number2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.Number2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Number2.Enabled = false;
-            this.Number2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Number2.Location = new System.Drawing.Point(29, 165);
-            this.Number2.Multiline = true;
-            this.Number2.Name = "Number2";
-            this.Number2.Size = new System.Drawing.Size(43, 25);
-            this.Number2.TabIndex = 17;
-            this.Number2.Text = "2";
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column3.FillWeight = 112.3096F;
+            this.Column3.HeaderText = "Табельный номер";
+            this.Column3.MinimumWidth = 150;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 150;
+            // 
+            // UserPost
+            // 
+            this.UserPost.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.UserPost.HeaderText = "Должность";
+            this.UserPost.Name = "UserPost";
+            this.UserPost.ReadOnly = true;
+            this.UserPost.Width = 101;
+            // 
+            // Column4
+            // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column4.FillWeight = 112.3096F;
+            this.Column4.HeaderText = "Дата от";
+            this.Column4.MinimumWidth = 10;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column5.FillWeight = 112.3096F;
+            this.Column5.HeaderText = "Дата до";
+            this.Column5.MinimumWidth = 10;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // ShowUserInfo
+            // 
+            this.ShowUserInfo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ShowUserInfo.HeaderText = "";
+            this.ShowUserInfo.Image = global::Admin_Panel_Hotel.Properties.Resources.pngwing_8;
+            this.ShowUserInfo.Name = "ShowUserInfo";
+            this.ShowUserInfo.ReadOnly = true;
+            this.ShowUserInfo.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ShowUserInfo.Width = 30;
+            // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewImageColumn1.Frozen = true;
+            this.dataGridViewImageColumn1.HeaderText = "";
+            this.dataGridViewImageColumn1.Image = global::Admin_Panel_Hotel.Properties.Resources.pngwing_8;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.ReadOnly = true;
+            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewImageColumn1.Width = 30;
+            // 
+            // EditButton
+            // 
+            this.EditButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.EditButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("EditButton.BackgroundImage")));
+            this.EditButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.EditButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
+            this.EditButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EditButton.Location = new System.Drawing.Point(748, 21);
+            this.EditButton.Name = "EditButton";
+            this.EditButton.Size = new System.Drawing.Size(29, 26);
+            this.EditButton.TabIndex = 12;
+            this.EditButton.UseVisualStyleBackColor = false;
+            this.EditButton.Click += new System.EventHandler(this.EditButton_Click);
             // 
             // ShowApplication
             // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(743, 706);
-            this.Controls.Add(this.DateEnd2);
-            this.Controls.Add(this.DateStart2);
-            this.Controls.Add(this.TabNumber2);
-            this.Controls.Add(this.FullName2);
-            this.Controls.Add(this.Number2);
+            this.ClientSize = new System.Drawing.Size(964, 513);
+            this.Controls.Add(this.UsersDataGridView);
             this.Controls.Add(this.AcceptButton);
-            this.Controls.Add(this.NameApplication);
             this.Controls.Add(this.DraftButton);
             this.Controls.Add(this.PrintButton);
             this.Controls.Add(this.EditButton);
-            this.Controls.Add(this.DateEnd1);
-            this.Controls.Add(this.DateStart1);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.TabNumber1);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.FullName1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.Number1);
-            this.Controls.Add(this.DateAplication);
-            this.Controls.Add(this.NameCustomer);
-            this.Controls.Add(this.NewApplicationsLabel);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Controls.Add(this.CustomerNameLabel);
+            this.Controls.Add(this.FormNameLabel);
+            this.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Name = "ShowApplication";
+            ((System.ComponentModel.ISupportInitialize)(this.UsersDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -365,27 +305,21 @@
 
         #endregion
 
-        private System.Windows.Forms.Label NewApplicationsLabel;
-        private System.Windows.Forms.Label NameCustomer;
-        private System.Windows.Forms.Label DateAplication;
-        private System.Windows.Forms.TextBox Number1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox FullName1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox TabNumber1;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DateTimePicker DateStart1;
-        private System.Windows.Forms.DateTimePicker DateEnd1;
+        private System.Windows.Forms.Label FormNameLabel;
+        private System.Windows.Forms.Label CustomerNameLabel;
         private System.Windows.Forms.Button EditButton;
         private System.Windows.Forms.Button PrintButton;
         private System.Windows.Forms.Button DraftButton;
-        private System.Windows.Forms.Label NameApplication;
         private System.Windows.Forms.Button AcceptButton;
-        private System.Windows.Forms.DateTimePicker DateEnd2;
-        private System.Windows.Forms.DateTimePicker DateStart2;
-        private System.Windows.Forms.TextBox TabNumber2;
-        private System.Windows.Forms.TextBox FullName2;
-        private System.Windows.Forms.TextBox Number2;
+        private System.Windows.Forms.DataGridView UsersDataGridView;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Division;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UserPost;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewImageColumn ShowUserInfo;
     }
 }

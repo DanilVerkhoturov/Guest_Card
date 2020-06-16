@@ -37,6 +37,9 @@ namespace Admin_Panel_Hotel
             // Установка ограничений для текстовых полей.
             Functions.OnlyNumbersInTextBox(INNTextBox);
             Functions.OnlyNumbersInTextBox(OGRNTextBox);
+            Functions.OnlyNumbersInTextBox(BedsCountTextBox);
+            Functions.OnlyNumbersInTextBox(CardCountTextBox);
+            Functions.OnlyNumbersInTextBox(RoomCountTextBox);
 
             // Установка подсказок обязательных полей.
             ErrorProvider.SetError(NameTextBox, "* - обязательное поле");

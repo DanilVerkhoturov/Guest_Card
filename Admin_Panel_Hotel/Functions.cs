@@ -12,7 +12,7 @@ namespace Admin_Panel_Hotel
         /// <summary>
         /// Строка подключения.
         /// </summary>
-        public static string ConnectionString = "Data Source=82.202.172.129; User Id=u117511_hotel; Password=wjkbc0r7; Database=u117511_hotel";
+        private static string ConnectionString = "Data Source=82.202.172.129; User Id=u117511_hotel; Password=wjkbc0r7; Database=u117511_hotel";
         
         /// <summary>
         /// Соединение с базой данных.
@@ -181,7 +181,7 @@ namespace Admin_Panel_Hotel
         /// <param name="e"></param>
         private static void TextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsDigit(e.KeyChar))
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != Convert.ToChar(8))
             {
                 e.Handled = true;
             }
