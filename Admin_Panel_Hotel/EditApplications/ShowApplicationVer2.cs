@@ -18,6 +18,7 @@ namespace Admin_Panel_Hotel
         {
             InitializeComponent();
             this.GridTable.Rows.Add("1", "Иванов Иван Иванович", "ННГ/Цех 136/112", "06.06.2020", "06.06.2020");
+            //Functions.NewlineProcessing(EmailsDataGridView, new string[] { "1", "Введите имя", "Введите электронную почту" });
             this.GridTable.Rows.Add("2", "Петров Петр Петрович", "ННГ/Цех 136/113", "06.06.2020", "06.06.2020");
         }
 
