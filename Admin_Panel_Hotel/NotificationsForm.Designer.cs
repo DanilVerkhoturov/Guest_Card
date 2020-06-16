@@ -151,6 +151,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "NotificationsForm";
             this.Opacity = 0.6D;
+            this.ShowInTaskbar = false;
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.ClosePictureBox)).EndInit();
             this.ResumeLayout(false);

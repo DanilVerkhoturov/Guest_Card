@@ -184,11 +184,11 @@
     <Compile Include="Applications\CurrentApplications.Designer.cs">
       <DependentUpon>CurrentApplications.cs</DependentUpon>
     </Compile>
-    <Compile Include="Applications\InfoUserForn.cs">
+    <Compile Include="Applications\InfoUserForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Applications\InfoUserForn.Designer.cs">
-      <DependentUpon>InfoUserForn.cs</DependentUpon>
+    <Compile Include="Applications\InfoUserForm.Designer.cs">
+      <DependentUpon>InfoUserForm.cs</DependentUpon>
     </Compile>
     <Compile Include="NotificationsForm.cs">
       <SubType>Form</SubType>
@@ -215,19 +215,13 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="PatternForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PatternForm.Designer.cs">
-      <DependentUpon>PatternForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Applications\HistoryApplications.resx">
       <DependentUpon>HistoryApplications.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Applications\InfoUserForn.resx">
-      <DependentUpon>InfoUserForn.cs</DependentUpon>
+    <EmbeddedResource Include="Applications\InfoUserForm.resx">
+      <DependentUpon>InfoUserForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Card\AddCard.resx">
       <DependentUpon>AddCard.cs</DependentUpon>
@@ -273,9 +267,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PatternForm.resx">
-      <DependentUpon>PatternForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
@@ -332,6 +323,7 @@
     <None Include="Resources\Line 471.png" />
     <None Include="Resources\Out.png" />
     <None Include="Resources\pngwing 14.png" />
+    <None Include="Resources\question_icon-icons.com_69315.png" />
     <Content Include="Resources\question_icon.png" />
   </ItemGroup>
   <ItemGroup>

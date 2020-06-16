@@ -468,6 +468,7 @@
             this.Controls.Add(this.FullNameTextLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "InfoUserForm";
+            this.ShowInTaskbar = false;
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ClosePictureBox)).EndInit();

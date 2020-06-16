@@ -8,6 +8,8 @@ namespace Admin_Panel_Hotel
         public AddApplication()
         {
             InitializeComponent();
+
+            Functions.NewlineProcessing(UsersDataGridView, new string[] { "1", "Введите ФИО", "Введите цех", "Введите табельный номер", "Введите должность", "Введите дату заезда", "Введите дату выезда" });
         }
 
         private void NewApplication_Click(object sender, EventArgs e)
@@ -27,9 +29,9 @@ namespace Admin_Panel_Hotel
             notification.ShowDialog();
         }
 
-        private void ApplicationUserDataGridView_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        private void AddUserButton_Click(object sender, EventArgs e)
         {
-            //ApplicationUserDataGridView = "";
+            UsersDataGridView.Rows.Add();
         }
     }
 }

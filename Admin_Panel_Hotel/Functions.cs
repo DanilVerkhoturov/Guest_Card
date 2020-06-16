@@ -7,13 +7,24 @@ namespace Admin_Panel_Hotel
 {
     class Functions
     {
+        #region Переменные
+
+        /// <summary>
+        /// Строка подключения.
+        /// </summary>
         public static string ConnectionString = "Data Source=82.202.172.129; User Id=u117511_hotel; Password=wjkbc0r7; Database=u117511_hotel";
+        
+        /// <summary>
+        /// Соединение с базой данных.
+        /// </summary>
         public static MySqlConnection Connection = new MySqlConnection(ConnectionString);
 
         /// <summary>
         /// Активная форма в панели контента.
         /// </summary>
         static Form ActiveForm = null;
+
+        #endregion
 
         /// <summary>
         /// Открыть дочернюю форму на форме.
@@ -88,15 +99,9 @@ namespace Admin_Panel_Hotel
         /// <param name="helpTexts">Тексты для подсказок столбцов (вписать попорядку для каждого столбца). Если текст для столбца не нужен - писать null!</param>
         public static void NewlineProcessing(DataGridView dgv, string[] helpTexts)
         {
+            
             for (int c = 0; c < dgv.Columns.Count; c++)
-            {
                 dgv.Columns[c].ToolTipText = helpTexts[c];
-
-                if (dgv.Rows.Count == 1)
-                {
-                    dgv[c, 0].Value = helpTexts[c];
-                }
-            }
 
             dgv.RowsAdded += new DataGridViewRowsAddedEventHandler(RowsAdded);
             dgv.CellEnter += new DataGridViewCellEventHandler(CellEnter);
@@ -118,7 +123,15 @@ namespace Admin_Panel_Hotel
             // Заполнение подсказок в новые поля.
             for (int c = 1; c < dgv.Columns.Count; c++)
             {
-                dgv[c, e.RowIndex].Value = dgv.Columns[c].ToolTipText;
+                if (dgv[c, e.RowIndex] is DataGridViewComboBoxCell) // Выбор первого элемента из списка, являющегося подсказкой.
+                {
+                    DataGridViewComboBoxCell comboBoxCell = (DataGridViewComboBoxCell)dgv[c, e.RowIndex];
+                    dgv[c, e.RowIndex].Value = comboBoxCell.Items[0];
+                }
+                else
+                {
+                    dgv[c, e.RowIndex].Value = dgv.Columns[c].ToolTipText;
+                }
             }
         }
 
@@ -149,6 +162,28 @@ namespace Admin_Panel_Hotel
             if (e.ColumnIndex != 0 && dgv[e.ColumnIndex, e.RowIndex].Value == null)
             {
                 dgv[e.ColumnIndex, e.RowIndex].Value = dgv.Columns[e.ColumnIndex].ToolTipText;
+            }
+        }
+    
+        /// <summary>
+        /// Установка ограничения на ввод только цифр для текстового поля.
+        /// </summary>
+        /// <param name="textBox">Объект текстового поля.</param>
+        public static void OnlyNumbersInTextBox(TextBox textBox)
+        {
+            textBox.KeyPress += TextBox_KeyPress;
+        }
+
+        /// <summary>
+        /// Обработка события нажатия на клавишу.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private static void TextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
             }
         }
     }

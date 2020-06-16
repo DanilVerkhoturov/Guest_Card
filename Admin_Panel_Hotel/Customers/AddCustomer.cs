@@ -34,6 +34,10 @@ namespace Admin_Panel_Hotel
             Functions.SetWaterMark(RoomCountTextBox, "Количество комнат");
             Functions.SetWaterMark(BedsCountTextBox, "Количество мест");
 
+            // Установка ограничений для текстовых полей.
+            Functions.OnlyNumbersInTextBox(INNTextBox);
+            Functions.OnlyNumbersInTextBox(OGRNTextBox);
+
             // Установка подсказок обязательных полей.
             ErrorProvider.SetError(NameTextBox, "* - обязательное поле");
             ErrorProvider.SetError(ContractNumberTextBox, "* - обязательное поле");
@@ -44,10 +48,6 @@ namespace Admin_Panel_Hotel
             ErrorProvider.SetError(RoomCountTextBox, "* - обязательное поле");
             ErrorProvider.SetError(BedsCountTextBox, "* - обязательное поле");
 
-            // Подсказки для комплектов белья.
-            HelpProvider.SetError(Set1_Customer_CheckBox, "В \"Комплект-1\" входит:\nНаволочка, подушка, одеяло, пододеяльник.");
-            HelpProvider.SetError(Set2_Customer_CheckBox, "В \"Комплект-2\" входит:\nПростыня, подушка, одеяло.");
-            
             LoadLocationsData();
         }
 
@@ -228,6 +228,11 @@ namespace Admin_Panel_Hotel
 
         private void AddLocationButton_Click(object sender, EventArgs e)
         {
+            AddLocation();
+        }
+
+        private void AddLocation()
+        {
             // TODO: Проверка заполнения обязательных полей.
             int lastRow = LocationsDataGridView.Rows.GetLastRow(DataGridViewElementStates.Visible);
             LocationsDataGridView.Rows.Add(lastRow + 2, LocationNameTextBox.Text);
@@ -246,6 +251,21 @@ namespace Admin_Panel_Hotel
         private void CardPropertiesButton_Click(object sender, EventArgs e)
         {
             OpenCardPropertiesPanel();
+        }
+
+        private void Set1HelpButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("В \"Комплект-1\" входит:\nНаволочка, подушка, одеяло, пододеяльник.", "Комплект-1", MessageBoxButtons.OK, MessageBoxIcon.Question);
+        }
+
+        private void Set2HelpButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("В \"Комплект-2\" входит:\nПростыня, подушка, одеяло.", "Комплект-2", MessageBoxButtons.OK, MessageBoxIcon.Question);
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            AddLocation();
         }
     }
 }
