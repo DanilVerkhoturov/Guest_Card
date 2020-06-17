@@ -51,7 +51,7 @@ namespace Admin_Panel_Hotel
         /// </summary>
         /// <param name="textBox">Объект текстового поля.</param>
         /// <param name="waterMarkText">Текст подсказки.</param>
-        public static void SetWaterMark(Control textBox, string waterMarkText)
+        public static void SetWaterMarkTextBox(Control textBox, string waterMarkText)
         {
             textBox.ForeColor = SystemColors.GrayText;
             textBox.Text = waterMarkText;

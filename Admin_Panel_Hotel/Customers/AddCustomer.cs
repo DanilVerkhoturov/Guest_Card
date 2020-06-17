@@ -16,25 +16,25 @@ namespace Admin_Panel_Hotel
             OpenCustomerInfoPanel();
 
             // Установка подсказок в текстовых полях.
-            Functions.SetWaterMark(NameTextBox, "Наименование организации");
-            Functions.SetWaterMark(AddressTextBox, "Адрес");
-            Functions.SetWaterMark(INNTextBox, "ИНН");
-            Functions.SetWaterMark(OGRNTextBox, "ОГРН");
-            Functions.SetWaterMark(ContractNumberTextBox, "Номер договора");
-            Functions.SetWaterMark(LocationNameTextBox, "Название локации");
+            Functions.SetWaterMarkTextBox(NameTextBox, "Наименование организации");
+            Functions.SetWaterMarkTextBox(AddressTextBox, "Адрес");
+            Functions.SetWaterMarkTextBox(INNTextBox, "ИНН");
+            Functions.SetWaterMarkTextBox(OGRNTextBox, "ОГРН");
+            Functions.SetWaterMarkTextBox(ContractNumberTextBox, "Номер договора");
+            Functions.SetWaterMarkTextBox(LocationNameTextBox, "Название локации");
             //Functions.SetWaterMark(EmailTextBox, "Электронная почта заказчика");
-            Functions.SetWaterMark(RegionComboBox, "Регион");
-            Functions.SetWaterMark(StateComboBox, "Область");
-            Functions.SetWaterMark(CityComboBox, "Город");
-            Functions.SetWaterMark(StreetTypeComboBox, "Тип улицы");
-            Functions.SetWaterMark(StreetNameComboBox, "Улица");
-            Functions.SetWaterMark(HouseTextBox, "Дом");
-            Functions.SetWaterMark(CorpsTextBox, "Корпус");
-            Functions.SetWaterMark(BuildTextBox, "Строение");
-            Functions.SetWaterMark(RoomCountTextBox, "Количество комнат");
-            Functions.SetWaterMark(BedsCountTextBox, "Количество мест");
-            Functions.SetWaterMark(EmailNameTextBox0, "Имя электронной почты заказчика");
-            Functions.SetWaterMark(EmailTextBox0, "Электронная почта заказчика");
+            Functions.SetWaterMarkTextBox(RegionComboBox, "Регион");
+            Functions.SetWaterMarkTextBox(StateComboBox, "Область");
+            Functions.SetWaterMarkTextBox(CityComboBox, "Город");
+            Functions.SetWaterMarkTextBox(StreetTypeComboBox, "Тип улицы");
+            Functions.SetWaterMarkTextBox(StreetNameComboBox, "Улица");
+            Functions.SetWaterMarkTextBox(HouseTextBox, "Дом");
+            Functions.SetWaterMarkTextBox(CorpsTextBox, "Корпус");
+            Functions.SetWaterMarkTextBox(BuildTextBox, "Строение");
+            Functions.SetWaterMarkTextBox(RoomCountTextBox, "Количество комнат");
+            Functions.SetWaterMarkTextBox(BedsCountTextBox, "Количество мест");
+            Functions.SetWaterMarkTextBox(EmailNameTextBox0, "Имя электронной почты заказчика");
+            Functions.SetWaterMarkTextBox(EmailTextBox0, "Электронная почта заказчика");
 
             // Установка ограничений для текстовых полей.
             Functions.OnlyNumbersInTextBox(INNTextBox);
@@ -51,10 +51,50 @@ namespace Admin_Panel_Hotel
             ErrorProvider.SetError(LocationNameTextBox, "* - обязательное поле");
             ErrorProvider.SetError(RoomCountTextBox, "* - обязательное поле");
             ErrorProvider.SetError(BedsCountTextBox, "* - обязательное поле");
-            ErrorProvider.SetError(EmailNameTextBox0, "* - обязательное поле");
-            ErrorProvider.SetError(EmailTextBox0, "* - обязательное поле");
+            EmailNamesErrorProvider.SetError(EmailNameTextBox0, "* - обязательное поле");
+            EmailsErrorProvider.SetError(EmailTextBox0, "* - обязательное поле");
+
+            EmailNameTextBox0.Leave += new EventHandler(EmailNameTextBox_Leave);
+            EmailTextBox0.Leave += new EventHandler(EmailTextBox_Leave);
 
             LoadLocationsData();
+        }
+
+        /// <summary>
+        /// Обработка окончания редактирования поля с эл.почтой.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void EmailTextBox_Leave(object sender, EventArgs e)
+        {
+            TextBox textBox = sender as TextBox;
+            TextBox lastTextBox = EmailsPanel.Controls[EmailsPanel.Controls.Count - 1] as TextBox;
+
+            
+            if (lastTextBox.Name == textBox.Name && textBox.Text.Trim().Length > 0 && textBox.Text != textBox.Tag.ToString()) // Если введёно имя эл.почты.
+            {
+                // TODO: Сделать проверку эл.почты по регулярным выражениям.
+                if (true)
+                {
+                    EmailsErrorProvider.Clear();
+                }
+            }
+        }
+
+        /// <summary>
+        /// Обработка окончания редактирования поля с именем эл.почты.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void EmailNameTextBox_Leave(object sender, EventArgs e)
+        {
+            TextBox textBox = sender as TextBox;
+            TextBox lastTextBox = EmailNamesPanel.Controls[EmailNamesPanel.Controls.Count - 1] as TextBox;
+
+            if (lastTextBox.Name == textBox.Name && textBox.Text.Trim().Length > 0 && textBox.Text != textBox.Tag.ToString()) // Если введёно имя эл.почты в последнее поле.
+            {
+                EmailNamesErrorProvider.Clear();
+            }
         }
 
         /// <summary>
@@ -167,6 +207,7 @@ namespace Admin_Panel_Hotel
 
         private void CustomerInfoNextButton_Click(object sender, EventArgs e)
         {
+            // TODO: Сделать проверку заполнения всех обязательных полей.
             OpenAddCustomerLocationPanel();
         }
 
@@ -293,11 +334,14 @@ namespace Admin_Panel_Hotel
                 emailTextBox.Name = $"EmailTextBox{EmailsCount}";
                 EmailsPanel.Controls.Add(emailTextBox);
 
-                Functions.SetWaterMark(emailNameTextBox, "Имя электронной почты");
-                Functions.SetWaterMark(emailTextBox, "Электронная почта заказчика");
+                Functions.SetWaterMarkTextBox(emailNameTextBox, "Имя электронной почты");
+                Functions.SetWaterMarkTextBox(emailTextBox, "Электронная почта заказчика");
 
                 EmailNamesErrorProvider.SetError(emailNameTextBox, "* - обязательное поле");
                 EmailsErrorProvider.SetError(emailTextBox, "* - обязательное поле");
+
+                emailNameTextBox.Leave += new EventHandler(EmailNameTextBox_Leave);
+                emailTextBox.Leave += new EventHandler(EmailTextBox_Leave);
 
                 EmailsCount++;
             }
