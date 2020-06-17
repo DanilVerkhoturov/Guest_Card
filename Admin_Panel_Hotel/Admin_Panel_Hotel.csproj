@@ -307,8 +307,6 @@
     <None Include="Resources\question_icon-icons.com_69315.png" />
     <Content Include="Resources\question_icon.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources11\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

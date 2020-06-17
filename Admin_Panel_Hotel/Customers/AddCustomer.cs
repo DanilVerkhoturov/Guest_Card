@@ -7,11 +7,11 @@ namespace Admin_Panel_Hotel
 {
     public partial class AddCustomer : Form
     {
+        private static int EmailsCount = 1;
+
         public AddCustomer()
         {
             InitializeComponent();
-
-            Functions.NewlineProcessing(EmailsDataGridView, new string[] { "1", "Введите имя", "Введите электронную почту" });
 
             OpenCustomerInfoPanel();
 
@@ -33,6 +33,8 @@ namespace Admin_Panel_Hotel
             Functions.SetWaterMark(BuildTextBox, "Строение");
             Functions.SetWaterMark(RoomCountTextBox, "Количество комнат");
             Functions.SetWaterMark(BedsCountTextBox, "Количество мест");
+            Functions.SetWaterMark(EmailNameTextBox0, "Имя электронной почты заказчика");
+            Functions.SetWaterMark(EmailTextBox0, "Электронная почта заказчика");
 
             // Установка ограничений для текстовых полей.
             Functions.OnlyNumbersInTextBox(INNTextBox);
@@ -46,10 +48,11 @@ namespace Admin_Panel_Hotel
             ErrorProvider.SetError(ContractNumberTextBox, "* - обязательное поле");
             ErrorProvider.SetError(ToContractTime_Customer_DateTimePicker, "* - обязательное поле");
             ErrorProvider.SetError(FromContractTime_Customer_DateTimePicker, "* - обязательное поле");
-            //ErrorProvider.SetError(EmailsPanel, "* - обязательное поле");
             ErrorProvider.SetError(LocationNameTextBox, "* - обязательное поле");
             ErrorProvider.SetError(RoomCountTextBox, "* - обязательное поле");
             ErrorProvider.SetError(BedsCountTextBox, "* - обязательное поле");
+            ErrorProvider.SetError(EmailNameTextBox0, "* - обязательное поле");
+            ErrorProvider.SetError(EmailTextBox0, "* - обязательное поле");
 
             LoadLocationsData();
         }
@@ -269,6 +272,35 @@ namespace Admin_Panel_Hotel
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             AddLocation();
+        }
+
+        private void AddEmailButton_Click(object sender, EventArgs e)
+        {
+            TextBox lastEmailNameTextBox = EmailNamesPanel.Controls[EmailNamesPanel.Controls.Count - 1] as TextBox;
+            TextBox lastEmailTextBox = EmailsPanel.Controls[EmailsPanel.Controls.Count - 1] as TextBox;
+
+            if (lastEmailNameTextBox.Text != lastEmailNameTextBox.Tag.ToString() && lastEmailTextBox.Text != lastEmailTextBox.Tag.ToString())
+            {
+                TextBox emailNameTextBox = new TextBox();
+                emailNameTextBox.Size = EmailNameTextBox0.Size;
+                emailNameTextBox.Location = new Point(0, EmailsCount * 27);
+                emailNameTextBox.Name = $"EmailNameTextBox{EmailsCount}";
+                EmailNamesPanel.Controls.Add(emailNameTextBox);
+
+                TextBox emailTextBox = new TextBox();
+                emailTextBox.Size = EmailTextBox0.Size;
+                emailTextBox.Location = new Point(0, EmailsCount * 27);
+                emailTextBox.Name = $"EmailTextBox{EmailsCount}";
+                EmailsPanel.Controls.Add(emailTextBox);
+
+                Functions.SetWaterMark(emailNameTextBox, "Имя электронной почты");
+                Functions.SetWaterMark(emailTextBox, "Электронная почта заказчика");
+
+                EmailNamesErrorProvider.SetError(emailNameTextBox, "* - обязательное поле");
+                EmailsErrorProvider.SetError(emailTextBox, "* - обязательное поле");
+
+                EmailsCount++;
+            }
         }
     }
 }
