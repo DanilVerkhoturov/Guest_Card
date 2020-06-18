@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle45 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddCustomer));
             this.AddCustomerButton = new System.Windows.Forms.Button();
             this.Set2_Customer_CheckBox = new System.Windows.Forms.CheckBox();
@@ -51,11 +51,10 @@
             this.NameTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.FromContractTime_Customer_DateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.FromContractTimeDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.ToContractTime_Customer_DateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.ErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ToContractTimeDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.EmailTextBox0 = new System.Windows.Forms.TextBox();
             this.EmailNameTextBox0 = new System.Windows.Forms.TextBox();
             this.CustomerInfoNextButton = new System.Windows.Forms.Button();
@@ -77,12 +76,11 @@
             this.LocationNameTextBox = new System.Windows.Forms.TextBox();
             this.CustomerInfoPanel = new System.Windows.Forms.Panel();
             this.EmailsPanel = new System.Windows.Forms.Panel();
-            this.EmailNamesPanel = new System.Windows.Forms.Panel();
             this.AddEmailButton = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.AddCustomerLocationPanel = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.AddLocationPictureBox = new System.Windows.Forms.PictureBox();
             this.LocationsDataGridView = new System.Windows.Forms.DataGridView();
             this.Num = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LocationName = new System.Windows.Forms.DataGridViewLinkColumn();
@@ -95,17 +93,29 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.EmailNamesErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.EmailsErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
+            this.NameErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ContractNumberErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ToContractTimeErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.FromContractTimeErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.LocationNameErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.RoomCountErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.BedsCountErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.CustomerInfoPanel.SuspendLayout();
             this.EmailsPanel.SuspendLayout();
-            this.EmailNamesPanel.SuspendLayout();
             this.AddCustomerLocationPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AddLocationPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LocationsDataGridView)).BeginInit();
             this.CardPropertiesPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EmailNamesErrorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EmailsErrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NameErrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ContractNumberErrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ToContractTimeErrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FromContractTimeErrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LocationNameErrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RoomCountErrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BedsCountErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // AddCustomerButton
@@ -225,11 +235,11 @@
             this.ContractNumberTextBox.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ContractNumberTextBox.Location = new System.Drawing.Point(9, 166);
             this.ContractNumberTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ContractNumberTextBox.Multiline = true;
             this.ContractNumberTextBox.Name = "ContractNumberTextBox";
-            this.ContractNumberTextBox.Size = new System.Drawing.Size(480, 22);
+            this.ContractNumberTextBox.Size = new System.Drawing.Size(480, 23);
             this.ContractNumberTextBox.TabIndex = 27;
             this.ContractNumberTextBox.Tag = "";
+            this.ContractNumberTextBox.TextChanged += new System.EventHandler(this.ContractNumberTextBox_TextChanged);
             // 
             // OGRNTextBox
             // 
@@ -239,9 +249,8 @@
             this.OGRNTextBox.Location = new System.Drawing.Point(9, 136);
             this.OGRNTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.OGRNTextBox.MaxLength = 20;
-            this.OGRNTextBox.Multiline = true;
             this.OGRNTextBox.Name = "OGRNTextBox";
-            this.OGRNTextBox.Size = new System.Drawing.Size(480, 22);
+            this.OGRNTextBox.Size = new System.Drawing.Size(480, 23);
             this.OGRNTextBox.TabIndex = 25;
             this.OGRNTextBox.Tag = "";
             // 
@@ -253,9 +262,8 @@
             this.INNTextBox.Location = new System.Drawing.Point(9, 107);
             this.INNTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.INNTextBox.MaxLength = 20;
-            this.INNTextBox.Multiline = true;
             this.INNTextBox.Name = "INNTextBox";
-            this.INNTextBox.Size = new System.Drawing.Size(480, 22);
+            this.INNTextBox.Size = new System.Drawing.Size(480, 23);
             this.INNTextBox.TabIndex = 24;
             this.INNTextBox.Tag = "";
             // 
@@ -266,9 +274,8 @@
             this.AddressTextBox.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.AddressTextBox.Location = new System.Drawing.Point(9, 78);
             this.AddressTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.AddressTextBox.Multiline = true;
             this.AddressTextBox.Name = "AddressTextBox";
-            this.AddressTextBox.Size = new System.Drawing.Size(480, 22);
+            this.AddressTextBox.Size = new System.Drawing.Size(480, 23);
             this.AddressTextBox.TabIndex = 23;
             this.AddressTextBox.Tag = "";
             // 
@@ -277,14 +284,14 @@
             this.NameTextBox.BackColor = System.Drawing.Color.White;
             this.NameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.NameTextBox.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.NameTextBox.Location = new System.Drawing.Point(9, 48);
+            this.NameTextBox.Location = new System.Drawing.Point(9, 47);
             this.NameTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.NameTextBox.MaxLength = 300;
-            this.NameTextBox.Multiline = true;
             this.NameTextBox.Name = "NameTextBox";
-            this.NameTextBox.Size = new System.Drawing.Size(480, 22);
+            this.NameTextBox.Size = new System.Drawing.Size(480, 23);
             this.NameTextBox.TabIndex = 22;
             this.NameTextBox.Tag = "";
+            this.NameTextBox.TextChanged += new System.EventHandler(this.NameTextBox_TextChanged);
             // 
             // label1
             // 
@@ -307,19 +314,21 @@
             this.label3.TabIndex = 33;
             this.label3.Text = "Срок договора:";
             // 
-            // FromContractTime_Customer_DateTimePicker
+            // FromContractTimeDateTimePicker
             // 
-            this.FromContractTime_Customer_DateTimePicker.CalendarForeColor = System.Drawing.Color.Black;
-            this.FromContractTime_Customer_DateTimePicker.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.FromContractTime_Customer_DateTimePicker.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.FromContractTime_Customer_DateTimePicker.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.FromContractTime_Customer_DateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.FromContractTime_Customer_DateTimePicker.Location = new System.Drawing.Point(144, 196);
-            this.FromContractTime_Customer_DateTimePicker.Margin = new System.Windows.Forms.Padding(3, 4, 5, 4);
-            this.FromContractTime_Customer_DateTimePicker.Name = "FromContractTime_Customer_DateTimePicker";
-            this.FromContractTime_Customer_DateTimePicker.Size = new System.Drawing.Size(125, 23);
-            this.FromContractTime_Customer_DateTimePicker.TabIndex = 34;
-            this.FromContractTime_Customer_DateTimePicker.Value = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
+            this.FromContractTimeDateTimePicker.CalendarForeColor = System.Drawing.Color.Black;
+            this.FromContractTimeDateTimePicker.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.FromContractTimeDateTimePicker.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.FromContractTimeDateTimePicker.CustomFormat = "Введите дату";
+            this.FromContractTimeDateTimePicker.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.FromContractTimeDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.FromContractTimeDateTimePicker.Location = new System.Drawing.Point(144, 196);
+            this.FromContractTimeDateTimePicker.Margin = new System.Windows.Forms.Padding(3, 4, 5, 4);
+            this.FromContractTimeDateTimePicker.Name = "FromContractTimeDateTimePicker";
+            this.FromContractTimeDateTimePicker.Size = new System.Drawing.Size(128, 23);
+            this.FromContractTimeDateTimePicker.TabIndex = 34;
+            this.FromContractTimeDateTimePicker.Value = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.FromContractTimeDateTimePicker.Leave += new System.EventHandler(this.FromContractTimeDateTimePicker_Leave);
             // 
             // label4
             // 
@@ -341,29 +350,27 @@
             this.label5.TabIndex = 37;
             this.label5.Text = "До:";
             // 
-            // ToContractTime_Customer_DateTimePicker
+            // ToContractTimeDateTimePicker
             // 
-            this.ToContractTime_Customer_DateTimePicker.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ToContractTime_Customer_DateTimePicker.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ToContractTime_Customer_DateTimePicker.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ToContractTime_Customer_DateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.ToContractTime_Customer_DateTimePicker.Location = new System.Drawing.Point(323, 196);
-            this.ToContractTime_Customer_DateTimePicker.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ToContractTime_Customer_DateTimePicker.Name = "ToContractTime_Customer_DateTimePicker";
-            this.ToContractTime_Customer_DateTimePicker.Size = new System.Drawing.Size(124, 23);
-            this.ToContractTime_Customer_DateTimePicker.TabIndex = 36;
-            this.ToContractTime_Customer_DateTimePicker.Value = new System.DateTime(2020, 1, 2, 0, 0, 0, 0);
-            // 
-            // ErrorProvider
-            // 
-            this.ErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
-            this.ErrorProvider.ContainerControl = this;
+            this.ToContractTimeDateTimePicker.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ToContractTimeDateTimePicker.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ToContractTimeDateTimePicker.CustomFormat = "Введите дату";
+            this.ToContractTimeDateTimePicker.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ToContractTimeDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.ToContractTimeDateTimePicker.Location = new System.Drawing.Point(323, 196);
+            this.ToContractTimeDateTimePicker.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ToContractTimeDateTimePicker.MinDate = new System.DateTime(1753, 1, 2, 0, 0, 0, 0);
+            this.ToContractTimeDateTimePicker.Name = "ToContractTimeDateTimePicker";
+            this.ToContractTimeDateTimePicker.Size = new System.Drawing.Size(127, 23);
+            this.ToContractTimeDateTimePicker.TabIndex = 36;
+            this.ToContractTimeDateTimePicker.Value = new System.DateTime(1753, 1, 2, 0, 0, 0, 0);
+            this.ToContractTimeDateTimePicker.Leave += new System.EventHandler(this.ToContractTimeDateTimePicker_Leave);
             // 
             // EmailTextBox0
             // 
-            this.EmailTextBox0.Location = new System.Drawing.Point(0, 0);
+            this.EmailTextBox0.Location = new System.Drawing.Point(262, 0);
             this.EmailTextBox0.Name = "EmailTextBox0";
-            this.EmailTextBox0.Size = new System.Drawing.Size(220, 23);
+            this.EmailTextBox0.Size = new System.Drawing.Size(218, 23);
             this.EmailTextBox0.TabIndex = 0;
             // 
             // EmailNameTextBox0
@@ -394,7 +401,7 @@
             this.BedsCountTextBox.BackColor = System.Drawing.Color.White;
             this.BedsCountTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.BedsCountTextBox.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.BedsCountTextBox.Location = new System.Drawing.Point(215, 247);
+            this.BedsCountTextBox.Location = new System.Drawing.Point(215, 251);
             this.BedsCountTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BedsCountTextBox.Name = "BedsCountTextBox";
             this.BedsCountTextBox.Size = new System.Drawing.Size(184, 23);
@@ -406,7 +413,7 @@
             this.RoomCountTextBox.BackColor = System.Drawing.Color.White;
             this.RoomCountTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RoomCountTextBox.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.RoomCountTextBox.Location = new System.Drawing.Point(6, 247);
+            this.RoomCountTextBox.Location = new System.Drawing.Point(6, 251);
             this.RoomCountTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.RoomCountTextBox.Name = "RoomCountTextBox";
             this.RoomCountTextBox.Size = new System.Drawing.Size(191, 23);
@@ -439,7 +446,7 @@
             this.AddLocationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddLocationButton.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.AddLocationButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AddLocationButton.Location = new System.Drawing.Point(11, 304);
+            this.AddLocationButton.Location = new System.Drawing.Point(10, 305);
             this.AddLocationButton.Name = "AddLocationButton";
             this.AddLocationButton.Size = new System.Drawing.Size(286, 23);
             this.AddLocationButton.TabIndex = 42;
@@ -452,7 +459,7 @@
             this.CardCountTextBox.BackColor = System.Drawing.Color.White;
             this.CardCountTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.CardCountTextBox.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CardCountTextBox.Location = new System.Drawing.Point(203, 278);
+            this.CardCountTextBox.Location = new System.Drawing.Point(203, 282);
             this.CardCountTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.CardCountTextBox.Name = "CardCountTextBox";
             this.CardCountTextBox.Size = new System.Drawing.Size(196, 16);
@@ -462,7 +469,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.Location = new System.Drawing.Point(8, 278);
+            this.label7.Location = new System.Drawing.Point(6, 282);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(194, 15);
             this.label7.TabIndex = 40;
@@ -483,7 +490,7 @@
             this.BuildTextBox.BackColor = System.Drawing.Color.White;
             this.BuildTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.BuildTextBox.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.BuildTextBox.Location = new System.Drawing.Point(280, 219);
+            this.BuildTextBox.Location = new System.Drawing.Point(280, 220);
             this.BuildTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BuildTextBox.Name = "BuildTextBox";
             this.BuildTextBox.Size = new System.Drawing.Size(119, 23);
@@ -494,7 +501,7 @@
             this.CorpsTextBox.BackColor = System.Drawing.Color.White;
             this.CorpsTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CorpsTextBox.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CorpsTextBox.Location = new System.Drawing.Point(144, 219);
+            this.CorpsTextBox.Location = new System.Drawing.Point(144, 220);
             this.CorpsTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.CorpsTextBox.Name = "CorpsTextBox";
             this.CorpsTextBox.Size = new System.Drawing.Size(119, 23);
@@ -505,7 +512,7 @@
             this.HouseTextBox.BackColor = System.Drawing.Color.White;
             this.HouseTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.HouseTextBox.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.HouseTextBox.Location = new System.Drawing.Point(6, 218);
+            this.HouseTextBox.Location = new System.Drawing.Point(6, 220);
             this.HouseTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HouseTextBox.Name = "HouseTextBox";
             this.HouseTextBox.Size = new System.Drawing.Size(119, 23);
@@ -573,7 +580,6 @@
             this.LocationNameTextBox.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.LocationNameTextBox.Location = new System.Drawing.Point(6, 41);
             this.LocationNameTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.LocationNameTextBox.Multiline = true;
             this.LocationNameTextBox.Name = "LocationNameTextBox";
             this.LocationNameTextBox.Size = new System.Drawing.Size(393, 23);
             this.LocationNameTextBox.TabIndex = 29;
@@ -585,19 +591,18 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.CustomerInfoPanel.Controls.Add(this.EmailsPanel);
-            this.CustomerInfoPanel.Controls.Add(this.EmailNamesPanel);
             this.CustomerInfoPanel.Controls.Add(this.AddEmailButton);
             this.CustomerInfoPanel.Controls.Add(this.label8);
             this.CustomerInfoPanel.Controls.Add(this.CustomerInfoNextButton);
             this.CustomerInfoPanel.Controls.Add(this.NameTextBox);
             this.CustomerInfoPanel.Controls.Add(this.label3);
             this.CustomerInfoPanel.Controls.Add(this.AddressTextBox);
-            this.CustomerInfoPanel.Controls.Add(this.FromContractTime_Customer_DateTimePicker);
+            this.CustomerInfoPanel.Controls.Add(this.FromContractTimeDateTimePicker);
             this.CustomerInfoPanel.Controls.Add(this.label5);
             this.CustomerInfoPanel.Controls.Add(this.ContractNumberTextBox);
             this.CustomerInfoPanel.Controls.Add(this.INNTextBox);
             this.CustomerInfoPanel.Controls.Add(this.label4);
-            this.CustomerInfoPanel.Controls.Add(this.ToContractTime_Customer_DateTimePicker);
+            this.CustomerInfoPanel.Controls.Add(this.ToContractTimeDateTimePicker);
             this.CustomerInfoPanel.Controls.Add(this.OGRNTextBox);
             this.CustomerInfoPanel.Location = new System.Drawing.Point(34, 86);
             this.CustomerInfoPanel.Name = "CustomerInfoPanel";
@@ -608,22 +613,13 @@
             // EmailsPanel
             // 
             this.EmailsPanel.AutoScroll = true;
+            this.EmailsPanel.Controls.Add(this.EmailNameTextBox0);
             this.EmailsPanel.Controls.Add(this.EmailTextBox0);
-            this.EmailsPanel.Location = new System.Drawing.Point(269, 226);
+            this.EmailsPanel.Location = new System.Drawing.Point(9, 226);
             this.EmailsPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.EmailsPanel.Name = "EmailsPanel";
-            this.EmailsPanel.Size = new System.Drawing.Size(257, 100);
+            this.EmailsPanel.Size = new System.Drawing.Size(517, 100);
             this.EmailsPanel.TabIndex = 51;
-            // 
-            // EmailNamesPanel
-            // 
-            this.EmailNamesPanel.AutoScroll = true;
-            this.EmailNamesPanel.Controls.Add(this.EmailNameTextBox0);
-            this.EmailNamesPanel.Location = new System.Drawing.Point(9, 226);
-            this.EmailNamesPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.EmailNamesPanel.Name = "EmailNamesPanel";
-            this.EmailNamesPanel.Size = new System.Drawing.Size(254, 100);
-            this.EmailNamesPanel.TabIndex = 50;
             // 
             // AddEmailButton
             // 
@@ -658,7 +654,7 @@
             this.AddCustomerLocationPanel.Controls.Add(this.BedsCountTextBox);
             this.AddCustomerLocationPanel.Controls.Add(this.label6);
             this.AddCustomerLocationPanel.Controls.Add(this.RoomCountTextBox);
-            this.AddCustomerLocationPanel.Controls.Add(this.pictureBox1);
+            this.AddCustomerLocationPanel.Controls.Add(this.AddLocationPictureBox);
             this.AddCustomerLocationPanel.Controls.Add(this.AddLocationNextButton);
             this.AddCustomerLocationPanel.Controls.Add(this.LocationNameTextBox);
             this.AddCustomerLocationPanel.Controls.Add(this.AddLocationButton);
@@ -689,19 +685,19 @@
             this.label9.TabIndex = 46;
             this.label9.Text = "Добавить локацию заказчика";
             // 
-            // pictureBox1
+            // AddLocationPictureBox
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.GroupPlus1;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.ErrorImage = global::Admin_Panel_Hotel.Properties.Resources.GroupPlus1;
-            this.pictureBox1.Location = new System.Drawing.Point(9, 304);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(28, 23);
-            this.pictureBox1.TabIndex = 43;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.AddLocationPictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.AddLocationPictureBox.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.GroupPlus1;
+            this.AddLocationPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.AddLocationPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AddLocationPictureBox.ErrorImage = global::Admin_Panel_Hotel.Properties.Resources.GroupPlus1;
+            this.AddLocationPictureBox.Location = new System.Drawing.Point(8, 305);
+            this.AddLocationPictureBox.Name = "AddLocationPictureBox";
+            this.AddLocationPictureBox.Size = new System.Drawing.Size(28, 23);
+            this.AddLocationPictureBox.TabIndex = 43;
+            this.AddLocationPictureBox.TabStop = false;
+            this.AddLocationPictureBox.Click += new System.EventHandler(this.AddLocationPictureBox_Click);
             // 
             // LocationsDataGridView
             // 
@@ -709,58 +705,58 @@
             this.LocationsDataGridView.AllowUserToDeleteRows = false;
             this.LocationsDataGridView.AllowUserToResizeColumns = false;
             this.LocationsDataGridView.AllowUserToResizeRows = false;
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.LocationsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle41.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.LocationsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle41;
             this.LocationsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.LocationsDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.LocationsDataGridView.BackgroundColor = System.Drawing.Color.White;
             this.LocationsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.LocationsDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.LocationsDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(172)))), ((int)(((byte)(218)))));
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(172)))), ((int)(((byte)(218)))));
-            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.LocationsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle42.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(172)))), ((int)(((byte)(218)))));
+            dataGridViewCellStyle42.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle42.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle42.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(172)))), ((int)(((byte)(218)))));
+            dataGridViewCellStyle42.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle42.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.LocationsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle42;
             this.LocationsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.LocationsDataGridView.ColumnHeadersVisible = false;
             this.LocationsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Num,
             this.LocationName});
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.LocationsDataGridView.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle43.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle43.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle43.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle43.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle43.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle43.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle43.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.LocationsDataGridView.DefaultCellStyle = dataGridViewCellStyle43;
             this.LocationsDataGridView.EnableHeadersVisualStyles = false;
             this.LocationsDataGridView.Location = new System.Drawing.Point(453, 43);
             this.LocationsDataGridView.MultiSelect = false;
             this.LocationsDataGridView.Name = "LocationsDataGridView";
             this.LocationsDataGridView.ReadOnly = true;
             this.LocationsDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle24.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.LocationsDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle44.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle44.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle44.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle44.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle44.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle44.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle44.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.LocationsDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle44;
             this.LocationsDataGridView.RowHeadersVisible = false;
             this.LocationsDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle25.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle25.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle25.NullValue = null;
-            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.Color.Black;
-            this.LocationsDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle45.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle45.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle45.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle45.NullValue = null;
+            dataGridViewCellStyle45.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle45.SelectionForeColor = System.Drawing.Color.Black;
+            this.LocationsDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle45;
             this.LocationsDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.LocationsDataGridView.Size = new System.Drawing.Size(185, 254);
             this.LocationsDataGridView.TabIndex = 47;
@@ -904,6 +900,41 @@
             this.EmailsErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.EmailsErrorProvider.ContainerControl = this;
             // 
+            // NameErrorProvider
+            // 
+            this.NameErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.NameErrorProvider.ContainerControl = this;
+            // 
+            // ContractNumberErrorProvider
+            // 
+            this.ContractNumberErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.ContractNumberErrorProvider.ContainerControl = this;
+            // 
+            // ToContractTimeErrorProvider
+            // 
+            this.ToContractTimeErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.ToContractTimeErrorProvider.ContainerControl = this;
+            // 
+            // FromContractTimeErrorProvider
+            // 
+            this.FromContractTimeErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.FromContractTimeErrorProvider.ContainerControl = this;
+            // 
+            // LocationNameErrorProvider
+            // 
+            this.LocationNameErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.LocationNameErrorProvider.ContainerControl = this;
+            // 
+            // RoomCountErrorProvider
+            // 
+            this.RoomCountErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.RoomCountErrorProvider.ContainerControl = this;
+            // 
+            // BedsCountErrorProvider
+            // 
+            this.BedsCountErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.BedsCountErrorProvider.ContainerControl = this;
+            // 
             // AddCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -915,30 +946,34 @@
             this.Controls.Add(this.AddLocationsButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.CustomerInfoPanel);
             this.Controls.Add(this.AddCustomerLocationPanel);
             this.Controls.Add(this.CardPropertiesPanel);
+            this.Controls.Add(this.CustomerInfoPanel);
             this.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "AddCustomer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Добавление заказчика";
-            ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).EndInit();
             this.CustomerInfoPanel.ResumeLayout(false);
             this.CustomerInfoPanel.PerformLayout();
             this.EmailsPanel.ResumeLayout(false);
             this.EmailsPanel.PerformLayout();
-            this.EmailNamesPanel.ResumeLayout(false);
-            this.EmailNamesPanel.PerformLayout();
             this.AddCustomerLocationPanel.ResumeLayout(false);
             this.AddCustomerLocationPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AddLocationPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LocationsDataGridView)).EndInit();
             this.CardPropertiesPanel.ResumeLayout(false);
             this.CardPropertiesPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EmailNamesErrorProvider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EmailsErrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NameErrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ContractNumberErrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ToContractTimeErrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FromContractTimeErrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LocationNameErrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RoomCountErrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BedsCountErrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -961,11 +996,10 @@
         private System.Windows.Forms.TextBox NameTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker FromContractTime_Customer_DateTimePicker;
+        private System.Windows.Forms.DateTimePicker FromContractTimeDateTimePicker;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker ToContractTime_Customer_DateTimePicker;
-        private System.Windows.Forms.ErrorProvider ErrorProvider;
+        private System.Windows.Forms.DateTimePicker ToContractTimeDateTimePicker;
         private System.Windows.Forms.TextBox LocationNameTextBox;
         private System.Windows.Forms.TextBox CorpsTextBox;
         private System.Windows.Forms.TextBox HouseTextBox;
@@ -979,7 +1013,7 @@
         private System.Windows.Forms.TextBox CardCountTextBox;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button AddLocationButton;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox AddLocationPictureBox;
         private System.Windows.Forms.Button CustomerInfoNextButton;
         private System.Windows.Forms.Button AddLocationNextButton;
         private System.Windows.Forms.TextBox BedsCountTextBox;
@@ -1001,9 +1035,15 @@
         private System.Windows.Forms.Button Set2HelpButton;
         private System.Windows.Forms.Panel EmailsPanel;
         private System.Windows.Forms.TextBox EmailTextBox0;
-        private System.Windows.Forms.Panel EmailNamesPanel;
         private System.Windows.Forms.TextBox EmailNameTextBox0;
         private System.Windows.Forms.ErrorProvider EmailNamesErrorProvider;
         private System.Windows.Forms.ErrorProvider EmailsErrorProvider;
+        private System.Windows.Forms.ErrorProvider NameErrorProvider;
+        private System.Windows.Forms.ErrorProvider ContractNumberErrorProvider;
+        private System.Windows.Forms.ErrorProvider ToContractTimeErrorProvider;
+        private System.Windows.Forms.ErrorProvider FromContractTimeErrorProvider;
+        private System.Windows.Forms.ErrorProvider LocationNameErrorProvider;
+        private System.Windows.Forms.ErrorProvider RoomCountErrorProvider;
+        private System.Windows.Forms.ErrorProvider BedsCountErrorProvider;
     }
 }

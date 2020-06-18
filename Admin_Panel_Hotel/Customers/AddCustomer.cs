@@ -16,25 +16,28 @@ namespace Admin_Panel_Hotel
             OpenCustomerInfoPanel();
 
             // Установка подсказок в текстовых полях.
-            Functions.SetWaterMarkTextBox(NameTextBox, "Наименование организации");
-            Functions.SetWaterMarkTextBox(AddressTextBox, "Адрес");
-            Functions.SetWaterMarkTextBox(INNTextBox, "ИНН");
-            Functions.SetWaterMarkTextBox(OGRNTextBox, "ОГРН");
-            Functions.SetWaterMarkTextBox(ContractNumberTextBox, "Номер договора");
-            Functions.SetWaterMarkTextBox(LocationNameTextBox, "Название локации");
-            //Functions.SetWaterMark(EmailTextBox, "Электронная почта заказчика");
-            Functions.SetWaterMarkTextBox(RegionComboBox, "Регион");
-            Functions.SetWaterMarkTextBox(StateComboBox, "Область");
-            Functions.SetWaterMarkTextBox(CityComboBox, "Город");
-            Functions.SetWaterMarkTextBox(StreetTypeComboBox, "Тип улицы");
-            Functions.SetWaterMarkTextBox(StreetNameComboBox, "Улица");
-            Functions.SetWaterMarkTextBox(HouseTextBox, "Дом");
-            Functions.SetWaterMarkTextBox(CorpsTextBox, "Корпус");
-            Functions.SetWaterMarkTextBox(BuildTextBox, "Строение");
-            Functions.SetWaterMarkTextBox(RoomCountTextBox, "Количество комнат");
-            Functions.SetWaterMarkTextBox(BedsCountTextBox, "Количество мест");
-            Functions.SetWaterMarkTextBox(EmailNameTextBox0, "Имя электронной почты заказчика");
-            Functions.SetWaterMarkTextBox(EmailTextBox0, "Электронная почта заказчика");
+            Functions.SetPlaceholderTextBox(NameTextBox, "Наименование организации");
+            Functions.SetPlaceholderTextBox(AddressTextBox, "Адрес");
+            Functions.SetPlaceholderTextBox(INNTextBox, "ИНН");
+            Functions.SetPlaceholderTextBox(OGRNTextBox, "ОГРН");
+            Functions.SetPlaceholderTextBox(ContractNumberTextBox, "Номер договора");
+            Functions.SetPlaceholderTextBox(LocationNameTextBox, "Название локации");
+            Functions.SetPlaceholderTextBox(RegionComboBox, "Регион");
+            Functions.SetPlaceholderTextBox(StateComboBox, "Область");
+            Functions.SetPlaceholderTextBox(CityComboBox, "Город");
+            Functions.SetPlaceholderTextBox(StreetTypeComboBox, "Тип улицы");
+            Functions.SetPlaceholderTextBox(StreetNameComboBox, "Улица");
+            Functions.SetPlaceholderTextBox(HouseTextBox, "Дом");
+            Functions.SetPlaceholderTextBox(CorpsTextBox, "Корпус");
+            Functions.SetPlaceholderTextBox(BuildTextBox, "Строение");
+            Functions.SetPlaceholderTextBox(RoomCountTextBox, "Количество комнат");
+            Functions.SetPlaceholderTextBox(BedsCountTextBox, "Количество мест");
+            Functions.SetPlaceholderTextBox(EmailNameTextBox0, "Имя электронной почты заказчика");
+            Functions.SetPlaceholderTextBox(EmailTextBox0, "Электронная почта заказчика");
+
+            // Установка подсказки для полей с датами.
+            Functions.SetPlaceholderDateTimePicker(FromContractTimeDateTimePicker, "Введите дату");
+            Functions.SetPlaceholderDateTimePicker(ToContractTimeDateTimePicker, "Введите дату");
 
             // Установка ограничений для текстовых полей.
             Functions.OnlyNumbersInTextBox(INNTextBox);
@@ -44,16 +47,17 @@ namespace Admin_Panel_Hotel
             Functions.OnlyNumbersInTextBox(RoomCountTextBox);
 
             // Установка подсказок обязательных полей.
-            ErrorProvider.SetError(NameTextBox, "* - обязательное поле");
-            ErrorProvider.SetError(ContractNumberTextBox, "* - обязательное поле");
-            ErrorProvider.SetError(ToContractTime_Customer_DateTimePicker, "* - обязательное поле");
-            ErrorProvider.SetError(FromContractTime_Customer_DateTimePicker, "* - обязательное поле");
-            ErrorProvider.SetError(LocationNameTextBox, "* - обязательное поле");
-            ErrorProvider.SetError(RoomCountTextBox, "* - обязательное поле");
-            ErrorProvider.SetError(BedsCountTextBox, "* - обязательное поле");
+            NameErrorProvider.SetError(NameTextBox, "* - обязательное поле");
+            ContractNumberErrorProvider.SetError(ContractNumberTextBox, "* - обязательное поле");
+            ToContractTimeErrorProvider.SetError(ToContractTimeDateTimePicker, "* - обязательное поле");
+            FromContractTimeErrorProvider.SetError(FromContractTimeDateTimePicker, "* - обязательное поле");
+            LocationNameErrorProvider.SetError(LocationNameTextBox, "* - обязательное поле");
+            RoomCountErrorProvider.SetError(RoomCountTextBox, "* - обязательное поле");
+            BedsCountErrorProvider.SetError(BedsCountTextBox, "* - обязательное поле");
             EmailNamesErrorProvider.SetError(EmailNameTextBox0, "* - обязательное поле");
             EmailsErrorProvider.SetError(EmailTextBox0, "* - обязательное поле");
 
+            // Установка обработки событий окончания редактирования текстовых полей.
             EmailNameTextBox0.Leave += new EventHandler(EmailNameTextBox_Leave);
             EmailTextBox0.Leave += new EventHandler(EmailTextBox_Leave);
 
@@ -68,16 +72,16 @@ namespace Admin_Panel_Hotel
         private void EmailTextBox_Leave(object sender, EventArgs e)
         {
             TextBox textBox = sender as TextBox;
-            TextBox lastTextBox = EmailsPanel.Controls[EmailsPanel.Controls.Count - 1] as TextBox;
 
-            
-            if (lastTextBox.Name == textBox.Name && textBox.Text.Trim().Length > 0 && textBox.Text != textBox.Tag.ToString()) // Если введёно имя эл.почты.
+            if (RegexUtilities.IsValidEmail(textBox.Text.Trim()))
             {
-                // TODO: Сделать проверку эл.почты по регулярным выражениям.
-                if (true)
-                {
-                    EmailsErrorProvider.Clear();
-                }
+                EmailsErrorProvider.Clear();
+            }
+            else
+            {
+                MessageBox.Show($"Электронная почта \"{textBox.Text}\" введена некорректно!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                EmailsErrorProvider.SetError(textBox, "* - обязательное поле");
+                textBox.Focus();
             }
         }
 
@@ -89,11 +93,14 @@ namespace Admin_Panel_Hotel
         private void EmailNameTextBox_Leave(object sender, EventArgs e)
         {
             TextBox textBox = sender as TextBox;
-            TextBox lastTextBox = EmailNamesPanel.Controls[EmailNamesPanel.Controls.Count - 1] as TextBox;
 
-            if (lastTextBox.Name == textBox.Name && textBox.Text.Trim().Length > 0 && textBox.Text != textBox.Tag.ToString()) // Если введёно имя эл.почты в последнее поле.
+            if (textBox.Text.Trim().Length > 0 && textBox.Text != textBox.Tag.ToString()) // Если введёно имя эл.почты в последнее поле.
             {
                 EmailNamesErrorProvider.Clear();
+            }
+            else
+            {
+                EmailNamesErrorProvider.SetError(textBox, "* - обязательное поле");
             }
         }
 
@@ -166,7 +173,6 @@ namespace Admin_Panel_Hotel
 
         private void AddCustomerButton_Click(object sender, EventArgs e)
         {
-            ErrorProvider.Clear();
             CheckCustomerAddInfo();
             // TODO: Добавление заказчика в базу данных.
         }
@@ -179,20 +185,14 @@ namespace Admin_Panel_Hotel
         {
             // TODO: Отредактировать условие в зависимости от таблицы в БД.
             if (NameTextBox.TextLength > 0 && NameTextBox.Text != "Наименование организации"
-                            && AddressTextBox.TextLength > 0 && AddressTextBox.Text != "Адрес"
-                            && INNTextBox.TextLength > 0 && INNTextBox.Text != "ИНН"
-                            && OGRNTextBox.TextLength > 0 && OGRNTextBox.Text != "ОГРН"
-                            && ContractNumberTextBox.TextLength > 0 && ContractNumberTextBox.Text != "Номер договора"
-                            && LocationNameTextBox.TextLength > 0 && LocationNameTextBox.Text != "Локация"
-                            /*&& EmailTextBox.TextLength > 0 && EmailTextBox.Text != "Электронная почта заказчика"*/) // Если все обязательные поля заполнены корректно.
+                && ContractNumberTextBox.TextLength > 0 && ContractNumberTextBox.Text != "Номер договора"
+                && LocationNameTextBox.TextLength > 0 && LocationNameTextBox.Text != "Локация") // Если все обязательные поля заполнены корректно.
             {
                 // TODO: Проверка корректности эл.почты и срока договора.
                 return true;
             }
             else // Если какое-либо или все обязательные поля незаполнены.
             {
-                ErrorProvider.SetError(NameTextBox, "Введите наименование организации!");
-                ErrorProvider.SetError(ContractNumberTextBox, "Введите номер договора!");
                 return false;
             }
         }
@@ -207,8 +207,20 @@ namespace Admin_Panel_Hotel
 
         private void CustomerInfoNextButton_Click(object sender, EventArgs e)
         {
-            // TODO: Сделать проверку заполнения всех обязательных полей.
-            OpenAddCustomerLocationPanel();
+            // NOTCHECK: Сделать проверку заполнения всех обязательных полей на первом шаге.
+
+            TextBox lastEmailNameTextBox = EmailsPanel.Controls[EmailsPanel.Controls.Count - 2] as TextBox;
+            TextBox lastEmailTextBox = EmailsPanel.Controls[EmailsPanel.Controls.Count - 1] as TextBox;
+
+            if (NameTextBox.TextLength > 0 && NameTextBox.Text.Trim() != NameTextBox.Tag.ToString()
+                && ContractNumberTextBox.TextLength > 0 && ContractNumberTextBox.Text.Trim() != ContractNumberTextBox.Tag.ToString()
+                && FromContractTimeDateTimePicker.Format == DateTimePickerFormat.Short
+                && ToContractTimeDateTimePicker.Format == DateTimePickerFormat.Short
+                && lastEmailNameTextBox.TextLength > 0 && lastEmailNameTextBox.Text.Trim() != lastEmailNameTextBox.Tag.ToString()
+                && RegexUtilities.IsValidEmail(lastEmailTextBox.Text.Trim())) // Проверка заполнения всех обязательных полей на первом шаге.
+            {
+                OpenAddCustomerLocationPanel();
+            }
         }
 
         /// <summary>
@@ -232,7 +244,11 @@ namespace Admin_Panel_Hotel
 
         private void AddLocationNextButton_Click(object sender, EventArgs e)
         {
-            OpenCardPropertiesPanel();
+            // TODO: Сделать проверку заполнения обязательных полей на текущем шаге.
+            if (true)
+            {
+                OpenCardPropertiesPanel();
+            }
         }
 
         /// <summary>
@@ -275,7 +291,11 @@ namespace Admin_Panel_Hotel
 
         private void AddLocationButton_Click(object sender, EventArgs e)
         {
-            AddLocation();
+            // TODO: Реализовать проверку заполнения обязательных полей у локации.
+            if (true)
+            {
+                AddLocation();
+            }
         }
 
         private void AddLocation()
@@ -310,32 +330,36 @@ namespace Admin_Panel_Hotel
             MessageBox.Show("В \"Комплект-2\" входит:\nПростыня, подушка, одеяло.", "Комплект-2", MessageBoxButtons.OK, MessageBoxIcon.Question);
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void AddLocationPictureBox_Click(object sender, EventArgs e)
         {
-            AddLocation();
+            // TODO: Реализовать проверку заполнения обязательных полей у локации.
+            if (true)
+            {
+                AddLocation();
+            }
         }
 
         private void AddEmailButton_Click(object sender, EventArgs e)
         {
-            TextBox lastEmailNameTextBox = EmailNamesPanel.Controls[EmailNamesPanel.Controls.Count - 1] as TextBox;
+            TextBox lastEmailNameTextBox = EmailsPanel.Controls[EmailsPanel.Controls.Count - 2] as TextBox;
             TextBox lastEmailTextBox = EmailsPanel.Controls[EmailsPanel.Controls.Count - 1] as TextBox;
 
             if (lastEmailNameTextBox.Text != lastEmailNameTextBox.Tag.ToString() && lastEmailTextBox.Text != lastEmailTextBox.Tag.ToString())
             {
                 TextBox emailNameTextBox = new TextBox();
                 emailNameTextBox.Size = EmailNameTextBox0.Size;
-                emailNameTextBox.Location = new Point(0, EmailsCount * 27);
+                emailNameTextBox.Location = new Point(0, lastEmailNameTextBox.Location.Y + 30);
                 emailNameTextBox.Name = $"EmailNameTextBox{EmailsCount}";
-                EmailNamesPanel.Controls.Add(emailNameTextBox);
+                EmailsPanel.Controls.Add(emailNameTextBox);
 
                 TextBox emailTextBox = new TextBox();
                 emailTextBox.Size = EmailTextBox0.Size;
-                emailTextBox.Location = new Point(0, EmailsCount * 27);
+                emailTextBox.Location = new Point(lastEmailTextBox.Location.X, lastEmailTextBox.Location.Y + 30);
                 emailTextBox.Name = $"EmailTextBox{EmailsCount}";
                 EmailsPanel.Controls.Add(emailTextBox);
 
-                Functions.SetWaterMarkTextBox(emailNameTextBox, "Имя электронной почты");
-                Functions.SetWaterMarkTextBox(emailTextBox, "Электронная почта заказчика");
+                Functions.SetPlaceholderTextBox(emailNameTextBox, "Имя электронной почты");
+                Functions.SetPlaceholderTextBox(emailTextBox, "Электронная почта заказчика");
 
                 EmailNamesErrorProvider.SetError(emailNameTextBox, "* - обязательное поле");
                 EmailsErrorProvider.SetError(emailTextBox, "* - обязательное поле");
@@ -344,6 +368,54 @@ namespace Admin_Panel_Hotel
                 emailTextBox.Leave += new EventHandler(EmailTextBox_Leave);
 
                 EmailsCount++;
+            }
+        }
+
+        private void NameTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (NameTextBox.Text.Trim().Length > 0 && NameTextBox.Text != NameTextBox.Tag.ToString()) // Если в текстовом поле есть текст, который не является подсказкой.
+            {
+                NameErrorProvider.Clear();
+            }
+            else
+            {
+                NameErrorProvider.SetError(NameTextBox, "* - обязательное поле");
+            }
+        }
+
+        private void ContractNumberTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (ContractNumberTextBox.Text.Trim().Length > 0 && ContractNumberTextBox.Text != ContractNumberTextBox.Tag.ToString()) // Если в текстовом поле есть текст, который не является подсказкой.
+            {
+                ContractNumberErrorProvider.Clear();
+            }
+            else
+            {
+                ContractNumberErrorProvider.SetError(ContractNumberTextBox, "* - обязательное поле");
+            }
+        }
+
+        private void FromContractTimeDateTimePicker_Leave(object sender, EventArgs e)
+        {
+            if (FromContractTimeDateTimePicker.Format == DateTimePickerFormat.Short && FromContractTimeDateTimePicker.Value != FromContractTimeDateTimePicker.MinDate) // Если в поле введена минимальная нормальная дата, то удаляем обозначение заполнения.
+            {
+                FromContractTimeErrorProvider.Clear();
+            }
+            else
+            {
+                FromContractTimeErrorProvider.SetError(FromContractTimeDateTimePicker, "* - обязательное поле");
+            }    
+        }
+
+        private void ToContractTimeDateTimePicker_Leave(object sender, EventArgs e)
+        {
+            if (ToContractTimeDateTimePicker.Format == DateTimePickerFormat.Short && ToContractTimeDateTimePicker.Value != ToContractTimeDateTimePicker.MinDate) // Если в поле введена минимальная нормальная дата, то удаляем обозначение заполнения.
+            {
+                ToContractTimeErrorProvider.Clear();
+            }
+            else
+            {
+                ToContractTimeErrorProvider.SetError(ToContractTimeDateTimePicker, "* - обязательное поле");
             }
         }
     }

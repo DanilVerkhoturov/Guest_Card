@@ -50,14 +50,60 @@ namespace Admin_Panel_Hotel
         /// Установить подсказку для текстового поля.
         /// </summary>
         /// <param name="textBox">Объект текстового поля.</param>
-        /// <param name="waterMarkText">Текст подсказки.</param>
-        public static void SetWaterMarkTextBox(Control textBox, string waterMarkText)
+        /// <param name="placeholderText">Текст подсказки.</param>
+        public static void SetPlaceholderTextBox(Control textBox, string placeholderText)
         {
             textBox.ForeColor = SystemColors.GrayText;
-            textBox.Text = waterMarkText;
-            textBox.Tag = waterMarkText;
-            textBox.Enter += new EventHandler(TextBox_Enter);
-            textBox.Leave += new EventHandler(TextBox_Leave);
+            textBox.Text = placeholderText;
+            textBox.Tag = placeholderText;
+            textBox.Enter += TextBox_Enter;
+            textBox.Leave += TextBox_Leave;
+        }
+
+        /// <summary>
+        /// Установить подсказку для поля выбора даты.
+        /// </summary>
+        /// <param name="dtp">Объект поля выбора даты.</param>
+        /// <param name="placeholderText">Текст подсказки.</param>
+        public static void SetPlaceholderDateTimePicker(DateTimePicker dtp, string placeholderText)
+        {
+            dtp.Format = DateTimePickerFormat.Custom;
+            dtp.CustomFormat = placeholderText;
+            dtp.Tag = placeholderText;
+            dtp.Enter += DateTimePicker_Enter;
+            dtp.Leave += DateTimePicker_Leave;
+        }
+
+        /// <summary>
+        /// Обработка события начала работы с датой.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private static void DateTimePicker_Enter(object sender, EventArgs e)
+        {
+            DateTimePicker dtp = sender as DateTimePicker;
+
+            if (dtp.Format == DateTimePickerFormat.Custom) // Если в поле с датой стоит подсказка, то отображаем дату.
+            {
+                dtp.Format = DateTimePickerFormat.Short;
+                dtp.Value = dtp.MinDate;
+            }
+        }
+
+        /// <summary>
+        /// Обработка события окончания работы с датой.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private static void DateTimePicker_Leave(object sender, EventArgs e)
+        {
+            DateTimePicker dtp = sender as DateTimePicker;
+
+            if (dtp.Value == dtp.MinDate) // Если в поле написана минимальная дата, то отображаем подсказку.
+            {
+                dtp.Format = DateTimePickerFormat.Custom;
+                dtp.CustomFormat = dtp.Tag.ToString();
+            }
         }
 
         /// <summary>
