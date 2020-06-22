@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle45 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddCustomer));
             this.AddCustomerButton = new System.Windows.Forms.Button();
             this.Set2_Customer_CheckBox = new System.Windows.Forms.CheckBox();
@@ -45,9 +45,6 @@
             this.AllProperties_Customer_CheckBox = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.ContractNumberTextBox = new System.Windows.Forms.TextBox();
-            this.OGRNTextBox = new System.Windows.Forms.TextBox();
-            this.INNTextBox = new System.Windows.Forms.TextBox();
-            this.AddressTextBox = new System.Windows.Forms.TextBox();
             this.NameTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -233,51 +230,13 @@
             this.ContractNumberTextBox.BackColor = System.Drawing.Color.White;
             this.ContractNumberTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ContractNumberTextBox.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ContractNumberTextBox.Location = new System.Drawing.Point(9, 166);
+            this.ContractNumberTextBox.Location = new System.Drawing.Point(9, 78);
             this.ContractNumberTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ContractNumberTextBox.Name = "ContractNumberTextBox";
             this.ContractNumberTextBox.Size = new System.Drawing.Size(480, 23);
             this.ContractNumberTextBox.TabIndex = 27;
             this.ContractNumberTextBox.Tag = "";
             this.ContractNumberTextBox.TextChanged += new System.EventHandler(this.ContractNumberTextBox_TextChanged);
-            // 
-            // OGRNTextBox
-            // 
-            this.OGRNTextBox.BackColor = System.Drawing.Color.White;
-            this.OGRNTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.OGRNTextBox.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.OGRNTextBox.Location = new System.Drawing.Point(9, 136);
-            this.OGRNTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.OGRNTextBox.MaxLength = 20;
-            this.OGRNTextBox.Name = "OGRNTextBox";
-            this.OGRNTextBox.Size = new System.Drawing.Size(480, 23);
-            this.OGRNTextBox.TabIndex = 25;
-            this.OGRNTextBox.Tag = "";
-            // 
-            // INNTextBox
-            // 
-            this.INNTextBox.BackColor = System.Drawing.Color.White;
-            this.INNTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.INNTextBox.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.INNTextBox.Location = new System.Drawing.Point(9, 107);
-            this.INNTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.INNTextBox.MaxLength = 20;
-            this.INNTextBox.Name = "INNTextBox";
-            this.INNTextBox.Size = new System.Drawing.Size(480, 23);
-            this.INNTextBox.TabIndex = 24;
-            this.INNTextBox.Tag = "";
-            // 
-            // AddressTextBox
-            // 
-            this.AddressTextBox.BackColor = System.Drawing.Color.White;
-            this.AddressTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.AddressTextBox.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.AddressTextBox.Location = new System.Drawing.Point(9, 78);
-            this.AddressTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.AddressTextBox.Name = "AddressTextBox";
-            this.AddressTextBox.Size = new System.Drawing.Size(480, 23);
-            this.AddressTextBox.TabIndex = 23;
-            this.AddressTextBox.Tag = "";
             // 
             // NameTextBox
             // 
@@ -307,7 +266,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(9, 202);
+            this.label3.Location = new System.Drawing.Point(9, 115);
             this.label3.Margin = new System.Windows.Forms.Padding(3, 0, 5, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(97, 15);
@@ -322,7 +281,7 @@
             this.FromContractTimeDateTimePicker.CustomFormat = "Введите дату";
             this.FromContractTimeDateTimePicker.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FromContractTimeDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.FromContractTimeDateTimePicker.Location = new System.Drawing.Point(144, 196);
+            this.FromContractTimeDateTimePicker.Location = new System.Drawing.Point(144, 109);
             this.FromContractTimeDateTimePicker.Margin = new System.Windows.Forms.Padding(3, 4, 5, 4);
             this.FromContractTimeDateTimePicker.Name = "FromContractTimeDateTimePicker";
             this.FromContractTimeDateTimePicker.Size = new System.Drawing.Size(128, 23);
@@ -334,7 +293,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(113, 202);
+            this.label4.Location = new System.Drawing.Point(113, 115);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(25, 15);
             this.label4.TabIndex = 35;
@@ -344,7 +303,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(290, 202);
+            this.label5.Location = new System.Drawing.Point(290, 115);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(27, 15);
             this.label5.TabIndex = 37;
@@ -357,7 +316,7 @@
             this.ToContractTimeDateTimePicker.CustomFormat = "Введите дату";
             this.ToContractTimeDateTimePicker.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ToContractTimeDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.ToContractTimeDateTimePicker.Location = new System.Drawing.Point(323, 196);
+            this.ToContractTimeDateTimePicker.Location = new System.Drawing.Point(323, 109);
             this.ToContractTimeDateTimePicker.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ToContractTimeDateTimePicker.MinDate = new System.DateTime(1753, 1, 2, 0, 0, 0, 0);
             this.ToContractTimeDateTimePicker.Name = "ToContractTimeDateTimePicker";
@@ -596,14 +555,11 @@
             this.CustomerInfoPanel.Controls.Add(this.CustomerInfoNextButton);
             this.CustomerInfoPanel.Controls.Add(this.NameTextBox);
             this.CustomerInfoPanel.Controls.Add(this.label3);
-            this.CustomerInfoPanel.Controls.Add(this.AddressTextBox);
             this.CustomerInfoPanel.Controls.Add(this.FromContractTimeDateTimePicker);
             this.CustomerInfoPanel.Controls.Add(this.label5);
             this.CustomerInfoPanel.Controls.Add(this.ContractNumberTextBox);
-            this.CustomerInfoPanel.Controls.Add(this.INNTextBox);
             this.CustomerInfoPanel.Controls.Add(this.label4);
             this.CustomerInfoPanel.Controls.Add(this.ToContractTimeDateTimePicker);
-            this.CustomerInfoPanel.Controls.Add(this.OGRNTextBox);
             this.CustomerInfoPanel.Location = new System.Drawing.Point(34, 86);
             this.CustomerInfoPanel.Name = "CustomerInfoPanel";
             this.CustomerInfoPanel.Size = new System.Drawing.Size(644, 363);
@@ -615,10 +571,10 @@
             this.EmailsPanel.AutoScroll = true;
             this.EmailsPanel.Controls.Add(this.EmailNameTextBox0);
             this.EmailsPanel.Controls.Add(this.EmailTextBox0);
-            this.EmailsPanel.Location = new System.Drawing.Point(9, 226);
+            this.EmailsPanel.Location = new System.Drawing.Point(9, 139);
             this.EmailsPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.EmailsPanel.Name = "EmailsPanel";
-            this.EmailsPanel.Size = new System.Drawing.Size(517, 100);
+            this.EmailsPanel.Size = new System.Drawing.Size(517, 177);
             this.EmailsPanel.TabIndex = 51;
             // 
             // AddEmailButton
@@ -628,7 +584,7 @@
             this.AddEmailButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.AddEmailButton.FlatAppearance.BorderSize = 0;
             this.AddEmailButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddEmailButton.Location = new System.Drawing.Point(532, 226);
+            this.AddEmailButton.Location = new System.Drawing.Point(532, 139);
             this.AddEmailButton.Name = "AddEmailButton";
             this.AddEmailButton.Size = new System.Drawing.Size(29, 23);
             this.AddEmailButton.TabIndex = 49;
@@ -705,58 +661,58 @@
             this.LocationsDataGridView.AllowUserToDeleteRows = false;
             this.LocationsDataGridView.AllowUserToResizeColumns = false;
             this.LocationsDataGridView.AllowUserToResizeRows = false;
-            dataGridViewCellStyle41.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.LocationsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle41;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.LocationsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             this.LocationsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.LocationsDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.LocationsDataGridView.BackgroundColor = System.Drawing.Color.White;
             this.LocationsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.LocationsDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.LocationsDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle42.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(172)))), ((int)(((byte)(218)))));
-            dataGridViewCellStyle42.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle42.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle42.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(172)))), ((int)(((byte)(218)))));
-            dataGridViewCellStyle42.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle42.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.LocationsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle42;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(172)))), ((int)(((byte)(218)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(172)))), ((int)(((byte)(218)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.LocationsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.LocationsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.LocationsDataGridView.ColumnHeadersVisible = false;
             this.LocationsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Num,
             this.LocationName});
-            dataGridViewCellStyle43.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle43.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle43.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle43.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle43.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle43.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle43.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.LocationsDataGridView.DefaultCellStyle = dataGridViewCellStyle43;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.LocationsDataGridView.DefaultCellStyle = dataGridViewCellStyle8;
             this.LocationsDataGridView.EnableHeadersVisualStyles = false;
             this.LocationsDataGridView.Location = new System.Drawing.Point(453, 43);
             this.LocationsDataGridView.MultiSelect = false;
             this.LocationsDataGridView.Name = "LocationsDataGridView";
             this.LocationsDataGridView.ReadOnly = true;
             this.LocationsDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle44.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle44.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle44.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle44.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle44.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle44.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle44.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.LocationsDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle44;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.LocationsDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.LocationsDataGridView.RowHeadersVisible = false;
             this.LocationsDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle45.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle45.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle45.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle45.NullValue = null;
-            dataGridViewCellStyle45.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle45.SelectionForeColor = System.Drawing.Color.Black;
-            this.LocationsDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle45;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.NullValue = null;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black;
+            this.LocationsDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.LocationsDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.LocationsDataGridView.Size = new System.Drawing.Size(185, 254);
             this.LocationsDataGridView.TabIndex = 47;
@@ -946,9 +902,9 @@
             this.Controls.Add(this.AddLocationsButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.CustomerInfoPanel);
             this.Controls.Add(this.AddCustomerLocationPanel);
             this.Controls.Add(this.CardPropertiesPanel);
-            this.Controls.Add(this.CustomerInfoPanel);
             this.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "AddCustomer";
@@ -990,9 +946,6 @@
         private System.Windows.Forms.CheckBox AllProperties_Customer_CheckBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox ContractNumberTextBox;
-        private System.Windows.Forms.TextBox OGRNTextBox;
-        private System.Windows.Forms.TextBox INNTextBox;
-        private System.Windows.Forms.TextBox AddressTextBox;
         private System.Windows.Forms.TextBox NameTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;

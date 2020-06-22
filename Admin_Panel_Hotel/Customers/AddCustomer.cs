@@ -17,9 +17,9 @@ namespace Admin_Panel_Hotel
 
             // Установка подсказок в текстовых полях.
             Functions.SetPlaceholderTextBox(NameTextBox, "Наименование организации");
-            Functions.SetPlaceholderTextBox(AddressTextBox, "Адрес");
-            Functions.SetPlaceholderTextBox(INNTextBox, "ИНН");
-            Functions.SetPlaceholderTextBox(OGRNTextBox, "ОГРН");
+            //Functions.SetPlaceholderTextBox(AddressTextBox, "Адрес");
+            //Functions.SetPlaceholderTextBox(INNTextBox, "ИНН");
+            //Functions.SetPlaceholderTextBox(OGRNTextBox, "ОГРН");
             Functions.SetPlaceholderTextBox(ContractNumberTextBox, "Номер договора");
             Functions.SetPlaceholderTextBox(LocationNameTextBox, "Название локации");
             Functions.SetPlaceholderTextBox(RegionComboBox, "Регион");
@@ -32,7 +32,7 @@ namespace Admin_Panel_Hotel
             Functions.SetPlaceholderTextBox(BuildTextBox, "Строение");
             Functions.SetPlaceholderTextBox(RoomCountTextBox, "Количество комнат");
             Functions.SetPlaceholderTextBox(BedsCountTextBox, "Количество мест");
-            Functions.SetPlaceholderTextBox(EmailNameTextBox0, "Имя электронной почты заказчика");
+            Functions.SetPlaceholderTextBox(EmailNameTextBox0, "Имя электронной почты");
             Functions.SetPlaceholderTextBox(EmailTextBox0, "Электронная почта заказчика");
 
             // Установка подсказки для полей с датами.
@@ -40,8 +40,8 @@ namespace Admin_Panel_Hotel
             Functions.SetPlaceholderDateTimePicker(ToContractTimeDateTimePicker, "Введите дату");
 
             // Установка ограничений для текстовых полей.
-            Functions.OnlyNumbersInTextBox(INNTextBox);
-            Functions.OnlyNumbersInTextBox(OGRNTextBox);
+            //Functions.OnlyNumbersInTextBox(INNTextBox);
+            //Functions.OnlyNumbersInTextBox(OGRNTextBox);
             Functions.OnlyNumbersInTextBox(BedsCountTextBox);
             Functions.OnlyNumbersInTextBox(CardCountTextBox);
             Functions.OnlyNumbersInTextBox(RoomCountTextBox);
@@ -73,11 +73,11 @@ namespace Admin_Panel_Hotel
         {
             TextBox textBox = sender as TextBox;
 
-            if (RegexUtilities.IsValidEmail(textBox.Text.Trim()))
+            if (textBox.TextLength > 0 && textBox.Text != textBox.Tag.ToString() && RegexUtilities.IsValidEmail(textBox.Text.Trim()))
             {
                 EmailsErrorProvider.Clear();
             }
-            else
+            else if (textBox.TextLength > 0 && textBox.Text != textBox.Tag.ToString())
             {
                 MessageBox.Show($"Электронная почта \"{textBox.Text}\" введена некорректно!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 EmailsErrorProvider.SetError(textBox, "* - обязательное поле");
