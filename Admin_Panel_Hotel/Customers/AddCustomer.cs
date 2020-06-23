@@ -13,13 +13,12 @@ namespace Admin_Panel_Hotel
         {
             InitializeComponent();
 
+            // TODO: Кнопки шагов 2 и 3 - Enabled = false;
+
             OpenCustomerInfoPanel();
 
             // Установка подсказок в текстовых полях.
             Functions.SetPlaceholderTextBox(NameTextBox, "Наименование организации");
-            //Functions.SetPlaceholderTextBox(AddressTextBox, "Адрес");
-            //Functions.SetPlaceholderTextBox(INNTextBox, "ИНН");
-            //Functions.SetPlaceholderTextBox(OGRNTextBox, "ОГРН");
             Functions.SetPlaceholderTextBox(ContractNumberTextBox, "Номер договора");
             Functions.SetPlaceholderTextBox(LocationNameTextBox, "Название локации");
             Functions.SetPlaceholderTextBox(RegionComboBox, "Регион");
@@ -40,8 +39,6 @@ namespace Admin_Panel_Hotel
             Functions.SetPlaceholderDateTimePicker(ToContractTimeDateTimePicker, "Введите дату");
 
             // Установка ограничений для текстовых полей.
-            //Functions.OnlyNumbersInTextBox(INNTextBox);
-            //Functions.OnlyNumbersInTextBox(OGRNTextBox);
             Functions.OnlyNumbersInTextBox(BedsCountTextBox);
             Functions.OnlyNumbersInTextBox(CardCountTextBox);
             Functions.OnlyNumbersInTextBox(RoomCountTextBox);
@@ -183,12 +180,15 @@ namespace Admin_Panel_Hotel
         /// <returns></returns>
         private bool CheckCustomerAddInfo()
         {
-            // TODO: Отредактировать условие в зависимости от таблицы в БД.
+            TextBox lastEmailNameTextBox = EmailsPanel.Controls[EmailsPanel.Controls.Count - 2] as TextBox;
+            TextBox lastEmailTextBox = EmailsPanel.Controls[EmailsPanel.Controls.Count - 1] as TextBox;
+            
             if (NameTextBox.TextLength > 0 && NameTextBox.Text != "Наименование организации"
                 && ContractNumberTextBox.TextLength > 0 && ContractNumberTextBox.Text != "Номер договора"
-                && LocationNameTextBox.TextLength > 0 && LocationNameTextBox.Text != "Локация") // Если все обязательные поля заполнены корректно.
+                && LocationNameTextBox.TextLength > 0 && LocationNameTextBox.Text != "Локация"
+                && lastEmailNameTextBox.TextLength > 0 && lastEmailNameTextBox.Text.Trim() != lastEmailNameTextBox.Tag.ToString()
+                && RegexUtilities.IsValidEmail(lastEmailTextBox.Text.Trim())) // Если все обязательные поля заполнены корректно.
             {
-                // TODO: Проверка корректности эл.почты и срока договора.
                 return true;
             }
             else // Если какое-либо или все обязательные поля незаполнены.
@@ -207,8 +207,6 @@ namespace Admin_Panel_Hotel
 
         private void CustomerInfoNextButton_Click(object sender, EventArgs e)
         {
-            // NOTCHECK: Сделать проверку заполнения всех обязательных полей на первом шаге.
-
             TextBox lastEmailNameTextBox = EmailsPanel.Controls[EmailsPanel.Controls.Count - 2] as TextBox;
             TextBox lastEmailTextBox = EmailsPanel.Controls[EmailsPanel.Controls.Count - 1] as TextBox;
 
@@ -216,10 +214,12 @@ namespace Admin_Panel_Hotel
                 && ContractNumberTextBox.TextLength > 0 && ContractNumberTextBox.Text.Trim() != ContractNumberTextBox.Tag.ToString()
                 && FromContractTimeDateTimePicker.Format == DateTimePickerFormat.Short
                 && ToContractTimeDateTimePicker.Format == DateTimePickerFormat.Short
+                && FromContractTimeDateTimePicker.Value < ToContractTimeDateTimePicker.Value
                 && lastEmailNameTextBox.TextLength > 0 && lastEmailNameTextBox.Text.Trim() != lastEmailNameTextBox.Tag.ToString()
                 && RegexUtilities.IsValidEmail(lastEmailTextBox.Text.Trim())) // Проверка заполнения всех обязательных полей на первом шаге.
             {
                 OpenAddCustomerLocationPanel();
+                AddLocationButton.Enabled = true;
             }
         }
 
@@ -248,6 +248,7 @@ namespace Admin_Panel_Hotel
             if (true)
             {
                 OpenCardPropertiesPanel();
+                CardPropertiesButton.Enabled = true;
             }
         }
 
@@ -291,18 +292,58 @@ namespace Admin_Panel_Hotel
 
         private void AddLocationButton_Click(object sender, EventArgs e)
         {
-            // TODO: Реализовать проверку заполнения обязательных полей у локации.
-            if (true)
+            if (AddLocation())
             {
-                AddLocation();
+                LocationNameTextBox.Text = LocationNameTextBox.Tag.ToString();
+                RegionComboBox.Text = RegionComboBox.Tag.ToString();
+                StateComboBox.Text = StateComboBox.Tag.ToString();
+                CityComboBox.Text = CityComboBox.Tag.ToString();
+                StreetTypeComboBox.Text = StreetTypeComboBox.Tag.ToString();
+                StreetNameComboBox.Text = StreetNameComboBox.Tag.ToString();
+                HouseTextBox.Text = HouseTextBox.Tag.ToString();
+                CorpsTextBox.Text = CorpsTextBox.Tag.ToString();
+                BuildTextBox.Text = BuildTextBox.Tag.ToString();
+                RoomCountTextBox.Text = RoomCountTextBox.Tag.ToString();
+                BedsCountTextBox.Text = BedsCountTextBox.Tag.ToString();
+                CardCountTextBox.Text = "0";
+            }
+            else
+            {
+                MessageBox.Show("Заполните все обязательные поля!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        private void AddLocation()
+        /// <summary>
+        /// Добавление локации в таблицу.
+        /// </summary>
+        /// <returns>True - если все обязательные поля заполнены и локация добавлена в таблицу. False - если заполнены не все обязательные поля.</returns>
+        private bool AddLocation()
         {
-            // TODO: Проверка заполнения обязательных полей.
-            int lastRow = LocationsDataGridView.Rows.GetLastRow(DataGridViewElementStates.Visible);
-            LocationsDataGridView.Rows.Add(lastRow + 2, LocationNameTextBox.Text);
+            if (LocationNameTextBox.TextLength > 0 && LocationNameTextBox.Text != LocationNameTextBox.Tag.ToString()
+                && RoomCountTextBox.TextLength > 0 && RoomCountTextBox.Text != RoomCountTextBox.Tag.ToString()
+                && BedsCountTextBox.TextLength > 0 && BedsCountTextBox.Text != BedsCountTextBox.Tag.ToString()) // Если все обязательные поля заполнены.
+            {
+                int lastRow = LocationsDataGridView.Rows.GetLastRow(DataGridViewElementStates.Visible);
+                LocationsDataGridView.Rows.Add(lastRow + 2
+                    , LocationNameTextBox.Text
+                    , RegionComboBox.Text.Trim()
+                    , StateComboBox.Text.Trim()
+                    , CityComboBox.Text.Trim()
+                    , StreetTypeComboBox.Text.Trim()
+                    , StreetNameComboBox.Text.Trim()
+                    , HouseTextBox.Text.Trim()
+                    , CorpsTextBox.Text.Trim()
+                    , BuildTextBox.Text.Trim()
+                    , RoomCountTextBox.Text.Trim()
+                    , BedsCountTextBox.Text.Trim()
+                    , CardCountTextBox.Text.Trim());
+
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         private void CustomerInfoButton_Click(object sender, EventArgs e)
@@ -332,10 +373,24 @@ namespace Admin_Panel_Hotel
 
         private void AddLocationPictureBox_Click(object sender, EventArgs e)
         {
-            // TODO: Реализовать проверку заполнения обязательных полей у локации.
-            if (true)
+            if (AddLocation())
             {
-                AddLocation();
+                LocationNameTextBox.Text = LocationNameTextBox.Tag.ToString();
+                RegionComboBox.Text = RegionComboBox.Tag.ToString();
+                StateComboBox.Text = StateComboBox.Tag.ToString();
+                CityComboBox.Text = CityComboBox.Tag.ToString();
+                StreetTypeComboBox.Text = StreetTypeComboBox.Tag.ToString();
+                StreetNameComboBox.Text = StreetNameComboBox.Tag.ToString();
+                HouseTextBox.Text = HouseTextBox.Tag.ToString();
+                CorpsTextBox.Text = CorpsTextBox.Tag.ToString();
+                BuildTextBox.Text = BuildTextBox.Tag.ToString();
+                RoomCountTextBox.Text = RoomCountTextBox.Tag.ToString();
+                BedsCountTextBox.Text = BedsCountTextBox.Tag.ToString();
+                CardCountTextBox.Text = "0";
+            }
+            else
+            {
+                MessageBox.Show("Заполните все обязательные поля!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -397,25 +452,81 @@ namespace Admin_Panel_Hotel
 
         private void FromContractTimeDateTimePicker_Leave(object sender, EventArgs e)
         {
-            if (FromContractTimeDateTimePicker.Format == DateTimePickerFormat.Short && FromContractTimeDateTimePicker.Value != FromContractTimeDateTimePicker.MinDate) // Если в поле введена минимальная нормальная дата, то удаляем обозначение заполнения.
+            if (FromContractTimeDateTimePicker.Format == DateTimePickerFormat.Short
+                && FromContractTimeDateTimePicker.Value != FromContractTimeDateTimePicker.MinDate
+                && FromContractTimeDateTimePicker.Value < ToContractTimeDateTimePicker.Value) // Если в поле введена корректная дата, то удаляем обозначение заполнения.
             {
                 FromContractTimeErrorProvider.Clear();
             }
             else
             {
                 FromContractTimeErrorProvider.SetError(FromContractTimeDateTimePicker, "* - обязательное поле");
-            }    
+                MessageBox.Show("Дата окончания срока договора должна быть меньше начала срока договора!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            if (ToContractTimeDateTimePicker.Format == DateTimePickerFormat.Short
+                && ToContractTimeDateTimePicker.Value != ToContractTimeDateTimePicker.MinDate
+                && FromContractTimeDateTimePicker.Value < ToContractTimeDateTimePicker.Value) // Если в поле введена корректная дата, то удаляем обозначение заполнения.
+            {
+                ToContractTimeErrorProvider.Clear();
+            }
         }
 
         private void ToContractTimeDateTimePicker_Leave(object sender, EventArgs e)
         {
-            if (ToContractTimeDateTimePicker.Format == DateTimePickerFormat.Short && ToContractTimeDateTimePicker.Value != ToContractTimeDateTimePicker.MinDate) // Если в поле введена минимальная нормальная дата, то удаляем обозначение заполнения.
+            if (ToContractTimeDateTimePicker.Format == DateTimePickerFormat.Short
+                && ToContractTimeDateTimePicker.Value != ToContractTimeDateTimePicker.MinDate
+                && FromContractTimeDateTimePicker.Value < ToContractTimeDateTimePicker.Value) // Если в поле введена корректная дата, то удаляем обозначение заполнения.
             {
                 ToContractTimeErrorProvider.Clear();
             }
             else
             {
                 ToContractTimeErrorProvider.SetError(ToContractTimeDateTimePicker, "* - обязательное поле");
+                MessageBox.Show("Дата окончания срока договора должна быть меньше начала срока договора!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            if (FromContractTimeDateTimePicker.Format == DateTimePickerFormat.Short
+                && FromContractTimeDateTimePicker.Value != FromContractTimeDateTimePicker.MinDate
+                && FromContractTimeDateTimePicker.Value < ToContractTimeDateTimePicker.Value) // Если в поле введена корректная дата, то удаляем обозначение заполнения.
+            {
+                FromContractTimeErrorProvider.Clear();
+            }
+        }
+
+        private void LocationNameTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (LocationNameTextBox.TextLength > 0 && LocationNameTextBox.Text != LocationNameTextBox.Tag.ToString())
+            {
+                LocationNameErrorProvider.Clear();
+            }
+            else
+            {
+                LocationNameErrorProvider.SetError(LocationNameTextBox, "* - обязательное поле");
+            }
+        }
+
+        private void RoomCountTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (RoomCountTextBox.TextLength > 0 && RoomCountTextBox.Text != RoomCountTextBox.Tag.ToString())
+            {
+                RoomCountErrorProvider.Clear();
+            }
+            else
+            {
+                RoomCountErrorProvider.SetError(RoomCountTextBox, "* - обязательное поле");
+            }
+        }
+
+        private void BedsCountTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (BedsCountTextBox.TextLength > 0 && BedsCountTextBox.Text != BedsCountTextBox.Tag.ToString())
+            {
+                BedsCountErrorProvider.Clear();
+            }
+            else
+            {
+                BedsCountErrorProvider.SetError(BedsCountTextBox, "* - обязательное поле");
             }
         }
     }

@@ -54,8 +54,8 @@ namespace Admin_Panel_Hotel
         public static void SetPlaceholderTextBox(Control textBox, string placeholderText)
         {
             textBox.ForeColor = SystemColors.GrayText;
-            textBox.Text = placeholderText;
             textBox.Tag = placeholderText;
+            textBox.Text = placeholderText;
             textBox.Enter += TextBox_Enter;
             textBox.Leave += TextBox_Leave;
         }
