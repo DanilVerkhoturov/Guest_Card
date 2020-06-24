@@ -1009,9 +1009,9 @@
             this.Controls.Add(this.AddLocationsButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.AddCustomerLocationPanel);
             this.Controls.Add(this.CardPropertiesPanel);
             this.Controls.Add(this.CustomerInfoPanel);
+            this.Controls.Add(this.AddCustomerLocationPanel);
             this.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "AddCustomer";
