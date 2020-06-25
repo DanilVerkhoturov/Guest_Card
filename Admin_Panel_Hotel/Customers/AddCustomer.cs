@@ -274,14 +274,6 @@ namespace Admin_Panel_Hotel
             }
         }
 
-        private void BedsCountTextBox_Leave(object sender, EventArgs e)
-        {
-            if (int.TryParse(BedsCountTextBox.Text, out int bedsCount))
-            {
-                CardCountTextBox.Text = (((bedsCount * 10) / 100) + bedsCount).ToString(); // Расчёт количества карт по формуле: количество мест + 10%.
-            }
-        }
-
         private void CustomerInfoNextButton_Click(object sender, EventArgs e)
         {
             TextBox lastEmailNameTextBox = EmailsPanel.Controls[EmailsPanel.Controls.Count - 2] as TextBox;
@@ -296,7 +288,7 @@ namespace Admin_Panel_Hotel
                 && RegexUtilities.IsValidEmail(lastEmailTextBox.Text.Trim())) // Проверка заполнения всех обязательных полей на первом шаге.
             {
                 OpenAddCustomerLocationPanel();
-                AddLocationButton.Enabled = true;
+                AddLocationsButton.Enabled = true;
             }
         }
 
@@ -367,29 +359,6 @@ namespace Admin_Panel_Hotel
             CardPropertiesButton.ForeColor = Color.Black;
         }
 
-        private void AddLocationButton_Click(object sender, EventArgs e)
-        {
-            if (AddLocation())
-            {
-                LocationNameTextBox.Text = LocationNameTextBox.Tag.ToString();
-                RegionComboBox.Text = RegionComboBox.Tag.ToString();
-                StateComboBox.Text = StateComboBox.Tag.ToString();
-                CityComboBox.Text = CityComboBox.Tag.ToString();
-                StreetTypeComboBox.Text = StreetTypeComboBox.Tag.ToString();
-                StreetNameComboBox.Text = StreetNameComboBox.Tag.ToString();
-                HouseTextBox.Text = HouseTextBox.Tag.ToString();
-                CorpsTextBox.Text = CorpsTextBox.Tag.ToString();
-                BuildTextBox.Text = BuildTextBox.Tag.ToString();
-                RoomCountTextBox.Text = RoomCountTextBox.Tag.ToString();
-                BedsCountTextBox.Text = BedsCountTextBox.Tag.ToString();
-                CardCountTextBox.Text = "0";
-            }
-            else
-            {
-                MessageBox.Show("Заполните все обязательные поля!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
         /// <summary>
         /// Добавление локации в таблицу.
         /// </summary>
@@ -446,61 +415,6 @@ namespace Admin_Panel_Hotel
         private void Set2HelpButton_Click(object sender, EventArgs e)
         {
             MessageBox.Show("В \"Комплект-2\" входит:\nПростыня, подушка, одеяло.", "Комплект-2", MessageBoxButtons.OK, MessageBoxIcon.Question);
-        }
-
-        private void AddLocationPictureBox_Click(object sender, EventArgs e)
-        {
-            if (AddLocation())
-            {
-                LocationNameTextBox.Text = LocationNameTextBox.Tag.ToString();
-                RegionComboBox.Text = RegionComboBox.Tag.ToString();
-                StateComboBox.Text = StateComboBox.Tag.ToString();
-                CityComboBox.Text = CityComboBox.Tag.ToString();
-                StreetTypeComboBox.Text = StreetTypeComboBox.Tag.ToString();
-                StreetNameComboBox.Text = StreetNameComboBox.Tag.ToString();
-                HouseTextBox.Text = HouseTextBox.Tag.ToString();
-                CorpsTextBox.Text = CorpsTextBox.Tag.ToString();
-                BuildTextBox.Text = BuildTextBox.Tag.ToString();
-                RoomCountTextBox.Text = RoomCountTextBox.Tag.ToString();
-                BedsCountTextBox.Text = BedsCountTextBox.Tag.ToString();
-                CardCountTextBox.Text = "0";
-            }
-            else
-            {
-                MessageBox.Show("Заполните все обязательные поля!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void AddEmailButton_Click(object sender, EventArgs e)
-        {
-            TextBox lastEmailNameTextBox = EmailsPanel.Controls[EmailsPanel.Controls.Count - 2] as TextBox;
-            TextBox lastEmailTextBox = EmailsPanel.Controls[EmailsPanel.Controls.Count - 1] as TextBox;
-
-            if (lastEmailNameTextBox.Text != lastEmailNameTextBox.Tag.ToString() && lastEmailTextBox.Text != lastEmailTextBox.Tag.ToString())
-            {
-                TextBox emailNameTextBox = new TextBox();
-                emailNameTextBox.Size = EmailNameTextBox0.Size;
-                emailNameTextBox.Location = new Point(0, lastEmailNameTextBox.Location.Y + 30);
-                emailNameTextBox.Name = $"EmailNameTextBox{EmailsCount}";
-                EmailsPanel.Controls.Add(emailNameTextBox);
-
-                TextBox emailTextBox = new TextBox();
-                emailTextBox.Size = EmailTextBox0.Size;
-                emailTextBox.Location = new Point(lastEmailTextBox.Location.X, lastEmailTextBox.Location.Y + 30);
-                emailTextBox.Name = $"EmailTextBox{EmailsCount}";
-                EmailsPanel.Controls.Add(emailTextBox);
-
-                Functions.SetPlaceholderTextBox(emailNameTextBox, "Имя электронной почты");
-                Functions.SetPlaceholderTextBox(emailTextBox, "Электронная почта заказчика");
-
-                EmailNamesErrorProvider.SetError(emailNameTextBox, "* - обязательное поле");
-                EmailsErrorProvider.SetError(emailTextBox, "* - обязательное поле");
-
-                emailNameTextBox.Leave += new EventHandler(EmailNameTextBox_Leave);
-                emailTextBox.Leave += new EventHandler(EmailTextBox_Leave);
-
-                EmailsCount++;
-            }
         }
 
         private void NameTextBox_TextChanged(object sender, EventArgs e)
@@ -604,6 +518,70 @@ namespace Admin_Panel_Hotel
             else
             {
                 BedsCountErrorProvider.SetError(BedsCountTextBox, "* - обязательное поле");
+            }
+
+            if (int.TryParse(BedsCountTextBox.Text, out int bedsCount))
+            {
+                CardCountTextBox.Text = (((bedsCount * 10) / 100) + bedsCount).ToString(); // Расчёт количества карт по формуле: количество мест + 10%.
+            }
+        }
+
+        private void AddEmailLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            TextBox lastEmailNameTextBox = EmailsPanel.Controls[EmailsPanel.Controls.Count - 2] as TextBox;
+            TextBox lastEmailTextBox = EmailsPanel.Controls[EmailsPanel.Controls.Count - 1] as TextBox;
+
+            if (lastEmailNameTextBox.Text != lastEmailNameTextBox.Tag.ToString() && lastEmailTextBox.Text != lastEmailTextBox.Tag.ToString())
+            {
+                TextBox emailNameTextBox = new TextBox();
+                emailNameTextBox.Size = EmailNameTextBox0.Size;
+                emailNameTextBox.Margin = EmailNameTextBox0.Margin;
+                emailNameTextBox.Location = new Point(0, lastEmailNameTextBox.Location.Y + lastEmailNameTextBox.Size.Height + lastEmailNameTextBox.Margin.Top);
+                emailNameTextBox.Name = $"EmailNameTextBox{EmailsCount}";
+                EmailsPanel.Controls.Add(emailNameTextBox);
+
+                TextBox emailTextBox = new TextBox();
+                emailTextBox.Size = EmailTextBox0.Size;
+                emailTextBox.Margin = EmailTextBox0.Margin;
+                emailTextBox.Location = new Point(lastEmailTextBox.Location.X, lastEmailTextBox.Location.Y + lastEmailTextBox.Size.Height + lastEmailTextBox.Margin.Top);
+                emailTextBox.Name = $"EmailTextBox{EmailsCount}";
+                EmailsPanel.Controls.Add(emailTextBox);
+
+                Functions.SetPlaceholderTextBox(emailNameTextBox, "Имя электронной почты");
+                Functions.SetPlaceholderTextBox(emailTextBox, "Электронная почта заказчика");
+
+                EmailNamesErrorProvider.SetError(emailNameTextBox, "* - обязательное поле");
+                EmailsErrorProvider.SetError(emailTextBox, "* - обязательное поле");
+
+                emailNameTextBox.Leave += new EventHandler(EmailNameTextBox_Leave);
+                emailTextBox.Leave += new EventHandler(EmailTextBox_Leave);
+
+                AddEmailLinkLabel.Location = new Point(AddEmailLinkLabel.Location.X, AddEmailLinkLabel.Location.Y + lastEmailNameTextBox.Margin.Top + lastEmailNameTextBox.Size.Height);
+
+                EmailsCount++;
+            }
+        }
+
+        private void AddLocationLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (AddLocation())
+            {
+                LocationNameTextBox.Text = LocationNameTextBox.Tag.ToString();
+                RegionComboBox.Text = RegionComboBox.Tag.ToString();
+                StateComboBox.Text = StateComboBox.Tag.ToString();
+                CityComboBox.Text = CityComboBox.Tag.ToString();
+                StreetTypeComboBox.Text = StreetTypeComboBox.Tag.ToString();
+                StreetNameComboBox.Text = StreetNameComboBox.Tag.ToString();
+                HouseTextBox.Text = HouseTextBox.Tag.ToString();
+                CorpsTextBox.Text = CorpsTextBox.Tag.ToString();
+                BuildTextBox.Text = BuildTextBox.Tag.ToString();
+                RoomCountTextBox.Text = RoomCountTextBox.Tag.ToString();
+                BedsCountTextBox.Text = BedsCountTextBox.Tag.ToString();
+                CardCountTextBox.Text = "0";
+            }
+            else
+            {
+                MessageBox.Show("Заполните все обязательные поля!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

@@ -24,8 +24,18 @@ namespace Admin_Panel_Hotel
                     CustomersDataGridView.Rows.Add(reader[0].ToString());
                 }
                 reader.Close();
+            }
+        }
 
-                CountCustomersLabel.Text = $"Всего: {CustomersDataGridView.Rows.Count} заказчиков";
+        private void CustomersDataGridView_CellMouseMove(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.ColumnIndex == 1)
+            {
+                CustomersDataGridView.Cursor = Cursors.Hand;
+            }
+            else
+            {
+                CustomersDataGridView.Cursor = Cursors.Default;
             }
         }
     }
