@@ -53,7 +53,7 @@ namespace Admin_Panel_Hotel
         /// <param name="placeholderText">Текст подсказки.</param>
         public static void SetPlaceholderTextBox(Control textBox, string placeholderText)
         {
-            textBox.ForeColor = SystemColors.GrayText;
+            textBox.ForeColor = Color.Silver;
             textBox.Tag = placeholderText;
             textBox.Text = placeholderText;
             textBox.Enter += TextBox_Enter;
@@ -131,10 +131,10 @@ namespace Admin_Panel_Hotel
         {
             Control textbox = sender as Control;
 
-            if (textbox.Text.Trim().Length == 0) // Если текстовое поле пустое.
+            if (textbox.Text.Trim().Length == 0 || textbox.Text.Trim() == textbox.Tag.ToString()) // Если текстовое поле пустое или текст в поле равен тексту подсказки.
             {
                 textbox.Text = textbox.Tag.ToString();
-                textbox.ForeColor = SystemColors.GrayText;
+                textbox.ForeColor = Color.Silver;
             }
         }
 

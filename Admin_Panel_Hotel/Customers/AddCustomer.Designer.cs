@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddCustomer));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.AddCustomerButton = new System.Windows.Forms.Button();
             this.Set2_Customer_CheckBox = new System.Windows.Forms.CheckBox();
             this.Set1_Customer_CheckBox = new System.Windows.Forms.CheckBox();
@@ -70,11 +70,27 @@
             this.LocationNameTextBox = new System.Windows.Forms.TextBox();
             this.CustomerInfoPanel = new System.Windows.Forms.Panel();
             this.EmailsPanel = new System.Windows.Forms.Panel();
+            this.AddEmailLinkLabel = new System.Windows.Forms.LinkLabel();
             this.label8 = new System.Windows.Forms.Label();
             this.AddCustomerLocationPanel = new System.Windows.Forms.Panel();
+            this.AddLocationLinkLabel = new System.Windows.Forms.LinkLabel();
             this.label9 = new System.Windows.Forms.Label();
             this.LocationsDataGridView = new System.Windows.Forms.DataGridView();
+            this.Num = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LocationName = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CardPropertiesPanel = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.Set2HelpButton = new System.Windows.Forms.Button();
             this.Set1HelpButton = new System.Windows.Forms.Button();
             this.CardPropertiesButton = new System.Windows.Forms.Button();
@@ -90,22 +106,6 @@
             this.LocationNameErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.RoomCountErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.BedsCountErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            this.AddEmailLinkLabel = new System.Windows.Forms.LinkLabel();
-            this.AddLocationLinkLabel = new System.Windows.Forms.LinkLabel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.Num = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LocationName = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CustomerInfoPanel.SuspendLayout();
             this.EmailsPanel.SuspendLayout();
             this.AddCustomerLocationPanel.SuspendLayout();
@@ -539,7 +539,7 @@
             this.CustomerInfoPanel.Controls.Add(this.ContractNumberTextBox);
             this.CustomerInfoPanel.Controls.Add(this.ToContractTimeDateTimePicker);
             this.CustomerInfoPanel.Location = new System.Drawing.Point(61, 199);
-            this.CustomerInfoPanel.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.CustomerInfoPanel.Margin = new System.Windows.Forms.Padding(5);
             this.CustomerInfoPanel.Name = "CustomerInfoPanel";
             this.CustomerInfoPanel.Size = new System.Drawing.Size(938, 681);
             this.CustomerInfoPanel.TabIndex = 44;
@@ -556,6 +556,18 @@
             this.EmailsPanel.Name = "EmailsPanel";
             this.EmailsPanel.Size = new System.Drawing.Size(759, 261);
             this.EmailsPanel.TabIndex = 51;
+            // 
+            // AddEmailLinkLabel
+            // 
+            this.AddEmailLinkLabel.AutoSize = true;
+            this.AddEmailLinkLabel.Location = new System.Drawing.Point(18, 62);
+            this.AddEmailLinkLabel.Margin = new System.Windows.Forms.Padding(140, 24, 3, 0);
+            this.AddEmailLinkLabel.Name = "AddEmailLinkLabel";
+            this.AddEmailLinkLabel.Size = new System.Drawing.Size(317, 25);
+            this.AddEmailLinkLabel.TabIndex = 52;
+            this.AddEmailLinkLabel.TabStop = true;
+            this.AddEmailLinkLabel.Text = "+ добавить электронную почту";
+            this.AddEmailLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.AddEmailLinkLabel_LinkClicked);
             // 
             // label8
             // 
@@ -590,11 +602,23 @@
             this.AddCustomerLocationPanel.Controls.Add(this.HouseTextBox);
             this.AddCustomerLocationPanel.Controls.Add(this.LocationsDataGridView);
             this.AddCustomerLocationPanel.Location = new System.Drawing.Point(61, 199);
-            this.AddCustomerLocationPanel.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.AddCustomerLocationPanel.Margin = new System.Windows.Forms.Padding(5);
             this.AddCustomerLocationPanel.Name = "AddCustomerLocationPanel";
             this.AddCustomerLocationPanel.Size = new System.Drawing.Size(938, 681);
             this.AddCustomerLocationPanel.TabIndex = 45;
             this.AddCustomerLocationPanel.Visible = false;
+            // 
+            // AddLocationLinkLabel
+            // 
+            this.AddLocationLinkLabel.AutoSize = true;
+            this.AddLocationLinkLabel.Location = new System.Drawing.Point(90, 589);
+            this.AddLocationLinkLabel.Margin = new System.Windows.Forms.Padding(142, 31, 3, 0);
+            this.AddLocationLinkLabel.Name = "AddLocationLinkLabel";
+            this.AddLocationLinkLabel.Size = new System.Drawing.Size(258, 25);
+            this.AddLocationLinkLabel.TabIndex = 53;
+            this.AddLocationLinkLabel.TabStop = true;
+            this.AddLocationLinkLabel.Text = "+ добавить ещё локацию";
+            this.AddLocationLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.AddLocationLinkLabel_LinkClicked);
             // 
             // label9
             // 
@@ -613,22 +637,22 @@
             this.LocationsDataGridView.AllowUserToDeleteRows = false;
             this.LocationsDataGridView.AllowUserToResizeColumns = false;
             this.LocationsDataGridView.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.LocationsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.LocationsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             this.LocationsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.LocationsDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.LocationsDataGridView.BackgroundColor = System.Drawing.Color.White;
             this.LocationsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.LocationsDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.LocationsDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(172)))), ((int)(((byte)(218)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(172)))), ((int)(((byte)(218)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.LocationsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(172)))), ((int)(((byte)(218)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(172)))), ((int)(((byte)(218)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.LocationsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.LocationsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.LocationsDataGridView.ColumnHeadersVisible = false;
             this.LocationsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -647,241 +671,32 @@
             this.Column11});
             this.LocationsDataGridView.EnableHeadersVisualStyles = false;
             this.LocationsDataGridView.Location = new System.Drawing.Point(691, 93);
-            this.LocationsDataGridView.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.LocationsDataGridView.Margin = new System.Windows.Forms.Padding(5);
             this.LocationsDataGridView.MultiSelect = false;
             this.LocationsDataGridView.Name = "LocationsDataGridView";
             this.LocationsDataGridView.ReadOnly = true;
             this.LocationsDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.LocationsDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.LocationsDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.LocationsDataGridView.RowHeadersVisible = false;
             this.LocationsDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.NullValue = null;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            this.LocationsDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.NullValue = null;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black;
+            this.LocationsDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.LocationsDataGridView.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             this.LocationsDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.LocationsDataGridView.Size = new System.Drawing.Size(242, 396);
             this.LocationsDataGridView.TabIndex = 47;
-            // 
-            // CardPropertiesPanel
-            // 
-            this.CardPropertiesPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.CardPropertiesPanel.Controls.Add(this.label4);
-            this.CardPropertiesPanel.Controls.Add(this.Set2HelpButton);
-            this.CardPropertiesPanel.Controls.Add(this.Set1HelpButton);
-            this.CardPropertiesPanel.Controls.Add(this.AddCustomerButton);
-            this.CardPropertiesPanel.Controls.Add(this.label2);
-            this.CardPropertiesPanel.Controls.Add(this.FireSafety_Customer_CheckBox);
-            this.CardPropertiesPanel.Controls.Add(this.AllProperties_Customer_CheckBox);
-            this.CardPropertiesPanel.Controls.Add(this.ResidenceRules_Customer_CheckBox);
-            this.CardPropertiesPanel.Controls.Add(this.GiveOutLinen_Customer_CheckBox);
-            this.CardPropertiesPanel.Controls.Add(this.Set1_Customer_CheckBox);
-            this.CardPropertiesPanel.Controls.Add(this.Set2_Customer_CheckBox);
-            this.CardPropertiesPanel.Controls.Add(this.Instructed_Customer_CheckBox);
-            this.CardPropertiesPanel.Location = new System.Drawing.Point(61, 199);
-            this.CardPropertiesPanel.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.CardPropertiesPanel.Name = "CardPropertiesPanel";
-            this.CardPropertiesPanel.Size = new System.Drawing.Size(938, 681);
-            this.CardPropertiesPanel.TabIndex = 46;
-            this.CardPropertiesPanel.Visible = false;
-            // 
-            // Set2HelpButton
-            // 
-            this.Set2HelpButton.BackColor = System.Drawing.Color.Transparent;
-            this.Set2HelpButton.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.question_icon_icons_com_69315;
-            this.Set2HelpButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Set2HelpButton.FlatAppearance.BorderSize = 0;
-            this.Set2HelpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Set2HelpButton.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Set2HelpButton.Location = new System.Drawing.Point(264, 337);
-            this.Set2HelpButton.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.Set2HelpButton.Name = "Set2HelpButton";
-            this.Set2HelpButton.Size = new System.Drawing.Size(31, 31);
-            this.Set2HelpButton.TabIndex = 23;
-            this.Set2HelpButton.UseVisualStyleBackColor = false;
-            this.Set2HelpButton.Click += new System.EventHandler(this.Set2HelpButton_Click);
-            // 
-            // Set1HelpButton
-            // 
-            this.Set1HelpButton.BackColor = System.Drawing.Color.Transparent;
-            this.Set1HelpButton.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.question_icon_icons_com_69315;
-            this.Set1HelpButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Set1HelpButton.FlatAppearance.BorderSize = 0;
-            this.Set1HelpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Set1HelpButton.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Set1HelpButton.Location = new System.Drawing.Point(264, 252);
-            this.Set1HelpButton.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.Set1HelpButton.Name = "Set1HelpButton";
-            this.Set1HelpButton.Size = new System.Drawing.Size(31, 31);
-            this.Set1HelpButton.TabIndex = 22;
-            this.Set1HelpButton.UseVisualStyleBackColor = false;
-            this.Set1HelpButton.Click += new System.EventHandler(this.Set1HelpButton_Click);
-            // 
-            // CardPropertiesButton
-            // 
-            this.CardPropertiesButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.CardPropertiesButton.AutoEllipsis = true;
-            this.CardPropertiesButton.BackColor = System.Drawing.Color.White;
-            this.CardPropertiesButton.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.GrayCircle;
-            this.CardPropertiesButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.CardPropertiesButton.Enabled = false;
-            this.CardPropertiesButton.FlatAppearance.BorderSize = 0;
-            this.CardPropertiesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CardPropertiesButton.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CardPropertiesButton.Location = new System.Drawing.Point(735, 127);
-            this.CardPropertiesButton.Margin = new System.Windows.Forms.Padding(5, 48, 5, 5);
-            this.CardPropertiesButton.Name = "CardPropertiesButton";
-            this.CardPropertiesButton.Size = new System.Drawing.Size(32, 32);
-            this.CardPropertiesButton.TabIndex = 49;
-            this.CardPropertiesButton.Text = "3";
-            this.CardPropertiesButton.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.CardPropertiesButton.UseVisualStyleBackColor = false;
-            this.CardPropertiesButton.Click += new System.EventHandler(this.CardPropertiesButton_Click);
-            // 
-            // CustomerInfoButton
-            // 
-            this.CustomerInfoButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.CustomerInfoButton.AutoEllipsis = true;
-            this.CustomerInfoButton.BackColor = System.Drawing.Color.White;
-            this.CustomerInfoButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CustomerInfoButton.BackgroundImage")));
-            this.CustomerInfoButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.CustomerInfoButton.FlatAppearance.BorderSize = 0;
-            this.CustomerInfoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CustomerInfoButton.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CustomerInfoButton.ForeColor = System.Drawing.Color.White;
-            this.CustomerInfoButton.Location = new System.Drawing.Point(213, 127);
-            this.CustomerInfoButton.Margin = new System.Windows.Forms.Padding(204, 48, 224, 5);
-            this.CustomerInfoButton.Name = "CustomerInfoButton";
-            this.CustomerInfoButton.Size = new System.Drawing.Size(32, 32);
-            this.CustomerInfoButton.TabIndex = 48;
-            this.CustomerInfoButton.Text = "1";
-            this.CustomerInfoButton.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.CustomerInfoButton.UseVisualStyleBackColor = false;
-            this.CustomerInfoButton.Click += new System.EventHandler(this.CustomerInfoButton_Click);
-            // 
-            // AddLocationsButton
-            // 
-            this.AddLocationsButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.AddLocationsButton.AutoEllipsis = true;
-            this.AddLocationsButton.BackColor = System.Drawing.Color.White;
-            this.AddLocationsButton.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.GrayCircle;
-            this.AddLocationsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.AddLocationsButton.Enabled = false;
-            this.AddLocationsButton.FlatAppearance.BorderSize = 0;
-            this.AddLocationsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddLocationsButton.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.AddLocationsButton.Location = new System.Drawing.Point(474, 127);
-            this.AddLocationsButton.Margin = new System.Windows.Forms.Padding(5, 48, 224, 5);
-            this.AddLocationsButton.Name = "AddLocationsButton";
-            this.AddLocationsButton.Size = new System.Drawing.Size(32, 32);
-            this.AddLocationsButton.TabIndex = 47;
-            this.AddLocationsButton.Text = "2";
-            this.AddLocationsButton.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.AddLocationsButton.UseVisualStyleBackColor = false;
-            this.AddLocationsButton.Click += new System.EventHandler(this.AddLocationsButton_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox3.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.Line_47;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox3.Location = new System.Drawing.Point(234, 133);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(508, 22);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox3.TabIndex = 41;
-            this.pictureBox3.TabStop = false;
-            // 
-            // EmailNamesErrorProvider
-            // 
-            this.EmailNamesErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
-            this.EmailNamesErrorProvider.ContainerControl = this;
-            // 
-            // EmailsErrorProvider
-            // 
-            this.EmailsErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
-            this.EmailsErrorProvider.ContainerControl = this;
-            // 
-            // NameErrorProvider
-            // 
-            this.NameErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
-            this.NameErrorProvider.ContainerControl = this;
-            // 
-            // ContractNumberErrorProvider
-            // 
-            this.ContractNumberErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
-            this.ContractNumberErrorProvider.ContainerControl = this;
-            // 
-            // ToContractTimeErrorProvider
-            // 
-            this.ToContractTimeErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
-            this.ToContractTimeErrorProvider.ContainerControl = this;
-            // 
-            // FromContractTimeErrorProvider
-            // 
-            this.FromContractTimeErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
-            this.FromContractTimeErrorProvider.ContainerControl = this;
-            // 
-            // LocationNameErrorProvider
-            // 
-            this.LocationNameErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
-            this.LocationNameErrorProvider.ContainerControl = this;
-            // 
-            // RoomCountErrorProvider
-            // 
-            this.RoomCountErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
-            this.RoomCountErrorProvider.ContainerControl = this;
-            // 
-            // BedsCountErrorProvider
-            // 
-            this.BedsCountErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
-            this.BedsCountErrorProvider.ContainerControl = this;
-            // 
-            // AddEmailLinkLabel
-            // 
-            this.AddEmailLinkLabel.AutoSize = true;
-            this.AddEmailLinkLabel.Location = new System.Drawing.Point(18, 62);
-            this.AddEmailLinkLabel.Margin = new System.Windows.Forms.Padding(140, 24, 3, 0);
-            this.AddEmailLinkLabel.Name = "AddEmailLinkLabel";
-            this.AddEmailLinkLabel.Size = new System.Drawing.Size(317, 25);
-            this.AddEmailLinkLabel.TabIndex = 52;
-            this.AddEmailLinkLabel.TabStop = true;
-            this.AddEmailLinkLabel.Text = "+ добавить электронную почту";
-            this.AddEmailLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.AddEmailLinkLabel_LinkClicked);
-            // 
-            // AddLocationLinkLabel
-            // 
-            this.AddLocationLinkLabel.AutoSize = true;
-            this.AddLocationLinkLabel.Location = new System.Drawing.Point(90, 589);
-            this.AddLocationLinkLabel.Margin = new System.Windows.Forms.Padding(142, 31, 3, 0);
-            this.AddLocationLinkLabel.Name = "AddLocationLinkLabel";
-            this.AddLocationLinkLabel.Size = new System.Drawing.Size(258, 25);
-            this.AddLocationLinkLabel.TabIndex = 53;
-            this.AddLocationLinkLabel.TabStop = true;
-            this.AddLocationLinkLabel.Text = "+ добавить ещё локацию";
-            this.AddLocationLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.AddLocationLinkLabel_LinkClicked);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(90, 13);
-            this.label4.Margin = new System.Windows.Forms.Padding(142, 48, 3, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(253, 25);
-            this.label4.TabIndex = 24;
-            this.label4.Text = "Добавить свойства карт";
             // 
             // Num
             // 
@@ -896,8 +711,8 @@
             // LocationName
             // 
             this.LocationName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.LocationName.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.LocationName.DefaultCellStyle = dataGridViewCellStyle8;
             this.LocationName.Frozen = true;
             this.LocationName.HeaderText = "Локация";
             this.LocationName.Name = "LocationName";
@@ -992,6 +807,191 @@
             this.Column11.Visible = false;
             this.Column11.Width = 5;
             // 
+            // CardPropertiesPanel
+            // 
+            this.CardPropertiesPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.CardPropertiesPanel.Controls.Add(this.label4);
+            this.CardPropertiesPanel.Controls.Add(this.Set2HelpButton);
+            this.CardPropertiesPanel.Controls.Add(this.Set1HelpButton);
+            this.CardPropertiesPanel.Controls.Add(this.AddCustomerButton);
+            this.CardPropertiesPanel.Controls.Add(this.label2);
+            this.CardPropertiesPanel.Controls.Add(this.FireSafety_Customer_CheckBox);
+            this.CardPropertiesPanel.Controls.Add(this.AllProperties_Customer_CheckBox);
+            this.CardPropertiesPanel.Controls.Add(this.ResidenceRules_Customer_CheckBox);
+            this.CardPropertiesPanel.Controls.Add(this.GiveOutLinen_Customer_CheckBox);
+            this.CardPropertiesPanel.Controls.Add(this.Set1_Customer_CheckBox);
+            this.CardPropertiesPanel.Controls.Add(this.Set2_Customer_CheckBox);
+            this.CardPropertiesPanel.Controls.Add(this.Instructed_Customer_CheckBox);
+            this.CardPropertiesPanel.Location = new System.Drawing.Point(61, 199);
+            this.CardPropertiesPanel.Margin = new System.Windows.Forms.Padding(5);
+            this.CardPropertiesPanel.Name = "CardPropertiesPanel";
+            this.CardPropertiesPanel.Size = new System.Drawing.Size(938, 681);
+            this.CardPropertiesPanel.TabIndex = 46;
+            this.CardPropertiesPanel.Visible = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(90, 13);
+            this.label4.Margin = new System.Windows.Forms.Padding(142, 48, 3, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(253, 25);
+            this.label4.TabIndex = 24;
+            this.label4.Text = "Добавить свойства карт";
+            // 
+            // Set2HelpButton
+            // 
+            this.Set2HelpButton.BackColor = System.Drawing.Color.Transparent;
+            this.Set2HelpButton.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.question_icon_icons_com_69315;
+            this.Set2HelpButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Set2HelpButton.FlatAppearance.BorderSize = 0;
+            this.Set2HelpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Set2HelpButton.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Set2HelpButton.Location = new System.Drawing.Point(264, 337);
+            this.Set2HelpButton.Margin = new System.Windows.Forms.Padding(5);
+            this.Set2HelpButton.Name = "Set2HelpButton";
+            this.Set2HelpButton.Size = new System.Drawing.Size(31, 31);
+            this.Set2HelpButton.TabIndex = 23;
+            this.Set2HelpButton.UseVisualStyleBackColor = false;
+            this.Set2HelpButton.Click += new System.EventHandler(this.Set2HelpButton_Click);
+            // 
+            // Set1HelpButton
+            // 
+            this.Set1HelpButton.BackColor = System.Drawing.Color.Transparent;
+            this.Set1HelpButton.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.question_icon_icons_com_69315;
+            this.Set1HelpButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Set1HelpButton.FlatAppearance.BorderSize = 0;
+            this.Set1HelpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Set1HelpButton.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Set1HelpButton.Location = new System.Drawing.Point(264, 252);
+            this.Set1HelpButton.Margin = new System.Windows.Forms.Padding(5);
+            this.Set1HelpButton.Name = "Set1HelpButton";
+            this.Set1HelpButton.Size = new System.Drawing.Size(31, 31);
+            this.Set1HelpButton.TabIndex = 22;
+            this.Set1HelpButton.UseVisualStyleBackColor = false;
+            this.Set1HelpButton.Click += new System.EventHandler(this.Set1HelpButton_Click);
+            // 
+            // CardPropertiesButton
+            // 
+            this.CardPropertiesButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.CardPropertiesButton.AutoEllipsis = true;
+            this.CardPropertiesButton.BackColor = System.Drawing.Color.White;
+            this.CardPropertiesButton.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.GrayCircle;
+            this.CardPropertiesButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CardPropertiesButton.Enabled = false;
+            this.CardPropertiesButton.FlatAppearance.BorderSize = 0;
+            this.CardPropertiesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CardPropertiesButton.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CardPropertiesButton.Location = new System.Drawing.Point(735, 127);
+            this.CardPropertiesButton.Margin = new System.Windows.Forms.Padding(5, 48, 5, 5);
+            this.CardPropertiesButton.Name = "CardPropertiesButton";
+            this.CardPropertiesButton.Size = new System.Drawing.Size(32, 32);
+            this.CardPropertiesButton.TabIndex = 49;
+            this.CardPropertiesButton.Text = "3";
+            this.CardPropertiesButton.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.CardPropertiesButton.UseVisualStyleBackColor = false;
+            this.CardPropertiesButton.Click += new System.EventHandler(this.CardPropertiesButton_Click);
+            // 
+            // CustomerInfoButton
+            // 
+            this.CustomerInfoButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.CustomerInfoButton.AutoEllipsis = true;
+            this.CustomerInfoButton.BackColor = System.Drawing.Color.White;
+            this.CustomerInfoButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CustomerInfoButton.BackgroundImage")));
+            this.CustomerInfoButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CustomerInfoButton.FlatAppearance.BorderSize = 0;
+            this.CustomerInfoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CustomerInfoButton.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CustomerInfoButton.ForeColor = System.Drawing.Color.White;
+            this.CustomerInfoButton.Location = new System.Drawing.Point(213, 127);
+            this.CustomerInfoButton.Margin = new System.Windows.Forms.Padding(204, 48, 224, 5);
+            this.CustomerInfoButton.Name = "CustomerInfoButton";
+            this.CustomerInfoButton.Size = new System.Drawing.Size(32, 32);
+            this.CustomerInfoButton.TabIndex = 48;
+            this.CustomerInfoButton.Text = "1";
+            this.CustomerInfoButton.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.CustomerInfoButton.UseVisualStyleBackColor = false;
+            this.CustomerInfoButton.Click += new System.EventHandler(this.CustomerInfoButton_Click);
+            // 
+            // AddLocationsButton
+            // 
+            this.AddLocationsButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.AddLocationsButton.AutoEllipsis = true;
+            this.AddLocationsButton.BackColor = System.Drawing.Color.White;
+            this.AddLocationsButton.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.GrayCircle;
+            this.AddLocationsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.AddLocationsButton.Enabled = false;
+            this.AddLocationsButton.FlatAppearance.BorderSize = 0;
+            this.AddLocationsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddLocationsButton.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AddLocationsButton.Location = new System.Drawing.Point(474, 127);
+            this.AddLocationsButton.Margin = new System.Windows.Forms.Padding(5, 48, 224, 5);
+            this.AddLocationsButton.Name = "AddLocationsButton";
+            this.AddLocationsButton.Size = new System.Drawing.Size(32, 32);
+            this.AddLocationsButton.TabIndex = 47;
+            this.AddLocationsButton.Text = "2";
+            this.AddLocationsButton.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.AddLocationsButton.UseVisualStyleBackColor = false;
+            this.AddLocationsButton.Click += new System.EventHandler(this.AddLocationsButton_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox3.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.Line_47;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox3.Location = new System.Drawing.Point(234, 133);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(5);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(508, 22);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox3.TabIndex = 41;
+            this.pictureBox3.TabStop = false;
+            // 
+            // EmailNamesErrorProvider
+            // 
+            this.EmailNamesErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.EmailNamesErrorProvider.ContainerControl = this;
+            // 
+            // EmailsErrorProvider
+            // 
+            this.EmailsErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.EmailsErrorProvider.ContainerControl = this;
+            // 
+            // NameErrorProvider
+            // 
+            this.NameErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.NameErrorProvider.ContainerControl = this;
+            // 
+            // ContractNumberErrorProvider
+            // 
+            this.ContractNumberErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.ContractNumberErrorProvider.ContainerControl = this;
+            // 
+            // ToContractTimeErrorProvider
+            // 
+            this.ToContractTimeErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.ToContractTimeErrorProvider.ContainerControl = this;
+            // 
+            // FromContractTimeErrorProvider
+            // 
+            this.FromContractTimeErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.FromContractTimeErrorProvider.ContainerControl = this;
+            // 
+            // LocationNameErrorProvider
+            // 
+            this.LocationNameErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.LocationNameErrorProvider.ContainerControl = this;
+            // 
+            // RoomCountErrorProvider
+            // 
+            this.RoomCountErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.RoomCountErrorProvider.ContainerControl = this;
+            // 
+            // BedsCountErrorProvider
+            // 
+            this.BedsCountErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.BedsCountErrorProvider.ContainerControl = this;
+            // 
             // AddCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -1003,9 +1003,9 @@
             this.Controls.Add(this.AddLocationsButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.AddCustomerLocationPanel);
             this.Controls.Add(this.CardPropertiesPanel);
             this.Controls.Add(this.CustomerInfoPanel);
+            this.Controls.Add(this.AddCustomerLocationPanel);
             this.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.MaximumSize = new System.Drawing.Size(1029, 933);

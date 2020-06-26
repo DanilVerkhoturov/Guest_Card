@@ -1,6 +1,6 @@
 ﻿namespace Admin_Panel_Hotel
 {
-    partial class Customers
+    partial class CustomersForm
     {
         /// <summary>
         /// Required designer variable.
@@ -39,6 +39,7 @@
             this.CustomersDataGridView = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.CustomersDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,27 +47,29 @@
             // 
             this.LocationComboBox.BackColor = System.Drawing.Color.White;
             this.LocationComboBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LocationComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
+            this.LocationComboBox.ForeColor = System.Drawing.Color.Silver;
             this.LocationComboBox.FormattingEnabled = true;
+            this.LocationComboBox.Items.AddRange(new object[] {
+            "Локация"});
             this.LocationComboBox.Location = new System.Drawing.Point(382, 114);
             this.LocationComboBox.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.LocationComboBox.Name = "LocationComboBox";
             this.LocationComboBox.Size = new System.Drawing.Size(221, 33);
             this.LocationComboBox.TabIndex = 43;
-            this.LocationComboBox.Text = "Локация";
             // 
             // CustomersComboBox
             // 
             this.CustomersComboBox.BackColor = System.Drawing.Color.White;
             this.CustomersComboBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CustomersComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
+            this.CustomersComboBox.ForeColor = System.Drawing.Color.Silver;
             this.CustomersComboBox.FormattingEnabled = true;
+            this.CustomersComboBox.Items.AddRange(new object[] {
+            "Все заказчики"});
             this.CustomersComboBox.Location = new System.Drawing.Point(132, 114);
             this.CustomersComboBox.Margin = new System.Windows.Forms.Padding(123, 35, 22, 6);
             this.CustomersComboBox.Name = "CustomersComboBox";
             this.CustomersComboBox.Size = new System.Drawing.Size(223, 33);
             this.CustomersComboBox.TabIndex = 42;
-            this.CustomersComboBox.Text = "Заказчик";
             // 
             // label1
             // 
@@ -107,7 +110,8 @@
             this.CustomersDataGridView.ColumnHeadersVisible = false;
             this.CustomersDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
-            this.Column2});
+            this.Column2,
+            this.Column3});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Roboto", 15.75F);
@@ -146,6 +150,7 @@
             this.CustomersDataGridView.Size = new System.Drawing.Size(706, 658);
             this.CustomersDataGridView.TabIndex = 46;
             this.CustomersDataGridView.TabStop = false;
+            this.CustomersDataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.CustomersDataGridView_CellMouseClick);
             this.CustomersDataGridView.CellMouseMove += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.CustomersDataGridView_CellMouseMove);
             // 
             // Column1
@@ -165,7 +170,14 @@
             this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.Column2.Width = 5;
             // 
-            // Customers
+            // Column3
+            // 
+            this.Column3.HeaderText = "Id";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Visible = false;
+            // 
+            // CustomersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -180,7 +192,7 @@
             this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.MaximumSize = new System.Drawing.Size(1029, 933);
             this.MinimumSize = new System.Drawing.Size(1029, 933);
-            this.Name = "Customers";
+            this.Name = "CustomersForm";
             this.Text = "Customers";
             this.Shown += new System.EventHandler(this.Customers_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.CustomersDataGridView)).EndInit();
@@ -196,5 +208,6 @@
         private System.Windows.Forms.DataGridView CustomersDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewImageColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
     }
 }

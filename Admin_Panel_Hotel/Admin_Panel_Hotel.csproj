@@ -154,6 +154,12 @@
     <Compile Include="Applications\DraftApplications.Designer.cs">
       <DependentUpon>DraftApplications.cs</DependentUpon>
     </Compile>
+    <Compile Include="Customers\CustomerInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customers\CustomerInfoForm.Designer.cs">
+      <DependentUpon>CustomerInfoForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditApplications\ShowApplicationDraft.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -191,11 +197,11 @@
     <Compile Include="Applications\NewApplications.Designer.cs">
       <DependentUpon>NewApplications.cs</DependentUpon>
     </Compile>
-    <Compile Include="Customers\Customers.cs">
+    <Compile Include="Customers\CustomersForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Customers\Customers.Designer.cs">
-      <DependentUpon>Customers.cs</DependentUpon>
+    <Compile Include="Customers\CustomersForm.Designer.cs">
+      <DependentUpon>CustomersForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -230,6 +236,9 @@
     <EmbeddedResource Include="Applications\DraftApplications.resx">
       <DependentUpon>DraftApplications.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Customers\CustomerInfoForm.resx">
+      <DependentUpon>CustomerInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EditApplications\ShowApplicationDraft.resx">
       <DependentUpon>ShowApplicationDraft.cs</DependentUpon>
     </EmbeddedResource>
@@ -245,8 +254,8 @@
     <EmbeddedResource Include="Applications\NewApplications.resx">
       <DependentUpon>NewApplications.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Customers\Customers.resx">
-      <DependentUpon>Customers.cs</DependentUpon>
+    <EmbeddedResource Include="Customers\CustomersForm.resx">
+      <DependentUpon>CustomersForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

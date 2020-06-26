@@ -112,6 +112,6 @@ namespace Admin_Panel_Hotel
 
         private void MainForm_Load(object sender, EventArgs e) => Functions.OpenChildForm(new NewApplications(), ContentPanel);
 
-        private void MyCustomersButton_Click(object sender, EventArgs e) => Functions.OpenChildForm(new Customers(), ContentPanel);
+        private void MyCustomersButton_Click(object sender, EventArgs e) => Functions.OpenChildForm(new CustomersForm(), ContentPanel);
     }
 }
