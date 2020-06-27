@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Admin_Panel_Hotel.Customers;
+using System;
 using System.Windows.Forms;
 
 namespace Admin_Panel_Hotel
@@ -14,7 +15,7 @@ namespace Admin_Panel_Hotel
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new AddEditApplication());
-            Application.Run(new MainForm());
+            Application.Run(new LocationInfoForm());
         }
     }
 }

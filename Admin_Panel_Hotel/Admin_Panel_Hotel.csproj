@@ -160,6 +160,12 @@
     <Compile Include="Customers\CustomerInfoForm.Designer.cs">
       <DependentUpon>CustomerInfoForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Customers\LocationInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customers\LocationInfoForm.Designer.cs">
+      <DependentUpon>LocationInfoForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditApplications\ShowApplicationDraft.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,6 +190,7 @@
     <Compile Include="Applications\InfoUserForm.Designer.cs">
       <DependentUpon>InfoUserForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyColors.cs" />
     <Compile Include="NotificationsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -238,6 +245,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Customers\CustomerInfoForm.resx">
       <DependentUpon>CustomerInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customers\LocationInfoForm.resx">
+      <DependentUpon>LocationInfoForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditApplications\ShowApplicationDraft.resx">
       <DependentUpon>ShowApplicationDraft.cs</DependentUpon>
