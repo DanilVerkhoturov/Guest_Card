@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.CustomerLocationNameLabel = new System.Windows.Forms.Label();
             this.LocationDataLabel = new System.Windows.Forms.Label();
             this.CardPropertiesLabel = new System.Windows.Forms.Label();
@@ -59,7 +58,15 @@
             this.StateComboBox = new System.Windows.Forms.ComboBox();
             this.RegionComboBox = new System.Windows.Forms.ComboBox();
             this.NameTextBox = new System.Windows.Forms.TextBox();
-            this.ToolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.NameHelpLabel = new System.Windows.Forms.Label();
+            this.RegionHelpLabel = new System.Windows.Forms.Label();
+            this.StateHelpLabel = new System.Windows.Forms.Label();
+            this.CityHelpLabel = new System.Windows.Forms.Label();
+            this.StreetTypeHelpLabel = new System.Windows.Forms.Label();
+            this.StreetHelpLabel = new System.Windows.Forms.Label();
+            this.HouseCorpsBuildHelpLabel = new System.Windows.Forms.Label();
+            this.RoomBedsCountHelpLabel = new System.Windows.Forms.Label();
+            this.CardsCountHelpLabel = new System.Windows.Forms.Label();
             this.LocationInfoPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -117,6 +124,15 @@
             // 
             // LocationInfoPanel
             // 
+            this.LocationInfoPanel.Controls.Add(this.CardsCountHelpLabel);
+            this.LocationInfoPanel.Controls.Add(this.RoomBedsCountHelpLabel);
+            this.LocationInfoPanel.Controls.Add(this.HouseCorpsBuildHelpLabel);
+            this.LocationInfoPanel.Controls.Add(this.StreetHelpLabel);
+            this.LocationInfoPanel.Controls.Add(this.StreetTypeHelpLabel);
+            this.LocationInfoPanel.Controls.Add(this.CityHelpLabel);
+            this.LocationInfoPanel.Controls.Add(this.StateHelpLabel);
+            this.LocationInfoPanel.Controls.Add(this.RegionHelpLabel);
+            this.LocationInfoPanel.Controls.Add(this.NameHelpLabel);
             this.LocationInfoPanel.Controls.Add(this.EditCardsCountButton);
             this.LocationInfoPanel.Controls.Add(this.EditRoomBedsCountButton);
             this.LocationInfoPanel.Controls.Add(this.EditHouseCorpsBuildButton);
@@ -273,7 +289,7 @@
             this.SaveButton.FlatAppearance.BorderSize = 0;
             this.SaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SaveButton.ForeColor = System.Drawing.Color.White;
-            this.SaveButton.Location = new System.Drawing.Point(503, 631);
+            this.SaveButton.Location = new System.Drawing.Point(503, 630);
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(161, 38);
             this.SaveButton.TabIndex = 15;
@@ -283,6 +299,7 @@
             // 
             // CardsCountTextBox
             // 
+            this.CardsCountTextBox.Enabled = false;
             this.CardsCountTextBox.Location = new System.Drawing.Point(340, 571);
             this.CardsCountTextBox.Margin = new System.Windows.Forms.Padding(3, 8, 3, 3);
             this.CardsCountTextBox.Name = "CardsCountTextBox";
@@ -313,6 +330,7 @@
             // 
             // BedsCountTextBox
             // 
+            this.BedsCountTextBox.Enabled = false;
             this.BedsCountTextBox.Location = new System.Drawing.Point(343, 501);
             this.BedsCountTextBox.Margin = new System.Windows.Forms.Padding(20, 8, 3, 3);
             this.BedsCountTextBox.Name = "BedsCountTextBox";
@@ -321,6 +339,7 @@
             // 
             // RoomCountTextBox
             // 
+            this.RoomCountTextBox.Enabled = false;
             this.RoomCountTextBox.Location = new System.Drawing.Point(0, 501);
             this.RoomCountTextBox.Margin = new System.Windows.Forms.Padding(3, 8, 3, 3);
             this.RoomCountTextBox.Name = "RoomCountTextBox";
@@ -339,6 +358,7 @@
             // 
             // BuildTextBox
             // 
+            this.BuildTextBox.Enabled = false;
             this.BuildTextBox.Location = new System.Drawing.Point(456, 408);
             this.BuildTextBox.Margin = new System.Windows.Forms.Padding(21, 32, 3, 3);
             this.BuildTextBox.Name = "BuildTextBox";
@@ -347,6 +367,7 @@
             // 
             // CorpsTextBox
             // 
+            this.CorpsTextBox.Enabled = false;
             this.CorpsTextBox.Location = new System.Drawing.Point(226, 408);
             this.CorpsTextBox.Margin = new System.Windows.Forms.Padding(21, 32, 3, 3);
             this.CorpsTextBox.Name = "CorpsTextBox";
@@ -355,6 +376,7 @@
             // 
             // HouseTextBox
             // 
+            this.HouseTextBox.Enabled = false;
             this.HouseTextBox.Location = new System.Drawing.Point(0, 408);
             this.HouseTextBox.Margin = new System.Windows.Forms.Padding(3, 32, 3, 3);
             this.HouseTextBox.Name = "HouseTextBox";
@@ -365,6 +387,7 @@
             // 
             this.StreetComboBox.DisplayMember = "0";
             this.StreetComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
+            this.StreetComboBox.Enabled = false;
             this.StreetComboBox.FormattingEnabled = true;
             this.StreetComboBox.Items.AddRange(new object[] {
             "Регион"});
@@ -378,6 +401,7 @@
             // 
             this.StreetTypeComboBox.DisplayMember = "0";
             this.StreetTypeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
+            this.StreetTypeComboBox.Enabled = false;
             this.StreetTypeComboBox.FormattingEnabled = true;
             this.StreetTypeComboBox.Items.AddRange(new object[] {
             "Регион"});
@@ -391,6 +415,7 @@
             // 
             this.CityComboBox.DisplayMember = "0";
             this.CityComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
+            this.CityComboBox.Enabled = false;
             this.CityComboBox.FormattingEnabled = true;
             this.CityComboBox.Items.AddRange(new object[] {
             "Регион"});
@@ -404,6 +429,7 @@
             // 
             this.StateComboBox.DisplayMember = "0";
             this.StateComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
+            this.StateComboBox.Enabled = false;
             this.StateComboBox.FormattingEnabled = true;
             this.StateComboBox.Items.AddRange(new object[] {
             "Регион"});
@@ -417,6 +443,7 @@
             // 
             this.RegionComboBox.DisplayMember = "0";
             this.RegionComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
+            this.RegionComboBox.Enabled = false;
             this.RegionComboBox.FormattingEnabled = true;
             this.RegionComboBox.Items.AddRange(new object[] {
             "Регион"});
@@ -428,15 +455,128 @@
             // 
             // NameTextBox
             // 
+            this.NameTextBox.Enabled = false;
             this.NameTextBox.Location = new System.Drawing.Point(0, 0);
             this.NameTextBox.Name = "NameTextBox";
             this.NameTextBox.Size = new System.Drawing.Size(664, 33);
             this.NameTextBox.TabIndex = 0;
             // 
-            // ToolTip
+            // NameHelpLabel
             // 
-            this.ToolTip.BackColor = System.Drawing.Color.Transparent;
-            this.ToolTip.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(87)))), ((int)(((byte)(87)))));
+            this.NameHelpLabel.AutoEllipsis = true;
+            this.NameHelpLabel.AutoSize = true;
+            this.NameHelpLabel.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.NameHelpLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(87)))), ((int)(((byte)(87)))));
+            this.NameHelpLabel.Location = new System.Drawing.Point(683, 3);
+            this.NameHelpLabel.Name = "NameHelpLabel";
+            this.NameHelpLabel.Size = new System.Drawing.Size(139, 30);
+            this.NameHelpLabel.TabIndex = 25;
+            this.NameHelpLabel.Text = "Редактируйте поле и \r\nнажмите Сохранить";
+            this.NameHelpLabel.Visible = false;
+            // 
+            // RegionHelpLabel
+            // 
+            this.RegionHelpLabel.AutoEllipsis = true;
+            this.RegionHelpLabel.AutoSize = true;
+            this.RegionHelpLabel.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.RegionHelpLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(87)))), ((int)(((byte)(87)))));
+            this.RegionHelpLabel.Location = new System.Drawing.Point(683, 71);
+            this.RegionHelpLabel.Name = "RegionHelpLabel";
+            this.RegionHelpLabel.Size = new System.Drawing.Size(139, 30);
+            this.RegionHelpLabel.TabIndex = 26;
+            this.RegionHelpLabel.Text = "Редактируйте поле и \r\nнажмите Сохранить";
+            this.RegionHelpLabel.Visible = false;
+            // 
+            // StateHelpLabel
+            // 
+            this.StateHelpLabel.AutoEllipsis = true;
+            this.StateHelpLabel.AutoSize = true;
+            this.StateHelpLabel.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.StateHelpLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(87)))), ((int)(((byte)(87)))));
+            this.StateHelpLabel.Location = new System.Drawing.Point(683, 139);
+            this.StateHelpLabel.Name = "StateHelpLabel";
+            this.StateHelpLabel.Size = new System.Drawing.Size(139, 30);
+            this.StateHelpLabel.TabIndex = 27;
+            this.StateHelpLabel.Text = "Редактируйте поле и \r\nнажмите Сохранить";
+            this.StateHelpLabel.Visible = false;
+            // 
+            // CityHelpLabel
+            // 
+            this.CityHelpLabel.AutoEllipsis = true;
+            this.CityHelpLabel.AutoSize = true;
+            this.CityHelpLabel.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CityHelpLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(87)))), ((int)(((byte)(87)))));
+            this.CityHelpLabel.Location = new System.Drawing.Point(683, 207);
+            this.CityHelpLabel.Name = "CityHelpLabel";
+            this.CityHelpLabel.Size = new System.Drawing.Size(139, 30);
+            this.CityHelpLabel.TabIndex = 28;
+            this.CityHelpLabel.Text = "Редактируйте поле и \r\nнажмите Сохранить";
+            this.CityHelpLabel.Visible = false;
+            // 
+            // StreetTypeHelpLabel
+            // 
+            this.StreetTypeHelpLabel.AutoEllipsis = true;
+            this.StreetTypeHelpLabel.AutoSize = true;
+            this.StreetTypeHelpLabel.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.StreetTypeHelpLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(87)))), ((int)(((byte)(87)))));
+            this.StreetTypeHelpLabel.Location = new System.Drawing.Point(683, 275);
+            this.StreetTypeHelpLabel.Name = "StreetTypeHelpLabel";
+            this.StreetTypeHelpLabel.Size = new System.Drawing.Size(139, 30);
+            this.StreetTypeHelpLabel.TabIndex = 29;
+            this.StreetTypeHelpLabel.Text = "Редактируйте поле и \r\nнажмите Сохранить";
+            this.StreetTypeHelpLabel.Visible = false;
+            // 
+            // StreetHelpLabel
+            // 
+            this.StreetHelpLabel.AutoEllipsis = true;
+            this.StreetHelpLabel.AutoSize = true;
+            this.StreetHelpLabel.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.StreetHelpLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(87)))), ((int)(((byte)(87)))));
+            this.StreetHelpLabel.Location = new System.Drawing.Point(683, 343);
+            this.StreetHelpLabel.Name = "StreetHelpLabel";
+            this.StreetHelpLabel.Size = new System.Drawing.Size(139, 30);
+            this.StreetHelpLabel.TabIndex = 30;
+            this.StreetHelpLabel.Text = "Редактируйте поле и \r\nнажмите Сохранить";
+            this.StreetHelpLabel.Visible = false;
+            // 
+            // HouseCorpsBuildHelpLabel
+            // 
+            this.HouseCorpsBuildHelpLabel.AutoEllipsis = true;
+            this.HouseCorpsBuildHelpLabel.AutoSize = true;
+            this.HouseCorpsBuildHelpLabel.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.HouseCorpsBuildHelpLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(87)))), ((int)(((byte)(87)))));
+            this.HouseCorpsBuildHelpLabel.Location = new System.Drawing.Point(683, 411);
+            this.HouseCorpsBuildHelpLabel.Name = "HouseCorpsBuildHelpLabel";
+            this.HouseCorpsBuildHelpLabel.Size = new System.Drawing.Size(139, 30);
+            this.HouseCorpsBuildHelpLabel.TabIndex = 31;
+            this.HouseCorpsBuildHelpLabel.Text = "Редактируйте поле и \r\nнажмите Сохранить";
+            this.HouseCorpsBuildHelpLabel.Visible = false;
+            // 
+            // RoomBedsCountHelpLabel
+            // 
+            this.RoomBedsCountHelpLabel.AutoEllipsis = true;
+            this.RoomBedsCountHelpLabel.AutoSize = true;
+            this.RoomBedsCountHelpLabel.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.RoomBedsCountHelpLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(87)))), ((int)(((byte)(87)))));
+            this.RoomBedsCountHelpLabel.Location = new System.Drawing.Point(683, 504);
+            this.RoomBedsCountHelpLabel.Name = "RoomBedsCountHelpLabel";
+            this.RoomBedsCountHelpLabel.Size = new System.Drawing.Size(139, 30);
+            this.RoomBedsCountHelpLabel.TabIndex = 32;
+            this.RoomBedsCountHelpLabel.Text = "Редактируйте поле и \r\nнажмите Сохранить";
+            this.RoomBedsCountHelpLabel.Visible = false;
+            // 
+            // CardsCountHelpLabel
+            // 
+            this.CardsCountHelpLabel.AutoEllipsis = true;
+            this.CardsCountHelpLabel.AutoSize = true;
+            this.CardsCountHelpLabel.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CardsCountHelpLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(87)))), ((int)(((byte)(87)))));
+            this.CardsCountHelpLabel.Location = new System.Drawing.Point(426, 574);
+            this.CardsCountHelpLabel.Name = "CardsCountHelpLabel";
+            this.CardsCountHelpLabel.Size = new System.Drawing.Size(139, 30);
+            this.CardsCountHelpLabel.TabIndex = 33;
+            this.CardsCountHelpLabel.Text = "Редактируйте поле и \r\nнажмите Сохранить";
+            this.CardsCountHelpLabel.Visible = false;
             // 
             // LocationInfoForm
             // 
@@ -471,7 +611,6 @@
         private System.Windows.Forms.Panel LocationInfoPanel;
         private System.Windows.Forms.TextBox NameTextBox;
         private System.Windows.Forms.ComboBox RegionComboBox;
-        private System.Windows.Forms.ToolTip ToolTip;
         private System.Windows.Forms.ComboBox StreetComboBox;
         private System.Windows.Forms.ComboBox StreetTypeComboBox;
         private System.Windows.Forms.ComboBox CityComboBox;
@@ -495,5 +634,14 @@
         private System.Windows.Forms.Button EditRegionButton;
         private System.Windows.Forms.Button EditRoomBedsCountButton;
         private System.Windows.Forms.Button EditCardsCountButton;
+        private System.Windows.Forms.Label NameHelpLabel;
+        private System.Windows.Forms.Label CardsCountHelpLabel;
+        private System.Windows.Forms.Label RoomBedsCountHelpLabel;
+        private System.Windows.Forms.Label HouseCorpsBuildHelpLabel;
+        private System.Windows.Forms.Label StreetHelpLabel;
+        private System.Windows.Forms.Label StreetTypeHelpLabel;
+        private System.Windows.Forms.Label CityHelpLabel;
+        private System.Windows.Forms.Label StateHelpLabel;
+        private System.Windows.Forms.Label RegionHelpLabel;
     }
 }

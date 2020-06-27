@@ -15,7 +15,7 @@ namespace Admin_Panel_Hotel
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new AddEditApplication());
-            Application.Run(new LocationInfoForm());
+            Application.Run(new MainForm());
         }
     }
 }

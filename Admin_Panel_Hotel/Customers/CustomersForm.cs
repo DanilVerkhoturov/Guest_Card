@@ -14,9 +14,11 @@ namespace Admin_Panel_Hotel
 
             CustomersComboBox.SelectedIndex = 0;
             LocationComboBox.SelectedIndex = 0;
+
+            LoadCustomers();
         }
 
-        private void Customers_Shown(object sender, EventArgs e)
+        private void LoadCustomers()
         {
             if (Functions.Connection.State == ConnectionState.Open) // Подгрузка всех заказчиков, если соединение с БД открыто.
             {
