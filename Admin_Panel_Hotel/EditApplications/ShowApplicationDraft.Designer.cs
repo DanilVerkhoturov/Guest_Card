@@ -107,7 +107,7 @@
             this.PrintButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.PrintButton.Location = new System.Drawing.Point(890, 26);
             this.PrintButton.Name = "PrintButton";
-            this.PrintButton.Size = new System.Drawing.Size(67, 29);
+            this.PrintButton.Size = new System.Drawing.Size(111, 36);
             this.PrintButton.TabIndex = 13;
             this.PrintButton.Text = "Печать";
             this.PrintButton.UseVisualStyleBackColor = false;
@@ -122,9 +122,9 @@
             this.SaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SaveButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.SaveButton.ForeColor = System.Drawing.Color.White;
-            this.SaveButton.Location = new System.Drawing.Point(689, 568);
+            this.SaveButton.Location = new System.Drawing.Point(651, 579);
             this.SaveButton.Name = "SaveButton";
-            this.SaveButton.Size = new System.Drawing.Size(81, 29);
+            this.SaveButton.Size = new System.Drawing.Size(143, 44);
             this.SaveButton.TabIndex = 14;
             this.SaveButton.Text = "Сохранить";
             this.SaveButton.UseVisualStyleBackColor = false;
@@ -153,9 +153,9 @@
             this.AcceptButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AcceptButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.AcceptButton.ForeColor = System.Drawing.Color.White;
-            this.AcceptButton.Location = new System.Drawing.Point(786, 568);
+            this.AcceptButton.Location = new System.Drawing.Point(800, 584);
             this.AcceptButton.Name = "AcceptButton";
-            this.AcceptButton.Size = new System.Drawing.Size(165, 29);
+            this.AcceptButton.Size = new System.Drawing.Size(176, 34);
             this.AcceptButton.TabIndex = 16;
             this.AcceptButton.Text = "Отправить заказчику";
             this.AcceptButton.UseVisualStyleBackColor = false;
@@ -173,7 +173,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(926, 68);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(25, 25);
+            this.button1.Size = new System.Drawing.Size(36, 25);
             this.button1.TabIndex = 22;
             this.button1.UseVisualStyleBackColor = false;
             // 
@@ -187,9 +187,9 @@
             this.EditButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.EditButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
             this.EditButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EditButton.Location = new System.Drawing.Point(855, 26);
+            this.EditButton.Location = new System.Drawing.Point(755, 25);
             this.EditButton.Name = "EditButton";
-            this.EditButton.Size = new System.Drawing.Size(29, 29);
+            this.EditButton.Size = new System.Drawing.Size(73, 37);
             this.EditButton.TabIndex = 12;
             this.EditButton.UseVisualStyleBackColor = false;
             this.EditButton.Click += new System.EventHandler(this.EditButton_Click);
@@ -237,7 +237,7 @@
             dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.GridTable.DefaultCellStyle = dataGridViewCellStyle8;
             this.GridTable.EnableHeadersVisualStyles = false;
-            this.GridTable.Location = new System.Drawing.Point(12, 104);
+            this.GridTable.Location = new System.Drawing.Point(26, 120);
             this.GridTable.Name = "GridTable";
             this.GridTable.ReadOnly = true;
             this.GridTable.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
@@ -258,7 +258,7 @@
             dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.ControlText;
             this.GridTable.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.GridTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.GridTable.Size = new System.Drawing.Size(939, 426);
+            this.GridTable.Size = new System.Drawing.Size(894, 481);
             this.GridTable.TabIndex = 23;
             // 
             // Column1
@@ -342,8 +342,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(969, 711);
-            this.Controls.Add(this.GridTable);
+            this.ClientSize = new System.Drawing.Size(1013, 894);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.AcceptButton);
             this.Controls.Add(this.NameApplication);
@@ -353,6 +352,9 @@
             this.Controls.Add(this.DateAplication);
             this.Controls.Add(this.NameCustomer);
             this.Controls.Add(this.NewApplicationsLabel);
+            this.Controls.Add(this.GridTable);
+            this.MaximumSize = new System.Drawing.Size(1029, 933);
+            this.MinimumSize = new System.Drawing.Size(1029, 933);
             this.Name = "ShowApplicationDraft";
             ((System.ComponentModel.ISupportInitialize)(this.GridTable)).EndInit();
             this.ResumeLayout(false);

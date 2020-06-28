@@ -15,8 +15,8 @@ namespace Admin_Panel_Hotel
         public ShowApplicationDraft()
         {
             InitializeComponent();
-            this.GridTable.Rows.Add("1", "Иванов Иван Иванович", "ННГ/Цех 136/112", "06.06.2020", "06.06.2020");
-            this.GridTable.Rows.Add("2", "Петров Петр Петрович", "ННГ/Цех 136/113", "06.06.2020", "06.06.2020");
+            this.GridTable.Rows.Add("ГПН", "06.06.2020");
+            this.GridTable.Rows.Add("ННГ", "06.06.2020");
         }
 
         private void NewApplicationsLabel_Click(object sender, EventArgs e)
