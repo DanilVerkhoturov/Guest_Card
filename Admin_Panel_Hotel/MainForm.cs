@@ -8,6 +8,7 @@ namespace Admin_Panel_Hotel
     public partial class MainForm : Form
     {
         public static Panel ContP = null;
+        private static Button CurrentButton = null;
 
         public MainForm()
         {
@@ -15,7 +16,7 @@ namespace Admin_Panel_Hotel
 
             CustomizeDesign();
             ContP = ContentPanel;
-            Functions.Connection.StateChange += MySQLConnectionStateChange;
+            Functions.Connection.StateChange += Functions.MySQLConnectionStateChange;
         }
 
         /// <summary>
@@ -23,83 +24,162 @@ namespace Admin_Panel_Hotel
         /// </summary>
         private void CustomizeDesign()
         {
-            CustomersSubMenu.Visible = false;
-            ApplicationsSubMenu.Visible = false;
-            CardSubMenu.Visible = false;
-        } 
-
-        /// <summary>
-        /// Скрыть подменю.
-        /// </summary>
-        private void HideSubMenu()
-        {
-            if (CustomersSubMenu.Visible == true)
-                CustomersSubMenu.Visible = false;
-            
-            if (ApplicationsSubMenu.Visible == true)
-                ApplicationsSubMenu.Visible = false;
-            
-            if (CardSubMenu.Visible == true)
-                CardSubMenu.Visible = false;
+            CustomersPanel.Visible = false;
+            ApplicationsPanel.Visible = false;
+            CardsPanel.Visible = false;
         }
 
         /// <summary>
-        /// Отобразить подменю.
+        /// Обработка открытия страниц из подменю.
         /// </summary>
-        /// <param name="subMenu">Объект подменю.</param>
-        private void ShowSubMenu(Panel subMenu)
+        /// <param name="button">Объект нажатой кнопки.</param>
+        /// <param name="subMenu">Объект подменю. Указывать только если была нажата кнопка, отвечающая за разворачивание подменю! По умолчанию - null.</param>
+        private void SubMenuProcessing(Button button, Panel subMenu = null)
         {
-            if (subMenu.Visible == false)
+            if (CurrentButton == null)
             {
-                HideSubMenu();
-                subMenu.Visible = true;
+                button.ForeColor = MyColors._00A0E3();
+                CurrentButton = button;
             }
             else
             {
-                subMenu.Visible = false;
+                if (button != CurrentButton)
+                {
+                    CurrentButton.ForeColor = MyColors._FFFFFF();
+                    button.ForeColor = MyColors._00A0E3();
+                    CurrentButton = button;
+                }
+            }
+
+            if (subMenu != null)
+            {
+                if (subMenu.Visible)
+                {
+                    subMenu.Visible = false;
+                }
+                else
+                {
+                    if (CustomersPanel.Visible)
+                    {
+                        CustomersPanel.Visible = false;
+                        CustomersButton.ForeColor = MyColors._FFFFFF();
+                        MyCustomersButton.ForeColor = MyColors._FFFFFF();
+                        AddCustomerButton.ForeColor = MyColors._FFFFFF();
+                    }
+
+                    if (ApplicationsPanel.Visible)
+                    {
+                        ApplicationsPanel.Visible = false;
+                        ApplicationsButton.ForeColor = MyColors._FFFFFF();
+                        NewApplicationsButton.ForeColor = MyColors._FFFFFF();
+                        CurrentApplicationsButton.ForeColor = MyColors._FFFFFF();
+                        AddApplicationButton.ForeColor = MyColors._FFFFFF();
+                        HistoryApplicationsButton.ForeColor = MyColors._FFFFFF();
+                        DraftsButton.ForeColor = MyColors._FFFFFF();
+                    }
+
+                    if (CardsPanel.Visible)
+                    {
+                        CardsPanel.Visible = false;
+                        AllCardsButton.ForeColor = MyColors._FFFFFF();
+                    }
+
+                    subMenu.Visible = true;
+                }
             }
         }
 
-        private void AddCustomerButton_Click(object sender, EventArgs e) => Functions.OpenChildForm(new AddCustomer(), ContentPanel);
+        #region Заказчики
 
-        private void NewApplicationsButton_Click(object sender, EventArgs e) => Functions.OpenChildForm(new NewApplications(), ContentPanel);
+        private void CustomersButton_Click(object sender, EventArgs e)
+        {
+            SubMenuProcessing(CustomersButton, CustomersPanel);
+        }
 
-        private void AddApplicationButton_Click(object sender, EventArgs e) => Functions.OpenChildForm(new AddApplication(), ContentPanel);
+        private void AddCustomerButton_Click(object sender, EventArgs e)
+        {
+            SubMenuProcessing(AddCustomerButton);
+            Functions.OpenChildForm(new AddCustomer(), ContentPanel);
+        }
 
-        private void CurrentApplicationsButton_Click(object sender, EventArgs e) => Functions.OpenChildForm(new CurrentApplications(), ContentPanel);
+        private void MyCustomersButton_Click(object sender, EventArgs e)
+        {
+            SubMenuProcessing(MyCustomersButton);
+            Functions.OpenChildForm(new CustomersForm(), ContentPanel);
+        }
 
-        private void Customers_Click(object sender, EventArgs e) => ShowSubMenu(CustomersSubMenu);
+        #endregion
 
-        private void Applications_Click(object sender, EventArgs e) => ShowSubMenu(ApplicationsSubMenu);
+        #region Заявки
 
-        private void DraftButton_Click(object sender, EventArgs e) => Functions.OpenChildForm(new DraftApplications(), ContentPanel);
+        private void ApplicationsButton_Click(object sender, EventArgs e)
+        {
+            SubMenuProcessing(ApplicationsButton, ApplicationsPanel);
+        }
 
-        private void HistoryApplicationsButton_Click(object sender, EventArgs e) => Functions.OpenChildForm(new HistoryApplications(), ContentPanel);
+        private void NewApplicationsButton_Click(object sender, EventArgs e)
+        {
+            SubMenuProcessing(NewApplicationsButton);
+            Functions.OpenChildForm(new NewApplications(), ContentPanel);
+        }
 
-        private void AllCard_Click(object sender, EventArgs e) => Functions.OpenChildForm(new AllCard(), ContentPanel);
+        private void CurrentApplicationsButton_Click(object sender, EventArgs e)
+        {
+            SubMenuProcessing(CurrentApplicationsButton);
+            Functions.OpenChildForm(new CurrentApplications(), ContentPanel);
+        }
 
-        private void AddCard_Click(object sender, EventArgs e) => Functions.OpenChildForm(new AddCard(), ContentPanel);
+        private void AddApplicationButton_Click(object sender, EventArgs e)
+        {
+            SubMenuProcessing(AddApplicationButton);
+            Functions.OpenChildForm(new AddApplication(), ContentPanel);
+        }
 
-        private void MovingCard_Click(object sender, EventArgs e) => Functions.OpenChildForm(new MovingGards(), ContentPanel);
+        private void HistoryApplicationsButton_Click(object sender, EventArgs e)
+        {
+            SubMenuProcessing(HistoryApplicationsButton);
+            Functions.OpenChildForm(new HistoryApplications(), ContentPanel);
+        }
 
-        private void CardButton_Click(object sender, EventArgs e) => ShowSubMenu(CardSubMenu);
+        private void DraftsButton_Click(object sender, EventArgs e)
+        {
+            SubMenuProcessing(DraftsButton);
+            Functions.OpenChildForm(new DraftApplications(), ContentPanel);
+        }
+
+        #endregion
+
+        #region Карты
+
+        private void CardsButton_Click(object sender, EventArgs e)
+        {
+            SubMenuProcessing(CardsButton, CardsPanel);
+        }
+
+        private void AllCardsButton_Click(object sender, EventArgs e)
+        {
+            SubMenuProcessing(AllCardsButton);
+            Functions.OpenChildForm(new AllCard(), ContentPanel);
+        }
+
+        private void AddCardsButton_Click(object sender, EventArgs e)
+        {
+            SubMenuProcessing(AddCardsButton);
+            Functions.OpenChildForm(new AddCard(), ContentPanel);
+        }
+
+        private void MovingCardsButton_Click(object sender, EventArgs e)
+        {
+            SubMenuProcessing(MovingCardsButton);
+            Functions.OpenChildForm(new MovingGards(), ContentPanel);
+        }
+
+        #endregion
 
         private void MainForm_Shown(object sender, EventArgs e)
         {
             // Если соединение с БД закрыто, то подключаемся ещё раз.
             if (Functions.Connection.State == ConnectionState.Closed)
-                Functions.Connection.Open();
-        }
-
-        /// <summary>
-        /// Обработка изменения статуса подключения к БД.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void MySQLConnectionStateChange(object sender, StateChangeEventArgs e)
-        {
-            // Если подключение к БД стало закрытым, то открываем его.
-            if (e.CurrentState == ConnectionState.Closed)
                 Functions.Connection.Open();
         }
 
@@ -111,7 +191,5 @@ namespace Admin_Panel_Hotel
         }
 
         private void MainForm_Load(object sender, EventArgs e) => Functions.OpenChildForm(new NewApplications(), ContentPanel);
-
-        private void MyCustomersButton_Click(object sender, EventArgs e) => Functions.OpenChildForm(new CustomersForm(), ContentPanel);
     }
 }

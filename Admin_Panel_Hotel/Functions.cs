@@ -1,5 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
+using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -25,6 +26,18 @@ namespace Admin_Panel_Hotel
         static Form ActiveForm = null;
 
         #endregion
+
+        /// <summary>
+        /// Обработка изменения статуса подключения к БД.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public static void MySQLConnectionStateChange(object sender, StateChangeEventArgs e)
+        {
+            // Если подключение к БД стало закрытым, то открываем его.
+            if (e.CurrentState == ConnectionState.Closed)
+                Functions.Connection.Open();
+        }
 
         /// <summary>
         /// Открыть дочернюю форму на форме.
