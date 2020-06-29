@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Admin_Panel_Hotel.Applications;
+using System;
 using System.Windows.Forms;
 
 namespace Admin_Panel_Hotel
