@@ -156,16 +156,16 @@ namespace Admin_Panel_Hotel
         /// </summary>
         /// <param name="dgv">Объект таблицы для обработки.</param>
         /// <param name="helpTexts">Тексты для подсказок столбцов (вписать попорядку для каждого столбца). Если текст для столбца не нужен - писать null!</param>
-        public static void NewlineProcessing(DataGridView dgv, string[] helpTexts)
-        {
+       /// public static void NewlineProcessing(DataGridView dgv, string[] helpTexts)
+       /// {
             
-            for (int c = 0; c < dgv.Columns.Count; c++)
-                dgv.Columns[c].ToolTipText = helpTexts[c];
+           /// for (int c = 0; c < dgv.Columns.Count; c++)
+                ///dgv.Columns[c].ToolTipText = helpTexts[c];
 
-            dgv.RowsAdded += new DataGridViewRowsAddedEventHandler(RowsAdded);
-            dgv.CellEnter += new DataGridViewCellEventHandler(CellEnter);
-            dgv.CellLeave += new DataGridViewCellEventHandler(CellLeave);
-        }
+           /// dgv.RowsAdded += new DataGridViewRowsAddedEventHandler(RowsAdded);
+           /// dgv.CellEnter += new DataGridViewCellEventHandler(CellEnter);
+          ///  dgv.CellLeave += new DataGridViewCellEventHandler(CellLeave);
+       /// }
 
         /// <summary>
         /// Обработка события добавления новой строки.

@@ -9,7 +9,7 @@ namespace Admin_Panel_Hotel
         {
             InitializeComponent();
 
-            Functions.NewlineProcessing(UsersDataGridView, new string[] { "1", "Введите ФИО", "Введите цех", "Введите табельный номер", "Введите должность", "Введите дату заезда", "Введите дату выезда" });
+           /// Functions.NewlineProcessing(UsersDataGridView, new string[] { "1", "Введите ФИО", "Введите цех", "Введите табельный номер", "Введите должность", "Введите дату заезда", "Введите дату выезда" });
         }
 
         private void NewApplication_Click(object sender, EventArgs e)

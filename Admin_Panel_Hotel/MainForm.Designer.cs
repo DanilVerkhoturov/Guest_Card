@@ -99,7 +99,7 @@
             this.MovingCardsButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.MovingCardsButton.FlatAppearance.BorderSize = 0;
             this.MovingCardsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MovingCardsButton.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.MovingCardsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.MovingCardsButton.ForeColor = System.Drawing.Color.White;
             this.MovingCardsButton.Location = new System.Drawing.Point(0, 86);
             this.MovingCardsButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
@@ -118,7 +118,7 @@
             this.AddCardsButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.AddCardsButton.FlatAppearance.BorderSize = 0;
             this.AddCardsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddCardsButton.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AddCardsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.AddCardsButton.ForeColor = System.Drawing.Color.White;
             this.AddCardsButton.Location = new System.Drawing.Point(0, 43);
             this.AddCardsButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
@@ -137,7 +137,7 @@
             this.AllCardsButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.AllCardsButton.FlatAppearance.BorderSize = 0;
             this.AllCardsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AllCardsButton.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AllCardsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.AllCardsButton.ForeColor = System.Drawing.Color.White;
             this.AllCardsButton.Location = new System.Drawing.Point(0, 0);
             this.AllCardsButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
@@ -156,7 +156,7 @@
             this.CardsButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.CardsButton.FlatAppearance.BorderSize = 0;
             this.CardsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CardsButton.Font = new System.Drawing.Font("Roboto", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CardsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CardsButton.ForeColor = System.Drawing.Color.White;
             this.CardsButton.Location = new System.Drawing.Point(0, 478);
             this.CardsButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
@@ -193,7 +193,7 @@
             this.NewCount.AutoSize = true;
             this.NewCount.BackColor = System.Drawing.Color.Transparent;
             this.NewCount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.NewCount.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.NewCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.NewCount.ForeColor = System.Drawing.Color.Red;
             this.NewCount.Location = new System.Drawing.Point(153, 7);
             this.NewCount.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
@@ -210,7 +210,7 @@
             this.DraftCount.AutoSize = true;
             this.DraftCount.BackColor = System.Drawing.Color.Transparent;
             this.DraftCount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DraftCount.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DraftCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.DraftCount.ForeColor = System.Drawing.Color.Red;
             this.DraftCount.Location = new System.Drawing.Point(198, 179);
             this.DraftCount.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
@@ -225,7 +225,7 @@
             this.DraftsButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.DraftsButton.FlatAppearance.BorderSize = 0;
             this.DraftsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DraftsButton.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DraftsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.DraftsButton.ForeColor = System.Drawing.Color.White;
             this.DraftsButton.Location = new System.Drawing.Point(0, 172);
             this.DraftsButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
@@ -244,7 +244,7 @@
             this.HistoryApplicationsButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.HistoryApplicationsButton.FlatAppearance.BorderSize = 0;
             this.HistoryApplicationsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.HistoryApplicationsButton.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.HistoryApplicationsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.HistoryApplicationsButton.ForeColor = System.Drawing.Color.White;
             this.HistoryApplicationsButton.Location = new System.Drawing.Point(0, 129);
             this.HistoryApplicationsButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
@@ -263,7 +263,7 @@
             this.AddApplicationButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.AddApplicationButton.FlatAppearance.BorderSize = 0;
             this.AddApplicationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddApplicationButton.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AddApplicationButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.AddApplicationButton.ForeColor = System.Drawing.Color.White;
             this.AddApplicationButton.Location = new System.Drawing.Point(0, 86);
             this.AddApplicationButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
@@ -282,7 +282,7 @@
             this.CurrentApplicationsButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.CurrentApplicationsButton.FlatAppearance.BorderSize = 0;
             this.CurrentApplicationsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CurrentApplicationsButton.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CurrentApplicationsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CurrentApplicationsButton.ForeColor = System.Drawing.Color.White;
             this.CurrentApplicationsButton.Location = new System.Drawing.Point(0, 43);
             this.CurrentApplicationsButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
@@ -301,7 +301,7 @@
             this.NewApplicationsButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.NewApplicationsButton.FlatAppearance.BorderSize = 0;
             this.NewApplicationsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.NewApplicationsButton.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.NewApplicationsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.NewApplicationsButton.ForeColor = System.Drawing.Color.White;
             this.NewApplicationsButton.Location = new System.Drawing.Point(0, 0);
             this.NewApplicationsButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
@@ -320,7 +320,7 @@
             this.ApplicationsButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.ApplicationsButton.FlatAppearance.BorderSize = 0;
             this.ApplicationsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ApplicationsButton.Font = new System.Drawing.Font("Roboto", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ApplicationsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ApplicationsButton.ForeColor = System.Drawing.Color.White;
             this.ApplicationsButton.Location = new System.Drawing.Point(0, 200);
             this.ApplicationsButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
@@ -350,7 +350,7 @@
             this.AddCustomerButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.AddCustomerButton.FlatAppearance.BorderSize = 0;
             this.AddCustomerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddCustomerButton.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AddCustomerButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.AddCustomerButton.ForeColor = System.Drawing.Color.White;
             this.AddCustomerButton.Location = new System.Drawing.Point(0, 43);
             this.AddCustomerButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
@@ -369,7 +369,7 @@
             this.MyCustomersButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.MyCustomersButton.FlatAppearance.BorderSize = 0;
             this.MyCustomersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MyCustomersButton.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.MyCustomersButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.MyCustomersButton.ForeColor = System.Drawing.Color.White;
             this.MyCustomersButton.Location = new System.Drawing.Point(0, 0);
             this.MyCustomersButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
@@ -388,7 +388,7 @@
             this.CustomersButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.CustomersButton.FlatAppearance.BorderSize = 0;
             this.CustomersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CustomersButton.Font = new System.Drawing.Font("Roboto", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CustomersButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CustomersButton.ForeColor = System.Drawing.Color.White;
             this.CustomersButton.Location = new System.Drawing.Point(0, 52);
             this.CustomersButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
@@ -491,7 +491,7 @@
             this.Controls.Add(this.ContentPanel);
             this.Controls.Add(this.TopPanel);
             this.Controls.Add(this.LeftMenu);
-            this.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.MinimumSize = new System.Drawing.Size(1440, 1024);

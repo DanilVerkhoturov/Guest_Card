@@ -15,8 +15,8 @@ namespace Admin_Panel_Hotel
         public ShowApplicationDraft()
         {
             InitializeComponent();
-            this.GridTable.Rows.Add("ГПН", "06.06.2020");
-            this.GridTable.Rows.Add("ННГ", "06.06.2020");
+            this.UsersDataGridView.Rows.Add("ГПН", "06.06.2020");
+            this.UsersDataGridView.Rows.Add("ННГ", "06.06.2020");
         }
 
         private void NewApplicationsLabel_Click(object sender, EventArgs e)
@@ -41,10 +41,10 @@ namespace Admin_Panel_Hotel
 
         private void EditButton_Click(object sender, EventArgs e)
         {
-            GridTable.AllowUserToAddRows = true;
-            GridTable.AllowUserToDeleteRows = true;
-            GridTable.AllowUserToResizeColumns = true;
-            GridTable.ReadOnly = false;
+            UsersDataGridView.AllowUserToAddRows = true;
+            UsersDataGridView.AllowUserToDeleteRows = true;
+            UsersDataGridView.AllowUserToResizeColumns = true;
+            UsersDataGridView.ReadOnly = false;
         }
 
         private void GridTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
