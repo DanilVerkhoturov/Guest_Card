@@ -101,17 +101,17 @@
     <Compile Include="Applications\HistoryApplications.Designer.cs">
       <DependentUpon>HistoryApplications.cs</DependentUpon>
     </Compile>
-    <Compile Include="Card\AddCard.cs">
+    <Compile Include="Card\AddCards.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Card\AddCard.Designer.cs">
-      <DependentUpon>AddCard.cs</DependentUpon>
+    <Compile Include="Card\AddCards.Designer.cs">
+      <DependentUpon>AddCards.cs</DependentUpon>
     </Compile>
-    <Compile Include="Card\AllCard.cs">
+    <Compile Include="Card\AllCards.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Card\AllCard.Designer.cs">
-      <DependentUpon>AllCard.cs</DependentUpon>
+    <Compile Include="Card\AllCards.Designer.cs">
+      <DependentUpon>AllCards.cs</DependentUpon>
     </Compile>
     <Compile Include="Card\MovingGards.cs">
       <SubType>Form</SubType>
@@ -205,11 +205,11 @@
     <EmbeddedResource Include="Applications\InfoUserForm.resx">
       <DependentUpon>InfoUserForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Card\AddCard.resx">
-      <DependentUpon>AddCard.cs</DependentUpon>
+    <EmbeddedResource Include="Card\AddCards.resx">
+      <DependentUpon>AddCards.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Card\AllCard.resx">
-      <DependentUpon>AllCard.cs</DependentUpon>
+    <EmbeddedResource Include="Card\AllCards.resx">
+      <DependentUpon>AllCards.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Card\MovingGards.resx">
       <DependentUpon>MovingGards.cs</DependentUpon>

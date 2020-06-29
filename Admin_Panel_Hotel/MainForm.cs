@@ -1,5 +1,4 @@
-﻿using Admin_Panel_Hotel.Applications;
-using Admin_Panel_Hotel.Card;
+﻿using Admin_Panel_Hotel.Card;
 using System;
 using System.Data;
 using System.Windows.Forms;
@@ -163,13 +162,13 @@ namespace Admin_Panel_Hotel
         private void AllCardsButton_Click(object sender, EventArgs e)
         {
             SubMenuProcessing(AllCardsButton);
-            Functions.OpenChildForm(new AllCard(), ContentPanel);
+            Functions.OpenChildForm(new AllCards(), ContentPanel);
         }
 
         private void AddCardsButton_Click(object sender, EventArgs e)
         {
             SubMenuProcessing(AddCardsButton);
-            Functions.OpenChildForm(new AddCard(), ContentPanel);
+            Functions.OpenChildForm(new AddCards(), ContentPanel);
         }
 
         private void MovingCardsButton_Click(object sender, EventArgs e)
