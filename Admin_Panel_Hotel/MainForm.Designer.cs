@@ -416,7 +416,6 @@
             // ContentPanel
             // 
             this.ContentPanel.AutoSize = true;
-            this.ContentPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ContentPanel.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ContentPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ContentPanel.Controls.Add(this.pictureBox1);

@@ -8,7 +8,7 @@ namespace Admin_Panel_Hotel
     public partial class MainForm : Form
     {
         public static Panel ContP = null;
-        private static Button CurrentButton = null;
+        private static Button CurrentSubButton = null;
 
         public MainForm()
         {
@@ -36,18 +36,18 @@ namespace Admin_Panel_Hotel
         /// <param name="subMenu">Объект подменю. Указывать только если была нажата кнопка, отвечающая за разворачивание подменю! По умолчанию - null.</param>
         private void SubMenuProcessing(Button button, Panel subMenu = null)
         {
-            if (CurrentButton == null)
+            if (CurrentSubButton == null)
             {
                 button.ForeColor = MyColors._00A0E3();
-                CurrentButton = button;
+                CurrentSubButton = button;
             }
             else
             {
-                if (button != CurrentButton)
+                if (button != CurrentSubButton)
                 {
-                    CurrentButton.ForeColor = MyColors._FFFFFF();
+                    CurrentSubButton.ForeColor = MyColors._FFFFFF();
                     button.ForeColor = MyColors._00A0E3();
-                    CurrentButton = button;
+                    CurrentSubButton = button;
                 }
             }
 
@@ -93,6 +93,9 @@ namespace Admin_Panel_Hotel
 
         private void CustomersButton_Click(object sender, EventArgs e)
         {
+            CustomersButton.ForeColor = MyColors._00A0E3();
+            ApplicationsButton.ForeColor = MyColors._FFFFFF();
+            CardsButton.ForeColor = MyColors._FFFFFF();
             SubMenuProcessing(CustomersButton, CustomersPanel);
         }
 
