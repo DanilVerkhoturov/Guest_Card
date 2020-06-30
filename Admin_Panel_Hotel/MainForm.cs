@@ -175,7 +175,7 @@ namespace Admin_Panel_Hotel
         private void MovingCardsButton_Click(object sender, EventArgs e)
         {
             SubMenuProcessing(MovingCardsButton);
-            Functions.OpenChildForm(new MovingGards(), ContentPanel);
+            Functions.OpenChildForm(new MovingCards(), ContentPanel);
         }
 
         #endregion

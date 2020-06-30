@@ -87,7 +87,7 @@
             this.CardsPanel.Controls.Add(this.AddCardsButton);
             this.CardsPanel.Controls.Add(this.AllCardsButton);
             this.CardsPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.CardsPanel.Location = new System.Drawing.Point(0, 536);
+            this.CardsPanel.Location = new System.Drawing.Point(0, 534);
             this.CardsPanel.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.CardsPanel.Name = "CardsPanel";
             this.CardsPanel.Size = new System.Drawing.Size(393, 140);
@@ -158,7 +158,7 @@
             this.CardsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CardsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CardsButton.ForeColor = System.Drawing.Color.White;
-            this.CardsButton.Location = new System.Drawing.Point(0, 478);
+            this.CardsButton.Location = new System.Drawing.Point(0, 476);
             this.CardsButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.CardsButton.Name = "CardsButton";
             this.CardsButton.Padding = new System.Windows.Forms.Padding(21, 0, 0, 0);
@@ -179,7 +179,7 @@
             this.ApplicationsPanel.Controls.Add(this.CurrentApplicationsButton);
             this.ApplicationsPanel.Controls.Add(this.NewApplicationsButton);
             this.ApplicationsPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ApplicationsPanel.Location = new System.Drawing.Point(0, 258);
+            this.ApplicationsPanel.Location = new System.Drawing.Point(0, 256);
             this.ApplicationsPanel.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.ApplicationsPanel.Name = "ApplicationsPanel";
             this.ApplicationsPanel.Size = new System.Drawing.Size(393, 220);
@@ -322,7 +322,7 @@
             this.ApplicationsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ApplicationsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ApplicationsButton.ForeColor = System.Drawing.Color.White;
-            this.ApplicationsButton.Location = new System.Drawing.Point(0, 200);
+            this.ApplicationsButton.Location = new System.Drawing.Point(0, 198);
             this.ApplicationsButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.ApplicationsButton.Name = "ApplicationsButton";
             this.ApplicationsButton.Padding = new System.Windows.Forms.Padding(21, 0, 0, 0);
@@ -338,7 +338,7 @@
             this.CustomersPanel.Controls.Add(this.AddCustomerButton);
             this.CustomersPanel.Controls.Add(this.MyCustomersButton);
             this.CustomersPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.CustomersPanel.Location = new System.Drawing.Point(0, 110);
+            this.CustomersPanel.Location = new System.Drawing.Point(0, 108);
             this.CustomersPanel.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.CustomersPanel.Name = "CustomersPanel";
             this.CustomersPanel.Size = new System.Drawing.Size(393, 90);
@@ -390,7 +390,7 @@
             this.CustomersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CustomersButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CustomersButton.ForeColor = System.Drawing.Color.White;
-            this.CustomersButton.Location = new System.Drawing.Point(0, 52);
+            this.CustomersButton.Location = new System.Drawing.Point(0, 50);
             this.CustomersButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.CustomersButton.Name = "CustomersButton";
             this.CustomersButton.Padding = new System.Windows.Forms.Padding(21, 0, 0, 0);
@@ -410,7 +410,7 @@
             this.PanelLogo.Location = new System.Drawing.Point(0, 0);
             this.PanelLogo.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.PanelLogo.Name = "PanelLogo";
-            this.PanelLogo.Size = new System.Drawing.Size(393, 52);
+            this.PanelLogo.Size = new System.Drawing.Size(393, 50);
             this.PanelLogo.TabIndex = 0;
             // 
             // ContentPanel
