@@ -113,11 +113,11 @@
     <Compile Include="Card\AllCards.Designer.cs">
       <DependentUpon>AllCards.cs</DependentUpon>
     </Compile>
-    <Compile Include="Card\MovingGards.cs">
+    <Compile Include="Card\MovingCards.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Card\MovingGards.Designer.cs">
-      <DependentUpon>MovingGards.cs</DependentUpon>
+    <Compile Include="Card\MovingCards.Designer.cs">
+      <DependentUpon>MovingCards.cs</DependentUpon>
     </Compile>
     <Compile Include="Customers\AddCustomer.cs">
       <SubType>Form</SubType>
@@ -223,8 +223,8 @@
     <EmbeddedResource Include="Card\AllCards.resx">
       <DependentUpon>AllCards.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Card\MovingGards.resx">
-      <DependentUpon>MovingGards.cs</DependentUpon>
+    <EmbeddedResource Include="Card\MovingCards.resx">
+      <DependentUpon>MovingCards.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Customers\AddCustomer.resx">
       <DependentUpon>AddCustomer.cs</DependentUpon>
