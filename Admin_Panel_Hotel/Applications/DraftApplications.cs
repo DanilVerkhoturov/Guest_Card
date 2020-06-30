@@ -22,12 +22,12 @@ namespace Admin_Panel_Hotel
 
         private void ApplicationsNameTextBox2_TextChanged(object sender, EventArgs e)
         {
-            Functions.OpenChildForm(new ShowApplication(), MainForm.ContP);
+            Functions.OpenChildForm(new ShowApplicationDraft(), MainForm.ContP);
         }
 
         private void ApplicationsNameTextBox1_TextChanged(object sender, EventArgs e)
         {
-            Functions.OpenChildForm(new ShowApplication(), MainForm.ContP);
+            Functions.OpenChildForm(new ShowApplicationDraft(), MainForm.ContP);
         }
     }
 }

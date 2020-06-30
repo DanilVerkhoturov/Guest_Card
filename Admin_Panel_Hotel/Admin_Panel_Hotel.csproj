@@ -149,6 +149,18 @@
     <Compile Include="Customers\LocationInfoForm.Designer.cs">
       <DependentUpon>LocationInfoForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditApplications\ShowApplicationHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditApplications\ShowApplicationHistory.Designer.cs">
+      <DependentUpon>ShowApplicationHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditApplications\ShowApplicationNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditApplications\ShowApplicationNew.Designer.cs">
+      <DependentUpon>ShowApplicationNew.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditApplications\ShowApplicationDraft.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -228,6 +240,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Customers\LocationInfoForm.resx">
       <DependentUpon>LocationInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditApplications\ShowApplicationHistory.resx">
+      <DependentUpon>ShowApplicationHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditApplications\ShowApplicationNew.resx">
+      <DependentUpon>ShowApplicationNew.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditApplications\ShowApplicationDraft.resx">
       <DependentUpon>ShowApplicationDraft.cs</DependentUpon>
