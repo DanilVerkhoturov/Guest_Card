@@ -15,8 +15,8 @@ namespace Admin_Panel_Hotel
         public ShowApplicationDraft()
         {
             InitializeComponent();
-            this.UsersDataGridView.Rows.Add("ГПН", "06.06.2020");
-            this.UsersDataGridView.Rows.Add("ННГ", "06.06.2020");
+            this.UsersDataGridView.Rows.Add("1", "Иванов Иван Иванович", "58585857", "Электик", "ННГ", "06.06.2020", "06.06.2020", "мясояха");
+            this.UsersDataGridView.Rows.Add("2", "Петров Петр Петрович", "58585857", "Электик", "ННГ", "06.06.2020", "06.06.2020","мясояха");
         }
 
         private void NewApplicationsLabel_Click(object sender, EventArgs e)

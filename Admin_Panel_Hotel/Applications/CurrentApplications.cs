@@ -15,11 +15,19 @@ namespace Admin_Panel_Hotel.Applications
         public CurrentApplications()
         {
             InitializeComponent();
-           /// this.CurrentApplicationsDataGridView.Rows.Add();
-           /// this.CurrentApplicationsDataGridView.Rows.Add("2", "Петров Петр Петрович", "ННГ/Цех 136/113", "06.06.2020", "06.06.2020");
+           
+            this.CurrentDataGridView.Rows.Add("ННГ","06.06.2020");
+            this.CurrentDataGridView.Rows.Add("ГПН", "06.06.2020");
         }
 
-        
+        private void CurrentDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.ColumnIndex == 1)
+            {
+                
+                Functions.OpenChildForm(new ShowApplication(), MainForm.ContP);
+            }
+        }
     }
 }
     

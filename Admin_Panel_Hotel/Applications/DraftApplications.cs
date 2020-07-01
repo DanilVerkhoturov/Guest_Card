@@ -8,6 +8,8 @@ namespace Admin_Panel_Hotel
         public DraftApplications()
         {
             InitializeComponent();
+            this.DraftDataGridView.Rows.Add("ННГ", "06.06.2020");
+            this.DraftDataGridView.Rows.Add("ГПН", "06.06.2020");
         }
 
         private void ShowApplicationButton1_Click(object sender, EventArgs e)
