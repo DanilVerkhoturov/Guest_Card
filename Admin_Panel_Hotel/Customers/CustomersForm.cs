@@ -13,7 +13,8 @@ namespace Admin_Panel_Hotel
             InitializeComponent();
 
             CustomersComboBox.SelectedIndex = 0;
-            LocationComboBox.SelectedIndex = 0;
+
+            Functions.SetPlaceholderTextBox(SearchTextBox, "Поиск");
 
             LoadCustomers();
         }
