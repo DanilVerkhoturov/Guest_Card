@@ -1,8 +1,8 @@
-﻿using System;
+﻿using System.Windows.Forms;
 
 namespace Admin_Panel_Hotel
 {
-    public partial class HistoryApplications : System.Windows.Forms.Form
+    public partial class HistoryApplications : Form
     {
         public HistoryApplications()
         {
@@ -11,18 +11,24 @@ namespace Admin_Panel_Hotel
             this.HistoryDataGridView.Rows.Add("ГПН", "06.06.2020");
         }
 
-        private void ShowApplicationButton1_Click(object sender, EventArgs e)
+        private void HistoryDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
+            // TODO: Передача данных для выгрузки заявки из базы.
+            //ShowApplicationHistory.CustomerName = CustomersDataGridView[0, e.RowIndex].Value.ToString();
+            //ShowApplicationHistory.CustomerId = Convert.ToInt64(CustomersDataGridView[2, e.RowIndex].Value.ToString());
             Functions.OpenChildForm(new ShowApplicationHistory(), MainForm.ContP);
         }
 
-        private void ShowApplicationsButton2_Click(object sender, EventArgs e)
+        private void HistoryDataGridView_CellMouseMove(object sender, DataGridViewCellMouseEventArgs e)
         {
-            Functions.OpenChildForm(new ShowApplicationHistory(), MainForm.ContP);
+            if (e.ColumnIndex == 2)
+            {
+                HistoryDataGridView.Cursor = Cursors.Hand;
+            }
+            else
+            {
+                HistoryDataGridView.Cursor = Cursors.Default;
+            }
         }
-
-       
-
-        
     }
 }

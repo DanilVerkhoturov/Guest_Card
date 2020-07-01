@@ -133,6 +133,8 @@
             this.HistoryDataGridView.Size = new System.Drawing.Size(731, 617);
             this.HistoryDataGridView.TabIndex = 52;
             this.HistoryDataGridView.TabStop = false;
+            this.HistoryDataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.HistoryDataGridView_CellMouseClick);
+            this.HistoryDataGridView.CellMouseMove += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.HistoryDataGridView_CellMouseMove);
             // 
             // Column1
             // 

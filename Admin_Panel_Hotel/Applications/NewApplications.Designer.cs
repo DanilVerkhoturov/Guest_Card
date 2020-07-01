@@ -127,6 +127,8 @@
             this.NewDataGridView.Size = new System.Drawing.Size(767, 658);
             this.NewDataGridView.TabIndex = 56;
             this.NewDataGridView.TabStop = false;
+            this.NewDataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.NewDataGridView_CellMouseClick);
+            this.NewDataGridView.CellMouseMove += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.NewDataGridView_CellMouseMove);
             // 
             // Column1
             // 
