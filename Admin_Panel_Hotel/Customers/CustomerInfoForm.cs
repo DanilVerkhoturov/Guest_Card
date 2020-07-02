@@ -24,7 +24,6 @@ namespace Admin_Panel_Hotel.Customers
 
             CustomerNameLabel.Text = $"Мои заказчики > {CustomerName.Trim()}"; // Установка названия выбранного заказчика.
 
-            FilterComboBox.SelectedIndex = 0;
             LoadCustomerLocations(LocationsDataGridView);
         }
 

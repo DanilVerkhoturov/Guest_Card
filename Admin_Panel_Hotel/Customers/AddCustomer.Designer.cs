@@ -128,6 +128,7 @@
             this.AddCustomerButton.BackColor = System.Drawing.SystemColors.Highlight;
             this.AddCustomerButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.AddCustomerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddCustomerButton.Font = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.AddCustomerButton.ForeColor = System.Drawing.Color.White;
             this.AddCustomerButton.Location = new System.Drawing.Point(557, 627);
             this.AddCustomerButton.Margin = new System.Windows.Forms.Padding(609, 662, 5, 7);
@@ -245,7 +246,7 @@
             this.ContractNumberTextBox.Size = new System.Drawing.Size(710, 33);
             this.ContractNumberTextBox.TabIndex = 27;
             this.ContractNumberTextBox.Tag = "";
-            this.ContractNumberTextBox.TextChanged += new System.EventHandler(this.ContractNumberTextBox_TextChanged);
+            this.ContractNumberTextBox.Leave += new System.EventHandler(this.ContractNumberTextBox_Leave);
             // 
             // NameTextBox
             // 
@@ -259,7 +260,7 @@
             this.NameTextBox.Size = new System.Drawing.Size(710, 33);
             this.NameTextBox.TabIndex = 22;
             this.NameTextBox.Tag = "";
-            this.NameTextBox.TextChanged += new System.EventHandler(this.NameTextBox_TextChanged);
+            this.NameTextBox.Leave += new System.EventHandler(this.NameTextBox_Leave);
             // 
             // label1
             // 
@@ -296,7 +297,7 @@
             this.FromContractTimeDateTimePicker.Margin = new System.Windows.Forms.Padding(5, 7, 9, 7);
             this.FromContractTimeDateTimePicker.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.FromContractTimeDateTimePicker.Name = "FromContractTimeDateTimePicker";
-            this.FromContractTimeDateTimePicker.Size = new System.Drawing.Size(345, 33);
+            this.FromContractTimeDateTimePicker.Size = new System.Drawing.Size(301, 33);
             this.FromContractTimeDateTimePicker.TabIndex = 34;
             this.FromContractTimeDateTimePicker.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.FromContractTimeDateTimePicker.Leave += new System.EventHandler(this.FromContractTimeDateTimePicker_Leave);
@@ -308,22 +309,22 @@
             this.ToContractTimeDateTimePicker.CustomFormat = "Введите дату";
             this.ToContractTimeDateTimePicker.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ToContractTimeDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.ToContractTimeDateTimePicker.Location = new System.Drawing.Point(440, 235);
+            this.ToContractTimeDateTimePicker.Location = new System.Drawing.Point(479, 235);
             this.ToContractTimeDateTimePicker.Margin = new System.Windows.Forms.Padding(20, 7, 5, 7);
             this.ToContractTimeDateTimePicker.MinDate = new System.DateTime(2000, 1, 2, 0, 0, 0, 0);
             this.ToContractTimeDateTimePicker.Name = "ToContractTimeDateTimePicker";
-            this.ToContractTimeDateTimePicker.Size = new System.Drawing.Size(340, 33);
+            this.ToContractTimeDateTimePicker.Size = new System.Drawing.Size(301, 33);
             this.ToContractTimeDateTimePicker.TabIndex = 36;
-            this.ToContractTimeDateTimePicker.Value = new System.DateTime(2000, 1, 2, 0, 0, 0, 0);
+            this.ToContractTimeDateTimePicker.Value = new System.DateTime(2099, 12, 31, 0, 0, 0, 0);
             this.ToContractTimeDateTimePicker.Leave += new System.EventHandler(this.ToContractTimeDateTimePicker_Leave);
             // 
             // EmailTextBox0
             // 
             this.EmailTextBox0.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.EmailTextBox0.Location = new System.Drawing.Point(370, 0);
+            this.EmailTextBox0.Location = new System.Drawing.Point(409, 0);
             this.EmailTextBox0.Margin = new System.Windows.Forms.Padding(20, 45, 5, 5);
             this.EmailTextBox0.Name = "EmailTextBox0";
-            this.EmailTextBox0.Size = new System.Drawing.Size(340, 33);
+            this.EmailTextBox0.Size = new System.Drawing.Size(301, 33);
             this.EmailTextBox0.TabIndex = 0;
             // 
             // EmailNameTextBox0
@@ -332,7 +333,7 @@
             this.EmailNameTextBox0.Location = new System.Drawing.Point(0, 0);
             this.EmailNameTextBox0.Margin = new System.Windows.Forms.Padding(5, 45, 5, 5);
             this.EmailNameTextBox0.Name = "EmailNameTextBox0";
-            this.EmailNameTextBox0.Size = new System.Drawing.Size(345, 33);
+            this.EmailNameTextBox0.Size = new System.Drawing.Size(301, 33);
             this.EmailNameTextBox0.TabIndex = 0;
             // 
             // CustomerInfoNextButton
@@ -340,7 +341,7 @@
             this.CustomerInfoNextButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
             this.CustomerInfoNextButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.CustomerInfoNextButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CustomerInfoNextButton.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CustomerInfoNextButton.Font = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CustomerInfoNextButton.ForeColor = System.Drawing.Color.White;
             this.CustomerInfoNextButton.Location = new System.Drawing.Point(562, 614);
             this.CustomerInfoNextButton.Margin = new System.Windows.Forms.Padding(609, 804, 5, 7);
@@ -356,10 +357,10 @@
             this.BedsCountTextBox.BackColor = System.Drawing.Color.White;
             this.BedsCountTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.BedsCountTextBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.BedsCountTextBox.Location = new System.Drawing.Point(384, 456);
-            this.BedsCountTextBox.Margin = new System.Windows.Forms.Padding(20, 7, 5, 7);
+            this.BedsCountTextBox.Location = new System.Drawing.Point(420, 453);
+            this.BedsCountTextBox.Margin = new System.Windows.Forms.Padding(120, 7, 5, 7);
             this.BedsCountTextBox.Name = "BedsCountTextBox";
-            this.BedsCountTextBox.Size = new System.Drawing.Size(278, 33);
+            this.BedsCountTextBox.Size = new System.Drawing.Size(214, 33);
             this.BedsCountTextBox.TabIndex = 39;
             this.BedsCountTextBox.TextChanged += new System.EventHandler(this.BedsCountTextBox_TextChanged);
             // 
@@ -368,10 +369,10 @@
             this.RoomCountTextBox.BackColor = System.Drawing.Color.White;
             this.RoomCountTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.RoomCountTextBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.RoomCountTextBox.Location = new System.Drawing.Point(72, 456);
+            this.RoomCountTextBox.Location = new System.Drawing.Point(72, 453);
             this.RoomCountTextBox.Margin = new System.Windows.Forms.Padding(5, 52, 5, 7);
             this.RoomCountTextBox.Name = "RoomCountTextBox";
-            this.RoomCountTextBox.Size = new System.Drawing.Size(287, 33);
+            this.RoomCountTextBox.Size = new System.Drawing.Size(223, 33);
             this.RoomCountTextBox.TabIndex = 38;
             this.RoomCountTextBox.TextChanged += new System.EventHandler(this.RoomCountTextBox_TextChanged);
             // 
@@ -380,9 +381,9 @@
             this.AddLocationNextButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
             this.AddLocationNextButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.AddLocationNextButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddLocationNextButton.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AddLocationNextButton.Font = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.AddLocationNextButton.ForeColor = System.Drawing.Color.White;
-            this.AddLocationNextButton.Location = new System.Drawing.Point(444, 602);
+            this.AddLocationNextButton.Location = new System.Drawing.Point(416, 599);
             this.AddLocationNextButton.Margin = new System.Windows.Forms.Padding(5, 106, 5, 7);
             this.AddLocationNextButton.Name = "AddLocationNextButton";
             this.AddLocationNextButton.Size = new System.Drawing.Size(218, 48);
@@ -396,7 +397,7 @@
             this.CardCountTextBox.BackColor = System.Drawing.Color.White;
             this.CardCountTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CardCountTextBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CardCountTextBox.Location = new System.Drawing.Point(414, 531);
+            this.CardCountTextBox.Location = new System.Drawing.Point(414, 528);
             this.CardCountTextBox.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.CardCountTextBox.Name = "CardCountTextBox";
             this.CardCountTextBox.Size = new System.Drawing.Size(58, 33);
@@ -408,7 +409,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.Location = new System.Drawing.Point(92, 533);
+            this.label7.Location = new System.Drawing.Point(92, 530);
             this.label7.Margin = new System.Windows.Forms.Padding(144, 37, 5, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(312, 25);
@@ -431,10 +432,10 @@
             this.BuildTextBox.BackColor = System.Drawing.Color.White;
             this.BuildTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.BuildTextBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.BuildTextBox.Location = new System.Drawing.Point(488, 364);
+            this.BuildTextBox.Location = new System.Drawing.Point(464, 361);
             this.BuildTextBox.Margin = new System.Windows.Forms.Padding(21, 7, 5, 7);
             this.BuildTextBox.Name = "BuildTextBox";
-            this.BuildTextBox.Size = new System.Drawing.Size(174, 33);
+            this.BuildTextBox.Size = new System.Drawing.Size(170, 33);
             this.BuildTextBox.TabIndex = 37;
             // 
             // CorpsTextBox
@@ -442,10 +443,10 @@
             this.CorpsTextBox.BackColor = System.Drawing.Color.White;
             this.CorpsTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CorpsTextBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CorpsTextBox.Location = new System.Drawing.Point(280, 364);
+            this.CorpsTextBox.Location = new System.Drawing.Point(267, 361);
             this.CorpsTextBox.Margin = new System.Windows.Forms.Padding(21, 7, 5, 7);
             this.CorpsTextBox.Name = "CorpsTextBox";
-            this.CorpsTextBox.Size = new System.Drawing.Size(182, 33);
+            this.CorpsTextBox.Size = new System.Drawing.Size(171, 33);
             this.CorpsTextBox.TabIndex = 36;
             // 
             // HouseTextBox
@@ -453,10 +454,10 @@
             this.HouseTextBox.BackColor = System.Drawing.Color.White;
             this.HouseTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.HouseTextBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.HouseTextBox.Location = new System.Drawing.Point(72, 364);
+            this.HouseTextBox.Location = new System.Drawing.Point(72, 361);
             this.HouseTextBox.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.HouseTextBox.Name = "HouseTextBox";
-            this.HouseTextBox.Size = new System.Drawing.Size(182, 33);
+            this.HouseTextBox.Size = new System.Drawing.Size(166, 33);
             this.HouseTextBox.TabIndex = 35;
             // 
             // StreetNameComboBox
@@ -467,7 +468,7 @@
             this.StreetNameComboBox.Location = new System.Drawing.Point(72, 314);
             this.StreetNameComboBox.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.StreetNameComboBox.Name = "StreetNameComboBox";
-            this.StreetNameComboBox.Size = new System.Drawing.Size(590, 33);
+            this.StreetNameComboBox.Size = new System.Drawing.Size(562, 33);
             this.StreetNameComboBox.TabIndex = 34;
             // 
             // StreetTypeComboBox
@@ -478,7 +479,7 @@
             this.StreetTypeComboBox.Location = new System.Drawing.Point(72, 264);
             this.StreetTypeComboBox.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.StreetTypeComboBox.Name = "StreetTypeComboBox";
-            this.StreetTypeComboBox.Size = new System.Drawing.Size(590, 33);
+            this.StreetTypeComboBox.Size = new System.Drawing.Size(562, 33);
             this.StreetTypeComboBox.TabIndex = 33;
             // 
             // CityComboBox
@@ -489,7 +490,7 @@
             this.CityComboBox.Location = new System.Drawing.Point(72, 214);
             this.CityComboBox.Margin = new System.Windows.Forms.Padding(5, 18, 5, 7);
             this.CityComboBox.Name = "CityComboBox";
-            this.CityComboBox.Size = new System.Drawing.Size(590, 33);
+            this.CityComboBox.Size = new System.Drawing.Size(562, 33);
             this.CityComboBox.TabIndex = 32;
             // 
             // StateComboBox
@@ -500,7 +501,7 @@
             this.StateComboBox.Location = new System.Drawing.Point(72, 164);
             this.StateComboBox.Margin = new System.Windows.Forms.Padding(5, 18, 5, 18);
             this.StateComboBox.Name = "StateComboBox";
-            this.StateComboBox.Size = new System.Drawing.Size(590, 33);
+            this.StateComboBox.Size = new System.Drawing.Size(562, 33);
             this.StateComboBox.TabIndex = 31;
             // 
             // RegionComboBox
@@ -511,7 +512,7 @@
             this.RegionComboBox.Location = new System.Drawing.Point(72, 114);
             this.RegionComboBox.Margin = new System.Windows.Forms.Padding(5, 18, 5, 18);
             this.RegionComboBox.Name = "RegionComboBox";
-            this.RegionComboBox.Size = new System.Drawing.Size(590, 33);
+            this.RegionComboBox.Size = new System.Drawing.Size(562, 33);
             this.RegionComboBox.TabIndex = 30;
             // 
             // LocationNameTextBox
@@ -522,7 +523,7 @@
             this.LocationNameTextBox.Location = new System.Drawing.Point(72, 64);
             this.LocationNameTextBox.Margin = new System.Windows.Forms.Padding(124, 7, 5, 18);
             this.LocationNameTextBox.Name = "LocationNameTextBox";
-            this.LocationNameTextBox.Size = new System.Drawing.Size(590, 33);
+            this.LocationNameTextBox.Size = new System.Drawing.Size(562, 33);
             this.LocationNameTextBox.TabIndex = 29;
             this.LocationNameTextBox.Tag = "";
             this.LocationNameTextBox.TextChanged += new System.EventHandler(this.LocationNameTextBox_TextChanged);
@@ -611,7 +612,7 @@
             // AddLocationLinkLabel
             // 
             this.AddLocationLinkLabel.AutoSize = true;
-            this.AddLocationLinkLabel.Location = new System.Drawing.Point(90, 589);
+            this.AddLocationLinkLabel.Location = new System.Drawing.Point(90, 586);
             this.AddLocationLinkLabel.Margin = new System.Windows.Forms.Padding(142, 31, 3, 0);
             this.AddLocationLinkLabel.Name = "AddLocationLinkLabel";
             this.AddLocationLinkLabel.Size = new System.Drawing.Size(258, 25);
@@ -641,7 +642,7 @@
             this.LocationsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.LocationsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.LocationsDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.LocationsDataGridView.BackgroundColor = System.Drawing.Color.White;
+            this.LocationsDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.LocationsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.LocationsDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.LocationsDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -875,7 +876,7 @@
             // 
             this.CardPropertiesButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.CardPropertiesButton.AutoEllipsis = true;
-            this.CardPropertiesButton.BackColor = System.Drawing.Color.White;
+            this.CardPropertiesButton.BackColor = System.Drawing.Color.Transparent;
             this.CardPropertiesButton.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.GrayCircle;
             this.CardPropertiesButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CardPropertiesButton.Enabled = false;
@@ -896,7 +897,7 @@
             // 
             this.CustomerInfoButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.CustomerInfoButton.AutoEllipsis = true;
-            this.CustomerInfoButton.BackColor = System.Drawing.Color.White;
+            this.CustomerInfoButton.BackColor = System.Drawing.Color.Transparent;
             this.CustomerInfoButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CustomerInfoButton.BackgroundImage")));
             this.CustomerInfoButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CustomerInfoButton.FlatAppearance.BorderSize = 0;
@@ -917,7 +918,7 @@
             // 
             this.AddLocationsButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.AddLocationsButton.AutoEllipsis = true;
-            this.AddLocationsButton.BackColor = System.Drawing.Color.White;
+            this.AddLocationsButton.BackColor = System.Drawing.Color.Transparent;
             this.AddLocationsButton.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.GrayCircle;
             this.AddLocationsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.AddLocationsButton.Enabled = false;
@@ -937,6 +938,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.Line_47;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox3.Location = new System.Drawing.Point(234, 133);
@@ -951,61 +953,70 @@
             // 
             this.EmailNamesErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.EmailNamesErrorProvider.ContainerControl = this;
+            this.EmailNamesErrorProvider.Icon = ((System.Drawing.Icon)(resources.GetObject("EmailNamesErrorProvider.Icon")));
             // 
             // EmailsErrorProvider
             // 
             this.EmailsErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.EmailsErrorProvider.ContainerControl = this;
+            this.EmailsErrorProvider.Icon = ((System.Drawing.Icon)(resources.GetObject("EmailsErrorProvider.Icon")));
             // 
             // NameErrorProvider
             // 
             this.NameErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.NameErrorProvider.ContainerControl = this;
+            this.NameErrorProvider.Icon = ((System.Drawing.Icon)(resources.GetObject("NameErrorProvider.Icon")));
             // 
             // ContractNumberErrorProvider
             // 
             this.ContractNumberErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.ContractNumberErrorProvider.ContainerControl = this;
+            this.ContractNumberErrorProvider.Icon = ((System.Drawing.Icon)(resources.GetObject("ContractNumberErrorProvider.Icon")));
             // 
             // ToContractTimeErrorProvider
             // 
             this.ToContractTimeErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.ToContractTimeErrorProvider.ContainerControl = this;
+            this.ToContractTimeErrorProvider.Icon = ((System.Drawing.Icon)(resources.GetObject("ToContractTimeErrorProvider.Icon")));
             // 
             // FromContractTimeErrorProvider
             // 
             this.FromContractTimeErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.FromContractTimeErrorProvider.ContainerControl = this;
+            this.FromContractTimeErrorProvider.Icon = ((System.Drawing.Icon)(resources.GetObject("FromContractTimeErrorProvider.Icon")));
             // 
             // LocationNameErrorProvider
             // 
             this.LocationNameErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.LocationNameErrorProvider.ContainerControl = this;
+            this.LocationNameErrorProvider.Icon = ((System.Drawing.Icon)(resources.GetObject("LocationNameErrorProvider.Icon")));
             // 
             // RoomCountErrorProvider
             // 
             this.RoomCountErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.RoomCountErrorProvider.ContainerControl = this;
+            this.RoomCountErrorProvider.Icon = ((System.Drawing.Icon)(resources.GetObject("RoomCountErrorProvider.Icon")));
             // 
             // BedsCountErrorProvider
             // 
             this.BedsCountErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.BedsCountErrorProvider.ContainerControl = this;
+            this.BedsCountErrorProvider.Icon = ((System.Drawing.Icon)(resources.GetObject("BedsCountErrorProvider.Icon")));
             // 
             // AddCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.ClientSize = new System.Drawing.Size(1013, 894);
             this.Controls.Add(this.CardPropertiesButton);
             this.Controls.Add(this.CustomerInfoButton);
             this.Controls.Add(this.AddLocationsButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.CustomerInfoPanel);
             this.Controls.Add(this.AddCustomerLocationPanel);
             this.Controls.Add(this.CardPropertiesPanel);
+            this.Controls.Add(this.CustomerInfoPanel);
             this.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.MaximumSize = new System.Drawing.Size(1029, 933);

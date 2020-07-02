@@ -314,6 +314,8 @@
   <ItemGroup>
     <None Include="Resources\User.png" />
     <None Include="Resources\GrayCircle.png" />
+    <None Include="Resources\check mark.ico" />
+    <None Include="Resources\exclamation mark.ico" />
     <Content Include="Resources\Line 47.png" />
     <None Include="Resources\BlueCircle.png" />
     <None Include="Resources\Line 471.png" />
