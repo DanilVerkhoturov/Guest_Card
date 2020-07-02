@@ -415,11 +415,12 @@
             // 
             // ContentPanel
             // 
-            this.ContentPanel.AutoSize = true;
+            this.ContentPanel.AutoScroll = true;
             this.ContentPanel.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ContentPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ContentPanel.Controls.Add(this.pictureBox1);
             this.ContentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ContentPanel.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ContentPanel.Location = new System.Drawing.Point(393, 50);
             this.ContentPanel.Margin = new System.Windows.Forms.Padding(0);
             this.ContentPanel.Name = "ContentPanel";
@@ -491,11 +492,10 @@
             this.Controls.Add(this.TopPanel);
             this.Controls.Add(this.LeftMenu);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(1440, 1024);
-            this.MinimumSize = new System.Drawing.Size(1440, 1024);
+            this.MaximumSize = new System.Drawing.Size(1920, 1024);
+            this.MinimumSize = new System.Drawing.Size(1440, 500);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Главное меню";
@@ -512,7 +512,6 @@
             this.TopPanel.ResumeLayout(false);
             this.TopPanel.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -531,7 +530,6 @@
         private System.Windows.Forms.Button NewApplicationsButton;
         private System.Windows.Forms.Button HistoryApplicationsButton;
         private System.Windows.Forms.Button DraftsButton;
-        public System.Windows.Forms.Panel ContentPanel;
         private System.Windows.Forms.Panel TopPanel;
         private System.Windows.Forms.Button OutButton;
         private System.Windows.Forms.Button UserButton;
@@ -543,6 +541,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label NewApplicationsCountLabel;
         private System.Windows.Forms.Label DraftsCountLabel;
+        public System.Windows.Forms.Panel ContentPanel;
     }
 }
 

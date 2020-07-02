@@ -31,6 +31,7 @@ namespace Admin_Panel_Hotel
                     CustomersDataGridView.Rows.Add(reader[1].ToString(), null, reader[0].ToString());
                 }
                 reader.Close();
+                select.Cancel();
             }
         }
 
