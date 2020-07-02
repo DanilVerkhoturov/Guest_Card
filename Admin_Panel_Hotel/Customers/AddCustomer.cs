@@ -157,12 +157,12 @@ namespace Admin_Panel_Hotel
 
             if (textBox.TextLength > 0 && textBox.Text != textBox.Tag.ToString() && RegexUtilities.IsValidEmail(textBox.Text.Trim()))
             {
-                EmailsErrorProvider.Icon = Properties.Resources.check_mark;
+                EmailsErrorProvider.Clear();
             }
             else if (textBox.TextLength > 0 && textBox.Text != textBox.Tag.ToString())
             {
                 MessageBox.Show($"Электронная почта \"{textBox.Text}\" введена некорректно!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                EmailsErrorProvider.Icon = Properties.Resources.exclamation_mark;
+                EmailsErrorProvider.SetError(textBox, "* - обязательное поле");
                 textBox.Focus();
             }
         }
@@ -178,11 +178,11 @@ namespace Admin_Panel_Hotel
 
             if (textBox.Text.Trim().Length > 0 && textBox.Text != textBox.Tag.ToString()) // Если введёно имя эл.почты в последнее поле.
             {
-                EmailNamesErrorProvider.Icon = Properties.Resources.check_mark;
+                EmailNamesErrorProvider.Clear();
             }
             else
             {
-                EmailNamesErrorProvider.Icon = Properties.Resources.exclamation_mark;
+                EmailNamesErrorProvider.SetError(textBox, "* - обязательное поле");
             }
         }
 
@@ -282,6 +282,7 @@ namespace Admin_Panel_Hotel
                 RegionComboBox.Items.Add(reader[0].ToString());
             }
             reader.Close();
+            select.Cancel();
 
             select.CommandText = "Select name FROM state";
             reader = select.ExecuteReader();
@@ -292,6 +293,7 @@ namespace Admin_Panel_Hotel
                 StateComboBox.Items.Add(reader[0].ToString());
             }
             reader.Close();
+            select.Cancel();
 
             select.CommandText = "Select name FROM city";
             reader = select.ExecuteReader();
@@ -302,6 +304,7 @@ namespace Admin_Panel_Hotel
                 CityComboBox.Items.Add(reader[0].ToString());
             }
             reader.Close();
+            select.Cancel();
 
             select.CommandText = "Select name FROM street_type";
             reader = select.ExecuteReader();
@@ -312,6 +315,7 @@ namespace Admin_Panel_Hotel
                 StreetTypeComboBox.Items.Add(reader[0].ToString());
             }
             reader.Close();
+            select.Cancel();
 
             select.CommandText = "Select name FROM street_name";
             reader = select.ExecuteReader();

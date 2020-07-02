@@ -98,6 +98,9 @@ namespace Admin_Panel_Hotel
             ApplicationsButton.ForeColor = MyColors._FFFFFF();
             CardsButton.ForeColor = MyColors._FFFFFF();
             SubMenuProcessing(CustomersButton, CustomersPanel);
+
+            SubMenuProcessing(MyCustomersButton);
+            Functions.OpenChildForm(new CustomersForm(), ContentPanel);
         }
 
         private void AddCustomerButton_Click(object sender, EventArgs e)
@@ -119,6 +122,9 @@ namespace Admin_Panel_Hotel
         private void ApplicationsButton_Click(object sender, EventArgs e)
         {
             SubMenuProcessing(ApplicationsButton, ApplicationsPanel);
+
+            SubMenuProcessing(NewApplicationsButton);
+            Functions.OpenChildForm(new NewApplications(), ContentPanel);
         }
 
         private void NewApplicationsButton_Click(object sender, EventArgs e)
@@ -158,6 +164,9 @@ namespace Admin_Panel_Hotel
         private void CardsButton_Click(object sender, EventArgs e)
         {
             SubMenuProcessing(CardsButton, CardsPanel);
+
+            SubMenuProcessing(AllCardsButton);
+            Functions.OpenChildForm(new AllCards(), ContentPanel);
         }
 
         private void AllCardsButton_Click(object sender, EventArgs e)

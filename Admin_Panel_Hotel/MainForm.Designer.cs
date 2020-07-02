@@ -36,8 +36,8 @@
             this.AllCardsButton = new System.Windows.Forms.Button();
             this.CardsButton = new System.Windows.Forms.Button();
             this.ApplicationsPanel = new System.Windows.Forms.Panel();
-            this.NewCount = new System.Windows.Forms.Label();
-            this.DraftCount = new System.Windows.Forms.Label();
+            this.NewApplicationsCountLabel = new System.Windows.Forms.Label();
+            this.DraftsCountLabel = new System.Windows.Forms.Label();
             this.DraftsButton = new System.Windows.Forms.Button();
             this.HistoryApplicationsButton = new System.Windows.Forms.Button();
             this.AddApplicationButton = new System.Windows.Forms.Button();
@@ -171,8 +171,8 @@
             // 
             // ApplicationsPanel
             // 
-            this.ApplicationsPanel.Controls.Add(this.NewCount);
-            this.ApplicationsPanel.Controls.Add(this.DraftCount);
+            this.ApplicationsPanel.Controls.Add(this.NewApplicationsCountLabel);
+            this.ApplicationsPanel.Controls.Add(this.DraftsCountLabel);
             this.ApplicationsPanel.Controls.Add(this.DraftsButton);
             this.ApplicationsPanel.Controls.Add(this.HistoryApplicationsButton);
             this.ApplicationsPanel.Controls.Add(this.AddApplicationButton);
@@ -185,39 +185,39 @@
             this.ApplicationsPanel.Size = new System.Drawing.Size(393, 220);
             this.ApplicationsPanel.TabIndex = 4;
             // 
-            // NewCount
+            // NewApplicationsCountLabel
             // 
-            this.NewCount.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.NewApplicationsCountLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.NewCount.AutoSize = true;
-            this.NewCount.BackColor = System.Drawing.Color.Transparent;
-            this.NewCount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.NewCount.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.NewCount.ForeColor = System.Drawing.Color.Red;
-            this.NewCount.Location = new System.Drawing.Point(150, 7);
-            this.NewCount.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.NewCount.Name = "NewCount";
-            this.NewCount.Size = new System.Drawing.Size(26, 29);
-            this.NewCount.TabIndex = 8;
-            this.NewCount.Text = "0";
+            this.NewApplicationsCountLabel.AutoSize = true;
+            this.NewApplicationsCountLabel.BackColor = System.Drawing.Color.Transparent;
+            this.NewApplicationsCountLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NewApplicationsCountLabel.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.NewApplicationsCountLabel.ForeColor = System.Drawing.Color.Red;
+            this.NewApplicationsCountLabel.Location = new System.Drawing.Point(150, 7);
+            this.NewApplicationsCountLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.NewApplicationsCountLabel.Name = "NewApplicationsCountLabel";
+            this.NewApplicationsCountLabel.Size = new System.Drawing.Size(26, 29);
+            this.NewApplicationsCountLabel.TabIndex = 8;
+            this.NewApplicationsCountLabel.Text = "0";
             // 
-            // DraftCount
+            // DraftsCountLabel
             // 
-            this.DraftCount.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.DraftsCountLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.DraftCount.AutoSize = true;
-            this.DraftCount.BackColor = System.Drawing.Color.Transparent;
-            this.DraftCount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DraftCount.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DraftCount.ForeColor = System.Drawing.Color.Red;
-            this.DraftCount.Location = new System.Drawing.Point(197, 179);
-            this.DraftCount.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.DraftCount.Name = "DraftCount";
-            this.DraftCount.Size = new System.Drawing.Size(26, 29);
-            this.DraftCount.TabIndex = 7;
-            this.DraftCount.Text = "0";
+            this.DraftsCountLabel.AutoSize = true;
+            this.DraftsCountLabel.BackColor = System.Drawing.Color.Transparent;
+            this.DraftsCountLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DraftsCountLabel.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DraftsCountLabel.ForeColor = System.Drawing.Color.Red;
+            this.DraftsCountLabel.Location = new System.Drawing.Point(197, 179);
+            this.DraftsCountLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.DraftsCountLabel.Name = "DraftsCountLabel";
+            this.DraftsCountLabel.Size = new System.Drawing.Size(26, 29);
+            this.DraftsCountLabel.TabIndex = 7;
+            this.DraftsCountLabel.Text = "0";
             // 
             // DraftsButton
             // 
@@ -541,8 +541,8 @@
         private System.Windows.Forms.Button AllCardsButton;
         private System.Windows.Forms.Button CardsButton;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label NewCount;
-        private System.Windows.Forms.Label DraftCount;
+        private System.Windows.Forms.Label NewApplicationsCountLabel;
+        private System.Windows.Forms.Label DraftsCountLabel;
     }
 }
 
