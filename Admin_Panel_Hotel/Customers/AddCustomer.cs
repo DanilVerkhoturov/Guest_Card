@@ -43,14 +43,23 @@ namespace Admin_Panel_Hotel
 
             // Установка подсказок обязательных полей.
             NameErrorProvider.SetError(NameTextBox, "* - обязательное поле");
+            NameErrorProvider.SetIconPadding(NameTextBox, 5);
             ContractNumberErrorProvider.SetError(ContractNumberTextBox, "* - обязательное поле");
+            ContractNumberErrorProvider.SetIconPadding(ContractNumberTextBox, 5);
             ToContractTimeErrorProvider.SetError(ToContractTimeDateTimePicker, "* - обязательное поле");
+            ToContractTimeErrorProvider.SetIconPadding(ToContractTimeDateTimePicker, 5);
             FromContractTimeErrorProvider.SetError(FromContractTimeDateTimePicker, "* - обязательное поле");
+            FromContractTimeErrorProvider.SetIconPadding(FromContractTimeDateTimePicker, 5);
             LocationNameErrorProvider.SetError(LocationNameTextBox, "* - обязательное поле");
+            LocationNameErrorProvider.SetIconPadding(LocationNameTextBox, 5);
             RoomCountErrorProvider.SetError(RoomCountTextBox, "* - обязательное поле");
+            RoomCountErrorProvider.SetIconPadding(RoomCountTextBox, 5);
             BedsCountErrorProvider.SetError(BedsCountTextBox, "* - обязательное поле");
+            BedsCountErrorProvider.SetIconPadding(BedsCountTextBox, 5);
             EmailNamesErrorProvider.SetError(EmailNameTextBox0, "* - обязательное поле");
+            EmailNamesErrorProvider.SetIconPadding(EmailNameTextBox0, 5);
             EmailsErrorProvider.SetError(EmailTextBox0, "* - обязательное поле");
+            EmailsErrorProvider.SetIconPadding(EmailTextBox0, 5);
 
             // Установка обработки событий окончания редактирования текстовых полей.
             EmailNameTextBox0.Leave += new EventHandler(EmailNameTextBox_Leave);
