@@ -67,8 +67,8 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Roboto", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(70, 44);
-            this.label1.Margin = new System.Windows.Forms.Padding(61, 35, 6, 0);
+            this.label1.Location = new System.Drawing.Point(70, 32);
+            this.label1.Margin = new System.Windows.Forms.Padding(61, 23, 6, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(236, 35);
             this.label1.TabIndex = 2;
@@ -80,7 +80,7 @@
             this.CustomersComboBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CustomersComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
             this.CustomersComboBox.FormattingEnabled = true;
-            this.CustomersComboBox.Location = new System.Drawing.Point(131, 116);
+            this.CustomersComboBox.Location = new System.Drawing.Point(131, 104);
             this.CustomersComboBox.Margin = new System.Windows.Forms.Padding(122, 37, 0, 0);
             this.CustomersComboBox.Name = "CustomersComboBox";
             this.CustomersComboBox.Size = new System.Drawing.Size(223, 33);
@@ -93,7 +93,7 @@
             this.LocationComboBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.LocationComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
             this.LocationComboBox.FormattingEnabled = true;
-            this.LocationComboBox.Location = new System.Drawing.Point(376, 116);
+            this.LocationComboBox.Location = new System.Drawing.Point(376, 104);
             this.LocationComboBox.Margin = new System.Windows.Forms.Padding(22, 6, 6, 0);
             this.LocationComboBox.Name = "LocationComboBox";
             this.LocationComboBox.Size = new System.Drawing.Size(223, 33);
@@ -122,7 +122,8 @@
             this.CurrentApplicationsDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.CurrentApplicationsDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.CurrentApplicationsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.CurrentApplicationsDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.CurrentApplicationsDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.CurrentApplicationsDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(172)))), ((int)(((byte)(218)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -148,7 +149,7 @@
             this.CurrentApplicationsDataGridView.DefaultCellStyle = dataGridViewCellStyle4;
             this.CurrentApplicationsDataGridView.EnableHeadersVisualStyles = false;
             this.CurrentApplicationsDataGridView.GridColor = System.Drawing.Color.Black;
-            this.CurrentApplicationsDataGridView.Location = new System.Drawing.Point(131, 165);
+            this.CurrentApplicationsDataGridView.Location = new System.Drawing.Point(131, 153);
             this.CurrentApplicationsDataGridView.Margin = new System.Windows.Forms.Padding(5, 16, 5, 4);
             this.CurrentApplicationsDataGridView.MultiSelect = false;
             this.CurrentApplicationsDataGridView.Name = "CurrentApplicationsDataGridView";

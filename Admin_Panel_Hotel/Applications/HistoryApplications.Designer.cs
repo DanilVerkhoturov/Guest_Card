@@ -78,7 +78,8 @@
             this.HistoryDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.HistoryDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.HistoryDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.HistoryDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.HistoryDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.HistoryDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(172)))), ((int)(((byte)(218)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -104,7 +105,7 @@
             this.HistoryDataGridView.DefaultCellStyle = dataGridViewCellStyle4;
             this.HistoryDataGridView.EnableHeadersVisualStyles = false;
             this.HistoryDataGridView.GridColor = System.Drawing.Color.Black;
-            this.HistoryDataGridView.Location = new System.Drawing.Point(131, 174);
+            this.HistoryDataGridView.Location = new System.Drawing.Point(131, 164);
             this.HistoryDataGridView.Margin = new System.Windows.Forms.Padding(122, 16, 4, 4);
             this.HistoryDataGridView.MultiSelect = false;
             this.HistoryDataGridView.Name = "HistoryDataGridView";
@@ -172,9 +173,9 @@
             // 
             this.LocationComboBox.BackColor = System.Drawing.Color.White;
             this.LocationComboBox.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LocationComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
+            this.LocationComboBox.ForeColor = System.Drawing.Color.Black;
             this.LocationComboBox.FormattingEnabled = true;
-            this.LocationComboBox.Location = new System.Drawing.Point(349, 114);
+            this.LocationComboBox.Location = new System.Drawing.Point(349, 104);
             this.LocationComboBox.Margin = new System.Windows.Forms.Padding(0, 6, 25, 6);
             this.LocationComboBox.Name = "LocationComboBox";
             this.LocationComboBox.Size = new System.Drawing.Size(196, 38);
@@ -185,9 +186,9 @@
             // 
             this.CustomersComboBox.BackColor = System.Drawing.Color.White;
             this.CustomersComboBox.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CustomersComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
+            this.CustomersComboBox.ForeColor = System.Drawing.Color.Black;
             this.CustomersComboBox.FormattingEnabled = true;
-            this.CustomersComboBox.Location = new System.Drawing.Point(131, 114);
+            this.CustomersComboBox.Location = new System.Drawing.Point(131, 104);
             this.CustomersComboBox.Margin = new System.Windows.Forms.Padding(122, 0, 22, 6);
             this.CustomersComboBox.Name = "CustomersComboBox";
             this.CustomersComboBox.Size = new System.Drawing.Size(196, 38);
@@ -199,8 +200,8 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(70, 44);
-            this.label1.Margin = new System.Windows.Forms.Padding(61, 35, 5, 37);
+            this.label1.Location = new System.Drawing.Point(70, 34);
+            this.label1.Margin = new System.Windows.Forms.Padding(61, 25, 5, 37);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(229, 33);
             this.label1.TabIndex = 49;
@@ -211,7 +212,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
-            this.label2.Location = new System.Drawing.Point(565, 81);
+            this.label2.Location = new System.Drawing.Point(565, 71);
             this.label2.Margin = new System.Windows.Forms.Padding(3, 0, 3, 8);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(113, 25);
@@ -223,7 +224,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
-            this.label3.Location = new System.Drawing.Point(758, 81);
+            this.label3.Location = new System.Drawing.Point(758, 71);
             this.label3.Margin = new System.Windows.Forms.Padding(3, 0, 3, 8);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(116, 25);
@@ -233,9 +234,12 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dateTimePicker1.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
+            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
+            this.dateTimePicker1.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(570, 114);
+            this.dateTimePicker1.Location = new System.Drawing.Point(570, 104);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(0, 0, 25, 3);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(165, 38);
@@ -246,7 +250,7 @@
             this.dateTimePicker2.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(763, 114);
+            this.dateTimePicker2.Location = new System.Drawing.Point(763, 104);
             this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(170, 38);
