@@ -418,9 +418,9 @@
             // 
             this.ClosePictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ClosePictureBox.Image = ((System.Drawing.Image)(resources.GetObject("ClosePictureBox.Image")));
-            this.ClosePictureBox.Location = new System.Drawing.Point(460, 12);
+            this.ClosePictureBox.Location = new System.Drawing.Point(472, 12);
             this.ClosePictureBox.Name = "ClosePictureBox";
-            this.ClosePictureBox.Size = new System.Drawing.Size(29, 29);
+            this.ClosePictureBox.Size = new System.Drawing.Size(17, 17);
             this.ClosePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ClosePictureBox.TabIndex = 35;
             this.ClosePictureBox.TabStop = false;

@@ -41,8 +41,6 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LocationComboBox = new System.Windows.Forms.ComboBox();
-            this.CustomersComboBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DraftsDataGridView)).BeginInit();
             this.SuspendLayout();
@@ -100,8 +98,8 @@
             this.DraftsDataGridView.DefaultCellStyle = dataGridViewCellStyle4;
             this.DraftsDataGridView.EnableHeadersVisualStyles = false;
             this.DraftsDataGridView.GridColor = System.Drawing.Color.Black;
-            this.DraftsDataGridView.Location = new System.Drawing.Point(89, 156);
-            this.DraftsDataGridView.Margin = new System.Windows.Forms.Padding(5, 32, 5, 4);
+            this.DraftsDataGridView.Location = new System.Drawing.Point(131, 103);
+            this.DraftsDataGridView.Margin = new System.Windows.Forms.Padding(122, 26, 5, 4);
             this.DraftsDataGridView.MultiSelect = false;
             this.DraftsDataGridView.Name = "DraftsDataGridView";
             this.DraftsDataGridView.ReadOnly = true;
@@ -164,39 +162,13 @@
             this.Column3.ReadOnly = true;
             this.Column3.Visible = false;
             // 
-            // LocationComboBox
-            // 
-            this.LocationComboBox.BackColor = System.Drawing.Color.White;
-            this.LocationComboBox.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LocationComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
-            this.LocationComboBox.FormattingEnabled = true;
-            this.LocationComboBox.Location = new System.Drawing.Point(339, 88);
-            this.LocationComboBox.Margin = new System.Windows.Forms.Padding(6);
-            this.LocationComboBox.Name = "LocationComboBox";
-            this.LocationComboBox.Size = new System.Drawing.Size(223, 38);
-            this.LocationComboBox.TabIndex = 51;
-            this.LocationComboBox.Text = "Локация";
-            // 
-            // CustomersComboBox
-            // 
-            this.CustomersComboBox.BackColor = System.Drawing.Color.White;
-            this.CustomersComboBox.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CustomersComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
-            this.CustomersComboBox.FormattingEnabled = true;
-            this.CustomersComboBox.Location = new System.Drawing.Point(89, 88);
-            this.CustomersComboBox.Margin = new System.Windows.Forms.Padding(6);
-            this.CustomersComboBox.Name = "CustomersComboBox";
-            this.CustomersComboBox.Size = new System.Drawing.Size(223, 38);
-            this.CustomersComboBox.TabIndex = 50;
-            this.CustomersComboBox.Text = "Заказчик";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(25, 25);
-            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label1.Location = new System.Drawing.Point(70, 44);
+            this.label1.Margin = new System.Windows.Forms.Padding(61, 35, 26, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(169, 33);
             this.label1.TabIndex = 49;
@@ -211,8 +183,6 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1013, 894);
             this.Controls.Add(this.DraftsDataGridView);
-            this.Controls.Add(this.LocationComboBox);
-            this.Controls.Add(this.CustomersComboBox);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(6);
@@ -234,8 +204,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewImageColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.ComboBox LocationComboBox;
-        private System.Windows.Forms.ComboBox CustomersComboBox;
         private System.Windows.Forms.Label label1;
     }
 }

@@ -30,5 +30,7 @@ namespace Admin_Panel_Hotel
                 HistoryDataGridView.Cursor = Cursors.Default;
             }
         }
+
+      
     }
 }
