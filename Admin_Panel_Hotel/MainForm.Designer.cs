@@ -78,7 +78,7 @@
             this.LeftMenu.Location = new System.Drawing.Point(0, 0);
             this.LeftMenu.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.LeftMenu.Name = "LeftMenu";
-            this.LeftMenu.Size = new System.Drawing.Size(393, 985);
+            this.LeftMenu.Size = new System.Drawing.Size(313, 985);
             this.LeftMenu.TabIndex = 0;
             // 
             // CardsPanel
@@ -90,7 +90,7 @@
             this.CardsPanel.Location = new System.Drawing.Point(0, 534);
             this.CardsPanel.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.CardsPanel.Name = "CardsPanel";
-            this.CardsPanel.Size = new System.Drawing.Size(393, 140);
+            this.CardsPanel.Size = new System.Drawing.Size(313, 140);
             this.CardsPanel.TabIndex = 6;
             // 
             // MovingCardsButton
@@ -105,7 +105,7 @@
             this.MovingCardsButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.MovingCardsButton.Name = "MovingCardsButton";
             this.MovingCardsButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.MovingCardsButton.Size = new System.Drawing.Size(393, 43);
+            this.MovingCardsButton.Size = new System.Drawing.Size(313, 43);
             this.MovingCardsButton.TabIndex = 6;
             this.MovingCardsButton.Text = "Перемещение";
             this.MovingCardsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -124,7 +124,7 @@
             this.AddCardsButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.AddCardsButton.Name = "AddCardsButton";
             this.AddCardsButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.AddCardsButton.Size = new System.Drawing.Size(393, 43);
+            this.AddCardsButton.Size = new System.Drawing.Size(313, 43);
             this.AddCardsButton.TabIndex = 3;
             this.AddCardsButton.Text = "Добавить карты";
             this.AddCardsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -143,7 +143,7 @@
             this.AllCardsButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.AllCardsButton.Name = "AllCardsButton";
             this.AllCardsButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.AllCardsButton.Size = new System.Drawing.Size(393, 43);
+            this.AllCardsButton.Size = new System.Drawing.Size(313, 43);
             this.AllCardsButton.TabIndex = 2;
             this.AllCardsButton.Text = "Все карты";
             this.AllCardsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -162,7 +162,7 @@
             this.CardsButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.CardsButton.Name = "CardsButton";
             this.CardsButton.Padding = new System.Windows.Forms.Padding(21, 0, 0, 0);
-            this.CardsButton.Size = new System.Drawing.Size(393, 58);
+            this.CardsButton.Size = new System.Drawing.Size(313, 58);
             this.CardsButton.TabIndex = 5;
             this.CardsButton.Text = "Карты";
             this.CardsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -182,7 +182,7 @@
             this.ApplicationsPanel.Location = new System.Drawing.Point(0, 256);
             this.ApplicationsPanel.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.ApplicationsPanel.Name = "ApplicationsPanel";
-            this.ApplicationsPanel.Size = new System.Drawing.Size(393, 220);
+            this.ApplicationsPanel.Size = new System.Drawing.Size(313, 220);
             this.ApplicationsPanel.TabIndex = 4;
             // 
             // NewApplicationsCountLabel
@@ -231,7 +231,7 @@
             this.DraftsButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.DraftsButton.Name = "DraftsButton";
             this.DraftsButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.DraftsButton.Size = new System.Drawing.Size(393, 43);
+            this.DraftsButton.Size = new System.Drawing.Size(313, 43);
             this.DraftsButton.TabIndex = 6;
             this.DraftsButton.Text = "Черновики";
             this.DraftsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -250,9 +250,9 @@
             this.HistoryApplicationsButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.HistoryApplicationsButton.Name = "HistoryApplicationsButton";
             this.HistoryApplicationsButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.HistoryApplicationsButton.Size = new System.Drawing.Size(393, 43);
+            this.HistoryApplicationsButton.Size = new System.Drawing.Size(313, 43);
             this.HistoryApplicationsButton.TabIndex = 5;
-            this.HistoryApplicationsButton.Text = "История заявок";
+            this.HistoryApplicationsButton.Text = "История";
             this.HistoryApplicationsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.HistoryApplicationsButton.UseVisualStyleBackColor = true;
             this.HistoryApplicationsButton.Click += new System.EventHandler(this.HistoryApplicationsButton_Click);
@@ -269,9 +269,9 @@
             this.AddApplicationButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.AddApplicationButton.Name = "AddApplicationButton";
             this.AddApplicationButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.AddApplicationButton.Size = new System.Drawing.Size(393, 43);
+            this.AddApplicationButton.Size = new System.Drawing.Size(313, 43);
             this.AddApplicationButton.TabIndex = 4;
-            this.AddApplicationButton.Text = "Добавить заявку";
+            this.AddApplicationButton.Text = "Добавить";
             this.AddApplicationButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.AddApplicationButton.UseVisualStyleBackColor = true;
             this.AddApplicationButton.Click += new System.EventHandler(this.AddApplicationButton_Click);
@@ -288,7 +288,7 @@
             this.CurrentApplicationsButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.CurrentApplicationsButton.Name = "CurrentApplicationsButton";
             this.CurrentApplicationsButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.CurrentApplicationsButton.Size = new System.Drawing.Size(393, 43);
+            this.CurrentApplicationsButton.Size = new System.Drawing.Size(313, 43);
             this.CurrentApplicationsButton.TabIndex = 3;
             this.CurrentApplicationsButton.Text = "Текущие";
             this.CurrentApplicationsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -307,7 +307,7 @@
             this.NewApplicationsButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.NewApplicationsButton.Name = "NewApplicationsButton";
             this.NewApplicationsButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.NewApplicationsButton.Size = new System.Drawing.Size(393, 43);
+            this.NewApplicationsButton.Size = new System.Drawing.Size(313, 43);
             this.NewApplicationsButton.TabIndex = 2;
             this.NewApplicationsButton.Text = "Новые";
             this.NewApplicationsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -326,7 +326,7 @@
             this.ApplicationsButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.ApplicationsButton.Name = "ApplicationsButton";
             this.ApplicationsButton.Padding = new System.Windows.Forms.Padding(21, 0, 0, 0);
-            this.ApplicationsButton.Size = new System.Drawing.Size(393, 58);
+            this.ApplicationsButton.Size = new System.Drawing.Size(313, 58);
             this.ApplicationsButton.TabIndex = 3;
             this.ApplicationsButton.Text = "Заявки";
             this.ApplicationsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -341,7 +341,7 @@
             this.CustomersPanel.Location = new System.Drawing.Point(0, 108);
             this.CustomersPanel.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.CustomersPanel.Name = "CustomersPanel";
-            this.CustomersPanel.Size = new System.Drawing.Size(393, 90);
+            this.CustomersPanel.Size = new System.Drawing.Size(313, 90);
             this.CustomersPanel.TabIndex = 2;
             // 
             // AddCustomerButton
@@ -356,7 +356,7 @@
             this.AddCustomerButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.AddCustomerButton.Name = "AddCustomerButton";
             this.AddCustomerButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.AddCustomerButton.Size = new System.Drawing.Size(393, 43);
+            this.AddCustomerButton.Size = new System.Drawing.Size(313, 43);
             this.AddCustomerButton.TabIndex = 3;
             this.AddCustomerButton.Text = "Добавить заказчика";
             this.AddCustomerButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -375,7 +375,7 @@
             this.MyCustomersButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.MyCustomersButton.Name = "MyCustomersButton";
             this.MyCustomersButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.MyCustomersButton.Size = new System.Drawing.Size(393, 43);
+            this.MyCustomersButton.Size = new System.Drawing.Size(313, 43);
             this.MyCustomersButton.TabIndex = 2;
             this.MyCustomersButton.Text = "Мои заказчики";
             this.MyCustomersButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -394,7 +394,7 @@
             this.CustomersButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.CustomersButton.Name = "CustomersButton";
             this.CustomersButton.Padding = new System.Windows.Forms.Padding(21, 0, 0, 0);
-            this.CustomersButton.Size = new System.Drawing.Size(393, 58);
+            this.CustomersButton.Size = new System.Drawing.Size(313, 58);
             this.CustomersButton.TabIndex = 1;
             this.CustomersButton.Text = "Заказчики";
             this.CustomersButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -410,7 +410,7 @@
             this.PanelLogo.Location = new System.Drawing.Point(0, 0);
             this.PanelLogo.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.PanelLogo.Name = "PanelLogo";
-            this.PanelLogo.Size = new System.Drawing.Size(393, 50);
+            this.PanelLogo.Size = new System.Drawing.Size(313, 50);
             this.PanelLogo.TabIndex = 0;
             // 
             // ContentPanel
@@ -421,10 +421,10 @@
             this.ContentPanel.Controls.Add(this.pictureBox1);
             this.ContentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ContentPanel.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ContentPanel.Location = new System.Drawing.Point(393, 50);
+            this.ContentPanel.Location = new System.Drawing.Point(313, 50);
             this.ContentPanel.Margin = new System.Windows.Forms.Padding(0);
             this.ContentPanel.Name = "ContentPanel";
-            this.ContentPanel.Size = new System.Drawing.Size(1031, 935);
+            this.ContentPanel.Size = new System.Drawing.Size(1111, 935);
             this.ContentPanel.TabIndex = 1;
             // 
             // pictureBox1
@@ -434,7 +434,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1029, 933);
+            this.pictureBox1.Size = new System.Drawing.Size(1109, 933);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -446,10 +446,10 @@
             this.TopPanel.Controls.Add(this.OutButton);
             this.TopPanel.Controls.Add(this.UserButton);
             this.TopPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.TopPanel.Location = new System.Drawing.Point(393, 0);
+            this.TopPanel.Location = new System.Drawing.Point(313, 0);
             this.TopPanel.Margin = new System.Windows.Forms.Padding(5);
             this.TopPanel.Name = "TopPanel";
-            this.TopPanel.Size = new System.Drawing.Size(1031, 50);
+            this.TopPanel.Size = new System.Drawing.Size(1111, 50);
             this.TopPanel.TabIndex = 1;
             // 
             // OutButton
@@ -461,7 +461,7 @@
             this.OutButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.OutButton.FlatAppearance.BorderSize = 0;
             this.OutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.OutButton.Location = new System.Drawing.Point(976, 8);
+            this.OutButton.Location = new System.Drawing.Point(1056, 8);
             this.OutButton.Margin = new System.Windows.Forms.Padding(5);
             this.OutButton.Name = "OutButton";
             this.OutButton.Size = new System.Drawing.Size(34, 37);
@@ -476,7 +476,7 @@
             this.UserButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.UserButton.FlatAppearance.BorderSize = 0;
             this.UserButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.UserButton.Location = new System.Drawing.Point(916, 8);
+            this.UserButton.Location = new System.Drawing.Point(996, 8);
             this.UserButton.Margin = new System.Windows.Forms.Padding(5);
             this.UserButton.Name = "UserButton";
             this.UserButton.Size = new System.Drawing.Size(34, 37);

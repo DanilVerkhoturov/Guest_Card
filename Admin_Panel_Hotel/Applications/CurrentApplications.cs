@@ -8,9 +8,12 @@ namespace Admin_Panel_Hotel.Applications
         public CurrentApplications()
         {
             InitializeComponent();
+
+            CustomerComboBox.SelectedIndex = 0;
+            LocationComboBox.SelectedIndex = 0;
            
-            this.CurrentApplicationsDataGridView.Rows.Add("ННГ","06.06.2020");
-            this.CurrentApplicationsDataGridView.Rows.Add("ГПН", "06.06.2020");
+            CurrentApplicationsDataGridView.Rows.Add("ННГ","06.06.2020");
+            CurrentApplicationsDataGridView.Rows.Add("ГПН", "06.06.2020");
         }
 
         private void CurrentDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)

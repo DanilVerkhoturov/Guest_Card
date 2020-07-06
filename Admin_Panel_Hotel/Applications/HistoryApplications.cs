@@ -7,8 +7,12 @@ namespace Admin_Panel_Hotel
         public HistoryApplications()
         {
             InitializeComponent();
-            this.HistoryDataGridView.Rows.Add("ННГ", "06.06.2020");
-            this.HistoryDataGridView.Rows.Add("ГПН", "06.06.2020");
+
+            CustomerComboBox.SelectedIndex = 0;
+            LocationComboBox.SelectedIndex = 0;
+
+            HistoryDataGridView.Rows.Add("ННГ", "06.06.2020");
+            HistoryDataGridView.Rows.Add("ГПН", "06.06.2020");
         }
 
         private void HistoryDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)

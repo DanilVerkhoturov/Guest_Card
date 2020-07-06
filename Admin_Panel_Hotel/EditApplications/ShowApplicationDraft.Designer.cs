@@ -39,6 +39,7 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UserPost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,9 +58,9 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(644, 631);
+            this.button3.Location = new System.Drawing.Point(671, 642);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(317, 34);
+            this.button3.Size = new System.Drawing.Size(317, 44);
             this.button3.TabIndex = 27;
             this.button3.Text = "Продолжить редактирование\r\n";
             this.button3.UseVisualStyleBackColor = false;
@@ -86,12 +87,14 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.UsersDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.UsersDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.UsersDataGridView.ColumnHeadersHeight = 35;
+            this.UsersDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.UsersDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
             this.UserPost,
+            this.Column7,
             this.Column4,
             this.Column5,
             this.Column6});
@@ -127,7 +130,7 @@
             this.UsersDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.UsersDataGridView.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.UsersDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.UsersDataGridView.Size = new System.Drawing.Size(822, 494);
+            this.UsersDataGridView.Size = new System.Drawing.Size(849, 494);
             this.UsersDataGridView.TabIndex = 23;
             // 
             // Column1
@@ -166,6 +169,14 @@
             this.UserPost.ReadOnly = true;
             this.UserPost.Width = 146;
             // 
+            // Column7
+            // 
+            this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Column7.HeaderText = "Цех";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            this.Column7.Width = 74;
+            // 
             // Column4
             // 
             this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
@@ -197,8 +208,8 @@
             this.FormNameLabel.AutoSize = true;
             this.FormNameLabel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.FormNameLabel.Font = new System.Drawing.Font("Roboto", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.FormNameLabel.Location = new System.Drawing.Point(70, 34);
-            this.FormNameLabel.Margin = new System.Windows.Forms.Padding(61, 25, 0, 45);
+            this.FormNameLabel.Location = new System.Drawing.Point(70, 44);
+            this.FormNameLabel.Margin = new System.Windows.Forms.Padding(61, 35, 0, 45);
             this.FormNameLabel.Name = "FormNameLabel";
             this.FormNameLabel.Size = new System.Drawing.Size(490, 35);
             this.FormNameLabel.TabIndex = 22;
@@ -207,13 +218,13 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
-            this.label1.Location = new System.Drawing.Point(834, 95);
+            this.label1.Location = new System.Drawing.Point(822, 83);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 19);
+            this.label1.Size = new System.Drawing.Size(166, 25);
             this.label1.TabIndex = 39;
-            this.label1.Text = "+ добавить еще";
+            this.label1.Text = "+ добавить ещё";
             // 
             // ShowApplicationDraft
             // 
@@ -246,6 +257,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn UserPost;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
