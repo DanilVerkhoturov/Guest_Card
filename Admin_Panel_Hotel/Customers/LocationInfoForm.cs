@@ -44,5 +44,12 @@ namespace Admin_Panel_Hotel.Customers
             RegionHelpLabel.Visible = true;
             RegionComboBox.DropDownStyle = ComboBoxStyle.DropDown;
         }
+
+        private void CustomerLocationNameLabel_Click(object sender, System.EventArgs e)
+        {
+            CustomerInfoForm.CustomerName = CustomerName;
+            CustomerInfoForm.CustomerId = CustomerId;
+            Functions.OpenChildForm(new CustomerInfoForm(), MainForm.ContP);
+        }
     }
 }

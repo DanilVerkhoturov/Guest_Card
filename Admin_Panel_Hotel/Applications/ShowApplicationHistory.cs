@@ -17,7 +17,7 @@ namespace Admin_Panel_Hotel
 
         private void NewApplicationsLabel_Click(object sender, EventArgs e)
         {
-            Functions.OpenChildForm(new NewApplications(), MainForm.ContP);
+            Functions.OpenChildForm(new HistoryApplications(), MainForm.ContP);
         }
 
         private void AcceptButton_Click(object sender, EventArgs e)

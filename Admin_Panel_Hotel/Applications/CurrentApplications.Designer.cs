@@ -226,7 +226,7 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1013, 894);
+            this.ClientSize = new System.Drawing.Size(1093, 894);
             this.Controls.Add(this.CurrentApplicationsDataGridView);
             this.Controls.Add(this.LocationComboBox);
             this.Controls.Add(this.CustomerComboBox);

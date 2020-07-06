@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Drawing;
 using System.Windows.Forms;
 
 namespace Admin_Panel_Hotel
@@ -11,8 +10,8 @@ namespace Admin_Panel_Hotel
         public ShowApplicationNew()
         {
             InitializeComponent();
-            this.NewApplicationsDataGridView.Rows.Add("1", "Иванов Иван Иванович", "58585857", "Электик","06.06.2020", "06.06.2020", "мясояха");
-            this.NewApplicationsDataGridView.Rows.Add("2", "Петров Петр Петрович", "58585857", "Электик","06.06.2020", "06.06.2020", "мясояха");
+            NewApplicationsDataGridView.Rows.Add("1", "Иванов Иван Иванович", "58585857", "Электик","06.06.2020", "06.06.2020", "мясояха");
+            NewApplicationsDataGridView.Rows.Add("2", "Петров Петр Петрович", "58585857", "Электик","06.06.2020", "06.06.2020", "мясояха");
         }
 
         private void NewApplicationsLabel_Click(object sender, EventArgs e)

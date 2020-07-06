@@ -28,20 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ShowApplicationHistory));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.FormNameLabel = new System.Windows.Forms.Label();
-            this.PrintButton = new System.Windows.Forms.Button();
-            this.DraftButton = new System.Windows.Forms.Button();
-            this.AcceptButton = new System.Windows.Forms.Button();
+            this.HistoryApplicationNameLabel = new System.Windows.Forms.Label();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.EditButton = new System.Windows.Forms.Button();
-            this.AddLocationButton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.PrintButton = new System.Windows.Forms.Button();
+            this.SendButton = new System.Windows.Forms.Button();
             this.UsersDataGridView = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,68 +49,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.UsersDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // FormNameLabel
+            // HistoryApplicationNameLabel
             // 
-            this.FormNameLabel.AutoSize = true;
-            this.FormNameLabel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.FormNameLabel.Font = new System.Drawing.Font("Roboto", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.FormNameLabel.Location = new System.Drawing.Point(70, 45);
-            this.FormNameLabel.Margin = new System.Windows.Forms.Padding(61, 36, 0, 0);
-            this.FormNameLabel.Name = "FormNameLabel";
-            this.FormNameLabel.Size = new System.Drawing.Size(575, 35);
-            this.FormNameLabel.TabIndex = 0;
-            this.FormNameLabel.Text = "История заявок > Заявка-1 от 02.07.2020";
-            this.FormNameLabel.Click += new System.EventHandler(this.NewApplicationsLabel_Click);
-            // 
-            // PrintButton
-            // 
-            this.PrintButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(82)))), ((int)(((byte)(119)))));
-            this.PrintButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
-            this.PrintButton.FlatAppearance.BorderSize = 0;
-            this.PrintButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PrintButton.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.PrintButton.ForeColor = System.Drawing.Color.Transparent;
-            this.PrintButton.Location = new System.Drawing.Point(1299, 33);
-            this.PrintButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.PrintButton.Name = "PrintButton";
-            this.PrintButton.Size = new System.Drawing.Size(188, 61);
-            this.PrintButton.TabIndex = 13;
-            this.PrintButton.Text = "Печать";
-            this.PrintButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.PrintButton.UseVisualStyleBackColor = false;
-            // 
-            // DraftButton
-            // 
-            this.DraftButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(82)))), ((int)(((byte)(119)))));
-            this.DraftButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
-            this.DraftButton.FlatAppearance.BorderSize = 0;
-            this.DraftButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DraftButton.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DraftButton.ForeColor = System.Drawing.Color.White;
-            this.DraftButton.Location = new System.Drawing.Point(1102, 31);
-            this.DraftButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.DraftButton.Name = "DraftButton";
-            this.DraftButton.Size = new System.Drawing.Size(188, 61);
-            this.DraftButton.TabIndex = 14;
-            this.DraftButton.Text = "Черновик";
-            this.DraftButton.UseVisualStyleBackColor = false;
-            // 
-            // AcceptButton
-            // 
-            this.AcceptButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(82)))), ((int)(((byte)(119)))));
-            this.AcceptButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.AcceptButton.FlatAppearance.BorderSize = 0;
-            this.AcceptButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AcceptButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.AcceptButton.ForeColor = System.Drawing.Color.White;
-            this.AcceptButton.Location = new System.Drawing.Point(1270, 966);
-            this.AcceptButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.AcceptButton.Name = "AcceptButton";
-            this.AcceptButton.Size = new System.Drawing.Size(160, 41);
-            this.AcceptButton.TabIndex = 16;
-            this.AcceptButton.Text = "Подтвердить";
-            this.AcceptButton.UseVisualStyleBackColor = false;
-            this.AcceptButton.Click += new System.EventHandler(this.AcceptButton_Click);
+            this.HistoryApplicationNameLabel.AutoSize = true;
+            this.HistoryApplicationNameLabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.HistoryApplicationNameLabel.Font = new System.Drawing.Font("Roboto", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.HistoryApplicationNameLabel.Location = new System.Drawing.Point(70, 45);
+            this.HistoryApplicationNameLabel.Margin = new System.Windows.Forms.Padding(61, 36, 0, 0);
+            this.HistoryApplicationNameLabel.Name = "HistoryApplicationNameLabel";
+            this.HistoryApplicationNameLabel.Size = new System.Drawing.Size(575, 35);
+            this.HistoryApplicationNameLabel.TabIndex = 0;
+            this.HistoryApplicationNameLabel.Text = "История заявок > Заявка-1 от 02.07.2020";
+            this.HistoryApplicationNameLabel.Click += new System.EventHandler(this.NewApplicationsLabel_Click);
             // 
             // dataGridViewImageColumn1
             // 
@@ -128,53 +73,35 @@
             this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewImageColumn1.Width = 30;
             // 
-            // EditButton
+            // PrintButton
             // 
-            this.EditButton.BackColor = System.Drawing.Color.Transparent;
-            this.EditButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("EditButton.BackgroundImage")));
-            this.EditButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.EditButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
-            this.EditButton.FlatAppearance.BorderSize = 0;
-            this.EditButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EditButton.Location = new System.Drawing.Point(1029, 31);
-            this.EditButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.EditButton.Name = "EditButton";
-            this.EditButton.Size = new System.Drawing.Size(64, 59);
-            this.EditButton.TabIndex = 12;
-            this.EditButton.UseVisualStyleBackColor = false;
-            this.EditButton.Click += new System.EventHandler(this.EditButton_Click);
+            this.PrintButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(82)))), ((int)(((byte)(119)))));
+            this.PrintButton.FlatAppearance.BorderSize = 0;
+            this.PrintButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PrintButton.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.PrintButton.ForeColor = System.Drawing.Color.White;
+            this.PrintButton.Location = new System.Drawing.Point(965, 43);
+            this.PrintButton.Margin = new System.Windows.Forms.Padding(0, 28, 0, 0);
+            this.PrintButton.Name = "PrintButton";
+            this.PrintButton.Size = new System.Drawing.Size(107, 37);
+            this.PrintButton.TabIndex = 18;
+            this.PrintButton.Text = "Печать";
+            this.PrintButton.UseVisualStyleBackColor = false;
             // 
-            // AddLocationButton
+            // SendButton
             // 
-            this.AddLocationButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.AddLocationButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(82)))), ((int)(((byte)(119)))));
-            this.AddLocationButton.FlatAppearance.BorderSize = 0;
-            this.AddLocationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddLocationButton.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.AddLocationButton.ForeColor = System.Drawing.Color.White;
-            this.AddLocationButton.Location = new System.Drawing.Point(886, 43);
-            this.AddLocationButton.Margin = new System.Windows.Forms.Padding(0, 28, 0, 0);
-            this.AddLocationButton.Name = "AddLocationButton";
-            this.AddLocationButton.Size = new System.Drawing.Size(107, 37);
-            this.AddLocationButton.TabIndex = 18;
-            this.AddLocationButton.Text = "Печать";
-            this.AddLocationButton.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(82)))), ((int)(((byte)(119)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(757, 43);
-            this.button1.Margin = new System.Windows.Forms.Padding(33, 25, 31, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(114, 37);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "Отправить";
-            this.button1.UseVisualStyleBackColor = false;
+            this.SendButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(82)))), ((int)(((byte)(119)))));
+            this.SendButton.FlatAppearance.BorderSize = 0;
+            this.SendButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SendButton.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SendButton.ForeColor = System.Drawing.Color.White;
+            this.SendButton.Location = new System.Drawing.Point(812, 43);
+            this.SendButton.Margin = new System.Windows.Forms.Padding(33, 25, 31, 0);
+            this.SendButton.Name = "SendButton";
+            this.SendButton.Size = new System.Drawing.Size(122, 37);
+            this.SendButton.TabIndex = 19;
+            this.SendButton.Text = "Отправить";
+            this.SendButton.UseVisualStyleBackColor = false;
             // 
             // UsersDataGridView
             // 
@@ -188,7 +115,7 @@
             this.UsersDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.UsersDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.UsersDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.UsersDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.UsersDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.UsersDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
@@ -241,7 +168,7 @@
             this.UsersDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.UsersDataGridView.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.UsersDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.UsersDataGridView.Size = new System.Drawing.Size(849, 577);
+            this.UsersDataGridView.Size = new System.Drawing.Size(928, 577);
             this.UsersDataGridView.TabIndex = 24;
             // 
             // Column1
@@ -319,19 +246,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.ClientSize = new System.Drawing.Size(1013, 894);
+            this.ClientSize = new System.Drawing.Size(1093, 894);
             this.Controls.Add(this.UsersDataGridView);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.AddLocationButton);
-            this.Controls.Add(this.AcceptButton);
-            this.Controls.Add(this.DraftButton);
+            this.Controls.Add(this.SendButton);
             this.Controls.Add(this.PrintButton);
-            this.Controls.Add(this.EditButton);
-            this.Controls.Add(this.FormNameLabel);
+            this.Controls.Add(this.HistoryApplicationNameLabel);
             this.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.MaximumSize = new System.Drawing.Size(1029, 933);
-            this.MinimumSize = new System.Drawing.Size(1029, 933);
             this.Name = "ShowApplicationHistory";
             ((System.ComponentModel.ISupportInitialize)(this.UsersDataGridView)).EndInit();
             this.ResumeLayout(false);
@@ -341,14 +262,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Label FormNameLabel;
-        private System.Windows.Forms.Button EditButton;
-        private System.Windows.Forms.Button PrintButton;
-        private System.Windows.Forms.Button DraftButton;
-        private System.Windows.Forms.Button AcceptButton;
+        private System.Windows.Forms.Label HistoryApplicationNameLabel;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
-        private System.Windows.Forms.Button AddLocationButton;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button PrintButton;
+        private System.Windows.Forms.Button SendButton;
         private System.Windows.Forms.DataGridView UsersDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;

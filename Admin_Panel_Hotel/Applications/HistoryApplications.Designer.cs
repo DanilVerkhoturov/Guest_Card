@@ -38,6 +38,10 @@
             this.Castomer = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Location = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HistoryDataGridView = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LocationComboBox = new System.Windows.Forms.ComboBox();
             this.CustomerComboBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -45,10 +49,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.PeriodFromDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.PeriodToDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ShowAllLinkLabel = new System.Windows.Forms.LinkLabel();
             this.CardsCountLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.HistoryDataGridView)).BeginInit();
@@ -76,7 +76,6 @@
             this.HistoryDataGridView.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.HistoryDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.HistoryDataGridView.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.HistoryDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.HistoryDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.HistoryDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
@@ -108,7 +107,7 @@
             this.HistoryDataGridView.DefaultCellStyle = dataGridViewCellStyle5;
             this.HistoryDataGridView.EnableHeadersVisualStyles = false;
             this.HistoryDataGridView.GridColor = System.Drawing.Color.Black;
-            this.HistoryDataGridView.Location = new System.Drawing.Point(113, 210);
+            this.HistoryDataGridView.Location = new System.Drawing.Point(153, 210);
             this.HistoryDataGridView.Margin = new System.Windows.Forms.Padding(209, 27, 7, 7);
             this.HistoryDataGridView.MultiSelect = false;
             this.HistoryDataGridView.Name = "HistoryDataGridView";
@@ -139,6 +138,40 @@
             this.HistoryDataGridView.TabStop = false;
             this.HistoryDataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.HistoryDataGridView_CellMouseClick);
             this.HistoryDataGridView.CellMouseMove += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.HistoryDataGridView_CellMouseMove);
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Column1.HeaderText = "Имя";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.Column4.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Column4.HeaderText = "Дата";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Column2.HeaderText = "Просмотр";
+            this.Column2.Image = global::Admin_Panel_Hotel.Properties.Resources.pngwing_8;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column2.Width = 5;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "id";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Visible = false;
             // 
             // LocationComboBox
             // 
@@ -229,45 +262,10 @@
             this.PeriodToDateTimePicker.Size = new System.Drawing.Size(160, 33);
             this.PeriodToDateTimePicker.TabIndex = 56;
             // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Column1.HeaderText = "Имя";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.Column4.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Column4.HeaderText = "Дата";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Column2.HeaderText = "Просмотр";
-            this.Column2.Image = global::Admin_Panel_Hotel.Properties.Resources.pngwing_8;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column2.Width = 5;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "id";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Visible = false;
-            // 
             // ShowAllLinkLabel
             // 
-            this.ShowAllLinkLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.ShowAllLinkLabel.AutoSize = true;
-            this.ShowAllLinkLabel.Location = new System.Drawing.Point(347, 772);
+            this.ShowAllLinkLabel.Location = new System.Drawing.Point(387, 735);
             this.ShowAllLinkLabel.Margin = new System.Windows.Forms.Padding(60, 0, 9, 0);
             this.ShowAllLinkLabel.Name = "ShowAllLinkLabel";
             this.ShowAllLinkLabel.Size = new System.Drawing.Size(143, 25);
@@ -277,9 +275,8 @@
             // 
             // CardsCountLabel
             // 
-            this.CardsCountLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.CardsCountLabel.AutoSize = true;
-            this.CardsCountLabel.Location = new System.Drawing.Point(108, 772);
+            this.CardsCountLabel.Location = new System.Drawing.Point(148, 735);
             this.CardsCountLabel.Margin = new System.Windows.Forms.Padding(9, 0, 9, 0);
             this.CardsCountLabel.Name = "CardsCountLabel";
             this.CardsCountLabel.Size = new System.Drawing.Size(196, 25);
@@ -292,7 +289,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1013, 894);
+            this.ClientSize = new System.Drawing.Size(1093, 894);
             this.Controls.Add(this.ShowAllLinkLabel);
             this.Controls.Add(this.CardsCountLabel);
             this.Controls.Add(this.PeriodToDateTimePicker);
@@ -304,7 +301,7 @@
             this.Controls.Add(this.CustomerComboBox);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "HistoryApplications";
             this.Text = "Applications";
             ((System.ComponentModel.ISupportInitialize)(this.HistoryDataGridView)).EndInit();

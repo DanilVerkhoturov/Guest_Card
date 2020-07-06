@@ -167,11 +167,11 @@
     <Compile Include="Applications\ShowApplicationDraft.Designer.cs">
       <DependentUpon>ShowApplicationDraft.cs</DependentUpon>
     </Compile>
-    <Compile Include="Applications\ShowApplication.cs">
+    <Compile Include="Applications\ShowCurrentApplication.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Applications\ShowApplication.Designer.cs">
-      <DependentUpon>ShowApplication.cs</DependentUpon>
+    <Compile Include="Applications\ShowCurrentApplication.Designer.cs">
+      <DependentUpon>ShowCurrentApplication.cs</DependentUpon>
     </Compile>
     <Compile Include="Applications\InfoUserForm.cs">
       <SubType>Form</SubType>
@@ -250,8 +250,8 @@
     <EmbeddedResource Include="Applications\ShowApplicationDraft.resx">
       <DependentUpon>ShowApplicationDraft.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Applications\ShowApplication.resx">
-      <DependentUpon>ShowApplication.cs</DependentUpon>
+    <EmbeddedResource Include="Applications\ShowCurrentApplication.resx">
+      <DependentUpon>ShowCurrentApplication.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NotificationsForm.resx">
       <DependentUpon>NotificationsForm.cs</DependentUpon>

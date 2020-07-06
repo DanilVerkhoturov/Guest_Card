@@ -62,5 +62,10 @@ namespace Admin_Panel_Hotel.Customers
                 LocationsDataGridView.Cursor = Cursors.Default;
             }
         }
+
+        private void CustomerNameLabel_Click(object sender, EventArgs e)
+        {
+            Functions.OpenChildForm(new CustomersForm(), MainForm.ContP);
+        }
     }
 }

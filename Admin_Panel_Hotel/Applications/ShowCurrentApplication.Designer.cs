@@ -1,6 +1,6 @@
 ﻿namespace Admin_Panel_Hotel
 {
-    partial class ShowApplication
+    partial class ShowCurrentApplication
     {
         /// <summary>
         /// Required designer variable.
@@ -33,15 +33,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ShowApplication));
-            this.FormNameLabel = new System.Windows.Forms.Label();
-            this.PrintButton = new System.Windows.Forms.Button();
-            this.DraftButton = new System.Windows.Forms.Button();
-            this.AcceptButton = new System.Windows.Forms.Button();
+            this.CurrentApplicationNameLabel = new System.Windows.Forms.Label();
             this.UsersDataGridView = new System.Windows.Forms.DataGridView();
-            this.AddLocationButton = new System.Windows.Forms.Button();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.EditButton = new System.Windows.Forms.Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,71 +44,23 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ShowUserInfo = new System.Windows.Forms.DataGridViewImageColumn();
+            this.PrintButton = new System.Windows.Forms.Button();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.UsersDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // FormNameLabel
+            // CurrentApplicationNameLabel
             // 
-            this.FormNameLabel.AutoSize = true;
-            this.FormNameLabel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.FormNameLabel.Font = new System.Drawing.Font("Roboto", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.FormNameLabel.Location = new System.Drawing.Point(70, 34);
-            this.FormNameLabel.Margin = new System.Windows.Forms.Padding(61, 25, 4, 0);
-            this.FormNameLabel.Name = "FormNameLabel";
-            this.FormNameLabel.Size = new System.Drawing.Size(576, 35);
-            this.FormNameLabel.TabIndex = 0;
-            this.FormNameLabel.Text = "Текущие заявки > Заявка-1 от 02.07.2020";
-            this.FormNameLabel.Click += new System.EventHandler(this.NewApplicationsLabel_Click);
-            // 
-            // PrintButton
-            // 
-            this.PrintButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(82)))), ((int)(((byte)(119)))));
-            this.PrintButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
-            this.PrintButton.FlatAppearance.BorderSize = 0;
-            this.PrintButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PrintButton.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.PrintButton.ForeColor = System.Drawing.Color.Transparent;
-            this.PrintButton.Location = new System.Drawing.Point(1299, 33);
-            this.PrintButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.PrintButton.Name = "PrintButton";
-            this.PrintButton.Size = new System.Drawing.Size(188, 61);
-            this.PrintButton.TabIndex = 13;
-            this.PrintButton.Text = "Печать";
-            this.PrintButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.PrintButton.UseVisualStyleBackColor = false;
-            // 
-            // DraftButton
-            // 
-            this.DraftButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(82)))), ((int)(((byte)(119)))));
-            this.DraftButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
-            this.DraftButton.FlatAppearance.BorderSize = 0;
-            this.DraftButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DraftButton.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DraftButton.ForeColor = System.Drawing.Color.White;
-            this.DraftButton.Location = new System.Drawing.Point(1102, 31);
-            this.DraftButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.DraftButton.Name = "DraftButton";
-            this.DraftButton.Size = new System.Drawing.Size(188, 61);
-            this.DraftButton.TabIndex = 14;
-            this.DraftButton.Text = "Черновик";
-            this.DraftButton.UseVisualStyleBackColor = false;
-            // 
-            // AcceptButton
-            // 
-            this.AcceptButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(82)))), ((int)(((byte)(119)))));
-            this.AcceptButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.AcceptButton.FlatAppearance.BorderSize = 0;
-            this.AcceptButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AcceptButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.AcceptButton.ForeColor = System.Drawing.Color.White;
-            this.AcceptButton.Location = new System.Drawing.Point(1270, 966);
-            this.AcceptButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.AcceptButton.Name = "AcceptButton";
-            this.AcceptButton.Size = new System.Drawing.Size(160, 41);
-            this.AcceptButton.TabIndex = 16;
-            this.AcceptButton.Text = "Подтвердить";
-            this.AcceptButton.UseVisualStyleBackColor = false;
-            this.AcceptButton.Click += new System.EventHandler(this.AcceptButton_Click);
+            this.CurrentApplicationNameLabel.AutoSize = true;
+            this.CurrentApplicationNameLabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CurrentApplicationNameLabel.Font = new System.Drawing.Font("Roboto", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CurrentApplicationNameLabel.Location = new System.Drawing.Point(70, 34);
+            this.CurrentApplicationNameLabel.Margin = new System.Windows.Forms.Padding(61, 25, 4, 0);
+            this.CurrentApplicationNameLabel.Name = "CurrentApplicationNameLabel";
+            this.CurrentApplicationNameLabel.Size = new System.Drawing.Size(576, 35);
+            this.CurrentApplicationNameLabel.TabIndex = 0;
+            this.CurrentApplicationNameLabel.Text = "Текущие заявки > Заявка-1 от 02.07.2020";
+            this.CurrentApplicationNameLabel.Click += new System.EventHandler(this.NewApplicationsLabel_Click);
             // 
             // UsersDataGridView
             // 
@@ -129,17 +74,18 @@
             this.UsersDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.UsersDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.UsersDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.UsersDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.UsersDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.UsersDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.UsersDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.UsersDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.UsersDataGridView.ColumnHeadersHeight = 35;
+            this.UsersDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.UsersDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
@@ -182,52 +128,9 @@
             this.UsersDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.UsersDataGridView.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.UsersDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.UsersDataGridView.Size = new System.Drawing.Size(860, 677);
+            this.UsersDataGridView.Size = new System.Drawing.Size(943, 538);
             this.UsersDataGridView.TabIndex = 17;
             this.UsersDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridTable_CellClick);
-            // 
-            // AddLocationButton
-            // 
-            this.AddLocationButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.AddLocationButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(82)))), ((int)(((byte)(119)))));
-            this.AddLocationButton.FlatAppearance.BorderSize = 0;
-            this.AddLocationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddLocationButton.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.AddLocationButton.ForeColor = System.Drawing.Color.White;
-            this.AddLocationButton.Location = new System.Drawing.Point(860, 32);
-            this.AddLocationButton.Margin = new System.Windows.Forms.Padding(33, 23, 124, 44);
-            this.AddLocationButton.Name = "AddLocationButton";
-            this.AddLocationButton.Size = new System.Drawing.Size(131, 35);
-            this.AddLocationButton.TabIndex = 18;
-            this.AddLocationButton.Text = "Печать";
-            this.AddLocationButton.UseVisualStyleBackColor = false;
-            // 
-            // dataGridViewImageColumn1
-            // 
-            this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewImageColumn1.Frozen = true;
-            this.dataGridViewImageColumn1.HeaderText = "";
-            this.dataGridViewImageColumn1.Image = global::Admin_Panel_Hotel.Properties.Resources.pngwing_8;
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.ReadOnly = true;
-            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewImageColumn1.Width = 30;
-            // 
-            // EditButton
-            // 
-            this.EditButton.BackColor = System.Drawing.Color.Transparent;
-            this.EditButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("EditButton.BackgroundImage")));
-            this.EditButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.EditButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
-            this.EditButton.FlatAppearance.BorderSize = 0;
-            this.EditButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EditButton.Location = new System.Drawing.Point(1029, 31);
-            this.EditButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.EditButton.Name = "EditButton";
-            this.EditButton.Size = new System.Drawing.Size(64, 59);
-            this.EditButton.TabIndex = 12;
-            this.EditButton.UseVisualStyleBackColor = false;
-            this.EditButton.Click += new System.EventHandler(this.EditButton_Click);
             // 
             // Column1
             // 
@@ -237,7 +140,7 @@
             this.Column1.HeaderText = "№";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
-            this.Column1.Width = 57;
+            this.Column1.Width = 56;
             // 
             // Column2
             // 
@@ -263,7 +166,7 @@
             this.UserPost.HeaderText = "Должность";
             this.UserPost.Name = "UserPost";
             this.UserPost.ReadOnly = true;
-            this.UserPost.Width = 147;
+            this.UserPost.Width = 146;
             // 
             // Column6
             // 
@@ -279,7 +182,7 @@
             this.Column4.MinimumWidth = 10;
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
-            this.Column4.Width = 110;
+            this.Column4.Width = 113;
             // 
             // Column5
             // 
@@ -289,7 +192,7 @@
             this.Column5.MinimumWidth = 10;
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
-            this.Column5.Width = 113;
+            this.Column5.Width = 115;
             // 
             // Column7
             // 
@@ -299,32 +202,52 @@
             // 
             // ShowUserInfo
             // 
-            this.ShowUserInfo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.ShowUserInfo.HeaderText = "";
+            this.ShowUserInfo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.ShowUserInfo.HeaderText = "Все";
             this.ShowUserInfo.Image = global::Admin_Panel_Hotel.Properties.Resources.pngwing_8;
             this.ShowUserInfo.Name = "ShowUserInfo";
             this.ShowUserInfo.ReadOnly = true;
             this.ShowUserInfo.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ShowUserInfo.Width = 5;
+            this.ShowUserInfo.Width = 53;
             // 
-            // ShowApplication
+            // PrintButton
+            // 
+            this.PrintButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(82)))), ((int)(((byte)(119)))));
+            this.PrintButton.FlatAppearance.BorderSize = 0;
+            this.PrintButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PrintButton.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.PrintButton.ForeColor = System.Drawing.Color.White;
+            this.PrintButton.Location = new System.Drawing.Point(943, 32);
+            this.PrintButton.Margin = new System.Windows.Forms.Padding(33, 23, 124, 44);
+            this.PrintButton.Name = "PrintButton";
+            this.PrintButton.Size = new System.Drawing.Size(131, 35);
+            this.PrintButton.TabIndex = 18;
+            this.PrintButton.Text = "Печать";
+            this.PrintButton.UseVisualStyleBackColor = false;
+            // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewImageColumn1.Frozen = true;
+            this.dataGridViewImageColumn1.HeaderText = "";
+            this.dataGridViewImageColumn1.Image = global::Admin_Panel_Hotel.Properties.Resources.pngwing_8;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.ReadOnly = true;
+            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewImageColumn1.Width = 30;
+            // 
+            // ShowCurrentApplication
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.ClientSize = new System.Drawing.Size(1013, 894);
+            this.ClientSize = new System.Drawing.Size(1093, 894);
             this.Controls.Add(this.UsersDataGridView);
-            this.Controls.Add(this.AddLocationButton);
-            this.Controls.Add(this.AcceptButton);
-            this.Controls.Add(this.DraftButton);
             this.Controls.Add(this.PrintButton);
-            this.Controls.Add(this.EditButton);
-            this.Controls.Add(this.FormNameLabel);
+            this.Controls.Add(this.CurrentApplicationNameLabel);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.MaximumSize = new System.Drawing.Size(1029, 933);
-            this.MinimumSize = new System.Drawing.Size(1029, 933);
-            this.Name = "ShowApplication";
+            this.Name = "ShowCurrentApplication";
             ((System.ComponentModel.ISupportInitialize)(this.UsersDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -333,14 +256,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Label FormNameLabel;
-        private System.Windows.Forms.Button EditButton;
-        private System.Windows.Forms.Button PrintButton;
-        private System.Windows.Forms.Button DraftButton;
-        private System.Windows.Forms.Button AcceptButton;
+        private System.Windows.Forms.Label CurrentApplicationNameLabel;
         private System.Windows.Forms.DataGridView UsersDataGridView;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
-        private System.Windows.Forms.Button AddLocationButton;
+        private System.Windows.Forms.Button PrintButton;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;

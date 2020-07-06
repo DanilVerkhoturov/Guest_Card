@@ -75,6 +75,7 @@
             this.CustomerLocationNameLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.CustomerLocationNameLabel.AutoEllipsis = true;
             this.CustomerLocationNameLabel.AutoSize = true;
+            this.CustomerLocationNameLabel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CustomerLocationNameLabel.Font = new System.Drawing.Font("Roboto", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CustomerLocationNameLabel.Location = new System.Drawing.Point(70, 44);
             this.CustomerLocationNameLabel.Margin = new System.Windows.Forms.Padding(61, 35, 3, 0);
@@ -83,6 +84,7 @@
             this.CustomerLocationNameLabel.Size = new System.Drawing.Size(254, 35);
             this.CustomerLocationNameLabel.TabIndex = 0;
             this.CustomerLocationNameLabel.Text = "Мои заказчики > ";
+            this.CustomerLocationNameLabel.Click += new System.EventHandler(this.CustomerLocationNameLabel_Click);
             // 
             // LocationDataLabel
             // 

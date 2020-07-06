@@ -21,7 +21,7 @@ namespace Admin_Panel_Hotel.Applications
             if (e.ColumnIndex == 1)
             {
                 
-                Functions.OpenChildForm(new ShowApplication(), MainForm.ContP);
+                Functions.OpenChildForm(new ShowCurrentApplication(), MainForm.ContP);
             }
         }
 
@@ -32,7 +32,7 @@ namespace Admin_Panel_Hotel.Applications
                 // TODO: Передача данных для выгрузки заявки из базы.
                 //ShowApplication.CustomerName = CustomersDataGridView[0, e.RowIndex].Value.ToString();
                 //ShowApplication.CustomerId = Convert.ToInt64(CustomersDataGridView[2, e.RowIndex].Value.ToString());
-                Functions.OpenChildForm(new ShowApplication(), MainForm.ContP);
+                Functions.OpenChildForm(new ShowCurrentApplication(), MainForm.ContP);
             }
         }
 
