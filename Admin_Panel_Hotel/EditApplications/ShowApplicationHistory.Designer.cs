@@ -191,7 +191,7 @@
             this.Column1.HeaderText = "№";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
-            this.Column1.Width = 59;
+            this.Column1.Width = 57;
             // 
             // Column2
             // 
@@ -210,7 +210,7 @@
             this.Column3.HeaderText = "Таб.номер";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
-            this.Column3.Width = 140;
+            this.Column3.Width = 138;
             // 
             // UserPost
             // 
@@ -218,7 +218,7 @@
             this.UserPost.HeaderText = "Должность";
             this.UserPost.Name = "UserPost";
             this.UserPost.ReadOnly = true;
-            this.UserPost.Width = 149;
+            this.UserPost.Width = 147;
             // 
             // Column4
             // 
