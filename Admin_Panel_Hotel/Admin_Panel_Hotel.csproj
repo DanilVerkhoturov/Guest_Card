@@ -149,28 +149,28 @@
     <Compile Include="Customers\LocationInfoForm.Designer.cs">
       <DependentUpon>LocationInfoForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="EditApplications\ShowApplicationHistory.cs">
+    <Compile Include="Applications\ShowApplicationHistory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditApplications\ShowApplicationHistory.Designer.cs">
+    <Compile Include="Applications\ShowApplicationHistory.Designer.cs">
       <DependentUpon>ShowApplicationHistory.cs</DependentUpon>
     </Compile>
-    <Compile Include="EditApplications\ShowApplicationNew.cs">
+    <Compile Include="Applications\ShowApplicationNew.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditApplications\ShowApplicationNew.Designer.cs">
+    <Compile Include="Applications\ShowApplicationNew.Designer.cs">
       <DependentUpon>ShowApplicationNew.cs</DependentUpon>
     </Compile>
-    <Compile Include="EditApplications\ShowApplicationDraft.cs">
+    <Compile Include="Applications\ShowApplicationDraft.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditApplications\ShowApplicationDraft.Designer.cs">
+    <Compile Include="Applications\ShowApplicationDraft.Designer.cs">
       <DependentUpon>ShowApplicationDraft.cs</DependentUpon>
     </Compile>
-    <Compile Include="EditApplications\ShowApplication.cs">
+    <Compile Include="Applications\ShowApplication.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditApplications\ShowApplication.Designer.cs">
+    <Compile Include="Applications\ShowApplication.Designer.cs">
       <DependentUpon>ShowApplication.cs</DependentUpon>
     </Compile>
     <Compile Include="Applications\InfoUserForm.cs">
@@ -241,16 +241,16 @@
     <EmbeddedResource Include="Customers\LocationInfoForm.resx">
       <DependentUpon>LocationInfoForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditApplications\ShowApplicationHistory.resx">
+    <EmbeddedResource Include="Applications\ShowApplicationHistory.resx">
       <DependentUpon>ShowApplicationHistory.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditApplications\ShowApplicationNew.resx">
+    <EmbeddedResource Include="Applications\ShowApplicationNew.resx">
       <DependentUpon>ShowApplicationNew.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditApplications\ShowApplicationDraft.resx">
+    <EmbeddedResource Include="Applications\ShowApplicationDraft.resx">
       <DependentUpon>ShowApplicationDraft.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditApplications\ShowApplication.resx">
+    <EmbeddedResource Include="Applications\ShowApplication.resx">
       <DependentUpon>ShowApplication.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NotificationsForm.resx">
