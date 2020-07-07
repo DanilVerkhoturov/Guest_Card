@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace Admin_Panel_Hotel
 {
-    class Functions
+    internal class Functions
     {
         #region Переменные
 
@@ -14,7 +14,7 @@ namespace Admin_Panel_Hotel
         /// Строка подключения.
         /// </summary>
         private static string ConnectionString = "Data Source=82.202.172.129; User Id=u117511_hotel; Password=wjkbc0r7; Database=u117511_hotel";
-        
+
         /// <summary>
         /// Соединение с базой данных.
         /// </summary>
@@ -23,9 +23,11 @@ namespace Admin_Panel_Hotel
         /// <summary>
         /// Активная форма в панели контента.
         /// </summary>
-        static Form ActiveForm = null;
+        private static Form ActiveForm = null;
 
         #endregion
+
+        #region БД
 
         /// <summary>
         /// Обработка изменения статуса подключения к БД.
@@ -38,6 +40,8 @@ namespace Admin_Panel_Hotel
             if (e.CurrentState == ConnectionState.Closed)
                 Functions.Connection.Open();
         }
+
+        #endregion
 
         /// <summary>
         /// Открыть дочернюю форму на форме.
@@ -152,20 +156,20 @@ namespace Admin_Panel_Hotel
         }
 
         /// <summary>
-        /// Обработка добавления новых строк: установка номера новой строки (в первый столбец!!), заполнение подсказок.
+        /// Обработка добавления новых строк: установка номера новой строки(в первый столбец!!), заполнение подсказок.
         /// </summary>
-        /// <param name="dgv">Объект таблицы для обработки.</param>
-        /// <param name="helpTexts">Тексты для подсказок столбцов (вписать попорядку для каждого столбца). Если текст для столбца не нужен - писать null!</param>
-       /// public static void NewlineProcessing(DataGridView dgv, string[] helpTexts)
-       /// {
-            
-           /// for (int c = 0; c < dgv.Columns.Count; c++)
-                ///dgv.Columns[c].ToolTipText = helpTexts[c];
-
-           /// dgv.RowsAdded += new DataGridViewRowsAddedEventHandler(RowsAdded);
-           /// dgv.CellEnter += new DataGridViewCellEventHandler(CellEnter);
-          ///  dgv.CellLeave += new DataGridViewCellEventHandler(CellLeave);
-       /// }
+        /// <param name = "dgv" > Объект таблицы для обработки.</param>
+        /// <param name = "helpTexts" > Тексты для подсказок столбцов (вписать попорядку для каждого столбца). Если текст для столбца не нужен - писать null!</param>
+        public static void NewlineProcessing(DataGridView dgv, string[] helpTexts)
+        {
+            for (int c = 0; c < dgv.Columns.Count; c++)
+            {
+                dgv.Columns[c].ToolTipText = helpTexts[c];
+                dgv.RowsAdded += new DataGridViewRowsAddedEventHandler(RowsAdded);
+                dgv.CellEnter += new DataGridViewCellEventHandler(CellEnter);
+                dgv.CellLeave += new DataGridViewCellEventHandler(CellLeave);
+            }
+        }
 
         /// <summary>
         /// Обработка события добавления новой строки.
@@ -223,7 +227,7 @@ namespace Admin_Panel_Hotel
                 dgv[e.ColumnIndex, e.RowIndex].Value = dgv.Columns[e.ColumnIndex].ToolTipText;
             }
         }
-    
+
         /// <summary>
         /// Установка ограничения на ввод только цифр для текстового поля.
         /// </summary>

@@ -18,6 +18,7 @@ namespace Admin_Panel_Hotel
             CustomizeDesign();
             ContP = ContentPanel;
             Functions.Connection.StateChange += Functions.MySQLConnectionStateChange;
+            Functions.Connection.Open();
         }
 
         /// <summary>
@@ -203,6 +204,10 @@ namespace Admin_Panel_Hotel
                 Functions.Connection.Close();
         }
 
-        private void MainForm_Load(object sender, EventArgs e) => Functions.OpenChildForm(new NewApplications(), ContentPanel);
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            SubMenuProcessing(NewApplicationsButton, ApplicationsPanel);
+            Functions.OpenChildForm(new NewApplications(), ContentPanel);
+        }
     }
 }

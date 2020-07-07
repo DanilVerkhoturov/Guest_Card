@@ -37,13 +37,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Castomer = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Location = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NewDataGridView = new System.Windows.Forms.DataGridView();
+            this.ApplicationsDataGridView = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.NewDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ApplicationsDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // Castomer
@@ -60,20 +60,19 @@
             this.Location.ReadOnly = true;
             this.Location.Width = 55;
             // 
-            // NewDataGridView
+            // ApplicationsDataGridView
             // 
-            this.NewDataGridView.AllowUserToAddRows = false;
-            this.NewDataGridView.AllowUserToDeleteRows = false;
-            this.NewDataGridView.AllowUserToResizeColumns = false;
-            this.NewDataGridView.AllowUserToResizeRows = false;
+            this.ApplicationsDataGridView.AllowUserToAddRows = false;
+            this.ApplicationsDataGridView.AllowUserToDeleteRows = false;
+            this.ApplicationsDataGridView.AllowUserToResizeColumns = false;
+            this.ApplicationsDataGridView.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.NewDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.NewDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.NewDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.NewDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.NewDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.NewDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.NewDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.ApplicationsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.ApplicationsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.ApplicationsDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.ApplicationsDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.ApplicationsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ApplicationsDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(172)))), ((int)(((byte)(218)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -81,10 +80,10 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(172)))), ((int)(((byte)(218)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.NewDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.NewDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.NewDataGridView.ColumnHeadersVisible = false;
-            this.NewDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ApplicationsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.ApplicationsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ApplicationsDataGridView.ColumnHeadersVisible = false;
+            this.ApplicationsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column4,
             this.Column2,
@@ -96,15 +95,15 @@
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.NewDataGridView.DefaultCellStyle = dataGridViewCellStyle5;
-            this.NewDataGridView.EnableHeadersVisualStyles = false;
-            this.NewDataGridView.GridColor = System.Drawing.Color.Black;
-            this.NewDataGridView.Location = new System.Drawing.Point(171, 121);
-            this.NewDataGridView.Margin = new System.Windows.Forms.Padding(122, 42, 5, 4);
-            this.NewDataGridView.MultiSelect = false;
-            this.NewDataGridView.Name = "NewDataGridView";
-            this.NewDataGridView.ReadOnly = true;
-            this.NewDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            this.ApplicationsDataGridView.DefaultCellStyle = dataGridViewCellStyle5;
+            this.ApplicationsDataGridView.EnableHeadersVisualStyles = false;
+            this.ApplicationsDataGridView.GridColor = System.Drawing.Color.Black;
+            this.ApplicationsDataGridView.Location = new System.Drawing.Point(171, 121);
+            this.ApplicationsDataGridView.Margin = new System.Windows.Forms.Padding(122, 42, 5, 4);
+            this.ApplicationsDataGridView.MultiSelect = false;
+            this.ApplicationsDataGridView.Name = "ApplicationsDataGridView";
+            this.ApplicationsDataGridView.ReadOnly = true;
+            this.ApplicationsDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -112,8 +111,8 @@
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.NewDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.NewDataGridView.RowHeadersVisible = false;
+            this.ApplicationsDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.ApplicationsDataGridView.RowHeadersVisible = false;
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
@@ -121,15 +120,32 @@
             dataGridViewCellStyle7.Padding = new System.Windows.Forms.Padding(17, 14, 17, 14);
             dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            this.NewDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle7;
-            this.NewDataGridView.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.NewDataGridView.RowTemplate.Height = 25;
-            this.NewDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.NewDataGridView.Size = new System.Drawing.Size(767, 658);
-            this.NewDataGridView.TabIndex = 56;
-            this.NewDataGridView.TabStop = false;
-            this.NewDataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.NewDataGridView_CellMouseClick);
-            this.NewDataGridView.CellMouseMove += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.NewDataGridView_CellMouseMove);
+            this.ApplicationsDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle7;
+            this.ApplicationsDataGridView.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.ApplicationsDataGridView.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.ApplicationsDataGridView.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ApplicationsDataGridView.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.ApplicationsDataGridView.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.ApplicationsDataGridView.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.ApplicationsDataGridView.RowTemplate.Height = 25;
+            this.ApplicationsDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.ApplicationsDataGridView.Size = new System.Drawing.Size(767, 658);
+            this.ApplicationsDataGridView.TabIndex = 56;
+            this.ApplicationsDataGridView.TabStop = false;
+            this.ApplicationsDataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.ApplicationsDataGridView_CellMouseClick);
+            this.ApplicationsDataGridView.CellMouseMove += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.ApplicationsDataGridView_CellMouseMove);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Roboto", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(70, 44);
+            this.label1.Margin = new System.Windows.Forms.Padding(61, 35, 6, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(212, 35);
+            this.label1.TabIndex = 53;
+            this.label1.Text = "Новые заявки";
             // 
             // Column1
             // 
@@ -142,15 +158,17 @@
             // 
             // Column4
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCellsExceptHeader;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomRight;
             this.Column4.DefaultCellStyle = dataGridViewCellStyle4;
             this.Column4.HeaderText = "Дата";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
+            this.Column4.Width = 5;
             // 
             // Column2
             // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCellsExceptHeader;
             this.Column2.HeaderText = "Просмотр";
             this.Column2.Image = global::Admin_Panel_Hotel.Properties.Resources.pngwing_8;
             this.Column2.Name = "Column2";
@@ -165,18 +183,6 @@
             this.Column3.ReadOnly = true;
             this.Column3.Visible = false;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Roboto", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(70, 44);
-            this.label1.Margin = new System.Windows.Forms.Padding(61, 35, 6, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(212, 35);
-            this.label1.TabIndex = 53;
-            this.label1.Text = "Новые заявки";
-            // 
             // NewApplications
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -184,13 +190,13 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1093, 894);
-            this.Controls.Add(this.NewDataGridView);
+            this.Controls.Add(this.ApplicationsDataGridView);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "NewApplications";
             this.Text = "Applications";
-            ((System.ComponentModel.ISupportInitialize)(this.NewDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ApplicationsDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -199,7 +205,7 @@
         #endregion
         private System.Windows.Forms.DataGridViewTextBoxColumn Castomer;
         private System.Windows.Forms.DataGridViewTextBoxColumn Location;
-        private System.Windows.Forms.DataGridView NewDataGridView;
+        private System.Windows.Forms.DataGridView ApplicationsDataGridView;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
