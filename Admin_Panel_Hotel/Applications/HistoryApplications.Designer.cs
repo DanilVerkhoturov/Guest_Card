@@ -80,7 +80,6 @@
             this.HistoryDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.HistoryDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.HistoryDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.HistoryDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.HistoryDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(172)))), ((int)(((byte)(218)))));
@@ -107,7 +106,7 @@
             this.HistoryDataGridView.DefaultCellStyle = dataGridViewCellStyle5;
             this.HistoryDataGridView.EnableHeadersVisualStyles = false;
             this.HistoryDataGridView.GridColor = System.Drawing.Color.Black;
-            this.HistoryDataGridView.Location = new System.Drawing.Point(153, 210);
+            this.HistoryDataGridView.Location = new System.Drawing.Point(76, 189);
             this.HistoryDataGridView.Margin = new System.Windows.Forms.Padding(209, 27, 7, 7);
             this.HistoryDataGridView.MultiSelect = false;
             this.HistoryDataGridView.Name = "HistoryDataGridView";
@@ -131,9 +130,14 @@
             dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.ControlText;
             this.HistoryDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle7;
             this.HistoryDataGridView.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.HistoryDataGridView.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.HistoryDataGridView.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.HistoryDataGridView.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.HistoryDataGridView.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.HistoryDataGridView.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.HistoryDataGridView.RowTemplate.Height = 25;
             this.HistoryDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.HistoryDataGridView.Size = new System.Drawing.Size(847, 475);
+            this.HistoryDataGridView.Size = new System.Drawing.Size(907, 507);
             this.HistoryDataGridView.TabIndex = 52;
             this.HistoryDataGridView.TabStop = false;
             this.HistoryDataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.HistoryDataGridView_CellMouseClick);
@@ -150,11 +154,13 @@
             // 
             // Column4
             // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCellsExceptHeader;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             this.Column4.DefaultCellStyle = dataGridViewCellStyle4;
             this.Column4.HeaderText = "Дата";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
+            this.Column4.Width = 5;
             // 
             // Column2
             // 
@@ -181,10 +187,10 @@
             this.LocationComboBox.FormattingEnabled = true;
             this.LocationComboBox.Items.AddRange(new object[] {
             "Все локации"});
-            this.LocationComboBox.Location = new System.Drawing.Point(372, 122);
+            this.LocationComboBox.Location = new System.Drawing.Point(354, 119);
             this.LocationComboBox.Margin = new System.Windows.Forms.Padding(22, 10, 43, 10);
             this.LocationComboBox.Name = "LocationComboBox";
-            this.LocationComboBox.Size = new System.Drawing.Size(195, 33);
+            this.LocationComboBox.Size = new System.Drawing.Size(236, 33);
             this.LocationComboBox.TabIndex = 51;
             // 
             // CustomerComboBox
@@ -195,10 +201,10 @@
             this.CustomerComboBox.FormattingEnabled = true;
             this.CustomerComboBox.Items.AddRange(new object[] {
             "Все заказчики"});
-            this.CustomerComboBox.Location = new System.Drawing.Point(113, 122);
+            this.CustomerComboBox.Location = new System.Drawing.Point(76, 119);
             this.CustomerComboBox.Margin = new System.Windows.Forms.Padding(122, 37, 22, 10);
             this.CustomerComboBox.Name = "CustomerComboBox";
-            this.CustomerComboBox.Size = new System.Drawing.Size(215, 33);
+            this.CustomerComboBox.Size = new System.Drawing.Size(234, 33);
             this.CustomerComboBox.TabIndex = 50;
             // 
             // label1
@@ -218,7 +224,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
-            this.label2.Location = new System.Drawing.Point(605, 84);
+            this.label2.Location = new System.Drawing.Point(628, 81);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 13);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(113, 25);
@@ -230,7 +236,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
-            this.label3.Location = new System.Drawing.Point(795, 84);
+            this.label3.Location = new System.Drawing.Point(818, 81);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 13);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(116, 25);
@@ -245,7 +251,7 @@
             this.PeriodFromDateTimePicker.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
             this.PeriodFromDateTimePicker.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.PeriodFromDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.PeriodFromDateTimePicker.Location = new System.Drawing.Point(610, 122);
+            this.PeriodFromDateTimePicker.Location = new System.Drawing.Point(633, 119);
             this.PeriodFromDateTimePicker.Margin = new System.Windows.Forms.Padding(0, 0, 25, 5);
             this.PeriodFromDateTimePicker.Name = "PeriodFromDateTimePicker";
             this.PeriodFromDateTimePicker.Size = new System.Drawing.Size(160, 33);
@@ -256,7 +262,7 @@
             this.PeriodToDateTimePicker.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.PeriodToDateTimePicker.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.PeriodToDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.PeriodToDateTimePicker.Location = new System.Drawing.Point(800, 122);
+            this.PeriodToDateTimePicker.Location = new System.Drawing.Point(823, 119);
             this.PeriodToDateTimePicker.Margin = new System.Windows.Forms.Padding(5, 0, 5, 5);
             this.PeriodToDateTimePicker.Name = "PeriodToDateTimePicker";
             this.PeriodToDateTimePicker.Size = new System.Drawing.Size(160, 33);
@@ -265,7 +271,7 @@
             // ShowAllLinkLabel
             // 
             this.ShowAllLinkLabel.AutoSize = true;
-            this.ShowAllLinkLabel.Location = new System.Drawing.Point(387, 735);
+            this.ShowAllLinkLabel.Location = new System.Drawing.Point(310, 703);
             this.ShowAllLinkLabel.Margin = new System.Windows.Forms.Padding(60, 0, 9, 0);
             this.ShowAllLinkLabel.Name = "ShowAllLinkLabel";
             this.ShowAllLinkLabel.Size = new System.Drawing.Size(143, 25);
@@ -276,7 +282,7 @@
             // CardsCountLabel
             // 
             this.CardsCountLabel.AutoSize = true;
-            this.CardsCountLabel.Location = new System.Drawing.Point(148, 735);
+            this.CardsCountLabel.Location = new System.Drawing.Point(71, 703);
             this.CardsCountLabel.Margin = new System.Windows.Forms.Padding(9, 0, 9, 0);
             this.CardsCountLabel.Name = "CardsCountLabel";
             this.CardsCountLabel.Size = new System.Drawing.Size(196, 25);
@@ -321,11 +327,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker PeriodFromDateTimePicker;
         private System.Windows.Forms.DateTimePicker PeriodToDateTimePicker;
+        private System.Windows.Forms.LinkLabel ShowAllLinkLabel;
+        private System.Windows.Forms.Label CardsCountLabel;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewImageColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.LinkLabel ShowAllLinkLabel;
-        private System.Windows.Forms.Label CardsCountLabel;
     }
 }

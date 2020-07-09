@@ -274,6 +274,8 @@ namespace Admin_Panel_Hotel
         private void LoadLocationsData()
         {
             MySqlCommand select = new MySqlCommand("Select name FROM region", Functions.Connection);
+            select.CommandTimeout = 86400;
+
             MySqlDataReader reader = select.ExecuteReader();
 
             // Заполнение названий регонов.
@@ -282,7 +284,6 @@ namespace Admin_Panel_Hotel
                 RegionComboBox.Items.Add(reader[0].ToString());
             }
             reader.Close();
-            select.Cancel();
 
             select.CommandText = "Select name FROM state";
             reader = select.ExecuteReader();
@@ -293,7 +294,6 @@ namespace Admin_Panel_Hotel
                 StateComboBox.Items.Add(reader[0].ToString());
             }
             reader.Close();
-            select.Cancel();
 
             select.CommandText = "Select name FROM city";
             reader = select.ExecuteReader();
@@ -304,7 +304,6 @@ namespace Admin_Panel_Hotel
                 CityComboBox.Items.Add(reader[0].ToString());
             }
             reader.Close();
-            select.Cancel();
 
             select.CommandText = "Select name FROM street_type";
             reader = select.ExecuteReader();
@@ -315,7 +314,6 @@ namespace Admin_Panel_Hotel
                 StreetTypeComboBox.Items.Add(reader[0].ToString());
             }
             reader.Close();
-            select.Cancel();
 
             select.CommandText = "Select name FROM street_name";
             reader = select.ExecuteReader();
@@ -326,7 +324,6 @@ namespace Admin_Panel_Hotel
                 StreetNameComboBox.Items.Add(reader[0].ToString());
             }
             reader.Close();
-            select.Cancel();
         }
 
         private void AddLocationsButton_Click(object sender, EventArgs e)
@@ -336,7 +333,6 @@ namespace Admin_Panel_Hotel
 
         private void AddLocationNextButton_Click(object sender, EventArgs e)
         {
-            // UNDONE: Сделать проверку заполнения обязательных полей на текущем шаге.
             if (LocationsDataGridView.Rows.Count > 0)
             {
                 OpenCardPropertiesPanel();
@@ -366,7 +362,9 @@ namespace Admin_Panel_Hotel
         /// <summary>
         /// Добавление локации в таблицу.
         /// </summary>
-        /// <returns>True - если все обязательные поля заполнены и локация добавлена в таблицу. False - если заполнены не все обязательные поля.</returns>
+        /// <returns>
+        /// True - если все обязательные поля заполнены и локация добавлена в таблицу. False - если заполнены не все обязательные поля.
+        /// </returns>
         private bool AddLocation()
         {
             if (LocationNameTextBox.TextLength > 0 && LocationNameTextBox.Text != LocationNameTextBox.Tag.ToString()

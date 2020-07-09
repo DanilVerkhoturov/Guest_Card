@@ -8,8 +8,8 @@ namespace Admin_Panel_Hotel
         public ShowApplicationDraft()
         {
             InitializeComponent();
-            this.UsersDataGridView.Rows.Add("1", "Иванов Иван Иванович", "58585857", "Электик", "06.06.2020", "06.06.2020", "мясояха");
-            this.UsersDataGridView.Rows.Add("2", "Петров Петр Петрович", "58585857", "Электик", "06.06.2020", "06.06.2020","мясояха");
+            UsersDataGridView.Rows.Add("1", "Иванов Константин Иванович", "58585857", "06.06.2020", "06.06.2020");
+            UsersDataGridView.Rows.Add("2", "Петров Петр Петрович", "58585857", "06.06.2020", "06.06.2020");
         }
 
         private void NewApplicationsLabel_Click(object sender, EventArgs e)

@@ -9,7 +9,7 @@ namespace Admin_Panel_Hotel
         {
             InitializeComponent();
 
-           /// Functions.NewlineProcessing(UsersDataGridView, new string[] { "1", "Введите ФИО", "Введите цех", "Введите табельный номер", "Введите должность", "Введите дату заезда", "Введите дату выезда" });
+           Functions.NewlineProcessing(UsersDataGridView, new string[] { "1", "Введите ФИО", "Таб.номер", "Дата от", "Дата до", "Локация" });
         }
 
         private void NewApplication_Click(object sender, EventArgs e)
@@ -20,16 +20,18 @@ namespace Admin_Panel_Hotel
         private void AcceptButton_Click(object sender, EventArgs e)
         {
             // TODO: Сделать проверку корректности введённых данных.
-
-            // Открытие формы уведомления о созданной заявке.
-            var notification = new NotificationsForm();
-            notification.NotificationLabel.Text = "Заявка добавлена";
-            notification.Owner = this;
-            notification.StartPosition = FormStartPosition.CenterParent;
-            notification.ShowDialog();
+            if (true)
+            {
+                // Открытие формы уведомления о созданной заявке.
+                var notification = new NotificationsForm();
+                notification.NotificationLabel.Text = "Заявка добавлена";
+                notification.Owner = this;
+                notification.StartPosition = FormStartPosition.CenterParent;
+                notification.ShowDialog();
+            }
         }
 
-        private void AddUserButton_Click(object sender, EventArgs e)
+        private void AddUserLabel_Click(object sender, EventArgs e)
         {
             UsersDataGridView.Rows.Add();
         }

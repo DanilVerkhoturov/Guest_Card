@@ -11,6 +11,7 @@ namespace Admin_Panel_Hotel
             InitializeComponent();
 
             MySqlCommand select = new MySqlCommand("SELECT id, (SELECT name FROM customer_location WHERE location_id = contract.location_id), created_at FROM contract", Functions.Connection);
+            select.CommandTimeout = 86400;
             MySqlDataReader reader = select.ExecuteReader();
 
             while (reader.Read())
@@ -24,7 +25,7 @@ namespace Admin_Panel_Hotel
         {
             if (e.ColumnIndex == 2)
             {
-                ShowApplicationNew.LocationName = ApplicationsDataGridView[0, e.RowIndex].Value.ToString();
+                ShowApplicationNew.SubDivisionName = ApplicationsDataGridView[0, e.RowIndex].Value.ToString();
                 ShowApplicationNew.ApplicationDate = ApplicationsDataGridView[1, e.RowIndex].Value.ToString();
                 ShowApplicationNew.ApplicationId = Convert.ToInt64(ApplicationsDataGridView[3, e.RowIndex].Value.ToString());
                 Functions.OpenChildForm(new ShowApplicationNew(), MainForm.ContP);

@@ -21,76 +21,6 @@ namespace Admin_Panel_Hotel
             Functions.Connection.Open();
         }
 
-        /// <summary>
-        /// При открытии программы подменю скрыто.
-        /// </summary>
-        private void CustomizeDesign()
-        {
-            CustomersPanel.Visible = false;
-            ApplicationsPanel.Visible = false;
-            CardsPanel.Visible = false;
-        }
-
-        /// <summary>
-        /// Обработка открытия страниц из подменю.
-        /// </summary>
-        /// <param name="button">Объект нажатой кнопки.</param>
-        /// <param name="subMenu">Объект подменю. Указывать только если была нажата кнопка, отвечающая за разворачивание подменю! По умолчанию - null.</param>
-        private void SubMenuProcessing(Button button, Panel subMenu = null)
-        {
-            if (CurrentSubButton == null)
-            {
-                button.ForeColor = MyColors._00A0E3();
-                CurrentSubButton = button;
-            }
-            else
-            {
-                if (button != CurrentSubButton)
-                {
-                    CurrentSubButton.ForeColor = MyColors._FFFFFF();
-                    button.ForeColor = MyColors._00A0E3();
-                    CurrentSubButton = button;
-                }
-            }
-
-            if (subMenu != null)
-            {
-                if (subMenu.Visible)
-                {
-                    subMenu.Visible = false;
-                }
-                else
-                {
-                    if (CustomersPanel.Visible)
-                    {
-                        CustomersPanel.Visible = false;
-                        CustomersButton.ForeColor = MyColors._FFFFFF();
-                        MyCustomersButton.ForeColor = MyColors._FFFFFF();
-                        AddCustomerButton.ForeColor = MyColors._FFFFFF();
-                    }
-
-                    if (ApplicationsPanel.Visible)
-                    {
-                        ApplicationsPanel.Visible = false;
-                        ApplicationsButton.ForeColor = MyColors._FFFFFF();
-                        NewApplicationsButton.ForeColor = MyColors._FFFFFF();
-                        CurrentApplicationsButton.ForeColor = MyColors._FFFFFF();
-                        AddApplicationButton.ForeColor = MyColors._FFFFFF();
-                        HistoryApplicationsButton.ForeColor = MyColors._FFFFFF();
-                        DraftsButton.ForeColor = MyColors._FFFFFF();
-                    }
-
-                    if (CardsPanel.Visible)
-                    {
-                        CardsPanel.Visible = false;
-                        AllCardsButton.ForeColor = MyColors._FFFFFF();
-                    }
-
-                    subMenu.Visible = true;
-                }
-            }
-        }
-
         #region Заказчики
 
         private void CustomersButton_Click(object sender, EventArgs e)
@@ -189,6 +119,76 @@ namespace Admin_Panel_Hotel
         }
 
         #endregion
+
+        /// <summary>
+        /// При открытии программы подменю скрыто.
+        /// </summary>
+        private void CustomizeDesign()
+        {
+            CustomersPanel.Visible = false;
+            ApplicationsPanel.Visible = false;
+            CardsPanel.Visible = false;
+        }
+
+        /// <summary>
+        /// Обработка открытия страниц из подменю.
+        /// </summary>
+        /// <param name="button">Объект нажатой кнопки.</param>
+        /// <param name="subMenu">Объект подменю. Указывать только если была нажата кнопка, отвечающая за разворачивание подменю! По умолчанию - null.</param>
+        private void SubMenuProcessing(Button button, Panel subMenu = null)
+        {
+            if (CurrentSubButton == null)
+            {
+                button.ForeColor = MyColors._00A0E3();
+                CurrentSubButton = button;
+            }
+            else
+            {
+                if (button != CurrentSubButton)
+                {
+                    CurrentSubButton.ForeColor = MyColors._FFFFFF();
+                    button.ForeColor = MyColors._00A0E3();
+                    CurrentSubButton = button;
+                }
+            }
+
+            if (subMenu != null)
+            {
+                if (subMenu.Visible)
+                {
+                    subMenu.Visible = false;
+                }
+                else
+                {
+                    if (CustomersPanel.Visible)
+                    {
+                        CustomersPanel.Visible = false;
+                        CustomersButton.ForeColor = MyColors._FFFFFF();
+                        MyCustomersButton.ForeColor = MyColors._FFFFFF();
+                        AddCustomerButton.ForeColor = MyColors._FFFFFF();
+                    }
+
+                    if (ApplicationsPanel.Visible)
+                    {
+                        ApplicationsPanel.Visible = false;
+                        ApplicationsButton.ForeColor = MyColors._FFFFFF();
+                        NewApplicationsButton.ForeColor = MyColors._FFFFFF();
+                        CurrentApplicationsButton.ForeColor = MyColors._FFFFFF();
+                        AddApplicationButton.ForeColor = MyColors._FFFFFF();
+                        HistoryApplicationsButton.ForeColor = MyColors._FFFFFF();
+                        DraftsButton.ForeColor = MyColors._FFFFFF();
+                    }
+
+                    if (CardsPanel.Visible)
+                    {
+                        CardsPanel.Visible = false;
+                        AllCardsButton.ForeColor = MyColors._FFFFFF();
+                    }
+
+                    subMenu.Visible = true;
+                }
+            }
+        }
 
         private void MainForm_Shown(object sender, EventArgs e)
         {

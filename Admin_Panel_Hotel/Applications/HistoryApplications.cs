@@ -17,10 +17,13 @@ namespace Admin_Panel_Hotel
 
         private void HistoryDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            // TODO: Передача данных для выгрузки заявки из базы.
-            //ShowApplicationHistory.CustomerName = CustomersDataGridView[0, e.RowIndex].Value.ToString();
-            //ShowApplicationHistory.CustomerId = Convert.ToInt64(CustomersDataGridView[2, e.RowIndex].Value.ToString());
-            Functions.OpenChildForm(new ShowApplicationHistory(), MainForm.ContP);
+            if (e.ColumnIndex == 2)
+            {
+                // TODO: Передача данных для выгрузки заявки из базы.
+                //ShowApplicationHistory.CustomerName = CustomersDataGridView[0, e.RowIndex].Value.ToString();
+                //ShowApplicationHistory.CustomerId = Convert.ToInt64(CustomersDataGridView[2, e.RowIndex].Value.ToString());
+                Functions.OpenChildForm(new ShowApplicationHistory(), MainForm.ContP);
+            }
         }
 
         private void HistoryDataGridView_CellMouseMove(object sender, DataGridViewCellMouseEventArgs e)

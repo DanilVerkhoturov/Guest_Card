@@ -34,10 +34,13 @@ namespace Admin_Panel_Hotel
 
         private void DraftDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            // TODO: Передача данных для выгрузки заявки из базы.
-            //ShowApplicationDraft.CustomerName = CustomersDataGridView[0, e.RowIndex].Value.ToString();
-            //ShowApplicationDraft.CustomerId = Convert.ToInt64(CustomersDataGridView[2, e.RowIndex].Value.ToString());
-            Functions.OpenChildForm(new ShowApplicationDraft(), MainForm.ContP);
+            if (e.ColumnIndex == 2)
+            {
+                // TODO: Передача данных для выгрузки заявки из базы.
+                //ShowApplicationDraft.CustomerName = CustomersDataGridView[0, e.RowIndex].Value.ToString();
+                //ShowApplicationDraft.CustomerId = Convert.ToInt64(CustomersDataGridView[2, e.RowIndex].Value.ToString());
+                Functions.OpenChildForm(new ShowApplicationDraft(), MainForm.ContP);
+            }
         }
 
         private void DraftDataGridView_CellMouseMove(object sender, DataGridViewCellMouseEventArgs e)

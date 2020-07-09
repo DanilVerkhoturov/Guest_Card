@@ -207,7 +207,7 @@ namespace Admin_Panel_Hotel
         {
             DataGridView dgv = sender as DataGridView;
 
-            if (e.ColumnIndex != 0 && dgv[e.ColumnIndex, e.RowIndex].Value.ToString() == dgv.Columns[e.ColumnIndex].ToolTipText)
+            if (e.ColumnIndex != 0 && dgv[e.ColumnIndex, e.RowIndex].Value != null && dgv[e.ColumnIndex, e.RowIndex].Value.ToString() == dgv.Columns[e.ColumnIndex].ToolTipText)
             {
                 dgv[e.ColumnIndex, e.RowIndex].Value = null;
             }

@@ -79,11 +79,11 @@
             // 
             this.CustomerComboBox.BackColor = System.Drawing.Color.White;
             this.CustomerComboBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CustomerComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
+            this.CustomerComboBox.ForeColor = System.Drawing.Color.Black;
             this.CustomerComboBox.FormattingEnabled = true;
             this.CustomerComboBox.Items.AddRange(new object[] {
             "Все заказчики"});
-            this.CustomerComboBox.Location = new System.Drawing.Point(131, 104);
+            this.CustomerComboBox.Location = new System.Drawing.Point(76, 104);
             this.CustomerComboBox.Margin = new System.Windows.Forms.Padding(122, 37, 0, 0);
             this.CustomerComboBox.Name = "CustomerComboBox";
             this.CustomerComboBox.Size = new System.Drawing.Size(223, 33);
@@ -93,11 +93,11 @@
             // 
             this.LocationComboBox.BackColor = System.Drawing.Color.White;
             this.LocationComboBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LocationComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
+            this.LocationComboBox.ForeColor = System.Drawing.Color.Black;
             this.LocationComboBox.FormattingEnabled = true;
             this.LocationComboBox.Items.AddRange(new object[] {
             "Все локации"});
-            this.LocationComboBox.Location = new System.Drawing.Point(376, 104);
+            this.LocationComboBox.Location = new System.Drawing.Point(321, 104);
             this.LocationComboBox.Margin = new System.Windows.Forms.Padding(22, 6, 6, 0);
             this.LocationComboBox.Name = "LocationComboBox";
             this.LocationComboBox.Size = new System.Drawing.Size(223, 33);
@@ -125,7 +125,6 @@
             this.CurrentApplicationsDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.CurrentApplicationsDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.CurrentApplicationsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.CurrentApplicationsDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.CurrentApplicationsDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(172)))), ((int)(((byte)(218)))));
@@ -152,7 +151,7 @@
             this.CurrentApplicationsDataGridView.DefaultCellStyle = dataGridViewCellStyle5;
             this.CurrentApplicationsDataGridView.EnableHeadersVisualStyles = false;
             this.CurrentApplicationsDataGridView.GridColor = System.Drawing.Color.Black;
-            this.CurrentApplicationsDataGridView.Location = new System.Drawing.Point(131, 153);
+            this.CurrentApplicationsDataGridView.Location = new System.Drawing.Point(76, 153);
             this.CurrentApplicationsDataGridView.Margin = new System.Windows.Forms.Padding(5, 16, 5, 4);
             this.CurrentApplicationsDataGridView.MultiSelect = false;
             this.CurrentApplicationsDataGridView.Name = "CurrentApplicationsDataGridView";
@@ -176,10 +175,14 @@
             dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.ControlText;
             this.CurrentApplicationsDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle7;
             this.CurrentApplicationsDataGridView.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.CurrentApplicationsDataGridView.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.CurrentApplicationsDataGridView.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CurrentApplicationsDataGridView.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.CurrentApplicationsDataGridView.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.CurrentApplicationsDataGridView.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.CurrentApplicationsDataGridView.RowTemplate.Height = 25;
             this.CurrentApplicationsDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.CurrentApplicationsDataGridView.Size = new System.Drawing.Size(767, 658);
+            this.CurrentApplicationsDataGridView.Size = new System.Drawing.Size(907, 658);
             this.CurrentApplicationsDataGridView.TabIndex = 48;
             this.CurrentApplicationsDataGridView.TabStop = false;
             this.CurrentApplicationsDataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.CurrentApplicationsDataGridView_CellMouseClick_1);
@@ -196,11 +199,13 @@
             // 
             // Column4
             // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCellsExceptHeader;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             this.Column4.DefaultCellStyle = dataGridViewCellStyle4;
             this.Column4.HeaderText = "Дата";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
+            this.Column4.Width = 5;
             // 
             // Column2
             // 

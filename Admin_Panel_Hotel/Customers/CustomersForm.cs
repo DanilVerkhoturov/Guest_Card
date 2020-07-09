@@ -24,6 +24,8 @@ namespace Admin_Panel_Hotel
             if (Functions.Connection.State == ConnectionState.Open) // Подгрузка всех заказчиков, если соединение с БД открыто.
             {
                 MySqlCommand select = new MySqlCommand("SELECT id, name FROM customer_legal_info", Functions.Connection);
+                select.CommandTimeout = 86400;
+
                 MySqlDataReader reader = select.ExecuteReader();
 
                 while (reader.Read())
@@ -31,7 +33,6 @@ namespace Admin_Panel_Hotel
                     CustomersDataGridView.Rows.Add(reader[1].ToString(), null, reader[0].ToString());
                 }
                 reader.Close();
-                select.Cancel();
             }
         }
 

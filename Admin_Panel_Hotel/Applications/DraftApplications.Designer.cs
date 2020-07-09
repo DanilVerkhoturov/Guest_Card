@@ -72,7 +72,6 @@
             this.DraftsDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.DraftsDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.DraftsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.DraftsDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.DraftsDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(172)))), ((int)(((byte)(218)))));
@@ -99,7 +98,7 @@
             this.DraftsDataGridView.DefaultCellStyle = dataGridViewCellStyle5;
             this.DraftsDataGridView.EnableHeadersVisualStyles = false;
             this.DraftsDataGridView.GridColor = System.Drawing.Color.Black;
-            this.DraftsDataGridView.Location = new System.Drawing.Point(171, 103);
+            this.DraftsDataGridView.Location = new System.Drawing.Point(76, 105);
             this.DraftsDataGridView.Margin = new System.Windows.Forms.Padding(122, 26, 5, 4);
             this.DraftsDataGridView.MultiSelect = false;
             this.DraftsDataGridView.Name = "DraftsDataGridView";
@@ -123,10 +122,14 @@
             dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.ControlText;
             this.DraftsDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle7;
             this.DraftsDataGridView.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.DraftsDataGridView.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.DraftsDataGridView.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DraftsDataGridView.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.DraftsDataGridView.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.DraftsDataGridView.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.DraftsDataGridView.RowTemplate.Height = 25;
             this.DraftsDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.DraftsDataGridView.Size = new System.Drawing.Size(767, 658);
+            this.DraftsDataGridView.Size = new System.Drawing.Size(907, 658);
             this.DraftsDataGridView.TabIndex = 52;
             this.DraftsDataGridView.TabStop = false;
             this.DraftsDataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DraftDataGridView_CellMouseClick);
@@ -143,11 +146,13 @@
             // 
             // Column4
             // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCellsExceptHeader;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             this.Column4.DefaultCellStyle = dataGridViewCellStyle4;
             this.Column4.HeaderText = "Дата";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
+            this.Column4.Width = 5;
             // 
             // Column2
             // 

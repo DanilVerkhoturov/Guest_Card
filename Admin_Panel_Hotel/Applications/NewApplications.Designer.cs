@@ -38,11 +38,11 @@
             this.Castomer = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Location = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ApplicationsDataGridView = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ApplicationsDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -98,7 +98,7 @@
             this.ApplicationsDataGridView.DefaultCellStyle = dataGridViewCellStyle5;
             this.ApplicationsDataGridView.EnableHeadersVisualStyles = false;
             this.ApplicationsDataGridView.GridColor = System.Drawing.Color.Black;
-            this.ApplicationsDataGridView.Location = new System.Drawing.Point(171, 121);
+            this.ApplicationsDataGridView.Location = new System.Drawing.Point(76, 121);
             this.ApplicationsDataGridView.Margin = new System.Windows.Forms.Padding(122, 42, 5, 4);
             this.ApplicationsDataGridView.MultiSelect = false;
             this.ApplicationsDataGridView.Name = "ApplicationsDataGridView";
@@ -129,23 +129,11 @@
             this.ApplicationsDataGridView.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.ApplicationsDataGridView.RowTemplate.Height = 25;
             this.ApplicationsDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.ApplicationsDataGridView.Size = new System.Drawing.Size(767, 658);
+            this.ApplicationsDataGridView.Size = new System.Drawing.Size(907, 658);
             this.ApplicationsDataGridView.TabIndex = 56;
             this.ApplicationsDataGridView.TabStop = false;
             this.ApplicationsDataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.ApplicationsDataGridView_CellMouseClick);
             this.ApplicationsDataGridView.CellMouseMove += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.ApplicationsDataGridView_CellMouseMove);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Roboto", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(70, 44);
-            this.label1.Margin = new System.Windows.Forms.Padding(61, 35, 6, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(212, 35);
-            this.label1.TabIndex = 53;
-            this.label1.Text = "Новые заявки";
             // 
             // Column1
             // 
@@ -182,6 +170,18 @@
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             this.Column3.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Roboto", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(70, 44);
+            this.label1.Margin = new System.Windows.Forms.Padding(61, 35, 6, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(212, 35);
+            this.label1.TabIndex = 53;
+            this.label1.Text = "Новые заявки";
             // 
             // NewApplications
             // 
