@@ -1,18 +1,17 @@
-﻿using Admin_Panel_Hotel.Applications;
-using MySql.Data.MySqlClient;
+﻿using MySql.Data.MySqlClient;
 using System;
 using System.Windows.Forms;
 
 namespace Admin_Panel_Hotel
 {
-    public partial class ShowCurrentApplication : Form
+    public partial class ShowApplicationNew : Form
     {
         /// <summary>
-        /// Название заказчика.
+        /// Название заказчика из заявки.
         /// </summary>
         public static string CustomerName;
         /// <summary>
-        /// Дата создания заявки.
+        /// Дата заявки.
         /// </summary>
         public static string ApplicationDate;
         /// <summary>
@@ -20,12 +19,12 @@ namespace Admin_Panel_Hotel
         /// </summary>
         public static long ApplicationId;
 
-        public ShowCurrentApplication()
+        public ShowApplicationNew()
         {
             InitializeComponent();
 
-            ApplicationNameLabel.Text = $"Текущие заявки > {CustomerName} - {ApplicationDate}";
-
+            NewApplicationNameLabel.Text = $"Новые заявки > {CustomerName} - {ApplicationDate}";
+            
             LoadApplicationUsers();
         }
 
@@ -54,6 +53,11 @@ namespace Admin_Panel_Hotel
             reader.Close();
         }
 
+        private void NewApplicationsLabel_Click(object sender, EventArgs e)
+        {
+            Functions.OpenChildForm(new NewApplications(), MainForm.ContP);
+        }
+
         private void AcceptButton_Click(object sender, EventArgs e)
         {
             // Открытие формы уведомления о подтверждённой заявке.
@@ -66,33 +70,6 @@ namespace Admin_Panel_Hotel
         private void EditButton_Click(object sender, EventArgs e)
         {
             UsersDataGridView.ReadOnly = false;
-        }
-
-        private void ApplicationNameLabel_Click(object sender, EventArgs e)
-        {
-            Functions.OpenChildForm(new CurrentApplications(), MainForm.ContP);
-        }
-
-        private void UsersDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.ColumnIndex == 6)
-            {
-                var form = new InfoUserForm();
-                form.StartPosition = FormStartPosition.CenterParent;
-                form.ShowDialog(this);
-            }
-        }
-
-        private void UsersDataGridView_CellMouseMove(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            if (e.ColumnIndex == 6)
-            {
-                UsersDataGridView.Cursor = Cursors.Hand;
-            }
-            else
-            {
-                UsersDataGridView.Cursor = Cursors.Default;
-            }
         }
     }
 }

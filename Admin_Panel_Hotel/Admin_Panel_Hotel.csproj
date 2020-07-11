@@ -149,23 +149,23 @@
     <Compile Include="Customers\LocationInfoForm.Designer.cs">
       <DependentUpon>LocationInfoForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Applications\ShowApplicationHistory.cs">
+    <Compile Include="Applications\ShowHistoryApplication.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Applications\ShowApplicationHistory.Designer.cs">
-      <DependentUpon>ShowApplicationHistory.cs</DependentUpon>
+    <Compile Include="Applications\ShowHistoryApplication.Designer.cs">
+      <DependentUpon>ShowHistoryApplication.cs</DependentUpon>
     </Compile>
-    <Compile Include="Applications\ShowApplicationNew.cs">
+    <Compile Include="Applications\ShowNewApplication.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Applications\ShowApplicationNew.Designer.cs">
-      <DependentUpon>ShowApplicationNew.cs</DependentUpon>
+    <Compile Include="Applications\ShowNewApplication.Designer.cs">
+      <DependentUpon>ShowNewApplication.cs</DependentUpon>
     </Compile>
-    <Compile Include="Applications\ShowApplicationDraft.cs">
+    <Compile Include="Applications\ShowDraftApplication.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Applications\ShowApplicationDraft.Designer.cs">
-      <DependentUpon>ShowApplicationDraft.cs</DependentUpon>
+    <Compile Include="Applications\ShowDraftApplication.Designer.cs">
+      <DependentUpon>ShowDraftApplication.cs</DependentUpon>
     </Compile>
     <Compile Include="Applications\ShowCurrentApplication.cs">
       <SubType>Form</SubType>
@@ -241,14 +241,14 @@
     <EmbeddedResource Include="Customers\LocationInfoForm.resx">
       <DependentUpon>LocationInfoForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Applications\ShowApplicationHistory.resx">
-      <DependentUpon>ShowApplicationHistory.cs</DependentUpon>
+    <EmbeddedResource Include="Applications\ShowHistoryApplication.resx">
+      <DependentUpon>ShowHistoryApplication.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Applications\ShowApplicationNew.resx">
-      <DependentUpon>ShowApplicationNew.cs</DependentUpon>
+    <EmbeddedResource Include="Applications\ShowNewApplication.resx">
+      <DependentUpon>ShowNewApplication.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Applications\ShowApplicationDraft.resx">
-      <DependentUpon>ShowApplicationDraft.cs</DependentUpon>
+    <EmbeddedResource Include="Applications\ShowDraftApplication.resx">
+      <DependentUpon>ShowDraftApplication.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Applications\ShowCurrentApplication.resx">
       <DependentUpon>ShowCurrentApplication.cs</DependentUpon>
@@ -312,6 +312,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\user_icon-icons 1.png" />
     <None Include="Resources\User.png" />
     <None Include="Resources\GrayCircle.png" />
     <None Include="Resources\check mark.ico" />

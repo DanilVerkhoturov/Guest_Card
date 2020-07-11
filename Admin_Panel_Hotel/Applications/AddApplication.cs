@@ -9,31 +9,33 @@ namespace Admin_Panel_Hotel
         {
             InitializeComponent();
 
-           Functions.NewlineProcessing(UsersDataGridView, new string[] { "1", "Введите ФИО", "Таб.номер", "Дата от", "Дата до", "Локация" });
-        }
+            CustomerComboBox.SelectedIndex = 0;
+            LocationComboBox.SelectedIndex = 0;
 
-        private void NewApplication_Click(object sender, EventArgs e)
-        {
-            Functions.OpenChildForm(new NewApplications(), MainForm.ContP);
-        }
-
-        private void AcceptButton_Click(object sender, EventArgs e)
-        {
-            // TODO: Сделать проверку корректности введённых данных.
-            if (true)
-            {
-                // Открытие формы уведомления о созданной заявке.
-                var notification = new NotificationsForm();
-                notification.NotificationLabel.Text = "Заявка добавлена";
-                notification.Owner = this;
-                notification.StartPosition = FormStartPosition.CenterParent;
-                notification.ShowDialog();
-            }
+            Functions.NewlineProcessing(UsersDataGridView, new string[] { "1", "Введите ФИО", "Таб.номер", "Дата от", "Дата до", "Локация" });
         }
 
         private void AddUserLabel_Click(object sender, EventArgs e)
         {
             UsersDataGridView.Rows.Add();
+        }
+
+        private void SendToCustomerButton_Click(object sender, EventArgs e)
+        {
+            // UNDONE: Сделать проверку корректности введённых данных.
+            if (CustomerComboBox.SelectedIndex > 0 && LocationComboBox.SelectedIndex > 0) // Если заполнены все обязательные поля.
+            {
+                // Открытие формы уведомления о созданной заявке.
+                NotificationsForm notification = new NotificationsForm();
+                notification.NotificationLabel.Text = "Заявка добавлена";
+                notification.Owner = this;
+                notification.StartPosition = FormStartPosition.CenterParent;
+                notification.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Не все поля заполнены!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

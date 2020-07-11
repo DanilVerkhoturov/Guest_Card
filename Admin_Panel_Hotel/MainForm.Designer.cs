@@ -50,7 +50,6 @@
             this.ContentPanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.TopPanel = new System.Windows.Forms.Panel();
-            this.OutButton = new System.Windows.Forms.Button();
             this.UserButton = new System.Windows.Forms.Button();
             this.LeftMenu.SuspendLayout();
             this.CardsPanel.SuspendLayout();
@@ -195,7 +194,7 @@
             this.DraftsButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
             this.DraftsButton.Size = new System.Drawing.Size(313, 43);
             this.DraftsButton.TabIndex = 6;
-            this.DraftsButton.Text = "Черновики - 0";
+            this.DraftsButton.Text = "Черновики   0";
             this.DraftsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.DraftsButton.UseVisualStyleBackColor = true;
             this.DraftsButton.Click += new System.EventHandler(this.DraftsButton_Click);
@@ -271,7 +270,7 @@
             this.NewApplicationsButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
             this.NewApplicationsButton.Size = new System.Drawing.Size(313, 43);
             this.NewApplicationsButton.TabIndex = 2;
-            this.NewApplicationsButton.Text = "Новые - 0";
+            this.NewApplicationsButton.Text = "Новые   0";
             this.NewApplicationsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.NewApplicationsButton.UseVisualStyleBackColor = true;
             this.NewApplicationsButton.Click += new System.EventHandler(this.NewApplicationsButton_Click);
@@ -405,7 +404,6 @@
             // 
             this.TopPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.TopPanel.BackColor = System.Drawing.Color.White;
-            this.TopPanel.Controls.Add(this.OutButton);
             this.TopPanel.Controls.Add(this.UserButton);
             this.TopPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.TopPanel.Location = new System.Drawing.Point(313, 0);
@@ -414,34 +412,18 @@
             this.TopPanel.Size = new System.Drawing.Size(1111, 50);
             this.TopPanel.TabIndex = 1;
             // 
-            // OutButton
-            // 
-            this.OutButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.OutButton.AutoSize = true;
-            this.OutButton.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.Out;
-            this.OutButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.OutButton.FlatAppearance.BorderSize = 0;
-            this.OutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.OutButton.Location = new System.Drawing.Point(1056, 8);
-            this.OutButton.Margin = new System.Windows.Forms.Padding(5);
-            this.OutButton.Name = "OutButton";
-            this.OutButton.Size = new System.Drawing.Size(34, 37);
-            this.OutButton.TabIndex = 1;
-            this.OutButton.UseVisualStyleBackColor = true;
-            // 
             // UserButton
             // 
             this.UserButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.UserButton.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.User;
+            this.UserButton.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.user_icon_icons_1;
             this.UserButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.UserButton.FlatAppearance.BorderSize = 0;
             this.UserButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.UserButton.Location = new System.Drawing.Point(996, 8);
+            this.UserButton.Location = new System.Drawing.Point(1060, 8);
             this.UserButton.Margin = new System.Windows.Forms.Padding(5);
             this.UserButton.Name = "UserButton";
-            this.UserButton.Size = new System.Drawing.Size(34, 37);
+            this.UserButton.Size = new System.Drawing.Size(37, 37);
             this.UserButton.TabIndex = 0;
             this.UserButton.UseVisualStyleBackColor = true;
             // 
@@ -471,7 +453,6 @@
             this.ContentPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.TopPanel.ResumeLayout(false);
-            this.TopPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -492,7 +473,6 @@
         private System.Windows.Forms.Button HistoryApplicationsButton;
         private System.Windows.Forms.Button DraftsButton;
         private System.Windows.Forms.Panel TopPanel;
-        private System.Windows.Forms.Button OutButton;
         private System.Windows.Forms.Button UserButton;
         private System.Windows.Forms.Panel CardsPanel;
         private System.Windows.Forms.Button MovingCardsButton;

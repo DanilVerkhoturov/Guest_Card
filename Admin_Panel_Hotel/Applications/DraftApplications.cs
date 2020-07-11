@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Windows.Forms;
 
 namespace Admin_Panel_Hotel
@@ -8,37 +9,37 @@ namespace Admin_Panel_Hotel
         public DraftApplications()
         {
             InitializeComponent();
-            this.DraftsDataGridView.Rows.Add("ННГ", "06.06.2020");
-            this.DraftsDataGridView.Rows.Add("ГПН", "06.06.2020");
+
+            LoadApplications();
         }
 
-        private void ShowApplicationButton1_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Загрузка черновиков из базы данных.
+        /// </summary>
+        private void LoadApplications()
         {
-            Functions.OpenChildForm(new ShowApplicationDraft(), MainForm.ContP);
-        }
+            MySqlCommand select = new MySqlCommand("SELECT id" +
+                ", (SELECT name FROM customer_legal_info WHERE id = contract.customer_id) as 'name'" +
+                ", created_at as 'date'" +
+                " FROM contract" +
+                " WHERE status_id = 3", Functions.Connection);
+            select.CommandTimeout = 86400;
+            MySqlDataReader reader = select.ExecuteReader();
 
-        private void ShowApplicationsButton2_Click(object sender, EventArgs e)
-        {
-            Functions.OpenChildForm(new ShowApplicationDraft(), MainForm.ContP);
-        }
-
-        private void ApplicationsNameTextBox2_TextChanged(object sender, EventArgs e)
-        {
-            Functions.OpenChildForm(new ShowApplicationDraft(), MainForm.ContP);
-        }
-
-        private void ApplicationsNameTextBox1_TextChanged(object sender, EventArgs e)
-        {
-            Functions.OpenChildForm(new ShowApplicationDraft(), MainForm.ContP);
+            while (reader.Read())
+            {
+                ApplicationsDataGridView.Rows.Add(reader[1].ToString(), DateTimeOffset.FromUnixTimeSeconds(Convert.ToInt64(reader[2].ToString())).DateTime.Date.ToString().Replace("00:00:00", "").Trim(), null, reader[0].ToString());
+            }
+            reader.Close();
         }
 
         private void DraftDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (e.ColumnIndex == 2)
             {
-                // TODO: Передача данных для выгрузки заявки из базы.
-                //ShowApplicationDraft.CustomerName = CustomersDataGridView[0, e.RowIndex].Value.ToString();
-                //ShowApplicationDraft.CustomerId = Convert.ToInt64(CustomersDataGridView[2, e.RowIndex].Value.ToString());
+                ShowApplicationDraft.CustomerName = ApplicationsDataGridView[0, e.RowIndex].Value.ToString();
+                ShowApplicationDraft.ApplicationDate = ApplicationsDataGridView[1, e.RowIndex].Value.ToString();
+                ShowApplicationDraft.ApplicationId = Convert.ToInt64(ApplicationsDataGridView[3, e.RowIndex].Value.ToString());
                 Functions.OpenChildForm(new ShowApplicationDraft(), MainForm.ContP);
             }
         }
@@ -47,11 +48,11 @@ namespace Admin_Panel_Hotel
         {
             if (e.ColumnIndex == 2)
             {
-                DraftsDataGridView.Cursor = Cursors.Hand;
+                ApplicationsDataGridView.Cursor = Cursors.Hand;
             }
             else
             {
-                DraftsDataGridView.Cursor = Cursors.Default;
+                ApplicationsDataGridView.Cursor = Cursors.Default;
             }
         }
     }

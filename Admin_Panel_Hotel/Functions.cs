@@ -41,6 +41,22 @@ namespace Admin_Panel_Hotel
                 Functions.Connection.Open();
         }
 
+        /// <summary>
+        /// Запрос к базе данных для получения данных.
+        /// </summary>
+        /// <param name="query">Текст запроса.</param>
+        /// <returns>Возвращает таблицу с данными.</returns>
+        public DataTable ExecuteSql(string query)
+        {
+            DataTable table = new DataTable();
+            var command = Connection.CreateCommand();
+            command.CommandTimeout = 86400;
+            command.CommandText = query;
+            var reader = command.ExecuteReader();
+            table.Load(reader);
+            return table;
+        }
+
         #endregion
 
         /// <summary>

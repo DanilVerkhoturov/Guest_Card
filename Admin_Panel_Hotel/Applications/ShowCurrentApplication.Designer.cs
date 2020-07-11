@@ -34,7 +34,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.CurrentApplicationNameLabel = new System.Windows.Forms.Label();
+            this.ApplicationNameLabel = new System.Windows.Forms.Label();
             this.UsersDataGridView = new System.Windows.Forms.DataGridView();
             this.PrintButton = new System.Windows.Forms.Button();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
@@ -48,18 +48,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.UsersDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // CurrentApplicationNameLabel
+            // ApplicationNameLabel
             // 
-            this.CurrentApplicationNameLabel.AutoSize = true;
-            this.CurrentApplicationNameLabel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CurrentApplicationNameLabel.Font = new System.Drawing.Font("Roboto", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CurrentApplicationNameLabel.Location = new System.Drawing.Point(70, 34);
-            this.CurrentApplicationNameLabel.Margin = new System.Windows.Forms.Padding(61, 25, 4, 0);
-            this.CurrentApplicationNameLabel.Name = "CurrentApplicationNameLabel";
-            this.CurrentApplicationNameLabel.Size = new System.Drawing.Size(576, 35);
-            this.CurrentApplicationNameLabel.TabIndex = 0;
-            this.CurrentApplicationNameLabel.Text = "Текущие заявки > Заявка-1 от 02.07.2020";
-            this.CurrentApplicationNameLabel.Click += new System.EventHandler(this.NewApplicationsLabel_Click);
+            this.ApplicationNameLabel.AutoEllipsis = true;
+            this.ApplicationNameLabel.AutoSize = true;
+            this.ApplicationNameLabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ApplicationNameLabel.Font = new System.Drawing.Font("Roboto", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ApplicationNameLabel.Location = new System.Drawing.Point(70, 34);
+            this.ApplicationNameLabel.Margin = new System.Windows.Forms.Padding(61, 25, 4, 0);
+            this.ApplicationNameLabel.MaximumSize = new System.Drawing.Size(850, 35);
+            this.ApplicationNameLabel.Name = "ApplicationNameLabel";
+            this.ApplicationNameLabel.Size = new System.Drawing.Size(258, 35);
+            this.ApplicationNameLabel.TabIndex = 0;
+            this.ApplicationNameLabel.Text = "Текущие заявки >";
+            this.ApplicationNameLabel.Click += new System.EventHandler(this.ApplicationNameLabel_Click);
             // 
             // UsersDataGridView
             // 
@@ -128,7 +130,8 @@
             this.UsersDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.UsersDataGridView.Size = new System.Drawing.Size(998, 590);
             this.UsersDataGridView.TabIndex = 17;
-            this.UsersDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridTable_CellClick);
+            this.UsersDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.UsersDataGridView_CellClick);
+            this.UsersDataGridView.CellMouseMove += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.UsersDataGridView_CellMouseMove);
             // 
             // PrintButton
             // 
@@ -158,59 +161,71 @@
             // 
             // Column1
             // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.Column1.FillWeight = 20F;
+            this.Column1.Frozen = true;
             this.Column1.HeaderText = "№";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
+            this.Column1.Width = 33;
             // 
             // Column2
             // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.Column2.DefaultCellStyle = dataGridViewCellStyle3;
             this.Column2.FillWeight = 112.3096F;
+            this.Column2.Frozen = true;
             this.Column2.HeaderText = "ФИО";
             this.Column2.MinimumWidth = 100;
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column2.Width = 187;
             // 
             // Column3
             // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.Column3.FillWeight = 112.3096F;
+            this.Column3.Frozen = true;
             this.Column3.HeaderText = "Таб.номер";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
+            this.Column3.Width = 186;
             // 
             // Column4
             // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.Column4.FillWeight = 112.3096F;
+            this.Column4.Frozen = true;
             this.Column4.HeaderText = "Дата от";
             this.Column4.MinimumWidth = 10;
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             this.Column4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column4.Width = 187;
             // 
             // Column5
             // 
-            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.Column5.FillWeight = 112.3096F;
+            this.Column5.Frozen = true;
             this.Column5.HeaderText = "Дата до";
             this.Column5.MinimumWidth = 10;
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
             this.Column5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column5.Width = 186;
             // 
             // Column7
             // 
-            this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column7.Frozen = true;
             this.Column7.HeaderText = "Локация";
             this.Column7.Name = "Column7";
             this.Column7.ReadOnly = true;
             this.Column7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column7.Width = 166;
             // 
             // ShowUserInfo
             // 
@@ -230,7 +245,7 @@
             this.ClientSize = new System.Drawing.Size(1093, 894);
             this.Controls.Add(this.UsersDataGridView);
             this.Controls.Add(this.PrintButton);
-            this.Controls.Add(this.CurrentApplicationNameLabel);
+            this.Controls.Add(this.ApplicationNameLabel);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ShowCurrentApplication";
@@ -242,7 +257,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label CurrentApplicationNameLabel;
+        private System.Windows.Forms.Label ApplicationNameLabel;
         private System.Windows.Forms.DataGridView UsersDataGridView;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.Button PrintButton;

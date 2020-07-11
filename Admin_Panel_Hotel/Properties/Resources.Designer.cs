@@ -203,9 +203,9 @@ namespace Admin_Panel_Hotel.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap User {
+        public static System.Drawing.Bitmap user_icon_icons_1 {
             get {
-                object obj = ResourceManager.GetObject("User", resourceCulture);
+                object obj = ResourceManager.GetObject("user_icon_icons_1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

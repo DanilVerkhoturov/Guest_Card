@@ -1,5 +1,6 @@
 ﻿using Admin_Panel_Hotel.Applications;
 using Admin_Panel_Hotel.Card;
+using MySql.Data.MySqlClient;
 using System;
 using System.Data;
 using System.Windows.Forms;
@@ -19,6 +20,9 @@ namespace Admin_Panel_Hotel
             ContP = ContentPanel;
             Functions.Connection.StateChange += Functions.MySQLConnectionStateChange;
             Functions.Connection.Open();
+
+            NewApplicationsButton.Text = $"Новые   {GetNewApplicationsCount()}";
+            DraftsButton.Text = $"Черновики   {GetDraftApplicationsCount()}";
         }
 
         #region Заказчики
@@ -208,6 +212,47 @@ namespace Admin_Panel_Hotel
         {
             SubMenuProcessing(NewApplicationsButton, ApplicationsPanel);
             Functions.OpenChildForm(new NewApplications(), ContentPanel);
+        }
+
+        /// <summary>
+        /// Получить количество черновиков.
+        /// </summary>
+        /// <returns>Количество черновиков.</returns>
+        private static long GetDraftApplicationsCount()
+        {
+            long draftApplicationsCount = 0;
+
+            MySqlCommand select = new MySqlCommand("SELECT COUNT(*) as 'count' FROM contract WHERE contract.status_id = 3", Functions.Connection);
+            MySqlDataReader reader = select.ExecuteReader();
+
+            while (reader.Read())
+            {
+                draftApplicationsCount = (long)reader[0];
+                break;
+            }
+            reader.Close();
+            return draftApplicationsCount;
+        }
+
+        /// <summary>
+        /// Получить количество новых заявок.
+        /// </summary>
+        /// <returns>Количество новых заявок.</returns>
+        private static long GetNewApplicationsCount()
+        {
+            long newApplicationsCount = 0;
+
+            MySqlCommand select = new MySqlCommand("SELECT COUNT(*) as 'count' FROM contract WHERE contract.status_id = 1", Functions.Connection);
+            MySqlDataReader reader = select.ExecuteReader();
+
+            while (reader.Read())
+            {
+                newApplicationsCount = (long)reader[0];
+                break;
+            }
+            reader.Close();
+
+            return newApplicationsCount;
         }
     }
 }

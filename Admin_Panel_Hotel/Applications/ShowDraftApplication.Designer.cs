@@ -34,32 +34,18 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.button3 = new System.Windows.Forms.Button();
             this.UsersDataGridView = new System.Windows.Forms.DataGridView();
-            this.DraftApplicationNameLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.ApplicationNameLabel = new System.Windows.Forms.Label();
+            this.AddUserLabel = new System.Windows.Forms.Label();
+            this.EditButton = new System.Windows.Forms.Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.location = new System.Windows.Forms.DataGridViewComboBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.UsersDataGridView)).BeginInit();
             this.SuspendLayout();
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(715, 704);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(353, 53);
-            this.button3.TabIndex = 27;
-            this.button3.Text = "Продолжить редактирование\r\n";
-            this.button3.UseVisualStyleBackColor = false;
             // 
             // UsersDataGridView
             // 
@@ -91,7 +77,7 @@
             this.Column3,
             this.Column4,
             this.Column5,
-            this.Column6});
+            this.location});
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -100,9 +86,10 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.UsersDataGridView.DefaultCellStyle = dataGridViewCellStyle4;
+            this.UsersDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.UsersDataGridView.EnableHeadersVisualStyles = false;
-            this.UsersDataGridView.Location = new System.Drawing.Point(76, 119);
-            this.UsersDataGridView.Margin = new System.Windows.Forms.Padding(122, 5, 123, 5);
+            this.UsersDataGridView.Location = new System.Drawing.Point(76, 169);
+            this.UsersDataGridView.Margin = new System.Windows.Forms.Padding(122, 45, 123, 5);
             this.UsersDataGridView.Name = "UsersDataGridView";
             this.UsersDataGridView.ReadOnly = true;
             this.UsersDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
@@ -125,32 +112,52 @@
             this.UsersDataGridView.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.UsersDataGridView.RowTemplate.Height = 30;
             this.UsersDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.UsersDataGridView.Size = new System.Drawing.Size(992, 577);
+            this.UsersDataGridView.Size = new System.Drawing.Size(992, 584);
             this.UsersDataGridView.TabIndex = 23;
             // 
-            // DraftApplicationNameLabel
+            // ApplicationNameLabel
             // 
-            this.DraftApplicationNameLabel.AutoSize = true;
-            this.DraftApplicationNameLabel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.DraftApplicationNameLabel.Font = new System.Drawing.Font("Roboto", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DraftApplicationNameLabel.Location = new System.Drawing.Point(70, 44);
-            this.DraftApplicationNameLabel.Margin = new System.Windows.Forms.Padding(61, 35, 0, 45);
-            this.DraftApplicationNameLabel.Name = "DraftApplicationNameLabel";
-            this.DraftApplicationNameLabel.Size = new System.Drawing.Size(490, 35);
-            this.DraftApplicationNameLabel.TabIndex = 22;
-            this.DraftApplicationNameLabel.Text = "Черновик > Заявка-1 от 02.07.2020";
-            this.DraftApplicationNameLabel.Click += new System.EventHandler(this.DraftApplicationNameLabel_Click);
+            this.ApplicationNameLabel.AutoEllipsis = true;
+            this.ApplicationNameLabel.AutoSize = true;
+            this.ApplicationNameLabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ApplicationNameLabel.Font = new System.Drawing.Font("Roboto", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ApplicationNameLabel.Location = new System.Drawing.Point(70, 44);
+            this.ApplicationNameLabel.Margin = new System.Windows.Forms.Padding(61, 35, 0, 45);
+            this.ApplicationNameLabel.MaximumSize = new System.Drawing.Size(900, 35);
+            this.ApplicationNameLabel.Name = "ApplicationNameLabel";
+            this.ApplicationNameLabel.Size = new System.Drawing.Size(179, 35);
+            this.ApplicationNameLabel.TabIndex = 22;
+            this.ApplicationNameLabel.Text = "Черновик > ";
+            this.ApplicationNameLabel.Click += new System.EventHandler(this.DraftApplicationNameLabel_Click);
             // 
-            // label1
+            // AddUserLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
-            this.label1.Location = new System.Drawing.Point(902, 80);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(166, 25);
-            this.label1.TabIndex = 39;
-            this.label1.Text = "+ добавить ещё";
+            this.AddUserLabel.AutoSize = true;
+            this.AddUserLabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AddUserLabel.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AddUserLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
+            this.AddUserLabel.Location = new System.Drawing.Point(902, 126);
+            this.AddUserLabel.Name = "AddUserLabel";
+            this.AddUserLabel.Size = new System.Drawing.Size(166, 25);
+            this.AddUserLabel.TabIndex = 39;
+            this.AddUserLabel.Text = "+ добавить ещё";
+            this.AddUserLabel.Visible = false;
+            this.AddUserLabel.Click += new System.EventHandler(this.AddUserLabel_Click);
+            // 
+            // EditButton
+            // 
+            this.EditButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
+            this.EditButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.EditButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EditButton.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.EditButton.ForeColor = System.Drawing.Color.White;
+            this.EditButton.Location = new System.Drawing.Point(715, 787);
+            this.EditButton.Name = "EditButton";
+            this.EditButton.Size = new System.Drawing.Size(353, 53);
+            this.EditButton.TabIndex = 27;
+            this.EditButton.Text = "Продолжить редактирование";
+            this.EditButton.UseVisualStyleBackColor = false;
+            this.EditButton.Click += new System.EventHandler(this.EditButton_Click);
             // 
             // Column1
             // 
@@ -199,13 +206,15 @@
             this.Column5.ReadOnly = true;
             this.Column5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // Column6
+            // location
             // 
-            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column6.HeaderText = "Локация";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.location.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.location.HeaderText = "Локация";
+            this.location.Items.AddRange(new object[] {
+            "Локация"});
+            this.location.Name = "location";
+            this.location.ReadOnly = true;
+            this.location.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // ShowApplicationDraft
             // 
@@ -214,9 +223,9 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.ClientSize = new System.Drawing.Size(1093, 894);
             this.Controls.Add(this.UsersDataGridView);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.DraftApplicationNameLabel);
+            this.Controls.Add(this.AddUserLabel);
+            this.Controls.Add(this.EditButton);
+            this.Controls.Add(this.ApplicationNameLabel);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "ShowApplicationDraft";
@@ -227,16 +236,15 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.DataGridView UsersDataGridView;
-        private System.Windows.Forms.Label DraftApplicationNameLabel;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label ApplicationNameLabel;
+        private System.Windows.Forms.Label AddUserLabel;
+        private System.Windows.Forms.Button EditButton;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewComboBoxColumn location;
     }
 }
