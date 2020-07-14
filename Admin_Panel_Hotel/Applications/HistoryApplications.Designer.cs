@@ -285,9 +285,9 @@
             this.CardsCountLabel.Location = new System.Drawing.Point(71, 727);
             this.CardsCountLabel.Margin = new System.Windows.Forms.Padding(9, 0, 9, 0);
             this.CardsCountLabel.Name = "CardsCountLabel";
-            this.CardsCountLabel.Size = new System.Drawing.Size(196, 25);
+            this.CardsCountLabel.Size = new System.Drawing.Size(147, 25);
             this.CardsCountLabel.TabIndex = 57;
-            this.CardsCountLabel.Text = "1-50 из 10000 карт";
+            this.CardsCountLabel.Text = "1-50 из 10000";
             // 
             // HistoryApplications
             // 
