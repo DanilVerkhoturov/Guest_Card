@@ -101,10 +101,10 @@
             this.CardsPanel.Controls.Add(this.CardsDataGridView);
             this.CardsPanel.Controls.Add(this.LocationComboBox);
             this.CardsPanel.Controls.Add(this.AcceptButton);
-            this.CardsPanel.Location = new System.Drawing.Point(132, 201);
+            this.CardsPanel.Location = new System.Drawing.Point(76, 201);
             this.CardsPanel.Margin = new System.Windows.Forms.Padding(123, 122, 3, 3);
             this.CardsPanel.Name = "CardsPanel";
-            this.CardsPanel.Size = new System.Drawing.Size(824, 663);
+            this.CardsPanel.Size = new System.Drawing.Size(834, 663);
             this.CardsPanel.TabIndex = 55;
             this.CardsPanel.Visible = false;
             // 

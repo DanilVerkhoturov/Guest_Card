@@ -8,6 +8,7 @@ namespace Admin_Panel_Hotel
     public partial class AddCustomer : Form
     {
         private static int EmailsCount = 1;
+        private static int SubDivisionsEmailsCount = 1;
 
         public AddCustomer()
         {
@@ -19,18 +20,12 @@ namespace Admin_Panel_Hotel
             Functions.SetPlaceholderTextBox(NameTextBox, "Наименование организации");
             Functions.SetPlaceholderTextBox(ContractNumberTextBox, "Номер договора");
             Functions.SetPlaceholderTextBox(LocationNameTextBox, "Название локации");
-            Functions.SetPlaceholderTextBox(RegionComboBox, "Регион");
-            Functions.SetPlaceholderTextBox(StateComboBox, "Область");
-            Functions.SetPlaceholderTextBox(CityComboBox, "Город");
-            Functions.SetPlaceholderTextBox(StreetTypeComboBox, "Тип улицы");
-            Functions.SetPlaceholderTextBox(StreetNameComboBox, "Улица");
-            Functions.SetPlaceholderTextBox(HouseTextBox, "Дом");
-            Functions.SetPlaceholderTextBox(CorpsTextBox, "Корпус");
-            Functions.SetPlaceholderTextBox(BuildTextBox, "Строение");
             Functions.SetPlaceholderTextBox(RoomCountTextBox, "Количество комнат");
             Functions.SetPlaceholderTextBox(BedsCountTextBox, "Количество мест");
             Functions.SetPlaceholderTextBox(EmailNameTextBox0, "Имя электронной почты");
             Functions.SetPlaceholderTextBox(EmailTextBox0, "Электронная почта заказчика");
+            Functions.SetPlaceholderTextBox(SubDivisionEmailNameTextBox0, "Имя заказчика");
+            Functions.SetPlaceholderTextBox(SubDivisionEmailTextBox0, "Электронная почта");
 
             // Установка подсказки для полей с датами.
             Functions.SetPlaceholderDateTimePicker(FromContractTimeDateTimePicker, "Введите дату");
@@ -60,12 +55,10 @@ namespace Admin_Panel_Hotel
             EmailNamesErrorProvider.SetIconPadding(EmailNameTextBox0, 10);
             EmailsErrorProvider.SetError(EmailTextBox0, "* - обязательное поле");
             EmailsErrorProvider.SetIconPadding(EmailTextBox0, 10);
-
-            // Установка обработки событий окончания редактирования текстовых полей.
-            EmailNameTextBox0.Leave += new EventHandler(EmailNameTextBox_Leave);
-            EmailTextBox0.Leave += new EventHandler(EmailTextBox_Leave);
-
-            LoadLocationsData();
+            EmailNamesErrorProvider.SetError(SubDivisionEmailNameTextBox0, "* - обязательное поле");
+            EmailNamesErrorProvider.SetIconPadding(SubDivisionEmailNameTextBox0, 10);
+            EmailsErrorProvider.SetError(SubDivisionEmailTextBox0, "* - обязательное поле");
+            EmailsErrorProvider.SetIconPadding(SubDivisionEmailTextBox0, 10);
         }
 
         #region Данные заказчика
@@ -163,6 +156,7 @@ namespace Admin_Panel_Hotel
             {
                 MessageBox.Show($"Электронная почта \"{textBox.Text}\" введена некорректно!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 EmailsErrorProvider.SetError(textBox, "* - обязательное поле");
+                EmailsErrorProvider.SetIconPadding(textBox, 10);
                 textBox.Focus();
             }
         }
@@ -183,43 +177,13 @@ namespace Admin_Panel_Hotel
             else
             {
                 EmailNamesErrorProvider.SetError(textBox, "* - обязательное поле");
+                EmailNamesErrorProvider.SetIconPadding(textBox, 10);
             }
         }
 
         private void AddEmailLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            TextBox lastEmailNameTextBox = EmailsPanel.Controls[EmailsPanel.Controls.Count - 2] as TextBox;
-            TextBox lastEmailTextBox = EmailsPanel.Controls[EmailsPanel.Controls.Count - 1] as TextBox;
-
-            if (lastEmailNameTextBox.Text != lastEmailNameTextBox.Tag.ToString() && lastEmailTextBox.Text != lastEmailTextBox.Tag.ToString())
-            {
-                TextBox emailNameTextBox = new TextBox();
-                emailNameTextBox.Size = EmailNameTextBox0.Size;
-                emailNameTextBox.Margin = EmailNameTextBox0.Margin;
-                emailNameTextBox.Location = new Point(0, lastEmailNameTextBox.Location.Y + lastEmailNameTextBox.Size.Height + lastEmailNameTextBox.Margin.Top);
-                emailNameTextBox.Name = $"EmailNameTextBox{EmailsCount}";
-                EmailsPanel.Controls.Add(emailNameTextBox);
-
-                TextBox emailTextBox = new TextBox();
-                emailTextBox.Size = EmailTextBox0.Size;
-                emailTextBox.Margin = EmailTextBox0.Margin;
-                emailTextBox.Location = new Point(lastEmailTextBox.Location.X, lastEmailTextBox.Location.Y + lastEmailTextBox.Size.Height + lastEmailTextBox.Margin.Top);
-                emailTextBox.Name = $"EmailTextBox{EmailsCount}";
-                EmailsPanel.Controls.Add(emailTextBox);
-
-                Functions.SetPlaceholderTextBox(emailNameTextBox, "Имя электронной почты");
-                Functions.SetPlaceholderTextBox(emailTextBox, "Электронная почта заказчика");
-
-                EmailNamesErrorProvider.SetError(emailNameTextBox, "* - обязательное поле");
-                EmailsErrorProvider.SetError(emailTextBox, "* - обязательное поле");
-
-                emailNameTextBox.Leave += new EventHandler(EmailNameTextBox_Leave);
-                emailTextBox.Leave += new EventHandler(EmailTextBox_Leave);
-
-                AddEmailLinkLabel.Location = new Point(AddEmailLinkLabel.Location.X, AddEmailLinkLabel.Location.Y + lastEmailNameTextBox.Margin.Top + lastEmailNameTextBox.Size.Height);
-
-                EmailsCount++;
-            }
+            AddEmailsFields(EmailsPanel, AddEmailLinkLabel);
         }
 
         private void CustomerInfoNextButton_Click(object sender, EventArgs e)
@@ -235,7 +199,7 @@ namespace Admin_Panel_Hotel
                 && lastEmailNameTextBox.TextLength > 0 && lastEmailNameTextBox.Text.Trim() != lastEmailNameTextBox.Tag.ToString()
                 && RegexUtilities.IsValidEmail(lastEmailTextBox.Text.Trim())) // Проверка заполнения всех обязательных полей на первом шаге.
             {
-                OpenAddCustomerLocationPanel();
+                OpenSubDivisionsPanel();
                 AddLocationsButton.Enabled = true;
             }
         }
@@ -251,11 +215,57 @@ namespace Admin_Panel_Hotel
         private void OpenCustomerInfoPanel()
         {
             CustomerInfoPanel.Visible = true;
+            SubDivisionsPanel.Visible = false;
             AddCustomerLocationPanel.Visible = false;
             CardPropertiesPanel.Visible = false;
 
             CustomerInfoButton.BackgroundImage = Properties.Resources.BlueCircle;
             CustomerInfoButton.ForeColor = Color.White;
+
+            SubDivisionsButton.BackgroundImage = Properties.Resources.GrayCircle;
+            SubDivisionsButton.ForeColor = Color.Black;
+
+            AddLocationsButton.BackgroundImage = Properties.Resources.GrayCircle;
+            AddLocationsButton.ForeColor = Color.Black;
+
+            CardPropertiesButton.BackgroundImage = Properties.Resources.GrayCircle;
+            CardPropertiesButton.ForeColor = Color.Black;
+        }
+
+        #endregion
+
+        #region Данные подрядных организаций заказчика
+
+        private void AddSubDivisionEmailLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            AddEmailsFields(SubDivisionEmailsPanel, AddSubDivisionEmailLinkLabel);
+        }
+
+        private void SubDivisionsNextButton_Click(object sender, EventArgs e)
+        {
+            OpenAddCustomerLocationPanel();
+        }
+
+        private void SubDivisionsButton_Click(object sender, EventArgs e)
+        {
+            OpenSubDivisionsPanel();
+        }
+
+        /// <summary>
+        /// Отображение панели с добавлением подрядных организаций заказчика.
+        /// </summary>
+        private void OpenSubDivisionsPanel()
+        {
+            CustomerInfoPanel.Visible = false;
+            SubDivisionsPanel.Visible = true;
+            AddCustomerLocationPanel.Visible = false;
+            CardPropertiesPanel.Visible = false;
+
+            CustomerInfoButton.BackgroundImage = Properties.Resources.GrayCircle;
+            CustomerInfoButton.ForeColor = Color.Black;
+
+            SubDivisionsButton.BackgroundImage = Properties.Resources.BlueCircle;
+            SubDivisionsButton.ForeColor = Color.White;
 
             AddLocationsButton.BackgroundImage = Properties.Resources.GrayCircle;
             AddLocationsButton.ForeColor = Color.Black;
@@ -267,64 +277,6 @@ namespace Admin_Panel_Hotel
         #endregion
 
         #region Добавить локацию
-
-        /// <summary>
-        /// Заполнение данных локаций.
-        /// </summary>
-        private void LoadLocationsData()
-        {
-            MySqlCommand select = new MySqlCommand("Select name FROM region", Functions.Connection);
-            select.CommandTimeout = 86400;
-
-            MySqlDataReader reader = select.ExecuteReader();
-
-            // Заполнение названий регонов.
-            while (reader.Read())
-            {
-                RegionComboBox.Items.Add(reader[0].ToString());
-            }
-            reader.Close();
-
-            select.CommandText = "Select name FROM state";
-            reader = select.ExecuteReader();
-
-            // Заполнение названий областей.
-            while (reader.Read())
-            {
-                StateComboBox.Items.Add(reader[0].ToString());
-            }
-            reader.Close();
-
-            select.CommandText = "Select name FROM city";
-            reader = select.ExecuteReader();
-
-            // Заполнение названий городов.
-            while (reader.Read())
-            {
-                CityComboBox.Items.Add(reader[0].ToString());
-            }
-            reader.Close();
-
-            select.CommandText = "Select name FROM street_type";
-            reader = select.ExecuteReader();
-
-            // Заполнение типов улиц.
-            while (reader.Read())
-            {
-                StreetTypeComboBox.Items.Add(reader[0].ToString());
-            }
-            reader.Close();
-
-            select.CommandText = "Select name FROM street_name";
-            reader = select.ExecuteReader();
-
-            // Заполнение названий улиц.
-            while (reader.Read())
-            {
-                StreetNameComboBox.Items.Add(reader[0].ToString());
-            }
-            reader.Close();
-        }
 
         private void AddLocationsButton_Click(object sender, EventArgs e)
         {
@@ -346,11 +298,15 @@ namespace Admin_Panel_Hotel
         private void OpenAddCustomerLocationPanel()
         {
             CustomerInfoPanel.Visible = false;
+            SubDivisionsPanel.Visible = false;
             AddCustomerLocationPanel.Visible = true;
             CardPropertiesPanel.Visible = false;
 
             CustomerInfoButton.BackgroundImage = Properties.Resources.GrayCircle;
             CustomerInfoButton.ForeColor = Color.Black;
+
+            SubDivisionsButton.BackgroundImage = Properties.Resources.GrayCircle;
+            SubDivisionsButton.ForeColor = Color.Black;
 
             AddLocationsButton.BackgroundImage = Properties.Resources.BlueCircle;
             AddLocationsButton.ForeColor = Color.White;
@@ -374,14 +330,6 @@ namespace Admin_Panel_Hotel
                 int lastRow = LocationsDataGridView.Rows.GetLastRow(DataGridViewElementStates.Visible);
                 LocationsDataGridView.Rows.Add(lastRow + 2
                     , LocationNameTextBox.Text
-                    , RegionComboBox.Text.Trim()
-                    , StateComboBox.Text.Trim()
-                    , CityComboBox.Text.Trim()
-                    , StreetTypeComboBox.Text.Trim()
-                    , StreetNameComboBox.Text.Trim()
-                    , HouseTextBox.Text.Trim()
-                    , CorpsTextBox.Text.Trim()
-                    , BuildTextBox.Text.Trim()
                     , RoomCountTextBox.Text.Trim()
                     , BedsCountTextBox.Text.Trim()
                     , CardCountTextBox.Text.Trim());
@@ -441,14 +389,6 @@ namespace Admin_Panel_Hotel
             if (AddLocation())
             {
                 LocationNameTextBox.Text = LocationNameTextBox.Tag.ToString();
-                RegionComboBox.Text = RegionComboBox.Tag.ToString();
-                StateComboBox.Text = StateComboBox.Tag.ToString();
-                CityComboBox.Text = CityComboBox.Tag.ToString();
-                StreetTypeComboBox.Text = StreetTypeComboBox.Tag.ToString();
-                StreetNameComboBox.Text = StreetNameComboBox.Tag.ToString();
-                HouseTextBox.Text = HouseTextBox.Tag.ToString();
-                CorpsTextBox.Text = CorpsTextBox.Tag.ToString();
-                BuildTextBox.Text = BuildTextBox.Tag.ToString();
                 RoomCountTextBox.Text = RoomCountTextBox.Tag.ToString();
                 BedsCountTextBox.Text = BedsCountTextBox.Tag.ToString();
                 CardCountTextBox.Text = "0";
@@ -456,6 +396,16 @@ namespace Admin_Panel_Hotel
             else
             {
                 MessageBox.Show("Заполните все обязательные поля!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void VisibleAddRooms()
+        {
+            // TODO: Сделать проверку на заполнение всех обязательных полей локации.
+            if (true)
+            {
+                AddRoomsLabel.Visible = true;
+                AddRoomsPanel.Visible = true;
             }
         }
 
@@ -484,11 +434,15 @@ namespace Admin_Panel_Hotel
         private void OpenCardPropertiesPanel()
         {
             CustomerInfoPanel.Visible = false;
+            SubDivisionsPanel.Visible = false;
             AddCustomerLocationPanel.Visible = false;
             CardPropertiesPanel.Visible = true;
 
             CustomerInfoButton.BackgroundImage = Properties.Resources.GrayCircle;
             CustomerInfoButton.ForeColor = Color.Black;
+
+            SubDivisionsButton.BackgroundImage = Properties.Resources.GrayCircle;
+            SubDivisionsButton.ForeColor = Color.Black;
 
             AddLocationsButton.BackgroundImage = Properties.Resources.GrayCircle;
             AddLocationsButton.ForeColor = Color.Black;
@@ -508,6 +462,56 @@ namespace Admin_Panel_Hotel
         }
 
         #endregion
+
+        /// <summary>
+        /// Добавить поля электронных почт.
+        /// </summary>
+        /// <param name="emailsPanel">Панель, на которой находятся поля электронной почты.</param>
+        /// <param name="activateButton">Кнопка, которой активировали создание полей.</param>
+        private void AddEmailsFields(Panel emailsPanel, LinkLabel activateButton)
+        {
+            TextBox lastEmailNameTextBox = emailsPanel.Controls[emailsPanel.Controls.Count - 2] as TextBox;
+            TextBox lastEmailTextBox = emailsPanel.Controls[emailsPanel.Controls.Count - 1] as TextBox;
+
+            if (lastEmailNameTextBox.Text != lastEmailNameTextBox.Tag.ToString() && lastEmailTextBox.Text != lastEmailTextBox.Tag.ToString())
+            {
+                TextBox emailNameTextBox = new TextBox();
+                emailNameTextBox.Size = lastEmailNameTextBox.Size;
+                emailNameTextBox.Margin = lastEmailNameTextBox.Margin;
+                emailNameTextBox.Location = new Point(0, lastEmailNameTextBox.Location.Y + lastEmailNameTextBox.Size.Height + lastEmailNameTextBox.Margin.Top);
+                emailNameTextBox.Name = $"EmailNameTextBox{EmailsCount}";
+                emailsPanel.Controls.Add(emailNameTextBox);
+
+                TextBox emailTextBox = new TextBox();
+                emailTextBox.Size = lastEmailTextBox.Size;
+                emailTextBox.Margin = lastEmailTextBox.Margin;
+                emailTextBox.Location = new Point(lastEmailTextBox.Location.X, lastEmailTextBox.Location.Y + lastEmailTextBox.Size.Height + lastEmailTextBox.Margin.Top);
+                emailTextBox.Name = $"EmailTextBox{EmailsCount}";
+                emailsPanel.Controls.Add(emailTextBox);
+
+                Functions.SetPlaceholderTextBox(emailNameTextBox, lastEmailNameTextBox.Tag.ToString());
+                Functions.SetPlaceholderTextBox(emailTextBox, lastEmailTextBox.Tag.ToString());
+
+                EmailNamesErrorProvider.SetError(emailNameTextBox, "* - обязательное поле");
+                EmailNamesErrorProvider.SetIconPadding(emailNameTextBox, 10);
+                EmailsErrorProvider.SetError(emailTextBox, "* - обязательное поле");
+                EmailsErrorProvider.SetIconPadding(emailTextBox, 10);
+
+                emailNameTextBox.Leave += new EventHandler(EmailNameTextBox_Leave);
+                emailTextBox.Leave += new EventHandler(EmailTextBox_Leave);
+
+                activateButton.Location = new Point(activateButton.Location.X, activateButton.Location.Y + lastEmailNameTextBox.Margin.Top + lastEmailNameTextBox.Size.Height);
+
+                if (emailsPanel.Name == "SubDivisionEmailsPanel")
+                {
+                    SubDivisionsEmailsCount++;
+                }
+                else
+                {
+                    EmailsCount++;
+                }
+            }
+        }
 
         private void AddCustomerButton_Click(object sender, EventArgs e)
         {
@@ -600,6 +604,7 @@ namespace Admin_Panel_Hotel
         /// <returns></returns>
         private bool CheckCustomerInfo()
         {
+            // UNDONE: Сделать проверку заполнения обязательных полей.
             TextBox lastEmailNameTextBox = EmailsPanel.Controls[EmailsPanel.Controls.Count - 2] as TextBox;
             TextBox lastEmailTextBox = EmailsPanel.Controls[EmailsPanel.Controls.Count - 1] as TextBox;
             
@@ -615,6 +620,6 @@ namespace Admin_Panel_Hotel
             {
                 return false;
             }
-        }   
+        }
     }
 }

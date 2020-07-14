@@ -41,7 +41,7 @@ namespace Admin_Panel_Hotel
                 && UsersDataGridView[2, lastUser].Value != null && UsersDataGridView[2, lastUser].Value.ToString() != UsersDataGridView[0, lastUser].ToolTipText
                 && UsersDataGridView[3, lastUser].Value != null && UsersDataGridView[3, lastUser].Value.ToString() != UsersDataGridView[0, lastUser].ToolTipText
                 && UsersDataGridView[4, lastUser].Value != null && UsersDataGridView[4, lastUser].Value.ToString() != UsersDataGridView[0, lastUser].ToolTipText
-                && UsersDataGridView[5, lastUser].Value != null && UsersDataGridView[5, lastUser].Value.ToString() != locationsComboBox.Items[0].ToString()
+                //&& UsersDataGridView[5, lastUser].Value != null && UsersDataGridView[5, lastUser].Value.ToString() != locationsComboBox.Items[0].ToString()
                 && DateTime.TryParse(UsersDataGridView[3, lastUser].Value.ToString(), out dateFrom)
                 && DateTime.TryParse(UsersDataGridView[4, lastUser].Value.ToString(), out dateTo))
                 && dateFrom < dateTo)
@@ -64,7 +64,7 @@ namespace Admin_Panel_Hotel
 
         private void SendToCustomerButton_Click(object sender, EventArgs e)
         {
-            if (CustomerComboBox.SelectedIndex > 0 && LocationComboBox.SelectedIndex > 0 && CheckLastUser()) // Если заполнены все обязательные поля.
+            if (/*CustomerComboBox.SelectedIndex > 0 && LocationComboBox.SelectedIndex > 0 &&*/ CheckLastUser()) // Если заполнены все обязательные поля.
             {
                 string fileExcel = UsersToExcel();
 
