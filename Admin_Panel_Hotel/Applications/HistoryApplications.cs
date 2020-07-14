@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 
 namespace Admin_Panel_Hotel
 {
@@ -7,37 +8,33 @@ namespace Admin_Panel_Hotel
         public HistoryApplications()
         {
             InitializeComponent();
+            Functions.LoadApplications(ApplicationsDataGridView, 4);
 
             CustomerComboBox.SelectedIndex = 0;
             LocationComboBox.SelectedIndex = 0;
-
-            HistoryDataGridView.Rows.Add("ННГ", "06.06.2020");
-            HistoryDataGridView.Rows.Add("ГПН", "06.06.2020");
         }
 
-        private void HistoryDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        private void ApplicationsDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (e.ColumnIndex == 2)
             {
-                // TODO: Передача данных для выгрузки заявки из базы.
-                //ShowApplicationHistory.CustomerName = CustomersDataGridView[0, e.RowIndex].Value.ToString();
-                //ShowApplicationHistory.CustomerId = Convert.ToInt64(CustomersDataGridView[2, e.RowIndex].Value.ToString());
+                ShowApplicationHistory.CustomerName = ApplicationsDataGridView[0, e.RowIndex].Value.ToString();
+                ShowApplicationHistory.ApplicationDate = ApplicationsDataGridView[1, e.RowIndex].Value.ToString();
+                ShowApplicationHistory.ApplicationId = Convert.ToInt64(ApplicationsDataGridView[3, e.RowIndex].Value.ToString());
                 Functions.OpenChildForm(new ShowApplicationHistory(), MainForm.ContP);
             }
         }
 
-        private void HistoryDataGridView_CellMouseMove(object sender, DataGridViewCellMouseEventArgs e)
+        private void ApplicationsDataGridView_CellMouseMove(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (e.ColumnIndex == 2)
             {
-                HistoryDataGridView.Cursor = Cursors.Hand;
+                ApplicationsDataGridView.Cursor = Cursors.Hand;
             }
             else
             {
-                HistoryDataGridView.Cursor = Cursors.Default;
+                ApplicationsDataGridView.Cursor = Cursors.Default;
             }
         }
-
-      
     }
 }

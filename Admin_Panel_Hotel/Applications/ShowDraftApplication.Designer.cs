@@ -209,6 +209,7 @@
             // location
             // 
             this.location.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.location.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
             this.location.HeaderText = "Локация";
             this.location.Items.AddRange(new object[] {
             "Локация"});

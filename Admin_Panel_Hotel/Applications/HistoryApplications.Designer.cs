@@ -37,7 +37,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Castomer = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Location = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HistoryDataGridView = new System.Windows.Forms.DataGridView();
+            this.ApplicationsDataGridView = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewImageColumn();
@@ -51,7 +51,7 @@
             this.PeriodToDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.ShowAllLinkLabel = new System.Windows.Forms.LinkLabel();
             this.CardsCountLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.HistoryDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ApplicationsDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // Castomer
@@ -68,19 +68,19 @@
             this.Location.ReadOnly = true;
             this.Location.Width = 55;
             // 
-            // HistoryDataGridView
+            // ApplicationsDataGridView
             // 
-            this.HistoryDataGridView.AllowUserToAddRows = false;
-            this.HistoryDataGridView.AllowUserToDeleteRows = false;
-            this.HistoryDataGridView.AllowUserToResizeColumns = false;
-            this.HistoryDataGridView.AllowUserToResizeRows = false;
+            this.ApplicationsDataGridView.AllowUserToAddRows = false;
+            this.ApplicationsDataGridView.AllowUserToDeleteRows = false;
+            this.ApplicationsDataGridView.AllowUserToResizeColumns = false;
+            this.ApplicationsDataGridView.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.HistoryDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.HistoryDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.HistoryDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.HistoryDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.HistoryDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.HistoryDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.ApplicationsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.ApplicationsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.ApplicationsDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.ApplicationsDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.ApplicationsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ApplicationsDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(172)))), ((int)(((byte)(218)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -88,10 +88,10 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(172)))), ((int)(((byte)(218)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.HistoryDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.HistoryDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.HistoryDataGridView.ColumnHeadersVisible = false;
-            this.HistoryDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ApplicationsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.ApplicationsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ApplicationsDataGridView.ColumnHeadersVisible = false;
+            this.ApplicationsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column4,
             this.Column2,
@@ -103,15 +103,15 @@
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.HistoryDataGridView.DefaultCellStyle = dataGridViewCellStyle5;
-            this.HistoryDataGridView.EnableHeadersVisualStyles = false;
-            this.HistoryDataGridView.GridColor = System.Drawing.Color.Black;
-            this.HistoryDataGridView.Location = new System.Drawing.Point(76, 189);
-            this.HistoryDataGridView.Margin = new System.Windows.Forms.Padding(209, 27, 7, 7);
-            this.HistoryDataGridView.MultiSelect = false;
-            this.HistoryDataGridView.Name = "HistoryDataGridView";
-            this.HistoryDataGridView.ReadOnly = true;
-            this.HistoryDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            this.ApplicationsDataGridView.DefaultCellStyle = dataGridViewCellStyle5;
+            this.ApplicationsDataGridView.EnableHeadersVisualStyles = false;
+            this.ApplicationsDataGridView.GridColor = System.Drawing.Color.Black;
+            this.ApplicationsDataGridView.Location = new System.Drawing.Point(76, 189);
+            this.ApplicationsDataGridView.Margin = new System.Windows.Forms.Padding(209, 27, 7, 7);
+            this.ApplicationsDataGridView.MultiSelect = false;
+            this.ApplicationsDataGridView.Name = "ApplicationsDataGridView";
+            this.ApplicationsDataGridView.ReadOnly = true;
+            this.ApplicationsDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -119,8 +119,8 @@
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.HistoryDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.HistoryDataGridView.RowHeadersVisible = false;
+            this.ApplicationsDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.ApplicationsDataGridView.RowHeadersVisible = false;
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
@@ -128,20 +128,20 @@
             dataGridViewCellStyle7.Padding = new System.Windows.Forms.Padding(17, 14, 17, 14);
             dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            this.HistoryDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle7;
-            this.HistoryDataGridView.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.HistoryDataGridView.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.HistoryDataGridView.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.HistoryDataGridView.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
-            this.HistoryDataGridView.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.HistoryDataGridView.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.HistoryDataGridView.RowTemplate.Height = 25;
-            this.HistoryDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.HistoryDataGridView.Size = new System.Drawing.Size(907, 507);
-            this.HistoryDataGridView.TabIndex = 52;
-            this.HistoryDataGridView.TabStop = false;
-            this.HistoryDataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.HistoryDataGridView_CellMouseClick);
-            this.HistoryDataGridView.CellMouseMove += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.HistoryDataGridView_CellMouseMove);
+            this.ApplicationsDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle7;
+            this.ApplicationsDataGridView.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.ApplicationsDataGridView.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.ApplicationsDataGridView.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ApplicationsDataGridView.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.ApplicationsDataGridView.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.ApplicationsDataGridView.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.ApplicationsDataGridView.RowTemplate.Height = 25;
+            this.ApplicationsDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.ApplicationsDataGridView.Size = new System.Drawing.Size(907, 507);
+            this.ApplicationsDataGridView.TabIndex = 52;
+            this.ApplicationsDataGridView.TabStop = false;
+            this.ApplicationsDataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.ApplicationsDataGridView_CellMouseClick);
+            this.ApplicationsDataGridView.CellMouseMove += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.ApplicationsDataGridView_CellMouseMove);
             // 
             // Column1
             // 
@@ -271,7 +271,7 @@
             // ShowAllLinkLabel
             // 
             this.ShowAllLinkLabel.AutoSize = true;
-            this.ShowAllLinkLabel.Location = new System.Drawing.Point(310, 703);
+            this.ShowAllLinkLabel.Location = new System.Drawing.Point(310, 727);
             this.ShowAllLinkLabel.Margin = new System.Windows.Forms.Padding(60, 0, 9, 0);
             this.ShowAllLinkLabel.Name = "ShowAllLinkLabel";
             this.ShowAllLinkLabel.Size = new System.Drawing.Size(143, 25);
@@ -282,7 +282,7 @@
             // CardsCountLabel
             // 
             this.CardsCountLabel.AutoSize = true;
-            this.CardsCountLabel.Location = new System.Drawing.Point(71, 703);
+            this.CardsCountLabel.Location = new System.Drawing.Point(71, 727);
             this.CardsCountLabel.Margin = new System.Windows.Forms.Padding(9, 0, 9, 0);
             this.CardsCountLabel.Name = "CardsCountLabel";
             this.CardsCountLabel.Size = new System.Drawing.Size(196, 25);
@@ -302,7 +302,7 @@
             this.Controls.Add(this.PeriodFromDateTimePicker);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.HistoryDataGridView);
+            this.Controls.Add(this.ApplicationsDataGridView);
             this.Controls.Add(this.LocationComboBox);
             this.Controls.Add(this.CustomerComboBox);
             this.Controls.Add(this.label1);
@@ -310,7 +310,7 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "HistoryApplications";
             this.Text = "Applications";
-            ((System.ComponentModel.ISupportInitialize)(this.HistoryDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ApplicationsDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -319,7 +319,7 @@
         #endregion
         private System.Windows.Forms.DataGridViewTextBoxColumn Castomer;
         private System.Windows.Forms.DataGridViewTextBoxColumn Location;
-        private System.Windows.Forms.DataGridView HistoryDataGridView;
+        private System.Windows.Forms.DataGridView ApplicationsDataGridView;
         private System.Windows.Forms.ComboBox LocationComboBox;
         private System.Windows.Forms.ComboBox CustomerComboBox;
         private System.Windows.Forms.Label label1;

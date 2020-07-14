@@ -23,55 +23,10 @@ namespace Admin_Panel_Hotel
         public ShowApplicationDraft()
         {
             InitializeComponent();
+            Functions.LoadApplicationUsers(UsersDataGridView, ApplicationId);
+            Functions.NewlineProcessing(UsersDataGridView, new string[] { "1", "Введите ФИО", "Таб.номер", "Дата от", "Дата до", "Локация" });
 
             ApplicationNameLabel.Text = $"Черновик > {CustomerName} - {ApplicationDate}";
-
-            LoadApplicationUsers();
-
-            Functions.NewlineProcessing(UsersDataGridView, new string[] { "1", "Введите ФИО", "Таб.номер", "Дата от", "Дата до", "Локация" });
-        }
-
-        /// <summary>
-        /// Загрузить людей из заявки.
-        /// </summary>
-        private void LoadApplicationUsers()
-        {
-            MySqlCommand select = new MySqlCommand($"SELECT (SELECT user_profile.firstname FROM user_profile WHERE user_profile.user_id = contract_user.user_id) as 'firstname'" +
-                $", (SELECT user_profile.middlename FROM user_profile WHERE user_profile.user_id = contract_user.user_id) as 'middlename'" +
-                $", (SELECT user_profile.lastname FROM user_profile WHERE user_profile.user_id = contract_user.user_id) as 'lastname'" +
-                $", (SELECT event.start_at FROM event WHERE event.id = contract_user.event_id) as 'start_at'" +
-                $", (SELECT event.end_at FROM event WHERE event.id = contract_user.event_id) as 'end_at'" +
-                $", (SELECT customer_location.name FROM customer_location WHERE customer_location.customer_id = (SELECT contract.customer_id FROM contract WHERE contract.id = {ApplicationId}) AND customer_location.location_id = (SELECT location_id FROM contract WHERE contract.id = {ApplicationId})) as 'locationname'" +
-                $" FROM contract_user" +
-                $" WHERE contract_id = {ApplicationId}", Functions.Connection);
-            MySqlDataReader reader = select.ExecuteReader();
-
-            while (reader.Read()) // Получаем данные из запроса и заполняем их в таблицу.
-            {
-                string userName = $"{reader[0]} {reader[1]} {reader[2]}";
-                string tabNum = null;
-
-                int addedRow = UsersDataGridView.Rows.Add(UsersDataGridView.Rows.Count + 1
-                    , userName
-                    , tabNum
-                    , DateTimeOffset.FromUnixTimeSeconds(Convert.ToInt64(reader[3].ToString())).DateTime.Date.ToString().Replace("00:00:00", "").Trim()
-                    , DateTimeOffset.FromUnixTimeSeconds(Convert.ToInt64(reader[4].ToString())).DateTime.Date.ToString().Replace("00:00:00", "").Trim()
-                    /*, comboBoxCell.Items[addedLocation]*/);
-
-                DataGridViewComboBoxColumn locationsComboBox = ((DataGridViewComboBoxColumn)UsersDataGridView.Columns["location"]);
-                int addedLocation = 0;
-                if (locationsComboBox.Items.Contains(reader[5].ToString()))
-                {
-                    addedLocation = locationsComboBox.Items.Count - 1;
-                }
-                else
-                {
-                    addedLocation = locationsComboBox.Items.Add(reader[5].ToString());
-                }
-
-                UsersDataGridView[5, addedRow].Value = locationsComboBox.Items[addedLocation];
-            }
-            reader.Close();
         }
 
         private void DraftApplicationNameLabel_Click(object sender, EventArgs e)
@@ -81,10 +36,47 @@ namespace Admin_Panel_Hotel
 
         private void AddUserLabel_Click(object sender, EventArgs e)
         {
-            // TODO: Сделать проверку заполнения полей на последней строке.
-            if (true)
+            if (CheckLastUser())
             {
                 UsersDataGridView.Rows.Add();
+            }
+        }
+
+        /// <summary>
+        /// Проверить последнюю добавленную строку в таблице сотрудников.
+        /// </summary>
+        /// <returns>True - если все данные введены корректно. False - если не все данные введены.</returns>
+        private bool CheckLastUser()
+        {
+            int lastUser = UsersDataGridView.Rows.Count - 1;
+            DataGridViewComboBoxColumn locationsComboBox = (DataGridViewComboBoxColumn)UsersDataGridView.Columns["location"];
+            DateTime dateFrom = DateTime.MinValue;
+            DateTime dateTo = DateTime.MinValue;
+
+            if (UsersDataGridView.Rows.Count == 0
+                || (UsersDataGridView.Rows.Count > 0
+                && UsersDataGridView[1, lastUser].Value != null && UsersDataGridView[1, lastUser].Value.ToString() != UsersDataGridView[0, lastUser].ToolTipText
+                && UsersDataGridView[2, lastUser].Value != null && UsersDataGridView[2, lastUser].Value.ToString() != UsersDataGridView[0, lastUser].ToolTipText
+                && UsersDataGridView[3, lastUser].Value != null && UsersDataGridView[3, lastUser].Value.ToString() != UsersDataGridView[0, lastUser].ToolTipText
+                && UsersDataGridView[4, lastUser].Value != null && UsersDataGridView[4, lastUser].Value.ToString() != UsersDataGridView[0, lastUser].ToolTipText
+                && UsersDataGridView[5, lastUser].Value != null && UsersDataGridView[5, lastUser].Value.ToString() != locationsComboBox.Items[0].ToString()
+                && DateTime.TryParse(UsersDataGridView[3, lastUser].Value.ToString(), out dateFrom)
+                && DateTime.TryParse(UsersDataGridView[4, lastUser].Value.ToString(), out dateTo))
+                && dateFrom < dateTo)
+            {
+                return true;
+            }
+            else
+            {
+                if (dateFrom == DateTime.MinValue)
+                {
+                    UsersDataGridView[3, lastUser].ErrorText = "Введите корректную дату";
+                }
+                if (dateTo == DateTime.MinValue)
+                {
+                    UsersDataGridView[4, lastUser].ErrorText = "Введите корректную дату";
+                }
+                return false;
             }
         }
 
@@ -99,7 +91,7 @@ namespace Admin_Panel_Hotel
             else
             {
                 // TODO: Сделать проверку заполнения полей на последней строке.
-                if (true) // Заполнены все поля.
+                if (true) // Если заполнены все поля.
                 {
                     // Открытие формы уведомления о подтверждённой заявке.
                     var notification = new NotificationsForm();

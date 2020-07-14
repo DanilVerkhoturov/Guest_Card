@@ -222,7 +222,7 @@ namespace Admin_Panel_Hotel
         {
             long draftApplicationsCount = 0;
 
-            MySqlCommand select = new MySqlCommand("SELECT COUNT(*) as 'count' FROM contract WHERE contract.status_id = 3", Functions.Connection);
+            MySqlCommand select = new MySqlCommand("SELECT COUNT(*) as 'count' FROM applications WHERE applications.status_id = 3", Functions.Connection);
             MySqlDataReader reader = select.ExecuteReader();
 
             while (reader.Read())
@@ -242,7 +242,7 @@ namespace Admin_Panel_Hotel
         {
             long newApplicationsCount = 0;
 
-            MySqlCommand select = new MySqlCommand("SELECT COUNT(*) as 'count' FROM contract WHERE contract.status_id = 1", Functions.Connection);
+            MySqlCommand select = new MySqlCommand("SELECT COUNT(*) as 'count' FROM applications WHERE applications.status_id = 1", Functions.Connection);
             MySqlDataReader reader = select.ExecuteReader();
 
             while (reader.Read())

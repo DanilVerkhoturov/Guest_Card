@@ -46,7 +46,7 @@ namespace Admin_Panel_Hotel
         /// </summary>
         /// <param name="query">Текст запроса.</param>
         /// <returns>Возвращает таблицу с данными.</returns>
-        public DataTable ExecuteSql(string query)
+        public static DataTable ExecuteSql(string query)
         {
             DataTable table = new DataTable();
             var command = Connection.CreateCommand();
@@ -55,6 +55,80 @@ namespace Admin_Panel_Hotel
             var reader = command.ExecuteReader();
             table.Load(reader);
             return table;
+        }
+
+        /// <summary>
+        /// Загрузить заявки из базы данных в таблицу.
+        /// </summary>
+        /// <param name="dgv">Таблица, для загрузки в неё данных.</param>
+        /// <param name="applicationsStatus">Статус заявки.</param>
+        public static void LoadApplications(DataGridView dgv, int applicationsStatus)
+        {
+            MySqlCommand select = new MySqlCommand($"SELECT id" +
+                $", (SELECT name as 'name' FROM customer_legal_info WHERE id = applications.customer_id)" +
+                $", created_at as 'date'" +
+                $" FROM applications" +
+                $" WHERE status_id = {applicationsStatus}", Connection);
+            select.CommandTimeout = 86400;
+            MySqlDataReader reader = select.ExecuteReader();
+
+            while (reader.Read())
+            {
+                dgv.Rows.Add(reader[1].ToString(), DateTimeOffset.FromUnixTimeSeconds(Convert.ToInt64(reader[2].ToString())).DateTime.Date.ToString().Replace("00:00:00", "").Trim(), null, reader[0].ToString());
+            }
+            reader.Close();
+        }
+
+        /// <summary>
+        /// Загрузить людей из заявки.
+        /// </summary>
+        /// <param name="dgv">Таблица, для загрузки в неё данных</param>
+        /// <param name="applicationId">Уникальный номер заявки.</param>
+        public static void LoadApplicationUsers(DataGridView dgv, long applicationId)
+        {
+            MySqlCommand select = new MySqlCommand($"SELECT (SELECT user_profile.firstname FROM user_profile WHERE user_profile.user_id = applications_user.user_id) as 'firstname'" +
+                $", (SELECT user_profile.middlename FROM user_profile WHERE user_profile.user_id = applications_user.user_id) as 'middlename'" +
+                $", (SELECT user_profile.lastname FROM user_profile WHERE user_profile.user_id = applications_user.user_id) as 'lastname'" +
+                $", (SELECT event.start_at FROM event WHERE event.id = applications_user.event_id) as 'start_at'" +
+                $", (SELECT event.end_at FROM event WHERE event.id = applications_user.event_id) as 'end_at'" +
+                $", (SELECT customer_location.name FROM customer_location WHERE customer_location.customer_id = (SELECT applications.customer_id FROM applications WHERE applications.id = {applicationId}) AND customer_location.location_id = (SELECT location_id FROM applications WHERE applications.id = {applicationId})) as 'locationname'" +
+                $" FROM applications_user" +
+                $" WHERE application_id = {applicationId}", Connection);
+            MySqlDataReader reader = select.ExecuteReader();
+
+            while (reader.Read()) // Получаем данные из запроса и заполняем их в таблицу.
+            {
+                string userName = $"{reader[0]} {reader[1]} {reader[2]}";
+                string tabNum = null;
+
+                int addedRow = dgv.Rows.Add(dgv.Rows.Count + 1
+                    , userName
+                    , tabNum
+                    , DateTimeOffset.FromUnixTimeSeconds(Convert.ToInt64(reader[3].ToString())).DateTime.Date.ToString().Replace("00:00:00", "").Trim()
+                    , DateTimeOffset.FromUnixTimeSeconds(Convert.ToInt64(reader[4].ToString())).DateTime.Date.ToString().Replace("00:00:00", "").Trim());
+
+                DataGridViewComboBoxColumn locationsComboBox = (DataGridViewComboBoxColumn)dgv.Columns["location"];
+                int addedLocation = 0;
+
+                if (locationsComboBox == null) // Если локации в таблице, в виде "TextBox".
+                {
+                    dgv[5, addedRow].Value = reader[5].ToString();
+                }
+                else // Если локации в таблице, в виде "ComboBox".
+                {
+                    if (locationsComboBox.Items.Contains(reader[5].ToString()))
+                    {
+                        addedLocation = locationsComboBox.Items.Count - 1;
+                    }
+                    else
+                    {
+                        addedLocation = locationsComboBox.Items.Add(reader[5].ToString());
+                    }
+
+                    dgv[5, addedRow].Value = locationsComboBox.Items[addedLocation];
+                }
+            }
+            reader.Close();
         }
 
         #endregion

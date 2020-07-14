@@ -1,47 +1,35 @@
-﻿using System;
-using System.Drawing;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Windows.Forms;
 
 namespace Admin_Panel_Hotel
 {
     public partial class ShowApplicationHistory : Form
     {
-        InfoUserForm DialogForm = null;
+        /// <summary>
+        /// Название заказчика.
+        /// </summary>
+        public static string CustomerName;
+        /// <summary>
+        /// Дата создания заявки.
+        /// </summary>
+        public static string ApplicationDate;
+        /// <summary>
+        /// Уникальный номер заявки.
+        /// </summary>
+        public static long ApplicationId;
 
         public ShowApplicationHistory()
         {
             InitializeComponent();
-            UsersDataGridView.Rows.Add("1", "Иванов Константин Иванович", "58585857", "06.06.2020", "06.06.2020");
-            UsersDataGridView.Rows.Add("2", "Петров Петр Петрович", "58585857", "06.06.2020", "06.06.2020");
+            Functions.LoadApplicationUsers(UsersDataGridView, ApplicationId);
+
+            ApplicationNameLabel.Text = $"История заявок > {CustomerName} - {ApplicationDate}";
         }
 
         private void NewApplicationsLabel_Click(object sender, EventArgs e)
         {
             Functions.OpenChildForm(new HistoryApplications(), MainForm.ContP);
-        }
-
-        private void AcceptButton_Click(object sender, EventArgs e)
-        {
-            // Открытие формы уведомления о подтверждённой заявке.
-            var notification = new NotificationsForm();
-            notification.NotificationLabel.Text = "Заявка подтверждена";
-            notification.StartPosition = FormStartPosition.CenterParent;
-            notification.ShowDialog(this);
-        }
-
-        private void EditButton_Click(object sender, EventArgs e)
-        {
-            UsersDataGridView.ReadOnly = false;
-        }
-
-        private void GridTable_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.ColumnIndex == 7)
-            {
-                var form = new InfoUserForm();
-                form.StartPosition = FormStartPosition.CenterParent;
-                form.ShowDialog(this);
-            }
         }
     }
 }

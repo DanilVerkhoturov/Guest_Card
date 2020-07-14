@@ -34,7 +34,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.HistoryApplicationNameLabel = new System.Windows.Forms.Label();
+            this.ApplicationNameLabel = new System.Windows.Forms.Label();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.PrintButton = new System.Windows.Forms.Button();
             this.SendButton = new System.Windows.Forms.Button();
@@ -48,18 +48,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.UsersDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // HistoryApplicationNameLabel
+            // ApplicationNameLabel
             // 
-            this.HistoryApplicationNameLabel.AutoSize = true;
-            this.HistoryApplicationNameLabel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.HistoryApplicationNameLabel.Font = new System.Drawing.Font("Roboto", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.HistoryApplicationNameLabel.Location = new System.Drawing.Point(70, 45);
-            this.HistoryApplicationNameLabel.Margin = new System.Windows.Forms.Padding(61, 36, 0, 0);
-            this.HistoryApplicationNameLabel.Name = "HistoryApplicationNameLabel";
-            this.HistoryApplicationNameLabel.Size = new System.Drawing.Size(575, 35);
-            this.HistoryApplicationNameLabel.TabIndex = 0;
-            this.HistoryApplicationNameLabel.Text = "История заявок > Заявка-1 от 02.07.2020";
-            this.HistoryApplicationNameLabel.Click += new System.EventHandler(this.NewApplicationsLabel_Click);
+            this.ApplicationNameLabel.AutoEllipsis = true;
+            this.ApplicationNameLabel.AutoSize = true;
+            this.ApplicationNameLabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ApplicationNameLabel.Font = new System.Drawing.Font("Roboto", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ApplicationNameLabel.Location = new System.Drawing.Point(70, 45);
+            this.ApplicationNameLabel.Margin = new System.Windows.Forms.Padding(61, 36, 0, 0);
+            this.ApplicationNameLabel.MaximumSize = new System.Drawing.Size(700, 35);
+            this.ApplicationNameLabel.Name = "ApplicationNameLabel";
+            this.ApplicationNameLabel.Size = new System.Drawing.Size(264, 35);
+            this.ApplicationNameLabel.TabIndex = 0;
+            this.ApplicationNameLabel.Text = "История заявок > ";
+            this.ApplicationNameLabel.Click += new System.EventHandler(this.NewApplicationsLabel_Click);
             // 
             // dataGridViewImageColumn1
             // 
@@ -232,7 +234,7 @@
             this.Controls.Add(this.UsersDataGridView);
             this.Controls.Add(this.SendButton);
             this.Controls.Add(this.PrintButton);
-            this.Controls.Add(this.HistoryApplicationNameLabel);
+            this.Controls.Add(this.ApplicationNameLabel);
             this.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ShowApplicationHistory";
@@ -244,7 +246,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label HistoryApplicationNameLabel;
+        private System.Windows.Forms.Label ApplicationNameLabel;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.Button PrintButton;
         private System.Windows.Forms.Button SendButton;

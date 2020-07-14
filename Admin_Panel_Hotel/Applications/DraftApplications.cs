@@ -1,5 +1,4 @@
-﻿using MySql.Data.MySqlClient;
-using System;
+﻿using System;
 using System.Windows.Forms;
 
 namespace Admin_Panel_Hotel
@@ -9,28 +8,7 @@ namespace Admin_Panel_Hotel
         public DraftApplications()
         {
             InitializeComponent();
-
-            LoadApplications();
-        }
-
-        /// <summary>
-        /// Загрузка черновиков из базы данных.
-        /// </summary>
-        private void LoadApplications()
-        {
-            MySqlCommand select = new MySqlCommand("SELECT id" +
-                ", (SELECT name FROM customer_legal_info WHERE id = contract.customer_id) as 'name'" +
-                ", created_at as 'date'" +
-                " FROM contract" +
-                " WHERE status_id = 3", Functions.Connection);
-            select.CommandTimeout = 86400;
-            MySqlDataReader reader = select.ExecuteReader();
-
-            while (reader.Read())
-            {
-                ApplicationsDataGridView.Rows.Add(reader[1].ToString(), DateTimeOffset.FromUnixTimeSeconds(Convert.ToInt64(reader[2].ToString())).DateTime.Date.ToString().Replace("00:00:00", "").Trim(), null, reader[0].ToString());
-            }
-            reader.Close();
+            Functions.LoadApplications(ApplicationsDataGridView, 3);
         }
 
         private void DraftDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
