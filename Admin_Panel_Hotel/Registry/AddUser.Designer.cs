@@ -38,8 +38,8 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Roboto", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(70, 32);
-            this.label1.Margin = new System.Windows.Forms.Padding(61, 23, 6, 0);
+            this.label1.Location = new System.Drawing.Point(70, 44);
+            this.label1.Margin = new System.Windows.Forms.Padding(61, 35, 6, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(248, 35);
             this.label1.TabIndex = 38;

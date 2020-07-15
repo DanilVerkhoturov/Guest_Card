@@ -57,8 +57,8 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Roboto", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(70, 53);
-            this.label1.Margin = new System.Windows.Forms.Padding(61, 44, 12, 0);
+            this.label1.Location = new System.Drawing.Point(70, 44);
+            this.label1.Margin = new System.Windows.Forms.Padding(61, 35, 0, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(214, 35);
             this.label1.TabIndex = 37;
@@ -67,7 +67,7 @@
             // SearchTextBox
             // 
             this.SearchTextBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.SearchTextBox.Location = new System.Drawing.Point(452, 135);
+            this.SearchTextBox.Location = new System.Drawing.Point(452, 126);
             this.SearchTextBox.Margin = new System.Windows.Forms.Padding(22, 6, 6, 6);
             this.SearchTextBox.Name = "SearchTextBox";
             this.SearchTextBox.Size = new System.Drawing.Size(274, 33);
@@ -82,7 +82,7 @@
             this.FilterCardsComboBox.FormattingEnabled = true;
             this.FilterCardsComboBox.Items.AddRange(new object[] {
             "Все карты"});
-            this.FilterCardsComboBox.Location = new System.Drawing.Point(132, 135);
+            this.FilterCardsComboBox.Location = new System.Drawing.Point(132, 126);
             this.FilterCardsComboBox.Margin = new System.Windows.Forms.Padding(123, 47, 10, 8);
             this.FilterCardsComboBox.Name = "FilterCardsComboBox";
             this.FilterCardsComboBox.Size = new System.Drawing.Size(288, 33);
@@ -128,7 +128,7 @@
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.UsersDataGridView.DefaultCellStyle = dataGridViewCellStyle4;
             this.UsersDataGridView.EnableHeadersVisualStyles = false;
-            this.UsersDataGridView.Location = new System.Drawing.Point(132, 196);
+            this.UsersDataGridView.Location = new System.Drawing.Point(132, 187);
             this.UsersDataGridView.Margin = new System.Windows.Forms.Padding(244, 22, 102, 10);
             this.UsersDataGridView.Name = "UsersDataGridView";
             this.UsersDataGridView.ReadOnly = true;
@@ -152,7 +152,7 @@
             this.UsersDataGridView.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.UsersDataGridView.RowTemplate.Height = 30;
             this.UsersDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.UsersDataGridView.Size = new System.Drawing.Size(913, 441);
+            this.UsersDataGridView.Size = new System.Drawing.Size(901, 441);
             this.UsersDataGridView.TabIndex = 46;
             // 
             // Column1
@@ -222,7 +222,7 @@
             this.ChangeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ChangeButton.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ChangeButton.ForeColor = System.Drawing.Color.White;
-            this.ChangeButton.Location = new System.Drawing.Point(795, 53);
+            this.ChangeButton.Location = new System.Drawing.Point(783, 48);
             this.ChangeButton.Margin = new System.Windows.Forms.Padding(499, 6, 33, 6);
             this.ChangeButton.Name = "ChangeButton";
             this.ChangeButton.Size = new System.Drawing.Size(122, 35);
@@ -237,7 +237,7 @@
             this.PrintButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PrintButton.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.PrintButton.ForeColor = System.Drawing.Color.White;
-            this.PrintButton.Location = new System.Drawing.Point(950, 53);
+            this.PrintButton.Location = new System.Drawing.Point(938, 48);
             this.PrintButton.Margin = new System.Windows.Forms.Padding(0, 12, 10, 12);
             this.PrintButton.Name = "PrintButton";
             this.PrintButton.Size = new System.Drawing.Size(95, 35);
@@ -249,7 +249,7 @@
             // 
             this.ShowAllLinkLabel.AutoSize = true;
             this.ShowAllLinkLabel.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ShowAllLinkLabel.Location = new System.Drawing.Point(290, 649);
+            this.ShowAllLinkLabel.Location = new System.Drawing.Point(287, 638);
             this.ShowAllLinkLabel.Margin = new System.Windows.Forms.Padding(70, 0, 10, 0);
             this.ShowAllLinkLabel.Name = "ShowAllLinkLabel";
             this.ShowAllLinkLabel.Size = new System.Drawing.Size(143, 25);
@@ -261,7 +261,7 @@
             // 
             this.CardsCountLabel.AutoSize = true;
             this.CardsCountLabel.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CardsCountLabel.Location = new System.Drawing.Point(127, 649);
+            this.CardsCountLabel.Location = new System.Drawing.Point(127, 638);
             this.CardsCountLabel.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.CardsCountLabel.Name = "CardsCountLabel";
             this.CardsCountLabel.Size = new System.Drawing.Size(147, 25);
@@ -295,7 +295,7 @@
             this.Controls.Add(this.UsersDataGridView);
             this.Controls.Add(this.EmptyRegistryLabel);
             this.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "RegistryForm";
             this.Text = "RegistryForm";
             ((System.ComponentModel.ISupportInitialize)(this.UsersDataGridView)).EndInit();
