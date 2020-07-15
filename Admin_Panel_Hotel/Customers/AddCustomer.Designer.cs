@@ -33,13 +33,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddCustomer));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             this.AddCustomerButton = new System.Windows.Forms.Button();
             this.Set2_Customer_CheckBox = new System.Windows.Forms.CheckBox();
             this.Set1_Customer_CheckBox = new System.Windows.Forms.CheckBox();
@@ -70,8 +70,19 @@
             this.AddEmailLinkLabel = new System.Windows.Forms.LinkLabel();
             this.label8 = new System.Windows.Forms.Label();
             this.AddCustomerLocationPanel = new System.Windows.Forms.Panel();
+            this.AddRoomsLabel = new System.Windows.Forms.Label();
+            this.AddRoomsPanel = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.AddLocationLinkLabel = new System.Windows.Forms.LinkLabel();
             this.label9 = new System.Windows.Forms.Label();
             this.LocationsDataGridView = new System.Windows.Forms.DataGridView();
+            this.Num = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LocationName = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewImageColumn();
             this.CardPropertiesPanel = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.Set2HelpButton = new System.Windows.Forms.Button();
@@ -91,6 +102,10 @@
             this.BedsCountErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.SubDivisionsButton = new System.Windows.Forms.Button();
             this.SubDivisionsPanel = new System.Windows.Forms.Panel();
+            this.SubDivisionEmailsPanel = new System.Windows.Forms.Panel();
+            this.AddSubDivisionEmailLinkLabel = new System.Windows.Forms.LinkLabel();
+            this.SubDivisionEmailNameTextBox0 = new System.Windows.Forms.TextBox();
+            this.SubDivisionEmailTextBox0 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.SubDivisionsNextButton = new System.Windows.Forms.Button();
@@ -109,24 +124,10 @@
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Num = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LocationName = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.AddLocationLinkLabel = new System.Windows.Forms.LinkLabel();
-            this.AddRoomsPanel = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.AddRoomsLabel = new System.Windows.Forms.Label();
-            this.SubDivisionEmailsPanel = new System.Windows.Forms.Panel();
-            this.AddSubDivisionEmailLinkLabel = new System.Windows.Forms.LinkLabel();
-            this.SubDivisionEmailNameTextBox0 = new System.Windows.Forms.TextBox();
-            this.SubDivisionEmailTextBox0 = new System.Windows.Forms.TextBox();
             this.CustomerInfoPanel.SuspendLayout();
             this.EmailsPanel.SuspendLayout();
             this.AddCustomerLocationPanel.SuspendLayout();
+            this.AddRoomsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LocationsDataGridView)).BeginInit();
             this.CardPropertiesPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -140,9 +141,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.RoomCountErrorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BedsCountErrorProvider)).BeginInit();
             this.SubDivisionsPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.AddRoomsPanel.SuspendLayout();
             this.SubDivisionEmailsPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // AddCustomerButton
@@ -536,6 +536,59 @@
             this.AddCustomerLocationPanel.TabIndex = 45;
             this.AddCustomerLocationPanel.Visible = false;
             // 
+            // AddRoomsLabel
+            // 
+            this.AddRoomsLabel.AutoSize = true;
+            this.AddRoomsLabel.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AddRoomsLabel.Location = new System.Drawing.Point(71, 296);
+            this.AddRoomsLabel.Margin = new System.Windows.Forms.Padding(142, 52, 5, 0);
+            this.AddRoomsLabel.Name = "AddRoomsLabel";
+            this.AddRoomsLabel.Size = new System.Drawing.Size(224, 29);
+            this.AddRoomsLabel.TabIndex = 55;
+            this.AddRoomsLabel.Text = "Добавить комнату";
+            this.AddRoomsLabel.Visible = false;
+            // 
+            // AddRoomsPanel
+            // 
+            this.AddRoomsPanel.AutoScroll = true;
+            this.AddRoomsPanel.Controls.Add(this.textBox1);
+            this.AddRoomsPanel.Controls.Add(this.textBox2);
+            this.AddRoomsPanel.Location = new System.Drawing.Point(72, 339);
+            this.AddRoomsPanel.Margin = new System.Windows.Forms.Padding(5, 14, 5, 7);
+            this.AddRoomsPanel.Name = "AddRoomsPanel";
+            this.AddRoomsPanel.Size = new System.Drawing.Size(643, 209);
+            this.AddRoomsPanel.TabIndex = 54;
+            this.AddRoomsPanel.Visible = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox1.Location = new System.Drawing.Point(0, 0);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(5, 45, 5, 5);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(223, 33);
+            this.textBox1.TabIndex = 0;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox2.Location = new System.Drawing.Point(348, 0);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(20, 45, 5, 5);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(214, 33);
+            this.textBox2.TabIndex = 0;
+            // 
+            // AddLocationLinkLabel
+            // 
+            this.AddLocationLinkLabel.AutoSize = true;
+            this.AddLocationLinkLabel.Location = new System.Drawing.Point(67, 556);
+            this.AddLocationLinkLabel.Name = "AddLocationLinkLabel";
+            this.AddLocationLinkLabel.Size = new System.Drawing.Size(258, 25);
+            this.AddLocationLinkLabel.TabIndex = 48;
+            this.AddLocationLinkLabel.TabStop = true;
+            this.AddLocationLinkLabel.Text = "+ добавить ещё локацию";
+            this.AddLocationLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.AddLocationLinkLabel_LinkClicked);
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -606,6 +659,60 @@
             this.LocationsDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.LocationsDataGridView.Size = new System.Drawing.Size(242, 396);
             this.LocationsDataGridView.TabIndex = 47;
+            // 
+            // Num
+            // 
+            this.Num.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Num.Frozen = true;
+            this.Num.HeaderText = "№";
+            this.Num.MaxInputLength = 3;
+            this.Num.Name = "Num";
+            this.Num.ReadOnly = true;
+            this.Num.Width = 5;
+            // 
+            // LocationName
+            // 
+            this.LocationName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.LocationName.DefaultCellStyle = dataGridViewCellStyle13;
+            this.LocationName.Frozen = true;
+            this.LocationName.HeaderText = "Локация";
+            this.LocationName.Name = "LocationName";
+            this.LocationName.ReadOnly = true;
+            this.LocationName.Width = 5;
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "Количество комнат";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            this.Column9.Visible = false;
+            this.Column9.Width = 5;
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "Количество кроватей";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            this.Column10.Visible = false;
+            this.Column10.Width = 5;
+            // 
+            // Column11
+            // 
+            this.Column11.HeaderText = "Количество карт";
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
+            this.Column11.Visible = false;
+            this.Column11.Width = 5;
+            // 
+            // Column12
+            // 
+            this.Column12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Column12.HeaderText = "Column12";
+            this.Column12.Image = global::Admin_Panel_Hotel.Properties.Resources.closeoutline_110831_4;
+            this.Column12.Name = "Column12";
+            this.Column12.ReadOnly = true;
+            this.Column12.Width = 5;
             // 
             // CardPropertiesPanel
             // 
@@ -844,6 +951,50 @@
             this.SubDivisionsPanel.TabIndex = 54;
             this.SubDivisionsPanel.Visible = false;
             // 
+            // SubDivisionEmailsPanel
+            // 
+            this.SubDivisionEmailsPanel.AutoScroll = true;
+            this.SubDivisionEmailsPanel.Controls.Add(this.AddSubDivisionEmailLinkLabel);
+            this.SubDivisionEmailsPanel.Controls.Add(this.SubDivisionEmailNameTextBox0);
+            this.SubDivisionEmailsPanel.Controls.Add(this.SubDivisionEmailTextBox0);
+            this.SubDivisionEmailsPanel.Location = new System.Drawing.Point(72, 139);
+            this.SubDivisionEmailsPanel.Margin = new System.Windows.Forms.Padding(5, 24, 5, 7);
+            this.SubDivisionEmailsPanel.Name = "SubDivisionEmailsPanel";
+            this.SubDivisionEmailsPanel.Size = new System.Drawing.Size(630, 402);
+            this.SubDivisionEmailsPanel.TabIndex = 52;
+            // 
+            // AddSubDivisionEmailLinkLabel
+            // 
+            this.AddSubDivisionEmailLinkLabel.AutoSize = true;
+            this.AddSubDivisionEmailLinkLabel.Location = new System.Drawing.Point(18, 62);
+            this.AddSubDivisionEmailLinkLabel.Margin = new System.Windows.Forms.Padding(140, 24, 3, 0);
+            this.AddSubDivisionEmailLinkLabel.Name = "AddSubDivisionEmailLinkLabel";
+            this.AddSubDivisionEmailLinkLabel.Size = new System.Drawing.Size(317, 25);
+            this.AddSubDivisionEmailLinkLabel.TabIndex = 52;
+            this.AddSubDivisionEmailLinkLabel.TabStop = true;
+            this.AddSubDivisionEmailLinkLabel.Text = "+ добавить электронную почту";
+            this.AddSubDivisionEmailLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.AddSubDivisionEmailLinkLabel_LinkClicked);
+            // 
+            // SubDivisionEmailNameTextBox0
+            // 
+            this.SubDivisionEmailNameTextBox0.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SubDivisionEmailNameTextBox0.Location = new System.Drawing.Point(0, 0);
+            this.SubDivisionEmailNameTextBox0.Margin = new System.Windows.Forms.Padding(5, 45, 5, 5);
+            this.SubDivisionEmailNameTextBox0.Name = "SubDivisionEmailNameTextBox0";
+            this.SubDivisionEmailNameTextBox0.Size = new System.Drawing.Size(237, 33);
+            this.SubDivisionEmailNameTextBox0.TabIndex = 0;
+            this.SubDivisionEmailNameTextBox0.Leave += new System.EventHandler(this.EmailNameTextBox_Leave);
+            // 
+            // SubDivisionEmailTextBox0
+            // 
+            this.SubDivisionEmailTextBox0.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SubDivisionEmailTextBox0.Location = new System.Drawing.Point(325, 0);
+            this.SubDivisionEmailTextBox0.Margin = new System.Windows.Forms.Padding(20, 45, 5, 5);
+            this.SubDivisionEmailTextBox0.Name = "SubDivisionEmailTextBox0";
+            this.SubDivisionEmailTextBox0.Size = new System.Drawing.Size(237, 33);
+            this.SubDivisionEmailTextBox0.TabIndex = 0;
+            this.SubDivisionEmailTextBox0.Leave += new System.EventHandler(this.EmailTextBox_Leave);
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -1070,157 +1221,6 @@
             this.dataGridViewTextBoxColumn12.Visible = false;
             this.dataGridViewTextBoxColumn12.Width = 5;
             // 
-            // Num
-            // 
-            this.Num.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Num.Frozen = true;
-            this.Num.HeaderText = "№";
-            this.Num.MaxInputLength = 3;
-            this.Num.Name = "Num";
-            this.Num.ReadOnly = true;
-            this.Num.Width = 5;
-            // 
-            // LocationName
-            // 
-            this.LocationName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.LocationName.DefaultCellStyle = dataGridViewCellStyle13;
-            this.LocationName.Frozen = true;
-            this.LocationName.HeaderText = "Локация";
-            this.LocationName.Name = "LocationName";
-            this.LocationName.ReadOnly = true;
-            this.LocationName.Width = 5;
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "Количество комнат";
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            this.Column9.Visible = false;
-            this.Column9.Width = 5;
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "Количество кроватей";
-            this.Column10.Name = "Column10";
-            this.Column10.ReadOnly = true;
-            this.Column10.Visible = false;
-            this.Column10.Width = 5;
-            // 
-            // Column11
-            // 
-            this.Column11.HeaderText = "Количество карт";
-            this.Column11.Name = "Column11";
-            this.Column11.ReadOnly = true;
-            this.Column11.Visible = false;
-            this.Column11.Width = 5;
-            // 
-            // Column12
-            // 
-            this.Column12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Column12.HeaderText = "Column12";
-            this.Column12.Image = global::Admin_Panel_Hotel.Properties.Resources.closeoutline_110831_4;
-            this.Column12.Name = "Column12";
-            this.Column12.ReadOnly = true;
-            this.Column12.Width = 5;
-            // 
-            // AddLocationLinkLabel
-            // 
-            this.AddLocationLinkLabel.AutoSize = true;
-            this.AddLocationLinkLabel.Location = new System.Drawing.Point(67, 556);
-            this.AddLocationLinkLabel.Name = "AddLocationLinkLabel";
-            this.AddLocationLinkLabel.Size = new System.Drawing.Size(258, 25);
-            this.AddLocationLinkLabel.TabIndex = 48;
-            this.AddLocationLinkLabel.TabStop = true;
-            this.AddLocationLinkLabel.Text = "+ добавить ещё локацию";
-            this.AddLocationLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.AddLocationLinkLabel_LinkClicked);
-            // 
-            // AddRoomsPanel
-            // 
-            this.AddRoomsPanel.AutoScroll = true;
-            this.AddRoomsPanel.Controls.Add(this.textBox1);
-            this.AddRoomsPanel.Controls.Add(this.textBox2);
-            this.AddRoomsPanel.Location = new System.Drawing.Point(72, 339);
-            this.AddRoomsPanel.Margin = new System.Windows.Forms.Padding(5, 14, 5, 7);
-            this.AddRoomsPanel.Name = "AddRoomsPanel";
-            this.AddRoomsPanel.Size = new System.Drawing.Size(643, 209);
-            this.AddRoomsPanel.TabIndex = 54;
-            this.AddRoomsPanel.Visible = false;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(0, 0);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(5, 45, 5, 5);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(223, 33);
-            this.textBox1.TabIndex = 0;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox2.Location = new System.Drawing.Point(348, 0);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(20, 45, 5, 5);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(214, 33);
-            this.textBox2.TabIndex = 0;
-            // 
-            // AddRoomsLabel
-            // 
-            this.AddRoomsLabel.AutoSize = true;
-            this.AddRoomsLabel.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.AddRoomsLabel.Location = new System.Drawing.Point(71, 296);
-            this.AddRoomsLabel.Margin = new System.Windows.Forms.Padding(142, 52, 5, 0);
-            this.AddRoomsLabel.Name = "AddRoomsLabel";
-            this.AddRoomsLabel.Size = new System.Drawing.Size(224, 29);
-            this.AddRoomsLabel.TabIndex = 55;
-            this.AddRoomsLabel.Text = "Добавить комнату";
-            this.AddRoomsLabel.Visible = false;
-            // 
-            // SubDivisionEmailsPanel
-            // 
-            this.SubDivisionEmailsPanel.AutoScroll = true;
-            this.SubDivisionEmailsPanel.Controls.Add(this.AddSubDivisionEmailLinkLabel);
-            this.SubDivisionEmailsPanel.Controls.Add(this.SubDivisionEmailNameTextBox0);
-            this.SubDivisionEmailsPanel.Controls.Add(this.SubDivisionEmailTextBox0);
-            this.SubDivisionEmailsPanel.Location = new System.Drawing.Point(72, 139);
-            this.SubDivisionEmailsPanel.Margin = new System.Windows.Forms.Padding(5, 24, 5, 7);
-            this.SubDivisionEmailsPanel.Name = "SubDivisionEmailsPanel";
-            this.SubDivisionEmailsPanel.Size = new System.Drawing.Size(630, 402);
-            this.SubDivisionEmailsPanel.TabIndex = 52;
-            // 
-            // AddSubDivisionEmailLinkLabel
-            // 
-            this.AddSubDivisionEmailLinkLabel.AutoSize = true;
-            this.AddSubDivisionEmailLinkLabel.Location = new System.Drawing.Point(18, 62);
-            this.AddSubDivisionEmailLinkLabel.Margin = new System.Windows.Forms.Padding(140, 24, 3, 0);
-            this.AddSubDivisionEmailLinkLabel.Name = "AddSubDivisionEmailLinkLabel";
-            this.AddSubDivisionEmailLinkLabel.Size = new System.Drawing.Size(317, 25);
-            this.AddSubDivisionEmailLinkLabel.TabIndex = 52;
-            this.AddSubDivisionEmailLinkLabel.TabStop = true;
-            this.AddSubDivisionEmailLinkLabel.Text = "+ добавить электронную почту";
-            this.AddSubDivisionEmailLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.AddSubDivisionEmailLinkLabel_LinkClicked);
-            // 
-            // SubDivisionEmailNameTextBox0
-            // 
-            this.SubDivisionEmailNameTextBox0.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.SubDivisionEmailNameTextBox0.Location = new System.Drawing.Point(0, 0);
-            this.SubDivisionEmailNameTextBox0.Margin = new System.Windows.Forms.Padding(5, 45, 5, 5);
-            this.SubDivisionEmailNameTextBox0.Name = "SubDivisionEmailNameTextBox0";
-            this.SubDivisionEmailNameTextBox0.Size = new System.Drawing.Size(237, 33);
-            this.SubDivisionEmailNameTextBox0.TabIndex = 0;
-            this.SubDivisionEmailNameTextBox0.Leave += new System.EventHandler(this.EmailNameTextBox_Leave);
-            // 
-            // SubDivisionEmailTextBox0
-            // 
-            this.SubDivisionEmailTextBox0.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.SubDivisionEmailTextBox0.Location = new System.Drawing.Point(325, 0);
-            this.SubDivisionEmailTextBox0.Margin = new System.Windows.Forms.Padding(20, 45, 5, 5);
-            this.SubDivisionEmailTextBox0.Name = "SubDivisionEmailTextBox0";
-            this.SubDivisionEmailTextBox0.Size = new System.Drawing.Size(237, 33);
-            this.SubDivisionEmailTextBox0.TabIndex = 0;
-            this.SubDivisionEmailTextBox0.Leave += new System.EventHandler(this.EmailTextBox_Leave);
-            // 
             // AddCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -1248,6 +1248,8 @@
             this.EmailsPanel.PerformLayout();
             this.AddCustomerLocationPanel.ResumeLayout(false);
             this.AddCustomerLocationPanel.PerformLayout();
+            this.AddRoomsPanel.ResumeLayout(false);
+            this.AddRoomsPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LocationsDataGridView)).EndInit();
             this.CardPropertiesPanel.ResumeLayout(false);
             this.CardPropertiesPanel.PerformLayout();
@@ -1263,11 +1265,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.BedsCountErrorProvider)).EndInit();
             this.SubDivisionsPanel.ResumeLayout(false);
             this.SubDivisionsPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.AddRoomsPanel.ResumeLayout(false);
-            this.AddRoomsPanel.PerformLayout();
             this.SubDivisionEmailsPanel.ResumeLayout(false);
             this.SubDivisionEmailsPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
