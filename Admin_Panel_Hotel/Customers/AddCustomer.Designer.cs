@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddCustomer));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.AddCustomerButton = new System.Windows.Forms.Button();
             this.Set2_Customer_CheckBox = new System.Windows.Forms.CheckBox();
             this.Set1_Customer_CheckBox = new System.Windows.Forms.CheckBox();
@@ -72,17 +72,11 @@
             this.AddCustomerLocationPanel = new System.Windows.Forms.Panel();
             this.AddRoomsLabel = new System.Windows.Forms.Label();
             this.AddRoomsPanel = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.RoomNumberTextBox0 = new System.Windows.Forms.TextBox();
+            this.BedsCountTextBox0 = new System.Windows.Forms.TextBox();
             this.AddLocationLinkLabel = new System.Windows.Forms.LinkLabel();
             this.label9 = new System.Windows.Forms.Label();
             this.LocationsDataGridView = new System.Windows.Forms.DataGridView();
-            this.Num = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LocationName = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewImageColumn();
             this.CardPropertiesPanel = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.Set2HelpButton = new System.Windows.Forms.Button();
@@ -102,28 +96,28 @@
             this.BedsCountErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.SubDivisionsButton = new System.Windows.Forms.Button();
             this.SubDivisionsPanel = new System.Windows.Forms.Panel();
-            this.SubDivisionEmailsPanel = new System.Windows.Forms.Panel();
-            this.AddSubDivisionEmailLinkLabel = new System.Windows.Forms.LinkLabel();
             this.SubDivisionEmailNameTextBox0 = new System.Windows.Forms.TextBox();
             this.SubDivisionEmailTextBox0 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.SubDivisionsNextButton = new System.Windows.Forms.Button();
             this.SubDivisionNameTextBox = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.SubDivisionsDataGridView = new System.Windows.Forms.DataGridView();
+            this.AddSubDivisionLinkLabel = new System.Windows.Forms.LinkLabel();
+            this.SubDivisionNameErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.SubDivisionEmailNameErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.SubDivisionEmailErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewLinkColumn1 = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EmailName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Num = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LocationName = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewImageColumn();
             this.CustomerInfoPanel.SuspendLayout();
             this.EmailsPanel.SuspendLayout();
             this.AddCustomerLocationPanel.SuspendLayout();
@@ -141,8 +135,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.RoomCountErrorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BedsCountErrorProvider)).BeginInit();
             this.SubDivisionsPanel.SuspendLayout();
-            this.SubDivisionEmailsPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SubDivisionsDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SubDivisionNameErrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SubDivisionEmailNameErrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SubDivisionEmailErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // AddCustomerButton
@@ -502,6 +498,7 @@
             this.AddEmailLinkLabel.TabIndex = 52;
             this.AddEmailLinkLabel.TabStop = true;
             this.AddEmailLinkLabel.Text = "+ добавить электронную почту";
+            this.AddEmailLinkLabel.VisitedLinkColor = System.Drawing.Color.Blue;
             this.AddEmailLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.AddEmailLinkLabel_LinkClicked);
             // 
             // label8
@@ -551,8 +548,8 @@
             // AddRoomsPanel
             // 
             this.AddRoomsPanel.AutoScroll = true;
-            this.AddRoomsPanel.Controls.Add(this.textBox1);
-            this.AddRoomsPanel.Controls.Add(this.textBox2);
+            this.AddRoomsPanel.Controls.Add(this.RoomNumberTextBox0);
+            this.AddRoomsPanel.Controls.Add(this.BedsCountTextBox0);
             this.AddRoomsPanel.Location = new System.Drawing.Point(72, 339);
             this.AddRoomsPanel.Margin = new System.Windows.Forms.Padding(5, 14, 5, 7);
             this.AddRoomsPanel.Name = "AddRoomsPanel";
@@ -560,23 +557,23 @@
             this.AddRoomsPanel.TabIndex = 54;
             this.AddRoomsPanel.Visible = false;
             // 
-            // textBox1
+            // RoomNumberTextBox0
             // 
-            this.textBox1.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(0, 0);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(5, 45, 5, 5);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(223, 33);
-            this.textBox1.TabIndex = 0;
+            this.RoomNumberTextBox0.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.RoomNumberTextBox0.Location = new System.Drawing.Point(0, 0);
+            this.RoomNumberTextBox0.Margin = new System.Windows.Forms.Padding(5, 45, 5, 5);
+            this.RoomNumberTextBox0.Name = "RoomNumberTextBox0";
+            this.RoomNumberTextBox0.Size = new System.Drawing.Size(223, 33);
+            this.RoomNumberTextBox0.TabIndex = 0;
             // 
-            // textBox2
+            // BedsCountTextBox0
             // 
-            this.textBox2.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox2.Location = new System.Drawing.Point(348, 0);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(20, 45, 5, 5);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(214, 33);
-            this.textBox2.TabIndex = 0;
+            this.BedsCountTextBox0.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.BedsCountTextBox0.Location = new System.Drawing.Point(348, 0);
+            this.BedsCountTextBox0.Margin = new System.Windows.Forms.Padding(20, 45, 5, 5);
+            this.BedsCountTextBox0.Name = "BedsCountTextBox0";
+            this.BedsCountTextBox0.Size = new System.Drawing.Size(214, 33);
+            this.BedsCountTextBox0.TabIndex = 0;
             // 
             // AddLocationLinkLabel
             // 
@@ -587,6 +584,7 @@
             this.AddLocationLinkLabel.TabIndex = 48;
             this.AddLocationLinkLabel.TabStop = true;
             this.AddLocationLinkLabel.Text = "+ добавить ещё локацию";
+            this.AddLocationLinkLabel.VisitedLinkColor = System.Drawing.Color.Blue;
             this.AddLocationLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.AddLocationLinkLabel_LinkClicked);
             // 
             // label9
@@ -606,22 +604,22 @@
             this.LocationsDataGridView.AllowUserToDeleteRows = false;
             this.LocationsDataGridView.AllowUserToResizeColumns = false;
             this.LocationsDataGridView.AllowUserToResizeRows = false;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.LocationsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.LocationsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.LocationsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.LocationsDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.LocationsDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.LocationsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.LocationsDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.LocationsDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(172)))), ((int)(((byte)(218)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(172)))), ((int)(((byte)(218)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.LocationsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(172)))), ((int)(((byte)(218)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(172)))), ((int)(((byte)(218)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.LocationsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.LocationsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.LocationsDataGridView.ColumnHeadersVisible = false;
             this.LocationsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -638,81 +636,32 @@
             this.LocationsDataGridView.Name = "LocationsDataGridView";
             this.LocationsDataGridView.ReadOnly = true;
             this.LocationsDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.LocationsDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.LocationsDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.LocationsDataGridView.RowHeadersVisible = false;
             this.LocationsDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle15.NullValue = null;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Black;
-            this.LocationsDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.NullValue = null;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            this.LocationsDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.LocationsDataGridView.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.LocationsDataGridView.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.LocationsDataGridView.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.LocationsDataGridView.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.LocationsDataGridView.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.LocationsDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.LocationsDataGridView.Size = new System.Drawing.Size(242, 396);
             this.LocationsDataGridView.TabIndex = 47;
-            // 
-            // Num
-            // 
-            this.Num.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Num.Frozen = true;
-            this.Num.HeaderText = "№";
-            this.Num.MaxInputLength = 3;
-            this.Num.Name = "Num";
-            this.Num.ReadOnly = true;
-            this.Num.Width = 5;
-            // 
-            // LocationName
-            // 
-            this.LocationName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.LocationName.DefaultCellStyle = dataGridViewCellStyle13;
-            this.LocationName.Frozen = true;
-            this.LocationName.HeaderText = "Локация";
-            this.LocationName.Name = "LocationName";
-            this.LocationName.ReadOnly = true;
-            this.LocationName.Width = 5;
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "Количество комнат";
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            this.Column9.Visible = false;
-            this.Column9.Width = 5;
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "Количество кроватей";
-            this.Column10.Name = "Column10";
-            this.Column10.ReadOnly = true;
-            this.Column10.Visible = false;
-            this.Column10.Width = 5;
-            // 
-            // Column11
-            // 
-            this.Column11.HeaderText = "Количество карт";
-            this.Column11.Name = "Column11";
-            this.Column11.ReadOnly = true;
-            this.Column11.Visible = false;
-            this.Column11.Width = 5;
-            // 
-            // Column12
-            // 
-            this.Column12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Column12.HeaderText = "Column12";
-            this.Column12.Image = global::Admin_Panel_Hotel.Properties.Resources.closeoutline_110831_4;
-            this.Column12.Name = "Column12";
-            this.Column12.ReadOnly = true;
-            this.Column12.Width = 5;
+            this.LocationsDataGridView.CellMouseMove += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.LocationsDataGridView_CellMouseMove);
             // 
             // CardPropertiesPanel
             // 
@@ -784,7 +733,6 @@
             this.CardPropertiesButton.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.GrayCircle;
             this.CardPropertiesButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CardPropertiesButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CardPropertiesButton.Enabled = false;
             this.CardPropertiesButton.FlatAppearance.BorderSize = 0;
             this.CardPropertiesButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.CardPropertiesButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -830,7 +778,6 @@
             this.AddLocationsButton.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.GrayCircle;
             this.AddLocationsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.AddLocationsButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.AddLocationsButton.Enabled = false;
             this.AddLocationsButton.FlatAppearance.BorderSize = 0;
             this.AddLocationsButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.AddLocationsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -920,7 +867,6 @@
             this.SubDivisionsButton.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.GrayCircle;
             this.SubDivisionsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SubDivisionsButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.SubDivisionsButton.Enabled = false;
             this.SubDivisionsButton.FlatAppearance.BorderSize = 0;
             this.SubDivisionsButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.SubDivisionsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -938,12 +884,14 @@
             // 
             // SubDivisionsPanel
             // 
-            this.SubDivisionsPanel.Controls.Add(this.SubDivisionEmailsPanel);
+            this.SubDivisionsPanel.Controls.Add(this.AddSubDivisionLinkLabel);
+            this.SubDivisionsPanel.Controls.Add(this.SubDivisionEmailNameTextBox0);
+            this.SubDivisionsPanel.Controls.Add(this.SubDivisionEmailTextBox0);
             this.SubDivisionsPanel.Controls.Add(this.label5);
             this.SubDivisionsPanel.Controls.Add(this.label10);
             this.SubDivisionsPanel.Controls.Add(this.SubDivisionsNextButton);
             this.SubDivisionsPanel.Controls.Add(this.SubDivisionNameTextBox);
-            this.SubDivisionsPanel.Controls.Add(this.dataGridView1);
+            this.SubDivisionsPanel.Controls.Add(this.SubDivisionsDataGridView);
             this.SubDivisionsPanel.Location = new System.Drawing.Point(101, 199);
             this.SubDivisionsPanel.Margin = new System.Windows.Forms.Padding(5);
             this.SubDivisionsPanel.Name = "SubDivisionsPanel";
@@ -951,49 +899,25 @@
             this.SubDivisionsPanel.TabIndex = 54;
             this.SubDivisionsPanel.Visible = false;
             // 
-            // SubDivisionEmailsPanel
-            // 
-            this.SubDivisionEmailsPanel.AutoScroll = true;
-            this.SubDivisionEmailsPanel.Controls.Add(this.AddSubDivisionEmailLinkLabel);
-            this.SubDivisionEmailsPanel.Controls.Add(this.SubDivisionEmailNameTextBox0);
-            this.SubDivisionEmailsPanel.Controls.Add(this.SubDivisionEmailTextBox0);
-            this.SubDivisionEmailsPanel.Location = new System.Drawing.Point(72, 139);
-            this.SubDivisionEmailsPanel.Margin = new System.Windows.Forms.Padding(5, 24, 5, 7);
-            this.SubDivisionEmailsPanel.Name = "SubDivisionEmailsPanel";
-            this.SubDivisionEmailsPanel.Size = new System.Drawing.Size(630, 402);
-            this.SubDivisionEmailsPanel.TabIndex = 52;
-            // 
-            // AddSubDivisionEmailLinkLabel
-            // 
-            this.AddSubDivisionEmailLinkLabel.AutoSize = true;
-            this.AddSubDivisionEmailLinkLabel.Location = new System.Drawing.Point(18, 62);
-            this.AddSubDivisionEmailLinkLabel.Margin = new System.Windows.Forms.Padding(140, 24, 3, 0);
-            this.AddSubDivisionEmailLinkLabel.Name = "AddSubDivisionEmailLinkLabel";
-            this.AddSubDivisionEmailLinkLabel.Size = new System.Drawing.Size(317, 25);
-            this.AddSubDivisionEmailLinkLabel.TabIndex = 52;
-            this.AddSubDivisionEmailLinkLabel.TabStop = true;
-            this.AddSubDivisionEmailLinkLabel.Text = "+ добавить электронную почту";
-            this.AddSubDivisionEmailLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.AddSubDivisionEmailLinkLabel_LinkClicked);
-            // 
             // SubDivisionEmailNameTextBox0
             // 
             this.SubDivisionEmailNameTextBox0.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.SubDivisionEmailNameTextBox0.Location = new System.Drawing.Point(0, 0);
-            this.SubDivisionEmailNameTextBox0.Margin = new System.Windows.Forms.Padding(5, 45, 5, 5);
+            this.SubDivisionEmailNameTextBox0.Location = new System.Drawing.Point(72, 139);
+            this.SubDivisionEmailNameTextBox0.Margin = new System.Windows.Forms.Padding(5, 24, 5, 5);
             this.SubDivisionEmailNameTextBox0.Name = "SubDivisionEmailNameTextBox0";
             this.SubDivisionEmailNameTextBox0.Size = new System.Drawing.Size(237, 33);
             this.SubDivisionEmailNameTextBox0.TabIndex = 0;
-            this.SubDivisionEmailNameTextBox0.Leave += new System.EventHandler(this.EmailNameTextBox_Leave);
+            this.SubDivisionEmailNameTextBox0.Leave += new System.EventHandler(this.SubDivisionEmailNameTextBox0_Leave);
             // 
             // SubDivisionEmailTextBox0
             // 
             this.SubDivisionEmailTextBox0.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.SubDivisionEmailTextBox0.Location = new System.Drawing.Point(325, 0);
-            this.SubDivisionEmailTextBox0.Margin = new System.Windows.Forms.Padding(20, 45, 5, 5);
+            this.SubDivisionEmailTextBox0.Location = new System.Drawing.Point(397, 139);
+            this.SubDivisionEmailTextBox0.Margin = new System.Windows.Forms.Padding(20, 24, 5, 5);
             this.SubDivisionEmailTextBox0.Name = "SubDivisionEmailTextBox0";
             this.SubDivisionEmailTextBox0.Size = new System.Drawing.Size(237, 33);
             this.SubDivisionEmailTextBox0.TabIndex = 0;
-            this.SubDivisionEmailTextBox0.Leave += new System.EventHandler(this.EmailTextBox_Leave);
+            this.SubDivisionEmailTextBox0.Leave += new System.EventHandler(this.SubDivisionEmailTextBox0_Leave);
             // 
             // label5
             // 
@@ -1044,78 +968,106 @@
             this.SubDivisionNameTextBox.Size = new System.Drawing.Size(562, 33);
             this.SubDivisionNameTextBox.TabIndex = 29;
             this.SubDivisionNameTextBox.Tag = "";
+            this.SubDivisionNameTextBox.TextChanged += new System.EventHandler(this.SubDivisionNameTextBox_TextChanged);
             // 
-            // dataGridView1
+            // SubDivisionsDataGridView
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToResizeColumns = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
-            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(172)))), ((int)(((byte)(218)))));
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(172)))), ((int)(((byte)(218)))));
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.ColumnHeadersVisible = false;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.SubDivisionsDataGridView.AllowUserToAddRows = false;
+            this.SubDivisionsDataGridView.AllowUserToDeleteRows = false;
+            this.SubDivisionsDataGridView.AllowUserToResizeColumns = false;
+            this.SubDivisionsDataGridView.AllowUserToResizeRows = false;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.SubDivisionsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.SubDivisionsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.SubDivisionsDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.SubDivisionsDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.SubDivisionsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.SubDivisionsDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.SubDivisionsDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(172)))), ((int)(((byte)(218)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(172)))), ((int)(((byte)(218)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.SubDivisionsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.SubDivisionsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.SubDivisionsDataGridView.ColumnHeadersVisible = false;
+            this.SubDivisionsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewLinkColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10,
-            this.dataGridViewTextBoxColumn11,
-            this.dataGridViewTextBoxColumn12});
-            this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.Location = new System.Drawing.Point(696, 88);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(5);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle20.NullValue = null;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle20;
-            this.dataGridView1.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(242, 396);
-            this.dataGridView1.TabIndex = 47;
+            this.EmailName,
+            this.Email,
+            this.Column1});
+            this.SubDivisionsDataGridView.EnableHeadersVisualStyles = false;
+            this.SubDivisionsDataGridView.Location = new System.Drawing.Point(696, 88);
+            this.SubDivisionsDataGridView.Margin = new System.Windows.Forms.Padding(5);
+            this.SubDivisionsDataGridView.MultiSelect = false;
+            this.SubDivisionsDataGridView.Name = "SubDivisionsDataGridView";
+            this.SubDivisionsDataGridView.ReadOnly = true;
+            this.SubDivisionsDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.SubDivisionsDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.SubDivisionsDataGridView.RowHeadersVisible = false;
+            this.SubDivisionsDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.NullValue = null;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black;
+            this.SubDivisionsDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            this.SubDivisionsDataGridView.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.SubDivisionsDataGridView.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.SubDivisionsDataGridView.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SubDivisionsDataGridView.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.SubDivisionsDataGridView.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.SubDivisionsDataGridView.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.SubDivisionsDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.SubDivisionsDataGridView.Size = new System.Drawing.Size(242, 396);
+            this.SubDivisionsDataGridView.TabIndex = 47;
+            this.SubDivisionsDataGridView.CellMouseMove += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.SubDivisionsDataGridView_CellMouseMove);
+            // 
+            // AddSubDivisionLinkLabel
+            // 
+            this.AddSubDivisionLinkLabel.AutoSize = true;
+            this.AddSubDivisionLinkLabel.Location = new System.Drawing.Point(67, 545);
+            this.AddSubDivisionLinkLabel.Name = "AddSubDivisionLinkLabel";
+            this.AddSubDivisionLinkLabel.Size = new System.Drawing.Size(166, 25);
+            this.AddSubDivisionLinkLabel.TabIndex = 48;
+            this.AddSubDivisionLinkLabel.TabStop = true;
+            this.AddSubDivisionLinkLabel.Text = "+ добавить ещё";
+            this.AddSubDivisionLinkLabel.VisitedLinkColor = System.Drawing.Color.Blue;
+            this.AddSubDivisionLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.AddSubDivisionLinkLabel_LinkClicked);
+            // 
+            // SubDivisionNameErrorProvider
+            // 
+            this.SubDivisionNameErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.SubDivisionNameErrorProvider.ContainerControl = this;
+            this.SubDivisionNameErrorProvider.Icon = ((System.Drawing.Icon)(resources.GetObject("SubDivisionNameErrorProvider.Icon")));
+            // 
+            // SubDivisionEmailNameErrorProvider
+            // 
+            this.SubDivisionEmailNameErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.SubDivisionEmailNameErrorProvider.ContainerControl = this;
+            this.SubDivisionEmailNameErrorProvider.Icon = ((System.Drawing.Icon)(resources.GetObject("SubDivisionEmailNameErrorProvider.Icon")));
+            // 
+            // SubDivisionEmailErrorProvider
+            // 
+            this.SubDivisionEmailErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.SubDivisionEmailErrorProvider.ContainerControl = this;
+            this.SubDivisionEmailErrorProvider.Icon = ((System.Drawing.Icon)(resources.GetObject("SubDivisionEmailErrorProvider.Icon")));
             // 
             // dataGridViewTextBoxColumn1
             // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn1.Frozen = true;
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.dataGridViewTextBoxColumn1.HeaderText = "№";
             this.dataGridViewTextBoxColumn1.MaxInputLength = 3;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
@@ -1124,102 +1076,89 @@
             // 
             // dataGridViewLinkColumn1
             // 
-            this.dataGridViewLinkColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.dataGridViewLinkColumn1.DefaultCellStyle = dataGridViewCellStyle18;
-            this.dataGridViewLinkColumn1.Frozen = true;
-            this.dataGridViewLinkColumn1.HeaderText = "Локация";
+            this.dataGridViewLinkColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.dataGridViewLinkColumn1.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dataGridViewLinkColumn1.HeaderText = "Название организации";
             this.dataGridViewLinkColumn1.Name = "dataGridViewLinkColumn1";
             this.dataGridViewLinkColumn1.ReadOnly = true;
-            this.dataGridViewLinkColumn1.Width = 5;
+            this.dataGridViewLinkColumn1.VisitedLinkColor = System.Drawing.Color.Blue;
             // 
-            // dataGridViewTextBoxColumn2
+            // EmailName
             // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Регион";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Visible = false;
-            this.dataGridViewTextBoxColumn2.Width = 5;
+            this.EmailName.HeaderText = "EmailName";
+            this.EmailName.Name = "EmailName";
+            this.EmailName.ReadOnly = true;
+            this.EmailName.Visible = false;
+            this.EmailName.Width = 5;
             // 
-            // dataGridViewTextBoxColumn3
+            // Email
             // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Область";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Visible = false;
-            this.dataGridViewTextBoxColumn3.Width = 5;
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
+            this.Email.Visible = false;
+            this.Email.Width = 5;
             // 
-            // dataGridViewTextBoxColumn4
+            // Column1
             // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "Город";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Visible = false;
-            this.dataGridViewTextBoxColumn4.Width = 5;
+            this.Column1.HeaderText = "Column1";
+            this.Column1.Image = global::Admin_Panel_Hotel.Properties.Resources.closeoutline_110831_4;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 5;
             // 
-            // dataGridViewTextBoxColumn5
+            // Num
             // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "Тип улицы";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            this.dataGridViewTextBoxColumn5.Visible = false;
-            this.dataGridViewTextBoxColumn5.Width = 5;
+            this.Num.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Num.HeaderText = "№";
+            this.Num.MaxInputLength = 3;
+            this.Num.Name = "Num";
+            this.Num.ReadOnly = true;
+            this.Num.Width = 5;
             // 
-            // dataGridViewTextBoxColumn6
+            // LocationName
             // 
-            this.dataGridViewTextBoxColumn6.HeaderText = "Улица";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            this.dataGridViewTextBoxColumn6.Visible = false;
-            this.dataGridViewTextBoxColumn6.Width = 5;
+            this.LocationName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.LocationName.DefaultCellStyle = dataGridViewCellStyle3;
+            this.LocationName.HeaderText = "Локация";
+            this.LocationName.Name = "LocationName";
+            this.LocationName.ReadOnly = true;
+            this.LocationName.VisitedLinkColor = System.Drawing.Color.Blue;
             // 
-            // dataGridViewTextBoxColumn7
+            // Column9
             // 
-            this.dataGridViewTextBoxColumn7.HeaderText = "Дом";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            this.dataGridViewTextBoxColumn7.Visible = false;
-            this.dataGridViewTextBoxColumn7.Width = 5;
+            this.Column9.HeaderText = "Количество комнат";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            this.Column9.Visible = false;
+            this.Column9.Width = 5;
             // 
-            // dataGridViewTextBoxColumn8
+            // Column10
             // 
-            this.dataGridViewTextBoxColumn8.HeaderText = "Корпус";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            this.dataGridViewTextBoxColumn8.Visible = false;
-            this.dataGridViewTextBoxColumn8.Width = 5;
+            this.Column10.HeaderText = "Количество кроватей";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            this.Column10.Visible = false;
+            this.Column10.Width = 5;
             // 
-            // dataGridViewTextBoxColumn9
+            // Column11
             // 
-            this.dataGridViewTextBoxColumn9.HeaderText = "Строение";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            this.dataGridViewTextBoxColumn9.Visible = false;
-            this.dataGridViewTextBoxColumn9.Width = 5;
+            this.Column11.HeaderText = "Количество карт";
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
+            this.Column11.Visible = false;
+            this.Column11.Width = 5;
             // 
-            // dataGridViewTextBoxColumn10
+            // Column12
             // 
-            this.dataGridViewTextBoxColumn10.HeaderText = "Количество комнат";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.ReadOnly = true;
-            this.dataGridViewTextBoxColumn10.Visible = false;
-            this.dataGridViewTextBoxColumn10.Width = 5;
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.HeaderText = "Количество кроватей";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.ReadOnly = true;
-            this.dataGridViewTextBoxColumn11.Visible = false;
-            this.dataGridViewTextBoxColumn11.Width = 5;
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.HeaderText = "Количество карт";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            this.dataGridViewTextBoxColumn12.ReadOnly = true;
-            this.dataGridViewTextBoxColumn12.Visible = false;
-            this.dataGridViewTextBoxColumn12.Width = 5;
+            this.Column12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Column12.HeaderText = "Column12";
+            this.Column12.Image = global::Admin_Panel_Hotel.Properties.Resources.closeoutline_110831_4;
+            this.Column12.Name = "Column12";
+            this.Column12.ReadOnly = true;
+            this.Column12.Width = 5;
             // 
             // AddCustomer
             // 
@@ -1265,9 +1204,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.BedsCountErrorProvider)).EndInit();
             this.SubDivisionsPanel.ResumeLayout(false);
             this.SubDivisionsPanel.PerformLayout();
-            this.SubDivisionEmailsPanel.ResumeLayout(false);
-            this.SubDivisionEmailsPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SubDivisionsDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SubDivisionNameErrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SubDivisionEmailNameErrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SubDivisionEmailErrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1329,34 +1269,28 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button SubDivisionsNextButton;
         private System.Windows.Forms.TextBox SubDivisionNameTextBox;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewLinkColumn dataGridViewLinkColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridView SubDivisionsDataGridView;
+        private System.Windows.Forms.Panel AddRoomsPanel;
+        private System.Windows.Forms.TextBox RoomNumberTextBox0;
+        private System.Windows.Forms.TextBox BedsCountTextBox0;
+        private System.Windows.Forms.LinkLabel AddLocationLinkLabel;
+        private System.Windows.Forms.Label AddRoomsLabel;
+        private System.Windows.Forms.TextBox SubDivisionEmailNameTextBox0;
+        private System.Windows.Forms.TextBox SubDivisionEmailTextBox0;
+        private System.Windows.Forms.LinkLabel AddSubDivisionLinkLabel;
+        private System.Windows.Forms.ErrorProvider SubDivisionNameErrorProvider;
+        private System.Windows.Forms.ErrorProvider SubDivisionEmailNameErrorProvider;
+        private System.Windows.Forms.ErrorProvider SubDivisionEmailErrorProvider;
         private System.Windows.Forms.DataGridViewTextBoxColumn Num;
         private System.Windows.Forms.DataGridViewLinkColumn LocationName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.DataGridViewImageColumn Column12;
-        private System.Windows.Forms.Panel AddRoomsPanel;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.LinkLabel AddLocationLinkLabel;
-        private System.Windows.Forms.Label AddRoomsLabel;
-        private System.Windows.Forms.Panel SubDivisionEmailsPanel;
-        private System.Windows.Forms.LinkLabel AddSubDivisionEmailLinkLabel;
-        private System.Windows.Forms.TextBox SubDivisionEmailNameTextBox0;
-        private System.Windows.Forms.TextBox SubDivisionEmailTextBox0;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewLinkColumn dataGridViewLinkColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EmailName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
+        private System.Windows.Forms.DataGridViewImageColumn Column1;
     }
 }

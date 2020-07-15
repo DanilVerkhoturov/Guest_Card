@@ -22,8 +22,9 @@ namespace Admin_Panel_Hotel
             Functions.SetPlaceholderTextBox(LocationNameTextBox, "Название локации");
             Functions.SetPlaceholderTextBox(RoomCountTextBox, "Количество комнат");
             Functions.SetPlaceholderTextBox(BedsCountTextBox, "Количество мест");
-            Functions.SetPlaceholderTextBox(EmailNameTextBox0, "Имя электронной почты");
+            Functions.SetPlaceholderTextBox(EmailNameTextBox0, "Имя заказчика");
             Functions.SetPlaceholderTextBox(EmailTextBox0, "Электронная почта заказчика");
+            Functions.SetPlaceholderTextBox(SubDivisionNameTextBox, "Наименование организации");
             Functions.SetPlaceholderTextBox(SubDivisionEmailNameTextBox0, "Имя заказчика");
             Functions.SetPlaceholderTextBox(SubDivisionEmailTextBox0, "Электронная почта");
 
@@ -55,10 +56,12 @@ namespace Admin_Panel_Hotel
             EmailNamesErrorProvider.SetIconPadding(EmailNameTextBox0, 10);
             EmailsErrorProvider.SetError(EmailTextBox0, "* - обязательное поле");
             EmailsErrorProvider.SetIconPadding(EmailTextBox0, 10);
-            EmailNamesErrorProvider.SetError(SubDivisionEmailNameTextBox0, "* - обязательное поле");
-            EmailNamesErrorProvider.SetIconPadding(SubDivisionEmailNameTextBox0, 10);
-            EmailsErrorProvider.SetError(SubDivisionEmailTextBox0, "* - обязательное поле");
-            EmailsErrorProvider.SetIconPadding(SubDivisionEmailTextBox0, 10);
+            SubDivisionNameErrorProvider.SetError(SubDivisionNameTextBox, "* - обязательное поле");
+            SubDivisionNameErrorProvider.SetIconPadding(SubDivisionNameTextBox, 10);
+            SubDivisionEmailNameErrorProvider.SetError(SubDivisionEmailNameTextBox0, "* - обязательное поле");
+            SubDivisionEmailNameErrorProvider.SetIconPadding(SubDivisionEmailNameTextBox0, 10);
+            SubDivisionEmailErrorProvider.SetError(SubDivisionEmailTextBox0, "* - обязательное поле");
+            SubDivisionEmailErrorProvider.SetIconPadding(SubDivisionEmailTextBox0, 10);
         }
 
         #region Данные заказчика
@@ -236,14 +239,16 @@ namespace Admin_Panel_Hotel
 
         #region Данные подрядных организаций заказчика
 
-        private void AddSubDivisionEmailLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            AddEmailsFields(SubDivisionEmailsPanel, AddSubDivisionEmailLinkLabel);
-        }
-
         private void SubDivisionsNextButton_Click(object sender, EventArgs e)
         {
-            OpenAddCustomerLocationPanel();
+            if (SubDivisionsDataGridView.Rows.Count > 0)
+            {
+                OpenAddCustomerLocationPanel();
+            }
+            else
+            {
+                MessageBox.Show("Вы должны добавить хотя бы одну подрядную организацию!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void SubDivisionsButton_Click(object sender, EventArgs e)
@@ -272,6 +277,82 @@ namespace Admin_Panel_Hotel
 
             CardPropertiesButton.BackgroundImage = Properties.Resources.GrayCircle;
             CardPropertiesButton.ForeColor = Color.Black;
+        }
+
+        private void AddSubDivisionLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (SubDivisionNameTextBox.TextLength > 0 && SubDivisionNameTextBox.Text != SubDivisionNameTextBox.Tag.ToString()
+                && SubDivisionEmailNameTextBox0.TextLength > 0 && SubDivisionEmailNameTextBox0.Text != SubDivisionEmailNameTextBox0.Tag.ToString()
+                && SubDivisionEmailTextBox0.TextLength > 0 && SubDivisionEmailTextBox0.Text != SubDivisionEmailTextBox0.Tag.ToString()
+                && RegexUtilities.IsValidEmail(SubDivisionEmailTextBox0.Text.Trim())) // Если заполнены все обязательные поля и эл.почта введена корректно.
+            {
+                SubDivisionsDataGridView.Rows.Add(SubDivisionsDataGridView.Rows.Count + 1
+                    , SubDivisionNameTextBox.Text.Trim()
+                    , SubDivisionEmailNameTextBox0.Text.Trim()
+                    , SubDivisionEmailTextBox0.Text.Trim()
+                    , null);
+
+                SubDivisionNameTextBox.Text = SubDivisionNameTextBox.Tag.ToString();
+                SubDivisionNameTextBox.ForeColor = Color.Silver;
+
+                SubDivisionEmailNameTextBox0.Text = SubDivisionEmailNameTextBox0.Tag.ToString();
+                SubDivisionEmailNameTextBox0.ForeColor = Color.Silver;
+                SubDivisionEmailNameErrorProvider.Icon = Properties.Resources.exclamation_mark;
+
+                SubDivisionEmailTextBox0.Text = SubDivisionEmailTextBox0.Tag.ToString();
+                SubDivisionEmailTextBox0.ForeColor = Color.Silver;
+                SubDivisionEmailErrorProvider.Icon = Properties.Resources.exclamation_mark;
+            }
+        }
+
+        private void SubDivisionNameTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (SubDivisionNameTextBox.TextLength > 0 && SubDivisionNameTextBox.Text != SubDivisionNameTextBox.Tag.ToString())
+            {
+                SubDivisionNameErrorProvider.Icon = Properties.Resources.check_mark;
+            }
+            else
+            {
+                SubDivisionNameErrorProvider.Icon = Properties.Resources.exclamation_mark;
+            }
+        }
+
+        private void SubDivisionEmailNameTextBox0_Leave(object sender, EventArgs e)
+        {
+            if (SubDivisionEmailNameTextBox0.Text.Trim().Length > 0 && SubDivisionEmailNameTextBox0.Text != SubDivisionEmailNameTextBox0.Tag.ToString()) // Если введёно имя эл.почты.
+            {
+                SubDivisionEmailNameErrorProvider.Icon = Properties.Resources.check_mark;
+            }
+            else
+            {
+                SubDivisionEmailNameErrorProvider.Icon = Properties.Resources.exclamation_mark;
+            }
+        }
+
+        private void SubDivisionEmailTextBox0_Leave(object sender, EventArgs e)
+        {
+            if (SubDivisionEmailTextBox0.TextLength > 0 && SubDivisionEmailTextBox0.Text != SubDivisionEmailTextBox0.Tag.ToString() && RegexUtilities.IsValidEmail(SubDivisionEmailTextBox0.Text.Trim()))
+            {
+                SubDivisionEmailErrorProvider.Icon = Properties.Resources.check_mark;
+            }
+            else if (SubDivisionEmailTextBox0.TextLength > 0 && SubDivisionEmailTextBox0.Text != SubDivisionEmailTextBox0.Tag.ToString())
+            {
+                MessageBox.Show($"Электронная почта \"{SubDivisionEmailTextBox0.Text}\" введена некорректно!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                SubDivisionEmailErrorProvider.Icon = Properties.Resources.exclamation_mark;
+                SubDivisionEmailTextBox0.Focus();
+            }
+        }
+
+        private void SubDivisionsDataGridView_CellMouseMove(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.ColumnIndex == 1 || e.ColumnIndex == 4)
+            {
+                SubDivisionsDataGridView.Cursor = Cursors.Hand;
+            }
+            else
+            {
+                SubDivisionsDataGridView.Cursor = Cursors.Default;
+            }
         }
 
         #endregion
@@ -404,8 +485,22 @@ namespace Admin_Panel_Hotel
             // TODO: Сделать проверку на заполнение всех обязательных полей локации.
             if (true)
             {
+                // TODO: Сделать создание новых полей для комнат, по количеству комнат.
+
                 AddRoomsLabel.Visible = true;
                 AddRoomsPanel.Visible = true;
+            }
+        }
+
+        private void LocationsDataGridView_CellMouseMove(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.ColumnIndex == 1 || e.ColumnIndex == 5)
+            {
+                LocationsDataGridView.Cursor = Cursors.Hand;
+            }
+            else
+            {
+                LocationsDataGridView.Cursor = Cursors.Default;
             }
         }
 
@@ -612,7 +707,9 @@ namespace Admin_Panel_Hotel
                 && ContractNumberTextBox.TextLength > 0 && ContractNumberTextBox.Text != "Номер договора"
                 && LocationNameTextBox.TextLength > 0 && LocationNameTextBox.Text != "Локация"
                 && lastEmailNameTextBox.TextLength > 0 && lastEmailNameTextBox.Text.Trim() != lastEmailNameTextBox.Tag.ToString()
-                && RegexUtilities.IsValidEmail(lastEmailTextBox.Text.Trim())) // Если все обязательные поля заполнены корректно.
+                && RegexUtilities.IsValidEmail(lastEmailTextBox.Text.Trim())
+                && SubDivisionsDataGridView.Rows.Count > 0
+                && LocationsDataGridView.Rows.Count > 0) // Если все обязательные поля заполнены корректно.
             {
                 return true;
             }

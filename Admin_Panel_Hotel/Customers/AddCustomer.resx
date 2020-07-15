@@ -117,6 +117,117 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="AddCustomerButton.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Set2_Customer_CheckBox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Set1_Customer_CheckBox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="FireSafety_Customer_CheckBox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="ResidenceRules_Customer_CheckBox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Instructed_Customer_CheckBox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="GiveOutLinen_Customer_CheckBox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="AllProperties_Customer_CheckBox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="label2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="ContractNumberTextBox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="NameTextBox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="label1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="label3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="FromContractTimeDateTimePicker.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="ToContractTimeDateTimePicker.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="EmailTextBox0.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="EmailNameTextBox0.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="CustomerInfoNextButton.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="BedsCountTextBox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="RoomCountTextBox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="AddLocationNextButton.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="CardCountTextBox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="label7.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="label6.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="LocationNameTextBox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="CustomerInfoPanel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="EmailsPanel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="AddEmailLinkLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="label8.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="AddCustomerLocationPanel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="AddRoomsLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="AddRoomsPanel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="RoomNumberTextBox0.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="BedsCountTextBox0.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="AddLocationLinkLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="label9.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="LocationsDataGridView.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="Num.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -133,6 +244,24 @@
     <value>True</value>
   </metadata>
   <metadata name="Column12.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="CardPropertiesPanel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="label4.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Set2HelpButton.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Set1HelpButton.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="CardPropertiesButton.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="CustomerInfoButton.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
@@ -310,11 +439,50 @@
         BRjKAAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="AddLocationsButton.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="pictureBox3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="EmailNamesErrorProvider.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>140, 17</value>
   </metadata>
+  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>25</value>
+  </metadata>
+  <metadata name="SubDivisionsButton.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="SubDivisionsPanel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="AddSubDivisionLinkLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="SubDivisionEmailNameTextBox0.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="SubDivisionEmailTextBox0.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="label5.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="label10.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="SubDivisionsNextButton.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="SubDivisionNameTextBox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="SubDivisionsDataGridView.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
   <metadata name="dataGridViewTextBoxColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -322,37 +490,13 @@
   <metadata name="dataGridViewLinkColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="dataGridViewTextBoxColumn2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="EmailName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="dataGridViewTextBoxColumn3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="Email.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="dataGridViewTextBoxColumn4.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dataGridViewTextBoxColumn5.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dataGridViewTextBoxColumn6.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dataGridViewTextBoxColumn7.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dataGridViewTextBoxColumn8.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dataGridViewTextBoxColumn9.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dataGridViewTextBoxColumn10.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dataGridViewTextBoxColumn11.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dataGridViewTextBoxColumn12.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="Column1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="EmailNamesErrorProvider.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -1076,6 +1220,276 @@
     <value>17, 95</value>
   </metadata>
   <data name="BedsCountErrorProvider.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAIiIAAAEAIABIEwAAFgAAACgAAAAiAAAARAAAAAEAIAAAAAAAEBIAABMLAAATCwAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEdH1BI6OvRgHRvxnwcI
+        9sAKC/fgBwf44wYG+OIFBfXfFBT4zwsL7JEoKO1TEBDPEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHSTwIw0O
+        7aAUFPj/CAj+/wgI9/8ICOH/Dg7M/yYm0v8iI87/DQ7H/wEC1v8AAfD/AAD8/wMD+fEjI/iwRUXbPwAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAYGM8gEhP1nwwN+v8ODvj/Kivb/3h41/+8vOL/7e30//v7/P/8/P3//Pz8//r6/P/n5+7/ubrW/3p5
+        y/8TE7b/AAHs/wEC+f8XF/GyWFjnIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAA/P+NRERH94RIS+/8yMtn/qKna//v7/f/+/v7//Pz+/9PT9f+5ufn/paX0/6Ki
+        9f+wsPX/1tX2//v7/v/+/v7//Pz9/7a32/8vL8D/AADw/w4O/O9LS+9fAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAkIuN/EhL6/xgX6/+MjOD/+vv+//7+/v/V1vj/bm7v/zMz
+        9P8bGvz/GRj+/xcW/f8VFf3/EhL9/xER/P8eHvP/amv2/8jI9f/9/f7/+/z9/3p6uf8EBdH/AgL5/yIi
+        6X8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAfH+tyFhf9/zk59v/R0ff//v7+/+Hh
+        +f9jY/H/IyT6/yIi/v8gIf7/IB/+/x4e/v8dHP7/Gxr9/xcX/v8VFf7/EhL9/w8P/v8NDv3/SEju/9ra
+        +v/+/v7/xcXe/x0czf8BAfv/FBThfwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABYWO9gGBj5/zw7
+        9//X1/T//f7+/6Oj4v83N/b/KSr+/ygp/f8nKP7/Jif+/yQl/f87OvX/gYHf/4aH0v9HSNT/GRn3/xcX
+        /f8UFP3/ERH9/w0O/v8VFfn/oqP2//39/v/Q0OD/HR3P/wIC+f81NeNRAAAAAAAAAAAAAAAAAAAAAAAA
+        AABoaO8gJiX97ygp9P/P0Pf//v7+/5SU4/8vL/b/Ly/9/y8v/f8uL/7/LS3+/yws/v83N/T/3dzz////
+        ////////9fX4/1dXzv8dHP3/GRn+/xYW/f8SEv3/Dw/+/wwM+v+EhPD//v7+/87O5/8BAc//BAT94RAQ
+        xyAAAAAAAAAAAAAAAAAAAAAALy/ysiUl/P+Rken//v7+/7Cw6f81NfT/Njb+/zY1/v81Nf7/NDT9/zM0
+        /v8yMv7/fHzy//////////////////////+1tdf/ICD2/x4e/v8bGv7/Fhf+/xMT/v8PD/7/DA36/5iY
+        7v/+/v7/f4C9/wEA8P8KCvSfAAAAAAAAAAAAAAAAODjWMiEh+v9XV/P/+/z+/+Li9P9AQO3/Ozv+/zs7
+        /f88O/7/Ozr9/zo6/v85Of3/ODf+/4KC8v//////////////////////s7PT/yUl9v8hIv7/Hx/+/xwb
+        /v8YF/7/FBP+/w8P/f8aG/r/2tr5//v7/f8iIrX/AgL5/xYW8CMAAAAAAAAAAD5A+LAuL/z/w8T5//3+
+        /v9kZdT/P0D+/0BB/v9AQf7/QEH+/0BB/v8/QP7/Pj7+/z09/v9PT/r/5eTz/////////////Pz9/25u
+        4P8qK/7/Jif+/yMj/v8fH/7/HBv9/xcX/v8TE/7/Dg7+/1BQ+P/9/f7/pKTJ/wEB6/8GCO+gAAAAADAw
+        zxAsLPrwSEjt//39/v/Oz+b/QkPz/0VG/f9GRv7/Rkb+/0ZG/v9FRv3/REX9/0NE/v9CQv7/QEH+/1NU
+        8v+qqfL/t7fy/3Z17/8yMvr/Ly/+/ysr//8nKP3/IyP+/x8f/f8bG/7/Fxf+/xIS/f8OD/z/z8/6//r7
+        /P8eHsP/BQb48zk5xhJKSu1TNTb9/52e+P/+/v7/iInd/0pK/v9LS/7/TEz+/0xM/v9MTP7/S0z+/0pL
+        /v9JSv7/R0j+/0VG/v9LTPX/b2/b/25u3P9OTtP/Nzj+/zQz/v8vL/7/Kyz+/ycn/v8jI/7/Hx/+/xoa
+        /f8VFv7/ERH+/2Ji8//+/v7/dHTG/wAA/P84OPdfOTnvkEJC/f/MzPb//fz9/01N1P9QUP7/UVH+/1JS
+        /v9SUv7/UlL+/1FR/v9RUf3/T0/9/05N/v9LS/7/a2vx//z8/P//////l5fL/zw8/f84OP3/NDT9/zAw
+        /f8rK///Jif+/yIi/v8eHf7/GRn+/xMU/f8oJ/b/+vr+/7u82f8BAu//GBjxn0ZG+M9MTPr/7u76/9ra
+        5v9QUe3/VVX+/1ZX/v9XV/7/V1f+/1dY/v9XV/7/Vlb9/1VV/f9TU/3/UFD+/4GB9f/+/v7//////6Wm
+        0/9AQPz/PDz+/zg4/v80M/3/Ly/+/yoq/v8lJv7/ISH+/xwc/f8XF/7/EhL8/9HR9//u7vP/AwPY/wUF
+        9sA9PfXgWlrz//v8/f+6utb/YWH4/1tc/v9cXP7/XV3+/11d/v9dXf7/XV3+/1tc/v9ZWv7/V1j9/1VW
+        /f+Li+///v7+//////+5udv/QkP5/0BA/v88PP3/Nzf+/zMy/v8tLf3/KCn+/yMk/f8fH/7/Ghr9/xUV
+        /f+3t/n/+/v9/wwNxf8KCvjfQkH44Wtr9//9/f3/srPU/2pp+/9qa/7/Y2T+/2Nj/v9jY/7/Y2P+/2Jj
+        /v9hYf7/X1/+/1xd/v9ZWv3/nJzx////////////v7/U/0VG8/9DRP7/Pz/+/zs6/v82Nv7/MTH+/yws
+        /v8mJ/7/ISH+/xwd/v8XF/7/pKTz//39/f8nJ9L/Bwj340VF+OFvb/f//f3+/7S00/9ub/v/cXL+/3Jz
+        /v9tbf3/aWn+/2lp/v9oaP7/Z2f+/2Vl/v9iYv7/X1/+/7Cw7////////////+fn7v9FRuT/Rkj//0JD
+        /v89Pf7/OTn+/zQ0/f8vL/3/KSr+/yMj/v8fH/7/Ghr9/6Kj8//8/P3/KCjS/wkI+OJNTfrfZ2f0//v7
+        /f/ExNr/cXH2/3d3/v94ef3/env+/3d4/v9wcP7/bm79/2xs/f9qav7/Z2f+/2Rk/f/Ky/D/////////
+        ///09PX/SkvV/0tL/v9GRv7/QEH+/zs7/v83N///MTH+/yss/v8mJv7/ISH+/xwc/f+xsvT//Pz9/xUV
+        z/8JCfXfTU34v2Nj+//w8fv/1NTd/25u4/99ff7/f3/+/4GB/v+Bgf7/gYH+/3t7/v9zdP7/b2/+/2xs
+        /v9pafr/5ubz/////////////Pz8/2Fh0v9OTf3/SEn9/0ND/v8+Pv7/OTn+/zM0/v8uLv7/KCn9/yUm
+        /v8iI/v/2Nj1/+nq8/8MDeH/GRn2z11f9Z9gYP3/1dX5//v7/P91dc7/goP+/4WF/v+Ghv7/iIj9/4iH
+        /f+Ghv3/g4P9/31+/f92d/7/dXX3//f3+f////////////7+/v94ec7/UFD+/0tL/v9FRf3/QEH+/zs7
+        /f84OP7/NTT+/zAx/v8qK/3/MzPw//38/v++vuD/Dg73/xAQ7JBfX/RGW1z+/6+w9v/+/v7/i4y9/4eH
+        /f+Jiv7/jIz+/42N/v+Njf7/i4v+/4mJ/f+Fhv7/goL9/4yM7//9/f3/////////////////k5PM/1hY
+        /f9TU/7/Tk79/0lK/f9FRv7/QED+/zo6/v8zNP3/LS3+/3t88//+/v7/hobh/wsM/f8rK+1TeHjhEVpb
+        +vKGhvj/+/v9/9rZ4/98feL/jo/+/5GR/v+Sk/3/kpP+/5CR/v+Njv7/ior9/4aG/f+lpfP/////////
+        /////////////7m61/9eX/r/WVr+/1RU/v9OTf7/R0f9/0FB/v88O/3/NTX+/y4v+v/OzvH//f3+/yUl
+        0v8ODvrwEBDPEAAAAABdXfSfbm79/87O9f/+/v7/jI3A/5OT/f+Xl/7/mJj+/5eX/v+Vlv7/kpL+/42O
+        /v+Jif7/s7Px///////////////////////FxdT/XFzx/1pb/v9VVv7/T0/9/0hI/v9CQ///PDv+/zY2
+        /f9fYOf//f39/7+/7f8VFvn/Kyv5sAAAAAAAAAAAZGT3IWRl/P+Skvf/+fr9/97e5P+EhNP/m5v+/56e
+        /v+dnf3/mpr+/5WV/v+QkP7/i4v+/7Ky8f//////////////////////ysrc/19g9P9aXP7/Vlb9/1BQ
+        /v9KSf7/Q0P+/zw8/v8/P/T/4OH4//z8/v9ISOT/ERH5/ykp0TIAAAAAAAAAAAAAAABoavmfdXX9/8LC
+        9//+/v7/q6q8/4yM3v+io/7/oaH+/52c/v+Xl/3/kpL+/4yN/v+Tkvj/7e70/////////////f39/5OU
+        3v9jZP3/XFz+/1ZW/v9RUP7/Skv+/0ND/v88PPb/sbHt//7+/v+Mi97/GRr7/yQl8rIAAAAAAAAAAAAA
+        AAAAAAAAcHDfIGlp/eCCg/n/4uH7//7+/v+hobf/jo7d/6Ki/v+dnf7/l5f9/5GS/v+Mjf7/h4b+/5WW
+        8//LyvD/09Tx/5mZ5f9nZ/f/Y2P+/1tc/v9WVv7/UVD+/0pK/v9CQ/X/mZni//3+/v/S0vX/JSXv/yAg
+        /O9gYOcgAAAAAAAAAAAAAAAAAAAAAAAAAACDg+lQb2/8/5eX/v/n5/n//f39/7m5yv+EhMz/mpv9/5aW
+        /v+Qkf7/i4v+/4aG/v+AgP7/eXr9/3N0/f9ub/3/aWn+/2Ji/v9cXP7/Vlb+/1BQ/v9TU/H/p6fe//7+
+        /v/c3Pb/QkL1/xoa+f9ZVvRfAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHV17YBzc/3/lpb9/+Lj
+        +v/9/v7/4N/m/3+Arv+DhOL/jo79/4mJ/f+EhP7/fn7+/3h4/v9yc/7/bW39/2ho/v9hYf7/Wlv//1NT
+        8v95eeL/4eHy//7+/v/Y2Pr/SUn4/yAf/f80NOmAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAc3HvcXJy/P+Jifv/wsP2//v7/f/8/P3/y83V/5iYxf9tbsH/dHXj/3l59v91dfv/b3H7/2lq
+        +P9gYO3/Zmbe/4WF1f/a2e///f3+//v7/v+fn+3/MTHx/yIi+v8sLOOAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4ePNCbm794Xl6/f+cnPr/2Nj7//z8/v/9/v7/+/v8/9jZ
+        4f+5uc7/sbLQ/7Oz0//DxN3/1dTi//v7/f/+/v7//f3+/76+7v9ZWuz/MTH9/yUl/OFISONRAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAH9/8RJubvejaWn7/3Z2
+        /f+Hh/b/ubn6/9fX+f/x8fv//Pz+//39/v/9/f7//f39//Hx+v/R0ff/np/0/19g8/87PP3/LS77/y8v
+        9Z8wMM8gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAHh44DFnZ/qVYGD872Fi/f9oaP3/aWr7/29v9v92dvj/c3P3/2Bg8/9TU/v/SUn9/z0+
+        /v82N/nyMTHxoDw88CIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGBgzxBra/JRW1vyj1hZ+MNRUPffTEz64UhI
+        +OJISPjgQED3v0tL9J9WVvZTaWnhEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAA/+AB/8AAAAD/gAB/wAAAAP4AAB/AAAAA/AAAD8AAAAD4AAAHwAAAAPAAAAPAAAAA4AAAAcAA
+        AADAAAAAwAAAAMAAAADAAAAAgAAAAEAAAACAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAIAAAABAAAAAgAAAAEAAAADAAAAAwAAAAMAAAADAAAAA4AAAAcAAAADwAAADwAAAAPgA
+        AAfAAAAA/AAAD8AAAAD+AAAfwAAAAP+AAH/AAAAA/+AB/8AAAAA=
+</value>
+  </data>
+  <metadata name="SubDivisionNameErrorProvider.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>634, 95</value>
+  </metadata>
+  <data name="SubDivisionNameErrorProvider.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAIiIAAAEAIABIEwAAFgAAACgAAAAiAAAARAAAAAEAIAAAAAAAEBIAABMLAAATCwAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEdH1BI6OvRgHRvxnwcI
+        9sAKC/fgBwf44wYG+OIFBfXfFBT4zwsL7JEoKO1TEBDPEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHSTwIw0O
+        7aAUFPj/CAj+/wgI9/8ICOH/Dg7M/yYm0v8iI87/DQ7H/wEC1v8AAfD/AAD8/wMD+fEjI/iwRUXbPwAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAYGM8gEhP1nwwN+v8ODvj/Kivb/3h41/+8vOL/7e30//v7/P/8/P3//Pz8//r6/P/n5+7/ubrW/3p5
+        y/8TE7b/AAHs/wEC+f8XF/GyWFjnIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAA/P+NRERH94RIS+/8yMtn/qKna//v7/f/+/v7//Pz+/9PT9f+5ufn/paX0/6Ki
+        9f+wsPX/1tX2//v7/v/+/v7//Pz9/7a32/8vL8D/AADw/w4O/O9LS+9fAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAkIuN/EhL6/xgX6/+MjOD/+vv+//7+/v/V1vj/bm7v/zMz
+        9P8bGvz/GRj+/xcW/f8VFf3/EhL9/xER/P8eHvP/amv2/8jI9f/9/f7/+/z9/3p6uf8EBdH/AgL5/yIi
+        6X8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAfH+tyFhf9/zk59v/R0ff//v7+/+Hh
+        +f9jY/H/IyT6/yIi/v8gIf7/IB/+/x4e/v8dHP7/Gxr9/xcX/v8VFf7/EhL9/w8P/v8NDv3/SEju/9ra
+        +v/+/v7/xcXe/x0czf8BAfv/FBThfwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABYWO9gGBj5/zw7
+        9//X1/T//f7+/6Oj4v83N/b/KSr+/ygp/f8nKP7/Jif+/yQl/f87OvX/gYHf/4aH0v9HSNT/GRn3/xcX
+        /f8UFP3/ERH9/w0O/v8VFfn/oqP2//39/v/Q0OD/HR3P/wIC+f81NeNRAAAAAAAAAAAAAAAAAAAAAAAA
+        AABoaO8gJiX97ygp9P/P0Pf//v7+/5SU4/8vL/b/Ly/9/y8v/f8uL/7/LS3+/yws/v83N/T/3dzz////
+        ////////9fX4/1dXzv8dHP3/GRn+/xYW/f8SEv3/Dw/+/wwM+v+EhPD//v7+/87O5/8BAc//BAT94RAQ
+        xyAAAAAAAAAAAAAAAAAAAAAALy/ysiUl/P+Rken//v7+/7Cw6f81NfT/Njb+/zY1/v81Nf7/NDT9/zM0
+        /v8yMv7/fHzy//////////////////////+1tdf/ICD2/x4e/v8bGv7/Fhf+/xMT/v8PD/7/DA36/5iY
+        7v/+/v7/f4C9/wEA8P8KCvSfAAAAAAAAAAAAAAAAODjWMiEh+v9XV/P/+/z+/+Li9P9AQO3/Ozv+/zs7
+        /f88O/7/Ozr9/zo6/v85Of3/ODf+/4KC8v//////////////////////s7PT/yUl9v8hIv7/Hx/+/xwb
+        /v8YF/7/FBP+/w8P/f8aG/r/2tr5//v7/f8iIrX/AgL5/xYW8CMAAAAAAAAAAD5A+LAuL/z/w8T5//3+
+        /v9kZdT/P0D+/0BB/v9AQf7/QEH+/0BB/v8/QP7/Pj7+/z09/v9PT/r/5eTz/////////////Pz9/25u
+        4P8qK/7/Jif+/yMj/v8fH/7/HBv9/xcX/v8TE/7/Dg7+/1BQ+P/9/f7/pKTJ/wEB6/8GCO+gAAAAADAw
+        zxAsLPrwSEjt//39/v/Oz+b/QkPz/0VG/f9GRv7/Rkb+/0ZG/v9FRv3/REX9/0NE/v9CQv7/QEH+/1NU
+        8v+qqfL/t7fy/3Z17/8yMvr/Ly/+/ysr//8nKP3/IyP+/x8f/f8bG/7/Fxf+/xIS/f8OD/z/z8/6//r7
+        /P8eHsP/BQb48zk5xhJKSu1TNTb9/52e+P/+/v7/iInd/0pK/v9LS/7/TEz+/0xM/v9MTP7/S0z+/0pL
+        /v9JSv7/R0j+/0VG/v9LTPX/b2/b/25u3P9OTtP/Nzj+/zQz/v8vL/7/Kyz+/ycn/v8jI/7/Hx/+/xoa
+        /f8VFv7/ERH+/2Ji8//+/v7/dHTG/wAA/P84OPdfOTnvkEJC/f/MzPb//fz9/01N1P9QUP7/UVH+/1JS
+        /v9SUv7/UlL+/1FR/v9RUf3/T0/9/05N/v9LS/7/a2vx//z8/P//////l5fL/zw8/f84OP3/NDT9/zAw
+        /f8rK///Jif+/yIi/v8eHf7/GRn+/xMU/f8oJ/b/+vr+/7u82f8BAu//GBjxn0ZG+M9MTPr/7u76/9ra
+        5v9QUe3/VVX+/1ZX/v9XV/7/V1f+/1dY/v9XV/7/Vlb9/1VV/f9TU/3/UFD+/4GB9f/+/v7//////6Wm
+        0/9AQPz/PDz+/zg4/v80M/3/Ly/+/yoq/v8lJv7/ISH+/xwc/f8XF/7/EhL8/9HR9//u7vP/AwPY/wUF
+        9sA9PfXgWlrz//v8/f+6utb/YWH4/1tc/v9cXP7/XV3+/11d/v9dXf7/XV3+/1tc/v9ZWv7/V1j9/1VW
+        /f+Li+///v7+//////+5udv/QkP5/0BA/v88PP3/Nzf+/zMy/v8tLf3/KCn+/yMk/f8fH/7/Ghr9/xUV
+        /f+3t/n/+/v9/wwNxf8KCvjfQkH44Wtr9//9/f3/srPU/2pp+/9qa/7/Y2T+/2Nj/v9jY/7/Y2P+/2Jj
+        /v9hYf7/X1/+/1xd/v9ZWv3/nJzx////////////v7/U/0VG8/9DRP7/Pz/+/zs6/v82Nv7/MTH+/yws
+        /v8mJ/7/ISH+/xwd/v8XF/7/pKTz//39/f8nJ9L/Bwj340VF+OFvb/f//f3+/7S00/9ub/v/cXL+/3Jz
+        /v9tbf3/aWn+/2lp/v9oaP7/Z2f+/2Vl/v9iYv7/X1/+/7Cw7////////////+fn7v9FRuT/Rkj//0JD
+        /v89Pf7/OTn+/zQ0/f8vL/3/KSr+/yMj/v8fH/7/Ghr9/6Kj8//8/P3/KCjS/wkI+OJNTfrfZ2f0//v7
+        /f/ExNr/cXH2/3d3/v94ef3/env+/3d4/v9wcP7/bm79/2xs/f9qav7/Z2f+/2Rk/f/Ky/D/////////
+        ///09PX/SkvV/0tL/v9GRv7/QEH+/zs7/v83N///MTH+/yss/v8mJv7/ISH+/xwc/f+xsvT//Pz9/xUV
+        z/8JCfXfTU34v2Nj+//w8fv/1NTd/25u4/99ff7/f3/+/4GB/v+Bgf7/gYH+/3t7/v9zdP7/b2/+/2xs
+        /v9pafr/5ubz/////////////Pz8/2Fh0v9OTf3/SEn9/0ND/v8+Pv7/OTn+/zM0/v8uLv7/KCn9/yUm
+        /v8iI/v/2Nj1/+nq8/8MDeH/GRn2z11f9Z9gYP3/1dX5//v7/P91dc7/goP+/4WF/v+Ghv7/iIj9/4iH
+        /f+Ghv3/g4P9/31+/f92d/7/dXX3//f3+f////////////7+/v94ec7/UFD+/0tL/v9FRf3/QEH+/zs7
+        /f84OP7/NTT+/zAx/v8qK/3/MzPw//38/v++vuD/Dg73/xAQ7JBfX/RGW1z+/6+w9v/+/v7/i4y9/4eH
+        /f+Jiv7/jIz+/42N/v+Njf7/i4v+/4mJ/f+Fhv7/goL9/4yM7//9/f3/////////////////k5PM/1hY
+        /f9TU/7/Tk79/0lK/f9FRv7/QED+/zo6/v8zNP3/LS3+/3t88//+/v7/hobh/wsM/f8rK+1TeHjhEVpb
+        +vKGhvj/+/v9/9rZ4/98feL/jo/+/5GR/v+Sk/3/kpP+/5CR/v+Njv7/ior9/4aG/f+lpfP/////////
+        /////////////7m61/9eX/r/WVr+/1RU/v9OTf7/R0f9/0FB/v88O/3/NTX+/y4v+v/OzvH//f3+/yUl
+        0v8ODvrwEBDPEAAAAABdXfSfbm79/87O9f/+/v7/jI3A/5OT/f+Xl/7/mJj+/5eX/v+Vlv7/kpL+/42O
+        /v+Jif7/s7Px///////////////////////FxdT/XFzx/1pb/v9VVv7/T0/9/0hI/v9CQ///PDv+/zY2
+        /f9fYOf//f39/7+/7f8VFvn/Kyv5sAAAAAAAAAAAZGT3IWRl/P+Skvf/+fr9/97e5P+EhNP/m5v+/56e
+        /v+dnf3/mpr+/5WV/v+QkP7/i4v+/7Ky8f//////////////////////ysrc/19g9P9aXP7/Vlb9/1BQ
+        /v9KSf7/Q0P+/zw8/v8/P/T/4OH4//z8/v9ISOT/ERH5/ykp0TIAAAAAAAAAAAAAAABoavmfdXX9/8LC
+        9//+/v7/q6q8/4yM3v+io/7/oaH+/52c/v+Xl/3/kpL+/4yN/v+Tkvj/7e70/////////////f39/5OU
+        3v9jZP3/XFz+/1ZW/v9RUP7/Skv+/0ND/v88PPb/sbHt//7+/v+Mi97/GRr7/yQl8rIAAAAAAAAAAAAA
+        AAAAAAAAcHDfIGlp/eCCg/n/4uH7//7+/v+hobf/jo7d/6Ki/v+dnf7/l5f9/5GS/v+Mjf7/h4b+/5WW
+        8//LyvD/09Tx/5mZ5f9nZ/f/Y2P+/1tc/v9WVv7/UVD+/0pK/v9CQ/X/mZni//3+/v/S0vX/JSXv/yAg
+        /O9gYOcgAAAAAAAAAAAAAAAAAAAAAAAAAACDg+lQb2/8/5eX/v/n5/n//f39/7m5yv+EhMz/mpv9/5aW
+        /v+Qkf7/i4v+/4aG/v+AgP7/eXr9/3N0/f9ub/3/aWn+/2Ji/v9cXP7/Vlb+/1BQ/v9TU/H/p6fe//7+
+        /v/c3Pb/QkL1/xoa+f9ZVvRfAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHV17YBzc/3/lpb9/+Lj
+        +v/9/v7/4N/m/3+Arv+DhOL/jo79/4mJ/f+EhP7/fn7+/3h4/v9yc/7/bW39/2ho/v9hYf7/Wlv//1NT
+        8v95eeL/4eHy//7+/v/Y2Pr/SUn4/yAf/f80NOmAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAc3HvcXJy/P+Jifv/wsP2//v7/f/8/P3/y83V/5iYxf9tbsH/dHXj/3l59v91dfv/b3H7/2lq
+        +P9gYO3/Zmbe/4WF1f/a2e///f3+//v7/v+fn+3/MTHx/yIi+v8sLOOAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4ePNCbm794Xl6/f+cnPr/2Nj7//z8/v/9/v7/+/v8/9jZ
+        4f+5uc7/sbLQ/7Oz0//DxN3/1dTi//v7/f/+/v7//f3+/76+7v9ZWuz/MTH9/yUl/OFISONRAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAH9/8RJubvejaWn7/3Z2
+        /f+Hh/b/ubn6/9fX+f/x8fv//Pz+//39/v/9/f7//f39//Hx+v/R0ff/np/0/19g8/87PP3/LS77/y8v
+        9Z8wMM8gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAHh44DFnZ/qVYGD872Fi/f9oaP3/aWr7/29v9v92dvj/c3P3/2Bg8/9TU/v/SUn9/z0+
+        /v82N/nyMTHxoDw88CIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGBgzxBra/JRW1vyj1hZ+MNRUPffTEz64UhI
+        +OJISPjgQED3v0tL9J9WVvZTaWnhEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAA/+AB/8AAAAD/gAB/wAAAAP4AAB/AAAAA/AAAD8AAAAD4AAAHwAAAAPAAAAPAAAAA4AAAAcAA
+        AADAAAAAwAAAAMAAAADAAAAAgAAAAEAAAACAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAIAAAABAAAAAgAAAAEAAAADAAAAAwAAAAMAAAADAAAAA4AAAAcAAAADwAAADwAAAAPgA
+        AAfAAAAA/AAAD8AAAAD+AAAfwAAAAP+AAH/AAAAA/+AB/8AAAAA=
+</value>
+  </data>
+  <metadata name="SubDivisionEmailNameErrorProvider.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>764, 95</value>
+  </metadata>
+  <data name="SubDivisionEmailNameErrorProvider.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAIiIAAAEAIABIEwAAFgAAACgAAAAiAAAARAAAAAEAIAAAAAAAEBIAABMLAAATCwAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEdH1BI6OvRgHRvxnwcI
+        9sAKC/fgBwf44wYG+OIFBfXfFBT4zwsL7JEoKO1TEBDPEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHSTwIw0O
+        7aAUFPj/CAj+/wgI9/8ICOH/Dg7M/yYm0v8iI87/DQ7H/wEC1v8AAfD/AAD8/wMD+fEjI/iwRUXbPwAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAYGM8gEhP1nwwN+v8ODvj/Kivb/3h41/+8vOL/7e30//v7/P/8/P3//Pz8//r6/P/n5+7/ubrW/3p5
+        y/8TE7b/AAHs/wEC+f8XF/GyWFjnIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAA/P+NRERH94RIS+/8yMtn/qKna//v7/f/+/v7//Pz+/9PT9f+5ufn/paX0/6Ki
+        9f+wsPX/1tX2//v7/v/+/v7//Pz9/7a32/8vL8D/AADw/w4O/O9LS+9fAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAkIuN/EhL6/xgX6/+MjOD/+vv+//7+/v/V1vj/bm7v/zMz
+        9P8bGvz/GRj+/xcW/f8VFf3/EhL9/xER/P8eHvP/amv2/8jI9f/9/f7/+/z9/3p6uf8EBdH/AgL5/yIi
+        6X8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAfH+tyFhf9/zk59v/R0ff//v7+/+Hh
+        +f9jY/H/IyT6/yIi/v8gIf7/IB/+/x4e/v8dHP7/Gxr9/xcX/v8VFf7/EhL9/w8P/v8NDv3/SEju/9ra
+        +v/+/v7/xcXe/x0czf8BAfv/FBThfwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABYWO9gGBj5/zw7
+        9//X1/T//f7+/6Oj4v83N/b/KSr+/ygp/f8nKP7/Jif+/yQl/f87OvX/gYHf/4aH0v9HSNT/GRn3/xcX
+        /f8UFP3/ERH9/w0O/v8VFfn/oqP2//39/v/Q0OD/HR3P/wIC+f81NeNRAAAAAAAAAAAAAAAAAAAAAAAA
+        AABoaO8gJiX97ygp9P/P0Pf//v7+/5SU4/8vL/b/Ly/9/y8v/f8uL/7/LS3+/yws/v83N/T/3dzz////
+        ////////9fX4/1dXzv8dHP3/GRn+/xYW/f8SEv3/Dw/+/wwM+v+EhPD//v7+/87O5/8BAc//BAT94RAQ
+        xyAAAAAAAAAAAAAAAAAAAAAALy/ysiUl/P+Rken//v7+/7Cw6f81NfT/Njb+/zY1/v81Nf7/NDT9/zM0
+        /v8yMv7/fHzy//////////////////////+1tdf/ICD2/x4e/v8bGv7/Fhf+/xMT/v8PD/7/DA36/5iY
+        7v/+/v7/f4C9/wEA8P8KCvSfAAAAAAAAAAAAAAAAODjWMiEh+v9XV/P/+/z+/+Li9P9AQO3/Ozv+/zs7
+        /f88O/7/Ozr9/zo6/v85Of3/ODf+/4KC8v//////////////////////s7PT/yUl9v8hIv7/Hx/+/xwb
+        /v8YF/7/FBP+/w8P/f8aG/r/2tr5//v7/f8iIrX/AgL5/xYW8CMAAAAAAAAAAD5A+LAuL/z/w8T5//3+
+        /v9kZdT/P0D+/0BB/v9AQf7/QEH+/0BB/v8/QP7/Pj7+/z09/v9PT/r/5eTz/////////////Pz9/25u
+        4P8qK/7/Jif+/yMj/v8fH/7/HBv9/xcX/v8TE/7/Dg7+/1BQ+P/9/f7/pKTJ/wEB6/8GCO+gAAAAADAw
+        zxAsLPrwSEjt//39/v/Oz+b/QkPz/0VG/f9GRv7/Rkb+/0ZG/v9FRv3/REX9/0NE/v9CQv7/QEH+/1NU
+        8v+qqfL/t7fy/3Z17/8yMvr/Ly/+/ysr//8nKP3/IyP+/x8f/f8bG/7/Fxf+/xIS/f8OD/z/z8/6//r7
+        /P8eHsP/BQb48zk5xhJKSu1TNTb9/52e+P/+/v7/iInd/0pK/v9LS/7/TEz+/0xM/v9MTP7/S0z+/0pL
+        /v9JSv7/R0j+/0VG/v9LTPX/b2/b/25u3P9OTtP/Nzj+/zQz/v8vL/7/Kyz+/ycn/v8jI/7/Hx/+/xoa
+        /f8VFv7/ERH+/2Ji8//+/v7/dHTG/wAA/P84OPdfOTnvkEJC/f/MzPb//fz9/01N1P9QUP7/UVH+/1JS
+        /v9SUv7/UlL+/1FR/v9RUf3/T0/9/05N/v9LS/7/a2vx//z8/P//////l5fL/zw8/f84OP3/NDT9/zAw
+        /f8rK///Jif+/yIi/v8eHf7/GRn+/xMU/f8oJ/b/+vr+/7u82f8BAu//GBjxn0ZG+M9MTPr/7u76/9ra
+        5v9QUe3/VVX+/1ZX/v9XV/7/V1f+/1dY/v9XV/7/Vlb9/1VV/f9TU/3/UFD+/4GB9f/+/v7//////6Wm
+        0/9AQPz/PDz+/zg4/v80M/3/Ly/+/yoq/v8lJv7/ISH+/xwc/f8XF/7/EhL8/9HR9//u7vP/AwPY/wUF
+        9sA9PfXgWlrz//v8/f+6utb/YWH4/1tc/v9cXP7/XV3+/11d/v9dXf7/XV3+/1tc/v9ZWv7/V1j9/1VW
+        /f+Li+///v7+//////+5udv/QkP5/0BA/v88PP3/Nzf+/zMy/v8tLf3/KCn+/yMk/f8fH/7/Ghr9/xUV
+        /f+3t/n/+/v9/wwNxf8KCvjfQkH44Wtr9//9/f3/srPU/2pp+/9qa/7/Y2T+/2Nj/v9jY/7/Y2P+/2Jj
+        /v9hYf7/X1/+/1xd/v9ZWv3/nJzx////////////v7/U/0VG8/9DRP7/Pz/+/zs6/v82Nv7/MTH+/yws
+        /v8mJ/7/ISH+/xwd/v8XF/7/pKTz//39/f8nJ9L/Bwj340VF+OFvb/f//f3+/7S00/9ub/v/cXL+/3Jz
+        /v9tbf3/aWn+/2lp/v9oaP7/Z2f+/2Vl/v9iYv7/X1/+/7Cw7////////////+fn7v9FRuT/Rkj//0JD
+        /v89Pf7/OTn+/zQ0/f8vL/3/KSr+/yMj/v8fH/7/Ghr9/6Kj8//8/P3/KCjS/wkI+OJNTfrfZ2f0//v7
+        /f/ExNr/cXH2/3d3/v94ef3/env+/3d4/v9wcP7/bm79/2xs/f9qav7/Z2f+/2Rk/f/Ky/D/////////
+        ///09PX/SkvV/0tL/v9GRv7/QEH+/zs7/v83N///MTH+/yss/v8mJv7/ISH+/xwc/f+xsvT//Pz9/xUV
+        z/8JCfXfTU34v2Nj+//w8fv/1NTd/25u4/99ff7/f3/+/4GB/v+Bgf7/gYH+/3t7/v9zdP7/b2/+/2xs
+        /v9pafr/5ubz/////////////Pz8/2Fh0v9OTf3/SEn9/0ND/v8+Pv7/OTn+/zM0/v8uLv7/KCn9/yUm
+        /v8iI/v/2Nj1/+nq8/8MDeH/GRn2z11f9Z9gYP3/1dX5//v7/P91dc7/goP+/4WF/v+Ghv7/iIj9/4iH
+        /f+Ghv3/g4P9/31+/f92d/7/dXX3//f3+f////////////7+/v94ec7/UFD+/0tL/v9FRf3/QEH+/zs7
+        /f84OP7/NTT+/zAx/v8qK/3/MzPw//38/v++vuD/Dg73/xAQ7JBfX/RGW1z+/6+w9v/+/v7/i4y9/4eH
+        /f+Jiv7/jIz+/42N/v+Njf7/i4v+/4mJ/f+Fhv7/goL9/4yM7//9/f3/////////////////k5PM/1hY
+        /f9TU/7/Tk79/0lK/f9FRv7/QED+/zo6/v8zNP3/LS3+/3t88//+/v7/hobh/wsM/f8rK+1TeHjhEVpb
+        +vKGhvj/+/v9/9rZ4/98feL/jo/+/5GR/v+Sk/3/kpP+/5CR/v+Njv7/ior9/4aG/f+lpfP/////////
+        /////////////7m61/9eX/r/WVr+/1RU/v9OTf7/R0f9/0FB/v88O/3/NTX+/y4v+v/OzvH//f3+/yUl
+        0v8ODvrwEBDPEAAAAABdXfSfbm79/87O9f/+/v7/jI3A/5OT/f+Xl/7/mJj+/5eX/v+Vlv7/kpL+/42O
+        /v+Jif7/s7Px///////////////////////FxdT/XFzx/1pb/v9VVv7/T0/9/0hI/v9CQ///PDv+/zY2
+        /f9fYOf//f39/7+/7f8VFvn/Kyv5sAAAAAAAAAAAZGT3IWRl/P+Skvf/+fr9/97e5P+EhNP/m5v+/56e
+        /v+dnf3/mpr+/5WV/v+QkP7/i4v+/7Ky8f//////////////////////ysrc/19g9P9aXP7/Vlb9/1BQ
+        /v9KSf7/Q0P+/zw8/v8/P/T/4OH4//z8/v9ISOT/ERH5/ykp0TIAAAAAAAAAAAAAAABoavmfdXX9/8LC
+        9//+/v7/q6q8/4yM3v+io/7/oaH+/52c/v+Xl/3/kpL+/4yN/v+Tkvj/7e70/////////////f39/5OU
+        3v9jZP3/XFz+/1ZW/v9RUP7/Skv+/0ND/v88PPb/sbHt//7+/v+Mi97/GRr7/yQl8rIAAAAAAAAAAAAA
+        AAAAAAAAcHDfIGlp/eCCg/n/4uH7//7+/v+hobf/jo7d/6Ki/v+dnf7/l5f9/5GS/v+Mjf7/h4b+/5WW
+        8//LyvD/09Tx/5mZ5f9nZ/f/Y2P+/1tc/v9WVv7/UVD+/0pK/v9CQ/X/mZni//3+/v/S0vX/JSXv/yAg
+        /O9gYOcgAAAAAAAAAAAAAAAAAAAAAAAAAACDg+lQb2/8/5eX/v/n5/n//f39/7m5yv+EhMz/mpv9/5aW
+        /v+Qkf7/i4v+/4aG/v+AgP7/eXr9/3N0/f9ub/3/aWn+/2Ji/v9cXP7/Vlb+/1BQ/v9TU/H/p6fe//7+
+        /v/c3Pb/QkL1/xoa+f9ZVvRfAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHV17YBzc/3/lpb9/+Lj
+        +v/9/v7/4N/m/3+Arv+DhOL/jo79/4mJ/f+EhP7/fn7+/3h4/v9yc/7/bW39/2ho/v9hYf7/Wlv//1NT
+        8v95eeL/4eHy//7+/v/Y2Pr/SUn4/yAf/f80NOmAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAc3HvcXJy/P+Jifv/wsP2//v7/f/8/P3/y83V/5iYxf9tbsH/dHXj/3l59v91dfv/b3H7/2lq
+        +P9gYO3/Zmbe/4WF1f/a2e///f3+//v7/v+fn+3/MTHx/yIi+v8sLOOAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4ePNCbm794Xl6/f+cnPr/2Nj7//z8/v/9/v7/+/v8/9jZ
+        4f+5uc7/sbLQ/7Oz0//DxN3/1dTi//v7/f/+/v7//f3+/76+7v9ZWuz/MTH9/yUl/OFISONRAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAH9/8RJubvejaWn7/3Z2
+        /f+Hh/b/ubn6/9fX+f/x8fv//Pz+//39/v/9/f7//f39//Hx+v/R0ff/np/0/19g8/87PP3/LS77/y8v
+        9Z8wMM8gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAHh44DFnZ/qVYGD872Fi/f9oaP3/aWr7/29v9v92dvj/c3P3/2Bg8/9TU/v/SUn9/z0+
+        /v82N/nyMTHxoDw88CIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGBgzxBra/JRW1vyj1hZ+MNRUPffTEz64UhI
+        +OJISPjgQED3v0tL9J9WVvZTaWnhEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAA/+AB/8AAAAD/gAB/wAAAAP4AAB/AAAAA/AAAD8AAAAD4AAAHwAAAAPAAAAPAAAAA4AAAAcAA
+        AADAAAAAwAAAAMAAAADAAAAAgAAAAEAAAACAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAIAAAABAAAAAgAAAAEAAAADAAAAAwAAAAMAAAADAAAAA4AAAAcAAAADwAAADwAAAAPgA
+        AAfAAAAA/AAAD8AAAAD+AAAfwAAAAP+AAH/AAAAA/+AB/8AAAAA=
+</value>
+  </data>
+  <metadata name="SubDivisionEmailErrorProvider.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 134</value>
+  </metadata>
+  <data name="SubDivisionEmailErrorProvider.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAIiIAAAEAIABIEwAAFgAAACgAAAAiAAAARAAAAAEAIAAAAAAAEBIAABMLAAATCwAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEdH1BI6OvRgHRvxnwcI
