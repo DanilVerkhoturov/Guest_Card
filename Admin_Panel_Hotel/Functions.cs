@@ -297,6 +297,7 @@ namespace Admin_Panel_Hotel
         {
             DataGridView dgv = sender as DataGridView;
 
+            // Если началось редактирование не первого столбца (номер строки) и в ячейке есть текст, который является подсказкой.
             if (e.ColumnIndex != 0 && dgv[e.ColumnIndex, e.RowIndex].Value != null && dgv[e.ColumnIndex, e.RowIndex].Value.ToString() == dgv.Columns[e.ColumnIndex].ToolTipText)
             {
                 dgv[e.ColumnIndex, e.RowIndex].Value = null;
@@ -312,6 +313,7 @@ namespace Admin_Panel_Hotel
         {
             DataGridView dgv = sender as DataGridView;
 
+            // Если был отредактирован не первый столбец (номер строки) и в ячейке нет текста.
             if (e.ColumnIndex != 0 && dgv[e.ColumnIndex, e.RowIndex].Value == null)
             {
                 dgv[e.ColumnIndex, e.RowIndex].Value = dgv.Columns[e.ColumnIndex].ToolTipText;
