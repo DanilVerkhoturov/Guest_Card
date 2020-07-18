@@ -36,8 +36,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.ApplicationNameLabel = new System.Windows.Forms.Label();
             this.UsersDataGridView = new System.Windows.Forms.DataGridView();
-            this.PrintButton = new System.Windows.Forms.Button();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,6 +43,8 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ShowUserInfo = new System.Windows.Forms.DataGridViewImageColumn();
+            this.PrintButton = new System.Windows.Forms.Button();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.UsersDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -133,32 +133,6 @@
             this.UsersDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.UsersDataGridView_CellClick);
             this.UsersDataGridView.CellMouseMove += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.UsersDataGridView_CellMouseMove);
             // 
-            // PrintButton
-            // 
-            this.PrintButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(82)))), ((int)(((byte)(119)))));
-            this.PrintButton.FlatAppearance.BorderSize = 0;
-            this.PrintButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PrintButton.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.PrintButton.ForeColor = System.Drawing.Color.White;
-            this.PrintButton.Location = new System.Drawing.Point(943, 32);
-            this.PrintButton.Margin = new System.Windows.Forms.Padding(33, 23, 124, 44);
-            this.PrintButton.Name = "PrintButton";
-            this.PrintButton.Size = new System.Drawing.Size(131, 35);
-            this.PrintButton.TabIndex = 18;
-            this.PrintButton.Text = "Печать";
-            this.PrintButton.UseVisualStyleBackColor = false;
-            // 
-            // dataGridViewImageColumn1
-            // 
-            this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewImageColumn1.Frozen = true;
-            this.dataGridViewImageColumn1.HeaderText = "";
-            this.dataGridViewImageColumn1.Image = global::Admin_Panel_Hotel.Properties.Resources.pngwing_8;
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.ReadOnly = true;
-            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewImageColumn1.Width = 30;
-            // 
             // Column1
             // 
             this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
@@ -236,6 +210,32 @@
             this.ShowUserInfo.ReadOnly = true;
             this.ShowUserInfo.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.ShowUserInfo.Width = 53;
+            // 
+            // PrintButton
+            // 
+            this.PrintButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(82)))), ((int)(((byte)(119)))));
+            this.PrintButton.FlatAppearance.BorderSize = 0;
+            this.PrintButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PrintButton.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.PrintButton.ForeColor = System.Drawing.Color.White;
+            this.PrintButton.Location = new System.Drawing.Point(943, 32);
+            this.PrintButton.Margin = new System.Windows.Forms.Padding(33, 23, 124, 44);
+            this.PrintButton.Name = "PrintButton";
+            this.PrintButton.Size = new System.Drawing.Size(131, 35);
+            this.PrintButton.TabIndex = 18;
+            this.PrintButton.Text = "Скачать";
+            this.PrintButton.UseVisualStyleBackColor = false;
+            // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewImageColumn1.Frozen = true;
+            this.dataGridViewImageColumn1.HeaderText = "";
+            this.dataGridViewImageColumn1.Image = global::Admin_Panel_Hotel.Properties.Resources.pngwing_8;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.ReadOnly = true;
+            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewImageColumn1.Width = 30;
             // 
             // ShowCurrentApplication
             // 

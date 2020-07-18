@@ -366,6 +366,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Screenshot_1.png" />
     <None Include="Resources\user_icon-icons 1.png" />
     <None Include="Resources\User.png" />
     <None Include="Resources\GrayCircle.png" />

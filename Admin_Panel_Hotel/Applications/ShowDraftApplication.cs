@@ -82,24 +82,25 @@ namespace Admin_Panel_Hotel
 
         private void EditButton_Click(object sender, EventArgs e)
         {
-            if (EditButton.Text == "Продолжить редактирование")
+            SendToCustomerButton.Visible = true;
+            AddUserLabel.Visible = true;
+            ImportButton.Visible = true;
+            CustomerComboBox.Enabled = true;
+            LocationComboBox.Enabled = true;
+            UsersDataGridView.Enabled = false;
+        }
+
+        private void SendToCustomerButton_Click(object sender, EventArgs e)
+        {
+            // TODO: Сделать проверку заполнения всех полей.
+            if (true) // Если заполнены все поля.
             {
-                AddUserLabel.Visible = true;
-                UsersDataGridView.ReadOnly = false;
-                EditButton.Text = "Сохранить и отправить";
-            }
-            else
-            {
-                // TODO: Сделать проверку заполнения полей на последней строке.
-                if (true) // Если заполнены все поля.
-                {
-                    // Открытие формы уведомления о подтверждённой заявке.
-                    var notification = new NotificationsForm();
-                    notification.NotificationLabel.Text = "Заявка подтверждена";
-                    notification.Owner = this;
-                    notification.StartPosition = FormStartPosition.CenterParent;
-                    notification.ShowDialog();
-                }
+                // Открытие формы уведомления о подтверждённой заявке.
+                var notification = new NotificationsForm();
+                notification.NotificationLabel.Text = "Заявка подтверждена";
+                notification.Owner = this;
+                notification.StartPosition = FormStartPosition.CenterParent;
+                notification.ShowDialog();
             }
         }
     }

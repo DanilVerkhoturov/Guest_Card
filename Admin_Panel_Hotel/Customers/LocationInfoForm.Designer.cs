@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.CustomerLocationNameLabel = new System.Windows.Forms.Label();
             this.LocationDataLabel = new System.Windows.Forms.Label();
             this.CardPropertiesLabel = new System.Windows.Forms.Label();
@@ -35,44 +37,44 @@
             this.LocationInfoPanel = new System.Windows.Forms.Panel();
             this.CardsCountHelpLabel = new System.Windows.Forms.Label();
             this.RoomBedsCountHelpLabel = new System.Windows.Forms.Label();
-            this.HouseCorpsBuildHelpLabel = new System.Windows.Forms.Label();
-            this.StreetHelpLabel = new System.Windows.Forms.Label();
-            this.StreetTypeHelpLabel = new System.Windows.Forms.Label();
-            this.CityHelpLabel = new System.Windows.Forms.Label();
-            this.StateHelpLabel = new System.Windows.Forms.Label();
-            this.RegionHelpLabel = new System.Windows.Forms.Label();
             this.NameHelpLabel = new System.Windows.Forms.Label();
             this.EditCardsCountButton = new System.Windows.Forms.Button();
             this.EditRoomBedsCountButton = new System.Windows.Forms.Button();
-            this.EditHouseCorpsBuildButton = new System.Windows.Forms.Button();
-            this.EditStreetButton = new System.Windows.Forms.Button();
-            this.EditStreetTypeButton = new System.Windows.Forms.Button();
-            this.EditCityButton = new System.Windows.Forms.Button();
-            this.EditStateButton = new System.Windows.Forms.Button();
-            this.EditRegionButton = new System.Windows.Forms.Button();
             this.EditNameButton = new System.Windows.Forms.Button();
-            this.SaveButton = new System.Windows.Forms.Button();
+            this.SaveLocationInfoButton = new System.Windows.Forms.Button();
             this.CardsCountTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.BedsCountTextBox = new System.Windows.Forms.TextBox();
             this.RoomCountTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.BuildTextBox = new System.Windows.Forms.TextBox();
-            this.CorpsTextBox = new System.Windows.Forms.TextBox();
-            this.HouseTextBox = new System.Windows.Forms.TextBox();
-            this.StreetComboBox = new System.Windows.Forms.ComboBox();
-            this.StreetTypeComboBox = new System.Windows.Forms.ComboBox();
-            this.CityComboBox = new System.Windows.Forms.ComboBox();
-            this.StateComboBox = new System.Windows.Forms.ComboBox();
-            this.RegionComboBox = new System.Windows.Forms.ComboBox();
             this.NameTextBox = new System.Windows.Forms.TextBox();
+            this.RoomsDataGridView = new System.Windows.Forms.DataGridView();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RoomNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BedsCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RoomsHelpLabel = new System.Windows.Forms.Label();
+            this.EditRoomsButton = new System.Windows.Forms.Button();
+            this.CardPropertiesPanel = new System.Windows.Forms.Panel();
+            this.Set2HelpButton = new System.Windows.Forms.Button();
+            this.Set1HelpButton = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.FireSafetyCheckBox = new System.Windows.Forms.CheckBox();
+            this.AllPropertiesCheckBox = new System.Windows.Forms.CheckBox();
+            this.ResidenceRulesCheckBox = new System.Windows.Forms.CheckBox();
+            this.GiveOutLinenCheckBox = new System.Windows.Forms.CheckBox();
+            this.Set1CheckBox = new System.Windows.Forms.CheckBox();
+            this.Set2CheckBox = new System.Windows.Forms.CheckBox();
+            this.InstructedCheckBox = new System.Windows.Forms.CheckBox();
+            this.SaveCardPropertiesButton = new System.Windows.Forms.Button();
+            this.EditCardPropertiesButton = new System.Windows.Forms.Button();
             this.LocationInfoPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RoomsDataGridView)).BeginInit();
+            this.CardPropertiesPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // CustomerLocationNameLabel
             // 
-            this.CustomerLocationNameLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.CustomerLocationNameLabel.AutoEllipsis = true;
             this.CustomerLocationNameLabel.AutoSize = true;
             this.CustomerLocationNameLabel.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -88,7 +90,6 @@
             // 
             // LocationDataLabel
             // 
-            this.LocationDataLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.LocationDataLabel.AutoSize = true;
             this.LocationDataLabel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.LocationDataLabel.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -99,10 +100,10 @@
             this.LocationDataLabel.Size = new System.Drawing.Size(104, 29);
             this.LocationDataLabel.TabIndex = 1;
             this.LocationDataLabel.Text = "Данные";
+            this.LocationDataLabel.Click += new System.EventHandler(this.LocationDataLabel_Click);
             // 
             // CardPropertiesLabel
             // 
-            this.CardPropertiesLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.CardPropertiesLabel.AutoSize = true;
             this.CardPropertiesLabel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CardPropertiesLabel.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -113,10 +114,10 @@
             this.CardPropertiesLabel.Size = new System.Drawing.Size(179, 29);
             this.CardPropertiesLabel.TabIndex = 2;
             this.CardPropertiesLabel.Text = "Свойства карт";
+            this.CardPropertiesLabel.Click += new System.EventHandler(this.CardPropertiesLabel_Click);
             // 
             // Analyticslabel
             // 
-            this.Analyticslabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Analyticslabel.AutoSize = true;
             this.Analyticslabel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Analyticslabel.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -130,45 +131,27 @@
             // 
             // LocationInfoPanel
             // 
-            this.LocationInfoPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.LocationInfoPanel.Controls.Add(this.RoomsHelpLabel);
+            this.LocationInfoPanel.Controls.Add(this.EditRoomsButton);
+            this.LocationInfoPanel.Controls.Add(this.RoomsDataGridView);
             this.LocationInfoPanel.Controls.Add(this.CardsCountHelpLabel);
             this.LocationInfoPanel.Controls.Add(this.RoomBedsCountHelpLabel);
-            this.LocationInfoPanel.Controls.Add(this.HouseCorpsBuildHelpLabel);
-            this.LocationInfoPanel.Controls.Add(this.StreetHelpLabel);
-            this.LocationInfoPanel.Controls.Add(this.StreetTypeHelpLabel);
-            this.LocationInfoPanel.Controls.Add(this.CityHelpLabel);
-            this.LocationInfoPanel.Controls.Add(this.StateHelpLabel);
-            this.LocationInfoPanel.Controls.Add(this.RegionHelpLabel);
             this.LocationInfoPanel.Controls.Add(this.NameHelpLabel);
             this.LocationInfoPanel.Controls.Add(this.EditCardsCountButton);
             this.LocationInfoPanel.Controls.Add(this.EditRoomBedsCountButton);
-            this.LocationInfoPanel.Controls.Add(this.EditHouseCorpsBuildButton);
-            this.LocationInfoPanel.Controls.Add(this.EditStreetButton);
-            this.LocationInfoPanel.Controls.Add(this.EditStreetTypeButton);
-            this.LocationInfoPanel.Controls.Add(this.EditCityButton);
-            this.LocationInfoPanel.Controls.Add(this.EditStateButton);
-            this.LocationInfoPanel.Controls.Add(this.EditRegionButton);
             this.LocationInfoPanel.Controls.Add(this.EditNameButton);
-            this.LocationInfoPanel.Controls.Add(this.SaveButton);
+            this.LocationInfoPanel.Controls.Add(this.SaveLocationInfoButton);
             this.LocationInfoPanel.Controls.Add(this.CardsCountTextBox);
             this.LocationInfoPanel.Controls.Add(this.label3);
             this.LocationInfoPanel.Controls.Add(this.label2);
             this.LocationInfoPanel.Controls.Add(this.BedsCountTextBox);
             this.LocationInfoPanel.Controls.Add(this.RoomCountTextBox);
             this.LocationInfoPanel.Controls.Add(this.label1);
-            this.LocationInfoPanel.Controls.Add(this.BuildTextBox);
-            this.LocationInfoPanel.Controls.Add(this.CorpsTextBox);
-            this.LocationInfoPanel.Controls.Add(this.HouseTextBox);
-            this.LocationInfoPanel.Controls.Add(this.StreetComboBox);
-            this.LocationInfoPanel.Controls.Add(this.StreetTypeComboBox);
-            this.LocationInfoPanel.Controls.Add(this.CityComboBox);
-            this.LocationInfoPanel.Controls.Add(this.StateComboBox);
-            this.LocationInfoPanel.Controls.Add(this.RegionComboBox);
             this.LocationInfoPanel.Controls.Add(this.NameTextBox);
             this.LocationInfoPanel.Location = new System.Drawing.Point(133, 165);
             this.LocationInfoPanel.Margin = new System.Windows.Forms.Padding(124, 22, 3, 3);
             this.LocationInfoPanel.Name = "LocationInfoPanel";
-            this.LocationInfoPanel.Size = new System.Drawing.Size(834, 686);
+            this.LocationInfoPanel.Size = new System.Drawing.Size(923, 686);
             this.LocationInfoPanel.TabIndex = 4;
             // 
             // CardsCountHelpLabel
@@ -177,7 +160,7 @@
             this.CardsCountHelpLabel.AutoSize = true;
             this.CardsCountHelpLabel.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CardsCountHelpLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(87)))), ((int)(((byte)(87)))));
-            this.CardsCountHelpLabel.Location = new System.Drawing.Point(426, 574);
+            this.CardsCountHelpLabel.Location = new System.Drawing.Point(426, 164);
             this.CardsCountHelpLabel.Name = "CardsCountHelpLabel";
             this.CardsCountHelpLabel.Size = new System.Drawing.Size(139, 30);
             this.CardsCountHelpLabel.TabIndex = 33;
@@ -190,90 +173,12 @@
             this.RoomBedsCountHelpLabel.AutoSize = true;
             this.RoomBedsCountHelpLabel.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.RoomBedsCountHelpLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(87)))), ((int)(((byte)(87)))));
-            this.RoomBedsCountHelpLabel.Location = new System.Drawing.Point(683, 504);
+            this.RoomBedsCountHelpLabel.Location = new System.Drawing.Point(760, 94);
             this.RoomBedsCountHelpLabel.Name = "RoomBedsCountHelpLabel";
             this.RoomBedsCountHelpLabel.Size = new System.Drawing.Size(139, 30);
             this.RoomBedsCountHelpLabel.TabIndex = 32;
             this.RoomBedsCountHelpLabel.Text = "Редактируйте поле и \r\nнажмите Сохранить";
             this.RoomBedsCountHelpLabel.Visible = false;
-            // 
-            // HouseCorpsBuildHelpLabel
-            // 
-            this.HouseCorpsBuildHelpLabel.AutoEllipsis = true;
-            this.HouseCorpsBuildHelpLabel.AutoSize = true;
-            this.HouseCorpsBuildHelpLabel.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.HouseCorpsBuildHelpLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(87)))), ((int)(((byte)(87)))));
-            this.HouseCorpsBuildHelpLabel.Location = new System.Drawing.Point(683, 411);
-            this.HouseCorpsBuildHelpLabel.Name = "HouseCorpsBuildHelpLabel";
-            this.HouseCorpsBuildHelpLabel.Size = new System.Drawing.Size(139, 30);
-            this.HouseCorpsBuildHelpLabel.TabIndex = 31;
-            this.HouseCorpsBuildHelpLabel.Text = "Редактируйте поле и \r\nнажмите Сохранить";
-            this.HouseCorpsBuildHelpLabel.Visible = false;
-            // 
-            // StreetHelpLabel
-            // 
-            this.StreetHelpLabel.AutoEllipsis = true;
-            this.StreetHelpLabel.AutoSize = true;
-            this.StreetHelpLabel.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.StreetHelpLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(87)))), ((int)(((byte)(87)))));
-            this.StreetHelpLabel.Location = new System.Drawing.Point(683, 343);
-            this.StreetHelpLabel.Name = "StreetHelpLabel";
-            this.StreetHelpLabel.Size = new System.Drawing.Size(139, 30);
-            this.StreetHelpLabel.TabIndex = 30;
-            this.StreetHelpLabel.Text = "Редактируйте поле и \r\nнажмите Сохранить";
-            this.StreetHelpLabel.Visible = false;
-            // 
-            // StreetTypeHelpLabel
-            // 
-            this.StreetTypeHelpLabel.AutoEllipsis = true;
-            this.StreetTypeHelpLabel.AutoSize = true;
-            this.StreetTypeHelpLabel.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.StreetTypeHelpLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(87)))), ((int)(((byte)(87)))));
-            this.StreetTypeHelpLabel.Location = new System.Drawing.Point(683, 275);
-            this.StreetTypeHelpLabel.Name = "StreetTypeHelpLabel";
-            this.StreetTypeHelpLabel.Size = new System.Drawing.Size(139, 30);
-            this.StreetTypeHelpLabel.TabIndex = 29;
-            this.StreetTypeHelpLabel.Text = "Редактируйте поле и \r\nнажмите Сохранить";
-            this.StreetTypeHelpLabel.Visible = false;
-            // 
-            // CityHelpLabel
-            // 
-            this.CityHelpLabel.AutoEllipsis = true;
-            this.CityHelpLabel.AutoSize = true;
-            this.CityHelpLabel.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CityHelpLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(87)))), ((int)(((byte)(87)))));
-            this.CityHelpLabel.Location = new System.Drawing.Point(683, 207);
-            this.CityHelpLabel.Name = "CityHelpLabel";
-            this.CityHelpLabel.Size = new System.Drawing.Size(139, 30);
-            this.CityHelpLabel.TabIndex = 28;
-            this.CityHelpLabel.Text = "Редактируйте поле и \r\nнажмите Сохранить";
-            this.CityHelpLabel.Visible = false;
-            // 
-            // StateHelpLabel
-            // 
-            this.StateHelpLabel.AutoEllipsis = true;
-            this.StateHelpLabel.AutoSize = true;
-            this.StateHelpLabel.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.StateHelpLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(87)))), ((int)(((byte)(87)))));
-            this.StateHelpLabel.Location = new System.Drawing.Point(683, 139);
-            this.StateHelpLabel.Name = "StateHelpLabel";
-            this.StateHelpLabel.Size = new System.Drawing.Size(139, 30);
-            this.StateHelpLabel.TabIndex = 27;
-            this.StateHelpLabel.Text = "Редактируйте поле и \r\nнажмите Сохранить";
-            this.StateHelpLabel.Visible = false;
-            // 
-            // RegionHelpLabel
-            // 
-            this.RegionHelpLabel.AutoEllipsis = true;
-            this.RegionHelpLabel.AutoSize = true;
-            this.RegionHelpLabel.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.RegionHelpLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(87)))), ((int)(((byte)(87)))));
-            this.RegionHelpLabel.Location = new System.Drawing.Point(683, 71);
-            this.RegionHelpLabel.Name = "RegionHelpLabel";
-            this.RegionHelpLabel.Size = new System.Drawing.Size(139, 30);
-            this.RegionHelpLabel.TabIndex = 26;
-            this.RegionHelpLabel.Text = "Редактируйте поле и \r\nнажмите Сохранить";
-            this.RegionHelpLabel.Visible = false;
             // 
             // NameHelpLabel
             // 
@@ -281,7 +186,7 @@
             this.NameHelpLabel.AutoSize = true;
             this.NameHelpLabel.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.NameHelpLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(87)))), ((int)(((byte)(87)))));
-            this.NameHelpLabel.Location = new System.Drawing.Point(683, 3);
+            this.NameHelpLabel.Location = new System.Drawing.Point(760, 3);
             this.NameHelpLabel.Name = "NameHelpLabel";
             this.NameHelpLabel.Size = new System.Drawing.Size(139, 30);
             this.NameHelpLabel.TabIndex = 25;
@@ -295,11 +200,12 @@
             this.EditCardsCountButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.EditCardsCountButton.FlatAppearance.BorderSize = 0;
             this.EditCardsCountButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EditCardsCountButton.Location = new System.Drawing.Point(413, 574);
+            this.EditCardsCountButton.Location = new System.Drawing.Point(413, 164);
             this.EditCardsCountButton.Name = "EditCardsCountButton";
             this.EditCardsCountButton.Size = new System.Drawing.Size(24, 24);
             this.EditCardsCountButton.TabIndex = 24;
             this.EditCardsCountButton.UseVisualStyleBackColor = false;
+            this.EditCardsCountButton.Click += new System.EventHandler(this.EditCardsCountButton_Click);
             // 
             // EditRoomBedsCountButton
             // 
@@ -308,90 +214,12 @@
             this.EditRoomBedsCountButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.EditRoomBedsCountButton.FlatAppearance.BorderSize = 0;
             this.EditRoomBedsCountButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EditRoomBedsCountButton.Location = new System.Drawing.Point(670, 504);
+            this.EditRoomBedsCountButton.Location = new System.Drawing.Point(747, 94);
             this.EditRoomBedsCountButton.Name = "EditRoomBedsCountButton";
             this.EditRoomBedsCountButton.Size = new System.Drawing.Size(24, 24);
             this.EditRoomBedsCountButton.TabIndex = 23;
             this.EditRoomBedsCountButton.UseVisualStyleBackColor = false;
-            // 
-            // EditHouseCorpsBuildButton
-            // 
-            this.EditHouseCorpsBuildButton.BackColor = System.Drawing.Color.Transparent;
-            this.EditHouseCorpsBuildButton.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.pngflow_1;
-            this.EditHouseCorpsBuildButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.EditHouseCorpsBuildButton.FlatAppearance.BorderSize = 0;
-            this.EditHouseCorpsBuildButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EditHouseCorpsBuildButton.Location = new System.Drawing.Point(670, 411);
-            this.EditHouseCorpsBuildButton.Name = "EditHouseCorpsBuildButton";
-            this.EditHouseCorpsBuildButton.Size = new System.Drawing.Size(24, 24);
-            this.EditHouseCorpsBuildButton.TabIndex = 22;
-            this.EditHouseCorpsBuildButton.UseVisualStyleBackColor = false;
-            // 
-            // EditStreetButton
-            // 
-            this.EditStreetButton.BackColor = System.Drawing.Color.Transparent;
-            this.EditStreetButton.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.pngflow_1;
-            this.EditStreetButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.EditStreetButton.FlatAppearance.BorderSize = 0;
-            this.EditStreetButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EditStreetButton.Location = new System.Drawing.Point(670, 343);
-            this.EditStreetButton.Name = "EditStreetButton";
-            this.EditStreetButton.Size = new System.Drawing.Size(24, 24);
-            this.EditStreetButton.TabIndex = 21;
-            this.EditStreetButton.UseVisualStyleBackColor = false;
-            // 
-            // EditStreetTypeButton
-            // 
-            this.EditStreetTypeButton.BackColor = System.Drawing.Color.Transparent;
-            this.EditStreetTypeButton.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.pngflow_1;
-            this.EditStreetTypeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.EditStreetTypeButton.FlatAppearance.BorderSize = 0;
-            this.EditStreetTypeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EditStreetTypeButton.Location = new System.Drawing.Point(670, 275);
-            this.EditStreetTypeButton.Name = "EditStreetTypeButton";
-            this.EditStreetTypeButton.Size = new System.Drawing.Size(24, 24);
-            this.EditStreetTypeButton.TabIndex = 20;
-            this.EditStreetTypeButton.UseVisualStyleBackColor = false;
-            // 
-            // EditCityButton
-            // 
-            this.EditCityButton.BackColor = System.Drawing.Color.Transparent;
-            this.EditCityButton.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.pngflow_1;
-            this.EditCityButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.EditCityButton.FlatAppearance.BorderSize = 0;
-            this.EditCityButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EditCityButton.Location = new System.Drawing.Point(670, 207);
-            this.EditCityButton.Name = "EditCityButton";
-            this.EditCityButton.Size = new System.Drawing.Size(24, 24);
-            this.EditCityButton.TabIndex = 19;
-            this.EditCityButton.UseVisualStyleBackColor = false;
-            // 
-            // EditStateButton
-            // 
-            this.EditStateButton.BackColor = System.Drawing.Color.Transparent;
-            this.EditStateButton.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.pngflow_1;
-            this.EditStateButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.EditStateButton.FlatAppearance.BorderSize = 0;
-            this.EditStateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EditStateButton.Location = new System.Drawing.Point(670, 139);
-            this.EditStateButton.Name = "EditStateButton";
-            this.EditStateButton.Size = new System.Drawing.Size(24, 24);
-            this.EditStateButton.TabIndex = 18;
-            this.EditStateButton.UseVisualStyleBackColor = false;
-            // 
-            // EditRegionButton
-            // 
-            this.EditRegionButton.BackColor = System.Drawing.Color.Transparent;
-            this.EditRegionButton.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.pngflow_1;
-            this.EditRegionButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.EditRegionButton.FlatAppearance.BorderSize = 0;
-            this.EditRegionButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EditRegionButton.Location = new System.Drawing.Point(670, 71);
-            this.EditRegionButton.Name = "EditRegionButton";
-            this.EditRegionButton.Size = new System.Drawing.Size(24, 24);
-            this.EditRegionButton.TabIndex = 17;
-            this.EditRegionButton.UseVisualStyleBackColor = false;
-            this.EditRegionButton.Click += new System.EventHandler(this.EditRegionButton_Click);
+            this.EditRoomBedsCountButton.Click += new System.EventHandler(this.EditRoomBedsCountButton_Click);
             // 
             // EditNameButton
             // 
@@ -400,31 +228,32 @@
             this.EditNameButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.EditNameButton.FlatAppearance.BorderSize = 0;
             this.EditNameButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EditNameButton.Location = new System.Drawing.Point(670, 3);
+            this.EditNameButton.Location = new System.Drawing.Point(747, 3);
             this.EditNameButton.Name = "EditNameButton";
             this.EditNameButton.Size = new System.Drawing.Size(24, 24);
             this.EditNameButton.TabIndex = 16;
             this.EditNameButton.UseVisualStyleBackColor = false;
             this.EditNameButton.Click += new System.EventHandler(this.EditNameButton_Click);
             // 
-            // SaveButton
+            // SaveLocationInfoButton
             // 
-            this.SaveButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
-            this.SaveButton.FlatAppearance.BorderSize = 0;
-            this.SaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SaveButton.ForeColor = System.Drawing.Color.White;
-            this.SaveButton.Location = new System.Drawing.Point(503, 630);
-            this.SaveButton.Name = "SaveButton";
-            this.SaveButton.Size = new System.Drawing.Size(161, 38);
-            this.SaveButton.TabIndex = 15;
-            this.SaveButton.Text = "Сохранить";
-            this.SaveButton.UseVisualStyleBackColor = false;
-            this.SaveButton.Visible = false;
+            this.SaveLocationInfoButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
+            this.SaveLocationInfoButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.SaveLocationInfoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SaveLocationInfoButton.ForeColor = System.Drawing.Color.White;
+            this.SaveLocationInfoButton.Location = new System.Drawing.Point(556, 626);
+            this.SaveLocationInfoButton.Name = "SaveLocationInfoButton";
+            this.SaveLocationInfoButton.Size = new System.Drawing.Size(178, 44);
+            this.SaveLocationInfoButton.TabIndex = 15;
+            this.SaveLocationInfoButton.Text = "Сохранить";
+            this.SaveLocationInfoButton.UseVisualStyleBackColor = false;
+            this.SaveLocationInfoButton.Visible = false;
+            this.SaveLocationInfoButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
             // CardsCountTextBox
             // 
             this.CardsCountTextBox.Enabled = false;
-            this.CardsCountTextBox.Location = new System.Drawing.Point(340, 571);
+            this.CardsCountTextBox.Location = new System.Drawing.Point(340, 161);
             this.CardsCountTextBox.Margin = new System.Windows.Forms.Padding(3, 8, 3, 3);
             this.CardsCountTextBox.Name = "CardsCountTextBox";
             this.CardsCountTextBox.Size = new System.Drawing.Size(67, 33);
@@ -435,7 +264,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.Gray;
-            this.label3.Location = new System.Drawing.Point(22, 574);
+            this.label3.Location = new System.Drawing.Point(22, 164);
             this.label3.Margin = new System.Windows.Forms.Padding(186, 37, 3, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(312, 25);
@@ -445,8 +274,8 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(366, 468);
-            this.label2.Margin = new System.Windows.Forms.Padding(186, 24, 3, 0);
+            this.label2.Location = new System.Drawing.Point(398, 58);
+            this.label2.Margin = new System.Windows.Forms.Padding(186, 22, 3, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(182, 25);
             this.label2.TabIndex = 12;
@@ -455,154 +284,334 @@
             // BedsCountTextBox
             // 
             this.BedsCountTextBox.Enabled = false;
-            this.BedsCountTextBox.Location = new System.Drawing.Point(343, 501);
+            this.BedsCountTextBox.Location = new System.Drawing.Point(376, 91);
             this.BedsCountTextBox.Margin = new System.Windows.Forms.Padding(20, 8, 3, 3);
             this.BedsCountTextBox.Name = "BedsCountTextBox";
-            this.BedsCountTextBox.Size = new System.Drawing.Size(321, 33);
+            this.BedsCountTextBox.Size = new System.Drawing.Size(358, 33);
             this.BedsCountTextBox.TabIndex = 11;
             // 
             // RoomCountTextBox
             // 
             this.RoomCountTextBox.Enabled = false;
-            this.RoomCountTextBox.Location = new System.Drawing.Point(0, 501);
+            this.RoomCountTextBox.Location = new System.Drawing.Point(0, 91);
             this.RoomCountTextBox.Margin = new System.Windows.Forms.Padding(3, 8, 3, 3);
             this.RoomCountTextBox.Name = "RoomCountTextBox";
-            this.RoomCountTextBox.Size = new System.Drawing.Size(320, 33);
+            this.RoomCountTextBox.Size = new System.Drawing.Size(353, 33);
             this.RoomCountTextBox.TabIndex = 10;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 468);
-            this.label1.Margin = new System.Windows.Forms.Padding(146, 24, 3, 0);
+            this.label1.Location = new System.Drawing.Point(22, 58);
+            this.label1.Margin = new System.Windows.Forms.Padding(146, 22, 3, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(205, 25);
             this.label1.TabIndex = 9;
             this.label1.Text = "Количество комнат";
-            // 
-            // BuildTextBox
-            // 
-            this.BuildTextBox.Enabled = false;
-            this.BuildTextBox.Location = new System.Drawing.Point(456, 408);
-            this.BuildTextBox.Margin = new System.Windows.Forms.Padding(21, 32, 3, 3);
-            this.BuildTextBox.Name = "BuildTextBox";
-            this.BuildTextBox.Size = new System.Drawing.Size(208, 33);
-            this.BuildTextBox.TabIndex = 8;
-            // 
-            // CorpsTextBox
-            // 
-            this.CorpsTextBox.Enabled = false;
-            this.CorpsTextBox.Location = new System.Drawing.Point(226, 408);
-            this.CorpsTextBox.Margin = new System.Windows.Forms.Padding(21, 32, 3, 3);
-            this.CorpsTextBox.Name = "CorpsTextBox";
-            this.CorpsTextBox.Size = new System.Drawing.Size(206, 33);
-            this.CorpsTextBox.TabIndex = 7;
-            // 
-            // HouseTextBox
-            // 
-            this.HouseTextBox.Enabled = false;
-            this.HouseTextBox.Location = new System.Drawing.Point(0, 408);
-            this.HouseTextBox.Margin = new System.Windows.Forms.Padding(3, 32, 3, 3);
-            this.HouseTextBox.Name = "HouseTextBox";
-            this.HouseTextBox.Size = new System.Drawing.Size(202, 33);
-            this.HouseTextBox.TabIndex = 6;
-            // 
-            // StreetComboBox
-            // 
-            this.StreetComboBox.DisplayMember = "0";
-            this.StreetComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
-            this.StreetComboBox.Enabled = false;
-            this.StreetComboBox.FormattingEnabled = true;
-            this.StreetComboBox.Items.AddRange(new object[] {
-            "Регион"});
-            this.StreetComboBox.Location = new System.Drawing.Point(0, 340);
-            this.StreetComboBox.Margin = new System.Windows.Forms.Padding(3, 32, 3, 3);
-            this.StreetComboBox.Name = "StreetComboBox";
-            this.StreetComboBox.Size = new System.Drawing.Size(664, 33);
-            this.StreetComboBox.TabIndex = 5;
-            // 
-            // StreetTypeComboBox
-            // 
-            this.StreetTypeComboBox.DisplayMember = "0";
-            this.StreetTypeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
-            this.StreetTypeComboBox.Enabled = false;
-            this.StreetTypeComboBox.FormattingEnabled = true;
-            this.StreetTypeComboBox.Items.AddRange(new object[] {
-            "Регион"});
-            this.StreetTypeComboBox.Location = new System.Drawing.Point(0, 272);
-            this.StreetTypeComboBox.Margin = new System.Windows.Forms.Padding(3, 32, 3, 3);
-            this.StreetTypeComboBox.Name = "StreetTypeComboBox";
-            this.StreetTypeComboBox.Size = new System.Drawing.Size(664, 33);
-            this.StreetTypeComboBox.TabIndex = 4;
-            // 
-            // CityComboBox
-            // 
-            this.CityComboBox.DisplayMember = "0";
-            this.CityComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
-            this.CityComboBox.Enabled = false;
-            this.CityComboBox.FormattingEnabled = true;
-            this.CityComboBox.Items.AddRange(new object[] {
-            "Регион"});
-            this.CityComboBox.Location = new System.Drawing.Point(0, 204);
-            this.CityComboBox.Margin = new System.Windows.Forms.Padding(3, 32, 3, 3);
-            this.CityComboBox.Name = "CityComboBox";
-            this.CityComboBox.Size = new System.Drawing.Size(664, 33);
-            this.CityComboBox.TabIndex = 3;
-            // 
-            // StateComboBox
-            // 
-            this.StateComboBox.DisplayMember = "0";
-            this.StateComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
-            this.StateComboBox.Enabled = false;
-            this.StateComboBox.FormattingEnabled = true;
-            this.StateComboBox.Items.AddRange(new object[] {
-            "Регион"});
-            this.StateComboBox.Location = new System.Drawing.Point(0, 136);
-            this.StateComboBox.Margin = new System.Windows.Forms.Padding(3, 32, 3, 3);
-            this.StateComboBox.Name = "StateComboBox";
-            this.StateComboBox.Size = new System.Drawing.Size(664, 33);
-            this.StateComboBox.TabIndex = 2;
-            // 
-            // RegionComboBox
-            // 
-            this.RegionComboBox.DisplayMember = "0";
-            this.RegionComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
-            this.RegionComboBox.Enabled = false;
-            this.RegionComboBox.FormattingEnabled = true;
-            this.RegionComboBox.Items.AddRange(new object[] {
-            "Регион"});
-            this.RegionComboBox.Location = new System.Drawing.Point(0, 68);
-            this.RegionComboBox.Margin = new System.Windows.Forms.Padding(3, 32, 3, 3);
-            this.RegionComboBox.Name = "RegionComboBox";
-            this.RegionComboBox.Size = new System.Drawing.Size(664, 33);
-            this.RegionComboBox.TabIndex = 1;
             // 
             // NameTextBox
             // 
             this.NameTextBox.Enabled = false;
             this.NameTextBox.Location = new System.Drawing.Point(0, 0);
             this.NameTextBox.Name = "NameTextBox";
-            this.NameTextBox.Size = new System.Drawing.Size(664, 33);
+            this.NameTextBox.Size = new System.Drawing.Size(734, 33);
             this.NameTextBox.TabIndex = 0;
+            // 
+            // RoomsDataGridView
+            // 
+            this.RoomsDataGridView.AllowUserToDeleteRows = false;
+            this.RoomsDataGridView.AllowUserToResizeRows = false;
+            this.RoomsDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.RoomsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.RoomsDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.RoomsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.RoomsDataGridView.ColumnHeadersHeight = 35;
+            this.RoomsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.RoomsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column2,
+            this.RoomNumber,
+            this.BedsCount});
+            this.RoomsDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
+            this.RoomsDataGridView.Enabled = false;
+            this.RoomsDataGridView.EnableHeadersVisualStyles = false;
+            this.RoomsDataGridView.Location = new System.Drawing.Point(0, 228);
+            this.RoomsDataGridView.Margin = new System.Windows.Forms.Padding(3, 31, 3, 3);
+            this.RoomsDataGridView.Name = "RoomsDataGridView";
+            this.RoomsDataGridView.RowHeadersVisible = false;
+            this.RoomsDataGridView.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.RoomsDataGridView.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.RoomsDataGridView.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.RoomsDataGridView.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.RoomsDataGridView.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.RoomsDataGridView.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.RoomsDataGridView.RowTemplate.Height = 30;
+            this.RoomsDataGridView.Size = new System.Drawing.Size(734, 374);
+            this.RoomsDataGridView.TabIndex = 57;
+            this.RoomsDataGridView.Visible = false;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "№";
+            this.Column2.Name = "Column2";
+            this.Column2.Visible = false;
+            // 
+            // RoomNumber
+            // 
+            this.RoomNumber.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.RoomNumber.HeaderText = "Комнаты";
+            this.RoomNumber.Name = "RoomNumber";
+            this.RoomNumber.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // BedsCount
+            // 
+            this.BedsCount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle10.Format = "N0";
+            dataGridViewCellStyle10.NullValue = "0";
+            this.BedsCount.DefaultCellStyle = dataGridViewCellStyle10;
+            this.BedsCount.HeaderText = "Количество мест";
+            this.BedsCount.Name = "BedsCount";
+            this.BedsCount.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // RoomsHelpLabel
+            // 
+            this.RoomsHelpLabel.AutoEllipsis = true;
+            this.RoomsHelpLabel.AutoSize = true;
+            this.RoomsHelpLabel.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.RoomsHelpLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(87)))), ((int)(((byte)(87)))));
+            this.RoomsHelpLabel.Location = new System.Drawing.Point(760, 228);
+            this.RoomsHelpLabel.Name = "RoomsHelpLabel";
+            this.RoomsHelpLabel.Size = new System.Drawing.Size(159, 30);
+            this.RoomsHelpLabel.TabIndex = 59;
+            this.RoomsHelpLabel.Text = "Редактируйте таблицу и \r\nнажмите Сохранить";
+            this.RoomsHelpLabel.Visible = false;
+            // 
+            // EditRoomsButton
+            // 
+            this.EditRoomsButton.BackColor = System.Drawing.Color.Transparent;
+            this.EditRoomsButton.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.pngflow_1;
+            this.EditRoomsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.EditRoomsButton.FlatAppearance.BorderSize = 0;
+            this.EditRoomsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EditRoomsButton.Location = new System.Drawing.Point(747, 228);
+            this.EditRoomsButton.Name = "EditRoomsButton";
+            this.EditRoomsButton.Size = new System.Drawing.Size(24, 24);
+            this.EditRoomsButton.TabIndex = 58;
+            this.EditRoomsButton.UseVisualStyleBackColor = false;
+            this.EditRoomsButton.Click += new System.EventHandler(this.EditRoomsButton_Click);
+            // 
+            // CardPropertiesPanel
+            // 
+            this.CardPropertiesPanel.Controls.Add(this.Set2HelpButton);
+            this.CardPropertiesPanel.Controls.Add(this.Set1HelpButton);
+            this.CardPropertiesPanel.Controls.Add(this.label5);
+            this.CardPropertiesPanel.Controls.Add(this.FireSafetyCheckBox);
+            this.CardPropertiesPanel.Controls.Add(this.AllPropertiesCheckBox);
+            this.CardPropertiesPanel.Controls.Add(this.ResidenceRulesCheckBox);
+            this.CardPropertiesPanel.Controls.Add(this.GiveOutLinenCheckBox);
+            this.CardPropertiesPanel.Controls.Add(this.Set1CheckBox);
+            this.CardPropertiesPanel.Controls.Add(this.Set2CheckBox);
+            this.CardPropertiesPanel.Controls.Add(this.InstructedCheckBox);
+            this.CardPropertiesPanel.Controls.Add(this.EditCardPropertiesButton);
+            this.CardPropertiesPanel.Controls.Add(this.SaveCardPropertiesButton);
+            this.CardPropertiesPanel.Location = new System.Drawing.Point(133, 165);
+            this.CardPropertiesPanel.Margin = new System.Windows.Forms.Padding(5);
+            this.CardPropertiesPanel.Name = "CardPropertiesPanel";
+            this.CardPropertiesPanel.Size = new System.Drawing.Size(923, 686);
+            this.CardPropertiesPanel.TabIndex = 47;
+            this.CardPropertiesPanel.Visible = false;
+            // 
+            // Set2HelpButton
+            // 
+            this.Set2HelpButton.BackColor = System.Drawing.Color.Transparent;
+            this.Set2HelpButton.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.question_icon_icons_com_69315;
+            this.Set2HelpButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Set2HelpButton.FlatAppearance.BorderSize = 0;
+            this.Set2HelpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Set2HelpButton.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Set2HelpButton.Location = new System.Drawing.Point(265, 200);
+            this.Set2HelpButton.Margin = new System.Windows.Forms.Padding(5);
+            this.Set2HelpButton.Name = "Set2HelpButton";
+            this.Set2HelpButton.Size = new System.Drawing.Size(31, 31);
+            this.Set2HelpButton.TabIndex = 23;
+            this.Set2HelpButton.UseVisualStyleBackColor = false;
+            this.Set2HelpButton.Click += new System.EventHandler(this.Set2HelpButton_Click);
+            // 
+            // Set1HelpButton
+            // 
+            this.Set1HelpButton.BackColor = System.Drawing.Color.Transparent;
+            this.Set1HelpButton.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.question_icon_icons_com_69315;
+            this.Set1HelpButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Set1HelpButton.FlatAppearance.BorderSize = 0;
+            this.Set1HelpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Set1HelpButton.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Set1HelpButton.Location = new System.Drawing.Point(265, 139);
+            this.Set1HelpButton.Margin = new System.Windows.Forms.Padding(5);
+            this.Set1HelpButton.Name = "Set1HelpButton";
+            this.Set1HelpButton.Size = new System.Drawing.Size(31, 31);
+            this.Set1HelpButton.TabIndex = 22;
+            this.Set1HelpButton.UseVisualStyleBackColor = false;
+            this.Set1HelpButton.Click += new System.EventHandler(this.Set1HelpButton_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Location = new System.Drawing.Point(72, 18);
+            this.label5.Margin = new System.Windows.Forms.Padding(123, 40, 5, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(155, 25);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Свойства карт";
+            // 
+            // FireSafetyCheckBox
+            // 
+            this.FireSafetyCheckBox.AutoSize = true;
+            this.FireSafetyCheckBox.Enabled = false;
+            this.FireSafetyCheckBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.FireSafetyCheckBox.Location = new System.Drawing.Point(108, 400);
+            this.FireSafetyCheckBox.Margin = new System.Windows.Forms.Padding(5, 25, 5, 7);
+            this.FireSafetyCheckBox.Name = "FireSafetyCheckBox";
+            this.FireSafetyCheckBox.Size = new System.Drawing.Size(283, 29);
+            this.FireSafetyCheckBox.TabIndex = 16;
+            this.FireSafetyCheckBox.Text = "Пожарная безопастность";
+            this.FireSafetyCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // AllPropertiesCheckBox
+            // 
+            this.AllPropertiesCheckBox.AutoSize = true;
+            this.AllPropertiesCheckBox.Enabled = false;
+            this.AllPropertiesCheckBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AllPropertiesCheckBox.Location = new System.Drawing.Point(278, 17);
+            this.AllPropertiesCheckBox.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.AllPropertiesCheckBox.Name = "AllPropertiesCheckBox";
+            this.AllPropertiesCheckBox.Size = new System.Drawing.Size(66, 29);
+            this.AllPropertiesCheckBox.TabIndex = 12;
+            this.AllPropertiesCheckBox.Text = "Все";
+            this.AllPropertiesCheckBox.UseVisualStyleBackColor = true;
+            this.AllPropertiesCheckBox.CheckedChanged += new System.EventHandler(this.AllPropertiesCheckBox_CheckedChanged);
+            // 
+            // ResidenceRulesCheckBox
+            // 
+            this.ResidenceRulesCheckBox.AutoSize = true;
+            this.ResidenceRulesCheckBox.Enabled = false;
+            this.ResidenceRulesCheckBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ResidenceRulesCheckBox.Location = new System.Drawing.Point(105, 339);
+            this.ResidenceRulesCheckBox.Margin = new System.Windows.Forms.Padding(5, 25, 5, 7);
+            this.ResidenceRulesCheckBox.Name = "ResidenceRulesCheckBox";
+            this.ResidenceRulesCheckBox.Size = new System.Drawing.Size(244, 29);
+            this.ResidenceRulesCheckBox.TabIndex = 15;
+            this.ResidenceRulesCheckBox.Text = "Правила проживания";
+            this.ResidenceRulesCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // GiveOutLinenCheckBox
+            // 
+            this.GiveOutLinenCheckBox.AutoSize = true;
+            this.GiveOutLinenCheckBox.Enabled = false;
+            this.GiveOutLinenCheckBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.GiveOutLinenCheckBox.Location = new System.Drawing.Point(77, 83);
+            this.GiveOutLinenCheckBox.Margin = new System.Windows.Forms.Padding(5, 40, 5, 7);
+            this.GiveOutLinenCheckBox.Name = "GiveOutLinenCheckBox";
+            this.GiveOutLinenCheckBox.Size = new System.Drawing.Size(190, 29);
+            this.GiveOutLinenCheckBox.TabIndex = 13;
+            this.GiveOutLinenCheckBox.Text = "Выдавать бельё";
+            this.GiveOutLinenCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // Set1CheckBox
+            // 
+            this.Set1CheckBox.AutoSize = true;
+            this.Set1CheckBox.Enabled = false;
+            this.Set1CheckBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Set1CheckBox.Location = new System.Drawing.Point(108, 141);
+            this.Set1CheckBox.Margin = new System.Windows.Forms.Padding(5, 25, 5, 7);
+            this.Set1CheckBox.Name = "Set1CheckBox";
+            this.Set1CheckBox.Size = new System.Drawing.Size(147, 29);
+            this.Set1CheckBox.TabIndex = 17;
+            this.Set1CheckBox.Text = "Комплект-1";
+            this.Set1CheckBox.UseVisualStyleBackColor = true;
+            // 
+            // Set2CheckBox
+            // 
+            this.Set2CheckBox.AutoSize = true;
+            this.Set2CheckBox.Enabled = false;
+            this.Set2CheckBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Set2CheckBox.Location = new System.Drawing.Point(108, 202);
+            this.Set2CheckBox.Margin = new System.Windows.Forms.Padding(5, 25, 5, 7);
+            this.Set2CheckBox.Name = "Set2CheckBox";
+            this.Set2CheckBox.Size = new System.Drawing.Size(147, 29);
+            this.Set2CheckBox.TabIndex = 18;
+            this.Set2CheckBox.Text = "Комплект-2";
+            this.Set2CheckBox.UseVisualStyleBackColor = true;
+            // 
+            // InstructedCheckBox
+            // 
+            this.InstructedCheckBox.AutoSize = true;
+            this.InstructedCheckBox.Enabled = false;
+            this.InstructedCheckBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.InstructedCheckBox.Location = new System.Drawing.Point(77, 278);
+            this.InstructedCheckBox.Margin = new System.Windows.Forms.Padding(5, 40, 5, 7);
+            this.InstructedCheckBox.Name = "InstructedCheckBox";
+            this.InstructedCheckBox.Size = new System.Drawing.Size(257, 29);
+            this.InstructedCheckBox.TabIndex = 14;
+            this.InstructedCheckBox.Text = "Проходить инструктаж";
+            this.InstructedCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // SaveCardPropertiesButton
+            // 
+            this.SaveCardPropertiesButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
+            this.SaveCardPropertiesButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.SaveCardPropertiesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SaveCardPropertiesButton.ForeColor = System.Drawing.Color.White;
+            this.SaveCardPropertiesButton.Location = new System.Drawing.Point(489, 608);
+            this.SaveCardPropertiesButton.Name = "SaveCardPropertiesButton";
+            this.SaveCardPropertiesButton.Size = new System.Drawing.Size(201, 44);
+            this.SaveCardPropertiesButton.TabIndex = 60;
+            this.SaveCardPropertiesButton.Text = "Сохранить";
+            this.SaveCardPropertiesButton.UseVisualStyleBackColor = false;
+            this.SaveCardPropertiesButton.Visible = false;
+            // 
+            // EditCardPropertiesButton
+            // 
+            this.EditCardPropertiesButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(82)))), ((int)(((byte)(119)))));
+            this.EditCardPropertiesButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.EditCardPropertiesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EditCardPropertiesButton.ForeColor = System.Drawing.Color.White;
+            this.EditCardPropertiesButton.Location = new System.Drawing.Point(489, 608);
+            this.EditCardPropertiesButton.Name = "EditCardPropertiesButton";
+            this.EditCardPropertiesButton.Size = new System.Drawing.Size(201, 44);
+            this.EditCardPropertiesButton.TabIndex = 61;
+            this.EditCardPropertiesButton.Text = "Редактировать";
+            this.EditCardPropertiesButton.UseVisualStyleBackColor = false;
+            this.EditCardPropertiesButton.Click += new System.EventHandler(this.EditCardPropertiesButton_Click);
             // 
             // LocationInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1013, 894);
-            this.Controls.Add(this.LocationInfoPanel);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.ClientSize = new System.Drawing.Size(1093, 894);
             this.Controls.Add(this.Analyticslabel);
             this.Controls.Add(this.CardPropertiesLabel);
             this.Controls.Add(this.LocationDataLabel);
             this.Controls.Add(this.CustomerLocationNameLabel);
+            this.Controls.Add(this.CardPropertiesPanel);
+            this.Controls.Add(this.LocationInfoPanel);
             this.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(6);
-            this.MinimumSize = new System.Drawing.Size(1029, 933);
             this.Name = "LocationInfoForm";
             this.Text = "LocationInfoForm";
             this.LocationInfoPanel.ResumeLayout(false);
             this.LocationInfoPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RoomsDataGridView)).EndInit();
+            this.CardPropertiesPanel.ResumeLayout(false);
+            this.CardPropertiesPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -616,38 +625,37 @@
         private System.Windows.Forms.Label Analyticslabel;
         private System.Windows.Forms.Panel LocationInfoPanel;
         private System.Windows.Forms.TextBox NameTextBox;
-        private System.Windows.Forms.ComboBox RegionComboBox;
-        private System.Windows.Forms.ComboBox StreetComboBox;
-        private System.Windows.Forms.ComboBox StreetTypeComboBox;
-        private System.Windows.Forms.ComboBox CityComboBox;
-        private System.Windows.Forms.ComboBox StateComboBox;
-        private System.Windows.Forms.TextBox BuildTextBox;
-        private System.Windows.Forms.TextBox CorpsTextBox;
-        private System.Windows.Forms.TextBox HouseTextBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox BedsCountTextBox;
         private System.Windows.Forms.TextBox RoomCountTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox CardsCountTextBox;
-        private System.Windows.Forms.Button SaveButton;
+        private System.Windows.Forms.Button SaveLocationInfoButton;
         private System.Windows.Forms.Button EditNameButton;
-        private System.Windows.Forms.Button EditHouseCorpsBuildButton;
-        private System.Windows.Forms.Button EditStreetButton;
-        private System.Windows.Forms.Button EditStreetTypeButton;
-        private System.Windows.Forms.Button EditCityButton;
-        private System.Windows.Forms.Button EditStateButton;
-        private System.Windows.Forms.Button EditRegionButton;
         private System.Windows.Forms.Button EditRoomBedsCountButton;
         private System.Windows.Forms.Button EditCardsCountButton;
         private System.Windows.Forms.Label NameHelpLabel;
         private System.Windows.Forms.Label CardsCountHelpLabel;
         private System.Windows.Forms.Label RoomBedsCountHelpLabel;
-        private System.Windows.Forms.Label HouseCorpsBuildHelpLabel;
-        private System.Windows.Forms.Label StreetHelpLabel;
-        private System.Windows.Forms.Label StreetTypeHelpLabel;
-        private System.Windows.Forms.Label CityHelpLabel;
-        private System.Windows.Forms.Label StateHelpLabel;
-        private System.Windows.Forms.Label RegionHelpLabel;
+        private System.Windows.Forms.DataGridView RoomsDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RoomNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BedsCount;
+        private System.Windows.Forms.Label RoomsHelpLabel;
+        private System.Windows.Forms.Button EditRoomsButton;
+        private System.Windows.Forms.Panel CardPropertiesPanel;
+        private System.Windows.Forms.Button Set2HelpButton;
+        private System.Windows.Forms.Button Set1HelpButton;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.CheckBox FireSafetyCheckBox;
+        private System.Windows.Forms.CheckBox AllPropertiesCheckBox;
+        private System.Windows.Forms.CheckBox ResidenceRulesCheckBox;
+        private System.Windows.Forms.CheckBox GiveOutLinenCheckBox;
+        private System.Windows.Forms.CheckBox Set1CheckBox;
+        private System.Windows.Forms.CheckBox Set2CheckBox;
+        private System.Windows.Forms.CheckBox InstructedCheckBox;
+        private System.Windows.Forms.Button EditCardPropertiesButton;
+        private System.Windows.Forms.Button SaveCardPropertiesButton;
     }
 }
