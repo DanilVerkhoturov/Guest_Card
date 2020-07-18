@@ -188,6 +188,18 @@
     <Compile Include="Applications\InfoUserForm.Designer.cs">
       <DependentUpon>InfoUserForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Guest\GuestViewe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Guest\GuestViewe.Designer.cs">
+      <DependentUpon>GuestViewe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Guest\NewGuest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Guest\NewGuest.Designer.cs">
+      <DependentUpon>NewGuest.cs</DependentUpon>
+    </Compile>
     <Compile Include="MyColors.cs" />
     <Compile Include="NotificationsForm.cs">
       <SubType>Form</SubType>
@@ -279,6 +291,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Applications\ShowCurrentApplication.resx">
       <DependentUpon>ShowCurrentApplication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Guest\GuestViewe.resx">
+      <DependentUpon>GuestViewe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Guest\NewGuest.resx">
+      <DependentUpon>NewGuest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NotificationsForm.resx">
       <DependentUpon>NotificationsForm.cs</DependentUpon>
@@ -382,5 +400,6 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
