@@ -1,5 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
+using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -7,11 +8,21 @@ namespace Admin_Panel_Hotel
 {
     public partial class AddCustomer : Form
     {
+        /// <summary>
+        /// Таблица со всеми добавленными комнатами во всех локациях.
+        /// </summary>
+        private static DataTable AddedRooms = new DataTable();
+        private static long? LastRoomId = null;
         private static int EmailsCount = 1;
 
         public AddCustomer()
         {
             InitializeComponent();
+
+            // Создание столбцов в таблице.
+            AddedRooms.Columns.Add("RoomNumber");
+            AddedRooms.Columns.Add("BedsCount");
+            AddedRooms.Columns.Add("id");
 
             OpenCustomerInfoPanel();
 
@@ -21,8 +32,6 @@ namespace Admin_Panel_Hotel
             Functions.SetPlaceholderTextBox(LocationNameTextBox, "Название локации");
             Functions.SetPlaceholderTextBox(RoomCountTextBox, "Количество комнат");
             Functions.SetPlaceholderTextBox(BedsCountTextBox, "Количество мест");
-            Functions.SetPlaceholderTextBox(RoomNumberTextBox0, "Номер комнаты");
-            Functions.SetPlaceholderTextBox(BedsCountTextBox0, "Количество мест");
             Functions.SetPlaceholderTextBox(EmailNameTextBox0, "Имя заказчика");
             Functions.SetPlaceholderTextBox(EmailTextBox0, "Электронная почта заказчика");
             Functions.SetPlaceholderTextBox(SubDivisionNameTextBox, "Наименование организации");
@@ -33,14 +42,12 @@ namespace Admin_Panel_Hotel
             Functions.SetPlaceholderDateTimePicker(FromContractTimeDateTimePicker, "Введите дату");
             Functions.SetPlaceholderDateTimePicker(ToContractTimeDateTimePicker, "Введите дату");
 
-            Functions.NewlineProcessing(RoomsDataGridView, new string[] { "1", "Номер комнаты", "Количество спальных мест" });
+            Functions.NewlineProcessing(RoomsDataGridView, new string[] { "1", "Номер комнаты", "Количество спальных мест", null });
 
             // Установка ограничений для текстовых полей.
             Functions.OnlyNumbersInTextBox(CardCountTextBox);
             Functions.OnlyNumbersInTextBox(RoomCountTextBox);
             Functions.OnlyNumbersInTextBox(BedsCountTextBox);
-            Functions.OnlyNumbersInTextBox(RoomNumberTextBox0);
-            Functions.OnlyNumbersInTextBox(BedsCountTextBox0);
 
             // Установка подсказок обязательных полей.
             NameErrorProvider.SetError(NameTextBox, "* - обязательное поле");
@@ -411,14 +418,20 @@ namespace Admin_Panel_Hotel
         {
             if (LocationNameTextBox.TextLength > 0 && LocationNameTextBox.Text != LocationNameTextBox.Tag.ToString()
                 && RoomCountTextBox.TextLength > 0 && RoomCountTextBox.Text != RoomCountTextBox.Tag.ToString()
-                && BedsCountTextBox.TextLength > 0 && BedsCountTextBox.Text != BedsCountTextBox.Tag.ToString()) // Если все обязательные поля заполнены.
+                && BedsCountTextBox.TextLength > 0 && BedsCountTextBox.Text != BedsCountTextBox.Tag.ToString()
+                && CheckAddRoomsData()) // Если все обязательные поля заполнены.
             {
-                int lastRow = LocationsDataGridView.Rows.GetLastRow(DataGridViewElementStates.Visible);
-                LocationsDataGridView.Rows.Add(lastRow + 2
+                LocationsDataGridView.Rows.Add(LocationsDataGridView.Rows.Count + 1
                     , LocationNameTextBox.Text
                     , RoomCountTextBox.Text.Trim()
                     , BedsCountTextBox.Text.Trim()
                     , CardCountTextBox.Text.Trim());
+
+                for (int i = 0; i < RoomsDataGridView.Rows.Count; i++)
+                {
+                    AddedRooms.Rows.Add(RoomsDataGridView[1, i].Value, RoomsDataGridView[2, i].Value, RoomsDataGridView[3, i].Value);
+                    var a = AddedRooms.Rows[i].ItemArray;
+                }
 
                 return true;
             }
@@ -426,6 +439,37 @@ namespace Admin_Panel_Hotel
             {
                 return false;
             }
+        }
+
+        /// <summary>
+        /// Проверка заполнения данных в добавленных комнатах.
+        /// </summary>
+        /// <returns>True - если все данные заполнены. False - если есть незаполненные области.</returns>
+        private bool CheckAddRoomsData()
+        {
+            // Проверка заполнения всех видимых столбцов.
+            for (int i = 0; i < RoomsDataGridView.Rows.Count - 1; i++)
+            {
+                try
+                {
+                    // Если в ячейке нет данных или написан текст подсказки.
+                    if (RoomsDataGridView[1, i].Value == null
+                        || RoomsDataGridView[1, i].Value.ToString().Trim().ToLower() == RoomsDataGridView.Columns[1].ToolTipText.ToLower()
+                        || !int.TryParse(RoomsDataGridView[1, i].Value.ToString().Trim().ToLower(), out int roomNumber)
+                        || RoomsDataGridView[2, i].Value == null
+                        || RoomsDataGridView[2, i].Value.ToString().Trim().ToLower() == RoomsDataGridView.Columns[2].ToolTipText.ToLower()
+                        || !int.TryParse(RoomsDataGridView[2, i].Value.ToString().Trim().ToLower(), out int bedsCount))
+                    {
+                        return false;
+                    }
+                }
+                catch (Exception)
+                {
+                    return false;
+                    throw;
+                }
+            }
+            return true;
         }
 
         private void LocationNameTextBox_TextChanged(object sender, EventArgs e)
@@ -475,6 +519,8 @@ namespace Admin_Panel_Hotel
                 RoomCountTextBox.Text = RoomCountTextBox.Tag.ToString();
                 BedsCountTextBox.Text = BedsCountTextBox.Tag.ToString();
                 CardCountTextBox.Text = "0";
+                AddRoomsLabel.Visible = false;
+                RoomsDataGridView.Visible = false;
             }
             else
             {
@@ -487,84 +533,47 @@ namespace Admin_Panel_Hotel
         /// </summary>
         private void VisibleAddRooms()
         {
-            RoomsPanel.Controls.Clear();
-            RoomsPanel.Controls.Add(RoomNumberTextBox0);
-            RoomsPanel.Controls.Add(BedsCountTextBox0);
-
-            ErrorProvider roomErrorProvider = new ErrorProvider();
-            roomErrorProvider.Icon = Properties.Resources.exclamation_mark;
-            roomErrorProvider.BlinkStyle = ErrorBlinkStyle.NeverBlink;
-            roomErrorProvider.SetIconPadding(RoomNumberTextBox0, 10);
-            roomErrorProvider.SetError(RoomNumberTextBox0, "* - обязательное поле");
-
-            ErrorProvider bedsCountErrorProvider = new ErrorProvider();
-            bedsCountErrorProvider.Icon = Properties.Resources.exclamation_mark;
-            bedsCountErrorProvider.BlinkStyle = ErrorBlinkStyle.NeverBlink;
-            bedsCountErrorProvider.SetIconPadding(BedsCountTextBox0, 10);
-            bedsCountErrorProvider.SetError(BedsCountTextBox0, "* - обязательное поле");
+            AddCustomerLocationPanel.Focus();
+            RoomsDataGridView.Rows.Clear();
 
             if (LocationNameTextBox.TextLength > 0 && LocationNameTextBox.Text != LocationNameTextBox.Tag.ToString()
                 && RoomCountTextBox.TextLength > 0 && RoomCountTextBox.Text != RoomCountTextBox.Tag.ToString()
                 && BedsCountTextBox.TextLength > 0 && BedsCountTextBox.Text != BedsCountTextBox.Tag.ToString()) // Если заполнены все обязательные поля.
             {
-                for (int i = /*1*/ 0; i < Convert.ToInt32(RoomCountTextBox.Text); i++)
+                for (int i = 0; i < Convert.ToInt32(RoomCountTextBox.Text); i++)
                 {
                     int row = RoomsDataGridView.Rows.Add();
                     RoomsDataGridView[1, row].ErrorText = "* - обязательное поле";
                     RoomsDataGridView[2, row].ErrorText = "* - обязательное поле";
 
-                    // TODO: Удалить если это не нужно.
-                    // Создание полей "Номер комнаты" и "Количество мест".
-                    //TextBox lastBedsCountTextBox = RoomsPanel.Controls[RoomsPanel.Controls.Count - 1] as TextBox;
-                    //TextBox lastRoomTextBox = RoomsPanel.Controls[RoomsPanel.Controls.Count - 2] as TextBox;
-
-                    //TextBox roomTextBox = new TextBox();
-                    //roomTextBox.Size = lastRoomTextBox.Size;
-                    //roomTextBox.Margin = lastRoomTextBox.Margin;
-                    //roomTextBox.Location = new Point(0, lastRoomTextBox.Location.Y + lastRoomTextBox.Size.Height + lastRoomTextBox.Margin.Top);
-                    //roomTextBox.Name = $"RoomNumberTextBox{i}";
-                    //RoomsPanel.Controls.Add(roomTextBox);
-
-                    //TextBox bedsCountTextBox = new TextBox();
-                    //bedsCountTextBox.Size = lastBedsCountTextBox.Size;
-                    //bedsCountTextBox.Margin = lastBedsCountTextBox.Margin;
-                    //bedsCountTextBox.Location = new Point(lastBedsCountTextBox.Location.X, lastBedsCountTextBox.Location.Y + lastBedsCountTextBox.Size.Height + lastBedsCountTextBox.Margin.Top);
-                    //bedsCountTextBox.Name = $"BedsCountTextBox{i}";
-                    //RoomsPanel.Controls.Add(bedsCountTextBox);
-
-                    //// Установка плейсхолдера для текстовых полей.
-                    //Functions.SetPlaceholderTextBox(roomTextBox, "Номер комнаты");
-                    //Functions.SetPlaceholderTextBox(bedsCountTextBox, "Количество мест");
-
-                    //// Установка ограничений для текстовых полей.
-                    //Functions.OnlyNumbersInTextBox(roomTextBox);
-                    //Functions.OnlyNumbersInTextBox(bedsCountTextBox);
-
-                    //roomErrorProvider.SetIconPadding(roomTextBox, 10);
-                    //roomErrorProvider.SetError(roomTextBox, "* - обязательное поле");
-
-                    //bedsCountErrorProvider.SetIconPadding(bedsCountTextBox, 10);
-                    //bedsCountErrorProvider.SetError(bedsCountTextBox, "* - обязательное поле");
+                    if (LastRoomId == null)
+                    {
+                        RoomsDataGridView[3, row].Value = 0;
+                        LastRoomId = 0;
+                    }
+                    else
+                    {
+                        RoomsDataGridView[3, row].Value = ++LastRoomId;
+                    }
                 }
 
                 AddRoomsLabel.Visible = true;
                 RoomsDataGridView.Visible = true;
-                //RoomsPanel.Visible = true;
             }
         }
 
-        private void RoomsDataGridView_CellLeave(object sender, DataGridViewCellEventArgs e)
+        private void RoomsDataGridView_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            // UNDONE: Код работает некорректно.
             // Если закончилось редактирование не первого столбца (номер строки) и в ячейке нет текста или в отредактированной ячейке есть текст, который является подсказкой.
             if (e.ColumnIndex != 0 && (RoomsDataGridView[e.ColumnIndex, e.RowIndex].Value == null || (RoomsDataGridView[e.ColumnIndex, e.RowIndex].Value != null
-                && RoomsDataGridView[e.ColumnIndex, e.RowIndex].Value.ToString() == RoomsDataGridView[e.ColumnIndex, e.RowIndex].ToolTipText)))
+                && (RoomsDataGridView[e.ColumnIndex, e.RowIndex].Value.ToString().Trim() == RoomsDataGridView.Columns[e.ColumnIndex].ToolTipText || !int.TryParse(RoomsDataGridView[e.ColumnIndex, e.RowIndex].Value.ToString(), out int count)))))
             {
                 RoomsDataGridView[e.ColumnIndex, e.RowIndex].ErrorText = "* - обязательное поле";
             }
             else
             {
                 RoomsDataGridView[e.ColumnIndex, e.RowIndex].ErrorText = null;
+                var a = RoomsDataGridView[e.ColumnIndex, e.RowIndex].Value.ToString().Trim();
             }
         }
 
