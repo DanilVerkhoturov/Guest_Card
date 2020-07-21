@@ -38,7 +38,7 @@ namespace Admin_Panel_Hotel
         {
             // Если подключение к БД стало закрытым, то открываем его.
             if (e.CurrentState == ConnectionState.Closed)
-                Functions.Connection.Open();
+                Connection.Open();
         }
 
         /// <summary>
@@ -255,9 +255,27 @@ namespace Admin_Panel_Hotel
             for (int c = 0; c < dgv.Columns.Count; c++)
             {
                 dgv.Columns[c].ToolTipText = helpTexts[c];
-                dgv.RowsAdded += new DataGridViewRowsAddedEventHandler(RowsAdded);
-                dgv.CellEnter += new DataGridViewCellEventHandler(CellEnter);
-                dgv.CellLeave += new DataGridViewCellEventHandler(CellLeave);
+                dgv.RowsAdded += RowsAdded;
+                dgv.CellEnter += CellEnter;
+                dgv.CellEndEdit += CellEndEdit;
+            }
+        }
+
+        /// <summary>
+        /// Обработка окончания редактирования ячейки.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private static void CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridView dgv = sender as DataGridView;
+
+            // Если был отредактирован не первый столбец (номер строки) и в ячейке нет текста.
+            if (e.ColumnIndex != 0 && (dgv[e.ColumnIndex, e.RowIndex].Value == null
+                || string.IsNullOrEmpty(dgv[e.ColumnIndex, e.RowIndex].Value.ToString().Trim())
+                || dgv[e.ColumnIndex, e.RowIndex].Value.ToString().Trim().ToLower() == dgv.Columns[e.ColumnIndex].ToolTipText.ToLower()))
+            {
+                dgv[e.ColumnIndex, e.RowIndex].Value = dgv.Columns[e.ColumnIndex].ToolTipText;
             }
         }
 
@@ -301,22 +319,6 @@ namespace Admin_Panel_Hotel
             if (e.ColumnIndex != 0 && dgv[e.ColumnIndex, e.RowIndex].Value != null && dgv[e.ColumnIndex, e.RowIndex].Value.ToString() == dgv.Columns[e.ColumnIndex].ToolTipText)
             {
                 dgv[e.ColumnIndex, e.RowIndex].Value = null;
-            }
-        }
-
-        /// <summary>
-        /// Обработка окончания редактирования ячейки.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private static void CellLeave(object sender, DataGridViewCellEventArgs e)
-        {
-            DataGridView dgv = sender as DataGridView;
-
-            // Если был отредактирован не первый столбец (номер строки) и в ячейке нет текста.
-            if (e.ColumnIndex != 0 && dgv[e.ColumnIndex, e.RowIndex].Value == null)
-            {
-                dgv[e.ColumnIndex, e.RowIndex].Value = dgv.Columns[e.ColumnIndex].ToolTipText;
             }
         }
 

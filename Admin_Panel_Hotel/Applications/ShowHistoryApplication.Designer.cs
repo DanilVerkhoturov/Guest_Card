@@ -86,7 +86,7 @@
             this.PrintButton.Name = "PrintButton";
             this.PrintButton.Size = new System.Drawing.Size(107, 37);
             this.PrintButton.TabIndex = 18;
-            this.PrintButton.Text = "Печать";
+            this.PrintButton.Text = "Скачать";
             this.PrintButton.UseVisualStyleBackColor = false;
             // 
             // SendButton
