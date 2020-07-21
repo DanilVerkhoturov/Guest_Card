@@ -9,20 +9,15 @@ namespace Admin_Panel_Hotel
     public partial class AddCustomer : Form
     {
         /// <summary>
-        /// Таблица со всеми добавленными комнатами во всех локациях.
+        /// Уникальный номер заказчика. -1 если заказчик ещё не добавлен в БД.
         /// </summary>
-        private static DataTable AddedRooms = new DataTable();
-        private static long? LastRoomId = null;
+        private static long CustomerId = -1;
+        private static long LocationId = 0;
         private static int EmailsCount = 1;
 
         public AddCustomer()
         {
             InitializeComponent();
-
-            // Создание столбцов в таблице.
-            AddedRooms.Columns.Add("RoomNumber");
-            AddedRooms.Columns.Add("BedsCount");
-            AddedRooms.Columns.Add("id");
 
             OpenCustomerInfoPanel();
 
@@ -78,6 +73,11 @@ namespace Admin_Panel_Hotel
 
         #region Данные заказчика
 
+        /// <summary>
+        /// Обработка события, когда текстовое поле перестаёт быть активным полем.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void NameTextBox_Leave(object sender, EventArgs e)
         {
             if (NameTextBox.Text.Trim().Length > 0 && NameTextBox.Text != NameTextBox.Tag.ToString()) // Если в текстовом поле есть текст, который не является подсказкой.
@@ -90,6 +90,11 @@ namespace Admin_Panel_Hotel
             }
         }
 
+        /// <summary>
+        /// Обработка события, когда текстовое поле перестаёт быть активным полем.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ContractNumberTextBox_Leave(object sender, EventArgs e)
         {
             if (ContractNumberTextBox.Text.Trim().Length > 0 && ContractNumberTextBox.Text != ContractNumberTextBox.Tag.ToString()) // Если в текстовом поле есть текст, который не является подсказкой.
@@ -102,6 +107,11 @@ namespace Admin_Panel_Hotel
             }
         }
 
+        /// <summary>
+        /// Обработка события, когда текстовое поле перестаёт быть активным полем.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FromContractTimeDateTimePicker_Leave(object sender, EventArgs e)
         {
             if (FromContractTimeDateTimePicker.Format == DateTimePickerFormat.Short
@@ -128,6 +138,11 @@ namespace Admin_Panel_Hotel
             }
         }
 
+        /// <summary>
+        /// Обработка события, когда текстовое поле перестаёт быть активным полем.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ToContractTimeDateTimePicker_Leave(object sender, EventArgs e)
         {
             if (ToContractTimeDateTimePicker.Format == DateTimePickerFormat.Short
@@ -196,12 +211,27 @@ namespace Admin_Panel_Hotel
             }
         }
 
+        /// <summary>
+        /// Обработка события нажатия на ссылочную надпись.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AddEmailLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             AddEmailsFields(EmailsPanel, AddEmailLinkLabel);
         }
 
+        /// <summary>
+        /// Обработка события нажатия на кнопку.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CustomerInfoNextButton_Click(object sender, EventArgs e)
+        {
+            CheckAndAddCustomerInfo();
+        }
+
+        private void CheckAndAddCustomerInfo()
         {
             TextBox lastEmailNameTextBox = EmailsPanel.Controls[EmailsPanel.Controls.Count - 2] as TextBox;
             TextBox lastEmailTextBox = EmailsPanel.Controls[EmailsPanel.Controls.Count - 1] as TextBox;
@@ -215,10 +245,18 @@ namespace Admin_Panel_Hotel
                 && RegexUtilities.IsValidEmail(lastEmailTextBox.Text.Trim())) // Проверка заполнения всех обязательных полей на первом шаге.
             {
                 OpenSubDivisionsPanel();
-                AddLocationsButton.Enabled = true;
+                SubDivisionsButton.Enabled = true;
+
+                long event_id = Functions.SqlInsert($"INSERT INTO event(start_at, end_at, ev_type) VALUES({Functions.ToUnixTime(FromContractTimeDateTimePicker.Value)}, {Functions.ToUnixTime(ToContractTimeDateTimePicker.Value)}), 9");
+                CustomerId = Functions.SqlInsert($"INSERT INTO customer_legal_info(name, dogovor, event_id) VALUES('{NameTextBox.Text}', '{ContractNumberTextBox.Text}', {event_id})");
             }
         }
 
+        /// <summary>
+        /// Обработка события нажатия на кнопку.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CustomerInfoButton_Click(object sender, EventArgs e)
         {
             OpenCustomerInfoPanel();
@@ -251,6 +289,11 @@ namespace Admin_Panel_Hotel
 
         #region Данные подрядных организаций заказчика
 
+        /// <summary>
+        /// Обработка события нажатия на кнопку.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SubDivisionsNextButton_Click(object sender, EventArgs e)
         {
             if (SubDivisionsDataGridView.Rows.Count > 0)
@@ -263,6 +306,11 @@ namespace Admin_Panel_Hotel
             }
         }
 
+        /// <summary>
+        /// Обработка события нажатия на кнопку.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SubDivisionsButton_Click(object sender, EventArgs e)
         {
             OpenSubDivisionsPanel();
@@ -291,6 +339,11 @@ namespace Admin_Panel_Hotel
             CardPropertiesButton.ForeColor = Color.Black;
         }
 
+        /// <summary>
+        /// Обработка события нажатия на ссылочную надпись.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AddSubDivisionLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             if (SubDivisionNameTextBox.TextLength > 0 && SubDivisionNameTextBox.Text != SubDivisionNameTextBox.Tag.ToString()
@@ -317,6 +370,11 @@ namespace Admin_Panel_Hotel
             }
         }
 
+        /// <summary>
+        /// Обработка события изменения текста в текстовом поле.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SubDivisionNameTextBox_TextChanged(object sender, EventArgs e)
         {
             if (SubDivisionNameTextBox.TextLength > 0 && SubDivisionNameTextBox.Text != SubDivisionNameTextBox.Tag.ToString())
@@ -329,6 +387,11 @@ namespace Admin_Panel_Hotel
             }
         }
 
+        /// <summary>
+        /// Обработка события, когда текстовое поле перестаёт быть активным.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SubDivisionEmailNameTextBox0_Leave(object sender, EventArgs e)
         {
             if (SubDivisionEmailNameTextBox0.Text.Trim().Length > 0 && SubDivisionEmailNameTextBox0.Text != SubDivisionEmailNameTextBox0.Tag.ToString()) // Если введёно имя эл.почты.
@@ -341,6 +404,11 @@ namespace Admin_Panel_Hotel
             }
         }
 
+        /// <summary>
+        /// Обработка события, когда текстовое поле перестаёт быть активным.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SubDivisionEmailTextBox0_Leave(object sender, EventArgs e)
         {
             if (SubDivisionEmailTextBox0.TextLength > 0 && SubDivisionEmailTextBox0.Text != SubDivisionEmailTextBox0.Tag.ToString() && RegexUtilities.IsValidEmail(SubDivisionEmailTextBox0.Text.Trim()))
@@ -355,6 +423,11 @@ namespace Admin_Panel_Hotel
             }
         }
 
+        /// <summary>
+        /// Обработка движения мыши в ячейке таблицы.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SubDivisionsDataGridView_CellMouseMove(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (e.ColumnIndex == 1 || e.ColumnIndex == 4)
@@ -371,11 +444,21 @@ namespace Admin_Panel_Hotel
 
         #region Добавить локацию
 
+        /// <summary>
+        /// Обработка события нажатия на кнопку.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AddLocationsButton_Click(object sender, EventArgs e)
         {
             OpenAddCustomerLocationPanel();
         }
 
+        /// <summary>
+        /// Обработка события нажатия на кнопку.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AddLocationNextButton_Click(object sender, EventArgs e)
         {
             if (LocationsDataGridView.Rows.Count > 0)
@@ -409,7 +492,7 @@ namespace Admin_Panel_Hotel
         }
 
         /// <summary>
-        /// Добавление локации в таблицу.
+        /// Проверка заполнения обязательных полей и добавление локации в базу данных.
         /// </summary>
         /// <returns>
         /// True - если все обязательные поля заполнены и локация добавлена в таблицу. False - если заполнены не все обязательные поля.
@@ -421,16 +504,21 @@ namespace Admin_Panel_Hotel
                 && BedsCountTextBox.TextLength > 0 && BedsCountTextBox.Text != BedsCountTextBox.Tag.ToString()
                 && CheckAddRoomsData()) // Если все обязательные поля заполнены.
             {
-                LocationsDataGridView.Rows.Add(LocationsDataGridView.Rows.Count + 1
+                LocationsDataGridView.Rows.Add(LocationsDataGridView.RowCount + 1
                     , LocationNameTextBox.Text
                     , RoomCountTextBox.Text.Trim()
                     , BedsCountTextBox.Text.Trim()
                     , CardCountTextBox.Text.Trim());
+                LocationId++;
 
-                for (int i = 0; i < RoomsDataGridView.Rows.Count; i++)
+                for (int i = 0; i < RoomsDataGridView.RowCount; i++)
                 {
-                    AddedRooms.Rows.Add(RoomsDataGridView[1, i].Value, RoomsDataGridView[2, i].Value, RoomsDataGridView[3, i].Value);
-                    var a = AddedRooms.Rows[i].ItemArray;
+                    // TODO: Сделать поиск существующих комнат.
+                    if (true) // Если в БД есть такие комнаты.
+                    {
+                        // TODO: Сделать добавление комнат в локацию.
+                        //Functions.SqlInsert($"INSERT INTO ");
+                    }
                 }
 
                 return true;
@@ -447,7 +535,7 @@ namespace Admin_Panel_Hotel
         /// <returns>True - если все данные заполнены. False - если есть незаполненные области.</returns>
         private bool CheckAddRoomsData()
         {
-            // Проверка заполнения всех видимых столбцов.
+            // Проверка заполнения всех видимых ячеек.
             for (int i = 0; i < RoomsDataGridView.Rows.Count - 1; i++)
             {
                 try
@@ -472,6 +560,11 @@ namespace Admin_Panel_Hotel
             return true;
         }
 
+        /// <summary>
+        /// Обработка события изменения текста в текстовом поле.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void LocationNameTextBox_TextChanged(object sender, EventArgs e)
         {
             if (LocationNameTextBox.TextLength > 0 && LocationNameTextBox.Text != LocationNameTextBox.Tag.ToString())
@@ -484,6 +577,11 @@ namespace Admin_Panel_Hotel
             }
         }
 
+        /// <summary>
+        /// Обработка события изменения текста в текстовом поле.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void RoomCountTextBox_TextChanged(object sender, EventArgs e)
         {
             if (RoomCountTextBox.TextLength > 0 && RoomCountTextBox.Text != RoomCountTextBox.Tag.ToString())
@@ -496,6 +594,11 @@ namespace Admin_Panel_Hotel
             }
         }
 
+        /// <summary>
+        /// Обработка события изменения текста в текстовом поле.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BedsCountTextBox_TextChanged(object sender, EventArgs e)
         {
             if (BedsCountTextBox.TextLength > 0 && BedsCountTextBox.Text != BedsCountTextBox.Tag.ToString() && int.TryParse(BedsCountTextBox.Text, out int bedsCount))
@@ -511,6 +614,11 @@ namespace Admin_Panel_Hotel
             }
         }
 
+        /// <summary>
+        /// Обработка нажатия на ссылочную надпись.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AddLocationLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             if (AddLocation())
@@ -545,16 +653,7 @@ namespace Admin_Panel_Hotel
                     int row = RoomsDataGridView.Rows.Add();
                     RoomsDataGridView[1, row].ErrorText = "* - обязательное поле";
                     RoomsDataGridView[2, row].ErrorText = "* - обязательное поле";
-
-                    if (LastRoomId == null)
-                    {
-                        RoomsDataGridView[3, row].Value = 0;
-                        LastRoomId = 0;
-                    }
-                    else
-                    {
-                        RoomsDataGridView[3, row].Value = ++LastRoomId;
-                    }
+                    RoomsDataGridView[3, row].Value = LocationId;
                 }
 
                 AddRoomsLabel.Visible = true;
@@ -562,9 +661,14 @@ namespace Admin_Panel_Hotel
             }
         }
 
+        /// <summary>
+        /// Обработка окончания редактирования ячейки.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void RoomsDataGridView_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            // Если закончилось редактирование не первого столбца (номер строки) и в ячейке нет текста или в отредактированной ячейке есть текст, который является подсказкой.
+            // Если закончилось редактирование не первого столбца (номер строки) и в ячейке нет текста, или есть текст, который является подсказкой.
             if (e.ColumnIndex != 0 && (RoomsDataGridView[e.ColumnIndex, e.RowIndex].Value == null || (RoomsDataGridView[e.ColumnIndex, e.RowIndex].Value != null
                 && (RoomsDataGridView[e.ColumnIndex, e.RowIndex].Value.ToString().Trim() == RoomsDataGridView.Columns[e.ColumnIndex].ToolTipText || !int.TryParse(RoomsDataGridView[e.ColumnIndex, e.RowIndex].Value.ToString(), out int count)))))
             {
@@ -573,15 +677,25 @@ namespace Admin_Panel_Hotel
             else
             {
                 RoomsDataGridView[e.ColumnIndex, e.RowIndex].ErrorText = null;
-                var a = RoomsDataGridView[e.ColumnIndex, e.RowIndex].Value.ToString().Trim();
+                AddLocation();
             }
         }
 
+        /// <summary>
+        /// Обработка события, когда текстовое поле перестаёт быть активным.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void LocationNameTextBox_Leave(object sender, EventArgs e)
         {
             VisibleAddRooms();
         }
 
+        /// <summary>
+        /// Обработка движения мыши в ячейке таблицы.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void LocationsDataGridView_CellMouseMove(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (e.ColumnIndex == 1 || e.ColumnIndex == 5)
@@ -691,6 +805,11 @@ namespace Admin_Panel_Hotel
             }
         }
 
+        /// <summary>
+        /// Обработка события нажатия на кнопку.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AddCustomerButton_Click(object sender, EventArgs e)
         {
             if (true)

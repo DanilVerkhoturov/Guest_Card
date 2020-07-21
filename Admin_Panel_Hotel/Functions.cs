@@ -58,6 +58,26 @@ namespace Admin_Panel_Hotel
         }
 
         /// <summary>
+        /// Запрос на добавление данных в БД.
+        /// </summary>
+        /// <param name="query"></param>
+        /// <returns>Уникальный номер (id) последних добавленных данных или -1 если возникла ошибка.</returns>
+        public static long SqlInsert(string query)
+        {
+            try
+            {
+                MySqlCommand insert = new MySqlCommand(query, Connection);
+                insert.ExecuteNonQuery();
+                return insert.LastInsertedId;
+            }
+            catch (Exception)
+            {
+                return -1;
+                throw;
+            }
+        }
+
+        /// <summary>
         /// Загрузить заявки из базы данных в таблицу.
         /// </summary>
         /// <param name="dgv">Таблица, для загрузки в неё данных.</param>
@@ -74,7 +94,7 @@ namespace Admin_Panel_Hotel
 
             while (reader.Read())
             {
-                dgv.Rows.Add(reader[1].ToString(), DateTimeOffset.FromUnixTimeSeconds(Convert.ToInt64(reader[2].ToString())).DateTime.Date.ToString().Replace("00:00:00", "").Trim(), null, reader[0].ToString());
+                dgv.Rows.Add(reader[1].ToString(), FromUnixTime(Convert.ToInt32(reader[2].ToString())).Date.ToShortDateString(), null, reader[0].ToString());
             }
             reader.Close();
         }
@@ -104,8 +124,8 @@ namespace Admin_Panel_Hotel
                 int addedRow = dgv.Rows.Add(dgv.Rows.Count + 1
                     , userName
                     , tabNum
-                    , DateTimeOffset.FromUnixTimeSeconds(Convert.ToInt64(reader[3].ToString())).DateTime.Date.ToString().Replace("00:00:00", "").Trim()
-                    , DateTimeOffset.FromUnixTimeSeconds(Convert.ToInt64(reader[4].ToString())).DateTime.Date.ToString().Replace("00:00:00", "").Trim());
+                    , FromUnixTime(Convert.ToInt32(reader[3].ToString())).Date.ToShortDateString()
+                    , FromUnixTime(Convert.ToInt32(reader[4].ToString())).Date.ToShortDateString());
 
                 DataGridViewComboBoxColumn locationsComboBox = (DataGridViewComboBoxColumn)dgv.Columns["location"];
                 int addedLocation = 0;
@@ -132,6 +152,33 @@ namespace Admin_Panel_Hotel
         }
 
         #endregion
+
+        /// <summary>
+        /// Конвертировать дату в Unix-формат.
+        /// </summary>
+        /// <param name="dateTime">Дата для конвертации.</param>
+        /// <returns>Дату в формате Unixtime</returns>
+        public static int ToUnixTime(DateTime dateTime)
+        {
+            if (dateTime > new DateTime(1970, 1, 1))
+            {
+                return (int)(dateTime - new DateTime(1970, 1, 1)).TotalSeconds;
+            }
+            else
+            {
+                return -1;
+            }
+        }
+
+        /// <summary>
+        /// Получить дату из Unixtime.
+        /// </summary>
+        /// <param name="unix">Дата в формате Unixtime.</param>
+        /// <returns>Дату в виде "Дата и время".</returns>
+        public static DateTime FromUnixTime(int unix)
+        {
+            return DateTimeOffset.FromUnixTimeSeconds(unix).DateTime;
+        }
 
         /// <summary>
         /// Открыть дочернюю форму на форме.
