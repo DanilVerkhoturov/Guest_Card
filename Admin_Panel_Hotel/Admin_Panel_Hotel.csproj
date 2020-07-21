@@ -194,6 +194,12 @@
     <Compile Include="Guest\CelendarGuest.Designer.cs">
       <DependentUpon>CelendarGuest.cs</DependentUpon>
     </Compile>
+    <Compile Include="Guest\Notification\NotificationsGuest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Guest\Notification\NotificationsGuest.Designer.cs">
+      <DependentUpon>NotificationsGuest.cs</DependentUpon>
+    </Compile>
     <Compile Include="Guest\RoomsGuest.cs">
       <SubType>Form</SubType>
     </Compile>

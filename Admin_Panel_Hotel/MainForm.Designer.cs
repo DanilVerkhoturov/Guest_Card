@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.LeftMenu = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.AddButton = new System.Windows.Forms.Button();
+            this.Registrybutton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.CardsPanel = new System.Windows.Forms.Panel();
             this.MovingCardsButton = new System.Windows.Forms.Button();
@@ -62,6 +62,11 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.TopPanel = new System.Windows.Forms.Panel();
             this.UserButton = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.LeftMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             this.CardsPanel.SuspendLayout();
@@ -77,12 +82,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.TopPanel.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // LeftMenu
             // 
             this.LeftMenu.AutoScroll = true;
             this.LeftMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(82)))), ((int)(((byte)(119)))));
+            this.LeftMenu.Controls.Add(this.panel2);
+            this.LeftMenu.Controls.Add(this.button2);
             this.LeftMenu.Controls.Add(this.panel1);
             this.LeftMenu.Controls.Add(this.button1);
             this.LeftMenu.Controls.Add(this.CardsPanel);
@@ -101,50 +109,50 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.AddButton);
+            this.panel1.Controls.Add(this.Registrybutton);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 732);
             this.panel1.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(313, 89);
+            this.panel1.Size = new System.Drawing.Size(296, 89);
             this.panel1.TabIndex = 8;
             // 
-            // button3
+            // AddButton
             // 
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(0, 43);
-            this.button3.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(313, 43);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Добавить";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = true;
+            this.AddButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.AddButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.AddButton.FlatAppearance.BorderSize = 0;
+            this.AddButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddButton.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AddButton.ForeColor = System.Drawing.Color.White;
+            this.AddButton.Location = new System.Drawing.Point(0, 43);
+            this.AddButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.AddButton.Name = "AddButton";
+            this.AddButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.AddButton.Size = new System.Drawing.Size(296, 43);
+            this.AddButton.TabIndex = 3;
+            this.AddButton.Text = "Добавить";
+            this.AddButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AddButton.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // Registrybutton
             // 
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(0, 0);
-            this.button4.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.button4.Size = new System.Drawing.Size(313, 43);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "Список";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.UseVisualStyleBackColor = true;
+            this.Registrybutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.Registrybutton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Registrybutton.FlatAppearance.BorderSize = 0;
+            this.Registrybutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Registrybutton.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Registrybutton.ForeColor = System.Drawing.Color.White;
+            this.Registrybutton.Location = new System.Drawing.Point(0, 0);
+            this.Registrybutton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.Registrybutton.Name = "Registrybutton";
+            this.Registrybutton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.Registrybutton.Size = new System.Drawing.Size(296, 43);
+            this.Registrybutton.TabIndex = 2;
+            this.Registrybutton.Text = "Список";
+            this.Registrybutton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Registrybutton.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
@@ -158,7 +166,7 @@
             this.button1.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.button1.Name = "button1";
             this.button1.Padding = new System.Windows.Forms.Padding(21, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(313, 58);
+            this.button1.Size = new System.Drawing.Size(296, 58);
             this.button1.TabIndex = 7;
             this.button1.Text = "Реестр";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -173,7 +181,7 @@
             this.CardsPanel.Location = new System.Drawing.Point(0, 534);
             this.CardsPanel.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.CardsPanel.Name = "CardsPanel";
-            this.CardsPanel.Size = new System.Drawing.Size(313, 140);
+            this.CardsPanel.Size = new System.Drawing.Size(296, 140);
             this.CardsPanel.TabIndex = 6;
             // 
             // MovingCardsButton
@@ -188,7 +196,7 @@
             this.MovingCardsButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.MovingCardsButton.Name = "MovingCardsButton";
             this.MovingCardsButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.MovingCardsButton.Size = new System.Drawing.Size(313, 43);
+            this.MovingCardsButton.Size = new System.Drawing.Size(296, 43);
             this.MovingCardsButton.TabIndex = 6;
             this.MovingCardsButton.Text = "Перемещение";
             this.MovingCardsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -207,7 +215,7 @@
             this.AddCardsButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.AddCardsButton.Name = "AddCardsButton";
             this.AddCardsButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.AddCardsButton.Size = new System.Drawing.Size(313, 43);
+            this.AddCardsButton.Size = new System.Drawing.Size(296, 43);
             this.AddCardsButton.TabIndex = 3;
             this.AddCardsButton.Text = "Добавить карты";
             this.AddCardsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -226,7 +234,7 @@
             this.AllCardsButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.AllCardsButton.Name = "AllCardsButton";
             this.AllCardsButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.AllCardsButton.Size = new System.Drawing.Size(313, 43);
+            this.AllCardsButton.Size = new System.Drawing.Size(296, 43);
             this.AllCardsButton.TabIndex = 2;
             this.AllCardsButton.Text = "Все карты";
             this.AllCardsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -245,7 +253,7 @@
             this.CardsButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.CardsButton.Name = "CardsButton";
             this.CardsButton.Padding = new System.Windows.Forms.Padding(21, 0, 0, 0);
-            this.CardsButton.Size = new System.Drawing.Size(313, 58);
+            this.CardsButton.Size = new System.Drawing.Size(296, 58);
             this.CardsButton.TabIndex = 5;
             this.CardsButton.Text = "Карты";
             this.CardsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -263,7 +271,7 @@
             this.ApplicationsPanel.Location = new System.Drawing.Point(0, 256);
             this.ApplicationsPanel.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.ApplicationsPanel.Name = "ApplicationsPanel";
-            this.ApplicationsPanel.Size = new System.Drawing.Size(313, 220);
+            this.ApplicationsPanel.Size = new System.Drawing.Size(296, 220);
             this.ApplicationsPanel.TabIndex = 4;
             // 
             // DraftsButton
@@ -278,7 +286,7 @@
             this.DraftsButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.DraftsButton.Name = "DraftsButton";
             this.DraftsButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.DraftsButton.Size = new System.Drawing.Size(313, 43);
+            this.DraftsButton.Size = new System.Drawing.Size(296, 43);
             this.DraftsButton.TabIndex = 6;
             this.DraftsButton.Text = "Черновики   0";
             this.DraftsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -297,7 +305,7 @@
             this.HistoryApplicationsButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.HistoryApplicationsButton.Name = "HistoryApplicationsButton";
             this.HistoryApplicationsButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.HistoryApplicationsButton.Size = new System.Drawing.Size(313, 43);
+            this.HistoryApplicationsButton.Size = new System.Drawing.Size(296, 43);
             this.HistoryApplicationsButton.TabIndex = 5;
             this.HistoryApplicationsButton.Text = "История";
             this.HistoryApplicationsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -316,7 +324,7 @@
             this.AddApplicationButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.AddApplicationButton.Name = "AddApplicationButton";
             this.AddApplicationButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.AddApplicationButton.Size = new System.Drawing.Size(313, 43);
+            this.AddApplicationButton.Size = new System.Drawing.Size(296, 43);
             this.AddApplicationButton.TabIndex = 4;
             this.AddApplicationButton.Text = "Добавить";
             this.AddApplicationButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -335,7 +343,7 @@
             this.CurrentApplicationsButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.CurrentApplicationsButton.Name = "CurrentApplicationsButton";
             this.CurrentApplicationsButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.CurrentApplicationsButton.Size = new System.Drawing.Size(313, 43);
+            this.CurrentApplicationsButton.Size = new System.Drawing.Size(296, 43);
             this.CurrentApplicationsButton.TabIndex = 3;
             this.CurrentApplicationsButton.Text = "Текущие";
             this.CurrentApplicationsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -354,7 +362,7 @@
             this.NewApplicationsButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.NewApplicationsButton.Name = "NewApplicationsButton";
             this.NewApplicationsButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.NewApplicationsButton.Size = new System.Drawing.Size(313, 43);
+            this.NewApplicationsButton.Size = new System.Drawing.Size(296, 43);
             this.NewApplicationsButton.TabIndex = 2;
             this.NewApplicationsButton.Text = "Новые   0";
             this.NewApplicationsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -373,7 +381,7 @@
             this.ApplicationsButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.ApplicationsButton.Name = "ApplicationsButton";
             this.ApplicationsButton.Padding = new System.Windows.Forms.Padding(21, 0, 0, 0);
-            this.ApplicationsButton.Size = new System.Drawing.Size(313, 58);
+            this.ApplicationsButton.Size = new System.Drawing.Size(296, 58);
             this.ApplicationsButton.TabIndex = 3;
             this.ApplicationsButton.Text = "Заявки";
             this.ApplicationsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -388,7 +396,7 @@
             this.CustomersPanel.Location = new System.Drawing.Point(0, 108);
             this.CustomersPanel.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.CustomersPanel.Name = "CustomersPanel";
-            this.CustomersPanel.Size = new System.Drawing.Size(313, 90);
+            this.CustomersPanel.Size = new System.Drawing.Size(296, 90);
             this.CustomersPanel.TabIndex = 2;
             // 
             // AddCustomerButton
@@ -403,7 +411,7 @@
             this.AddCustomerButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.AddCustomerButton.Name = "AddCustomerButton";
             this.AddCustomerButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.AddCustomerButton.Size = new System.Drawing.Size(313, 43);
+            this.AddCustomerButton.Size = new System.Drawing.Size(296, 43);
             this.AddCustomerButton.TabIndex = 3;
             this.AddCustomerButton.Text = "Добавить заказчика";
             this.AddCustomerButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -422,7 +430,7 @@
             this.MyCustomersButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.MyCustomersButton.Name = "MyCustomersButton";
             this.MyCustomersButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.MyCustomersButton.Size = new System.Drawing.Size(313, 43);
+            this.MyCustomersButton.Size = new System.Drawing.Size(296, 43);
             this.MyCustomersButton.TabIndex = 2;
             this.MyCustomersButton.Text = "Мои заказчики";
             this.MyCustomersButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -441,7 +449,7 @@
             this.CustomersButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.CustomersButton.Name = "CustomersButton";
             this.CustomersButton.Padding = new System.Windows.Forms.Padding(21, 0, 0, 0);
-            this.CustomersButton.Size = new System.Drawing.Size(313, 58);
+            this.CustomersButton.Size = new System.Drawing.Size(296, 58);
             this.CustomersButton.TabIndex = 1;
             this.CustomersButton.Text = "Заказчики";
             this.CustomersButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -457,7 +465,7 @@
             this.PanelLogo.Location = new System.Drawing.Point(0, 0);
             this.PanelLogo.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.PanelLogo.Name = "PanelLogo";
-            this.PanelLogo.Size = new System.Drawing.Size(313, 50);
+            this.PanelLogo.Size = new System.Drawing.Size(296, 50);
             this.PanelLogo.TabIndex = 0;
             // 
             // ContentPanel
@@ -604,6 +612,90 @@
             this.UserButton.TabIndex = 0;
             this.UserButton.UseVisualStyleBackColor = true;
             // 
+            // button2
+            // 
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Roboto", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(0, 821);
+            this.button2.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.button2.Name = "button2";
+            this.button2.Padding = new System.Windows.Forms.Padding(21, 0, 0, 0);
+            this.button2.Size = new System.Drawing.Size(296, 58);
+            this.button2.TabIndex = 9;
+            this.button2.Text = "Гости";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.button5);
+            this.panel2.Controls.Add(this.button3);
+            this.panel2.Controls.Add(this.button4);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 879);
+            this.panel2.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(296, 147);
+            this.panel2.TabIndex = 10;
+            // 
+            // button3
+            // 
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(0, 43);
+            this.button3.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.button3.Name = "button3";
+            this.button3.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.button3.Size = new System.Drawing.Size(296, 43);
+            this.button3.TabIndex = 3;
+            this.button3.Text = "Текущие";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(0, 0);
+            this.button4.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.button4.Name = "button4";
+            this.button4.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.button4.Size = new System.Drawing.Size(296, 43);
+            this.button4.TabIndex = 2;
+            this.button4.Text = "Новые";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Location = new System.Drawing.Point(0, 86);
+            this.button5.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.button5.Name = "button5";
+            this.button5.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.button5.Size = new System.Drawing.Size(296, 43);
+            this.button5.TabIndex = 4;
+            this.button5.Text = "Календарь";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -638,6 +730,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.TopPanel.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -674,9 +767,14 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button AddButton;
+        private System.Windows.Forms.Button Registrybutton;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button1;
     }
 }
 
