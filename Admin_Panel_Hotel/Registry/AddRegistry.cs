@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Admin_Panel_Hotel.Guest
+namespace Admin_Panel_Hotel.Registry
 {
-    public partial class CelendarGuest : Form
+    public partial class AddRegistry : Form
     {
-        public CelendarGuest()
+        public AddRegistry()
         {
             InitializeComponent();
         }

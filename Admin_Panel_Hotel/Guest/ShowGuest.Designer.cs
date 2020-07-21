@@ -85,7 +85,6 @@
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(146, 29);
             this.radioButton1.TabIndex = 53;
-            this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Комплект-1";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
@@ -97,7 +96,6 @@
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(146, 29);
             this.radioButton2.TabIndex = 54;
-            this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Комплект-2";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
@@ -178,7 +176,7 @@
             this.AcceptButton.Text = "Подтвердить";
             this.AcceptButton.UseVisualStyleBackColor = false;
             // 
-            // GuestViewe
+            // ShowGuest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -197,7 +195,7 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(6);
-            this.Name = "GuestViewe";
+            this.Name = "ShowGuest";
             this.Text = "GuestViewe";
             this.ResumeLayout(false);
             this.PerformLayout();

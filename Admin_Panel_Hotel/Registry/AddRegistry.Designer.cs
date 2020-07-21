@@ -1,6 +1,6 @@
 ﻿namespace Admin_Panel_Hotel.Registry
 {
-    partial class AddUser
+    partial class AddRegistry
     {
         /// <summary>
         /// Required designer variable.

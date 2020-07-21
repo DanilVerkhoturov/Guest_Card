@@ -1,6 +1,6 @@
 ﻿namespace Admin_Panel_Hotel.Guest
 {
-    partial class CelendarGuest
+    partial class CalendarGuest
     {
         /// <summary>
         /// Required designer variable.

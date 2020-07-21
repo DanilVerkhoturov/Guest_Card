@@ -67,6 +67,7 @@ namespace Admin_Panel_Hotel
             try
             {
                 MySqlCommand insert = new MySqlCommand(query, Connection);
+                insert.CommandTimeout = 86400;
                 insert.ExecuteNonQuery();
                 return insert.LastInsertedId;
             }

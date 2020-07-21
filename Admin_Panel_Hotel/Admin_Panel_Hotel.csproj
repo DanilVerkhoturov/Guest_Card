@@ -188,16 +188,16 @@
     <Compile Include="Applications\InfoUserForm.Designer.cs">
       <DependentUpon>InfoUserForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Guest\CelendarGuest.cs">
+    <Compile Include="Guest\CalendarGuest.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Guest\CelendarGuest.Designer.cs">
-      <DependentUpon>CelendarGuest.cs</DependentUpon>
+    <Compile Include="Guest\CalendarGuest.Designer.cs">
+      <DependentUpon>CalendarGuest.cs</DependentUpon>
     </Compile>
-    <Compile Include="Guest\Notification\NotificationsGuest.cs">
+    <Compile Include="Guest\NotificationsGuest.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Guest\Notification\NotificationsGuest.Designer.cs">
+    <Compile Include="Guest\NotificationsGuest.Designer.cs">
       <DependentUpon>NotificationsGuest.cs</DependentUpon>
     </Compile>
     <Compile Include="Guest\RoomsGuest.cs">
@@ -265,11 +265,11 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegexUtilities.cs" />
-    <Compile Include="Registry\AddUser.cs">
+    <Compile Include="Registry\AddRegistry.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Registry\AddUser.Designer.cs">
-      <DependentUpon>AddUser.cs</DependentUpon>
+    <Compile Include="Registry\AddRegistry.Designer.cs">
+      <DependentUpon>AddRegistry.cs</DependentUpon>
     </Compile>
     <Compile Include="Registry\RegistryForm.cs">
       <SubType>Form</SubType>
@@ -322,8 +322,11 @@
     <EmbeddedResource Include="Applications\ShowCurrentApplication.resx">
       <DependentUpon>ShowCurrentApplication.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Guest\CelendarGuest.resx">
-      <DependentUpon>CelendarGuest.cs</DependentUpon>
+    <EmbeddedResource Include="Guest\CalendarGuest.resx">
+      <DependentUpon>CalendarGuest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Guest\NotificationsGuest.resx">
+      <DependentUpon>NotificationsGuest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Guest\RoomsGuest.resx">
       <DependentUpon>RoomsGuest.cs</DependentUpon>
@@ -360,8 +363,8 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Registry\AddUser.resx">
-      <DependentUpon>AddUser.cs</DependentUpon>
+    <EmbeddedResource Include="Registry\AddRegistry.resx">
+      <DependentUpon>AddRegistry.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registry\RegistryForm.resx">
       <DependentUpon>RegistryForm.cs</DependentUpon>
@@ -408,6 +411,8 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\UserCard.png" />
+    <None Include="Resources\ToAccept.png" />
     <None Include="Resources\Screenshot_1.png" />
     <None Include="Resources\user_icon-icons 1.png" />
     <None Include="Resources\User.png" />
@@ -415,6 +420,8 @@
     <None Include="Resources\check mark.ico" />
     <None Include="Resources\exclamation mark.ico" />
     <None Include="Resources\closeoutline_110831 4.png" />
+    <None Include="Resources\Accept.png" />
+    <None Include="Resources\Exclamation.png" />
     <Content Include="Resources\Line 47.png" />
     <None Include="Resources\BlueCircle.png" />
     <None Include="Resources\Line 471.png" />

@@ -63,6 +63,16 @@ namespace Admin_Panel_Hotel.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap Accept {
+            get {
+                object obj = ResourceManager.GetObject("Accept", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap BlueCircle {
             get {
                 object obj = ResourceManager.GetObject("BlueCircle", resourceCulture);
@@ -86,6 +96,16 @@ namespace Admin_Panel_Hotel.Properties {
         public static System.Drawing.Bitmap closeoutline_110831_4 {
             get {
                 object obj = ResourceManager.GetObject("closeoutline_110831_4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Exclamation {
+            get {
+                object obj = ResourceManager.GetObject("Exclamation", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -223,9 +243,29 @@ namespace Admin_Panel_Hotel.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap ToAccept {
+            get {
+                object obj = ResourceManager.GetObject("ToAccept", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap user_icon_icons_1 {
             get {
                 object obj = ResourceManager.GetObject("user_icon_icons_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap UserCard {
+            get {
+                object obj = ResourceManager.GetObject("UserCard", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
