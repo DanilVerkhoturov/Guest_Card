@@ -1,6 +1,6 @@
 ﻿namespace Admin_Panel_Hotel.Guest
 {
-    partial class GuestViewe
+    partial class ShowGuest
     {
         /// <summary>
         /// Required designer variable.

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Admin_Panel_Hotel.Guest
 {
-    public partial class GuestViewe : Form
+    public partial class CelendarGuest : Form
     {
-        public GuestViewe()
+        public CelendarGuest()
         {
             InitializeComponent();
         }

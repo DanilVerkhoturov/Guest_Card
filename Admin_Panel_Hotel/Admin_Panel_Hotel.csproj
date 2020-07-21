@@ -188,17 +188,41 @@
     <Compile Include="Applications\InfoUserForm.Designer.cs">
       <DependentUpon>InfoUserForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Guest\GuestViewe.cs">
+    <Compile Include="Guest\CelendarGuest.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Guest\GuestViewe.Designer.cs">
-      <DependentUpon>GuestViewe.cs</DependentUpon>
+    <Compile Include="Guest\CelendarGuest.Designer.cs">
+      <DependentUpon>CelendarGuest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Guest\RoomsGuest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Guest\RoomsGuest.Designer.cs">
+      <DependentUpon>RoomsGuest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Guest\ShowGuest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Guest\ShowGuest.Designer.cs">
+      <DependentUpon>ShowGuest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Guest\EvictionGuest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Guest\EvictionGuest.Designer.cs">
+      <DependentUpon>EvictionGuest.cs</DependentUpon>
     </Compile>
     <Compile Include="Guest\NewGuest.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Guest\NewGuest.Designer.cs">
       <DependentUpon>NewGuest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Guest\ShowEvictionGuest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Guest\ShowEvictionGuest.Designer.cs">
+      <DependentUpon>ShowEvictionGuest.cs</DependentUpon>
     </Compile>
     <Compile Include="MyColors.cs" />
     <Compile Include="NotificationsForm.cs">
@@ -292,8 +316,20 @@
     <EmbeddedResource Include="Applications\ShowCurrentApplication.resx">
       <DependentUpon>ShowCurrentApplication.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Guest\GuestViewe.resx">
-      <DependentUpon>GuestViewe.cs</DependentUpon>
+    <EmbeddedResource Include="Guest\CelendarGuest.resx">
+      <DependentUpon>CelendarGuest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Guest\RoomsGuest.resx">
+      <DependentUpon>RoomsGuest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Guest\ShowEvictionGuest.resx">
+      <DependentUpon>ShowEvictionGuest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Guest\ShowGuest.resx">
+      <DependentUpon>ShowGuest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Guest\EvictionGuest.resx">
+      <DependentUpon>EvictionGuest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Guest\NewGuest.resx">
       <DependentUpon>NewGuest.cs</DependentUpon>
