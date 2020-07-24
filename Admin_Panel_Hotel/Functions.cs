@@ -49,11 +49,12 @@ namespace Admin_Panel_Hotel
         public static DataTable ExecuteSql(string query)
         {
             DataTable table = new DataTable();
-            var command = Connection.CreateCommand();
+            MySqlCommand command = new MySqlCommand(query, Connection);
             command.CommandTimeout = 86400;
-            command.CommandText = query;
-            var reader = command.ExecuteReader();
+
+            MySqlDataReader reader = command.ExecuteReader();
             table.Load(reader);
+
             return table;
         }
 
@@ -112,7 +113,7 @@ namespace Admin_Panel_Hotel
                 $", (SELECT user_profile.lastname FROM user_profile WHERE user_profile.user_id = applications_user.user_id) as 'lastname'" +
                 $", (SELECT event.start_at FROM event WHERE event.id = applications_user.event_id) as 'start_at'" +
                 $", (SELECT event.end_at FROM event WHERE event.id = applications_user.event_id) as 'end_at'" +
-                $", (SELECT customer_location.name FROM customer_location WHERE customer_location.customer_id = (SELECT applications.customer_id FROM applications WHERE applications.id = {applicationId}) AND customer_location.location_id = (SELECT location_id FROM applications WHERE applications.id = {applicationId})) as 'locationname'" +
+                $", NULL as 'locationname'" +
                 $" FROM applications_user" +
                 $" WHERE application_id = {applicationId}", Connection);
             MySqlDataReader reader = select.ExecuteReader();
@@ -297,16 +298,39 @@ namespace Admin_Panel_Hotel
         /// Обработка добавления новых строк: установка номера новой строки(в первый столбец!!), заполнение подсказок.
         /// </summary>
         /// <param name = "dgv" > Объект таблицы для обработки.</param>
-        /// <param name = "helpTexts" > Тексты для подсказок столбцов (вписать попорядку для каждого столбца). Если текст для столбца не нужен - писать null!</param>
+        /// <param name = "helpTexts" >Тексты для подсказок столбцов (вписать попорядку для каждого столбца). Если текст для столбца не нужен - писать null!</param>
         public static void NewlineProcessing(DataGridView dgv, string[] helpTexts)
         {
             for (int c = 0; c < dgv.Columns.Count; c++)
             {
                 dgv.Columns[c].ToolTipText = helpTexts[c];
-                dgv.RowsAdded += RowsAdded;
-                dgv.CellEnter += CellEnter;
-                dgv.CellEndEdit += CellEndEdit;
             }
+
+            dgv.RowsAdded += RowsAdded;
+            dgv.CellEnter += CellEnter;
+            dgv.CellEndEdit += CellEndEdit;
+        }
+
+        /// <summary>
+        /// Обработка добавления новых строк: установка номера новой строки(в первый столбец!).
+        /// </summary>
+        /// <param name = "dgv" > Объект таблицы для обработки.</param>
+        public static void NewlineProcessing(DataGridView dgv)
+        {
+            dgv.RowsAdded += SetRowNumber;
+        }
+
+        /// <summary>
+        /// Обработка события добавления новой строки.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private static void SetRowNumber(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            DataGridView dgv = sender as DataGridView;
+
+            // Заполнение номера строки в первый столбец.
+            dgv[0, e.RowIndex].Value = e.RowIndex + 1;
         }
 
         /// <summary>

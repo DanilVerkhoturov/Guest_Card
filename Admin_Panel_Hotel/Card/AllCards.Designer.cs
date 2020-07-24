@@ -28,153 +28,106 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.GridTable = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.ShowUserInfo = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.CardsDataGridView = new System.Windows.Forms.DataGridView();
             this.AcceptButton = new System.Windows.Forms.Button();
-            this.PrintButton = new System.Windows.Forms.Button();
+            this.DownloadButton = new System.Windows.Forms.Button();
             this.AllCardLabel = new System.Windows.Forms.Label();
             this.FilterCardsComboBox = new System.Windows.Forms.ComboBox();
             this.CardsCountLabel = new System.Windows.Forms.Label();
             this.ShowAllLinkLabel = new System.Windows.Forms.LinkLabel();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.SearchTextBox = new System.Windows.Forms.TextBox();
-            this.CardsStatusComboBox = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.GridTable)).BeginInit();
+            this.StatusComboBox = new System.Windows.Forms.ComboBox();
+            this.ChangeStatusButton = new System.Windows.Forms.Button();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cardId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ShowUserInfo = new System.Windows.Forms.DataGridViewImageColumn();
+            this.checkBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.CardsDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // GridTable
+            // CardsDataGridView
             // 
-            this.GridTable.AllowUserToAddRows = false;
-            this.GridTable.AllowUserToDeleteRows = false;
-            this.GridTable.AllowUserToResizeRows = false;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.GridTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
-            this.GridTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.GridTable.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.GridTable.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.GridTable.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.GridTable.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.GridTable.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.GridTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            this.GridTable.ColumnHeadersHeight = 35;
-            this.GridTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.GridTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.CardsDataGridView.AllowUserToAddRows = false;
+            this.CardsDataGridView.AllowUserToDeleteRows = false;
+            this.CardsDataGridView.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.CardsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.CardsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.CardsDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.CardsDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.CardsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.CardsDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.CardsDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.CardsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.CardsDataGridView.ColumnHeadersHeight = 35;
+            this.CardsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.CardsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
+            this.Column6,
             this.Column3,
             this.Column4,
+            this.cardId,
             this.ShowUserInfo,
-            this.Column5});
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.GridTable.DefaultCellStyle = dataGridViewCellStyle10;
-            this.GridTable.EnableHeadersVisualStyles = false;
-            this.GridTable.Location = new System.Drawing.Point(76, 185);
-            this.GridTable.Margin = new System.Windows.Forms.Padding(5, 21, 5, 6);
-            this.GridTable.Name = "GridTable";
-            this.GridTable.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.GridTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
-            this.GridTable.RowHeadersVisible = false;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle12.NullValue = null;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            this.GridTable.RowsDefaultCellStyle = dataGridViewCellStyle12;
-            this.GridTable.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.GridTable.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.GridTable.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.GridTable.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
-            this.GridTable.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.GridTable.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.GridTable.RowTemplate.Height = 30;
-            this.GridTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.GridTable.Size = new System.Drawing.Size(983, 441);
-            this.GridTable.TabIndex = 26;
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Column1.FillWeight = 20F;
-            this.Column1.Frozen = true;
-            this.Column1.HeaderText = "№";
-            this.Column1.MinimumWidth = 50;
-            this.Column1.Name = "Column1";
-            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column1.Width = 57;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column2.FillWeight = 112.3096F;
-            this.Column2.HeaderText = "ID карты";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column3.HeaderText = "Статус";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column4.HeaderText = "Местонахождение";
-            this.Column4.Name = "Column4";
-            // 
-            // ShowUserInfo
-            // 
-            this.ShowUserInfo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.ShowUserInfo.HeaderText = "";
-            this.ShowUserInfo.Image = global::Admin_Panel_Hotel.Properties.Resources.pngwing_8;
-            this.ShowUserInfo.Name = "ShowUserInfo";
-            this.ShowUserInfo.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.ShowUserInfo.Width = 30;
-            // 
-            // Column5
-            // 
-            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle9.NullValue = false;
-            this.Column5.DefaultCellStyle = dataGridViewCellStyle9;
-            this.Column5.HeaderText = "";
-            this.Column5.Name = "Column5";
-            this.Column5.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column5.Visible = false;
-            this.Column5.Width = 30;
+            this.checkBoxColumn});
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.CardsDataGridView.DefaultCellStyle = dataGridViewCellStyle4;
+            this.CardsDataGridView.EnableHeadersVisualStyles = false;
+            this.CardsDataGridView.Location = new System.Drawing.Point(76, 185);
+            this.CardsDataGridView.Margin = new System.Windows.Forms.Padding(5, 21, 5, 6);
+            this.CardsDataGridView.Name = "CardsDataGridView";
+            this.CardsDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.CardsDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.CardsDataGridView.RowHeadersVisible = false;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.NullValue = null;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            this.CardsDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.CardsDataGridView.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.CardsDataGridView.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.CardsDataGridView.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CardsDataGridView.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.CardsDataGridView.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.CardsDataGridView.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.CardsDataGridView.RowTemplate.Height = 30;
+            this.CardsDataGridView.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.CardsDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.CardsDataGridView.Size = new System.Drawing.Size(983, 441);
+            this.CardsDataGridView.TabIndex = 26;
             // 
             // AcceptButton
             // 
@@ -192,20 +145,20 @@
             this.AcceptButton.UseVisualStyleBackColor = false;
             this.AcceptButton.Visible = false;
             // 
-            // PrintButton
+            // DownloadButton
             // 
-            this.PrintButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(82)))), ((int)(((byte)(119)))));
-            this.PrintButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.PrintButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PrintButton.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.PrintButton.ForeColor = System.Drawing.Color.White;
-            this.PrintButton.Location = new System.Drawing.Point(934, 44);
-            this.PrintButton.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.PrintButton.Name = "PrintButton";
-            this.PrintButton.Size = new System.Drawing.Size(125, 35);
-            this.PrintButton.TabIndex = 22;
-            this.PrintButton.Text = "Печать";
-            this.PrintButton.UseVisualStyleBackColor = false;
+            this.DownloadButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(82)))), ((int)(((byte)(119)))));
+            this.DownloadButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.DownloadButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DownloadButton.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DownloadButton.ForeColor = System.Drawing.Color.White;
+            this.DownloadButton.Location = new System.Drawing.Point(934, 44);
+            this.DownloadButton.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.DownloadButton.Name = "DownloadButton";
+            this.DownloadButton.Size = new System.Drawing.Size(125, 35);
+            this.DownloadButton.TabIndex = 22;
+            this.DownloadButton.Text = "Скачать";
+            this.DownloadButton.UseVisualStyleBackColor = false;
             // 
             // AllCardLabel
             // 
@@ -274,32 +227,113 @@
             this.SearchTextBox.TabIndex = 43;
             this.SearchTextBox.Text = "Поиск";
             // 
-            // CardsStatusComboBox
+            // StatusComboBox
             // 
-            this.CardsStatusComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CardsStatusComboBox.FormattingEnabled = true;
-            this.CardsStatusComboBox.Items.AddRange(new object[] {
+            this.StatusComboBox.DisplayMember = "name";
+            this.StatusComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.StatusComboBox.FormattingEnabled = true;
+            this.StatusComboBox.Items.AddRange(new object[] {
             "Статус"});
-            this.CardsStatusComboBox.Location = new System.Drawing.Point(76, 665);
-            this.CardsStatusComboBox.Name = "CardsStatusComboBox";
-            this.CardsStatusComboBox.Size = new System.Drawing.Size(244, 33);
-            this.CardsStatusComboBox.TabIndex = 44;
-            this.CardsStatusComboBox.Visible = false;
+            this.StatusComboBox.Location = new System.Drawing.Point(76, 665);
+            this.StatusComboBox.Name = "StatusComboBox";
+            this.StatusComboBox.Size = new System.Drawing.Size(244, 33);
+            this.StatusComboBox.TabIndex = 44;
+            this.StatusComboBox.ValueMember = "id";
             // 
-            // button1
+            // ChangeStatusButton
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(668, 44);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 3, 33, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(228, 35);
-            this.button1.TabIndex = 45;
-            this.button1.Text = "Изменить статус";
-            this.button1.UseVisualStyleBackColor = false;
+            this.ChangeStatusButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
+            this.ChangeStatusButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.ChangeStatusButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ChangeStatusButton.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ChangeStatusButton.ForeColor = System.Drawing.Color.White;
+            this.ChangeStatusButton.Location = new System.Drawing.Point(668, 44);
+            this.ChangeStatusButton.Margin = new System.Windows.Forms.Padding(3, 3, 33, 3);
+            this.ChangeStatusButton.Name = "ChangeStatusButton";
+            this.ChangeStatusButton.Size = new System.Drawing.Size(228, 35);
+            this.ChangeStatusButton.TabIndex = 45;
+            this.ChangeStatusButton.Text = "Изменить статус";
+            this.ChangeStatusButton.UseVisualStyleBackColor = false;
+            this.ChangeStatusButton.Click += new System.EventHandler(this.ChangeStatusButton_Click);
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Column1.FillWeight = 20F;
+            this.Column1.Frozen = true;
+            this.Column1.HeaderText = "№";
+            this.Column1.MinimumWidth = 50;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column1.Width = 57;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.DataPropertyName = "serial_num";
+            this.Column2.FillWeight = 112.3096F;
+            this.Column2.HeaderText = "ID карты";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column6.DataPropertyName = "short_name";
+            this.Column6.HeaderText = "Номер карты";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column3.DataPropertyName = "status";
+            this.Column3.HeaderText = "Статус";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column4
+            // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column4.DataPropertyName = "hotel_name";
+            this.Column4.HeaderText = "Местонахождение";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // cardId
+            // 
+            this.cardId.DataPropertyName = "id";
+            this.cardId.HeaderText = "cardId";
+            this.cardId.Name = "cardId";
+            this.cardId.ReadOnly = true;
+            this.cardId.Visible = false;
+            // 
+            // ShowUserInfo
+            // 
+            this.ShowUserInfo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ShowUserInfo.HeaderText = "";
+            this.ShowUserInfo.Image = global::Admin_Panel_Hotel.Properties.Resources.pngwing_8;
+            this.ShowUserInfo.Name = "ShowUserInfo";
+            this.ShowUserInfo.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ShowUserInfo.Width = 30;
+            // 
+            // checkBoxColumn
+            // 
+            this.checkBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle3.NullValue = false;
+            this.checkBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
+            this.checkBoxColumn.HeaderText = "";
+            this.checkBoxColumn.Name = "checkBoxColumn";
+            this.checkBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.checkBoxColumn.Visible = false;
+            this.checkBoxColumn.Width = 30;
             // 
             // AllCards
             // 
@@ -307,22 +341,22 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.ClientSize = new System.Drawing.Size(1093, 894);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.CardsStatusComboBox);
+            this.Controls.Add(this.ChangeStatusButton);
+            this.Controls.Add(this.StatusComboBox);
             this.Controls.Add(this.SearchTextBox);
             this.Controls.Add(this.ShowAllLinkLabel);
             this.Controls.Add(this.CardsCountLabel);
             this.Controls.Add(this.FilterCardsComboBox);
-            this.Controls.Add(this.GridTable);
+            this.Controls.Add(this.CardsDataGridView);
             this.Controls.Add(this.AcceptButton);
-            this.Controls.Add(this.PrintButton);
+            this.Controls.Add(this.DownloadButton);
             this.Controls.Add(this.AllCardLabel);
             this.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Name = "AllCards";
             this.Text = "AllCard";
             this.Load += new System.EventHandler(this.AllCards_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.GridTable)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CardsDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -330,22 +364,24 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView GridTable;
+        private System.Windows.Forms.DataGridView CardsDataGridView;
         private System.Windows.Forms.Button AcceptButton;
-        private System.Windows.Forms.Button PrintButton;
+        private System.Windows.Forms.Button DownloadButton;
         private System.Windows.Forms.Label AllCardLabel;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.ComboBox FilterCardsComboBox;
         private System.Windows.Forms.Label CardsCountLabel;
         private System.Windows.Forms.LinkLabel ShowAllLinkLabel;
         private System.Windows.Forms.TextBox SearchTextBox;
-        private System.Windows.Forms.ComboBox CardsStatusComboBox;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox StatusComboBox;
+        private System.Windows.Forms.Button ChangeStatusButton;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cardId;
         private System.Windows.Forms.DataGridViewImageColumn ShowUserInfo;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn checkBoxColumn;
     }
 }
