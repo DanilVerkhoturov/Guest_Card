@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace Admin_Panel_Hotel.Card
+namespace Admin_Panel_Hotel.Cards
 {
     public partial class AddCards : Form
     {

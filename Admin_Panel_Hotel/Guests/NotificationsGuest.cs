@@ -1,7 +1,7 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
 
-namespace Admin_Panel_Hotel.Guest.Notification
+namespace Admin_Panel_Hotel.Guests
 {
     public partial class NotificationsGuest : Form
     {

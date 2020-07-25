@@ -1,5 +1,4 @@
-﻿using Admin_Panel_Hotel.Customers;
-using System;
+﻿using System;
 using System.Windows.Forms;
 
 namespace Admin_Panel_Hotel

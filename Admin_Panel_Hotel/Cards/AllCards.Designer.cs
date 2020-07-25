@@ -1,4 +1,4 @@
-﻿namespace Admin_Panel_Hotel.Card
+﻿namespace Admin_Panel_Hotel.Cards
 {
     partial class AllCards
     {
@@ -365,7 +365,7 @@
         #endregion
 
         private System.Windows.Forms.DataGridView CardsDataGridView;
-        private System.Windows.Forms.Button AcceptButton;
+        private new System.Windows.Forms.Button AcceptButton;
         private System.Windows.Forms.Button DownloadButton;
         private System.Windows.Forms.Label AllCardLabel;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;

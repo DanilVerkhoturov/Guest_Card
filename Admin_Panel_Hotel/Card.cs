@@ -4,7 +4,7 @@ using System.Data;
 
 namespace Admin_Panel_Hotel
 {
-    class Cards
+    class Card
     {
         /// <summary>
         /// Получить список всех карт.

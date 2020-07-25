@@ -1,4 +1,4 @@
-﻿namespace Admin_Panel_Hotel.Card
+﻿namespace Admin_Panel_Hotel.Cards
 {
     partial class AddCards
     {

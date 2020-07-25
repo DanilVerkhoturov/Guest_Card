@@ -1,4 +1,4 @@
-﻿namespace Admin_Panel_Hotel.Guest
+﻿namespace Admin_Panel_Hotel.Guests
 {
     partial class ShowEvictionGuest
     {

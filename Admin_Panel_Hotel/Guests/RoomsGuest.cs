@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace Admin_Panel_Hotel.Guest
+namespace Admin_Panel_Hotel.Guests
 {
     public partial class RoomsGuest : Form
     {

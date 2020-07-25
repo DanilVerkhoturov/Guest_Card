@@ -98,6 +98,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationDB.cs" />
     <Compile Include="Applications\CurrentApplications.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,25 +111,26 @@
     <Compile Include="Applications\HistoryApplications.Designer.cs">
       <DependentUpon>HistoryApplications.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cards.cs" />
-    <Compile Include="Card\AddCards.cs">
+    <Compile Include="Card.cs" />
+    <Compile Include="Cards\AddCards.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Card\AddCards.Designer.cs">
+    <Compile Include="Cards\AddCards.Designer.cs">
       <DependentUpon>AddCards.cs</DependentUpon>
     </Compile>
-    <Compile Include="Card\AllCards.cs">
+    <Compile Include="Cards\AllCards.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Card\AllCards.Designer.cs">
+    <Compile Include="Cards\AllCards.Designer.cs">
       <DependentUpon>AllCards.cs</DependentUpon>
     </Compile>
-    <Compile Include="Card\MovingCards.cs">
+    <Compile Include="Cards\MovingCards.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Card\MovingCards.Designer.cs">
+    <Compile Include="Cards\MovingCards.Designer.cs">
       <DependentUpon>MovingCards.cs</DependentUpon>
     </Compile>
+    <Compile Include="Customer.cs" />
     <Compile Include="Customers\AddCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,46 +191,46 @@
     <Compile Include="Applications\InfoUserForm.Designer.cs">
       <DependentUpon>InfoUserForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Guest\CalendarGuest.cs">
+    <Compile Include="Guests\CalendarGuest.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Guest\CalendarGuest.Designer.cs">
+    <Compile Include="Guests\CalendarGuest.Designer.cs">
       <DependentUpon>CalendarGuest.cs</DependentUpon>
     </Compile>
-    <Compile Include="Guest\NotificationsGuest.cs">
+    <Compile Include="Guests\NotificationsGuest.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Guest\NotificationsGuest.Designer.cs">
+    <Compile Include="Guests\NotificationsGuest.Designer.cs">
       <DependentUpon>NotificationsGuest.cs</DependentUpon>
     </Compile>
-    <Compile Include="Guest\RoomsGuest.cs">
+    <Compile Include="Guests\RoomsGuest.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Guest\RoomsGuest.Designer.cs">
+    <Compile Include="Guests\RoomsGuest.Designer.cs">
       <DependentUpon>RoomsGuest.cs</DependentUpon>
     </Compile>
-    <Compile Include="Guest\ShowGuest.cs">
+    <Compile Include="Guests\ShowGuest.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Guest\ShowGuest.Designer.cs">
+    <Compile Include="Guests\ShowGuest.Designer.cs">
       <DependentUpon>ShowGuest.cs</DependentUpon>
     </Compile>
-    <Compile Include="Guest\EvictionGuest.cs">
+    <Compile Include="Guests\EvictionGuest.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Guest\EvictionGuest.Designer.cs">
+    <Compile Include="Guests\EvictionGuest.Designer.cs">
       <DependentUpon>EvictionGuest.cs</DependentUpon>
     </Compile>
-    <Compile Include="Guest\NewGuest.cs">
+    <Compile Include="Guests\NewGuest.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Guest\NewGuest.Designer.cs">
+    <Compile Include="Guests\NewGuest.Designer.cs">
       <DependentUpon>NewGuest.cs</DependentUpon>
     </Compile>
-    <Compile Include="Guest\ShowEvictionGuest.cs">
+    <Compile Include="Guests\ShowEvictionGuest.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Guest\ShowEvictionGuest.Designer.cs">
+    <Compile Include="Guests\ShowEvictionGuest.Designer.cs">
       <DependentUpon>ShowEvictionGuest.cs</DependentUpon>
     </Compile>
     <Compile Include="MyColors.cs" />
@@ -288,13 +290,13 @@
     <EmbeddedResource Include="Applications\InfoUserForm.resx">
       <DependentUpon>InfoUserForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Card\AddCards.resx">
+    <EmbeddedResource Include="Cards\AddCards.resx">
       <DependentUpon>AddCards.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Card\AllCards.resx">
+    <EmbeddedResource Include="Cards\AllCards.resx">
       <DependentUpon>AllCards.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Card\MovingCards.resx">
+    <EmbeddedResource Include="Cards\MovingCards.resx">
       <DependentUpon>MovingCards.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Customers\AddCustomer.resx">
@@ -324,25 +326,25 @@
     <EmbeddedResource Include="Applications\ShowCurrentApplication.resx">
       <DependentUpon>ShowCurrentApplication.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Guest\CalendarGuest.resx">
+    <EmbeddedResource Include="Guests\CalendarGuest.resx">
       <DependentUpon>CalendarGuest.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Guest\NotificationsGuest.resx">
+    <EmbeddedResource Include="Guests\NotificationsGuest.resx">
       <DependentUpon>NotificationsGuest.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Guest\RoomsGuest.resx">
+    <EmbeddedResource Include="Guests\RoomsGuest.resx">
       <DependentUpon>RoomsGuest.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Guest\ShowEvictionGuest.resx">
+    <EmbeddedResource Include="Guests\ShowEvictionGuest.resx">
       <DependentUpon>ShowEvictionGuest.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Guest\ShowGuest.resx">
+    <EmbeddedResource Include="Guests\ShowGuest.resx">
       <DependentUpon>ShowGuest.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Guest\EvictionGuest.resx">
+    <EmbeddedResource Include="Guests\EvictionGuest.resx">
       <DependentUpon>EvictionGuest.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Guest\NewGuest.resx">
+    <EmbeddedResource Include="Guests\NewGuest.resx">
       <DependentUpon>NewGuest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NotificationsForm.resx">
