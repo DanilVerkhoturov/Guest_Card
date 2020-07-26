@@ -2,7 +2,6 @@
 using Admin_Panel_Hotel.Cards;
 using Admin_Panel_Hotel.Guests;
 using Admin_Panel_Hotel.Registry;
-using MySql.Data.MySqlClient;
 using System;
 using System.Data;
 using System.Windows.Forms;
@@ -25,8 +24,8 @@ namespace Admin_Panel_Hotel
             Functions.Connection.StateChange += Functions.MySQLConnectionStateChange;
             Functions.Connection.Open();
 
-            NewApplicationsButton.Text = $"Новые   {GetNewApplicationsCount()}";
-            DraftsButton.Text = $"Черновики   {GetDraftApplicationsCount()}";
+            NewApplicationsButton.Text = $"Новые   {ApplicationDB.GetNewCount()}";
+            DraftsButton.Text = $"Черновики   {ApplicationDB.GetDraftCount()}";
         }
 
         #region Заказчики
@@ -87,49 +86,6 @@ namespace Admin_Panel_Hotel
         {
             SubMenuProcessing(DraftsButton, ApplicationsButton);
             Functions.OpenChildForm(new DraftApplications(), ContentPanel);
-        }
-
-        /// <summary>
-        /// Получить количество черновиков.
-        /// </summary>
-        /// <returns>Количество черновиков.</returns>
-        private static long GetDraftApplicationsCount()
-        {
-            long draftApplicationsCount = 0;
-
-            MySqlCommand select = new MySqlCommand("SELECT COUNT(*) as 'count' FROM applications WHERE applications.status_id = 3", Functions.Connection);
-            select.CommandTimeout = 86400;
-            MySqlDataReader reader = select.ExecuteReader();
-
-            while (reader.Read())
-            {
-                draftApplicationsCount = (long)reader[0];
-                break;
-            }
-            reader.Close();
-            return draftApplicationsCount;
-        }
-
-        /// <summary>
-        /// Получить количество новых заявок.
-        /// </summary>
-        /// <returns>Количество новых заявок.</returns>
-        private static long GetNewApplicationsCount()
-        {
-            long newApplicationsCount = 0;
-
-            MySqlCommand select = new MySqlCommand("SELECT COUNT(*) as 'count' FROM applications WHERE applications.status_id = 1", Functions.Connection);
-            select.CommandTimeout = 86400;
-            MySqlDataReader reader = select.ExecuteReader();
-
-            while (reader.Read())
-            {
-                newApplicationsCount = (long)reader[0];
-                break;
-            }
-            reader.Close();
-
-            return newApplicationsCount;
         }
 
         #endregion

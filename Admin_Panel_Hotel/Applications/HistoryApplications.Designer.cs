@@ -182,6 +182,7 @@
             // LocationComboBox
             // 
             this.LocationComboBox.BackColor = System.Drawing.Color.White;
+            this.LocationComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.LocationComboBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.LocationComboBox.ForeColor = System.Drawing.Color.Black;
             this.LocationComboBox.FormattingEnabled = true;
@@ -196,6 +197,7 @@
             // CustomerComboBox
             // 
             this.CustomerComboBox.BackColor = System.Drawing.Color.White;
+            this.CustomerComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CustomerComboBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CustomerComboBox.ForeColor = System.Drawing.Color.Black;
             this.CustomerComboBox.FormattingEnabled = true;

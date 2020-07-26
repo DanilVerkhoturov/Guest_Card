@@ -7,26 +7,15 @@ namespace Admin_Panel_Hotel
 {
     public partial class ShowApplicationDraft : Form
     {
-        /// <summary>
-        /// Название заказчика.
-        /// </summary>
-        public static string CustomerName;
-        /// <summary>
-        /// Дата создания заявки.
-        /// </summary>
-        public static string ApplicationDate;
-        /// <summary>
-        /// Уникальный номер заявки.
-        /// </summary>
-        public static long ApplicationId;
-
         public ShowApplicationDraft()
         {
             InitializeComponent();
-            Functions.LoadApplicationUsers(UsersDataGridView, ApplicationId);
+
+            UsersDataGridView.DataSource = ApplicationDB.GetUsers();
+
             Functions.NewlineProcessing(UsersDataGridView, new string[] { "1", "Введите ФИО", "Таб.номер", "Дата от", "Дата до", "Локация" });
 
-            ApplicationNameLabel.Text = $"Черновик > {CustomerName} - {ApplicationDate}";
+            ApplicationNameLabel.Text = $"Черновик > {Customer.Name} - {ApplicationDB.Date}";
         }
 
         private void DraftApplicationNameLabel_Click(object sender, EventArgs e)

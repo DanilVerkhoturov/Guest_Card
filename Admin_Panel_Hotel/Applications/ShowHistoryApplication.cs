@@ -6,25 +6,13 @@ namespace Admin_Panel_Hotel
 {
     public partial class ShowApplicationHistory : Form
     {
-        /// <summary>
-        /// Название заказчика.
-        /// </summary>
-        public static string CustomerName;
-        /// <summary>
-        /// Дата создания заявки.
-        /// </summary>
-        public static string ApplicationDate;
-        /// <summary>
-        /// Уникальный номер заявки.
-        /// </summary>
-        public static long ApplicationId;
-
         public ShowApplicationHistory()
         {
             InitializeComponent();
-            Functions.LoadApplicationUsers(UsersDataGridView, ApplicationId);
 
-            ApplicationNameLabel.Text = $"История заявок > {CustomerName} - {ApplicationDate}";
+            UsersDataGridView.DataSource = ApplicationDB.GetUsers();
+
+            ApplicationNameLabel.Text = $"История заявок > {Customer.Name} - {ApplicationDB.Date}";
         }
 
         private void NewApplicationsLabel_Click(object sender, EventArgs e)

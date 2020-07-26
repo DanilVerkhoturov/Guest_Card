@@ -8,19 +8,22 @@ namespace Admin_Panel_Hotel.Applications
         public CurrentApplications()
         {
             InitializeComponent();
-            Functions.LoadApplications(ApplicationsDataGridView, 2);
+
+            ApplicationsDataGridView.DataSource = ApplicationDB.GetCurrent();
 
             CustomerComboBox.SelectedIndex = 0;
+            CustomerComboBox.DataSource = Customer.GetAll();
             LocationComboBox.SelectedIndex = 0;
+            LocationComboBox.DataSource = Locations.GetAll();
         }
 
         private void ApplicationsDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (e.ColumnIndex == 2)
             {
-                ShowCurrentApplication.CustomerName = ApplicationsDataGridView[0, e.RowIndex].Value.ToString();
-                ShowCurrentApplication.ApplicationDate = ApplicationsDataGridView[1, e.RowIndex].Value.ToString();
-                ShowCurrentApplication.ApplicationId = Convert.ToInt64(ApplicationsDataGridView[3, e.RowIndex].Value.ToString());
+                Customer.Name = ApplicationsDataGridView[0, e.RowIndex].Value.ToString();
+                ApplicationDB.Date = ApplicationsDataGridView[1, e.RowIndex].Value.ToString();
+                ApplicationDB.Id = Convert.ToInt64(ApplicationsDataGridView[3, e.RowIndex].Value.ToString());
                 Functions.OpenChildForm(new ShowCurrentApplication(), MainForm.ContP);
             }
         }

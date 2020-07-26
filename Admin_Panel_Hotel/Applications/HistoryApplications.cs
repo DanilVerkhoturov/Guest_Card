@@ -8,7 +8,8 @@ namespace Admin_Panel_Hotel
         public HistoryApplications()
         {
             InitializeComponent();
-            Functions.LoadApplications(ApplicationsDataGridView, 4);
+
+            ApplicationsDataGridView.DataSource = ApplicationDB.GetHistory();
 
             CustomerComboBox.SelectedIndex = 0;
             LocationComboBox.SelectedIndex = 0;
@@ -18,9 +19,9 @@ namespace Admin_Panel_Hotel
         {
             if (e.ColumnIndex == 2)
             {
-                ShowApplicationHistory.CustomerName = ApplicationsDataGridView[0, e.RowIndex].Value.ToString();
-                ShowApplicationHistory.ApplicationDate = ApplicationsDataGridView[1, e.RowIndex].Value.ToString();
-                ShowApplicationHistory.ApplicationId = Convert.ToInt64(ApplicationsDataGridView[3, e.RowIndex].Value.ToString());
+                Customer.Name = ApplicationsDataGridView[0, e.RowIndex].Value.ToString();
+                ApplicationDB.Date = ApplicationsDataGridView[1, e.RowIndex].Value.ToString();
+                ApplicationDB.Id = Convert.ToInt64(ApplicationsDataGridView[3, e.RowIndex].Value.ToString());
                 Functions.OpenChildForm(new ShowApplicationHistory(), MainForm.ContP);
             }
         }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,10 +9,12 @@ namespace Admin_Panel_Hotel
 {
     class Customer
     {
-        private long id;
-        private string name;
+        public static long Id { get; set; }
+        public static string Name { get; set; }
 
-        public long Id { get => id; set => id = value; }
-        public string Name { get => name; set => name = value; }
+        public static DataTable GetAll()
+        {
+            return Functions.ExecuteSql("SELECT * FROM division");
+        }
     }
 }

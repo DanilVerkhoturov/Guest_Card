@@ -1,30 +1,17 @@
-﻿using MySql.Data.MySqlClient;
-using System;
+﻿using System;
 using System.Windows.Forms;
 
 namespace Admin_Panel_Hotel
 {
     public partial class ShowApplicationNew : Form
     {
-        /// <summary>
-        /// Название заказчика из заявки.
-        /// </summary>
-        public static string CustomerName;
-        /// <summary>
-        /// Дата заявки.
-        /// </summary>
-        public static string ApplicationDate;
-        /// <summary>
-        /// Уникальный номер заявки.
-        /// </summary>
-        public static long ApplicationId;
-
         public ShowApplicationNew()
         {
             InitializeComponent();
-            Functions.LoadApplicationUsers(UsersDataGridView, ApplicationId);
 
-            NewApplicationNameLabel.Text = $"Новые заявки > {CustomerName} - {ApplicationDate}";
+            UsersDataGridView.DataSource = ApplicationDB.GetUsers();
+
+            NewApplicationNameLabel.Text = $"Новые заявки > {Customer.Name} - {ApplicationDB.Date}";
         }
 
         private void NewApplicationsLabel_Click(object sender, EventArgs e)

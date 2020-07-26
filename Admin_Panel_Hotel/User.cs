@@ -5,21 +5,21 @@
     /// </summary>
     class User
     {
-        private long id;
-        private string name;
-        private string role;
+        private static long id;
+        private static string name;
+        private static string role;
 
         /// <summary>
         /// Получить уникальный номер пользователя.
         /// </summary>
-        public long GetId()
+        public static long GetId()
         {
             return id;
         }
         /// <summary>
         /// Получить ФИО пользователя.
         /// </summary>
-        public string GetName()
+        public static string GetName()
         {
             return name;
         }
@@ -27,7 +27,7 @@
         /// Получить роль пользователя.
         /// </summary>
         /// <returns></returns>
-        public string GetRole()
+        public static string GetRole()
         {
             return role;
         }

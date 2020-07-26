@@ -8,16 +8,17 @@ namespace Admin_Panel_Hotel
         public DraftApplications()
         {
             InitializeComponent();
-            Functions.LoadApplications(ApplicationsDataGridView, 3);
+
+            ApplicationsDataGridView.DataSource = ApplicationDB.GetDrafts();
         }
 
         private void DraftDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (e.ColumnIndex == 2)
             {
-                ShowApplicationDraft.CustomerName = ApplicationsDataGridView[0, e.RowIndex].Value.ToString();
-                ShowApplicationDraft.ApplicationDate = ApplicationsDataGridView[1, e.RowIndex].Value.ToString();
-                ShowApplicationDraft.ApplicationId = Convert.ToInt64(ApplicationsDataGridView[3, e.RowIndex].Value.ToString());
+                Customer.Name = ApplicationsDataGridView[0, e.RowIndex].Value.ToString();
+                ApplicationDB.Date = ApplicationsDataGridView[1, e.RowIndex].Value.ToString();
+                ApplicationDB.Id = Convert.ToInt64(ApplicationsDataGridView[3, e.RowIndex].Value.ToString());
                 Functions.OpenChildForm(new ShowApplicationDraft(), MainForm.ContP);
             }
         }
