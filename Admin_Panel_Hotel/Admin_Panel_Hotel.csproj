@@ -98,6 +98,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Accommodation\HistoryAccommodation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accommodation\HistoryAccommodation.Designer.cs">
+      <DependentUpon>HistoryAccommodation.cs</DependentUpon>
+    </Compile>
     <Compile Include="ApplicationDB.cs" />
     <Compile Include="Applications\CurrentApplications.cs">
       <SubType>Form</SubType>
@@ -197,6 +203,12 @@
     <Compile Include="Guests\CalendarGuest.Designer.cs">
       <DependentUpon>CalendarGuest.cs</DependentUpon>
     </Compile>
+    <Compile Include="Guests\CardGuest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Guests\CardGuest.Designer.cs">
+      <DependentUpon>CardGuest.cs</DependentUpon>
+    </Compile>
     <Compile Include="Guests\NotificationsGuest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -282,6 +294,9 @@
       <DependentUpon>RegistryForm.cs</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
+    <EmbeddedResource Include="Accommodation\HistoryAccommodation.resx">
+      <DependentUpon>HistoryAccommodation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Applications\CurrentApplications.resx">
       <DependentUpon>CurrentApplications.cs</DependentUpon>
     </EmbeddedResource>
@@ -329,6 +344,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Guests\CalendarGuest.resx">
       <DependentUpon>CalendarGuest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Guests\CardGuest.resx">
+      <DependentUpon>CardGuest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Guests\NotificationsGuest.resx">
       <DependentUpon>NotificationsGuest.cs</DependentUpon>

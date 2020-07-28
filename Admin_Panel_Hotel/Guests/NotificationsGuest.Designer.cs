@@ -31,8 +31,10 @@
             this.NotificationTextLabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.NotificationImagePictureBox = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NotificationImagePictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // NotificationTextLabel
@@ -66,11 +68,23 @@
             this.NotificationImagePictureBox.TabIndex = 2;
             this.NotificationImagePictureBox.TabStop = false;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Admin_Panel_Hotel.Properties.Resources.ExitPlus1;
+            this.pictureBox2.Location = new System.Drawing.Point(558, 6);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 36, 3, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(18, 19);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
+            // 
             // NotificationsGuest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(588, 359);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.NotificationImagePictureBox);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.NotificationTextLabel);
@@ -80,6 +94,7 @@
             this.Text = "NotificationsGuest";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NotificationImagePictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -89,5 +104,6 @@
         private System.Windows.Forms.Label NotificationTextLabel;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox NotificationImagePictureBox;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
