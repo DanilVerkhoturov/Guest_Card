@@ -1,6 +1,4 @@
-﻿using MySql.Data.MySqlClient;
-using System;
-using System.Data;
+﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -292,6 +290,11 @@ namespace Admin_Panel_Hotel
         /// <param name="e"></param>
         private void SubDivisionsNextButton_Click(object sender, EventArgs e)
         {
+            if (CheckSubDivisionInfo())
+            {
+                AddSubDivision();
+            }
+
             if (SubDivisionsDataGridView.Rows.Count > 0)
             {
                 OpenAddCustomerLocationPanel();
@@ -342,16 +345,52 @@ namespace Admin_Panel_Hotel
         /// <param name="e"></param>
         private void AddSubDivisionLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            if (SubDivisionNameTextBox.TextLength > 0 && SubDivisionNameTextBox.Text != SubDivisionNameTextBox.Tag.ToString()
-                && SubDivisionEmailNameTextBox0.TextLength > 0 && SubDivisionEmailNameTextBox0.Text != SubDivisionEmailNameTextBox0.Tag.ToString()
-                && SubDivisionEmailTextBox0.TextLength > 0 && SubDivisionEmailTextBox0.Text != SubDivisionEmailTextBox0.Tag.ToString()
-                && RegexUtilities.IsValidEmail(SubDivisionEmailTextBox0.Text.Trim())) // Если заполнены все обязательные поля и эл.почта введена корректно.
+            if (CheckSubDivisionInfo())
             {
+                AddSubDivision();
+            }
+        }
+
+        /// <summary>
+        /// Проверить заполнение информации подрядной организации.
+        /// </summary>
+        /// <returns>Возвращает результат проверки заполнения информации.</returns>
+        private bool CheckSubDivisionInfo()
+        {
+            if (SubDivisionNameTextBox.TextLength > 0 && SubDivisionNameTextBox.Text != SubDivisionNameTextBox.Tag.ToString()
+                            && SubDivisionEmailNameTextBox0.TextLength > 0 && SubDivisionEmailNameTextBox0.Text != SubDivisionEmailNameTextBox0.Tag.ToString()
+                            && SubDivisionEmailTextBox0.TextLength > 0 && SubDivisionEmailTextBox0.Text != SubDivisionEmailTextBox0.Tag.ToString()
+                            && RegexUtilities.IsValidEmail(SubDivisionEmailTextBox0.Text.Trim())) // Если заполнены все обязательные поля и эл.почта введена корректно.
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Добавить подрядную организацию.
+        /// </summary>
+        private void AddSubDivision()
+        {
+            if (Customer.FindSubDivision(SubDivisionNameTextBox.Text, out long subDivisionId)) // Если такая подрядная организация уже есть в базе.
+            {
+                // TODO: Сделать обновление данных подрядной организации.
+                MessageBox.Show("Такая подрядная организация уже создана. Функционал обновления данных скоро будет реализован.", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else // Если подрядной организации нет в БД.
+            {
+                subDivisionId = Customer.AddSubDivision(SubDivisionNameTextBox.Text);
+                long emailId = Customer.AddEmail(subDivisionId, SubDivisionEmailNameTextBox0.Text, SubDivisionEmailTextBox0.Text);
                 SubDivisionsDataGridView.Rows.Add(SubDivisionsDataGridView.Rows.Count + 1
                     , SubDivisionNameTextBox.Text.Trim()
                     , SubDivisionEmailNameTextBox0.Text.Trim()
                     , SubDivisionEmailTextBox0.Text.Trim()
-                    , null);
+                    , null
+                    , subDivisionId
+                    , emailId);
 
                 SubDivisionNameTextBox.Text = SubDivisionNameTextBox.Tag.ToString();
                 SubDivisionNameTextBox.ForeColor = Color.Silver;
@@ -815,7 +854,7 @@ namespace Admin_Panel_Hotel
 
                 for (int i = 1; i <= EmailsPanel.Controls.Count - 2; i += 2)
                 {
-                    Customer.AddEmails(EmailsPanel.Controls[i].Text, EmailsPanel.Controls[i + 1].Text);
+                    Customer.AddEmail(EmailsPanel.Controls[i].Text, EmailsPanel.Controls[i + 1].Text);
                 }
             }
             else
