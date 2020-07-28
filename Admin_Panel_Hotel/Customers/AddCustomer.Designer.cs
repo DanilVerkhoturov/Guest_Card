@@ -114,14 +114,14 @@
             this.SubDivisionsNextButton = new System.Windows.Forms.Button();
             this.SubDivisionNameTextBox = new System.Windows.Forms.TextBox();
             this.SubDivisionsDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewLinkColumn1 = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.EmailName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.SubDivisionNameErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.SubDivisionEmailNameErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.SubDivisionEmailErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subdivisionName = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.EmailName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.CustomerInfoPanel.SuspendLayout();
             this.EmailsPanel.SuspendLayout();
             this.AddCustomerLocationPanel.SuspendLayout();
@@ -1108,7 +1108,7 @@
             this.SubDivisionsDataGridView.ColumnHeadersVisible = false;
             this.SubDivisionsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
-            this.dataGridViewLinkColumn1,
+            this.subdivisionName,
             this.EmailName,
             this.Email,
             this.Column1});
@@ -1147,6 +1147,24 @@
             this.SubDivisionsDataGridView.TabIndex = 47;
             this.SubDivisionsDataGridView.CellMouseMove += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.SubDivisionsDataGridView_CellMouseMove);
             // 
+            // SubDivisionNameErrorProvider
+            // 
+            this.SubDivisionNameErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.SubDivisionNameErrorProvider.ContainerControl = this;
+            this.SubDivisionNameErrorProvider.Icon = ((System.Drawing.Icon)(resources.GetObject("SubDivisionNameErrorProvider.Icon")));
+            // 
+            // SubDivisionEmailNameErrorProvider
+            // 
+            this.SubDivisionEmailNameErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.SubDivisionEmailNameErrorProvider.ContainerControl = this;
+            this.SubDivisionEmailNameErrorProvider.Icon = ((System.Drawing.Icon)(resources.GetObject("SubDivisionEmailNameErrorProvider.Icon")));
+            // 
+            // SubDivisionEmailErrorProvider
+            // 
+            this.SubDivisionEmailErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.SubDivisionEmailErrorProvider.ContainerControl = this;
+            this.SubDivisionEmailErrorProvider.Icon = ((System.Drawing.Icon)(resources.GetObject("SubDivisionEmailErrorProvider.Icon")));
+            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
@@ -1156,15 +1174,15 @@
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
             this.dataGridViewTextBoxColumn1.Width = 5;
             // 
-            // dataGridViewLinkColumn1
+            // subdivisionName
             // 
-            this.dataGridViewLinkColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.subdivisionName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.dataGridViewLinkColumn1.DefaultCellStyle = dataGridViewCellStyle9;
-            this.dataGridViewLinkColumn1.HeaderText = "Название организации";
-            this.dataGridViewLinkColumn1.Name = "dataGridViewLinkColumn1";
-            this.dataGridViewLinkColumn1.ReadOnly = true;
-            this.dataGridViewLinkColumn1.VisitedLinkColor = System.Drawing.Color.Blue;
+            this.subdivisionName.DefaultCellStyle = dataGridViewCellStyle9;
+            this.subdivisionName.HeaderText = "Название организации";
+            this.subdivisionName.Name = "subdivisionName";
+            this.subdivisionName.ReadOnly = true;
+            this.subdivisionName.VisitedLinkColor = System.Drawing.Color.Blue;
             // 
             // EmailName
             // 
@@ -1190,24 +1208,6 @@
             this.Column1.ReadOnly = true;
             this.Column1.Width = 5;
             // 
-            // SubDivisionNameErrorProvider
-            // 
-            this.SubDivisionNameErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
-            this.SubDivisionNameErrorProvider.ContainerControl = this;
-            this.SubDivisionNameErrorProvider.Icon = ((System.Drawing.Icon)(resources.GetObject("SubDivisionNameErrorProvider.Icon")));
-            // 
-            // SubDivisionEmailNameErrorProvider
-            // 
-            this.SubDivisionEmailNameErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
-            this.SubDivisionEmailNameErrorProvider.ContainerControl = this;
-            this.SubDivisionEmailNameErrorProvider.Icon = ((System.Drawing.Icon)(resources.GetObject("SubDivisionEmailNameErrorProvider.Icon")));
-            // 
-            // SubDivisionEmailErrorProvider
-            // 
-            this.SubDivisionEmailErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
-            this.SubDivisionEmailErrorProvider.ContainerControl = this;
-            this.SubDivisionEmailErrorProvider.Icon = ((System.Drawing.Icon)(resources.GetObject("SubDivisionEmailErrorProvider.Icon")));
-            // 
             // AddCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -1220,10 +1220,10 @@
             this.Controls.Add(this.AddLocationsButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.SubDivisionsPanel);
             this.Controls.Add(this.AddCustomerLocationPanel);
             this.Controls.Add(this.CardPropertiesPanel);
             this.Controls.Add(this.CustomerInfoPanel);
-            this.Controls.Add(this.SubDivisionsPanel);
             this.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.Name = "AddCustomer";
@@ -1325,11 +1325,6 @@
         private System.Windows.Forms.ErrorProvider SubDivisionNameErrorProvider;
         private System.Windows.Forms.ErrorProvider SubDivisionEmailNameErrorProvider;
         private System.Windows.Forms.ErrorProvider SubDivisionEmailErrorProvider;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewLinkColumn dataGridViewLinkColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EmailName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
-        private System.Windows.Forms.DataGridViewImageColumn Column1;
         private System.Windows.Forms.DataGridView RoomsDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn Num;
         private System.Windows.Forms.DataGridViewLinkColumn LocationName;
@@ -1342,5 +1337,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn RoomNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn BedsCount;
         private System.Windows.Forms.DataGridViewTextBoxColumn roomid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewLinkColumn subdivisionName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EmailName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
+        private System.Windows.Forms.DataGridViewImageColumn Column1;
     }
 }

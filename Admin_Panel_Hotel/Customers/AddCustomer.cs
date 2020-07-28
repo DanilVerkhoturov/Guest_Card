@@ -8,10 +8,6 @@ namespace Admin_Panel_Hotel
 {
     public partial class AddCustomer : Form
     {
-        /// <summary>
-        /// Уникальный номер заказчика. -1 если заказчик ещё не добавлен в БД.
-        /// </summary>
-        private static long CustomerId = -1;
         private static long LocationId = 0;
         private static int EmailsCount = 1;
 
@@ -247,8 +243,8 @@ namespace Admin_Panel_Hotel
                 OpenSubDivisionsPanel();
                 SubDivisionsButton.Enabled = true;
 
-                long event_id = Functions.SqlInsert($"INSERT INTO event(start_at, end_at, ev_type) VALUES({Functions.ToUnixTime(FromContractTimeDateTimePicker.Value)}, {Functions.ToUnixTime(ToContractTimeDateTimePicker.Value)}), 9");
-                CustomerId = Functions.SqlInsert($"INSERT INTO customer_legal_info(name, dogovor, event_id) VALUES('{NameTextBox.Text}', '{ContractNumberTextBox.Text}', {event_id})");
+                //long event_id = Functions.SqlInsert($"INSERT INTO event(start_at, end_at, ev_type) VALUES({Functions.ToUnixTime(FromContractTimeDateTimePicker.Value)}, {Functions.ToUnixTime(ToContractTimeDateTimePicker.Value)}), 9");
+                //CustomerId = Functions.SqlInsert($"INSERT INTO customer_legal_info(name, dogovor, event_id) VALUES('{NameTextBox.Text}', '{ContractNumberTextBox.Text}', {event_id})");
             }
         }
 
@@ -812,87 +808,20 @@ namespace Admin_Panel_Hotel
         /// <param name="e"></param>
         private void AddCustomerButton_Click(object sender, EventArgs e)
         {
-            if (true)
+            // UNDONE: Добавление заказчика в базу данных.
+            if (/*CheckCustomerInfo()*/ true)
             {
-                MessageBox.Show("Функция в разработке.", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Customer.Add(NameTextBox.Text, ContractNumberTextBox.Text, FromContractTimeDateTimePicker.Value, ToContractTimeDateTimePicker.Value);
+
+                for (int i = 1; i <= EmailsPanel.Controls.Count - 2; i += 2)
+                {
+                    Customer.AddEmails(EmailsPanel.Controls[i].Text, EmailsPanel.Controls[i + 1].Text);
+                }
             }
             else
             {
-                // UNDONE: Добавление заказчика в базу данных.
-                if (CheckCustomerInfo())
-                {
-                    long eventId = AddContractTimeToDB();
-
-                    if (eventId > 0)
-                    {
-                        long packageRulesId = -1;
-
-                        
-                    }
-                    else
-                    {
-                        MessageBox.Show("Возникла непредвиденная ошибка при добавлении события в базу данных.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Не все обязательные поля заполнены!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                MessageBox.Show("Не все обязательные поля заполнены!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        /// <summary>
-        /// Создание события "Срок договора".
-        /// </summary>
-        /// <returns>Возвращает id созданного события.</returns>
-        private long AddContractTimeToDB()
-        {
-            long eventId = -1;
-            long eventTypeId = GetEventTypeId();
-
-            DateTimeOffset fromContractTime = FromContractTimeDateTimePicker.Value;
-            DateTimeOffset toContractTime = ToContractTimeDateTimePicker.Value;
-
-            MySqlCommand insert = new MySqlCommand($"INSERT INTO event(start_at, end_at, ev_type) VALUES ({fromContractTime.ToUnixTimeSeconds()}, {toContractTime.ToUnixTimeSeconds()}, {eventTypeId})");
-
-            if (insert.ExecuteNonQuery() > 0)
-            {
-                eventId = insert.LastInsertedId;
-            }
-
-            return eventId;
-        }
-
-        /// <summary>
-        /// Получить id типа события "Срок договора".
-        /// </summary>
-        /// <returns>Возвращает id типа события.</returns>
-        private static long GetEventTypeId()
-        {
-            MySqlCommand select = new MySqlCommand("SELECT id FROM event_type WHERE name = 'Срок договора'", Functions.Connection);
-            MySqlDataReader reader = select.ExecuteReader();
-
-            long eventTypeId = -1;
-
-            while (reader.Read())
-            {
-                eventTypeId = (long)reader[0];
-                break;
-            }
-            reader.Close();
-
-            // Если Тип события "Срок договора" не найден в базе.
-            if (eventTypeId < 0)
-            {
-                MySqlCommand insert = new MySqlCommand("INSERT INTO event_type(name) VALUES ('Срок договора')", Functions.Connection);
-
-                if (insert.ExecuteNonQuery() > 0) // Если количество добавленных строк больше 0.
-                {
-                    eventTypeId = insert.LastInsertedId;
-                }
-            }
-
-            return eventTypeId;
         }
 
         /// <summary>

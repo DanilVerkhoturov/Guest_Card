@@ -6,31 +6,24 @@ namespace Admin_Panel_Hotel.Customers
 {
     public partial class LocationInfoForm : Form
     {
-        /// <summary>
-        /// Название локации.
-        /// </summary>
-        public static string LocationName;
-        /// <summary>
-        /// Уникальный идентификатор локации.
-        /// </summary>
-        public static long LocationId;
-        /// <summary>
-        /// Название выбранного заказчика.
-        /// </summary>
-        public static string CustomerName;
-        /// <summary>
-        /// Уникальный номер выбранного заказчика.
-        /// </summary>
-        public static long CustomerId;
-
         public LocationInfoForm()
         {
             InitializeComponent();
 
-            CustomerLocationNameLabel.Text = $"Мои заказчики > {CustomerName} > {LocationName}";
+            Locations.GetInfo();
+
+            NameTextBox.Text = Locations.Name;
+            RoomCountTextBox.Text = Locations.RoomsCount.ToString();
+            BedsCountTextBox.Text = Locations.BedsCount.ToString();
+            CardsCountTextBox.Text = Locations.CardsCount.ToString();
+            RoomsDataGridView.DataSource = Locations.GetRooms();
+
+            Functions.NewlineProcessing(RoomsDataGridView, new string[] { "1", "Номер комнаты", "Количество мест", null, null });
+
+            CustomerLocationNameLabel.Text = $"Мои заказчики > {Customer.Name} > {Locations.Name}";
         }
 
-        private void EditNameButton_Click(object sender, System.EventArgs e)
+        private void EditNameButton_Click(object sender, EventArgs e)
         {
             EditNameButton.Visible = false;
             NameTextBox.Enabled = true;
@@ -38,39 +31,31 @@ namespace Admin_Panel_Hotel.Customers
             SaveLocationInfoButton.Visible = true;
         }
 
-        private void CustomerLocationNameLabel_Click(object sender, System.EventArgs e)
+        private void CustomerLocationNameLabel_Click(object sender, EventArgs e)
         {
-            CustomerInfoForm.CustomerName = CustomerName;
-            CustomerInfoForm.CustomerId = CustomerId;
             Functions.OpenChildForm(new CustomerInfoForm(), MainForm.ContP);
         }
 
-        private void EditRoomBedsCountButton_Click(object sender, System.EventArgs e)
+        private void EditRoomBedsCountButton_Click(object sender, EventArgs e)
         {
-            EditRoomBedsCountButton.Visible = false;
-            RoomCountTextBox.Enabled = true;
-            BedsCountTextBox.Enabled = true;
-            RoomBedsCountHelpLabel.Visible = true;
             SaveLocationInfoButton.Visible = true;
+            AddRoomLinkLabel.Enabled = true;
+            RoomsDataGridView.ReadOnly = false;
         }
 
-        private void EditCardsCountButton_Click(object sender, System.EventArgs e)
+        private void EditCardsCountButton_Click(object sender, EventArgs e)
         {
-            EditCardsCountButton.Visible = false;
             CardsCountTextBox.Enabled = true;
-            CardsCountHelpLabel.Visible = true;
             SaveLocationInfoButton.Visible = true;
         }
 
-        private void EditRoomsButton_Click(object sender, System.EventArgs e)
+        private void EditRoomsButton_Click(object sender, EventArgs e)
         {
-            EditRoomsButton.Visible = false;
             RoomsDataGridView.Enabled = true;
-            RoomsHelpLabel.Visible = true;
             SaveLocationInfoButton.Visible = true;
         }
 
-        private void SaveButton_Click(object sender, System.EventArgs e)
+        private void SaveButton_Click(object sender, EventArgs e)
         {
             // TODO: Сделать проверку заполнения всех полей.
             if (true)
@@ -146,6 +131,11 @@ namespace Admin_Panel_Hotel.Customers
         private void LocationDataLabel_Click(object sender, EventArgs e)
         {
             OpenLocationInfoPanel();
+        }
+
+        private void AddRoomLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            RoomsDataGridView.Rows.Add();
         }
     }
 }

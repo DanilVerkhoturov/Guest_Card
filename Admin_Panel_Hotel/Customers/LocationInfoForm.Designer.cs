@@ -28,17 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.CustomerLocationNameLabel = new System.Windows.Forms.Label();
             this.LocationDataLabel = new System.Windows.Forms.Label();
             this.CardPropertiesLabel = new System.Windows.Forms.Label();
             this.Analyticslabel = new System.Windows.Forms.Label();
             this.LocationInfoPanel = new System.Windows.Forms.Panel();
-            this.CardsCountHelpLabel = new System.Windows.Forms.Label();
-            this.RoomBedsCountHelpLabel = new System.Windows.Forms.Label();
+            this.AddRoomLinkLabel = new System.Windows.Forms.LinkLabel();
+            this.RoomsDataGridView = new System.Windows.Forms.DataGridView();
             this.NameHelpLabel = new System.Windows.Forms.Label();
-            this.EditCardsCountButton = new System.Windows.Forms.Button();
             this.EditRoomBedsCountButton = new System.Windows.Forms.Button();
             this.EditNameButton = new System.Windows.Forms.Button();
             this.SaveLocationInfoButton = new System.Windows.Forms.Button();
@@ -49,12 +48,6 @@
             this.RoomCountTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.NameTextBox = new System.Windows.Forms.TextBox();
-            this.RoomsDataGridView = new System.Windows.Forms.DataGridView();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RoomNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BedsCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RoomsHelpLabel = new System.Windows.Forms.Label();
-            this.EditRoomsButton = new System.Windows.Forms.Button();
             this.CardPropertiesPanel = new System.Windows.Forms.Panel();
             this.Set2HelpButton = new System.Windows.Forms.Button();
             this.Set1HelpButton = new System.Windows.Forms.Button();
@@ -66,8 +59,13 @@
             this.Set1CheckBox = new System.Windows.Forms.CheckBox();
             this.Set2CheckBox = new System.Windows.Forms.CheckBox();
             this.InstructedCheckBox = new System.Windows.Forms.CheckBox();
-            this.SaveCardPropertiesButton = new System.Windows.Forms.Button();
             this.EditCardPropertiesButton = new System.Windows.Forms.Button();
+            this.SaveCardPropertiesButton = new System.Windows.Forms.Button();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RoomNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BedsCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.delete = new System.Windows.Forms.DataGridViewImageColumn();
             this.LocationInfoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RoomsDataGridView)).BeginInit();
             this.CardPropertiesPanel.SuspendLayout();
@@ -131,13 +129,9 @@
             // 
             // LocationInfoPanel
             // 
-            this.LocationInfoPanel.Controls.Add(this.RoomsHelpLabel);
-            this.LocationInfoPanel.Controls.Add(this.EditRoomsButton);
+            this.LocationInfoPanel.Controls.Add(this.AddRoomLinkLabel);
             this.LocationInfoPanel.Controls.Add(this.RoomsDataGridView);
-            this.LocationInfoPanel.Controls.Add(this.CardsCountHelpLabel);
-            this.LocationInfoPanel.Controls.Add(this.RoomBedsCountHelpLabel);
             this.LocationInfoPanel.Controls.Add(this.NameHelpLabel);
-            this.LocationInfoPanel.Controls.Add(this.EditCardsCountButton);
             this.LocationInfoPanel.Controls.Add(this.EditRoomBedsCountButton);
             this.LocationInfoPanel.Controls.Add(this.EditNameButton);
             this.LocationInfoPanel.Controls.Add(this.SaveLocationInfoButton);
@@ -154,31 +148,60 @@
             this.LocationInfoPanel.Size = new System.Drawing.Size(923, 686);
             this.LocationInfoPanel.TabIndex = 4;
             // 
-            // CardsCountHelpLabel
+            // AddRoomLinkLabel
             // 
-            this.CardsCountHelpLabel.AutoEllipsis = true;
-            this.CardsCountHelpLabel.AutoSize = true;
-            this.CardsCountHelpLabel.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CardsCountHelpLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(87)))), ((int)(((byte)(87)))));
-            this.CardsCountHelpLabel.Location = new System.Drawing.Point(426, 164);
-            this.CardsCountHelpLabel.Name = "CardsCountHelpLabel";
-            this.CardsCountHelpLabel.Size = new System.Drawing.Size(139, 30);
-            this.CardsCountHelpLabel.TabIndex = 33;
-            this.CardsCountHelpLabel.Text = "Редактируйте поле и \r\nнажмите Сохранить";
-            this.CardsCountHelpLabel.Visible = false;
+            this.AddRoomLinkLabel.AutoSize = true;
+            this.AddRoomLinkLabel.Enabled = false;
+            this.AddRoomLinkLabel.Location = new System.Drawing.Point(526, 164);
+            this.AddRoomLinkLabel.Name = "AddRoomLinkLabel";
+            this.AddRoomLinkLabel.Size = new System.Drawing.Size(208, 25);
+            this.AddRoomLinkLabel.TabIndex = 58;
+            this.AddRoomLinkLabel.TabStop = true;
+            this.AddRoomLinkLabel.Text = "+ добавить комнату";
+            this.AddRoomLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.AddRoomLinkLabel_LinkClicked);
             // 
-            // RoomBedsCountHelpLabel
+            // RoomsDataGridView
             // 
-            this.RoomBedsCountHelpLabel.AutoEllipsis = true;
-            this.RoomBedsCountHelpLabel.AutoSize = true;
-            this.RoomBedsCountHelpLabel.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.RoomBedsCountHelpLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(87)))), ((int)(((byte)(87)))));
-            this.RoomBedsCountHelpLabel.Location = new System.Drawing.Point(760, 94);
-            this.RoomBedsCountHelpLabel.Name = "RoomBedsCountHelpLabel";
-            this.RoomBedsCountHelpLabel.Size = new System.Drawing.Size(139, 30);
-            this.RoomBedsCountHelpLabel.TabIndex = 32;
-            this.RoomBedsCountHelpLabel.Text = "Редактируйте поле и \r\nнажмите Сохранить";
-            this.RoomBedsCountHelpLabel.Visible = false;
+            this.RoomsDataGridView.AllowUserToAddRows = false;
+            this.RoomsDataGridView.AllowUserToDeleteRows = false;
+            this.RoomsDataGridView.AllowUserToResizeRows = false;
+            this.RoomsDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.RoomsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.RoomsDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.RoomsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.RoomsDataGridView.ColumnHeadersHeight = 35;
+            this.RoomsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.RoomsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column2,
+            this.RoomNumber,
+            this.BedsCount,
+            this.id,
+            this.delete});
+            this.RoomsDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
+            this.RoomsDataGridView.Enabled = false;
+            this.RoomsDataGridView.EnableHeadersVisualStyles = false;
+            this.RoomsDataGridView.Location = new System.Drawing.Point(0, 228);
+            this.RoomsDataGridView.Margin = new System.Windows.Forms.Padding(3, 31, 3, 3);
+            this.RoomsDataGridView.Name = "RoomsDataGridView";
+            this.RoomsDataGridView.ReadOnly = true;
+            this.RoomsDataGridView.RowHeadersVisible = false;
+            this.RoomsDataGridView.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.RoomsDataGridView.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.RoomsDataGridView.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.RoomsDataGridView.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.RoomsDataGridView.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.RoomsDataGridView.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.RoomsDataGridView.RowTemplate.Height = 30;
+            this.RoomsDataGridView.Size = new System.Drawing.Size(734, 374);
+            this.RoomsDataGridView.TabIndex = 57;
+            this.RoomsDataGridView.Visible = false;
             // 
             // NameHelpLabel
             // 
@@ -193,31 +216,18 @@
             this.NameHelpLabel.Text = "Редактируйте поле и \r\nнажмите Сохранить";
             this.NameHelpLabel.Visible = false;
             // 
-            // EditCardsCountButton
-            // 
-            this.EditCardsCountButton.BackColor = System.Drawing.Color.Transparent;
-            this.EditCardsCountButton.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.pngflow_1;
-            this.EditCardsCountButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.EditCardsCountButton.FlatAppearance.BorderSize = 0;
-            this.EditCardsCountButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EditCardsCountButton.Location = new System.Drawing.Point(413, 164);
-            this.EditCardsCountButton.Name = "EditCardsCountButton";
-            this.EditCardsCountButton.Size = new System.Drawing.Size(24, 24);
-            this.EditCardsCountButton.TabIndex = 24;
-            this.EditCardsCountButton.UseVisualStyleBackColor = false;
-            this.EditCardsCountButton.Click += new System.EventHandler(this.EditCardsCountButton_Click);
-            // 
             // EditRoomBedsCountButton
             // 
-            this.EditRoomBedsCountButton.BackColor = System.Drawing.Color.Transparent;
-            this.EditRoomBedsCountButton.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.pngflow_1;
+            this.EditRoomBedsCountButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(82)))), ((int)(((byte)(119)))));
             this.EditRoomBedsCountButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.EditRoomBedsCountButton.FlatAppearance.BorderSize = 0;
             this.EditRoomBedsCountButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EditRoomBedsCountButton.Location = new System.Drawing.Point(747, 94);
+            this.EditRoomBedsCountButton.ForeColor = System.Drawing.Color.White;
+            this.EditRoomBedsCountButton.Location = new System.Drawing.Point(747, 91);
             this.EditRoomBedsCountButton.Name = "EditRoomBedsCountButton";
-            this.EditRoomBedsCountButton.Size = new System.Drawing.Size(24, 24);
+            this.EditRoomBedsCountButton.Size = new System.Drawing.Size(173, 33);
             this.EditRoomBedsCountButton.TabIndex = 23;
+            this.EditRoomBedsCountButton.Text = "Редактировать";
             this.EditRoomBedsCountButton.UseVisualStyleBackColor = false;
             this.EditRoomBedsCountButton.Click += new System.EventHandler(this.EditRoomBedsCountButton_Click);
             // 
@@ -283,19 +293,19 @@
             // 
             // BedsCountTextBox
             // 
-            this.BedsCountTextBox.Enabled = false;
             this.BedsCountTextBox.Location = new System.Drawing.Point(376, 91);
             this.BedsCountTextBox.Margin = new System.Windows.Forms.Padding(20, 8, 3, 3);
             this.BedsCountTextBox.Name = "BedsCountTextBox";
+            this.BedsCountTextBox.ReadOnly = true;
             this.BedsCountTextBox.Size = new System.Drawing.Size(358, 33);
             this.BedsCountTextBox.TabIndex = 11;
             // 
             // RoomCountTextBox
             // 
-            this.RoomCountTextBox.Enabled = false;
             this.RoomCountTextBox.Location = new System.Drawing.Point(0, 91);
             this.RoomCountTextBox.Margin = new System.Windows.Forms.Padding(3, 8, 3, 3);
             this.RoomCountTextBox.Name = "RoomCountTextBox";
+            this.RoomCountTextBox.ReadOnly = true;
             this.RoomCountTextBox.Size = new System.Drawing.Size(353, 33);
             this.RoomCountTextBox.TabIndex = 10;
             // 
@@ -316,95 +326,6 @@
             this.NameTextBox.Name = "NameTextBox";
             this.NameTextBox.Size = new System.Drawing.Size(734, 33);
             this.NameTextBox.TabIndex = 0;
-            // 
-            // RoomsDataGridView
-            // 
-            this.RoomsDataGridView.AllowUserToDeleteRows = false;
-            this.RoomsDataGridView.AllowUserToResizeRows = false;
-            this.RoomsDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.RoomsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.RoomsDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.RoomsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
-            this.RoomsDataGridView.ColumnHeadersHeight = 35;
-            this.RoomsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.RoomsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column2,
-            this.RoomNumber,
-            this.BedsCount});
-            this.RoomsDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.RoomsDataGridView.Enabled = false;
-            this.RoomsDataGridView.EnableHeadersVisualStyles = false;
-            this.RoomsDataGridView.Location = new System.Drawing.Point(0, 228);
-            this.RoomsDataGridView.Margin = new System.Windows.Forms.Padding(3, 31, 3, 3);
-            this.RoomsDataGridView.Name = "RoomsDataGridView";
-            this.RoomsDataGridView.RowHeadersVisible = false;
-            this.RoomsDataGridView.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.RoomsDataGridView.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.RoomsDataGridView.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.RoomsDataGridView.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
-            this.RoomsDataGridView.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.RoomsDataGridView.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.RoomsDataGridView.RowTemplate.Height = 30;
-            this.RoomsDataGridView.Size = new System.Drawing.Size(734, 374);
-            this.RoomsDataGridView.TabIndex = 57;
-            this.RoomsDataGridView.Visible = false;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "№";
-            this.Column2.Name = "Column2";
-            this.Column2.Visible = false;
-            // 
-            // RoomNumber
-            // 
-            this.RoomNumber.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.RoomNumber.HeaderText = "Комнаты";
-            this.RoomNumber.Name = "RoomNumber";
-            this.RoomNumber.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // BedsCount
-            // 
-            this.BedsCount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle10.Format = "N0";
-            dataGridViewCellStyle10.NullValue = "0";
-            this.BedsCount.DefaultCellStyle = dataGridViewCellStyle10;
-            this.BedsCount.HeaderText = "Количество мест";
-            this.BedsCount.Name = "BedsCount";
-            this.BedsCount.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // RoomsHelpLabel
-            // 
-            this.RoomsHelpLabel.AutoEllipsis = true;
-            this.RoomsHelpLabel.AutoSize = true;
-            this.RoomsHelpLabel.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.RoomsHelpLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(87)))), ((int)(((byte)(87)))));
-            this.RoomsHelpLabel.Location = new System.Drawing.Point(760, 228);
-            this.RoomsHelpLabel.Name = "RoomsHelpLabel";
-            this.RoomsHelpLabel.Size = new System.Drawing.Size(159, 30);
-            this.RoomsHelpLabel.TabIndex = 59;
-            this.RoomsHelpLabel.Text = "Редактируйте таблицу и \r\nнажмите Сохранить";
-            this.RoomsHelpLabel.Visible = false;
-            // 
-            // EditRoomsButton
-            // 
-            this.EditRoomsButton.BackColor = System.Drawing.Color.Transparent;
-            this.EditRoomsButton.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.pngflow_1;
-            this.EditRoomsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.EditRoomsButton.FlatAppearance.BorderSize = 0;
-            this.EditRoomsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EditRoomsButton.Location = new System.Drawing.Point(747, 228);
-            this.EditRoomsButton.Name = "EditRoomsButton";
-            this.EditRoomsButton.Size = new System.Drawing.Size(24, 24);
-            this.EditRoomsButton.TabIndex = 58;
-            this.EditRoomsButton.UseVisualStyleBackColor = false;
-            this.EditRoomsButton.Click += new System.EventHandler(this.EditRoomsButton_Click);
             // 
             // CardPropertiesPanel
             // 
@@ -562,20 +483,6 @@
             this.InstructedCheckBox.Text = "Проходить инструктаж";
             this.InstructedCheckBox.UseVisualStyleBackColor = true;
             // 
-            // SaveCardPropertiesButton
-            // 
-            this.SaveCardPropertiesButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
-            this.SaveCardPropertiesButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.SaveCardPropertiesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SaveCardPropertiesButton.ForeColor = System.Drawing.Color.White;
-            this.SaveCardPropertiesButton.Location = new System.Drawing.Point(489, 608);
-            this.SaveCardPropertiesButton.Name = "SaveCardPropertiesButton";
-            this.SaveCardPropertiesButton.Size = new System.Drawing.Size(201, 44);
-            this.SaveCardPropertiesButton.TabIndex = 60;
-            this.SaveCardPropertiesButton.Text = "Сохранить";
-            this.SaveCardPropertiesButton.UseVisualStyleBackColor = false;
-            this.SaveCardPropertiesButton.Visible = false;
-            // 
             // EditCardPropertiesButton
             // 
             this.EditCardPropertiesButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(82)))), ((int)(((byte)(119)))));
@@ -590,6 +497,64 @@
             this.EditCardPropertiesButton.UseVisualStyleBackColor = false;
             this.EditCardPropertiesButton.Click += new System.EventHandler(this.EditCardPropertiesButton_Click);
             // 
+            // SaveCardPropertiesButton
+            // 
+            this.SaveCardPropertiesButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
+            this.SaveCardPropertiesButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.SaveCardPropertiesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SaveCardPropertiesButton.ForeColor = System.Drawing.Color.White;
+            this.SaveCardPropertiesButton.Location = new System.Drawing.Point(489, 608);
+            this.SaveCardPropertiesButton.Name = "SaveCardPropertiesButton";
+            this.SaveCardPropertiesButton.Size = new System.Drawing.Size(201, 44);
+            this.SaveCardPropertiesButton.TabIndex = 60;
+            this.SaveCardPropertiesButton.Text = "Сохранить";
+            this.SaveCardPropertiesButton.UseVisualStyleBackColor = false;
+            this.SaveCardPropertiesButton.Visible = false;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "№";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Visible = false;
+            // 
+            // RoomNumber
+            // 
+            this.RoomNumber.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.RoomNumber.DataPropertyName = "name";
+            this.RoomNumber.HeaderText = "Комнаты";
+            this.RoomNumber.Name = "RoomNumber";
+            this.RoomNumber.ReadOnly = true;
+            this.RoomNumber.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // BedsCount
+            // 
+            this.BedsCount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.BedsCount.DataPropertyName = "count_beds";
+            dataGridViewCellStyle2.Format = "N0";
+            dataGridViewCellStyle2.NullValue = "0";
+            this.BedsCount.DefaultCellStyle = dataGridViewCellStyle2;
+            this.BedsCount.HeaderText = "Количество мест";
+            this.BedsCount.Name = "BedsCount";
+            this.BedsCount.ReadOnly = true;
+            this.BedsCount.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // id
+            // 
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "id";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Visible = false;
+            // 
+            // delete
+            // 
+            this.delete.HeaderText = "";
+            this.delete.Image = global::Admin_Panel_Hotel.Properties.Resources.closeoutline_110831_4;
+            this.delete.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.delete.Name = "delete";
+            this.delete.ReadOnly = true;
+            // 
             // LocationInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -600,8 +565,8 @@
             this.Controls.Add(this.CardPropertiesLabel);
             this.Controls.Add(this.LocationDataLabel);
             this.Controls.Add(this.CustomerLocationNameLabel);
-            this.Controls.Add(this.CardPropertiesPanel);
             this.Controls.Add(this.LocationInfoPanel);
+            this.Controls.Add(this.CardPropertiesPanel);
             this.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(6);
@@ -634,16 +599,8 @@
         private System.Windows.Forms.Button SaveLocationInfoButton;
         private System.Windows.Forms.Button EditNameButton;
         private System.Windows.Forms.Button EditRoomBedsCountButton;
-        private System.Windows.Forms.Button EditCardsCountButton;
         private System.Windows.Forms.Label NameHelpLabel;
-        private System.Windows.Forms.Label CardsCountHelpLabel;
-        private System.Windows.Forms.Label RoomBedsCountHelpLabel;
         private System.Windows.Forms.DataGridView RoomsDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RoomNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BedsCount;
-        private System.Windows.Forms.Label RoomsHelpLabel;
-        private System.Windows.Forms.Button EditRoomsButton;
         private System.Windows.Forms.Panel CardPropertiesPanel;
         private System.Windows.Forms.Button Set2HelpButton;
         private System.Windows.Forms.Button Set1HelpButton;
@@ -657,5 +614,11 @@
         private System.Windows.Forms.CheckBox InstructedCheckBox;
         private System.Windows.Forms.Button EditCardPropertiesButton;
         private System.Windows.Forms.Button SaveCardPropertiesButton;
+        private System.Windows.Forms.LinkLabel AddRoomLinkLabel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RoomNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BedsCount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewImageColumn delete;
     }
 }
