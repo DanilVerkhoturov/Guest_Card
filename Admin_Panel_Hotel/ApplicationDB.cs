@@ -67,8 +67,7 @@ namespace Admin_Panel_Hotel
         /// <returns>Возвращает таблицу с новыми заявками.</returns>
         public static DataTable GetNew()
         {
-            // TODO: Написать запрос на получение новых заявок.
-            return null /*Functions.ExecuteSql("")*/;
+            return Functions.ExecuteSql("SELECT id, name, created_at as 'date' FROM application_list WHERE status_id = 1");
         }
 
         /// <summary>
@@ -77,8 +76,7 @@ namespace Admin_Panel_Hotel
         /// <returns>Возвращает таблицу с текущими заявками.</returns>
         public static DataTable GetCurrent()
         {
-            // TODO: Написать запрос на получение текущих заявок.
-            return null /*Functions.ExecuteSql("")*/;
+            return Functions.ExecuteSql("SELECT id, name, created_at as 'date' FROM application_list WHERE status_id = 2");
         }
 
         /// <summary>
@@ -87,8 +85,7 @@ namespace Admin_Panel_Hotel
         /// <returns>Возвращает таблицу с черновиками заявок.</returns>
         public static DataTable GetDrafts()
         {
-            // TODO: Написать запрос на получение списка черновиков.
-            return null /*Functions.ExecuteSql("")*/;
+            return Functions.ExecuteSql("SELECT id, name, created_at as 'date' FROM application_list WHERE status_id = 3");
         }
 
         /// <summary>
@@ -97,8 +94,7 @@ namespace Admin_Panel_Hotel
         /// <returns>Возвращает таблицу с заявками из истории.</returns>
         public static DataTable GetHistory()
         {
-            // TODO: Написать запрос на получение заявок из истории.
-            return null /*Functions.ExecuteSql("")*/;
+            return Functions.ExecuteSql("SELECT id, name, created_at as 'date' FROM application_list WHERE status_id = 4");
         }
 
         /// <summary>
@@ -107,8 +103,7 @@ namespace Admin_Panel_Hotel
         /// <returns>Возвращает таблицу с пользователями из заявки.</returns>
         public static DataTable GetUsers()
         {
-            // TODO: Написать запрос на получение данных о пользователях в заявке.
-            return null /*Functions.ExecuteSql("")*/;
+            return Functions.ExecuteSql($"SELECT id as user_id, fio, tab_number, start_at, end_at, location FROM user_list WHERE application_id = {Id}");
         }
     }
 }

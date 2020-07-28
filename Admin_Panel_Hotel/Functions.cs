@@ -52,6 +52,8 @@ namespace Admin_Panel_Hotel
             MySqlCommand command = new MySqlCommand(query, Connection);
             command.CommandTimeout = 999999;
 
+            command.ExecuteNonQuery();
+
             MySqlDataReader reader = command.ExecuteReader();
             table.Load(reader);
 

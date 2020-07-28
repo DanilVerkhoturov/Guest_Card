@@ -12,9 +12,9 @@ namespace Admin_Panel_Hotel
         public static long Id { get; set; }
         public static string Name { get; set; }
 
-        public static DataTable GetAll()
+        public static DataTable GetAllDivisions()
         {
-            return Functions.ExecuteSql("SELECT * FROM division");
+            return Functions.ExecuteSql("SELECT * FROM division WHERE parent_id is null");
         }
     }
 }

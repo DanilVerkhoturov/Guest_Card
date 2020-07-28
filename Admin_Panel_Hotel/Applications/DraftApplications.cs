@@ -10,6 +10,12 @@ namespace Admin_Panel_Hotel
             InitializeComponent();
 
             ApplicationsDataGridView.DataSource = ApplicationDB.GetDrafts();
+
+            if (ApplicationsDataGridView.RowCount == 0)
+            {
+                ApplicationsDataGridView.Visible = false;
+                NotificationLabel.Visible = true;
+            }
         }
 
         private void DraftDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)

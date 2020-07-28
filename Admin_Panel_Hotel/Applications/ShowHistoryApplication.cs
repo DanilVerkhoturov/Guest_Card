@@ -10,6 +10,8 @@ namespace Admin_Panel_Hotel
         {
             InitializeComponent();
 
+            Functions.NewlineProcessing(UsersDataGridView);
+
             UsersDataGridView.DataSource = ApplicationDB.GetUsers();
 
             ApplicationNameLabel.Text = $"История заявок > {Customer.Name} - {ApplicationDB.Date}";

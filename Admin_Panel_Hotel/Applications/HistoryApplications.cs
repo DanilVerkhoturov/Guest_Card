@@ -12,7 +12,20 @@ namespace Admin_Panel_Hotel
             ApplicationsDataGridView.DataSource = ApplicationDB.GetHistory();
 
             CustomerComboBox.SelectedIndex = 0;
+            CustomerComboBox.DataSource = Customer.GetAllDivisions();
             LocationComboBox.SelectedIndex = 0;
+            LocationComboBox.DataSource = Locations.GetAll();
+
+            if (ApplicationsDataGridView.RowCount == 0)
+            {
+                ApplicationsDataGridView.Visible = false;
+                NotificationLabel.Visible = true;
+                CustomerComboBox.Enabled = false;
+                LocationComboBox.Enabled = false;
+                PeriodFromDateTimePicker.Enabled = false;
+                PeriodToDateTimePicker.Enabled = false;
+                ShowAllLinkLabel.Enabled = false;
+            }
         }
 
         private void ApplicationsDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)

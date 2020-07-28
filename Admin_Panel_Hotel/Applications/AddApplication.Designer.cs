@@ -37,6 +37,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.UsersDataGridView = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.location = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.AddUserLabel = new System.Windows.Forms.Label();
             this.ImportButton = new System.Windows.Forms.Button();
             this.LocationComboBox = new System.Windows.Forms.ComboBox();
@@ -44,12 +50,6 @@
             this.SendToCustomerButton = new System.Windows.Forms.Button();
             this.ToDraftButton = new System.Windows.Forms.Button();
             this.FormNameLabel = new System.Windows.Forms.Label();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.location = new System.Windows.Forms.DataGridViewComboBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.UsersDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -121,108 +121,6 @@
             this.UsersDataGridView.TabIndex = 51;
             this.UsersDataGridView.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.UsersDataGridView_CellEndEdit);
             // 
-            // AddUserLabel
-            // 
-            this.AddUserLabel.AutoSize = true;
-            this.AddUserLabel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.AddUserLabel.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.AddUserLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
-            this.AddUserLabel.Location = new System.Drawing.Point(901, 118);
-            this.AddUserLabel.Margin = new System.Windows.Forms.Padding(48, 0, 3, 0);
-            this.AddUserLabel.Name = "AddUserLabel";
-            this.AddUserLabel.Size = new System.Drawing.Size(166, 25);
-            this.AddUserLabel.TabIndex = 59;
-            this.AddUserLabel.Text = "+ добавить еще";
-            this.AddUserLabel.Click += new System.EventHandler(this.AddUserLabel_Click);
-            // 
-            // ImportButton
-            // 
-            this.ImportButton.BackColor = System.Drawing.Color.White;
-            this.ImportButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(82)))), ((int)(((byte)(119)))));
-            this.ImportButton.FlatAppearance.BorderSize = 2;
-            this.ImportButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ImportButton.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ImportButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(82)))), ((int)(((byte)(119)))));
-            this.ImportButton.Location = new System.Drawing.Point(680, 115);
-            this.ImportButton.Margin = new System.Windows.Forms.Padding(22, 34, 0, 0);
-            this.ImportButton.Name = "ImportButton";
-            this.ImportButton.Size = new System.Drawing.Size(186, 33);
-            this.ImportButton.TabIndex = 58;
-            this.ImportButton.Text = "Импорт данных";
-            this.ImportButton.UseVisualStyleBackColor = false;
-            // 
-            // LocationComboBox
-            // 
-            this.LocationComboBox.BackColor = System.Drawing.Color.White;
-            this.LocationComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.LocationComboBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LocationComboBox.ForeColor = System.Drawing.Color.Black;
-            this.LocationComboBox.FormattingEnabled = true;
-            this.LocationComboBox.Items.AddRange(new object[] {
-            "Локация"});
-            this.LocationComboBox.Location = new System.Drawing.Point(378, 115);
-            this.LocationComboBox.Margin = new System.Windows.Forms.Padding(22, 6, 0, 0);
-            this.LocationComboBox.Name = "LocationComboBox";
-            this.LocationComboBox.Size = new System.Drawing.Size(280, 33);
-            this.LocationComboBox.TabIndex = 57;
-            // 
-            // CustomerComboBox
-            // 
-            this.CustomerComboBox.BackColor = System.Drawing.Color.White;
-            this.CustomerComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CustomerComboBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CustomerComboBox.ForeColor = System.Drawing.Color.Black;
-            this.CustomerComboBox.FormattingEnabled = true;
-            this.CustomerComboBox.Items.AddRange(new object[] {
-            "Заказчик"});
-            this.CustomerComboBox.Location = new System.Drawing.Point(76, 115);
-            this.CustomerComboBox.Margin = new System.Windows.Forms.Padding(123, 48, 0, 0);
-            this.CustomerComboBox.Name = "CustomerComboBox";
-            this.CustomerComboBox.Size = new System.Drawing.Size(280, 33);
-            this.CustomerComboBox.TabIndex = 56;
-            // 
-            // SendToCustomerButton
-            // 
-            this.SendToCustomerButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
-            this.SendToCustomerButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.SendToCustomerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SendToCustomerButton.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.SendToCustomerButton.ForeColor = System.Drawing.Color.White;
-            this.SendToCustomerButton.Location = new System.Drawing.Point(802, 778);
-            this.SendToCustomerButton.Name = "SendToCustomerButton";
-            this.SendToCustomerButton.Size = new System.Drawing.Size(265, 48);
-            this.SendToCustomerButton.TabIndex = 55;
-            this.SendToCustomerButton.Text = "Отправить заказчику";
-            this.SendToCustomerButton.UseVisualStyleBackColor = false;
-            this.SendToCustomerButton.Click += new System.EventHandler(this.SendToCustomerButton_Click);
-            // 
-            // ToDraftButton
-            // 
-            this.ToDraftButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(82)))), ((int)(((byte)(119)))));
-            this.ToDraftButton.FlatAppearance.BorderSize = 0;
-            this.ToDraftButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ToDraftButton.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ToDraftButton.ForeColor = System.Drawing.Color.White;
-            this.ToDraftButton.Location = new System.Drawing.Point(927, 36);
-            this.ToDraftButton.Margin = new System.Windows.Forms.Padding(33, 23, 3, 3);
-            this.ToDraftButton.Name = "ToDraftButton";
-            this.ToDraftButton.Size = new System.Drawing.Size(140, 35);
-            this.ToDraftButton.TabIndex = 53;
-            this.ToDraftButton.Text = "Черновик";
-            this.ToDraftButton.UseVisualStyleBackColor = false;
-            // 
-            // FormNameLabel
-            // 
-            this.FormNameLabel.AutoSize = true;
-            this.FormNameLabel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.FormNameLabel.Font = new System.Drawing.Font("Roboto", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.FormNameLabel.Location = new System.Drawing.Point(70, 32);
-            this.FormNameLabel.Margin = new System.Windows.Forms.Padding(61, 23, 4, 0);
-            this.FormNameLabel.Name = "FormNameLabel";
-            this.FormNameLabel.Size = new System.Drawing.Size(251, 35);
-            this.FormNameLabel.TabIndex = 50;
-            this.FormNameLabel.Text = "Добавить заявку";
-            // 
             // Column1
             // 
             this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
@@ -281,6 +179,112 @@
             "Локация"});
             this.location.Name = "location";
             this.location.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // AddUserLabel
+            // 
+            this.AddUserLabel.AutoSize = true;
+            this.AddUserLabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AddUserLabel.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AddUserLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
+            this.AddUserLabel.Location = new System.Drawing.Point(901, 118);
+            this.AddUserLabel.Margin = new System.Windows.Forms.Padding(48, 0, 3, 0);
+            this.AddUserLabel.Name = "AddUserLabel";
+            this.AddUserLabel.Size = new System.Drawing.Size(166, 25);
+            this.AddUserLabel.TabIndex = 59;
+            this.AddUserLabel.Text = "+ добавить еще";
+            this.AddUserLabel.Click += new System.EventHandler(this.AddUserLabel_Click);
+            // 
+            // ImportButton
+            // 
+            this.ImportButton.BackColor = System.Drawing.Color.White;
+            this.ImportButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(82)))), ((int)(((byte)(119)))));
+            this.ImportButton.FlatAppearance.BorderSize = 2;
+            this.ImportButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ImportButton.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ImportButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(82)))), ((int)(((byte)(119)))));
+            this.ImportButton.Location = new System.Drawing.Point(680, 115);
+            this.ImportButton.Margin = new System.Windows.Forms.Padding(22, 34, 0, 0);
+            this.ImportButton.Name = "ImportButton";
+            this.ImportButton.Size = new System.Drawing.Size(186, 33);
+            this.ImportButton.TabIndex = 58;
+            this.ImportButton.Text = "Импорт данных";
+            this.ImportButton.UseVisualStyleBackColor = false;
+            // 
+            // LocationComboBox
+            // 
+            this.LocationComboBox.BackColor = System.Drawing.Color.White;
+            this.LocationComboBox.DisplayMember = "location_name";
+            this.LocationComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.LocationComboBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LocationComboBox.ForeColor = System.Drawing.Color.Black;
+            this.LocationComboBox.FormattingEnabled = true;
+            this.LocationComboBox.Items.AddRange(new object[] {
+            "Локация"});
+            this.LocationComboBox.Location = new System.Drawing.Point(378, 115);
+            this.LocationComboBox.Margin = new System.Windows.Forms.Padding(22, 6, 0, 0);
+            this.LocationComboBox.Name = "LocationComboBox";
+            this.LocationComboBox.Size = new System.Drawing.Size(280, 33);
+            this.LocationComboBox.TabIndex = 57;
+            this.LocationComboBox.ValueMember = "location_id";
+            // 
+            // CustomerComboBox
+            // 
+            this.CustomerComboBox.BackColor = System.Drawing.Color.White;
+            this.CustomerComboBox.DisplayMember = "name";
+            this.CustomerComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CustomerComboBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CustomerComboBox.ForeColor = System.Drawing.Color.Black;
+            this.CustomerComboBox.FormattingEnabled = true;
+            this.CustomerComboBox.Items.AddRange(new object[] {
+            "Заказчик"});
+            this.CustomerComboBox.Location = new System.Drawing.Point(76, 115);
+            this.CustomerComboBox.Margin = new System.Windows.Forms.Padding(123, 48, 0, 0);
+            this.CustomerComboBox.Name = "CustomerComboBox";
+            this.CustomerComboBox.Size = new System.Drawing.Size(280, 33);
+            this.CustomerComboBox.TabIndex = 56;
+            this.CustomerComboBox.ValueMember = "id";
+            // 
+            // SendToCustomerButton
+            // 
+            this.SendToCustomerButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
+            this.SendToCustomerButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.SendToCustomerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SendToCustomerButton.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SendToCustomerButton.ForeColor = System.Drawing.Color.White;
+            this.SendToCustomerButton.Location = new System.Drawing.Point(802, 778);
+            this.SendToCustomerButton.Name = "SendToCustomerButton";
+            this.SendToCustomerButton.Size = new System.Drawing.Size(265, 48);
+            this.SendToCustomerButton.TabIndex = 55;
+            this.SendToCustomerButton.Text = "Отправить заказчику";
+            this.SendToCustomerButton.UseVisualStyleBackColor = false;
+            this.SendToCustomerButton.Click += new System.EventHandler(this.SendToCustomerButton_Click);
+            // 
+            // ToDraftButton
+            // 
+            this.ToDraftButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(82)))), ((int)(((byte)(119)))));
+            this.ToDraftButton.FlatAppearance.BorderSize = 0;
+            this.ToDraftButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ToDraftButton.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ToDraftButton.ForeColor = System.Drawing.Color.White;
+            this.ToDraftButton.Location = new System.Drawing.Point(927, 36);
+            this.ToDraftButton.Margin = new System.Windows.Forms.Padding(33, 23, 3, 3);
+            this.ToDraftButton.Name = "ToDraftButton";
+            this.ToDraftButton.Size = new System.Drawing.Size(140, 35);
+            this.ToDraftButton.TabIndex = 53;
+            this.ToDraftButton.Text = "Черновик";
+            this.ToDraftButton.UseVisualStyleBackColor = false;
+            // 
+            // FormNameLabel
+            // 
+            this.FormNameLabel.AutoSize = true;
+            this.FormNameLabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.FormNameLabel.Font = new System.Drawing.Font("Roboto", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.FormNameLabel.Location = new System.Drawing.Point(70, 32);
+            this.FormNameLabel.Margin = new System.Windows.Forms.Padding(61, 23, 4, 0);
+            this.FormNameLabel.Name = "FormNameLabel";
+            this.FormNameLabel.Size = new System.Drawing.Size(251, 35);
+            this.FormNameLabel.TabIndex = 50;
+            this.FormNameLabel.Text = "Добавить заявку";
             // 
             // AddApplication
             // 

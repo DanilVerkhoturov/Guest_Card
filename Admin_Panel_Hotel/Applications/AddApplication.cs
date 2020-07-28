@@ -11,7 +11,9 @@ namespace Admin_Panel_Hotel
             InitializeComponent();
 
             CustomerComboBox.SelectedIndex = 0;
+            CustomerComboBox.DataSource = Customer.GetAllDivisions();
             LocationComboBox.SelectedIndex = 0;
+            LocationComboBox.DataSource = Locations.GetAll();
 
             Functions.NewlineProcessing(UsersDataGridView, new string[] { "1", "Введите ФИО", "Таб.номер", "Дата от", "Дата до", "Локация" });
         }

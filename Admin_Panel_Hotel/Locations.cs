@@ -15,7 +15,7 @@ namespace Admin_Panel_Hotel
         /// <returns>Возвращает таблицу со всеми локациями.</returns>
         public static DataTable GetAll()
         {
-            return Functions.ExecuteSql("SELECT id, name FROM hotel");
+            return Functions.ExecuteSql("SELECT id as location_id, name as location_name FROM location");
         }
     }
 }

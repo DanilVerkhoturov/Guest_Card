@@ -12,9 +12,17 @@ namespace Admin_Panel_Hotel.Applications
             ApplicationsDataGridView.DataSource = ApplicationDB.GetCurrent();
 
             CustomerComboBox.SelectedIndex = 0;
-            CustomerComboBox.DataSource = Customer.GetAll();
+            CustomerComboBox.DataSource = Customer.GetAllDivisions();
             LocationComboBox.SelectedIndex = 0;
             LocationComboBox.DataSource = Locations.GetAll();
+
+            if (ApplicationsDataGridView.RowCount == 0)
+            {
+                ApplicationsDataGridView.Visible = false;
+                NotificationLabel.Visible = true;
+                CustomerComboBox.Enabled = false;
+                LocationComboBox.Enabled = false;
+            }
         }
 
         private void ApplicationsDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)

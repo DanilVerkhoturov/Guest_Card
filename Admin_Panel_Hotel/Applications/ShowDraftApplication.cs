@@ -11,9 +11,9 @@ namespace Admin_Panel_Hotel
         {
             InitializeComponent();
 
-            UsersDataGridView.DataSource = ApplicationDB.GetUsers();
-
             Functions.NewlineProcessing(UsersDataGridView, new string[] { "1", "Введите ФИО", "Таб.номер", "Дата от", "Дата до", "Локация" });
+
+            UsersDataGridView.DataSource = ApplicationDB.GetUsers();
 
             ApplicationNameLabel.Text = $"Черновик > {Customer.Name} - {ApplicationDB.Date}";
         }

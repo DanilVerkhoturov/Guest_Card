@@ -67,6 +67,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.TopPanel = new System.Windows.Forms.Panel();
             this.UserButton = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.LeftMenu.SuspendLayout();
             this.GuestsPanel.SuspendLayout();
             this.RegistryPanel.SuspendLayout();
@@ -787,6 +788,7 @@
         private System.Windows.Forms.Button GuestsCalendarButton;
         private System.Windows.Forms.Button EvictionGuestsButton;
         private System.Windows.Forms.Button NewGuestsButton;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
 
