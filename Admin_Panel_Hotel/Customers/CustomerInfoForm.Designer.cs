@@ -177,7 +177,7 @@
             // name
             // 
             this.name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.name.DataPropertyName = "name";
+            this.name.DataPropertyName = "location_name";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             this.name.DefaultCellStyle = dataGridViewCellStyle3;
             this.name.HeaderText = "Column1";
@@ -196,7 +196,7 @@
             // 
             // id
             // 
-            this.id.DataPropertyName = "id";
+            this.id.DataPropertyName = "location_id";
             this.id.HeaderText = "id";
             this.id.Name = "id";
             this.id.ReadOnly = true;

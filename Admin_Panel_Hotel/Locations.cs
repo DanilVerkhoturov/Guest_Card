@@ -28,8 +28,9 @@ namespace Admin_Panel_Hotel
 
         public static void GetInfo()
         {
-            MySqlCommand select = new MySqlCommand($"SELECT count_rooms, beds_count, cards_count FROM hotel WHERE id = {Id}");
+            MySqlCommand select = new MySqlCommand($"SELECT count_rooms, beds_count, cards_count FROM hotel WHERE id = {Id}", Functions.Connection);
             select.CommandTimeout = 999999;
+
             select.ExecuteNonQuery();
 
             MySqlDataReader reader = select.ExecuteReader();
@@ -40,6 +41,7 @@ namespace Admin_Panel_Hotel
                 CardsCount = Convert.ToInt32(reader[2].ToString());
                 break;
             }
+            reader.Close();
         }
     }
 }

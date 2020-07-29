@@ -18,8 +18,6 @@ namespace Admin_Panel_Hotel.Customers
             CardsCountTextBox.Text = Locations.CardsCount.ToString();
             RoomsDataGridView.DataSource = Locations.GetRooms();
 
-            Functions.NewlineProcessing(RoomsDataGridView, new string[] { "1", "Номер комнаты", "Количество мест", null, null });
-
             CustomerLocationNameLabel.Text = $"Мои заказчики > {Customer.Name} > {Locations.Name}";
         }
 
