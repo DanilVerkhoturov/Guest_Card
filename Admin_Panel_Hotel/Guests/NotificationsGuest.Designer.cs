@@ -91,6 +91,7 @@
             this.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "NotificationsGuest";
+            this.Opacity = 0.8D;
             this.Text = "NotificationsGuest";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NotificationImagePictureBox)).EndInit();

@@ -119,12 +119,12 @@
             // tableLabel
             // 
             this.tableLabel.AutoSize = true;
-            this.tableLabel.Font = new System.Drawing.Font("Roboto Medium", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tableLabel.Font = new System.Drawing.Font("Roboto", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tableLabel.ForeColor = System.Drawing.Color.Black;
-            this.tableLabel.Location = new System.Drawing.Point(364, 131);
+            this.tableLabel.Location = new System.Drawing.Point(364, 125);
             this.tableLabel.Margin = new System.Windows.Forms.Padding(68, 49, 0, 0);
             this.tableLabel.Name = "tableLabel";
-            this.tableLabel.Size = new System.Drawing.Size(114, 29);
+            this.tableLabel.Size = new System.Drawing.Size(130, 35);
             this.tableLabel.TabIndex = 63;
             this.tableLabel.Text = "Таблица";
             // 
@@ -218,13 +218,13 @@
             this.UsersDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.UsersDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.UsersDataGridView.ColumnHeadersHeight = 40;
+            this.UsersDataGridView.ColumnHeadersHeight = 45;
             this.UsersDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.UsersDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -243,7 +243,7 @@
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.UsersDataGridView.DefaultCellStyle = dataGridViewCellStyle4;
             this.UsersDataGridView.EnableHeadersVisualStyles = false;
-            this.UsersDataGridView.Location = new System.Drawing.Point(76, 276);
+            this.UsersDataGridView.Location = new System.Drawing.Point(76, 258);
             this.UsersDataGridView.Margin = new System.Windows.Forms.Padding(127, 20, 123, 5);
             this.UsersDataGridView.Name = "UsersDataGridView";
             this.UsersDataGridView.ReadOnly = true;
@@ -266,7 +266,7 @@
             this.UsersDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.UsersDataGridView.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.UsersDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.UsersDataGridView.Size = new System.Drawing.Size(938, 577);
+            this.UsersDataGridView.Size = new System.Drawing.Size(990, 577);
             this.UsersDataGridView.TabIndex = 75;
             // 
             // Column1
@@ -276,7 +276,7 @@
             this.Column1.HeaderText = "Тип номера";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
-            this.Column1.Width = 198;
+            this.Column1.Width = 137;
             // 
             // Column2
             // 
@@ -285,30 +285,29 @@
             this.Column2.DefaultCellStyle = dataGridViewCellStyle3;
             this.Column2.FillWeight = 112.3096F;
             this.Column2.HeaderText = "Номер";
-            this.Column2.MinimumWidth = 100;
+            this.Column2.MinimumWidth = 50;
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
-            this.Column2.Width = 129;
+            this.Column2.Width = 93;
             // 
             // Column3
             // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column3.FillWeight = 112.3096F;
             this.Column3.HeaderText = "ФИО проживаюшего";
+            this.Column3.MinimumWidth = 100;
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
-            this.Column3.Width = 321;
             // 
             // Column4
             // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column4.FillWeight = 112.3096F;
             this.Column4.HeaderText = "Наименование организации";
-            this.Column4.MinimumWidth = 10;
+            this.Column4.MinimumWidth = 100;
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             this.Column4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column4.Width = 410;
             // 
             // Column5
             // 
@@ -319,7 +318,7 @@
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
             this.Column5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column5.Width = 189;
+            this.Column5.Width = 123;
             // 
             // Column7
             // 
@@ -327,7 +326,7 @@
             this.Column7.HeaderText = "Дата выезда";
             this.Column7.Name = "Column7";
             this.Column7.ReadOnly = true;
-            this.Column7.Width = 217;
+            this.Column7.Width = 148;
             // 
             // Column6
             // 

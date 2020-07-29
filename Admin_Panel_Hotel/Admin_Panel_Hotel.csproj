@@ -104,6 +104,12 @@
     <Compile Include="Accommodation\HistoryAccommodation.Designer.cs">
       <DependentUpon>HistoryAccommodation.cs</DependentUpon>
     </Compile>
+    <Compile Include="Accommodation\LocationAccommodation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accommodation\LocationAccommodation.Designer.cs">
+      <DependentUpon>LocationAccommodation.cs</DependentUpon>
+    </Compile>
     <Compile Include="ApplicationDB.cs" />
     <Compile Include="Applications\CurrentApplications.cs">
       <SubType>Form</SubType>
@@ -209,11 +215,23 @@
     <Compile Include="Guests\CardGuest.Designer.cs">
       <DependentUpon>CardGuest.cs</DependentUpon>
     </Compile>
+    <Compile Include="Guests\NotificationCadrdGues.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Guests\NotificationCadrdGues.Designer.cs">
+      <DependentUpon>NotificationCadrdGues.cs</DependentUpon>
+    </Compile>
     <Compile Include="Guests\NotificationsGuest.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Guests\NotificationsGuest.Designer.cs">
       <DependentUpon>NotificationsGuest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Guests\NotificationTMCGuest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Guests\NotificationTMCGuest.Designer.cs">
+      <DependentUpon>NotificationTMCGuest.cs</DependentUpon>
     </Compile>
     <Compile Include="Guests\RoomsGuest.cs">
       <SubType>Form</SubType>
@@ -297,6 +315,9 @@
     <EmbeddedResource Include="Accommodation\HistoryAccommodation.resx">
       <DependentUpon>HistoryAccommodation.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Accommodation\LocationAccommodation.resx">
+      <DependentUpon>LocationAccommodation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Applications\CurrentApplications.resx">
       <DependentUpon>CurrentApplications.cs</DependentUpon>
     </EmbeddedResource>
@@ -348,8 +369,14 @@
     <EmbeddedResource Include="Guests\CardGuest.resx">
       <DependentUpon>CardGuest.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Guests\NotificationCadrdGues.resx">
+      <DependentUpon>NotificationCadrdGues.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Guests\NotificationsGuest.resx">
       <DependentUpon>NotificationsGuest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Guests\NotificationTMCGuest.resx">
+      <DependentUpon>NotificationTMCGuest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Guests\RoomsGuest.resx">
       <DependentUpon>RoomsGuest.cs</DependentUpon>
