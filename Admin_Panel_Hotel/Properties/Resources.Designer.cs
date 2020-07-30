@@ -193,6 +193,16 @@ namespace Admin_Panel_Hotel.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap logomio {
+            get {
+                object obj = ResourceManager.GetObject("logomio", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap Out {
             get {
                 object obj = ResourceManager.GetObject("Out", resourceCulture);
