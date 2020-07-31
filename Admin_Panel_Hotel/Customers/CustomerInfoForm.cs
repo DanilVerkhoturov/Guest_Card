@@ -22,7 +22,7 @@ namespace Admin_Panel_Hotel.Customers
             if (e.ColumnIndex == 0)
             {
                 Locations.Name = LocationsDataGridView["name", e.RowIndex].Value.ToString();
-                Locations.Id = Convert.ToInt64(LocationsDataGridView["id", e.RowIndex].Value.ToString());
+                Locations.HotelId = Convert.ToInt64(LocationsDataGridView["id", e.RowIndex].Value.ToString());
                 Functions.OpenChildForm(new LocationInfoForm(), MainForm.ContP);
             }
         }

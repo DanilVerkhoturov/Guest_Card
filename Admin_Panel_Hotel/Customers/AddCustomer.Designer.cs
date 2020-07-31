@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -41,15 +40,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.AddCustomerButton = new System.Windows.Forms.Button();
-            this.Set2_Customer_CheckBox = new System.Windows.Forms.CheckBox();
-            this.Set1_Customer_CheckBox = new System.Windows.Forms.CheckBox();
-            this.FireSafety_Customer_CheckBox = new System.Windows.Forms.CheckBox();
-            this.ResidenceRules_Customer_CheckBox = new System.Windows.Forms.CheckBox();
-            this.Instructed_Customer_CheckBox = new System.Windows.Forms.CheckBox();
-            this.GiveOutLinen_Customer_CheckBox = new System.Windows.Forms.CheckBox();
-            this.AllProperties_Customer_CheckBox = new System.Windows.Forms.CheckBox();
-            this.label2 = new System.Windows.Forms.Label();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.ContractNumberTextBox = new System.Windows.Forms.TextBox();
             this.NameTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -61,7 +52,7 @@
             this.CustomerInfoNextButton = new System.Windows.Forms.Button();
             this.BedsCountTextBox = new System.Windows.Forms.TextBox();
             this.RoomCountTextBox = new System.Windows.Forms.TextBox();
-            this.AddLocationNextButton = new System.Windows.Forms.Button();
+            this.SaveCustomerButton = new System.Windows.Forms.Button();
             this.CardCountTextBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -72,10 +63,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.AddCustomerLocationPanel = new System.Windows.Forms.Panel();
             this.RoomsDataGridView = new System.Windows.Forms.DataGridView();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RoomNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BedsCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.roomid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AddRoomsLabel = new System.Windows.Forms.Label();
             this.AddLocationLinkLabel = new System.Windows.Forms.LinkLabel();
             this.label9 = new System.Windows.Forms.Label();
@@ -87,11 +74,6 @@
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column12 = new System.Windows.Forms.DataGridViewImageColumn();
             this.locid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CardPropertiesPanel = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.Set2HelpButton = new System.Windows.Forms.Button();
-            this.Set1HelpButton = new System.Windows.Forms.Button();
-            this.CardPropertiesButton = new System.Windows.Forms.Button();
             this.CustomerInfoButton = new System.Windows.Forms.Button();
             this.AddLocationsButton = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -116,20 +98,20 @@
             this.SubDivisionsDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.subdivisionName = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.EmailName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.customer_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SubDivisionNameErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.SubDivisionEmailNameErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.SubDivisionEmailErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RoomNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BedsCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.roomid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CustomerInfoPanel.SuspendLayout();
             this.EmailsPanel.SuspendLayout();
             this.AddCustomerLocationPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RoomsDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LocationsDataGridView)).BeginInit();
-            this.CardPropertiesPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EmailNamesErrorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EmailsErrorProvider)).BeginInit();
@@ -146,118 +128,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.SubDivisionEmailNameErrorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SubDivisionEmailErrorProvider)).BeginInit();
             this.SuspendLayout();
-            // 
-            // AddCustomerButton
-            // 
-            this.AddCustomerButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
-            this.AddCustomerButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.AddCustomerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddCustomerButton.Font = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.AddCustomerButton.ForeColor = System.Drawing.Color.White;
-            this.AddCustomerButton.Location = new System.Drawing.Point(562, 614);
-            this.AddCustomerButton.Margin = new System.Windows.Forms.Padding(609, 662, 5, 7);
-            this.AddCustomerButton.Name = "AddCustomerButton";
-            this.AddCustomerButton.Size = new System.Drawing.Size(218, 48);
-            this.AddCustomerButton.TabIndex = 21;
-            this.AddCustomerButton.Text = "Добавить";
-            this.AddCustomerButton.UseVisualStyleBackColor = false;
-            this.AddCustomerButton.Click += new System.EventHandler(this.AddCustomerButton_Click);
-            // 
-            // Set2_Customer_CheckBox
-            // 
-            this.Set2_Customer_CheckBox.AutoSize = true;
-            this.Set2_Customer_CheckBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Set2_Customer_CheckBox.Location = new System.Drawing.Point(107, 257);
-            this.Set2_Customer_CheckBox.Margin = new System.Windows.Forms.Padding(5, 25, 5, 7);
-            this.Set2_Customer_CheckBox.Name = "Set2_Customer_CheckBox";
-            this.Set2_Customer_CheckBox.Size = new System.Drawing.Size(147, 29);
-            this.Set2_Customer_CheckBox.TabIndex = 18;
-            this.Set2_Customer_CheckBox.Text = "Комплект-2";
-            this.Set2_Customer_CheckBox.UseVisualStyleBackColor = true;
-            // 
-            // Set1_Customer_CheckBox
-            // 
-            this.Set1_Customer_CheckBox.AutoSize = true;
-            this.Set1_Customer_CheckBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Set1_Customer_CheckBox.Location = new System.Drawing.Point(107, 196);
-            this.Set1_Customer_CheckBox.Margin = new System.Windows.Forms.Padding(5, 25, 5, 7);
-            this.Set1_Customer_CheckBox.Name = "Set1_Customer_CheckBox";
-            this.Set1_Customer_CheckBox.Size = new System.Drawing.Size(147, 29);
-            this.Set1_Customer_CheckBox.TabIndex = 17;
-            this.Set1_Customer_CheckBox.Text = "Комплект-1";
-            this.Set1_Customer_CheckBox.UseVisualStyleBackColor = true;
-            // 
-            // FireSafety_Customer_CheckBox
-            // 
-            this.FireSafety_Customer_CheckBox.AutoSize = true;
-            this.FireSafety_Customer_CheckBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.FireSafety_Customer_CheckBox.Location = new System.Drawing.Point(107, 455);
-            this.FireSafety_Customer_CheckBox.Margin = new System.Windows.Forms.Padding(5, 25, 5, 7);
-            this.FireSafety_Customer_CheckBox.Name = "FireSafety_Customer_CheckBox";
-            this.FireSafety_Customer_CheckBox.Size = new System.Drawing.Size(283, 29);
-            this.FireSafety_Customer_CheckBox.TabIndex = 16;
-            this.FireSafety_Customer_CheckBox.Text = "Пожарная безопастность";
-            this.FireSafety_Customer_CheckBox.UseVisualStyleBackColor = true;
-            // 
-            // ResidenceRules_Customer_CheckBox
-            // 
-            this.ResidenceRules_Customer_CheckBox.AutoSize = true;
-            this.ResidenceRules_Customer_CheckBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ResidenceRules_Customer_CheckBox.Location = new System.Drawing.Point(104, 394);
-            this.ResidenceRules_Customer_CheckBox.Margin = new System.Windows.Forms.Padding(5, 25, 5, 7);
-            this.ResidenceRules_Customer_CheckBox.Name = "ResidenceRules_Customer_CheckBox";
-            this.ResidenceRules_Customer_CheckBox.Size = new System.Drawing.Size(244, 29);
-            this.ResidenceRules_Customer_CheckBox.TabIndex = 15;
-            this.ResidenceRules_Customer_CheckBox.Text = "Правила проживания";
-            this.ResidenceRules_Customer_CheckBox.UseVisualStyleBackColor = true;
-            // 
-            // Instructed_Customer_CheckBox
-            // 
-            this.Instructed_Customer_CheckBox.AutoSize = true;
-            this.Instructed_Customer_CheckBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Instructed_Customer_CheckBox.Location = new System.Drawing.Point(76, 333);
-            this.Instructed_Customer_CheckBox.Margin = new System.Windows.Forms.Padding(5, 40, 5, 7);
-            this.Instructed_Customer_CheckBox.Name = "Instructed_Customer_CheckBox";
-            this.Instructed_Customer_CheckBox.Size = new System.Drawing.Size(257, 29);
-            this.Instructed_Customer_CheckBox.TabIndex = 14;
-            this.Instructed_Customer_CheckBox.Text = "Проходить инструктаж";
-            this.Instructed_Customer_CheckBox.UseVisualStyleBackColor = true;
-            // 
-            // GiveOutLinen_Customer_CheckBox
-            // 
-            this.GiveOutLinen_Customer_CheckBox.AutoSize = true;
-            this.GiveOutLinen_Customer_CheckBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.GiveOutLinen_Customer_CheckBox.Location = new System.Drawing.Point(76, 138);
-            this.GiveOutLinen_Customer_CheckBox.Margin = new System.Windows.Forms.Padding(5, 40, 5, 7);
-            this.GiveOutLinen_Customer_CheckBox.Name = "GiveOutLinen_Customer_CheckBox";
-            this.GiveOutLinen_Customer_CheckBox.Size = new System.Drawing.Size(190, 29);
-            this.GiveOutLinen_Customer_CheckBox.TabIndex = 13;
-            this.GiveOutLinen_Customer_CheckBox.Text = "Выдавать бельё";
-            this.GiveOutLinen_Customer_CheckBox.UseVisualStyleBackColor = true;
-            // 
-            // AllProperties_Customer_CheckBox
-            // 
-            this.AllProperties_Customer_CheckBox.AutoSize = true;
-            this.AllProperties_Customer_CheckBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.AllProperties_Customer_CheckBox.Location = new System.Drawing.Point(277, 72);
-            this.AllProperties_Customer_CheckBox.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
-            this.AllProperties_Customer_CheckBox.Name = "AllProperties_Customer_CheckBox";
-            this.AllProperties_Customer_CheckBox.Size = new System.Drawing.Size(66, 29);
-            this.AllProperties_Customer_CheckBox.TabIndex = 12;
-            this.AllProperties_Customer_CheckBox.Text = "Все";
-            this.AllProperties_Customer_CheckBox.UseVisualStyleBackColor = true;
-            this.AllProperties_Customer_CheckBox.CheckedChanged += new System.EventHandler(this.AllProperties_Customer_CheckBox_CheckedChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(71, 73);
-            this.label2.Margin = new System.Windows.Forms.Padding(123, 35, 5, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(155, 25);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Свойства карт";
             // 
             // ContractNumberTextBox
             // 
@@ -404,21 +274,21 @@
             this.RoomCountTextBox.TextChanged += new System.EventHandler(this.RoomCountTextBox_TextChanged);
             this.RoomCountTextBox.Leave += new System.EventHandler(this.LocationNameTextBox_Leave);
             // 
-            // AddLocationNextButton
+            // SaveCustomerButton
             // 
-            this.AddLocationNextButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
-            this.AddLocationNextButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.AddLocationNextButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddLocationNextButton.Font = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.AddLocationNextButton.ForeColor = System.Drawing.Color.White;
-            this.AddLocationNextButton.Location = new System.Drawing.Point(416, 599);
-            this.AddLocationNextButton.Margin = new System.Windows.Forms.Padding(5, 106, 5, 7);
-            this.AddLocationNextButton.Name = "AddLocationNextButton";
-            this.AddLocationNextButton.Size = new System.Drawing.Size(218, 48);
-            this.AddLocationNextButton.TabIndex = 44;
-            this.AddLocationNextButton.Text = "Далее";
-            this.AddLocationNextButton.UseVisualStyleBackColor = false;
-            this.AddLocationNextButton.Click += new System.EventHandler(this.AddLocationNextButton_Click);
+            this.SaveCustomerButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
+            this.SaveCustomerButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.SaveCustomerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SaveCustomerButton.Font = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SaveCustomerButton.ForeColor = System.Drawing.Color.White;
+            this.SaveCustomerButton.Location = new System.Drawing.Point(416, 599);
+            this.SaveCustomerButton.Margin = new System.Windows.Forms.Padding(5, 106, 5, 7);
+            this.SaveCustomerButton.Name = "SaveCustomerButton";
+            this.SaveCustomerButton.Size = new System.Drawing.Size(218, 48);
+            this.SaveCustomerButton.TabIndex = 44;
+            this.SaveCustomerButton.Text = "Сохранить";
+            this.SaveCustomerButton.UseVisualStyleBackColor = false;
+            this.SaveCustomerButton.Click += new System.EventHandler(this.AddCustomerButton_Click);
             // 
             // CardCountTextBox
             // 
@@ -531,7 +401,7 @@
             this.AddCustomerLocationPanel.Controls.Add(this.BedsCountTextBox);
             this.AddCustomerLocationPanel.Controls.Add(this.label6);
             this.AddCustomerLocationPanel.Controls.Add(this.RoomCountTextBox);
-            this.AddCustomerLocationPanel.Controls.Add(this.AddLocationNextButton);
+            this.AddCustomerLocationPanel.Controls.Add(this.SaveCustomerButton);
             this.AddCustomerLocationPanel.Controls.Add(this.LocationNameTextBox);
             this.AddCustomerLocationPanel.Controls.Add(this.CardCountTextBox);
             this.AddCustomerLocationPanel.Controls.Add(this.label7);
@@ -575,34 +445,6 @@
             this.RoomsDataGridView.TabIndex = 56;
             this.RoomsDataGridView.Visible = false;
             this.RoomsDataGridView.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.RoomsDataGridView_CellEndEdit);
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "№";
-            this.Column2.Name = "Column2";
-            // 
-            // RoomNumber
-            // 
-            this.RoomNumber.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.RoomNumber.HeaderText = "Номер комнаты";
-            this.RoomNumber.Name = "RoomNumber";
-            this.RoomNumber.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // BedsCount
-            // 
-            this.BedsCount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle1.Format = "N0";
-            dataGridViewCellStyle1.NullValue = "0";
-            this.BedsCount.DefaultCellStyle = dataGridViewCellStyle1;
-            this.BedsCount.HeaderText = "Количество мест";
-            this.BedsCount.Name = "BedsCount";
-            this.BedsCount.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // roomid
-            // 
-            this.roomid.HeaderText = "roomid";
-            this.roomid.Name = "roomid";
-            this.roomid.Visible = false;
             // 
             // AddRoomsLabel
             // 
@@ -765,91 +607,6 @@
             this.locid.Visible = false;
             this.locid.Width = 5;
             // 
-            // CardPropertiesPanel
-            // 
-            this.CardPropertiesPanel.Controls.Add(this.label4);
-            this.CardPropertiesPanel.Controls.Add(this.Set2HelpButton);
-            this.CardPropertiesPanel.Controls.Add(this.Set1HelpButton);
-            this.CardPropertiesPanel.Controls.Add(this.AddCustomerButton);
-            this.CardPropertiesPanel.Controls.Add(this.label2);
-            this.CardPropertiesPanel.Controls.Add(this.FireSafety_Customer_CheckBox);
-            this.CardPropertiesPanel.Controls.Add(this.AllProperties_Customer_CheckBox);
-            this.CardPropertiesPanel.Controls.Add(this.ResidenceRules_Customer_CheckBox);
-            this.CardPropertiesPanel.Controls.Add(this.GiveOutLinen_Customer_CheckBox);
-            this.CardPropertiesPanel.Controls.Add(this.Set1_Customer_CheckBox);
-            this.CardPropertiesPanel.Controls.Add(this.Set2_Customer_CheckBox);
-            this.CardPropertiesPanel.Controls.Add(this.Instructed_Customer_CheckBox);
-            this.CardPropertiesPanel.Location = new System.Drawing.Point(101, 199);
-            this.CardPropertiesPanel.Margin = new System.Windows.Forms.Padding(5);
-            this.CardPropertiesPanel.Name = "CardPropertiesPanel";
-            this.CardPropertiesPanel.Size = new System.Drawing.Size(978, 681);
-            this.CardPropertiesPanel.TabIndex = 46;
-            this.CardPropertiesPanel.Visible = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(90, 13);
-            this.label4.Margin = new System.Windows.Forms.Padding(142, 48, 3, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(253, 25);
-            this.label4.TabIndex = 24;
-            this.label4.Text = "Добавить свойства карт";
-            // 
-            // Set2HelpButton
-            // 
-            this.Set2HelpButton.BackColor = System.Drawing.Color.Transparent;
-            this.Set2HelpButton.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.question_icon_icons_com_69315;
-            this.Set2HelpButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Set2HelpButton.FlatAppearance.BorderSize = 0;
-            this.Set2HelpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Set2HelpButton.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Set2HelpButton.Location = new System.Drawing.Point(264, 255);
-            this.Set2HelpButton.Margin = new System.Windows.Forms.Padding(5);
-            this.Set2HelpButton.Name = "Set2HelpButton";
-            this.Set2HelpButton.Size = new System.Drawing.Size(31, 31);
-            this.Set2HelpButton.TabIndex = 23;
-            this.Set2HelpButton.UseVisualStyleBackColor = false;
-            this.Set2HelpButton.Click += new System.EventHandler(this.Set2HelpButton_Click);
-            // 
-            // Set1HelpButton
-            // 
-            this.Set1HelpButton.BackColor = System.Drawing.Color.Transparent;
-            this.Set1HelpButton.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.question_icon_icons_com_69315;
-            this.Set1HelpButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Set1HelpButton.FlatAppearance.BorderSize = 0;
-            this.Set1HelpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Set1HelpButton.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Set1HelpButton.Location = new System.Drawing.Point(264, 194);
-            this.Set1HelpButton.Margin = new System.Windows.Forms.Padding(5);
-            this.Set1HelpButton.Name = "Set1HelpButton";
-            this.Set1HelpButton.Size = new System.Drawing.Size(31, 31);
-            this.Set1HelpButton.TabIndex = 22;
-            this.Set1HelpButton.UseVisualStyleBackColor = false;
-            this.Set1HelpButton.Click += new System.EventHandler(this.Set1HelpButton_Click);
-            // 
-            // CardPropertiesButton
-            // 
-            this.CardPropertiesButton.AutoEllipsis = true;
-            this.CardPropertiesButton.BackColor = System.Drawing.Color.Transparent;
-            this.CardPropertiesButton.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.GrayCircle;
-            this.CardPropertiesButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.CardPropertiesButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CardPropertiesButton.FlatAppearance.BorderSize = 0;
-            this.CardPropertiesButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.CardPropertiesButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.CardPropertiesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CardPropertiesButton.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CardPropertiesButton.Location = new System.Drawing.Point(784, 127);
-            this.CardPropertiesButton.Margin = new System.Windows.Forms.Padding(5, 48, 5, 5);
-            this.CardPropertiesButton.Name = "CardPropertiesButton";
-            this.CardPropertiesButton.Size = new System.Drawing.Size(32, 32);
-            this.CardPropertiesButton.TabIndex = 49;
-            this.CardPropertiesButton.Text = "4";
-            this.CardPropertiesButton.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.CardPropertiesButton.UseVisualStyleBackColor = false;
-            this.CardPropertiesButton.Click += new System.EventHandler(this.CardPropertiesButton_Click);
-            // 
             // CustomerInfoButton
             // 
             this.CustomerInfoButton.AutoEllipsis = true;
@@ -885,7 +642,7 @@
             this.AddLocationsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.AddLocationsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddLocationsButton.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.AddLocationsButton.Location = new System.Drawing.Point(607, 127);
+            this.AddLocationsButton.Location = new System.Drawing.Point(758, 127);
             this.AddLocationsButton.Margin = new System.Windows.Forms.Padding(5, 48, 140, 5);
             this.AddLocationsButton.Name = "AddLocationsButton";
             this.AddLocationsButton.Size = new System.Drawing.Size(32, 32);
@@ -974,7 +731,7 @@
             this.SubDivisionsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.SubDivisionsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SubDivisionsButton.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.SubDivisionsButton.Location = new System.Drawing.Point(430, 127);
+            this.SubDivisionsButton.Location = new System.Drawing.Point(506, 127);
             this.SubDivisionsButton.Margin = new System.Windows.Forms.Padding(5, 48, 140, 5);
             this.SubDivisionsButton.Name = "SubDivisionsButton";
             this.SubDivisionsButton.Size = new System.Drawing.Size(32, 32);
@@ -1004,7 +761,7 @@
             // AddSubDivisionLinkLabel
             // 
             this.AddSubDivisionLinkLabel.AutoSize = true;
-            this.AddSubDivisionLinkLabel.Location = new System.Drawing.Point(67, 545);
+            this.AddSubDivisionLinkLabel.Location = new System.Drawing.Point(67, 203);
             this.AddSubDivisionLinkLabel.Name = "AddSubDivisionLinkLabel";
             this.AddSubDivisionLinkLabel.Size = new System.Drawing.Size(166, 25);
             this.AddSubDivisionLinkLabel.TabIndex = 48;
@@ -1111,11 +868,8 @@
             this.SubDivisionsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.subdivisionName,
-            this.EmailName,
-            this.Email,
             this.Column1,
-            this.customer_id,
-            this.email_id});
+            this.customer_id});
             this.SubDivisionsDataGridView.EnableHeadersVisualStyles = false;
             this.SubDivisionsDataGridView.Location = new System.Drawing.Point(696, 88);
             this.SubDivisionsDataGridView.Margin = new System.Windows.Forms.Padding(5);
@@ -1163,28 +917,13 @@
             // subdivisionName
             // 
             this.subdivisionName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.subdivisionName.DataPropertyName = "subdivision_name";
             dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             this.subdivisionName.DefaultCellStyle = dataGridViewCellStyle9;
             this.subdivisionName.HeaderText = "Название организации";
             this.subdivisionName.Name = "subdivisionName";
             this.subdivisionName.ReadOnly = true;
             this.subdivisionName.VisitedLinkColor = System.Drawing.Color.Blue;
-            // 
-            // EmailName
-            // 
-            this.EmailName.HeaderText = "EmailName";
-            this.EmailName.Name = "EmailName";
-            this.EmailName.ReadOnly = true;
-            this.EmailName.Visible = false;
-            this.EmailName.Width = 5;
-            // 
-            // Email
-            // 
-            this.Email.HeaderText = "Email";
-            this.Email.Name = "Email";
-            this.Email.ReadOnly = true;
-            this.Email.Visible = false;
-            this.Email.Width = 5;
             // 
             // Column1
             // 
@@ -1196,19 +935,12 @@
             // 
             // customer_id
             // 
+            this.customer_id.DataPropertyName = "subdivision_id";
             this.customer_id.HeaderText = "customer_id";
             this.customer_id.Name = "customer_id";
             this.customer_id.ReadOnly = true;
             this.customer_id.Visible = false;
             this.customer_id.Width = 5;
-            // 
-            // email_id
-            // 
-            this.email_id.HeaderText = "email_id";
-            this.email_id.Name = "email_id";
-            this.email_id.ReadOnly = true;
-            this.email_id.Visible = false;
-            this.email_id.Width = 5;
             // 
             // SubDivisionNameErrorProvider
             // 
@@ -1228,6 +960,37 @@
             this.SubDivisionEmailErrorProvider.ContainerControl = this;
             this.SubDivisionEmailErrorProvider.Icon = ((System.Drawing.Icon)(resources.GetObject("SubDivisionEmailErrorProvider.Icon")));
             // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "№";
+            this.Column2.Name = "Column2";
+            // 
+            // RoomNumber
+            // 
+            this.RoomNumber.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.RoomNumber.DataPropertyName = "room_name";
+            this.RoomNumber.HeaderText = "Номер комнаты";
+            this.RoomNumber.Name = "RoomNumber";
+            this.RoomNumber.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // BedsCount
+            // 
+            this.BedsCount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.BedsCount.DataPropertyName = "beds_count";
+            dataGridViewCellStyle1.Format = "N0";
+            dataGridViewCellStyle1.NullValue = "0";
+            this.BedsCount.DefaultCellStyle = dataGridViewCellStyle1;
+            this.BedsCount.HeaderText = "Количество мест";
+            this.BedsCount.Name = "BedsCount";
+            this.BedsCount.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // roomid
+            // 
+            this.roomid.DataPropertyName = "room_id";
+            this.roomid.HeaderText = "roomid";
+            this.roomid.Name = "roomid";
+            this.roomid.Visible = false;
+            // 
             // AddCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -1236,14 +999,12 @@
             this.ClientSize = new System.Drawing.Size(1093, 894);
             this.Controls.Add(this.SubDivisionsButton);
             this.Controls.Add(this.CustomerInfoButton);
-            this.Controls.Add(this.CardPropertiesButton);
             this.Controls.Add(this.AddLocationsButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.AddCustomerLocationPanel);
             this.Controls.Add(this.CustomerInfoPanel);
             this.Controls.Add(this.SubDivisionsPanel);
-            this.Controls.Add(this.AddCustomerLocationPanel);
-            this.Controls.Add(this.CardPropertiesPanel);
             this.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.Name = "AddCustomer";
@@ -1257,8 +1018,6 @@
             this.AddCustomerLocationPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RoomsDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LocationsDataGridView)).EndInit();
-            this.CardPropertiesPanel.ResumeLayout(false);
-            this.CardPropertiesPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EmailNamesErrorProvider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EmailsErrorProvider)).EndInit();
@@ -1281,15 +1040,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button AddCustomerButton;
-        private System.Windows.Forms.CheckBox Set2_Customer_CheckBox;
-        private System.Windows.Forms.CheckBox Set1_Customer_CheckBox;
-        private System.Windows.Forms.CheckBox FireSafety_Customer_CheckBox;
-        private System.Windows.Forms.CheckBox ResidenceRules_Customer_CheckBox;
-        private System.Windows.Forms.CheckBox Instructed_Customer_CheckBox;
-        private System.Windows.Forms.CheckBox GiveOutLinen_Customer_CheckBox;
-        private System.Windows.Forms.CheckBox AllProperties_Customer_CheckBox;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox ContractNumberTextBox;
         private System.Windows.Forms.TextBox NameTextBox;
         private System.Windows.Forms.Label label1;
@@ -1301,21 +1051,17 @@
         private System.Windows.Forms.TextBox CardCountTextBox;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button CustomerInfoNextButton;
-        private System.Windows.Forms.Button AddLocationNextButton;
+        private System.Windows.Forms.Button SaveCustomerButton;
         private System.Windows.Forms.TextBox BedsCountTextBox;
         private System.Windows.Forms.TextBox RoomCountTextBox;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel AddCustomerLocationPanel;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Panel CardPropertiesPanel;
         private System.Windows.Forms.Panel CustomerInfoPanel;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridView LocationsDataGridView;
         private System.Windows.Forms.Button AddLocationsButton;
-        private System.Windows.Forms.Button CardPropertiesButton;
         private System.Windows.Forms.Button CustomerInfoButton;
-        private System.Windows.Forms.Button Set1HelpButton;
-        private System.Windows.Forms.Button Set2HelpButton;
         private System.Windows.Forms.Panel EmailsPanel;
         private System.Windows.Forms.TextBox EmailTextBox0;
         private System.Windows.Forms.TextBox EmailNameTextBox0;
@@ -1329,7 +1075,6 @@
         private System.Windows.Forms.ErrorProvider RoomCountErrorProvider;
         private System.Windows.Forms.ErrorProvider BedsCountErrorProvider;
         private System.Windows.Forms.LinkLabel AddEmailLinkLabel;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button SubDivisionsButton;
         private System.Windows.Forms.Panel SubDivisionsPanel;
         private System.Windows.Forms.Label label5;
@@ -1353,16 +1098,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.DataGridViewImageColumn Column12;
         private System.Windows.Forms.DataGridViewTextBoxColumn locid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewLinkColumn subdivisionName;
+        private System.Windows.Forms.DataGridViewImageColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn customer_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn RoomNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn BedsCount;
         private System.Windows.Forms.DataGridViewTextBoxColumn roomid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewLinkColumn subdivisionName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EmailName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
-        private System.Windows.Forms.DataGridViewImageColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn customer_id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn email_id;
     }
 }

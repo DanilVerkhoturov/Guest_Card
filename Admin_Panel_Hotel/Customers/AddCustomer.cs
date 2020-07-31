@@ -238,11 +238,25 @@ namespace Admin_Panel_Hotel
                 && lastEmailNameTextBox.TextLength > 0 && lastEmailNameTextBox.Text.Trim() != lastEmailNameTextBox.Tag.ToString()
                 && RegexUtilities.IsValidEmail(lastEmailTextBox.Text.Trim())) // Проверка заполнения всех обязательных полей на первом шаге.
             {
+                Customer.Add(NameTextBox.Text, ContractNumberTextBox.Text, FromContractTimeDateTimePicker.Value, ToContractTimeDateTimePicker.Value);
+
+                for (int i = 1; i <= EmailsPanel.Controls.Count - 2; i += 2)
+                {
+                    string emailName = EmailsPanel.Controls[i].Text;
+                    string email = EmailsPanel.Controls[i + 1].Text;
+
+                    if (Customer.FindEmail(email, out long emailId)) // Если такая эл.почта существует.
+                    {
+                        Customer.EditEmail(emailId, emailName, email);
+                    }
+                    else // Если такая эл.почта не существует.
+                    {
+                        Customer.AddEmail(emailName, email);
+                    }
+                }
+
                 OpenSubDivisionsPanel();
                 SubDivisionsButton.Enabled = true;
-
-                //long event_id = Functions.SqlInsert($"INSERT INTO event(start_at, end_at, ev_type) VALUES({Functions.ToUnixTime(FromContractTimeDateTimePicker.Value)}, {Functions.ToUnixTime(ToContractTimeDateTimePicker.Value)}), 9");
-                //CustomerId = Functions.SqlInsert($"INSERT INTO customer_legal_info(name, dogovor, event_id) VALUES('{NameTextBox.Text}', '{ContractNumberTextBox.Text}', {event_id})");
             }
         }
 
@@ -264,7 +278,6 @@ namespace Admin_Panel_Hotel
             CustomerInfoPanel.Visible = true;
             SubDivisionsPanel.Visible = false;
             AddCustomerLocationPanel.Visible = false;
-            CardPropertiesPanel.Visible = false;
 
             CustomerInfoButton.BackgroundImage = Properties.Resources.BlueCircle;
             CustomerInfoButton.ForeColor = Color.White;
@@ -274,9 +287,6 @@ namespace Admin_Panel_Hotel
 
             AddLocationsButton.BackgroundImage = Properties.Resources.GrayCircle;
             AddLocationsButton.ForeColor = Color.Black;
-
-            CardPropertiesButton.BackgroundImage = Properties.Resources.GrayCircle;
-            CardPropertiesButton.ForeColor = Color.Black;
         }
 
         #endregion
@@ -323,7 +333,6 @@ namespace Admin_Panel_Hotel
             CustomerInfoPanel.Visible = false;
             SubDivisionsPanel.Visible = true;
             AddCustomerLocationPanel.Visible = false;
-            CardPropertiesPanel.Visible = false;
 
             CustomerInfoButton.BackgroundImage = Properties.Resources.GrayCircle;
             CustomerInfoButton.ForeColor = Color.Black;
@@ -333,9 +342,6 @@ namespace Admin_Panel_Hotel
 
             AddLocationsButton.BackgroundImage = Properties.Resources.GrayCircle;
             AddLocationsButton.ForeColor = Color.Black;
-
-            CardPropertiesButton.BackgroundImage = Properties.Resources.GrayCircle;
-            CardPropertiesButton.ForeColor = Color.Black;
         }
 
         /// <summary>
@@ -369,7 +375,7 @@ namespace Admin_Panel_Hotel
                 return false;
             }
         }
-
+        
         /// <summary>
         /// Добавить подрядную организацию.
         /// </summary>
@@ -383,14 +389,9 @@ namespace Admin_Panel_Hotel
             else // Если подрядной организации нет в БД.
             {
                 subDivisionId = Customer.AddSubDivision(SubDivisionNameTextBox.Text);
-                long emailId = Customer.AddEmail(subDivisionId, SubDivisionEmailNameTextBox0.Text, SubDivisionEmailTextBox0.Text);
-                SubDivisionsDataGridView.Rows.Add(SubDivisionsDataGridView.Rows.Count + 1
-                    , SubDivisionNameTextBox.Text.Trim()
-                    , SubDivisionEmailNameTextBox0.Text.Trim()
-                    , SubDivisionEmailTextBox0.Text.Trim()
-                    , null
-                    , subDivisionId
-                    , emailId);
+                Customer.AddEmail(subDivisionId, SubDivisionEmailNameTextBox0.Text, SubDivisionEmailTextBox0.Text);
+
+                SubDivisionsDataGridView.DataSource = Customer.GetAllSubdivisions();
 
                 SubDivisionNameTextBox.Text = SubDivisionNameTextBox.Tag.ToString();
                 SubDivisionNameTextBox.ForeColor = Color.Silver;
@@ -490,20 +491,6 @@ namespace Admin_Panel_Hotel
         }
 
         /// <summary>
-        /// Обработка события нажатия на кнопку.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void AddLocationNextButton_Click(object sender, EventArgs e)
-        {
-            if (LocationsDataGridView.Rows.Count > 0)
-            {
-                OpenCardPropertiesPanel();
-                CardPropertiesButton.Enabled = true;
-            }
-        }
-
-        /// <summary>
         /// Отображение панели с добавлением локаций заказчика.
         /// </summary>
         private void OpenAddCustomerLocationPanel()
@@ -511,7 +498,6 @@ namespace Admin_Panel_Hotel
             CustomerInfoPanel.Visible = false;
             SubDivisionsPanel.Visible = false;
             AddCustomerLocationPanel.Visible = true;
-            CardPropertiesPanel.Visible = false;
 
             CustomerInfoButton.BackgroundImage = Properties.Resources.GrayCircle;
             CustomerInfoButton.ForeColor = Color.Black;
@@ -521,9 +507,6 @@ namespace Admin_Panel_Hotel
 
             AddLocationsButton.BackgroundImage = Properties.Resources.BlueCircle;
             AddLocationsButton.ForeColor = Color.White;
-
-            CardPropertiesButton.BackgroundImage = Properties.Resources.GrayCircle;
-            CardPropertiesButton.ForeColor = Color.Black;
         }
 
         /// <summary>
@@ -537,22 +520,17 @@ namespace Admin_Panel_Hotel
             if (LocationNameTextBox.TextLength > 0 && LocationNameTextBox.Text != LocationNameTextBox.Tag.ToString()
                 && RoomCountTextBox.TextLength > 0 && RoomCountTextBox.Text != RoomCountTextBox.Tag.ToString()
                 && BedsCountTextBox.TextLength > 0 && BedsCountTextBox.Text != BedsCountTextBox.Tag.ToString()
-                && CheckAddRoomsData()) // Если все обязательные поля заполнены.
+                && CheckRoomsData()) // Если все обязательные поля заполнены.
             {
-                LocationsDataGridView.Rows.Add(LocationsDataGridView.RowCount + 1
-                    , LocationNameTextBox.Text
-                    , RoomCountTextBox.Text.Trim()
-                    , BedsCountTextBox.Text.Trim()
-                    , CardCountTextBox.Text.Trim());
-                LocationId++;
-
                 for (int i = 0; i < RoomsDataGridView.RowCount; i++)
                 {
-                    // TODO: Сделать поиск существующих комнат.
-                    if (true) // Если в БД есть такие комнаты.
+                    if (Locations.FindRoom(RoomsDataGridView["RoomNumber", i].Value.ToString().Trim(), Locations.HotelId, out long roomId)) // Если в БД есть такие комнаты.
                     {
-                        // TODO: Сделать добавление комнат в локацию.
-                        //Functions.SqlInsert($"INSERT INTO ");
+                        // TODO: Сделать редактирование информации о комнате.
+                    }
+                    else
+                    {
+                        // TODO: Сделать добавление комнаты в базу.
                     }
                 }
 
@@ -568,7 +546,7 @@ namespace Admin_Panel_Hotel
         /// Проверка заполнения данных в добавленных комнатах.
         /// </summary>
         /// <returns>True - если все данные заполнены. False - если есть незаполненные области.</returns>
-        private bool CheckAddRoomsData()
+        private bool CheckRoomsData()
         {
             // Проверка заполнения всех видимых ячеек.
             for (int i = 0; i < RoomsDataGridView.Rows.Count - 1; i++)
@@ -745,58 +723,6 @@ namespace Admin_Panel_Hotel
 
         #endregion
 
-        #region Добавить свойства карт
-
-        private void AllProperties_Customer_CheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            GiveOutLinen_Customer_CheckBox.Checked = AllProperties_Customer_CheckBox.Checked;
-            Set1_Customer_CheckBox.Checked = AllProperties_Customer_CheckBox.Checked;
-            Set2_Customer_CheckBox.Checked = AllProperties_Customer_CheckBox.Checked;
-            Instructed_Customer_CheckBox.Checked = AllProperties_Customer_CheckBox.Checked;
-            ResidenceRules_Customer_CheckBox.Checked = AllProperties_Customer_CheckBox.Checked;
-            FireSafety_Customer_CheckBox.Checked = AllProperties_Customer_CheckBox.Checked;
-        }
-
-        private void CardPropertiesButton_Click(object sender, EventArgs e)
-        {
-            OpenCardPropertiesPanel();
-        }
-
-        /// <summary>
-        /// Отображение панели с выбором свойств карт заказчика.
-        /// </summary>
-        private void OpenCardPropertiesPanel()
-        {
-            CustomerInfoPanel.Visible = false;
-            SubDivisionsPanel.Visible = false;
-            AddCustomerLocationPanel.Visible = false;
-            CardPropertiesPanel.Visible = true;
-
-            CustomerInfoButton.BackgroundImage = Properties.Resources.GrayCircle;
-            CustomerInfoButton.ForeColor = Color.Black;
-
-            SubDivisionsButton.BackgroundImage = Properties.Resources.GrayCircle;
-            SubDivisionsButton.ForeColor = Color.Black;
-
-            AddLocationsButton.BackgroundImage = Properties.Resources.GrayCircle;
-            AddLocationsButton.ForeColor = Color.Black;
-
-            CardPropertiesButton.BackgroundImage = Properties.Resources.BlueCircle;
-            CardPropertiesButton.ForeColor = Color.White;
-        }
-
-        private void Set1HelpButton_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("В \"Комплект-1\" входит:\nНаволочка, подушка, одеяло, пододеяльник.", "Комплект-1", MessageBoxButtons.OK, MessageBoxIcon.Question);
-        }
-
-        private void Set2HelpButton_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("В \"Комплект-2\" входит:\nПростыня, подушка, одеяло.", "Комплект-2", MessageBoxButtons.OK, MessageBoxIcon.Question);
-        }
-
-        #endregion
-
         /// <summary>
         /// Добавить поля электронных почт.
         /// </summary>
@@ -847,15 +773,9 @@ namespace Admin_Panel_Hotel
         /// <param name="e"></param>
         private void AddCustomerButton_Click(object sender, EventArgs e)
         {
-            // UNDONE: Добавление заказчика в базу данных.
-            if (/*CheckCustomerInfo()*/ true)
+            if (LocationsDataGridView.RowCount > 0)
             {
-                Customer.Add(NameTextBox.Text, ContractNumberTextBox.Text, FromContractTimeDateTimePicker.Value, ToContractTimeDateTimePicker.Value);
-
-                for (int i = 1; i <= EmailsPanel.Controls.Count - 2; i += 2)
-                {
-                    Customer.AddEmail(EmailsPanel.Controls[i].Text, EmailsPanel.Controls[i + 1].Text);
-                }
+                
             }
             else
             {

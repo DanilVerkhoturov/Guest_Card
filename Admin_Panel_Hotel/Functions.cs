@@ -63,8 +63,8 @@ namespace Admin_Panel_Hotel
         /// <summary>
         /// Запрос на добавление данных в БД.
         /// </summary>
-        /// <param name="query"></param>
-        /// <returns>Уникальный номер (id) последних добавленных данных или -1 если возникла ошибка.</returns>
+        /// <param name="query">Запрос.</param>
+        /// <returns>Уникальный номер (Id) последних добавленных данных или -1 если возникла ошибка.</returns>
         public static long SqlInsert(string query)
         {
             try
@@ -77,7 +77,26 @@ namespace Admin_Panel_Hotel
             catch (Exception)
             {
                 return -1;
-                throw;
+            }
+        }
+
+        /// <summary>
+        /// Запрос на изменение данных в БД.
+        /// </summary>
+        /// <param name="query">Запрос</param>
+        /// <returns>Уникальный номер (Id) последней обновлённой строки или -1 если возникла ошибка.</returns>
+        public static long SqlUpdate(string query)
+        {
+            try
+            {
+                MySqlCommand update = new MySqlCommand(query, Connection);
+                update.CommandTimeout = 86400;
+                update.ExecuteNonQuery();
+                return update.LastInsertedId;
+            }
+            catch (Exception)
+            {
+                return -1;
             }
         }
 
