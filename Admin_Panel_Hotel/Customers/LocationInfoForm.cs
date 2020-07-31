@@ -13,7 +13,7 @@ namespace Admin_Panel_Hotel.Customers
             Locations.GetInfo();
 
             NameTextBox.Text = Locations.Name;
-            RoomCountTextBox.Text = Locations.RoomsCount.ToString();
+            RoomCountTextBox.Text = Locations.RoomCount.ToString();
             BedsCountTextBox.Text = Locations.BedsCount.ToString();
             CardsCountTextBox.Text = Locations.CardsCount.ToString();
             RoomsDataGridView.DataSource = Locations.GetRooms();

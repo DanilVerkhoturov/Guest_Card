@@ -752,8 +752,6 @@
         private System.Windows.Forms.Panel LeftMenu;
         private System.Windows.Forms.Panel CustomersPanel;
         private System.Windows.Forms.Button AddCustomerButton;
-        private System.Windows.Forms.Button MyCustomersButton;
-        private System.Windows.Forms.Button CustomersButton;
         private System.Windows.Forms.Panel PanelLogo;
         private System.Windows.Forms.Button ApplicationsButton;
         private System.Windows.Forms.Panel ApplicationsPanel;
@@ -787,6 +785,8 @@
         private System.Windows.Forms.Button GuestsCalendarButton;
         private System.Windows.Forms.Button EvictionGuestsButton;
         private System.Windows.Forms.Button NewGuestsButton;
+        public System.Windows.Forms.Button MyCustomersButton;
+        public System.Windows.Forms.Button CustomersButton;
     }
 }
 
