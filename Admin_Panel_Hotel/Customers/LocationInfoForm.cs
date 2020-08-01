@@ -13,10 +13,10 @@ namespace Admin_Panel_Hotel.Customers
             Locations.GetInfo();
 
             NameTextBox.Text = Locations.Name;
-            RoomCountTextBox.Text = Locations.RoomCount.ToString();
-            BedsCountTextBox.Text = Locations.BedsCount.ToString();
-            CardsCountTextBox.Text = Locations.CardsCount.ToString();
-            RoomsDataGridView.DataSource = Locations.GetRooms();
+            RoomCountTextBox.Text = Hotels.RoomCount.ToString();
+            BedsCountTextBox.Text = Hotels.BedsCount.ToString();
+            CardsCountTextBox.Text = Hotels.CardsCount.ToString();
+            RoomsDataGridView.DataSource = Hotels.GetRooms();
 
             CustomerLocationNameLabel.Text = $"Мои заказчики > {Customer.Name} > {Locations.Name}";
         }

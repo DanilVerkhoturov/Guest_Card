@@ -266,7 +266,7 @@
         #endregion
         private System.Windows.Forms.Label CountCardLabel;
         private System.Windows.Forms.ComboBox FilterComboBox;
-        private System.Windows.Forms.Button AcceptButton;
+        private new System.Windows.Forms.Button AcceptButton;
         private System.Windows.Forms.Button PrintButton;
         private System.Windows.Forms.Label AllCardLabel;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;

@@ -46,16 +46,23 @@ namespace Admin_Panel_Hotel
         /// <returns>Возвращает таблицу с данными.</returns>
         public static DataTable ExecuteSql(string query)
         {
-            DataTable table = new DataTable();
-            MySqlCommand command = new MySqlCommand(query, Connection);
-            command.CommandTimeout = 999999;
+            try
+            {
+                DataTable table = new DataTable();
+                MySqlCommand command = new MySqlCommand(query, Connection);
+                command.CommandTimeout = 999999;
 
-            command.ExecuteNonQuery();
+                command.ExecuteNonQuery();
 
-            MySqlDataReader reader = command.ExecuteReader();
-            table.Load(reader);
+                MySqlDataReader reader = command.ExecuteReader();
+                table.Load(reader);
 
-            return table;
+                return table;
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
         }
 
         /// <summary>
@@ -92,7 +99,7 @@ namespace Admin_Panel_Hotel
                 update.ExecuteNonQuery();
                 return update.LastInsertedId;
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 return -1;
             }

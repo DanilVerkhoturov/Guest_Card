@@ -520,25 +520,25 @@ namespace Admin_Panel_Hotel
                 && BedsCountTextBox.TextLength > 0 && BedsCountTextBox.Text != BedsCountTextBox.Tag.ToString()
                 && CheckRoomsData()) // Если все обязательные поля заполнены.
             {
-                // TODO: Сделать добавление локации в БД.
-
+                long locationId = Locations.Add(LocationName.Text.Trim());
+                long hotelId = Hotels.Add(locationId, Customer.Id, Convert.ToInt32(RoomCountTextBox.Text), Convert.ToInt32(BedsCountTextBox.Text), Convert.ToInt32(CardCountTextBox.Text));
 
                 for (int i = 0; i < RoomsDataGridView.RowCount; i++)
                 {
                     string roomName = RoomsDataGridView["RoomNumber", i].Value.ToString().Trim();
                     string bedsCount = RoomsDataGridView["BedsCount", i].Value.ToString().Trim();
 
-                    if (Locations.FindRoom(roomName, Locations.HotelId, out long roomId)) // Если в БД есть такие комнаты.
+                    if (Hotels.FindRoom(roomName, hotelId, out long roomId)) // Если в БД есть такие комнаты.
                     {
-                        Locations.EditRoom(roomId, roomName, bedsCount);
+                        Hotels.EditRoom(roomId, roomName, bedsCount);
                     }
                     else
                     {
-                        Locations.AddRoom(Locations.HotelId, roomName, bedsCount);
+                        Hotels.AddRoom(hotelId, roomName, bedsCount);
                     }
                 }
 
-                LocationsDataGridView.DataSource = Locations.GetAllHotels();
+                LocationsDataGridView.DataSource = Hotels.GetAll();
 
                 return true;
             }
@@ -555,7 +555,7 @@ namespace Admin_Panel_Hotel
         private bool CheckRoomsData()
         {
             // Проверка заполнения всех видимых ячеек.
-            for (int i = 0; i < RoomsDataGridView.Rows.Count - 1; i++)
+            for (int i = 0; i < RoomsDataGridView.Rows.Count; i++)
             {
                 try
                 {
@@ -731,17 +731,17 @@ namespace Admin_Panel_Hotel
             if (LocationsDataGridView.Columns[e.ColumnIndex].Name == "LocationName")
             {
                 // Получение информации о локации.
-                Locations.HotelId = Convert.ToInt64(LocationsDataGridView["hotel_id", e.RowIndex].Value);
+                Hotels.Id = Convert.ToInt64(LocationsDataGridView["hotel_id", e.RowIndex].Value);
                 Locations.GetInfo();
 
                 RoomsDataGridView.Rows.Clear();
 
                 // Заполнение полей информацией о локации.
                 LocationName.Text = Locations.Name;
-                RoomCountTextBox.Text = Locations.RoomCount.ToString();
-                BedsCountTextBox.Text = Locations.BedsCount.ToString();
-                CardCountTextBox.Text = Locations.CardsCount.ToString();
-                RoomsDataGridView.DataSource = Locations.GetRooms();
+                RoomCountTextBox.Text = Hotels.RoomCount.ToString();
+                BedsCountTextBox.Text = Hotels.BedsCount.ToString();
+                CardCountTextBox.Text = Hotels.CardsCount.ToString();
+                RoomsDataGridView.DataSource = Hotels.GetRooms();
             }
         }
 

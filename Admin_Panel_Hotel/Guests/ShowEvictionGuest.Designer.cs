@@ -281,6 +281,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button AcceptButton;
+        private new System.Windows.Forms.Button AcceptButton;
     }
 }
