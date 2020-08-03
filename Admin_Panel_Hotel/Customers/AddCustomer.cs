@@ -512,9 +512,7 @@ namespace Admin_Panel_Hotel
         /// <summary>
         /// Проверка заполнения обязательных полей и добавление локации в базу данных.
         /// </summary>
-        /// <returns>
-        /// True - если все обязательные поля заполнены и локация добавлена в таблицу. False - если заполнены не все обязательные поля.
-        /// </returns>
+        /// <returns>True - если все обязательные поля заполнены и локация добавлена в БД. False - если заполнены не все обязательные поля.</returns>
         private bool AddLocation()
         {
             if (LocationNameTextBox.TextLength > 0 && LocationNameTextBox.Text != LocationNameTextBox.Tag.ToString()
@@ -522,17 +520,25 @@ namespace Admin_Panel_Hotel
                 && BedsCountTextBox.TextLength > 0 && BedsCountTextBox.Text != BedsCountTextBox.Tag.ToString()
                 && CheckRoomsData()) // Если все обязательные поля заполнены.
             {
+                long locationId = Locations.Add(LocationName.Text.Trim());
+                long hotelId = Hotels.Add(locationId, Customer.Id, Convert.ToInt32(RoomCountTextBox.Text), Convert.ToInt32(BedsCountTextBox.Text), Convert.ToInt32(CardCountTextBox.Text));
+
                 for (int i = 0; i < RoomsDataGridView.RowCount; i++)
                 {
-                    if (Locations.FindRoom(RoomsDataGridView["RoomNumber", i].Value.ToString().Trim(), Locations.HotelId, out long roomId)) // Если в БД есть такие комнаты.
+                    string roomName = RoomsDataGridView["RoomNumber", i].Value.ToString().Trim();
+                    string bedsCount = RoomsDataGridView["BedsCount", i].Value.ToString().Trim();
+
+                    if (Hotels.FindRoom(roomName, hotelId, out long roomId)) // Если в БД есть такие комнаты.
                     {
-                        // TODO: Сделать редактирование информации о комнате.
+                        Hotels.EditRoom(roomId, roomName, bedsCount);
                     }
                     else
                     {
-                        // TODO: Сделать добавление комнаты в базу.
+                        Hotels.AddRoom(hotelId, roomName, bedsCount);
                     }
                 }
+
+                LocationsDataGridView.DataSource = Hotels.GetAll();
 
                 return true;
             }
@@ -549,14 +555,13 @@ namespace Admin_Panel_Hotel
         private bool CheckRoomsData()
         {
             // Проверка заполнения всех видимых ячеек.
-            for (int i = 0; i < RoomsDataGridView.Rows.Count - 1; i++)
+            for (int i = 0; i < RoomsDataGridView.Rows.Count; i++)
             {
                 try
                 {
                     // Если в ячейке нет данных или написан текст подсказки.
                     if (RoomsDataGridView[1, i].Value == null
                         || RoomsDataGridView[1, i].Value.ToString().Trim().ToLower() == RoomsDataGridView.Columns[1].ToolTipText.ToLower()
-                        || !int.TryParse(RoomsDataGridView[1, i].Value.ToString().Trim().ToLower(), out int roomNumber)
                         || RoomsDataGridView[2, i].Value == null
                         || RoomsDataGridView[2, i].Value.ToString().Trim().ToLower() == RoomsDataGridView.Columns[2].ToolTipText.ToLower()
                         || !int.TryParse(RoomsDataGridView[2, i].Value.ToString().Trim().ToLower(), out int bedsCount))
@@ -567,7 +572,6 @@ namespace Admin_Panel_Hotel
                 catch (Exception)
                 {
                     return false;
-                    throw;
                 }
             }
             return true;
@@ -711,13 +715,33 @@ namespace Admin_Panel_Hotel
         /// <param name="e"></param>
         private void LocationsDataGridView_CellMouseMove(object sender, DataGridViewCellMouseEventArgs e)
         {
-            if (e.ColumnIndex == 1 || e.ColumnIndex == 5)
+            if (LocationsDataGridView.Columns[e.ColumnIndex].Name == "LocationName" || LocationsDataGridView.Columns[e.ColumnIndex].Name == "DeleteLocation")
             {
                 LocationsDataGridView.Cursor = Cursors.Hand;
             }
             else
             {
                 LocationsDataGridView.Cursor = Cursors.Default;
+            }
+        }
+
+        private void LocationsDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Если была нажата ссылка с именем локации.
+            if (LocationsDataGridView.Columns[e.ColumnIndex].Name == "LocationName")
+            {
+                // Получение информации о локации.
+                Hotels.Id = Convert.ToInt64(LocationsDataGridView["hotel_id", e.RowIndex].Value);
+                Locations.GetInfo();
+
+                RoomsDataGridView.Rows.Clear();
+
+                // Заполнение полей информацией о локации.
+                LocationName.Text = Locations.Name;
+                RoomCountTextBox.Text = Hotels.RoomCount.ToString();
+                BedsCountTextBox.Text = Hotels.BedsCount.ToString();
+                CardCountTextBox.Text = Hotels.CardsCount.ToString();
+                RoomsDataGridView.DataSource = Hotels.GetRooms();
             }
         }
 
@@ -775,7 +799,26 @@ namespace Admin_Panel_Hotel
         {
             if (LocationsDataGridView.RowCount > 0)
             {
-                
+                if (AddLocation())
+                {
+                    LocationNameTextBox.Text = LocationNameTextBox.Tag.ToString();
+                    RoomCountTextBox.Text = RoomCountTextBox.Tag.ToString();
+                    BedsCountTextBox.Text = BedsCountTextBox.Tag.ToString();
+                    CardCountTextBox.Text = "0";
+                    AddRoomsLabel.Visible = false;
+                    RoomsDataGridView.Visible = false;
+                }
+                else
+                {
+                    DialogResult dialogResult = MessageBox.Show("Заполнены не все поля, введённые данные будут утеряны! Завершить добавление заказчика?", "Внимание", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                    if (dialogResult == DialogResult.Yes) // Если добавление заказчика завершено.
+                    {
+                        MainForm.SubMenuProcessing(MainForm.MyCustomersBtn, MainForm.CustomersBtn);
+                        Functions.OpenChildForm(new CustomersForm(), MainForm.ContP);
+                        Close();
+                    }
+                }
             }
             else
             {

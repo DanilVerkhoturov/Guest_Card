@@ -11,6 +11,8 @@ namespace Admin_Panel_Hotel
     public partial class MainForm : Form
     {
         public static Panel ContP = null;
+        public static Button CustomersBtn = null;
+        public static Button MyCustomersBtn = null;
         private static Button CurrentSubButton = null;
         private static Button CurrentMainButton = null;
         private static Panel CurrentSubMenu = null;
@@ -20,6 +22,8 @@ namespace Admin_Panel_Hotel
             InitializeComponent();
 
             ContP = ContentPanel;
+            CustomersBtn = CustomersButton;
+            MyCustomersBtn = MyCustomersButton;
 
             Functions.Connection.StateChange += Functions.MySQLConnectionStateChange;
             Functions.Connection.Open();
@@ -173,7 +177,7 @@ namespace Admin_Panel_Hotel
         /// </summary>
         /// <param name="newButton">Объект нажатой кнопки.</param>
         /// <param name="newSubMenu">Объект подменю. Указывать только если была нажата кнопка, отвечающая за разворачивание подменю! По умолчанию - null.</param>
-        private void SubMenuProcessing(Button newButton, Button newMainButton, Panel newSubMenu = null)
+        public static void SubMenuProcessing(Button newButton, Button newMainButton, Panel newSubMenu = null)
         {
             // Обработка нажатия главной кнопки меню.
             if (CurrentMainButton == null)

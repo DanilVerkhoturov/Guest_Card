@@ -247,7 +247,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button AcceptButton;
+        private new System.Windows.Forms.Button AcceptButton;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox LocationComboBox;

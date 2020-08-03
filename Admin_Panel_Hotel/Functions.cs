@@ -13,13 +13,11 @@ namespace Admin_Panel_Hotel
         /// <summary>
         /// Строка подключения.
         /// </summary>
-        private static string ConnectionString = "Data Source=82.202.172.129; User Id=u117511_hotel; Password=wjkbc0r7; Database=u117511_hotel";
-
+        private static string ConnectionString = "Data Source=82.202.172.129; User Id=u117511_hotel; Password=wjkbc0r7; Database=u117511_hotel; CharSet=utf8";
         /// <summary>
         /// Соединение с базой данных.
         /// </summary>
         public static MySqlConnection Connection = new MySqlConnection(ConnectionString);
-
         /// <summary>
         /// Активная форма в панели контента.
         /// </summary>
@@ -48,16 +46,23 @@ namespace Admin_Panel_Hotel
         /// <returns>Возвращает таблицу с данными.</returns>
         public static DataTable ExecuteSql(string query)
         {
-            DataTable table = new DataTable();
-            MySqlCommand command = new MySqlCommand(query, Connection);
-            command.CommandTimeout = 999999;
+            try
+            {
+                DataTable table = new DataTable();
+                MySqlCommand command = new MySqlCommand(query, Connection);
+                command.CommandTimeout = 999999;
 
-            command.ExecuteNonQuery();
+                command.ExecuteNonQuery();
 
-            MySqlDataReader reader = command.ExecuteReader();
-            table.Load(reader);
+                MySqlDataReader reader = command.ExecuteReader();
+                table.Load(reader);
 
-            return table;
+                return table;
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
         }
 
         /// <summary>
@@ -74,7 +79,7 @@ namespace Admin_Panel_Hotel
                 insert.ExecuteNonQuery();
                 return insert.LastInsertedId;
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 return -1;
             }
@@ -94,7 +99,7 @@ namespace Admin_Panel_Hotel
                 update.ExecuteNonQuery();
                 return update.LastInsertedId;
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 return -1;
             }

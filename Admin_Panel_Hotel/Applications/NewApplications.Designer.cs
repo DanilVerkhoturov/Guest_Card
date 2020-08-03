@@ -220,7 +220,7 @@
 
         #endregion
         private System.Windows.Forms.DataGridViewTextBoxColumn Castomer;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Location;
+        private new System.Windows.Forms.DataGridViewTextBoxColumn Location;
         private System.Windows.Forms.DataGridView ApplicationsDataGridView;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn name;

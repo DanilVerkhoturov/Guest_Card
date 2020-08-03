@@ -37,10 +37,10 @@
             this.CustomersComboBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.CustomersDataGridView = new System.Windows.Forms.DataGridView();
-            this.SearchTextBox = new System.Windows.Forms.TextBox();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SearchTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.CustomersDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -130,6 +130,7 @@
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.ControlText;
             this.CustomersDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.CustomersDataGridView.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             this.CustomersDataGridView.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.CustomersDataGridView.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CustomersDataGridView.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
@@ -142,15 +143,6 @@
             this.CustomersDataGridView.TabStop = false;
             this.CustomersDataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.CustomersDataGridView_CellMouseClick);
             this.CustomersDataGridView.CellMouseMove += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.CustomersDataGridView_CellMouseMove);
-            // 
-            // SearchTextBox
-            // 
-            this.SearchTextBox.ForeColor = System.Drawing.Color.Black;
-            this.SearchTextBox.Location = new System.Drawing.Point(411, 114);
-            this.SearchTextBox.Margin = new System.Windows.Forms.Padding(22, 3, 3, 3);
-            this.SearchTextBox.Name = "SearchTextBox";
-            this.SearchTextBox.Size = new System.Drawing.Size(291, 33);
-            this.SearchTextBox.TabIndex = 47;
             // 
             // name
             // 
@@ -179,6 +171,15 @@
             this.id.Name = "id";
             this.id.ReadOnly = true;
             this.id.Visible = false;
+            // 
+            // SearchTextBox
+            // 
+            this.SearchTextBox.ForeColor = System.Drawing.Color.Black;
+            this.SearchTextBox.Location = new System.Drawing.Point(411, 114);
+            this.SearchTextBox.Margin = new System.Windows.Forms.Padding(22, 3, 3, 3);
+            this.SearchTextBox.Name = "SearchTextBox";
+            this.SearchTextBox.Size = new System.Drawing.Size(291, 33);
+            this.SearchTextBox.TabIndex = 47;
             // 
             // CustomersForm
             // 

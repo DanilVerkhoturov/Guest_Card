@@ -38,7 +38,7 @@ namespace Admin_Panel_Hotel
         /// <returns>Возвращает список всех подрядных организаций заказчика.</returns>
         public static DataTable GetAllSubdivisions()
         {
-            return Functions.ExecuteSql($"SELECT division_id as subdivision_id, division_name as subdivision_name WHERE parent_id = {DivisionId}");
+            return Functions.ExecuteSql($"SELECT id as subdivision_id, name as subdivision_name FROM division WHERE parent_id = {DivisionId}");
         }
 
         /// <summary>
@@ -77,7 +77,7 @@ namespace Admin_Panel_Hotel
         /// <returns>Возвращает уникальный номер (Id) созданной подрядной организации.</returns>
         public static long AddSubDivision(string subDivisionName)
         {
-            SubdivisionId = Functions.SqlInsert($"INSERT INTO division(parent_id, name) VALUES({Id}, '{subDivisionName.Trim()}')");
+            SubdivisionId = Functions.SqlInsert($"INSERT INTO division(parent_id, name) VALUES({DivisionId}, '{subDivisionName.Trim()}')");
             return SubdivisionId;
         }
 
@@ -89,7 +89,7 @@ namespace Admin_Panel_Hotel
         /// <returns>Возвращает уникальный номер (Id) созданной электронной почты.</returns>
         public static long AddEmail(string name, string email)
         {
-            return Functions.SqlInsert($"INSERT INTO division_email(division_id, name, email) VALUES({Id}, '{name.Trim()}', '{email.Trim()}')");
+            return Functions.SqlInsert($"INSERT INTO division_email(division_id, name, email) VALUES({DivisionId}, '{name.Trim()}', '{email.Trim()}')");
         }
 
         /// <summary>
@@ -128,7 +128,7 @@ namespace Admin_Panel_Hotel
             {
                 subDivisionId = -1;
 
-                MySqlCommand select = new MySqlCommand($"SELECT id FROM division WHERE name = '{name.Trim()}' AND parent_id is not null", Functions.Connection);
+                MySqlCommand select = new MySqlCommand($"SELECT id FROM division WHERE name = '{name.Trim()}' AND parent_id = {DivisionId}", Functions.Connection);
                 select.CommandTimeout = 999999;
 
                 select.ExecuteNonQuery();
@@ -138,6 +138,7 @@ namespace Admin_Panel_Hotel
                 {
                     subDivisionId = Convert.ToInt64(reader[0].ToString());
                 }
+                reader.Close();
 
                 if (subDivisionId == -1) // Если подрядная организация не найдена.
                 {
