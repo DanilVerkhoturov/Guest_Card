@@ -43,7 +43,7 @@
             this.label1.Location = new System.Drawing.Point(65, 88);
             this.label1.Margin = new System.Windows.Forms.Padding(3, 79, 3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(467, 29);
+            this.label1.Size = new System.Drawing.Size(468, 29);
             this.label1.TabIndex = 1;
             this.label1.Text = "Укажите наименование недостачи ТМЦ";
             // 
@@ -109,6 +109,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
             this.ClientSize = new System.Drawing.Size(588, 359);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.checkBox4);
@@ -117,9 +118,12 @@
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "NotificationTMCGuest";
             this.Opacity = 0.8D;
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "NotificationTMCGuest";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -45,6 +45,8 @@
             this.label11 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.AcceptButton = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -65,7 +67,7 @@
             this.label2.Location = new System.Drawing.Point(133, 108);
             this.label2.Margin = new System.Windows.Forms.Padding(124, 42, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 35);
+            this.label2.Size = new System.Drawing.Size(97, 35);
             this.label2.TabIndex = 1;
             this.label2.Text = "Гость:";
             // 
@@ -86,7 +88,7 @@
             this.label4.Font = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.Location = new System.Drawing.Point(554, 110);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(373, 33);
+            this.label4.Size = new System.Drawing.Size(372, 33);
             this.label4.TabIndex = 3;
             this.label4.Text = "- Газпром ННГ от 12.04.2020";
             // 
@@ -132,26 +134,25 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(488, 233);
+            this.radioButton1.Location = new System.Drawing.Point(19, 13);
             this.radioButton1.Margin = new System.Windows.Forms.Padding(77, 90, 3, 3);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(80, 29);
             this.radioButton1.TabIndex = 8;
-            this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Сдал";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(645, 233);
+            this.radioButton2.Location = new System.Drawing.Point(176, 13);
             this.radioButton2.Margin = new System.Windows.Forms.Padding(74, 90, 3, 3);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(108, 29);
             this.radioButton2.TabIndex = 9;
-            this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Не сдал";
             this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // radioButton3
             // 
@@ -161,9 +162,9 @@
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(108, 29);
             this.radioButton3.TabIndex = 13;
-            this.radioButton3.TabStop = true;
             this.radioButton3.Text = "Не сдал";
             this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
             // radioButton4
             // 
@@ -173,7 +174,6 @@
             this.radioButton4.Name = "radioButton4";
             this.radioButton4.Size = new System.Drawing.Size(80, 29);
             this.radioButton4.TabIndex = 12;
-            this.radioButton4.TabStop = true;
             this.radioButton4.Text = "Сдал";
             this.radioButton4.UseVisualStyleBackColor = true;
             // 
@@ -193,7 +193,7 @@
             this.label10.Location = new System.Drawing.Point(144, 306);
             this.label10.Margin = new System.Windows.Forms.Padding(135, 44, 0, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(75, 25);
+            this.label10.Size = new System.Drawing.Size(74, 25);
             this.label10.TabIndex = 10;
             this.label10.Text = "Карта:";
             // 
@@ -230,6 +230,16 @@
             this.AcceptButton.TabIndex = 61;
             this.AcceptButton.Text = "Подтвердить";
             this.AcceptButton.UseVisualStyleBackColor = false;
+            this.AcceptButton.Click += new System.EventHandler(this.AcceptButton_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.radioButton1);
+            this.panel1.Controls.Add(this.radioButton2);
+            this.panel1.Location = new System.Drawing.Point(469, 220);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(294, 55);
+            this.panel1.TabIndex = 62;
             // 
             // ShowEvictionGuest
             // 
@@ -244,8 +254,6 @@
             this.Controls.Add(this.radioButton4);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -254,10 +262,13 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "ShowEvictionGuest";
             this.Text = "ShowEvictionGuest";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -282,5 +293,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox textBox1;
         private new System.Windows.Forms.Button AcceptButton;
+        private System.Windows.Forms.Panel panel1;
     }
 }

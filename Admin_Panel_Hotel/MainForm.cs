@@ -4,6 +4,7 @@ using Admin_Panel_Hotel.Guests;
 using Admin_Panel_Hotel.Registry;
 using System;
 using System.Data;
+using System.IO.Ports;
 using System.Windows.Forms;
 
 namespace Admin_Panel_Hotel
@@ -24,6 +25,16 @@ namespace Admin_Panel_Hotel
             ContP = ContentPanel;
             CustomersBtn = CustomersButton;
             MyCustomersBtn = MyCustomersButton;
+
+            // Подключение магнитного считывателя.
+            Functions.RFID = new SerialPort();
+            Functions.RFID.PortName = "COM3";
+            Functions.RFID.BaudRate = 9600;
+            Functions.RFID.DataBits = 8;
+            Functions.RFID.Parity = Parity.None;
+            Functions.RFID.StopBits = StopBits.One;
+            Functions.RFID.ReadTimeout = 2000;
+            Functions.RFID.DataReceived += new SerialDataReceivedEventHandler(Functions.RFID_DataReceivedHandler);
 
             Functions.Connection.StateChange += Functions.MySQLConnectionStateChange;
             Functions.Connection.Open();
@@ -253,7 +264,7 @@ namespace Admin_Panel_Hotel
         private void MainForm_Load(object sender, EventArgs e)
         {
             SubMenuProcessing(NewApplicationsButton, ApplicationsButton, ApplicationsPanel);
-            Functions.OpenChildForm(new NewApplications(), ContentPanel);
+            Functions.OpenChildForm(new ShowEvictionGuest(), ContentPanel);
         }
     }
 }

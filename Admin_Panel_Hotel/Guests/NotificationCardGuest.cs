@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Admin_Panel_Hotel.Guests
 {
-    public partial class NotificationCadrdGues : Form
+    public partial class NotificationCardGuest : Form
     {
-        public NotificationCadrdGues()
+        public NotificationCardGuest()
         {
             InitializeComponent();
         }

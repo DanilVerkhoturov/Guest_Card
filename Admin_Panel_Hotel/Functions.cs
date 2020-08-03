@@ -2,6 +2,7 @@
 using System;
 using System.Data;
 using System.Drawing;
+using System.IO.Ports;
 using System.Windows.Forms;
 
 namespace Admin_Panel_Hotel
@@ -22,6 +23,14 @@ namespace Admin_Panel_Hotel
         /// Активная форма в панели контента.
         /// </summary>
         private static Form ActiveForm = null;
+        /// <summary>
+        /// Магнитный считыватель.
+        /// </summary>
+        public static SerialPort RFID;
+        /// <summary>
+        /// Серийный номер приложенной карты к магнитному считывателю.
+        /// </summary>
+        public static string CardSerialNumberFromRFID;
 
         #endregion
 
@@ -108,6 +117,13 @@ namespace Admin_Panel_Hotel
         }
 
         #endregion
+
+        public static void RFID_DataReceivedHandler(object sender, SerialDataReceivedEventArgs e)
+        {
+            SerialPort serialPort = (SerialPort)sender;
+            CardSerialNumberFromRFID = serialPort.ReadLine();
+            RFID.Close();
+        }
 
         /// <summary>
         /// Конвертировать дату в Unix-формат.
