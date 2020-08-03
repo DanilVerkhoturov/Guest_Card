@@ -36,12 +36,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.CustomerNameLabel = new System.Windows.Forms.Label();
             this.LocationsDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.AddLocationButton = new System.Windows.Forms.Button();
-            this.FindTextBox = new System.Windows.Forms.TextBox();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.AddLocationButton = new System.Windows.Forms.Button();
+            this.FindTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.LocationsDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -136,6 +136,34 @@
             this.LocationsDataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.LocationsDataGridView_CellMouseClick);
             this.LocationsDataGridView.CellMouseMove += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.LocationsDataGridView_CellMouseMove);
             // 
+            // name
+            // 
+            this.name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.name.DataPropertyName = "location_name";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.name.DefaultCellStyle = dataGridViewCellStyle3;
+            this.name.HeaderText = "Column1";
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Column2.HeaderText = "Просмотр";
+            this.Column2.Image = global::Admin_Panel_Hotel.Properties.Resources.pngwing_8;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column2.Width = 5;
+            // 
+            // id
+            // 
+            this.id.DataPropertyName = "location_id";
+            this.id.HeaderText = "id";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Visible = false;
+            // 
             // dataGridViewImageColumn1
             // 
             this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
@@ -174,38 +202,11 @@
             this.FindTextBox.TabIndex = 4;
             this.FindTextBox.Text = "Поиск";
             // 
-            // name
-            // 
-            this.name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.name.DataPropertyName = "location_name";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.name.DefaultCellStyle = dataGridViewCellStyle3;
-            this.name.HeaderText = "Column1";
-            this.name.Name = "name";
-            this.name.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Column2.HeaderText = "Просмотр";
-            this.Column2.Image = global::Admin_Panel_Hotel.Properties.Resources.pngwing_8;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column2.Width = 5;
-            // 
-            // id
-            // 
-            this.id.DataPropertyName = "location_id";
-            this.id.HeaderText = "id";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Visible = false;
-            // 
             // CustomerInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.ClientSize = new System.Drawing.Size(1013, 894);
             this.Controls.Add(this.LocationsDataGridView);

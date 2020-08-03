@@ -15,7 +15,7 @@ namespace Admin_Panel_Hotel
             // TODO: Сделать проверку роли.
             if (true)
             {
-                return Functions.ExecuteSql("SELECT * FROM cards_info");
+                return Functions.ExecuteSql("SELECT * FROM card_list");
             }
         }
 
@@ -30,7 +30,7 @@ namespace Admin_Panel_Hotel
                 // TODO: Сделать проверку роли.
                 if (true)
                 {
-                    MySqlCommand getCount = new MySqlCommand("SELECT COUNT(*) FROM cards_info", Functions.Connection);
+                    MySqlCommand getCount = new MySqlCommand("SELECT COUNT(*) FROM card_list", Functions.Connection);
                     MySqlDataReader reader = getCount.ExecuteReader();
                     int cardsCount = 0;
 

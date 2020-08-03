@@ -57,28 +57,35 @@ namespace Admin_Panel_Hotel
         /// <param name="contractNumber">Номер договора.</param>
         /// <param name="fromContractTime">Начало срока действия договора.</param>
         /// <param name="toContractTime">Конец срока действия договора.</param>
-        /// <returns>Возвращает уникальный номер (Id) добавленного заказчика.</returns>
+        /// <returns>Возвращает уникальный номер (Id) добавленного заказчика. -1 - если возникла непредвиденная ошибка.</returns>
         public static long Add(string divisionName, string contractNumber, DateTime fromContractTime, DateTime toContractTime)
         {
             // Добавление организации в БД. 
             DivisionId = Functions.SqlInsert($"INSERT INTO division(name) VALUES('{divisionName.Trim()}')");
-            // Добавление сроков договора заказчика.
-            long eventId = Functions.SqlInsert($"INSERT INTO event(start_at, end_at, ev_type) VALUES ({Functions.ToUnixTime(fromContractTime)}, {Functions.ToUnixTime(toContractTime)}, 9)");
-            // Добавление информации о заказчике в БД.
-            Id = Functions.SqlInsert($"INSERT INTO customer_legal_info(division_id, dogovor, event_id) VALUES({DivisionId}, '{contractNumber.Trim()}', {eventId})");
-            Name = divisionName;
-            return Id;
+            if (DivisionId >= 0)
+            {
+                // Добавление сроков договора заказчика.
+                long eventId = Functions.SqlInsert($"INSERT INTO event(start_at, end_at, ev_type) VALUES ({Functions.ToUnixTime(fromContractTime)}, {Functions.ToUnixTime(toContractTime)}, 9)");
+                // Добавление информации о заказчике в БД.
+                Id = Functions.SqlInsert($"INSERT INTO customer_legal_info(division_id, dogovor, event_id) VALUES({DivisionId}, '{contractNumber.Trim()}', {eventId})");
+                Name = divisionName;
+                return Id;
+            }
+            else
+            {
+                return -1;
+            }
         }
 
         /// <summary>
         /// Добавить подрядную организацию заказчика.
         /// </summary>
         /// <param name="subDivisionName">Название подрядной организации.</param>
-        /// <returns>Возвращает уникальный номер (Id) созданной подрядной организации.</returns>
+        /// <returns>Возвращает уникальный номер (Id) созданной подрядной организации. -1 - если возникла непредвиденная ошибка.</returns>
         public static long AddSubDivision(string subDivisionName)
         {
             SubdivisionId = Functions.SqlInsert($"INSERT INTO division(parent_id, name) VALUES({DivisionId}, '{subDivisionName.Trim()}')");
-            return SubdivisionId;
+            return SubdivisionId >= 0 ? SubdivisionId : -1;
         }
 
         /// <summary>
@@ -86,10 +93,24 @@ namespace Admin_Panel_Hotel
         /// </summary>
         /// <param name="name">Имя электронной почты.</param>
         /// <param name="email">Электронная почта.</param>
-        /// <returns>Возвращает уникальный номер (Id) созданной электронной почты.</returns>
+        /// <returns>Возвращает уникальный номер (Id) созданной электронной почты. -1 - если возникла непредвиденная ошибка.</returns>
         public static long AddEmail(string name, string email)
         {
-            return Functions.SqlInsert($"INSERT INTO division_email(division_id, name, email) VALUES({DivisionId}, '{name.Trim()}', '{email.Trim()}')");
+            long emailId = Functions.SqlInsert($"INSERT INTO division_email(division_id, name, email) VALUES({DivisionId}, '{name.Trim()}', '{email.Trim()}')");
+            return emailId >= 0 ? emailId : -1;
+        }
+
+        /// <summary>
+        /// Добавить электронную почту подрядной организации заказчика.
+        /// </summary>
+        /// <param name="subDivisionId">Уникальный номер подрядной организации заказчика.</param>
+        /// <param name="name">Имя электронной почты.</param>
+        /// <param name="email">Электронная почта.</param>
+        /// <returns>Возвращает уникальный номер (Id) созданной электронной почты. -1 - если возникла непредвиденная ошибка.</returns>
+        public static long AddEmail(long subDivisionId, string name, string email)
+        {
+            long emailId = Functions.SqlInsert($"INSERT INTO division_email(division_id, name, email) VALUES({subDivisionId}, '{name.Trim()}', '{email.Trim()}')");
+            return emailId >= 0 ? emailId : -1;
         }
 
         /// <summary>
@@ -102,18 +123,6 @@ namespace Admin_Panel_Hotel
         public static long EditEmail(long emailId, string emailName, string email)
         {
             return Functions.SqlUpdate($"UPDATE division_email SET name = '{emailName}', email = '{email}' WHERE id = {emailId}");
-        }
-
-        /// <summary>
-        /// Добавить электронную почту подрядной организации заказчика.
-        /// </summary>
-        /// <param name="subDivisionId">Уникальный номер подрядной организации заказчика.</param>
-        /// <param name="name">Имя электронной почты.</param>
-        /// <param name="email">Электронная почта.</param>
-        /// <returns>Возвращает уникальный номер (Id) созданной электронной почты.</returns>
-        public static long AddEmail(long subDivisionId, string name, string email)
-        {
-            return Functions.SqlInsert($"INSERT INTO division_email(division_id, name, email) VALUES({subDivisionId}, '{name.Trim()}', '{email.Trim()}')");
         }
 
         /// <summary>

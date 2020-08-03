@@ -86,7 +86,7 @@
             this.PeriodFromDateTimePicker.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
             this.PeriodFromDateTimePicker.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.PeriodFromDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.PeriodFromDateTimePicker.Location = new System.Drawing.Point(592, 125);
+            this.PeriodFromDateTimePicker.Location = new System.Drawing.Point(592, 124);
             this.PeriodFromDateTimePicker.Margin = new System.Windows.Forms.Padding(128, 0, 25, 5);
             this.PeriodFromDateTimePicker.Name = "PeriodFromDateTimePicker";
             this.PeriodFromDateTimePicker.Size = new System.Drawing.Size(148, 33);
@@ -250,7 +250,7 @@
             this.UsersDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Roboto", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;

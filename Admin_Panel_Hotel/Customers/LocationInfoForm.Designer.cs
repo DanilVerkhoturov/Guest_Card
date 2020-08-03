@@ -37,6 +37,11 @@
             this.LocationInfoPanel = new System.Windows.Forms.Panel();
             this.AddRoomLinkLabel = new System.Windows.Forms.LinkLabel();
             this.RoomsDataGridView = new System.Windows.Forms.DataGridView();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RoomNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BedsCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.delete = new System.Windows.Forms.DataGridViewImageColumn();
             this.NameHelpLabel = new System.Windows.Forms.Label();
             this.EditRoomBedsCountButton = new System.Windows.Forms.Button();
             this.EditNameButton = new System.Windows.Forms.Button();
@@ -61,11 +66,6 @@
             this.InstructedCheckBox = new System.Windows.Forms.CheckBox();
             this.EditCardPropertiesButton = new System.Windows.Forms.Button();
             this.SaveCardPropertiesButton = new System.Windows.Forms.Button();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RoomNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BedsCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.delete = new System.Windows.Forms.DataGridViewImageColumn();
             this.LocationInfoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RoomsDataGridView)).BeginInit();
             this.CardPropertiesPanel.SuspendLayout();
@@ -202,6 +202,50 @@
             this.RoomsDataGridView.Size = new System.Drawing.Size(734, 374);
             this.RoomsDataGridView.TabIndex = 57;
             this.RoomsDataGridView.Visible = false;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "№";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Visible = false;
+            // 
+            // RoomNumber
+            // 
+            this.RoomNumber.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.RoomNumber.DataPropertyName = "name";
+            this.RoomNumber.HeaderText = "Комнаты";
+            this.RoomNumber.Name = "RoomNumber";
+            this.RoomNumber.ReadOnly = true;
+            this.RoomNumber.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // BedsCount
+            // 
+            this.BedsCount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.BedsCount.DataPropertyName = "count_beds";
+            dataGridViewCellStyle2.Format = "N0";
+            dataGridViewCellStyle2.NullValue = "0";
+            this.BedsCount.DefaultCellStyle = dataGridViewCellStyle2;
+            this.BedsCount.HeaderText = "Количество мест";
+            this.BedsCount.Name = "BedsCount";
+            this.BedsCount.ReadOnly = true;
+            this.BedsCount.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // id
+            // 
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "id";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Visible = false;
+            // 
+            // delete
+            // 
+            this.delete.HeaderText = "";
+            this.delete.Image = global::Admin_Panel_Hotel.Properties.Resources.closeoutline_110831_4;
+            this.delete.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.delete.Name = "delete";
+            this.delete.ReadOnly = true;
             // 
             // NameHelpLabel
             // 
@@ -511,54 +555,11 @@
             this.SaveCardPropertiesButton.UseVisualStyleBackColor = false;
             this.SaveCardPropertiesButton.Visible = false;
             // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "№";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Visible = false;
-            // 
-            // RoomNumber
-            // 
-            this.RoomNumber.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.RoomNumber.DataPropertyName = "name";
-            this.RoomNumber.HeaderText = "Комнаты";
-            this.RoomNumber.Name = "RoomNumber";
-            this.RoomNumber.ReadOnly = true;
-            this.RoomNumber.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // BedsCount
-            // 
-            this.BedsCount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.BedsCount.DataPropertyName = "count_beds";
-            dataGridViewCellStyle2.Format = "N0";
-            dataGridViewCellStyle2.NullValue = "0";
-            this.BedsCount.DefaultCellStyle = dataGridViewCellStyle2;
-            this.BedsCount.HeaderText = "Количество мест";
-            this.BedsCount.Name = "BedsCount";
-            this.BedsCount.ReadOnly = true;
-            this.BedsCount.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // id
-            // 
-            this.id.DataPropertyName = "id";
-            this.id.HeaderText = "id";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Visible = false;
-            // 
-            // delete
-            // 
-            this.delete.HeaderText = "";
-            this.delete.Image = global::Admin_Panel_Hotel.Properties.Resources.closeoutline_110831_4;
-            this.delete.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.delete.Name = "delete";
-            this.delete.ReadOnly = true;
-            // 
             // LocationInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.ClientSize = new System.Drawing.Size(1093, 894);
             this.Controls.Add(this.Analyticslabel);

@@ -19,11 +19,11 @@ namespace Admin_Panel_Hotel
         /// Добавить локацию.
         /// </summary>
         /// <param name="name">Название локации.</param>
-        /// <returns>Возвращает уникальный номер (Id) добавленной локации.</returns>
+        /// <returns>Возвращает уникальный номер (Id) добавленной локации. -1 - если возникла непредвиденная ошибка.</returns>
         public static long Add(string name)
         {
             Id = Functions.SqlInsert($"INSERT INTO location(name) VALUES('{name}')");
-            return Id;
+            return Id >= 0 ? Id : -1;
         }
 
         /// <summary>
@@ -84,12 +84,21 @@ namespace Admin_Panel_Hotel
         /// <param name="roomCount">Количество комнат в гостинице.</param>
         /// <param name="bedsCount">Количество спальных мест в гостинице.</param>
         /// <param name="cardsCount">Количество карт в гостинице.</param>
-        /// <returns>Возвращает уникальный номер (Id) добавленной гостиницы.</returns>
+        /// <returns>Возвращает уникальный номер (Id) добавленной гостиницы. -1 - если возникла непредвиденная ошибка.</returns>
         public static long Add(long locationId, long customerId, int roomCount, int bedsCount, int cardsCount)
         {
+            // Добавление гостиницы в БД.
             Id = Functions.SqlInsert($"INSERT INTO hotel(count_rooms, beds_count, cards_count, location_id) VALUES({roomCount}, {bedsCount}, {cardsCount}, {locationId})");
-            Functions.SqlInsert($"INSERT INTO customer_location(customer_id, hotel_id) VALUES({customerId}, {Id})");
-            return Id;
+            if (Id >= 0)
+            {
+                // Связывание созданной гостиницы с заказчиком.
+                Functions.SqlInsert($"INSERT INTO customer_location(customer_id, hotel_id) VALUES({customerId}, {Id})");
+                return Id;
+            }
+            else
+            {
+                return -1;
+            }
         }
 
         /// <summary>
@@ -103,7 +112,8 @@ namespace Admin_Panel_Hotel
         {
             long type = 1; // "Стандарт".
             long statusId = 3; // "Свободно".
-            return Functions.SqlInsert($"INSERT INTO room(name, count_beds, hotel_id, room_type, status_id) VALUES('{name}', {bedsCount}, {hotelId}, {type}, {statusId})");
+            long roomId = Functions.SqlInsert($"INSERT INTO room(name, count_beds, hotel_id, room_type, status_id) VALUES('{name}', {bedsCount}, {hotelId}, {type}, {statusId})");
+            return roomId >= 0 ? roomId : 0;
         }
 
         /// <summary>
@@ -133,7 +143,7 @@ namespace Admin_Panel_Hotel
         /// <returns>Возвращает список всех комнат гостиницы.</returns>
         public static DataTable GetRooms()
         {
-            return Functions.ExecuteSql($"SELECT id, name, count_beds FROM room WHERE hotel_id = {Id}");
+            return Functions.ExecuteSql($"SELECT id as room_id, name as room_name, count_beds as beds_count FROM room WHERE hotel_id = {Id}");
         }
 
         /// <summary>

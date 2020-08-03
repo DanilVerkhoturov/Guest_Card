@@ -298,7 +298,7 @@
             // Column4
             // 
             this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column4.DataPropertyName = "hotel_name";
+            this.Column4.DataPropertyName = "place_name";
             this.Column4.HeaderText = "Местонахождение";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;

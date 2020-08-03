@@ -52,10 +52,12 @@ namespace Admin_Panel_Hotel
                 MySqlCommand command = new MySqlCommand(query, Connection);
                 command.CommandTimeout = 999999;
 
-                command.ExecuteNonQuery();
+                //command.ExecuteNonQuery();
 
                 MySqlDataReader reader = command.ExecuteReader();
                 table.Load(reader);
+
+                table.ExtendedProperties.Clear();
 
                 return table;
             }

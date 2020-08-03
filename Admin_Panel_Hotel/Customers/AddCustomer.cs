@@ -238,25 +238,30 @@ namespace Admin_Panel_Hotel
                 && lastEmailNameTextBox.TextLength > 0 && lastEmailNameTextBox.Text.Trim() != lastEmailNameTextBox.Tag.ToString()
                 && RegexUtilities.IsValidEmail(lastEmailTextBox.Text.Trim())) // Проверка заполнения всех обязательных полей на первом шаге.
             {
-                Customer.Add(NameTextBox.Text, ContractNumberTextBox.Text, FromContractTimeDateTimePicker.Value, ToContractTimeDateTimePicker.Value);
-
-                for (int i = 1; i <= EmailsPanel.Controls.Count - 2; i += 2)
+                if (Customer.Add(NameTextBox.Text, ContractNumberTextBox.Text, FromContractTimeDateTimePicker.Value, ToContractTimeDateTimePicker.Value) >= 0)
                 {
-                    string emailName = EmailsPanel.Controls[i].Text;
-                    string email = EmailsPanel.Controls[i + 1].Text;
+                    for (int i = 1; i <= EmailsPanel.Controls.Count - 2; i += 2)
+                    {
+                        string emailName = EmailsPanel.Controls[i].Text;
+                        string email = EmailsPanel.Controls[i + 1].Text;
 
-                    if (Customer.FindEmail(email, out long emailId)) // Если такая эл.почта существует.
-                    {
-                        Customer.EditEmail(emailId, emailName, email);
+                        if (Customer.FindEmail(email, out long emailId)) // Если такая эл.почта существует.
+                        {
+                            Customer.EditEmail(emailId, emailName, email);
+                        }
+                        else // Если такая эл.почта не существует.
+                        {
+                            Customer.AddEmail(emailName, email);
+                        }
                     }
-                    else // Если такая эл.почта не существует.
-                    {
-                        Customer.AddEmail(emailName, email);
-                    }
+
+                    OpenSubDivisionsPanel();
+                    SubDivisionsButton.Enabled = true;
                 }
-
-                OpenSubDivisionsPanel();
-                SubDivisionsButton.Enabled = true;
+                else
+                {
+                    MessageBox.Show("Возникла непредвиденная ошибка!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -520,7 +525,7 @@ namespace Admin_Panel_Hotel
                 && BedsCountTextBox.TextLength > 0 && BedsCountTextBox.Text != BedsCountTextBox.Tag.ToString()
                 && CheckRoomsData()) // Если все обязательные поля заполнены.
             {
-                long locationId = Locations.Add(LocationName.Text.Trim());
+                long locationId = Locations.Add(LocationNameTextBox.Text.Trim());
                 long hotelId = Hotels.Add(locationId, Customer.Id, Convert.ToInt32(RoomCountTextBox.Text), Convert.ToInt32(BedsCountTextBox.Text), Convert.ToInt32(CardCountTextBox.Text));
 
                 for (int i = 0; i < RoomsDataGridView.RowCount; i++)
@@ -659,7 +664,14 @@ namespace Admin_Panel_Hotel
         private void VisibleAddRooms()
         {
             AddCustomerLocationPanel.Focus();
-            RoomsDataGridView.Rows.Clear();
+            if (RoomsDataGridView.DataSource == null)
+            {
+                RoomsDataGridView.Rows.Clear();
+            }
+            else
+            {
+                RoomsDataGridView.DataSource = null;
+            }
 
             if (LocationNameTextBox.TextLength > 0 && LocationNameTextBox.Text != LocationNameTextBox.Tag.ToString()
                 && RoomCountTextBox.TextLength > 0 && RoomCountTextBox.Text != RoomCountTextBox.Tag.ToString()
@@ -694,7 +706,6 @@ namespace Admin_Panel_Hotel
             else
             {
                 RoomsDataGridView[e.ColumnIndex, e.RowIndex].ErrorText = null;
-                AddLocation();
             }
         }
 
@@ -734,7 +745,7 @@ namespace Admin_Panel_Hotel
                 Hotels.Id = Convert.ToInt64(LocationsDataGridView["hotel_id", e.RowIndex].Value);
                 Locations.GetInfo();
 
-                RoomsDataGridView.Rows.Clear();
+                //RoomsDataGridView.Rows.Clear();
 
                 // Заполнение полей информацией о локации.
                 LocationName.Text = Locations.Name;
@@ -742,6 +753,9 @@ namespace Admin_Panel_Hotel
                 BedsCountTextBox.Text = Hotels.BedsCount.ToString();
                 CardCountTextBox.Text = Hotels.CardsCount.ToString();
                 RoomsDataGridView.DataSource = Hotels.GetRooms();
+                RoomsDataGridView.Columns["RoomNumber"].ValueType = Type.GetType("System.String");
+                RoomsDataGridView.Columns["roomid"].ValueType = Type.GetType("System.String");
+                RoomsDataGridView.Columns["BedsCount"].ValueType = Type.GetType("System.String");
             }
         }
 
