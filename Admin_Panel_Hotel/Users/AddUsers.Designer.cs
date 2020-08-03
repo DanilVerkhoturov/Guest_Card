@@ -31,7 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.emailtextbox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.label5 = new System.Windows.Forms.Label();
@@ -43,7 +43,7 @@
             this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.label9 = new System.Windows.Forms.Label();
             this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.FilterCardsComboBox = new System.Windows.Forms.ComboBox();
+            this.FilterComboBox = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.radioButton6 = new System.Windows.Forms.RadioButton();
             this.label11 = new System.Windows.Forms.Label();
@@ -51,10 +51,10 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.radioButton8 = new System.Windows.Forms.RadioButton();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.FilterOrganizationComboBox = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.radioButton9 = new System.Windows.Forms.RadioButton();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.FilterOrganizationComboBox2 = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
             this.radioButton10 = new System.Windows.Forms.RadioButton();
             this.ChangeButton = new System.Windows.Forms.Button();
@@ -92,13 +92,13 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Добавить участника";
             // 
-            // textBox1
+            // emailtextbox
             // 
-            this.textBox1.Location = new System.Drawing.Point(70, 165);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(61, 19, 3, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(294, 33);
-            this.textBox1.TabIndex = 3;
+            this.emailtextbox.Location = new System.Drawing.Point(70, 165);
+            this.emailtextbox.Margin = new System.Windows.Forms.Padding(61, 19, 3, 3);
+            this.emailtextbox.Name = "emailtextbox";
+            this.emailtextbox.Size = new System.Drawing.Size(294, 33);
+            this.emailtextbox.TabIndex = 3;
             // 
             // label4
             // 
@@ -234,19 +234,19 @@
             this.radioButton5.Text = "Администратор \r\nгостиницы";
             this.radioButton5.UseVisualStyleBackColor = true;
             // 
-            // FilterCardsComboBox
+            // FilterComboBox
             // 
-            this.FilterCardsComboBox.BackColor = System.Drawing.Color.White;
-            this.FilterCardsComboBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FilterCardsComboBox.ForeColor = System.Drawing.Color.Black;
-            this.FilterCardsComboBox.FormattingEnabled = true;
-            this.FilterCardsComboBox.Items.AddRange(new object[] {
+            this.FilterComboBox.BackColor = System.Drawing.Color.White;
+            this.FilterComboBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FilterComboBox.ForeColor = System.Drawing.Color.Black;
+            this.FilterComboBox.FormattingEnabled = true;
+            this.FilterComboBox.Items.AddRange(new object[] {
             "Все карты"});
-            this.FilterCardsComboBox.Location = new System.Drawing.Point(373, 589);
-            this.FilterCardsComboBox.Margin = new System.Windows.Forms.Padding(100, 48, 5, 4);
-            this.FilterCardsComboBox.Name = "FilterCardsComboBox";
-            this.FilterCardsComboBox.Size = new System.Drawing.Size(276, 33);
-            this.FilterCardsComboBox.TabIndex = 39;
+            this.FilterComboBox.Location = new System.Drawing.Point(373, 589);
+            this.FilterComboBox.Margin = new System.Windows.Forms.Padding(100, 48, 5, 4);
+            this.FilterComboBox.Name = "FilterComboBox";
+            this.FilterComboBox.Size = new System.Drawing.Size(276, 33);
+            this.FilterComboBox.TabIndex = 39;
             // 
             // label10
             // 
@@ -331,19 +331,19 @@
             this.radioButton8.Text = "Куратор гостиничного\r\nхозяйства ";
             this.radioButton8.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // FilterOrganizationComboBox
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.White;
-            this.comboBox1.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.ForeColor = System.Drawing.Color.Black;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.FilterOrganizationComboBox.BackColor = System.Drawing.Color.White;
+            this.FilterOrganizationComboBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FilterOrganizationComboBox.ForeColor = System.Drawing.Color.Black;
+            this.FilterOrganizationComboBox.FormattingEnabled = true;
+            this.FilterOrganizationComboBox.Items.AddRange(new object[] {
             "Все карты"});
-            this.comboBox1.Location = new System.Drawing.Point(378, 921);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(100, 48, 5, 4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(276, 33);
-            this.comboBox1.TabIndex = 49;
+            this.FilterOrganizationComboBox.Location = new System.Drawing.Point(378, 921);
+            this.FilterOrganizationComboBox.Margin = new System.Windows.Forms.Padding(100, 48, 5, 4);
+            this.FilterOrganizationComboBox.Name = "FilterOrganizationComboBox";
+            this.FilterOrganizationComboBox.Size = new System.Drawing.Size(276, 33);
+            this.FilterOrganizationComboBox.TabIndex = 49;
             // 
             // label14
             // 
@@ -369,19 +369,19 @@
             this.radioButton9.Text = "Оператор заявок\r\nна питание";
             this.radioButton9.UseVisualStyleBackColor = true;
             // 
-            // comboBox2
+            // FilterOrganizationComboBox2
             // 
-            this.comboBox2.BackColor = System.Drawing.Color.White;
-            this.comboBox2.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.ForeColor = System.Drawing.Color.Black;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.FilterOrganizationComboBox2.BackColor = System.Drawing.Color.White;
+            this.FilterOrganizationComboBox2.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FilterOrganizationComboBox2.ForeColor = System.Drawing.Color.Black;
+            this.FilterOrganizationComboBox2.FormattingEnabled = true;
+            this.FilterOrganizationComboBox2.Items.AddRange(new object[] {
             "Все карты"});
-            this.comboBox2.Location = new System.Drawing.Point(378, 996);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(100, 48, 5, 4);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(276, 33);
-            this.comboBox2.TabIndex = 52;
+            this.FilterOrganizationComboBox2.Location = new System.Drawing.Point(378, 996);
+            this.FilterOrganizationComboBox2.Margin = new System.Windows.Forms.Padding(100, 48, 5, 4);
+            this.FilterOrganizationComboBox2.Name = "FilterOrganizationComboBox2";
+            this.FilterOrganizationComboBox2.Size = new System.Drawing.Size(276, 33);
+            this.FilterOrganizationComboBox2.TabIndex = 52;
             // 
             // label15
             // 
@@ -430,10 +430,10 @@
             this.AutoScrollMargin = new System.Drawing.Size(0, 50);
             this.ClientSize = new System.Drawing.Size(1093, 894);
             this.Controls.Add(this.ChangeButton);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.FilterOrganizationComboBox2);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.radioButton10);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.FilterOrganizationComboBox);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.radioButton9);
             this.Controls.Add(this.label13);
@@ -443,7 +443,7 @@
             this.Controls.Add(this.label11);
             this.Controls.Add(this.radioButton7);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.FilterCardsComboBox);
+            this.Controls.Add(this.FilterComboBox);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.radioButton5);
             this.Controls.Add(this.label8);
@@ -455,7 +455,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.emailtextbox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -473,7 +473,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox emailtextbox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Label label5;
@@ -485,7 +485,7 @@
         private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.ComboBox FilterCardsComboBox;
+        private System.Windows.Forms.ComboBox FilterComboBox;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.RadioButton radioButton6;
         private System.Windows.Forms.Label label11;
@@ -493,10 +493,10 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.RadioButton radioButton8;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox FilterOrganizationComboBox;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.RadioButton radioButton9;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox FilterOrganizationComboBox2;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.RadioButton radioButton10;
         private System.Windows.Forms.Button ChangeButton;

@@ -67,6 +67,11 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.TopPanel = new System.Windows.Forms.Panel();
             this.UserButton = new System.Windows.Forms.Button();
+            this.AccommodationButton = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.AccommodationHitoryButton = new System.Windows.Forms.Button();
+            this.AccommodationLocationButton = new System.Windows.Forms.Button();
+            this.UsersButton = new System.Windows.Forms.Button();
             this.LeftMenu.SuspendLayout();
             this.GuestsPanel.SuspendLayout();
             this.RegistryPanel.SuspendLayout();
@@ -83,12 +88,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.TopPanel.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // LeftMenu
             // 
             this.LeftMenu.AutoScroll = true;
+            this.LeftMenu.AutoScrollMargin = new System.Drawing.Size(0, 50);
             this.LeftMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(82)))), ((int)(((byte)(119)))));
+            this.LeftMenu.Controls.Add(this.UsersButton);
+            this.LeftMenu.Controls.Add(this.panel1);
+            this.LeftMenu.Controls.Add(this.AccommodationButton);
             this.LeftMenu.Controls.Add(this.GuestsPanel);
             this.LeftMenu.Controls.Add(this.GuestsButton);
             this.LeftMenu.Controls.Add(this.RegistryPanel);
@@ -708,6 +718,90 @@
             this.UserButton.TabIndex = 0;
             this.UserButton.UseVisualStyleBackColor = true;
             // 
+            // AccommodationButton
+            // 
+            this.AccommodationButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.AccommodationButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.AccommodationButton.FlatAppearance.BorderSize = 0;
+            this.AccommodationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AccommodationButton.Font = new System.Drawing.Font("Roboto", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AccommodationButton.ForeColor = System.Drawing.Color.White;
+            this.AccommodationButton.Location = new System.Drawing.Point(0, 1026);
+            this.AccommodationButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.AccommodationButton.Name = "AccommodationButton";
+            this.AccommodationButton.Padding = new System.Windows.Forms.Padding(21, 0, 0, 0);
+            this.AccommodationButton.Size = new System.Drawing.Size(296, 58);
+            this.AccommodationButton.TabIndex = 11;
+            this.AccommodationButton.Text = "Проживание";
+            this.AccommodationButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AccommodationButton.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.AccommodationHitoryButton);
+            this.panel1.Controls.Add(this.AccommodationLocationButton);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 1084);
+            this.panel1.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(296, 91);
+            this.panel1.TabIndex = 12;
+            this.panel1.Visible = false;
+            // 
+            // AccommodationHitoryButton
+            // 
+            this.AccommodationHitoryButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.AccommodationHitoryButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.AccommodationHitoryButton.FlatAppearance.BorderSize = 0;
+            this.AccommodationHitoryButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AccommodationHitoryButton.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AccommodationHitoryButton.ForeColor = System.Drawing.Color.White;
+            this.AccommodationHitoryButton.Location = new System.Drawing.Point(0, 43);
+            this.AccommodationHitoryButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.AccommodationHitoryButton.Name = "AccommodationHitoryButton";
+            this.AccommodationHitoryButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.AccommodationHitoryButton.Size = new System.Drawing.Size(296, 43);
+            this.AccommodationHitoryButton.TabIndex = 3;
+            this.AccommodationHitoryButton.Text = "История";
+            this.AccommodationHitoryButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AccommodationHitoryButton.UseVisualStyleBackColor = true;
+            // 
+            // AccommodationLocationButton
+            // 
+            this.AccommodationLocationButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.AccommodationLocationButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.AccommodationLocationButton.FlatAppearance.BorderSize = 0;
+            this.AccommodationLocationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AccommodationLocationButton.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AccommodationLocationButton.ForeColor = System.Drawing.Color.White;
+            this.AccommodationLocationButton.Location = new System.Drawing.Point(0, 0);
+            this.AccommodationLocationButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.AccommodationLocationButton.Name = "AccommodationLocationButton";
+            this.AccommodationLocationButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.AccommodationLocationButton.Size = new System.Drawing.Size(296, 43);
+            this.AccommodationLocationButton.TabIndex = 2;
+            this.AccommodationLocationButton.Text = "Локации";
+            this.AccommodationLocationButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AccommodationLocationButton.UseVisualStyleBackColor = true;
+            // 
+            // UsersButton
+            // 
+            this.UsersButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.UsersButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.UsersButton.FlatAppearance.BorderSize = 0;
+            this.UsersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.UsersButton.Font = new System.Drawing.Font("Roboto", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.UsersButton.ForeColor = System.Drawing.Color.White;
+            this.UsersButton.Location = new System.Drawing.Point(0, 1175);
+            this.UsersButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.UsersButton.Name = "UsersButton";
+            this.UsersButton.Padding = new System.Windows.Forms.Padding(21, 0, 0, 0);
+            this.UsersButton.Size = new System.Drawing.Size(296, 58);
+            this.UsersButton.TabIndex = 13;
+            this.UsersButton.Text = "Пользователи";
+            this.UsersButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.UsersButton.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -743,6 +837,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.TopPanel.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -787,6 +882,11 @@
         private System.Windows.Forms.Button GuestsCalendarButton;
         private System.Windows.Forms.Button EvictionGuestsButton;
         private System.Windows.Forms.Button NewGuestsButton;
+        private System.Windows.Forms.Button UsersButton;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button AccommodationHitoryButton;
+        private System.Windows.Forms.Button AccommodationLocationButton;
+        private System.Windows.Forms.Button AccommodationButton;
     }
 }
 
