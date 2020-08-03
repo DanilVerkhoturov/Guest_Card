@@ -99,6 +99,7 @@
             this.emailtextbox.Name = "emailtextbox";
             this.emailtextbox.Size = new System.Drawing.Size(294, 33);
             this.emailtextbox.TabIndex = 3;
+            this.emailtextbox.Text = "Электронная почта";
             // 
             // label4
             // 
@@ -247,6 +248,7 @@
             this.FilterComboBox.Name = "FilterComboBox";
             this.FilterComboBox.Size = new System.Drawing.Size(276, 33);
             this.FilterComboBox.TabIndex = 39;
+            this.FilterComboBox.Text = "Локация";
             // 
             // label10
             // 
@@ -344,6 +346,7 @@
             this.FilterOrganizationComboBox.Name = "FilterOrganizationComboBox";
             this.FilterOrganizationComboBox.Size = new System.Drawing.Size(276, 33);
             this.FilterOrganizationComboBox.TabIndex = 49;
+            this.FilterOrganizationComboBox.Text = "Организация";
             // 
             // label14
             // 
@@ -382,6 +385,7 @@
             this.FilterOrganizationComboBox2.Name = "FilterOrganizationComboBox2";
             this.FilterOrganizationComboBox2.Size = new System.Drawing.Size(276, 33);
             this.FilterOrganizationComboBox2.TabIndex = 52;
+            this.FilterOrganizationComboBox2.Text = "Организация";
             // 
             // label15
             // 
@@ -429,7 +433,7 @@
             this.AutoScroll = true;
             this.AutoScrollMargin = new System.Drawing.Size(0, 50);
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.ClientSize = new System.Drawing.Size(1093, 894);
+            this.ClientSize = new System.Drawing.Size(1110, 894);
             this.Controls.Add(this.ChangeButton);
             this.Controls.Add(this.FilterOrganizationComboBox2);
             this.Controls.Add(this.label15);

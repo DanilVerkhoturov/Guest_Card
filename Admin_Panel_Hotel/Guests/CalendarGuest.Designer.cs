@@ -35,12 +35,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
-            this.PeriodToDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.PeriodFromDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.tableLabel = new System.Windows.Forms.Label();
-            this.cheesLabel = new System.Windows.Forms.Label();
             this.DaydateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.afterLabel = new System.Windows.Forms.Label();
@@ -54,6 +48,7 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.UsersDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,79 +62,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Календарь";
             // 
-            // PeriodToDateTimePicker
-            // 
-            this.PeriodToDateTimePicker.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.PeriodToDateTimePicker.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.PeriodToDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.PeriodToDateTimePicker.Location = new System.Drawing.Point(765, 124);
-            this.PeriodToDateTimePicker.Margin = new System.Windows.Forms.Padding(0, 0, 5, 5);
-            this.PeriodToDateTimePicker.Name = "PeriodToDateTimePicker";
-            this.PeriodToDateTimePicker.Size = new System.Drawing.Size(146, 33);
-            this.PeriodToDateTimePicker.TabIndex = 68;
-            // 
-            // PeriodFromDateTimePicker
-            // 
-            this.PeriodFromDateTimePicker.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.PeriodFromDateTimePicker.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
-            this.PeriodFromDateTimePicker.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
-            this.PeriodFromDateTimePicker.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
-            this.PeriodFromDateTimePicker.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.PeriodFromDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.PeriodFromDateTimePicker.Location = new System.Drawing.Point(592, 124);
-            this.PeriodFromDateTimePicker.Margin = new System.Windows.Forms.Padding(128, 0, 25, 5);
-            this.PeriodFromDateTimePicker.Name = "PeriodFromDateTimePicker";
-            this.PeriodFromDateTimePicker.Size = new System.Drawing.Size(148, 33);
-            this.PeriodFromDateTimePicker.TabIndex = 67;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
-            this.label6.Location = new System.Drawing.Point(760, 86);
-            this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 13);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(116, 25);
-            this.label6.TabIndex = 66;
-            this.label6.Text = "Период до";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
-            this.label7.Location = new System.Drawing.Point(587, 87);
-            this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 13);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(113, 25);
-            this.label7.TabIndex = 65;
-            this.label7.Text = "Период от";
-            // 
-            // tableLabel
-            // 
-            this.tableLabel.AutoSize = true;
-            this.tableLabel.Font = new System.Drawing.Font("Roboto", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tableLabel.ForeColor = System.Drawing.Color.Black;
-            this.tableLabel.Location = new System.Drawing.Point(364, 125);
-            this.tableLabel.Margin = new System.Windows.Forms.Padding(68, 49, 0, 0);
-            this.tableLabel.Name = "tableLabel";
-            this.tableLabel.Size = new System.Drawing.Size(130, 35);
-            this.tableLabel.TabIndex = 63;
-            this.tableLabel.Text = "Таблица";
-            // 
-            // cheesLabel
-            // 
-            this.cheesLabel.AutoSize = true;
-            this.cheesLabel.Font = new System.Drawing.Font("Roboto", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.cheesLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
-            this.cheesLabel.Location = new System.Drawing.Point(137, 125);
-            this.cheesLabel.Margin = new System.Windows.Forms.Padding(128, 46, 0, 0);
-            this.cheesLabel.Name = "cheesLabel";
-            this.cheesLabel.Size = new System.Drawing.Size(159, 35);
-            this.cheesLabel.TabIndex = 62;
-            this.cheesLabel.Text = "Шахматка";
-            // 
             // DaydateTimePicker
             // 
             this.DaydateTimePicker.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -148,8 +70,8 @@
             this.DaydateTimePicker.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
             this.DaydateTimePicker.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.DaydateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DaydateTimePicker.Location = new System.Drawing.Point(765, 205);
-            this.DaydateTimePicker.Margin = new System.Windows.Forms.Padding(149, 0, 25, 5);
+            this.DaydateTimePicker.Location = new System.Drawing.Point(631, 209);
+            this.DaydateTimePicker.Margin = new System.Windows.Forms.Padding(35, 0, 35, 5);
             this.DaydateTimePicker.Name = "DaydateTimePicker";
             this.DaydateTimePicker.Size = new System.Drawing.Size(148, 33);
             this.DaydateTimePicker.TabIndex = 74;
@@ -159,7 +81,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
-            this.label5.Location = new System.Drawing.Point(760, 167);
+            this.label5.Location = new System.Drawing.Point(626, 171);
             this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 13);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(62, 25);
@@ -218,7 +140,7 @@
             this.UsersDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
@@ -250,7 +172,7 @@
             this.UsersDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Roboto", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -276,7 +198,7 @@
             this.Column1.HeaderText = "Тип номера";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
-            this.Column1.Width = 137;
+            this.Column1.Width = 198;
             // 
             // Column2
             // 
@@ -288,7 +210,7 @@
             this.Column2.MinimumWidth = 50;
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
-            this.Column2.Width = 93;
+            this.Column2.Width = 129;
             // 
             // Column3
             // 
@@ -318,7 +240,7 @@
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
             this.Column5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column5.Width = 123;
+            this.Column5.Width = 189;
             // 
             // Column7
             // 
@@ -326,7 +248,7 @@
             this.Column7.HeaderText = "Дата выезда";
             this.Column7.Name = "Column7";
             this.Column7.ReadOnly = true;
-            this.Column7.Width = 148;
+            this.Column7.Width = 217;
             // 
             // Column6
             // 
@@ -335,24 +257,30 @@
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(817, 124);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(248, 115);
+            this.label2.TabIndex = 76;
+            this.label2.Text = "Всего койко-место: 10\r\nЗанято мест: 2\r\nГазпром ННГ: 1\r\nСторонние организации: 1\r\n" +
+    "Свободных мест: 8";
+            // 
             // CalendarGuest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 35F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.ClientSize = new System.Drawing.Size(1093, 894);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.UsersDataGridView);
             this.Controls.Add(this.DaydateTimePicker);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.afterLabel);
             this.Controls.Add(this.tomorrowLabel);
             this.Controls.Add(this.todayLabel);
-            this.Controls.Add(this.PeriodToDateTimePicker);
-            this.Controls.Add(this.PeriodFromDateTimePicker);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.tableLabel);
-            this.Controls.Add(this.cheesLabel);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Roboto", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(8);
@@ -367,12 +295,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker PeriodToDateTimePicker;
-        private System.Windows.Forms.DateTimePicker PeriodFromDateTimePicker;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label tableLabel;
-        private System.Windows.Forms.Label cheesLabel;
         private System.Windows.Forms.DateTimePicker DaydateTimePicker;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label afterLabel;
@@ -386,5 +308,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.Label label2;
     }
 }

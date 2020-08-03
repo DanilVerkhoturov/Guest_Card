@@ -67,6 +67,13 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.TopPanel = new System.Windows.Forms.Panel();
             this.UserButton = new System.Windows.Forms.Button();
+            this.GusestsCardButton = new System.Windows.Forms.Button();
+            this.GuestsRoomsButton = new System.Windows.Forms.Button();
+            this.UsersButton = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.AccommodationHistoryButton = new System.Windows.Forms.Button();
+            this.AccommodationLocationButton = new System.Windows.Forms.Button();
+            this.AccommodationButton = new System.Windows.Forms.Button();
             this.LeftMenu.SuspendLayout();
             this.GuestsPanel.SuspendLayout();
             this.RegistryPanel.SuspendLayout();
@@ -83,12 +90,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.TopPanel.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // LeftMenu
             // 
             this.LeftMenu.AutoScroll = true;
             this.LeftMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(82)))), ((int)(((byte)(119)))));
+            this.LeftMenu.Controls.Add(this.UsersButton);
+            this.LeftMenu.Controls.Add(this.panel1);
+            this.LeftMenu.Controls.Add(this.AccommodationButton);
+            this.LeftMenu.Controls.Add(this.GuestsRoomsButton);
+            this.LeftMenu.Controls.Add(this.GusestsCardButton);
             this.LeftMenu.Controls.Add(this.GuestsPanel);
             this.LeftMenu.Controls.Add(this.GuestsButton);
             this.LeftMenu.Controls.Add(this.RegistryPanel);
@@ -708,6 +721,126 @@
             this.UserButton.TabIndex = 0;
             this.UserButton.UseVisualStyleBackColor = true;
             // 
+            // GusestsCardButton
+            // 
+            this.GusestsCardButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.GusestsCardButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.GusestsCardButton.FlatAppearance.BorderSize = 0;
+            this.GusestsCardButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GusestsCardButton.Font = new System.Drawing.Font("Roboto", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.GusestsCardButton.ForeColor = System.Drawing.Color.White;
+            this.GusestsCardButton.Location = new System.Drawing.Point(0, 1026);
+            this.GusestsCardButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.GusestsCardButton.Name = "GusestsCardButton";
+            this.GusestsCardButton.Padding = new System.Windows.Forms.Padding(21, 0, 0, 0);
+            this.GusestsCardButton.Size = new System.Drawing.Size(296, 58);
+            this.GusestsCardButton.TabIndex = 14;
+            this.GusestsCardButton.Text = "Карты";
+            this.GusestsCardButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.GusestsCardButton.UseVisualStyleBackColor = true;
+            // 
+            // GuestsRoomsButton
+            // 
+            this.GuestsRoomsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.GuestsRoomsButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.GuestsRoomsButton.FlatAppearance.BorderSize = 0;
+            this.GuestsRoomsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GuestsRoomsButton.Font = new System.Drawing.Font("Roboto", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.GuestsRoomsButton.ForeColor = System.Drawing.Color.White;
+            this.GuestsRoomsButton.Location = new System.Drawing.Point(0, 1084);
+            this.GuestsRoomsButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.GuestsRoomsButton.Name = "GuestsRoomsButton";
+            this.GuestsRoomsButton.Padding = new System.Windows.Forms.Padding(21, 0, 0, 0);
+            this.GuestsRoomsButton.Size = new System.Drawing.Size(296, 58);
+            this.GuestsRoomsButton.TabIndex = 18;
+            this.GuestsRoomsButton.Text = "Номера";
+            this.GuestsRoomsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.GuestsRoomsButton.UseVisualStyleBackColor = true;
+            // 
+            // UsersButton
+            // 
+            this.UsersButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.UsersButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.UsersButton.FlatAppearance.BorderSize = 0;
+            this.UsersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.UsersButton.Font = new System.Drawing.Font("Roboto", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.UsersButton.ForeColor = System.Drawing.Color.White;
+            this.UsersButton.Location = new System.Drawing.Point(0, 1294);
+            this.UsersButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.UsersButton.Name = "UsersButton";
+            this.UsersButton.Padding = new System.Windows.Forms.Padding(21, 0, 0, 0);
+            this.UsersButton.Size = new System.Drawing.Size(296, 58);
+            this.UsersButton.TabIndex = 21;
+            this.UsersButton.Text = "Пользователи";
+            this.UsersButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.UsersButton.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.AccommodationHistoryButton);
+            this.panel1.Controls.Add(this.AccommodationLocationButton);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 1200);
+            this.panel1.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(296, 94);
+            this.panel1.TabIndex = 20;
+            this.panel1.Visible = false;
+            // 
+            // AccommodationHistoryButton
+            // 
+            this.AccommodationHistoryButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.AccommodationHistoryButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.AccommodationHistoryButton.FlatAppearance.BorderSize = 0;
+            this.AccommodationHistoryButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AccommodationHistoryButton.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AccommodationHistoryButton.ForeColor = System.Drawing.Color.White;
+            this.AccommodationHistoryButton.Location = new System.Drawing.Point(0, 43);
+            this.AccommodationHistoryButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.AccommodationHistoryButton.Name = "AccommodationHistoryButton";
+            this.AccommodationHistoryButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.AccommodationHistoryButton.Size = new System.Drawing.Size(296, 43);
+            this.AccommodationHistoryButton.TabIndex = 3;
+            this.AccommodationHistoryButton.Text = "История";
+            this.AccommodationHistoryButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AccommodationHistoryButton.UseVisualStyleBackColor = true;
+            // 
+            // AccommodationLocationButton
+            // 
+            this.AccommodationLocationButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.AccommodationLocationButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.AccommodationLocationButton.FlatAppearance.BorderSize = 0;
+            this.AccommodationLocationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AccommodationLocationButton.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AccommodationLocationButton.ForeColor = System.Drawing.Color.White;
+            this.AccommodationLocationButton.Location = new System.Drawing.Point(0, 0);
+            this.AccommodationLocationButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.AccommodationLocationButton.Name = "AccommodationLocationButton";
+            this.AccommodationLocationButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.AccommodationLocationButton.Size = new System.Drawing.Size(296, 43);
+            this.AccommodationLocationButton.TabIndex = 2;
+            this.AccommodationLocationButton.Text = "Локации";
+            this.AccommodationLocationButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AccommodationLocationButton.UseVisualStyleBackColor = true;
+            // 
+            // AccommodationButton
+            // 
+            this.AccommodationButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.AccommodationButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.AccommodationButton.FlatAppearance.BorderSize = 0;
+            this.AccommodationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AccommodationButton.Font = new System.Drawing.Font("Roboto", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AccommodationButton.ForeColor = System.Drawing.Color.White;
+            this.AccommodationButton.Location = new System.Drawing.Point(0, 1142);
+            this.AccommodationButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.AccommodationButton.Name = "AccommodationButton";
+            this.AccommodationButton.Padding = new System.Windows.Forms.Padding(21, 0, 0, 0);
+            this.AccommodationButton.Size = new System.Drawing.Size(296, 58);
+            this.AccommodationButton.TabIndex = 19;
+            this.AccommodationButton.Text = "Проживание";
+            this.AccommodationButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AccommodationButton.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -743,6 +876,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.TopPanel.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -787,6 +921,13 @@
         private System.Windows.Forms.Button NewGuestsButton;
         public System.Windows.Forms.Button MyCustomersButton;
         public System.Windows.Forms.Button CustomersButton;
+        private System.Windows.Forms.Button UsersButton;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button AccommodationHistoryButton;
+        private System.Windows.Forms.Button AccommodationLocationButton;
+        private System.Windows.Forms.Button AccommodationButton;
+        private System.Windows.Forms.Button GuestsRoomsButton;
+        private System.Windows.Forms.Button GusestsCardButton;
     }
 }
 
