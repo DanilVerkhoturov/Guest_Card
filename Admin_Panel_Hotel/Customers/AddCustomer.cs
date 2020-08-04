@@ -31,7 +31,7 @@ namespace Admin_Panel_Hotel
             Functions.SetPlaceholderDateTimePicker(FromContractTimeDateTimePicker, "Введите дату");
             Functions.SetPlaceholderDateTimePicker(ToContractTimeDateTimePicker, "Введите дату");
 
-            Functions.NewlineProcessing(RoomsDataGridView, new string[] { "1", "Номер комнаты", "Количество спальных мест", null });
+            //Functions.NewlineProcessing(RoomsDataGridView, new string[] { "1", "Номер комнаты", "Количество спальных мест", null });
 
             // Установка ограничений для текстовых полей.
             Functions.OnlyNumbersInTextBox(CardCountTextBox);
@@ -517,7 +517,7 @@ namespace Admin_Panel_Hotel
         /// <summary>
         /// Проверка заполнения обязательных полей и добавление локации в базу данных.
         /// </summary>
-        /// <returns>True - если все обязательные поля заполнены и локация добавлена в БД. False - если заполнены не все обязательные поля.</returns>
+        /// <returns>True - если все обязательные поля заполнены и локация добавлена в БД. False - если заполнены не все обязательные поля или возникла ошибка при добавлении данных в БД.</returns>
         private bool AddLocation()
         {
             if (LocationNameTextBox.TextLength > 0 && LocationNameTextBox.Text != LocationNameTextBox.Tag.ToString()
@@ -526,26 +526,39 @@ namespace Admin_Panel_Hotel
                 && CheckRoomsData()) // Если все обязательные поля заполнены.
             {
                 long locationId = Locations.Add(LocationNameTextBox.Text.Trim());
-                long hotelId = Hotels.Add(locationId, Customer.Id, Convert.ToInt32(RoomCountTextBox.Text), Convert.ToInt32(BedsCountTextBox.Text), Convert.ToInt32(CardCountTextBox.Text));
-
-                for (int i = 0; i < RoomsDataGridView.RowCount; i++)
+                if (locationId >= 0)
                 {
-                    string roomName = RoomsDataGridView["RoomNumber", i].Value.ToString().Trim();
-                    string bedsCount = RoomsDataGridView["BedsCount", i].Value.ToString().Trim();
-
-                    if (Hotels.FindRoom(roomName, hotelId, out long roomId)) // Если в БД есть такие комнаты.
+                    long hotelId = Hotels.Add(locationId, Customer.Id, Convert.ToInt32(RoomCountTextBox.Text), Convert.ToInt32(BedsCountTextBox.Text), Convert.ToInt32(CardCountTextBox.Text));
+                    if (hotelId >= 0)
                     {
-                        Hotels.EditRoom(roomId, roomName, bedsCount);
+                        for (int i = 0; i < RoomsDataGridView.RowCount; i++)
+                        {
+                            string roomName = RoomsDataGridView["RoomNumber", i].Value.ToString().Trim();
+                            string bedsCount = RoomsDataGridView["BedsCount", i].Value.ToString().Trim();
+
+                            if (Hotels.FindRoom(roomName, hotelId, out long roomId)) // Если в БД есть такие комнаты.
+                            {
+                                Hotels.EditRoom(roomId, roomName, bedsCount);
+                            }
+                            else
+                            {
+                                Hotels.AddRoom(hotelId, roomName, bedsCount);
+                            }
+                        }
+
+                        LocationsDataGridView.DataSource = Hotels.GetAll();
+
+                        return true;
                     }
                     else
                     {
-                        Hotels.AddRoom(hotelId, roomName, bedsCount);
+                        return false;
                     }
                 }
-
-                LocationsDataGridView.DataSource = Hotels.GetAll();
-
-                return true;
+                else
+                {
+                    return false;
+                }
             }
             else
             {
@@ -837,32 +850,6 @@ namespace Admin_Panel_Hotel
             else
             {
                 MessageBox.Show("Не все обязательные поля заполнены!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        /// <summary>
-        /// Проверка заполнения полей при добавлении заказчика.
-        /// </summary>
-        /// <returns></returns>
-        private bool CheckCustomerInfo()
-        {
-            // UNDONE: Сделать проверку заполнения обязательных полей.
-            TextBox lastEmailNameTextBox = EmailsPanel.Controls[EmailsPanel.Controls.Count - 2] as TextBox;
-            TextBox lastEmailTextBox = EmailsPanel.Controls[EmailsPanel.Controls.Count - 1] as TextBox;
-            
-            if (NameTextBox.TextLength > 0 && NameTextBox.Text != "Наименование организации"
-                && ContractNumberTextBox.TextLength > 0 && ContractNumberTextBox.Text != "Номер договора"
-                && LocationNameTextBox.TextLength > 0 && LocationNameTextBox.Text != "Локация"
-                && lastEmailNameTextBox.TextLength > 0 && lastEmailNameTextBox.Text.Trim() != lastEmailNameTextBox.Tag.ToString()
-                && RegexUtilities.IsValidEmail(lastEmailTextBox.Text.Trim())
-                && SubDivisionsDataGridView.Rows.Count > 0
-                && LocationsDataGridView.Rows.Count > 0) // Если все обязательные поля заполнены корректно.
-            {
-                return true;
-            }
-            else // Если какое-либо или все обязательные поля незаполнены.
-            {
-                return false;
             }
         }
     }

@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using Google.Protobuf.WellKnownTypes;
+using MySql.Data.MySqlClient;
 using System;
 using System.Data;
 
@@ -22,7 +23,7 @@ namespace Admin_Panel_Hotel
         /// <returns>Возвращает уникальный номер (Id) добавленной локации. -1 - если возникла непредвиденная ошибка.</returns>
         public static long Add(string name)
         {
-            Id = Functions.SqlInsert($"INSERT INTO location(name) VALUES('{name}')");
+            Id = Functions.SqlInsert($"INSERT INTO location(name) VALUES(\"{name}\")");
             return Id >= 0 ? Id : -1;
         }
 
@@ -112,7 +113,7 @@ namespace Admin_Panel_Hotel
         {
             long type = 1; // "Стандарт".
             long statusId = 3; // "Свободно".
-            long roomId = Functions.SqlInsert($"INSERT INTO room(name, count_beds, hotel_id, room_type, status_id) VALUES('{name}', {bedsCount}, {hotelId}, {type}, {statusId})");
+            long roomId = Functions.SqlInsert($"INSERT INTO room(name, count_beds, hotel_id, room_type, status_id) VALUES(\"{name}\", {bedsCount}, {hotelId}, {type}, {statusId})");
             return roomId >= 0 ? roomId : 0;
         }
 
@@ -125,7 +126,7 @@ namespace Admin_Panel_Hotel
         /// <returns>Возвращает уникальный номер (Id) изменённой комнаты.</returns>
         public static long EditRoom(long roomId, string name, string bedsCount)
         {
-            return Functions.SqlUpdate($"UPDATE room SET name = '{name}', count_beds = {bedsCount} WHERE id = {roomId}");
+            return Functions.SqlUpdate($"UPDATE room SET name = \"{name}\", count_beds = {bedsCount} WHERE id = {roomId}");
         }
 
         /// <summary>
@@ -184,7 +185,7 @@ namespace Admin_Panel_Hotel
             {
                 roomId = -1;
 
-                MySqlCommand select = new MySqlCommand($"SELECT id FROM room WHERE hotel_id = {hotelId} AND name = '{name}'", Functions.Connection);
+                MySqlCommand select = new MySqlCommand($"SELECT id FROM room WHERE hotel_id = {hotelId} AND name = \"{name}\"", Functions.Connection);
                 select.CommandTimeout = 999999;
 
                 select.ExecuteNonQuery();

@@ -264,7 +264,7 @@ namespace Admin_Panel_Hotel
         private void MainForm_Load(object sender, EventArgs e)
         {
             SubMenuProcessing(NewApplicationsButton, ApplicationsButton, ApplicationsPanel);
-            Functions.OpenChildForm(new ShowEvictionGuest(), ContentPanel);
+            Functions.OpenChildForm(new NewApplications(), ContentPanel);
         }
     }
 }

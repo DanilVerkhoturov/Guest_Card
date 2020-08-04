@@ -58,21 +58,23 @@ namespace Admin_Panel_Hotel
             try
             {
                 DataTable table = new DataTable();
-                MySqlCommand command = new MySqlCommand(query, Connection);
-                command.CommandTimeout = 999999;
+                //MySqlCommand command = new MySqlCommand(query, Connection);
+                //command.CommandTimeout = 999999;
 
                 //command.ExecuteNonQuery();
 
-                MySqlDataReader reader = command.ExecuteReader();
-                table.Load(reader);
+                //MySqlDataReader reader = command.ExecuteReader();
+                //table.Load(reader);
 
-                table.ExtendedProperties.Clear();
+                MySqlDataAdapter adapter = new MySqlDataAdapter(query, Connection);
+
+                adapter.Fill(table);
 
                 return table;
             }
             catch (Exception e)
             {
-                return null;
+                return ExecuteSql(query);
             }
         }
 
