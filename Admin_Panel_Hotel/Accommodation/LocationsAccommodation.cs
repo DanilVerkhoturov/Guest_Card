@@ -8,15 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Admin_Panel_Hotel.Guests
+namespace Admin_Panel_Hotel.Accommodation
 {
-    public partial class CardGuest : Form
+    public partial class LocationsAccommodation : Form
     {
-        public CardGuest()
+        public LocationsAccommodation()
         {
             InitializeComponent();
         }
 
-        
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+       
     }
 }

@@ -10,9 +10,7 @@ namespace Admin_Panel_Hotel
         {
             InitializeComponent();
 
-            CustomerComboBox.SelectedIndex = 0;
             CustomerComboBox.DataSource = Customer.GetAllDivisions();
-            LocationComboBox.SelectedIndex = 0;
             LocationComboBox.DataSource = Locations.GetAll();
 
             Functions.NewlineProcessing(UsersDataGridView, new string[] { "1", "Введите ФИО", "Таб.номер", "Дата от", "Дата до", "Локация" });
@@ -158,6 +156,26 @@ namespace Admin_Panel_Hotel
             if (e.ColumnIndex == 5 && UsersDataGridView[5, e.RowIndex].Value != null)
             {
                 UsersDataGridView[5, e.RowIndex].ErrorText = UsersDataGridView[5, e.RowIndex].Value.ToString() == locationsComboBox.Items[0].ToString() ? "Выберите локацию из выпадающего списка" : null;
+            }
+        }
+
+        private void CustomerComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (Customer.GetDivisionId(Convert.ToInt64(CustomerComboBox.SelectedValue), out long divisionId) && Customer.GetCustomerId(divisionId, out long customerId))
+            {
+                Customer.Id = customerId;
+                LocationComboBox.DataSource = Locations.GetAll();
+            }
+            else
+            {
+                if (LocationComboBox.DataSource == null)
+                {
+                    LocationComboBox.Items.Clear();
+                }
+                else
+                {
+                    LocationComboBox.DataSource = null;
+                }
             }
         }
     }

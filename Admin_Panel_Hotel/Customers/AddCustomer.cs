@@ -841,7 +841,7 @@ namespace Admin_Panel_Hotel
 
                     if (dialogResult == DialogResult.Yes) // Если добавление заказчика завершено.
                     {
-                        MainForm.SubMenuProcessing(MainForm.MyCustomersBtn, MainForm.CustomersBtn);
+                        MainForm.SubMenuProcessing(MainForm.MyCustomersBtn, MainForm.CustomersBtn, MainForm.CustomersP);
                         Functions.OpenChildForm(new CustomersForm(), MainForm.ContP);
                         Close();
                     }

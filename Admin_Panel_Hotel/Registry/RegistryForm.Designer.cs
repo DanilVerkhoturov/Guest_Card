@@ -36,7 +36,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.SearchTextBox = new System.Windows.Forms.TextBox();
-            this.FilterCardsComboBox = new System.Windows.Forms.ComboBox();
+            this.DivisionsComboBox = new System.Windows.Forms.ComboBox();
             this.UsersDataGridView = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -74,19 +74,20 @@
             this.SearchTextBox.TabIndex = 45;
             this.SearchTextBox.Text = "Поиск";
             // 
-            // FilterCardsComboBox
+            // DivisionsComboBox
             // 
-            this.FilterCardsComboBox.BackColor = System.Drawing.Color.White;
-            this.FilterCardsComboBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FilterCardsComboBox.ForeColor = System.Drawing.Color.Black;
-            this.FilterCardsComboBox.FormattingEnabled = true;
-            this.FilterCardsComboBox.Items.AddRange(new object[] {
+            this.DivisionsComboBox.BackColor = System.Drawing.Color.White;
+            this.DivisionsComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.DivisionsComboBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DivisionsComboBox.ForeColor = System.Drawing.Color.Black;
+            this.DivisionsComboBox.FormattingEnabled = true;
+            this.DivisionsComboBox.Items.AddRange(new object[] {
             "Все карты"});
-            this.FilterCardsComboBox.Location = new System.Drawing.Point(132, 126);
-            this.FilterCardsComboBox.Margin = new System.Windows.Forms.Padding(123, 47, 10, 8);
-            this.FilterCardsComboBox.Name = "FilterCardsComboBox";
-            this.FilterCardsComboBox.Size = new System.Drawing.Size(288, 33);
-            this.FilterCardsComboBox.TabIndex = 44;
+            this.DivisionsComboBox.Location = new System.Drawing.Point(132, 126);
+            this.DivisionsComboBox.Margin = new System.Windows.Forms.Padding(123, 47, 10, 8);
+            this.DivisionsComboBox.Name = "DivisionsComboBox";
+            this.DivisionsComboBox.Size = new System.Drawing.Size(288, 33);
+            this.DivisionsComboBox.TabIndex = 44;
             // 
             // UsersDataGridView
             // 
@@ -290,7 +291,7 @@
             this.Controls.Add(this.ChangeButton);
             this.Controls.Add(this.PrintButton);
             this.Controls.Add(this.SearchTextBox);
-            this.Controls.Add(this.FilterCardsComboBox);
+            this.Controls.Add(this.DivisionsComboBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.UsersDataGridView);
             this.Controls.Add(this.EmptyRegistryLabel);
@@ -307,7 +308,7 @@
         #endregion
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox SearchTextBox;
-        private System.Windows.Forms.ComboBox FilterCardsComboBox;
+        private System.Windows.Forms.ComboBox DivisionsComboBox;
         private System.Windows.Forms.DataGridView UsersDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;

@@ -1,6 +1,6 @@
 ﻿namespace Admin_Panel_Hotel.Accommodation
 {
-    partial class LocationAccommodation
+    partial class LocationsAccommodation
     {
         /// <summary>
         /// Required designer variable.

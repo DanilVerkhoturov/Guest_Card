@@ -1,6 +1,8 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Data;
+using System.Runtime.CompilerServices;
+using System.Runtime.Remoting.Messaging;
 
 namespace Admin_Panel_Hotel
 {
@@ -48,6 +50,85 @@ namespace Admin_Panel_Hotel
         public static DataTable GetAll()
         {
             return Functions.ExecuteSql("SELECT customer_id as id, name FROM customer_list");
+        }
+
+        /// <summary>
+        /// Получить уникальный номер (Id) организации подрядной организации.
+        /// </summary>
+        /// <param name="subdivisionId">Уникальный номер подрядной организации.</param>
+        /// <param name="divisionId">Уникальный номер (Id) организации. -1 - если возникла ошибка.</param>
+        /// <returns>Возвращает результат получения уникального номера.</returns>
+        public static bool GetDivisionId(long subdivisionId, out long divisionId)
+        {
+            try
+            {
+                if (IsSubDivision(subdivisionId))
+                {
+                    MySqlCommand select = new MySqlCommand($"SELECT parent_id FROM division WHERE id = {subdivisionId}", Functions.Connection);
+                    object result = select.ExecuteScalar();
+                    if (result == null)
+                    {
+                        divisionId = -1;
+                        return false;
+                    }
+                    else
+                    {
+                        return long.TryParse(result.ToString(), out divisionId);
+                    }
+                }
+                else if (IsDivision(subdivisionId))
+                {
+                    divisionId = subdivisionId;
+                    return true;
+                }
+                else
+                {
+                    divisionId = -1;
+                    return false;
+                }
+            }
+            catch (Exception e)
+            {
+                divisionId = -1;
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Получить уникальный номер (Id) заказчика.
+        /// </summary>
+        /// <param name="divisionId">Уникальный номер организации.</param>
+        /// <param name="customerId">Уникальный номер (Id) заказчика. -1 - если возникла ошибка.</param>
+        /// <returns>Возвращает результат получения уникального номера.</returns>
+        public static bool GetCustomerId(long divisionId, out long customerId)
+        {
+            try
+            {
+                if (IsDivision(divisionId))
+                {
+                    MySqlCommand select = new MySqlCommand($"SELECT id FROM customer_legal_info WHERE division_id = {divisionId}", Functions.Connection);
+                    object result = select.ExecuteScalar();
+                    if (result == null)
+                    {
+                        customerId = -1;
+                        return false;
+                    }
+                    else
+                    {
+                        return long.TryParse(result.ToString(), out customerId);
+                    }
+                }
+                else
+                {
+                    customerId = -1;
+                    return false;
+                }
+            }
+            catch (Exception e)
+            {
+                customerId = -1;
+                return false;
+            }
         }
 
         /// <summary>
@@ -242,6 +323,44 @@ namespace Admin_Panel_Hotel
             catch (Exception)
             {
                 emailId = -2;
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Проверить является ли подразделением отправленный уникальный номер (Id).
+        /// </summary>
+        /// <param name="id">Уникальный номер.</param>
+        /// <returns>Возвращает результат проверки.</returns>
+        public static bool IsSubDivision(long id)
+        {
+            try
+            {
+                MySqlCommand select = new MySqlCommand($"SELECT id FROM division WHERE id = {id} AND parent_id is not null", Functions.Connection);
+                object result = select.ExecuteScalar();
+                return result != null && long.TryParse(result.ToString(), out long divisionId);
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Проверить является ли организацией отправленный уникальный номер (Id).
+        /// </summary>
+        /// <param name="id">Уникальный номер.</param>
+        /// <returns>Возвращает результат проверки.</returns>
+        public static bool IsDivision(long id)
+        {
+            try
+            {
+                MySqlCommand select = new MySqlCommand($"SELECT id FROM customer_legal_info WHERE division_id = {id}", Functions.Connection);
+                object result = select.ExecuteScalar();
+                return result != null && long.TryParse(result.ToString(), out long customerId);
+            }
+            catch (Exception e)
+            {
                 return false;
             }
         }
