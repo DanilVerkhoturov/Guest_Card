@@ -42,6 +42,9 @@
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.AddLocationButton = new System.Windows.Forms.Button();
             this.FindTextBox = new System.Windows.Forms.TextBox();
+            this.LocationLabel = new System.Windows.Forms.Label();
+            this.CustomersLabel = new System.Windows.Forms.Label();
+            this.ChangeLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.LocationsDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,7 +102,7 @@
             this.LocationsDataGridView.DefaultCellStyle = dataGridViewCellStyle4;
             this.LocationsDataGridView.EnableHeadersVisualStyles = false;
             this.LocationsDataGridView.GridColor = System.Drawing.Color.Black;
-            this.LocationsDataGridView.Location = new System.Drawing.Point(76, 181);
+            this.LocationsDataGridView.Location = new System.Drawing.Point(132, 269);
             this.LocationsDataGridView.Margin = new System.Windows.Forms.Padding(5, 21, 5, 4);
             this.LocationsDataGridView.MultiSelect = false;
             this.LocationsDataGridView.Name = "LocationsDataGridView";
@@ -182,7 +185,7 @@
             this.AddLocationButton.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.AddLocationButton.ForeColor = System.Drawing.Color.White;
             this.AddLocationButton.Location = new System.Drawing.Point(768, 47);
-            this.AddLocationButton.Margin = new System.Windows.Forms.Padding(33, 34, 3, 3);
+            this.AddLocationButton.Margin = new System.Windows.Forms.Padding(0, 34, 3, 3);
             this.AddLocationButton.Name = "AddLocationButton";
             this.AddLocationButton.Size = new System.Drawing.Size(131, 37);
             this.AddLocationButton.TabIndex = 2;
@@ -195,12 +198,46 @@
             this.FindTextBox.BackColor = System.Drawing.Color.White;
             this.FindTextBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FindTextBox.ForeColor = System.Drawing.Color.Silver;
-            this.FindTextBox.Location = new System.Drawing.Point(76, 124);
-            this.FindTextBox.Margin = new System.Windows.Forms.Padding(24, 45, 3, 3);
+            this.FindTextBox.Location = new System.Drawing.Point(132, 212);
+            this.FindTextBox.Margin = new System.Windows.Forms.Padding(123, 49, 3, 3);
             this.FindTextBox.Name = "FindTextBox";
             this.FindTextBox.Size = new System.Drawing.Size(258, 33);
             this.FindTextBox.TabIndex = 4;
             this.FindTextBox.Text = "Поиск";
+            // 
+            // LocationLabel
+            // 
+            this.LocationLabel.AutoSize = true;
+            this.LocationLabel.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LocationLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
+            this.LocationLabel.Location = new System.Drawing.Point(132, 138);
+            this.LocationLabel.Margin = new System.Windows.Forms.Padding(123, 59, 0, 0);
+            this.LocationLabel.Name = "LocationLabel";
+            this.LocationLabel.Size = new System.Drawing.Size(97, 25);
+            this.LocationLabel.TabIndex = 48;
+            this.LocationLabel.Text = "Локации";
+            // 
+            // CustomersLabel
+            // 
+            this.CustomersLabel.AutoSize = true;
+            this.CustomersLabel.Location = new System.Drawing.Point(300, 138);
+            this.CustomersLabel.Margin = new System.Windows.Forms.Padding(71, 0, 3, 0);
+            this.CustomersLabel.Name = "CustomersLabel";
+            this.CustomersLabel.Size = new System.Drawing.Size(140, 25);
+            this.CustomersLabel.TabIndex = 49;
+            this.CustomersLabel.Text = "Организации";
+            // 
+            // ChangeLabel
+            // 
+            this.ChangeLabel.AutoSize = true;
+            this.ChangeLabel.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ChangeLabel.ForeColor = System.Drawing.Color.White;
+            this.ChangeLabel.Location = new System.Drawing.Point(624, 54);
+            this.ChangeLabel.Margin = new System.Windows.Forms.Padding(71, 0, 45, 0);
+            this.ChangeLabel.Name = "ChangeLabel";
+            this.ChangeLabel.Size = new System.Drawing.Size(99, 23);
+            this.ChangeLabel.TabIndex = 50;
+            this.ChangeLabel.Text = "Изменить";
             // 
             // CustomerInfoForm
             // 
@@ -209,6 +246,9 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.ClientSize = new System.Drawing.Size(1013, 894);
+            this.Controls.Add(this.ChangeLabel);
+            this.Controls.Add(this.CustomersLabel);
+            this.Controls.Add(this.LocationLabel);
             this.Controls.Add(this.LocationsDataGridView);
             this.Controls.Add(this.FindTextBox);
             this.Controls.Add(this.AddLocationButton);
@@ -235,5 +275,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.DataGridViewImageColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.Label LocationLabel;
+        private System.Windows.Forms.Label CustomersLabel;
+        private System.Windows.Forms.Label ChangeLabel;
     }
 }

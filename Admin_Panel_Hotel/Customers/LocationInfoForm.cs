@@ -135,5 +135,10 @@ namespace Admin_Panel_Hotel.Customers
         {
             RoomsDataGridView.Rows.Add();
         }
+
+        private void HostelPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
