@@ -64,12 +64,12 @@ namespace Admin_Panel_Hotel.Customers
 
         private void AllPropertiesCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            GiveOutLinenCheckBox.Checked = AllPropertiesCheckBox.Checked;
-            Set1CheckBox.Checked = AllPropertiesCheckBox.Checked;
-            Set2CheckBox.Checked = AllPropertiesCheckBox.Checked;
-            InstructedCheckBox.Checked = AllPropertiesCheckBox.Checked;
-            ResidenceRulesCheckBox.Checked = AllPropertiesCheckBox.Checked;
-            FireSafetyCheckBox.Checked = AllPropertiesCheckBox.Checked;
+            ///GiveOutLinenCheckBox.Checked = AllPropertiesCheckBox.Checked;
+            //Set1CheckBox.Checked = AllPropertiesCheckBox.Checked;
+            //Set2CheckBox.Checked = AllPropertiesCheckBox.Checked;
+            //InstructedCheckBox.Checked = AllPropertiesCheckBox.Checked;
+            //ResidenceRulesCheckBox.Checked = AllPropertiesCheckBox.Checked;
+            //FireSafetyCheckBox.Checked = AllPropertiesCheckBox.Checked;
         }
 
         /// <summary>
@@ -110,12 +110,12 @@ namespace Admin_Panel_Hotel.Customers
 
         private void EditCardPropertiesButton_Click(object sender, EventArgs e)
         {
-            GiveOutLinenCheckBox.Enabled = true;
-            Set1CheckBox.Enabled = true;
-            Set2CheckBox.Enabled = true;
-            InstructedCheckBox.Enabled = true;
-            ResidenceRulesCheckBox.Enabled = true;
-            FireSafetyCheckBox.Enabled = true;
+            // GiveOutLinenCheckBox.Enabled = true;
+            // Set1CheckBox.Enabled = true;
+            //Set2CheckBox.Enabled = true;
+            //InstructedCheckBox.Enabled = true;
+            //ResidenceRulesCheckBox.Enabled = true;
+            //FireSafetyCheckBox.Enabled = true;
 
             SaveCardPropertiesButton.Visible = true;
             EditCardPropertiesButton.Visible = false;

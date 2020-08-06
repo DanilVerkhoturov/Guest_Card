@@ -34,6 +34,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.CustomerNameLabel = new System.Windows.Forms.Label();
             this.LocationsDataGridView = new System.Windows.Forms.DataGridView();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,7 +51,18 @@
             this.LocationLabel = new System.Windows.Forms.Label();
             this.CustomersLabel = new System.Windows.Forms.Label();
             this.ChangeLabel = new System.Windows.Forms.Label();
+            this.AddCustomers = new System.Windows.Forms.Button();
+            this.PanelLocation = new System.Windows.Forms.Panel();
+            this.PanelOrganization = new System.Windows.Forms.Panel();
+            this.SearchOrganization = new System.Windows.Forms.TextBox();
+            this.OrganizationDataGrid = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.LocationsDataGridView)).BeginInit();
+            this.PanelLocation.SuspendLayout();
+            this.PanelOrganization.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.OrganizationDataGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // CustomerNameLabel
@@ -102,7 +119,7 @@
             this.LocationsDataGridView.DefaultCellStyle = dataGridViewCellStyle4;
             this.LocationsDataGridView.EnableHeadersVisualStyles = false;
             this.LocationsDataGridView.GridColor = System.Drawing.Color.Black;
-            this.LocationsDataGridView.Location = new System.Drawing.Point(132, 269);
+            this.LocationsDataGridView.Location = new System.Drawing.Point(56, 69);
             this.LocationsDataGridView.Margin = new System.Windows.Forms.Padding(5, 21, 5, 4);
             this.LocationsDataGridView.MultiSelect = false;
             this.LocationsDataGridView.Name = "LocationsDataGridView";
@@ -198,7 +215,7 @@
             this.FindTextBox.BackColor = System.Drawing.Color.White;
             this.FindTextBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FindTextBox.ForeColor = System.Drawing.Color.Silver;
-            this.FindTextBox.Location = new System.Drawing.Point(132, 212);
+            this.FindTextBox.Location = new System.Drawing.Point(56, 12);
             this.FindTextBox.Margin = new System.Windows.Forms.Padding(123, 49, 3, 3);
             this.FindTextBox.Name = "FindTextBox";
             this.FindTextBox.Size = new System.Drawing.Size(258, 33);
@@ -239,6 +256,154 @@
             this.ChangeLabel.TabIndex = 50;
             this.ChangeLabel.Text = "Изменить";
             // 
+            // AddCustomers
+            // 
+            this.AddCustomers.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.AddCustomers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(82)))), ((int)(((byte)(119)))));
+            this.AddCustomers.FlatAppearance.BorderSize = 0;
+            this.AddCustomers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddCustomers.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AddCustomers.ForeColor = System.Drawing.Color.White;
+            this.AddCustomers.Location = new System.Drawing.Point(768, 47);
+            this.AddCustomers.Margin = new System.Windows.Forms.Padding(0, 34, 3, 3);
+            this.AddCustomers.Name = "AddCustomers";
+            this.AddCustomers.Size = new System.Drawing.Size(131, 37);
+            this.AddCustomers.TabIndex = 51;
+            this.AddCustomers.Text = "Добавить";
+            this.AddCustomers.UseVisualStyleBackColor = false;
+            // 
+            // PanelLocation
+            // 
+            this.PanelLocation.Controls.Add(this.FindTextBox);
+            this.PanelLocation.Controls.Add(this.LocationsDataGridView);
+            this.PanelLocation.Location = new System.Drawing.Point(76, 193);
+            this.PanelLocation.Name = "PanelLocation";
+            this.PanelLocation.Size = new System.Drawing.Size(911, 610);
+            this.PanelLocation.TabIndex = 52;
+            // 
+            // PanelOrganization
+            // 
+            this.PanelOrganization.Controls.Add(this.SearchOrganization);
+            this.PanelOrganization.Controls.Add(this.OrganizationDataGrid);
+            this.PanelOrganization.Location = new System.Drawing.Point(76, 193);
+            this.PanelOrganization.Name = "PanelOrganization";
+            this.PanelOrganization.Size = new System.Drawing.Size(911, 610);
+            this.PanelOrganization.TabIndex = 53;
+            // 
+            // SearchOrganization
+            // 
+            this.SearchOrganization.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.SearchOrganization.BackColor = System.Drawing.Color.White;
+            this.SearchOrganization.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SearchOrganization.ForeColor = System.Drawing.Color.Silver;
+            this.SearchOrganization.Location = new System.Drawing.Point(56, 12);
+            this.SearchOrganization.Margin = new System.Windows.Forms.Padding(123, 49, 3, 3);
+            this.SearchOrganization.Name = "SearchOrganization";
+            this.SearchOrganization.Size = new System.Drawing.Size(258, 33);
+            this.SearchOrganization.TabIndex = 4;
+            this.SearchOrganization.Text = "Поиск";
+            // 
+            // OrganizationDataGrid
+            // 
+            this.OrganizationDataGrid.AllowUserToAddRows = false;
+            this.OrganizationDataGrid.AllowUserToDeleteRows = false;
+            this.OrganizationDataGrid.AllowUserToResizeColumns = false;
+            this.OrganizationDataGrid.AllowUserToResizeRows = false;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.OrganizationDataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            this.OrganizationDataGrid.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.OrganizationDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.OrganizationDataGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.OrganizationDataGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.OrganizationDataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.OrganizationDataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(172)))), ((int)(((byte)(218)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(172)))), ((int)(((byte)(218)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.OrganizationDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.OrganizationDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.OrganizationDataGrid.ColumnHeadersVisible = false;
+            this.OrganizationDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewImageColumn2,
+            this.dataGridViewTextBoxColumn2});
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.OrganizationDataGrid.DefaultCellStyle = dataGridViewCellStyle10;
+            this.OrganizationDataGrid.EnableHeadersVisualStyles = false;
+            this.OrganizationDataGrid.GridColor = System.Drawing.Color.Black;
+            this.OrganizationDataGrid.Location = new System.Drawing.Point(56, 69);
+            this.OrganizationDataGrid.Margin = new System.Windows.Forms.Padding(5, 21, 5, 4);
+            this.OrganizationDataGrid.MultiSelect = false;
+            this.OrganizationDataGrid.Name = "OrganizationDataGrid";
+            this.OrganizationDataGrid.ReadOnly = true;
+            this.OrganizationDataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.OrganizationDataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            this.OrganizationDataGrid.RowHeadersVisible = false;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.NullValue = null;
+            dataGridViewCellStyle12.Padding = new System.Windows.Forms.Padding(17, 14, 17, 14);
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            this.OrganizationDataGrid.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            this.OrganizationDataGrid.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.OrganizationDataGrid.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.OrganizationDataGrid.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.OrganizationDataGrid.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.OrganizationDataGrid.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.OrganizationDataGrid.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.OrganizationDataGrid.RowTemplate.Height = 25;
+            this.OrganizationDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.OrganizationDataGrid.Size = new System.Drawing.Size(823, 658);
+            this.OrganizationDataGrid.TabIndex = 47;
+            this.OrganizationDataGrid.TabStop = false;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "location_name";
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle9;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Column1";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewImageColumn2
+            // 
+            this.dataGridViewImageColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dataGridViewImageColumn2.HeaderText = "Просмотр";
+            this.dataGridViewImageColumn2.Image = global::Admin_Panel_Hotel.Properties.Resources.pngwing_8;
+            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
+            this.dataGridViewImageColumn2.ReadOnly = true;
+            this.dataGridViewImageColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewImageColumn2.Width = 5;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "location_id";
+            this.dataGridViewTextBoxColumn2.HeaderText = "id";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Visible = false;
+            // 
             // CustomerInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -246,13 +411,14 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.ClientSize = new System.Drawing.Size(1013, 894);
+            this.Controls.Add(this.AddCustomers);
             this.Controls.Add(this.ChangeLabel);
             this.Controls.Add(this.CustomersLabel);
             this.Controls.Add(this.LocationLabel);
-            this.Controls.Add(this.LocationsDataGridView);
-            this.Controls.Add(this.FindTextBox);
             this.Controls.Add(this.AddLocationButton);
             this.Controls.Add(this.CustomerNameLabel);
+            this.Controls.Add(this.PanelOrganization);
+            this.Controls.Add(this.PanelLocation);
             this.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(6);
@@ -260,6 +426,11 @@
             this.Name = "CustomerInfoForm";
             this.Text = "CustomerInfoForm";
             ((System.ComponentModel.ISupportInitialize)(this.LocationsDataGridView)).EndInit();
+            this.PanelLocation.ResumeLayout(false);
+            this.PanelLocation.PerformLayout();
+            this.PanelOrganization.ResumeLayout(false);
+            this.PanelOrganization.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.OrganizationDataGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -278,5 +449,13 @@
         private System.Windows.Forms.Label LocationLabel;
         private System.Windows.Forms.Label CustomersLabel;
         private System.Windows.Forms.Label ChangeLabel;
+        private System.Windows.Forms.Button AddCustomers;
+        private System.Windows.Forms.Panel PanelLocation;
+        private System.Windows.Forms.Panel PanelOrganization;
+        private System.Windows.Forms.TextBox SearchOrganization;
+        private System.Windows.Forms.DataGridView OrganizationDataGrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
     }
 }
