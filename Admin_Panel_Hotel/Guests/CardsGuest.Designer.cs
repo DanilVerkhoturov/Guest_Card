@@ -1,6 +1,6 @@
 ﻿namespace Admin_Panel_Hotel.Guests
 {
-    partial class CardGuest
+    partial class CardsGuest
     {
         /// <summary>
         /// Required designer variable.

@@ -48,7 +48,7 @@
             this.label1.Location = new System.Drawing.Point(131, 49);
             this.label1.Margin = new System.Windows.Forms.Padding(122, 40, 0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(433, 35);
+            this.label1.Size = new System.Drawing.Size(432, 35);
             this.label1.TabIndex = 1;
             this.label1.Text = "Гость: Иванов Иван Иванович";
             // 
@@ -171,10 +171,11 @@
             this.AcceptButton.Location = new System.Drawing.Point(618, 671);
             this.AcceptButton.Margin = new System.Windows.Forms.Padding(609, 662, 0, 7);
             this.AcceptButton.Name = "AcceptButton";
-            this.AcceptButton.Size = new System.Drawing.Size(218, 48);
+            this.AcceptButton.Size = new System.Drawing.Size(218, 53);
             this.AcceptButton.TabIndex = 60;
             this.AcceptButton.Text = "Подтвердить";
             this.AcceptButton.UseVisualStyleBackColor = false;
+            this.AcceptButton.Click += new System.EventHandler(this.AcceptButton_Click);
             // 
             // ShowGuest
             // 

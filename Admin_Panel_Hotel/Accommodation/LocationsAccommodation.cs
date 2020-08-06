@@ -8,13 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Admin_Panel_Hotel.Guests
+namespace Admin_Panel_Hotel.Accommodation
 {
-    public partial class NotificationCadrdGues : Form
+    public partial class LocationsAccommodation : Form
     {
-        public NotificationCadrdGues()
+        public LocationsAccommodation()
         {
             InitializeComponent();
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+       
     }
 }

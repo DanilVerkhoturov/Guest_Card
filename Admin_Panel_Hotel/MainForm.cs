@@ -1,9 +1,12 @@
-﻿using Admin_Panel_Hotel.Applications;
+﻿using Admin_Panel_Hotel.Accommodation;
+using Admin_Panel_Hotel.Applications;
 using Admin_Panel_Hotel.Cards;
 using Admin_Panel_Hotel.Guests;
 using Admin_Panel_Hotel.Registry;
+using Admin_Panel_Hotel.Users;
 using System;
 using System.Data;
+using System.IO.Ports;
 using System.Windows.Forms;
 
 namespace Admin_Panel_Hotel
@@ -11,6 +14,7 @@ namespace Admin_Panel_Hotel
     public partial class MainForm : Form
     {
         public static Panel ContP = null;
+        public static Panel CustomersP = null;
         public static Button CustomersBtn = null;
         public static Button MyCustomersBtn = null;
         private static Button CurrentSubButton = null;
@@ -22,8 +26,19 @@ namespace Admin_Panel_Hotel
             InitializeComponent();
 
             ContP = ContentPanel;
+            CustomersP = CustomersPanel;
             CustomersBtn = CustomersButton;
             MyCustomersBtn = MyCustomersButton;
+
+            // Подключение магнитного считывателя.
+            Functions.RFID = new SerialPort();
+            Functions.RFID.PortName = "COM3";
+            Functions.RFID.BaudRate = 9600;
+            Functions.RFID.DataBits = 8;
+            Functions.RFID.Parity = Parity.None;
+            Functions.RFID.StopBits = StopBits.One;
+            Functions.RFID.ReadTimeout = 2000;
+            Functions.RFID.DataReceived += new SerialDataReceivedEventHandler(Functions.RFID_DataReceivedHandler);
 
             Functions.Connection.StateChange += Functions.MySQLConnectionStateChange;
             Functions.Connection.Open();
@@ -42,13 +57,13 @@ namespace Admin_Panel_Hotel
 
         private void AddCustomerButton_Click(object sender, EventArgs e)
         {
-            SubMenuProcessing(AddCustomerButton, CustomersButton);
+            SubMenuProcessing(AddCustomerButton, CustomersButton, null);
             Functions.OpenChildForm(new AddCustomer(), ContentPanel);
         }
 
         private void MyCustomersButton_Click(object sender, EventArgs e)
         {
-            SubMenuProcessing(MyCustomersButton, CustomersButton);
+            SubMenuProcessing(MyCustomersButton, CustomersButton, null);
             Functions.OpenChildForm(new CustomersForm(), ContentPanel);
         }
 
@@ -64,31 +79,31 @@ namespace Admin_Panel_Hotel
 
         private void NewApplicationsButton_Click(object sender, EventArgs e)
         {
-            SubMenuProcessing(NewApplicationsButton, ApplicationsButton);
+            SubMenuProcessing(NewApplicationsButton, ApplicationsButton, null);
             Functions.OpenChildForm(new NewApplications(), ContentPanel);
         }
 
         private void CurrentApplicationsButton_Click(object sender, EventArgs e)
         {
-            SubMenuProcessing(CurrentApplicationsButton, ApplicationsButton);
+            SubMenuProcessing(CurrentApplicationsButton, ApplicationsButton, null);
             Functions.OpenChildForm(new CurrentApplications(), ContentPanel);
         }
 
         private void AddApplicationButton_Click(object sender, EventArgs e)
         {
-            SubMenuProcessing(AddApplicationButton, ApplicationsButton);
+            SubMenuProcessing(AddApplicationButton, ApplicationsButton, null);
             Functions.OpenChildForm(new AddApplication(), ContentPanel);
         }
 
         private void HistoryApplicationsButton_Click(object sender, EventArgs e)
         {
-            SubMenuProcessing(HistoryApplicationsButton, ApplicationsButton);
+            SubMenuProcessing(HistoryApplicationsButton, ApplicationsButton, null);
             Functions.OpenChildForm(new HistoryApplications(), ContentPanel);
         }
 
         private void DraftsButton_Click(object sender, EventArgs e)
         {
-            SubMenuProcessing(DraftsButton, ApplicationsButton);
+            SubMenuProcessing(DraftsButton, ApplicationsButton, null);
             Functions.OpenChildForm(new DraftApplications(), ContentPanel);
         }
 
@@ -104,19 +119,19 @@ namespace Admin_Panel_Hotel
 
         private void AllCardsButton_Click(object sender, EventArgs e)
         {
-            SubMenuProcessing(AllCardsButton, CardsButton);
+            SubMenuProcessing(AllCardsButton, CardsButton, null);
             Functions.OpenChildForm(new AllCards(), ContentPanel);
         }
 
         private void AddCardsButton_Click(object sender, EventArgs e)
         {
-            SubMenuProcessing(AddCardsButton, CardsButton);
+            SubMenuProcessing(AddCardsButton, CardsButton, null);
             Functions.OpenChildForm(new AddCards(), ContentPanel);
         }
 
         private void MovingCardsButton_Click(object sender, EventArgs e)
         {
-            SubMenuProcessing(MovingCardsButton, CardsButton);
+            SubMenuProcessing(MovingCardsButton, CardsButton, null);
             Functions.OpenChildForm(new MovingCards(), ContentPanel);
         }
 
@@ -132,13 +147,13 @@ namespace Admin_Panel_Hotel
 
         private void RegistryListButton_Click(object sender, EventArgs e)
         {
-            SubMenuProcessing(RegistryListButton, RegistryButton);
+            SubMenuProcessing(RegistryListButton, RegistryButton, null);
             Functions.OpenChildForm(new RegistryForm(), ContentPanel);
         }
 
         private void AddRegistryButton_Click(object sender, EventArgs e)
         {
-            SubMenuProcessing(AddRegistryButton, RegistryButton);
+            SubMenuProcessing(AddRegistryButton, RegistryButton, null);
             Functions.OpenChildForm(new AddRegistry(), ContentPanel);
         }
 
@@ -154,20 +169,72 @@ namespace Admin_Panel_Hotel
 
         private void NewGuestsButton_Click(object sender, EventArgs e)
         {
-            SubMenuProcessing(NewGuestsButton, GuestsButton);
+            SubMenuProcessing(NewGuestsButton, GuestsButton, null);
             Functions.OpenChildForm(new NewGuest(), ContentPanel);
         }
 
         private void EvictionGuestsButton_Click(object sender, EventArgs e)
         {
-            SubMenuProcessing(EvictionGuestsButton, GuestsButton);
+            SubMenuProcessing(EvictionGuestsButton, GuestsButton, null);
             Functions.OpenChildForm(new EvictionGuest(), ContentPanel);
         }
 
         private void GuestsCalendarButton_Click(object sender, EventArgs e)
         {
-            SubMenuProcessing(GuestsCalendarButton, GuestsButton);
+            SubMenuProcessing(GuestsCalendarButton, GuestsButton, null);
             Functions.OpenChildForm(new CalendarGuest(), ContentPanel);
+        }
+
+        #endregion
+
+        #region Карты (гости)
+
+        private void GuestCardsButton_Click(object sender, EventArgs e)
+        {
+            SubMenuProcessing(GuestCardsButton, GuestCardsButton);
+            Functions.OpenChildForm(new CardsGuest(), ContentPanel);
+        }
+
+        #endregion
+
+        #region Номера (гости)
+
+        private void GuestRoomsButton_Click(object sender, EventArgs e)
+        {
+            SubMenuProcessing(GuestRoomsButton, GuestRoomsButton);
+            Functions.OpenChildForm(new RoomsGuest(), ContentPanel);
+        }
+
+        #endregion
+
+        #region Проживание
+
+        private void AccommodationButton_Click(object sender, EventArgs e)
+        {
+            SubMenuProcessing(AccommodationLocationsButton, AccommodationButton, AccommodationPanel);
+            Functions.OpenChildForm(new LocationsAccommodation(), ContentPanel);
+        }
+
+        private void AccommodationLocationsButton_Click(object sender, EventArgs e)
+        {
+            SubMenuProcessing(AccommodationLocationsButton, AccommodationButton, null);
+            Functions.OpenChildForm(new LocationsAccommodation(), ContentPanel);
+        }
+
+        private void AccommodationHistoryButton_Click(object sender, EventArgs e)
+        {
+            SubMenuProcessing(AccommodationHistoryButton, AccommodationButton, null);
+            Functions.OpenChildForm(new HistoryAccommodation(), ContentPanel);
+        }
+
+        #endregion
+
+        #region Пользователи
+
+        private void UsersButton_Click(object sender, EventArgs e)
+        {
+            SubMenuProcessing(UsersButton, UsersButton);
+            Functions.OpenChildForm(new RulesUsers(), ContentPanel);
         }
 
         #endregion
@@ -176,8 +243,9 @@ namespace Admin_Panel_Hotel
         /// Обработка открытия страниц из подменю.
         /// </summary>
         /// <param name="newButton">Объект нажатой кнопки.</param>
+        /// <param name="newMainButton">Объект главной нажатой кнопки.</param>
         /// <param name="newSubMenu">Объект подменю. Указывать только если была нажата кнопка, отвечающая за разворачивание подменю! По умолчанию - null.</param>
-        public static void SubMenuProcessing(Button newButton, Button newMainButton, Panel newSubMenu = null)
+        public static void SubMenuProcessing(Button newButton, Button newMainButton, Panel newSubMenu)
         {
             // Обработка нажатия главной кнопки меню.
             if (CurrentMainButton == null)
@@ -233,6 +301,53 @@ namespace Admin_Panel_Hotel
                         CurrentSubMenu = newSubMenu;
                     }
                 }
+            }
+        }
+
+        /// <summary>
+        /// Обработка нажатия на кнопку из подменю.
+        /// </summary>
+        /// <param name="newButton">Объект нажатой кнопки.</param>
+        /// <param name="newMainButton">Объект главной нажатой кнопки.</param>
+        public static void SubMenuProcessing(Button newButton, Button newMainButton)
+        {
+            // Обработка нажатия главной кнопки меню.
+            if (CurrentMainButton == null)
+            {
+                newMainButton.ForeColor = MyColors._00A0E3();
+                CurrentMainButton = newMainButton;
+            }
+            else
+            {
+                if (newMainButton != CurrentMainButton)
+                {
+                    CurrentMainButton.ForeColor = MyColors._FFFFFF();
+                    newMainButton.ForeColor = MyColors._00A0E3();
+                    CurrentMainButton = newMainButton;
+                }
+            }
+
+            // Обработка нажатия кнопки в подменю.
+            if (CurrentSubButton == null)
+            {
+                newButton.ForeColor = MyColors._00A0E3();
+                CurrentSubButton = newButton;
+            }
+            else
+            {
+                if (newButton != CurrentSubButton)
+                {
+                    CurrentSubButton.ForeColor = MyColors._FFFFFF();
+                    newButton.ForeColor = MyColors._00A0E3();
+                    CurrentSubButton = newButton;
+                }
+            }
+
+            // Закрытие открытых выпадающих меню.
+            if (CurrentSubMenu != null)
+            {
+                CurrentSubMenu.Visible = false;
+                CurrentSubMenu = null;
             }
         }
 

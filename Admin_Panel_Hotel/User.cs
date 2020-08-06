@@ -1,4 +1,6 @@
-﻿namespace Admin_Panel_Hotel
+﻿using System.Data;
+
+namespace Admin_Panel_Hotel
 {
     /// <summary>
     /// Текущий пользователь.
@@ -31,5 +33,10 @@
         {
             return role;
         }
+
+        //public static DataTable GetAll()
+        //{
+        //    return Functions.ExecuteSql("SELECT ");
+        //}
     }
 }

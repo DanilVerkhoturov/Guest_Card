@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Admin_Panel_Hotel.Guests
@@ -15,6 +8,13 @@ namespace Admin_Panel_Hotel.Guests
         public ShowGuest()
         {
             InitializeComponent();
+        }
+
+        private void AcceptButton_Click(object sender, EventArgs e)
+        {
+            NotificationsGuest notificationsGuest = new NotificationsGuest();
+            notificationsGuest.Owner = this;
+            notificationsGuest.Open("Для подтверждения поднесите карту к магнитному считывателю", Properties.Resources.ToAccept);
         }
     }
 }

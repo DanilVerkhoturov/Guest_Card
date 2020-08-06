@@ -243,6 +243,7 @@
             this.CustomerComboBox.Size = new System.Drawing.Size(280, 33);
             this.CustomerComboBox.TabIndex = 56;
             this.CustomerComboBox.ValueMember = "id";
+            this.CustomerComboBox.SelectedIndexChanged += new System.EventHandler(this.CustomerComboBox_SelectedIndexChanged);
             // 
             // SendToCustomerButton
             // 

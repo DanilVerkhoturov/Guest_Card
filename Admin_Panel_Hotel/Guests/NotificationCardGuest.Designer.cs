@@ -1,6 +1,6 @@
 ﻿namespace Admin_Panel_Hotel.Guests
 {
-    partial class NotificationCadrdGues
+    partial class NotificationCardGuest
     {
         /// <summary>
         /// Required designer variable.
@@ -83,19 +83,23 @@
             this.button1.Text = "Подтвердить";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // NotificationCadrdGues
+            // NotificationCardGuest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
             this.ClientSize = new System.Drawing.Size(588, 359);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(6);
-            this.Name = "NotificationCadrdGues";
+            this.Name = "NotificationCardGuest";
             this.Opacity = 0.8D;
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "NotificationCadrdGues";
             this.ResumeLayout(false);
             this.PerformLayout();

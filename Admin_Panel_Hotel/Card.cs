@@ -36,8 +36,9 @@ namespace Admin_Panel_Hotel
 
                     while (reader.Read())
                     {
-                        cardsCount = (int)reader[0];
+                        cardsCount = Convert.ToInt32(reader[0]);
                     }
+                    reader.Close();
                     return cardsCount;
                 }
                 else
@@ -45,7 +46,7 @@ namespace Admin_Panel_Hotel
                     return -1;
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 return -2;
             }

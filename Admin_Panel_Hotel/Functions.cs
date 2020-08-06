@@ -2,6 +2,7 @@
 using System;
 using System.Data;
 using System.Drawing;
+using System.IO.Ports;
 using System.Windows.Forms;
 
 namespace Admin_Panel_Hotel
@@ -22,6 +23,14 @@ namespace Admin_Panel_Hotel
         /// Активная форма в панели контента.
         /// </summary>
         private static Form ActiveForm = null;
+        /// <summary>
+        /// Магнитный считыватель.
+        /// </summary>
+        public static SerialPort RFID;
+        /// <summary>
+        /// Серийный номер приложенной карты к магнитному считывателю.
+        /// </summary>
+        public static string CardSerialNumberFromRFID;
 
         #endregion
 
@@ -49,21 +58,23 @@ namespace Admin_Panel_Hotel
             try
             {
                 DataTable table = new DataTable();
-                MySqlCommand command = new MySqlCommand(query, Connection);
-                command.CommandTimeout = 999999;
+                //MySqlCommand command = new MySqlCommand(query, Connection);
+                //command.CommandTimeout = 999999;
 
                 //command.ExecuteNonQuery();
 
-                MySqlDataReader reader = command.ExecuteReader();
-                table.Load(reader);
+                //MySqlDataReader reader = command.ExecuteReader();
+                //table.Load(reader);
 
-                table.ExtendedProperties.Clear();
+                MySqlDataAdapter adapter = new MySqlDataAdapter(query, Connection);
+
+                adapter.Fill(table);
 
                 return table;
             }
             catch (Exception e)
             {
-                return null;
+                return ExecuteSql(query);
             }
         }
 
@@ -108,6 +119,13 @@ namespace Admin_Panel_Hotel
         }
 
         #endregion
+
+        public static void RFID_DataReceivedHandler(object sender, SerialDataReceivedEventArgs e)
+        {
+            SerialPort serialPort = (SerialPort)sender;
+            CardSerialNumberFromRFID = serialPort.ReadLine();
+            RFID.Close();
+        }
 
         /// <summary>
         /// Конвертировать дату в Unix-формат.
