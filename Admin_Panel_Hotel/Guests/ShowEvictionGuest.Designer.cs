@@ -67,7 +67,7 @@
             this.label2.Location = new System.Drawing.Point(133, 108);
             this.label2.Margin = new System.Windows.Forms.Padding(124, 42, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 35);
+            this.label2.Size = new System.Drawing.Size(98, 35);
             this.label2.TabIndex = 1;
             this.label2.Text = "Гость:";
             // 
@@ -88,7 +88,7 @@
             this.label4.Font = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.Location = new System.Drawing.Point(554, 110);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(372, 33);
+            this.label4.Size = new System.Drawing.Size(373, 33);
             this.label4.TabIndex = 3;
             this.label4.Text = "- Газпром ННГ от 12.04.2020";
             // 
@@ -193,7 +193,7 @@
             this.label10.Location = new System.Drawing.Point(144, 306);
             this.label10.Margin = new System.Windows.Forms.Padding(135, 44, 0, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(74, 25);
+            this.label10.Size = new System.Drawing.Size(75, 25);
             this.label10.TabIndex = 10;
             this.label10.Text = "Карта:";
             // 

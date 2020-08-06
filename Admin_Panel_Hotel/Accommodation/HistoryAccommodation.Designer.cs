@@ -321,7 +321,7 @@
             this.FindTextBox.BackColor = System.Drawing.Color.White;
             this.FindTextBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FindTextBox.ForeColor = System.Drawing.Color.Silver;
-            this.FindTextBox.Location = new System.Drawing.Point(761, 174);
+            this.FindTextBox.Location = new System.Drawing.Point(773, 174);
             this.FindTextBox.Margin = new System.Windows.Forms.Padding(368, 8, 3, 3);
             this.FindTextBox.Name = "FindTextBox";
             this.FindTextBox.Size = new System.Drawing.Size(258, 33);

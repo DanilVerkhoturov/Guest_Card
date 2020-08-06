@@ -50,7 +50,6 @@
             this.FindTextBox = new System.Windows.Forms.TextBox();
             this.LocationLabel = new System.Windows.Forms.Label();
             this.CustomersLabel = new System.Windows.Forms.Label();
-            this.ChangeLabel = new System.Windows.Forms.Label();
             this.AddCustomers = new System.Windows.Forms.Button();
             this.PanelLocation = new System.Windows.Forms.Panel();
             this.PanelOrganization = new System.Windows.Forms.Panel();
@@ -150,7 +149,7 @@
             this.LocationsDataGridView.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.LocationsDataGridView.RowTemplate.Height = 25;
             this.LocationsDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.LocationsDataGridView.Size = new System.Drawing.Size(823, 658);
+            this.LocationsDataGridView.Size = new System.Drawing.Size(823, 471);
             this.LocationsDataGridView.TabIndex = 47;
             this.LocationsDataGridView.TabStop = false;
             this.LocationsDataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.LocationsDataGridView_CellMouseClick);
@@ -243,18 +242,6 @@
             this.CustomersLabel.Size = new System.Drawing.Size(140, 25);
             this.CustomersLabel.TabIndex = 49;
             this.CustomersLabel.Text = "Организации";
-            // 
-            // ChangeLabel
-            // 
-            this.ChangeLabel.AutoSize = true;
-            this.ChangeLabel.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ChangeLabel.ForeColor = System.Drawing.Color.White;
-            this.ChangeLabel.Location = new System.Drawing.Point(624, 54);
-            this.ChangeLabel.Margin = new System.Windows.Forms.Padding(71, 0, 45, 0);
-            this.ChangeLabel.Name = "ChangeLabel";
-            this.ChangeLabel.Size = new System.Drawing.Size(99, 23);
-            this.ChangeLabel.TabIndex = 50;
-            this.ChangeLabel.Text = "Изменить";
             // 
             // AddCustomers
             // 
@@ -372,7 +359,7 @@
             this.OrganizationDataGrid.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.OrganizationDataGrid.RowTemplate.Height = 25;
             this.OrganizationDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.OrganizationDataGrid.Size = new System.Drawing.Size(823, 658);
+            this.OrganizationDataGrid.Size = new System.Drawing.Size(823, 471);
             this.OrganizationDataGrid.TabIndex = 47;
             this.OrganizationDataGrid.TabStop = false;
             // 
@@ -412,13 +399,12 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.ClientSize = new System.Drawing.Size(1013, 894);
             this.Controls.Add(this.AddCustomers);
-            this.Controls.Add(this.ChangeLabel);
             this.Controls.Add(this.CustomersLabel);
             this.Controls.Add(this.LocationLabel);
             this.Controls.Add(this.AddLocationButton);
             this.Controls.Add(this.CustomerNameLabel);
-            this.Controls.Add(this.PanelOrganization);
             this.Controls.Add(this.PanelLocation);
+            this.Controls.Add(this.PanelOrganization);
             this.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(6);
@@ -448,7 +434,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.Label LocationLabel;
         private System.Windows.Forms.Label CustomersLabel;
-        private System.Windows.Forms.Label ChangeLabel;
         private System.Windows.Forms.Button AddCustomers;
         private System.Windows.Forms.Panel PanelLocation;
         private System.Windows.Forms.Panel PanelOrganization;

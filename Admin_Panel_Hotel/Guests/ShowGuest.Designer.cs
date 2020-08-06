@@ -48,7 +48,7 @@
             this.label1.Location = new System.Drawing.Point(131, 49);
             this.label1.Margin = new System.Windows.Forms.Padding(122, 40, 0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(432, 35);
+            this.label1.Size = new System.Drawing.Size(433, 35);
             this.label1.TabIndex = 1;
             this.label1.Text = "Гость: Иванов Иван Иванович";
             // 
@@ -60,7 +60,7 @@
             this.CustomerComboBox.FormattingEnabled = true;
             this.CustomerComboBox.Items.AddRange(new object[] {
             "Все заказчики"});
-            this.CustomerComboBox.Location = new System.Drawing.Point(132, 172);
+            this.CustomerComboBox.Location = new System.Drawing.Point(131, 172);
             this.CustomerComboBox.Margin = new System.Windows.Forms.Padding(123, 88, 22, 10);
             this.CustomerComboBox.Name = "CustomerComboBox";
             this.CustomerComboBox.Size = new System.Drawing.Size(234, 33);
@@ -70,7 +70,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(132, 257);
+            this.label2.Location = new System.Drawing.Point(126, 257);
             this.label2.Margin = new System.Windows.Forms.Padding(123, 42, 3, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(148, 25);

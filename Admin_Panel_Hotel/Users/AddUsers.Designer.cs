@@ -94,7 +94,7 @@
             // 
             // emailtextbox
             // 
-            this.emailtextbox.Location = new System.Drawing.Point(70, 165);
+            this.emailtextbox.Location = new System.Drawing.Point(76, 165);
             this.emailtextbox.Margin = new System.Windows.Forms.Padding(61, 19, 3, 3);
             this.emailtextbox.Name = "emailtextbox";
             this.emailtextbox.Size = new System.Drawing.Size(294, 33);
