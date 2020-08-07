@@ -54,9 +54,9 @@
             this.label1.Location = new System.Drawing.Point(70, 44);
             this.label1.Margin = new System.Windows.Forms.Padding(61, 35, 0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(212, 35);
+            this.label1.Size = new System.Drawing.Size(190, 35);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Новые заявки";
+            this.label1.Text = "Новые гости";
             // 
             // label2
             // 
@@ -194,7 +194,7 @@
             this.SearchTextBox.Location = new System.Drawing.Point(76, 113);
             this.SearchTextBox.Margin = new System.Windows.Forms.Padding(129, 34, 0, 0);
             this.SearchTextBox.Name = "SearchTextBox";
-            this.SearchTextBox.Size = new System.Drawing.Size(144, 33);
+            this.SearchTextBox.Size = new System.Drawing.Size(318, 33);
             this.SearchTextBox.TabIndex = 44;
             this.SearchTextBox.Text = "Поиск";
             // 

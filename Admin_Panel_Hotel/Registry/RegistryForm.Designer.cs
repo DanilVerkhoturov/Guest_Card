@@ -67,7 +67,7 @@
             // SearchTextBox
             // 
             this.SearchTextBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.SearchTextBox.Location = new System.Drawing.Point(452, 126);
+            this.SearchTextBox.Location = new System.Drawing.Point(396, 124);
             this.SearchTextBox.Margin = new System.Windows.Forms.Padding(22, 6, 6, 6);
             this.SearchTextBox.Name = "SearchTextBox";
             this.SearchTextBox.Size = new System.Drawing.Size(274, 33);
@@ -83,7 +83,7 @@
             this.DivisionsComboBox.FormattingEnabled = true;
             this.DivisionsComboBox.Items.AddRange(new object[] {
             "Все карты"});
-            this.DivisionsComboBox.Location = new System.Drawing.Point(132, 126);
+            this.DivisionsComboBox.Location = new System.Drawing.Point(76, 124);
             this.DivisionsComboBox.Margin = new System.Windows.Forms.Padding(123, 47, 10, 8);
             this.DivisionsComboBox.Name = "DivisionsComboBox";
             this.DivisionsComboBox.Size = new System.Drawing.Size(288, 33);
@@ -129,7 +129,7 @@
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.UsersDataGridView.DefaultCellStyle = dataGridViewCellStyle4;
             this.UsersDataGridView.EnableHeadersVisualStyles = false;
-            this.UsersDataGridView.Location = new System.Drawing.Point(132, 187);
+            this.UsersDataGridView.Location = new System.Drawing.Point(76, 187);
             this.UsersDataGridView.Margin = new System.Windows.Forms.Padding(244, 22, 102, 10);
             this.UsersDataGridView.Name = "UsersDataGridView";
             this.UsersDataGridView.ReadOnly = true;
@@ -153,7 +153,7 @@
             this.UsersDataGridView.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.UsersDataGridView.RowTemplate.Height = 30;
             this.UsersDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.UsersDataGridView.Size = new System.Drawing.Size(901, 441);
+            this.UsersDataGridView.Size = new System.Drawing.Size(957, 441);
             this.UsersDataGridView.TabIndex = 46;
             // 
             // Column1
@@ -250,7 +250,7 @@
             // 
             this.ShowAllLinkLabel.AutoSize = true;
             this.ShowAllLinkLabel.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ShowAllLinkLabel.Location = new System.Drawing.Point(287, 638);
+            this.ShowAllLinkLabel.Location = new System.Drawing.Point(231, 638);
             this.ShowAllLinkLabel.Margin = new System.Windows.Forms.Padding(70, 0, 10, 0);
             this.ShowAllLinkLabel.Name = "ShowAllLinkLabel";
             this.ShowAllLinkLabel.Size = new System.Drawing.Size(143, 25);
@@ -262,7 +262,7 @@
             // 
             this.CardsCountLabel.AutoSize = true;
             this.CardsCountLabel.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CardsCountLabel.Location = new System.Drawing.Point(127, 638);
+            this.CardsCountLabel.Location = new System.Drawing.Point(71, 638);
             this.CardsCountLabel.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.CardsCountLabel.Name = "CardsCountLabel";
             this.CardsCountLabel.Size = new System.Drawing.Size(147, 25);
