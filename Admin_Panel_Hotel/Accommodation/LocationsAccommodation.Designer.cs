@@ -35,6 +35,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.UsersDataGridView = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.afterLabel = new System.Windows.Forms.Label();
             this.tomorrowLabel = new System.Windows.Forms.Label();
             this.todayLabel = new System.Windows.Forms.Label();
@@ -49,19 +56,12 @@
             this.label5 = new System.Windows.Forms.Label();
             this.DaydateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.UsersDataGridView)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -83,7 +83,7 @@
             this.UsersDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
@@ -108,7 +108,7 @@
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.UsersDataGridView.DefaultCellStyle = dataGridViewCellStyle4;
             this.UsersDataGridView.EnableHeadersVisualStyles = false;
-            this.UsersDataGridView.Location = new System.Drawing.Point(23, 58);
+            this.UsersDataGridView.Location = new System.Drawing.Point(23, 96);
             this.UsersDataGridView.Margin = new System.Windows.Forms.Padding(127, 20, 123, 5);
             this.UsersDataGridView.Name = "UsersDataGridView";
             this.UsersDataGridView.ReadOnly = true;
@@ -131,15 +131,80 @@
             this.UsersDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.UsersDataGridView.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.UsersDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.UsersDataGridView.Size = new System.Drawing.Size(992, 577);
+            this.UsersDataGridView.Size = new System.Drawing.Size(992, 539);
             this.UsersDataGridView.TabIndex = 88;
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Column1.FillWeight = 20F;
+            this.Column1.HeaderText = "Тип номера";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 150;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Column2.FillWeight = 112.3096F;
+            this.Column2.HeaderText = "Номер";
+            this.Column2.MinimumWidth = 50;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column3.FillWeight = 112.3096F;
+            this.Column3.HeaderText = "ФИО проживаюшего";
+            this.Column3.MinimumWidth = 100;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column4.FillWeight = 112.3096F;
+            this.Column4.HeaderText = "Наименование организации";
+            this.Column4.MinimumWidth = 10;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column5
+            // 
+            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Column5.FillWeight = 112.3096F;
+            this.Column5.HeaderText = "Дата заезда";
+            this.Column5.MinimumWidth = 10;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column5.Width = 137;
+            // 
+            // Column7
+            // 
+            this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Column7.HeaderText = "Дата выезда";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            this.Column7.Width = 162;
+            // 
+            // Column6
+            // 
+            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column6.HeaderText = "Кол-во занятых мест";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
             // 
             // afterLabel
             // 
             this.afterLabel.AutoSize = true;
             this.afterLabel.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.afterLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
-            this.afterLabel.Location = new System.Drawing.Point(358, 9);
+            this.afterLabel.Location = new System.Drawing.Point(358, 47);
             this.afterLabel.Margin = new System.Windows.Forms.Padding(45, 49, 0, 0);
             this.afterLabel.Name = "afterLabel";
             this.afterLabel.Size = new System.Drawing.Size(162, 29);
@@ -151,7 +216,7 @@
             this.tomorrowLabel.AutoSize = true;
             this.tomorrowLabel.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tomorrowLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
-            this.tomorrowLabel.Location = new System.Drawing.Point(219, 9);
+            this.tomorrowLabel.Location = new System.Drawing.Point(219, 47);
             this.tomorrowLabel.Margin = new System.Windows.Forms.Padding(45, 49, 0, 0);
             this.tomorrowLabel.Name = "tomorrowLabel";
             this.tomorrowLabel.Size = new System.Drawing.Size(94, 29);
@@ -163,7 +228,7 @@
             this.todayLabel.AutoSize = true;
             this.todayLabel.Font = new System.Drawing.Font("Roboto", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.todayLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
-            this.todayLabel.Location = new System.Drawing.Point(67, 9);
+            this.todayLabel.Location = new System.Drawing.Point(67, 47);
             this.todayLabel.Margin = new System.Windows.Forms.Padding(128, 49, 0, 0);
             this.todayLabel.Name = "todayLabel";
             this.todayLabel.Size = new System.Drawing.Size(107, 29);
@@ -253,9 +318,9 @@
             this.label1.Location = new System.Drawing.Point(70, 44);
             this.label1.Margin = new System.Windows.Forms.Padding(61, 35, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 25);
+            this.label1.Size = new System.Drawing.Size(97, 25);
             this.label1.TabIndex = 76;
-            this.label1.Text = "Календарь";
+            this.label1.Text = "Локации";
             // 
             // CustomerComboBox
             // 
@@ -279,7 +344,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
-            this.label5.Location = new System.Drawing.Point(764, 175);
+            this.label5.Location = new System.Drawing.Point(708, 9);
             this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 13);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(62, 25);
@@ -295,7 +360,7 @@
             this.DaydateTimePicker.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
             this.DaydateTimePicker.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.DaydateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DaydateTimePicker.Location = new System.Drawing.Point(669, 9);
+            this.DaydateTimePicker.Location = new System.Drawing.Point(669, 47);
             this.DaydateTimePicker.Margin = new System.Windows.Forms.Padding(149, 0, 25, 5);
             this.DaydateTimePicker.Name = "DaydateTimePicker";
             this.DaydateTimePicker.Size = new System.Drawing.Size(148, 33);
@@ -305,78 +370,14 @@
             // 
             this.panel1.Controls.Add(this.todayLabel);
             this.panel1.Controls.Add(this.DaydateTimePicker);
+            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.UsersDataGridView);
             this.panel1.Controls.Add(this.tomorrowLabel);
             this.panel1.Controls.Add(this.afterLabel);
-            this.panel1.Location = new System.Drawing.Point(52, 204);
+            this.panel1.Location = new System.Drawing.Point(52, 207);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1029, 659);
+            this.panel1.Size = new System.Drawing.Size(1029, 656);
             this.panel1.TabIndex = 90;
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Column1.FillWeight = 20F;
-            this.Column1.HeaderText = "Тип номера";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 109;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Column2.FillWeight = 112.3096F;
-            this.Column2.HeaderText = "Номер";
-            this.Column2.MinimumWidth = 50;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column3.FillWeight = 112.3096F;
-            this.Column3.HeaderText = "ФИО проживаюшего";
-            this.Column3.MinimumWidth = 100;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column4.FillWeight = 112.3096F;
-            this.Column4.HeaderText = "Наименование организации";
-            this.Column4.MinimumWidth = 10;
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column5
-            // 
-            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Column5.FillWeight = 112.3096F;
-            this.Column5.HeaderText = "Дата заезда";
-            this.Column5.MinimumWidth = 10;
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column5.Width = 96;
-            // 
-            // Column7
-            // 
-            this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Column7.HeaderText = "Дата выезда";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            this.Column7.Width = 119;
-            // 
-            // Column6
-            // 
-            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column6.HeaderText = "Кол-во занятых мест";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
             // 
             // panel2
             // 
@@ -390,32 +391,14 @@
             this.panel2.Size = new System.Drawing.Size(336, 133);
             this.panel2.TabIndex = 91;
             // 
-            // label2
+            // label4
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 5);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(229, 25);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Всего койко-место: 10";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(3, 30);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(156, 25);
-            this.label8.TabIndex = 2;
-            this.label8.Text = "Занято мест: 2";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(3, 55);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(160, 25);
-            this.label10.TabIndex = 4;
-            this.label10.Text = "Газпром ННГ:1";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(3, 105);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(199, 25);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Свободных мест: 8";
             // 
             // label3
             // 
@@ -426,16 +409,34 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Сторонние организации: 1";
             // 
-            // label4
+            // label10
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 105);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(199, 25);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Свободных мест: 8";
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(3, 55);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(160, 25);
+            this.label10.TabIndex = 4;
+            this.label10.Text = "Газпром ННГ:1";
             // 
-            // LocationAccommodation
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(3, 30);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(156, 25);
+            this.label8.TabIndex = 2;
+            this.label8.Text = "Занято мест: 2";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(3, 5);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(229, 25);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Всего койко-место: 10";
+            // 
+            // LocationsAccommodation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -443,7 +444,6 @@
             this.ClientSize = new System.Drawing.Size(1093, 894);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.CustomerComboBox);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.PeriodToDateTimePicker);
             this.Controls.Add(this.PeriodFromDateTimePicker);
             this.Controls.Add(this.label6);
@@ -454,7 +454,7 @@
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(6);
-            this.Name = "LocationAccommodation";
+            this.Name = "LocationsAccommodation";
             this.Text = "LocationAccommodation";
             ((System.ComponentModel.ISupportInitialize)(this.UsersDataGridView)).EndInit();
             this.panel1.ResumeLayout(false);

@@ -60,7 +60,7 @@
             this.CustomerComboBox.FormattingEnabled = true;
             this.CustomerComboBox.Items.AddRange(new object[] {
             "Все заказчики"});
-            this.CustomerComboBox.Location = new System.Drawing.Point(131, 172);
+            this.CustomerComboBox.Location = new System.Drawing.Point(137, 172);
             this.CustomerComboBox.Margin = new System.Windows.Forms.Padding(123, 88, 22, 10);
             this.CustomerComboBox.Name = "CustomerComboBox";
             this.CustomerComboBox.Size = new System.Drawing.Size(234, 33);
@@ -70,7 +70,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(126, 257);
+            this.label2.Location = new System.Drawing.Point(132, 257);
             this.label2.Margin = new System.Windows.Forms.Padding(123, 42, 3, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(148, 25);
@@ -80,7 +80,7 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(131, 330);
+            this.radioButton1.Location = new System.Drawing.Point(136, 330);
             this.radioButton1.Margin = new System.Windows.Forms.Padding(122, 48, 0, 0);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(146, 29);
@@ -91,7 +91,7 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(132, 404);
+            this.radioButton2.Location = new System.Drawing.Point(137, 404);
             this.radioButton2.Margin = new System.Windows.Forms.Padding(123, 45, 3, 3);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(146, 29);
@@ -107,7 +107,7 @@
             this.Set2HelpButton.FlatAppearance.BorderSize = 0;
             this.Set2HelpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Set2HelpButton.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Set2HelpButton.Location = new System.Drawing.Point(286, 404);
+            this.Set2HelpButton.Location = new System.Drawing.Point(291, 404);
             this.Set2HelpButton.Margin = new System.Windows.Forms.Padding(5);
             this.Set2HelpButton.Name = "Set2HelpButton";
             this.Set2HelpButton.Size = new System.Drawing.Size(31, 31);
@@ -122,7 +122,7 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(286, 332);
+            this.button1.Location = new System.Drawing.Point(291, 332);
             this.button1.Margin = new System.Windows.Forms.Padding(5);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(31, 31);
@@ -142,7 +142,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(132, 561);
+            this.checkBox1.Location = new System.Drawing.Point(136, 561);
             this.checkBox1.Margin = new System.Windows.Forms.Padding(123, 38, 0, 0);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(244, 29);
@@ -153,7 +153,7 @@
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(131, 632);
+            this.checkBox2.Location = new System.Drawing.Point(136, 632);
             this.checkBox2.Margin = new System.Windows.Forms.Padding(123, 42, 0, 0);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(244, 29);

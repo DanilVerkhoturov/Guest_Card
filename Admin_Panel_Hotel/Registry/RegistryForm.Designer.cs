@@ -243,7 +243,7 @@
             this.PrintButton.Name = "PrintButton";
             this.PrintButton.Size = new System.Drawing.Size(95, 35);
             this.PrintButton.TabIndex = 47;
-            this.PrintButton.Text = "Печать";
+            this.PrintButton.Text = "Скачать";
             this.PrintButton.UseVisualStyleBackColor = false;
             // 
             // ShowAllLinkLabel

@@ -109,7 +109,7 @@
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.UsersDataGridView.DefaultCellStyle = dataGridViewCellStyle4;
             this.UsersDataGridView.EnableHeadersVisualStyles = false;
-            this.UsersDataGridView.Location = new System.Drawing.Point(138, 177);
+            this.UsersDataGridView.Location = new System.Drawing.Point(76, 177);
             this.UsersDataGridView.Margin = new System.Windows.Forms.Padding(127, 20, 123, 5);
             this.UsersDataGridView.Name = "UsersDataGridView";
             this.UsersDataGridView.ReadOnly = true;
@@ -132,7 +132,7 @@
             this.UsersDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.UsersDataGridView.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.UsersDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.UsersDataGridView.Size = new System.Drawing.Size(919, 577);
+            this.UsersDataGridView.Size = new System.Drawing.Size(981, 577);
             this.UsersDataGridView.TabIndex = 25;
             // 
             // Column1
@@ -191,7 +191,7 @@
             // 
             // SearchTextBox
             // 
-            this.SearchTextBox.Location = new System.Drawing.Point(138, 113);
+            this.SearchTextBox.Location = new System.Drawing.Point(76, 113);
             this.SearchTextBox.Margin = new System.Windows.Forms.Padding(129, 34, 0, 0);
             this.SearchTextBox.Name = "SearchTextBox";
             this.SearchTextBox.Size = new System.Drawing.Size(144, 33);

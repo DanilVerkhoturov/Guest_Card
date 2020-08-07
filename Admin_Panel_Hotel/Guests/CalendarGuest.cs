@@ -16,5 +16,10 @@ namespace Admin_Panel_Hotel.Guests
         {
             InitializeComponent();
         }
+
+        private void tomorrowLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

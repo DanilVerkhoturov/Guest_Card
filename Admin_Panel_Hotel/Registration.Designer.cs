@@ -35,6 +35,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,7 +58,7 @@
             this.ChangeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ChangeButton.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ChangeButton.ForeColor = System.Drawing.Color.White;
-            this.ChangeButton.Location = new System.Drawing.Point(72, 427);
+            this.ChangeButton.Location = new System.Drawing.Point(72, 540);
             this.ChangeButton.Margin = new System.Windows.Forms.Padding(499, 40, 33, 6);
             this.ChangeButton.Name = "ChangeButton";
             this.ChangeButton.Size = new System.Drawing.Size(244, 35);
@@ -66,7 +68,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(72, 354);
+            this.textBox2.Location = new System.Drawing.Point(72, 467);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 25, 3, 0);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(244, 33);
@@ -75,7 +77,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(72, 238);
+            this.textBox1.Location = new System.Drawing.Point(72, 351);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 25, 3, 0);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(244, 33);
@@ -95,27 +97,47 @@
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(72, 177);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 35, 3, 3);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 35, 3, 0);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(244, 33);
             this.textBox3.TabIndex = 58;
-            this.textBox3.Text = "Ваше имя";
+            this.textBox3.Text = "Ваше Имя";
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(72, 296);
+            this.textBox4.Location = new System.Drawing.Point(72, 409);
             this.textBox4.Margin = new System.Windows.Forms.Padding(3, 25, 3, 0);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(244, 33);
             this.textBox4.TabIndex = 59;
             this.textBox4.Text = "Придумайте пароль";
             // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(72, 235);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(3, 25, 3, 0);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(244, 33);
+            this.textBox5.TabIndex = 60;
+            this.textBox5.Text = "Ваша Фамилия";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(72, 293);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(3, 25, 3, 0);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(244, 33);
+            this.textBox6.TabIndex = 61;
+            this.textBox6.Text = "Ваше Отчество";
+            // 
             // Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.ClientSize = new System.Drawing.Size(377, 524);
+            this.ClientSize = new System.Drawing.Size(377, 607);
+            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.pictureBox1);
@@ -141,5 +163,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox6;
     }
 }
