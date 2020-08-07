@@ -43,10 +43,18 @@
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ShowUserInfo = new System.Windows.Forms.DataGridViewImageColumn();
-            this.label2 = new System.Windows.Forms.Label();
             this.SearchTextBox = new System.Windows.Forms.TextBox();
             this.DivisionsComboBox = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.EditRoomBedsCountButton = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.UsersDataGridView)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -69,7 +77,7 @@
             this.ChangeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ChangeButton.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ChangeButton.ForeColor = System.Drawing.Color.White;
-            this.ChangeButton.Location = new System.Drawing.Point(776, 47);
+            this.ChangeButton.Location = new System.Drawing.Point(434, 388);
             this.ChangeButton.Margin = new System.Windows.Forms.Padding(470, 60, 33, 3);
             this.ChangeButton.Name = "ChangeButton";
             this.ChangeButton.Size = new System.Drawing.Size(201, 36);
@@ -117,7 +125,7 @@
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.UsersDataGridView.DefaultCellStyle = dataGridViewCellStyle4;
             this.UsersDataGridView.EnableHeadersVisualStyles = false;
-            this.UsersDataGridView.Location = new System.Drawing.Point(76, 167);
+            this.UsersDataGridView.Location = new System.Drawing.Point(22, 84);
             this.UsersDataGridView.Margin = new System.Windows.Forms.Padding(244, 22, 102, 10);
             this.UsersDataGridView.Name = "UsersDataGridView";
             this.UsersDataGridView.ReadOnly = true;
@@ -141,7 +149,7 @@
             this.UsersDataGridView.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.UsersDataGridView.RowTemplate.Height = 30;
             this.UsersDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.UsersDataGridView.Size = new System.Drawing.Size(901, 441);
+            this.UsersDataGridView.Size = new System.Drawing.Size(967, 586);
             this.UsersDataGridView.TabIndex = 54;
             // 
             // Column1
@@ -204,21 +212,10 @@
             this.ShowUserInfo.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.ShowUserInfo.Width = 51;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
-            this.label2.Location = new System.Drawing.Point(860, 137);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(117, 25);
-            this.label2.TabIndex = 55;
-            this.label2.Text = "+добавить";
-            // 
             // SearchTextBox
             // 
             this.SearchTextBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.SearchTextBox.Location = new System.Drawing.Point(396, 104);
+            this.SearchTextBox.Location = new System.Drawing.Point(342, 29);
             this.SearchTextBox.Margin = new System.Windows.Forms.Padding(22, 6, 6, 6);
             this.SearchTextBox.Name = "SearchTextBox";
             this.SearchTextBox.Size = new System.Drawing.Size(274, 33);
@@ -234,11 +231,104 @@
             this.DivisionsComboBox.FormattingEnabled = true;
             this.DivisionsComboBox.Items.AddRange(new object[] {
             "Все карты"});
-            this.DivisionsComboBox.Location = new System.Drawing.Point(76, 104);
-            this.DivisionsComboBox.Margin = new System.Windows.Forms.Padding(123, 47, 10, 8);
+            this.DivisionsComboBox.Location = new System.Drawing.Point(22, 29);
+            this.DivisionsComboBox.Margin = new System.Windows.Forms.Padding(123, 47, 10, 0);
             this.DivisionsComboBox.Name = "DivisionsComboBox";
             this.DivisionsComboBox.Size = new System.Drawing.Size(288, 33);
             this.DivisionsComboBox.TabIndex = 56;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(788, 740);
+            this.button1.Margin = new System.Windows.Forms.Padding(470, 60, 33, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(201, 36);
+            this.button1.TabIndex = 58;
+            this.button1.Text = "Сохранить";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.EditRoomBedsCountButton);
+            this.panel1.Controls.Add(this.UsersDataGridView);
+            this.panel1.Controls.Add(this.SearchTextBox);
+            this.panel1.Controls.Add(this.DivisionsComboBox);
+            this.panel1.Location = new System.Drawing.Point(54, 83);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1010, 789);
+            this.panel1.TabIndex = 59;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.ChangeButton);
+            this.panel2.Location = new System.Drawing.Point(35, 82);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1029, 800);
+            this.panel2.TabIndex = 60;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Roboto", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(304, 293);
+            this.label2.Margin = new System.Windows.Forms.Padding(61, 230, 6, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(459, 35);
+            this.label2.TabIndex = 61;
+            this.label2.Text = "Импортируйте данные из файла";
+            // 
+            // EditRoomBedsCountButton
+            // 
+            this.EditRoomBedsCountButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(82)))), ((int)(((byte)(119)))));
+            this.EditRoomBedsCountButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.EditRoomBedsCountButton.FlatAppearance.BorderSize = 0;
+            this.EditRoomBedsCountButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EditRoomBedsCountButton.ForeColor = System.Drawing.Color.White;
+            this.EditRoomBedsCountButton.Location = new System.Drawing.Point(637, 29);
+            this.EditRoomBedsCountButton.Margin = new System.Windows.Forms.Padding(3, 19, 3, 3);
+            this.EditRoomBedsCountButton.Name = "EditRoomBedsCountButton";
+            this.EditRoomBedsCountButton.Size = new System.Drawing.Size(221, 33);
+            this.EditRoomBedsCountButton.TabIndex = 67;
+            this.EditRoomBedsCountButton.Text = "Удалить людей";
+            this.EditRoomBedsCountButton.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(82)))), ((int)(((byte)(119)))));
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(877, 29);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 19, 3, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(112, 33);
+            this.button2.TabIndex = 68;
+            this.button2.Text = "Скачать";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(17, 715);
+            this.label3.Margin = new System.Windows.Forms.Padding(61, 35, 6, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(213, 25);
+            this.label3.TabIndex = 61;
+            this.label3.Text = "Выбрано 4 человека";
             // 
             // AddRegistry
             // 
@@ -246,17 +336,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.ClientSize = new System.Drawing.Size(1093, 894);
-            this.Controls.Add(this.SearchTextBox);
-            this.Controls.Add(this.DivisionsComboBox);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.UsersDataGridView);
-            this.Controls.Add(this.ChangeButton);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
             this.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "AddRegistry";
             this.Text = "AddUser";
             ((System.ComponentModel.ISupportInitialize)(this.UsersDataGridView)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -273,8 +364,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewImageColumn ShowUserInfo;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox SearchTextBox;
         private System.Windows.Forms.ComboBox DivisionsComboBox;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button EditRoomBedsCountButton;
     }
 }
