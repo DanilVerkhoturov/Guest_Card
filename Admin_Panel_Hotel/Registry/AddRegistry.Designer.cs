@@ -46,6 +46,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.SearchTextBox = new System.Windows.Forms.TextBox();
             this.DivisionsComboBox = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.UsersDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -141,7 +142,7 @@
             this.UsersDataGridView.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.UsersDataGridView.RowTemplate.Height = 30;
             this.UsersDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.UsersDataGridView.Size = new System.Drawing.Size(901, 441);
+            this.UsersDataGridView.Size = new System.Drawing.Size(901, 586);
             this.UsersDataGridView.TabIndex = 54;
             // 
             // Column1
@@ -240,12 +241,29 @@
             this.DivisionsComboBox.Size = new System.Drawing.Size(288, 33);
             this.DivisionsComboBox.TabIndex = 56;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(776, 823);
+            this.button1.Margin = new System.Windows.Forms.Padding(470, 60, 33, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(201, 36);
+            this.button1.TabIndex = 58;
+            this.button1.Text = "Сохранить";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // AddRegistry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.ClientSize = new System.Drawing.Size(1093, 894);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.SearchTextBox);
             this.Controls.Add(this.DivisionsComboBox);
             this.Controls.Add(this.label2);
@@ -276,5 +294,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox SearchTextBox;
         private System.Windows.Forms.ComboBox DivisionsComboBox;
+        private System.Windows.Forms.Button button1;
     }
 }
