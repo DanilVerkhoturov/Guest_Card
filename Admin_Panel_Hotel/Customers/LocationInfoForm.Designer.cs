@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.CustomerLocationNameLabel = new System.Windows.Forms.Label();
             this.LocationDataLabel = new System.Windows.Forms.Label();
             this.CardPropertiesLabel = new System.Windows.Forms.Label();
@@ -66,15 +66,6 @@
             this.EditCardPropertiesButton = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.FoodPanel = new System.Windows.Forms.Panel();
-            this.HostelPanel = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.checkBox9 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.checkBox4 = new System.Windows.Forms.CheckBox();
@@ -86,12 +77,51 @@
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.HostelPanel = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.checkBox9 = new System.Windows.Forms.CheckBox();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.checkBox7 = new System.Windows.Forms.CheckBox();
+            this.checkBox8 = new System.Windows.Forms.CheckBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.PanelCustomer = new System.Windows.Forms.Panel();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.EditCustomerPanel = new System.Windows.Forms.Panel();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.AddCustomers = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
             this.LocationInfoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RoomsDataGridView)).BeginInit();
             this.CardPropertiesPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.FoodPanel.SuspendLayout();
             this.HostelPanel.SuspendLayout();
+            this.PanelCustomer.SuspendLayout();
+            this.EditCustomerPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // CustomerLocationNameLabel
@@ -191,14 +221,14 @@
             this.RoomsDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.RoomsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.RoomsDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.RoomsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.RoomsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.RoomsDataGridView.ColumnHeadersHeight = 35;
             this.RoomsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.RoomsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -246,9 +276,9 @@
             // 
             this.BedsCount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.BedsCount.DataPropertyName = "count_beds";
-            dataGridViewCellStyle6.Format = "N0";
-            dataGridViewCellStyle6.NullValue = "0";
-            this.BedsCount.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Format = "N0";
+            dataGridViewCellStyle2.NullValue = "0";
+            this.BedsCount.DefaultCellStyle = dataGridViewCellStyle2;
             this.BedsCount.HeaderText = "Количество мест";
             this.BedsCount.Name = "BedsCount";
             this.BedsCount.ReadOnly = true;
@@ -396,9 +426,9 @@
             // 
             // CardPropertiesPanel
             // 
-            this.CardPropertiesPanel.Controls.Add(this.dataGridView1);
             this.CardPropertiesPanel.Controls.Add(this.SaveCardPropertiesButton);
             this.CardPropertiesPanel.Controls.Add(this.EditCardPropertiesButton);
+            this.CardPropertiesPanel.Controls.Add(this.dataGridView1);
             this.CardPropertiesPanel.Location = new System.Drawing.Point(133, 165);
             this.CardPropertiesPanel.Margin = new System.Windows.Forms.Padding(5);
             this.CardPropertiesPanel.Name = "CardPropertiesPanel";
@@ -414,14 +444,14 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.ColumnHeadersHeight = 35;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -468,9 +498,9 @@
             // 
             this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn3.DataPropertyName = "count_beds";
-            dataGridViewCellStyle8.Format = "N0";
-            dataGridViewCellStyle8.NullValue = "0";
-            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Format = "N0";
+            dataGridViewCellStyle4.NullValue = "0";
+            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewTextBoxColumn3.HeaderText = "";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
@@ -550,133 +580,6 @@
             this.FoodPanel.Name = "FoodPanel";
             this.FoodPanel.Size = new System.Drawing.Size(342, 895);
             this.FoodPanel.TabIndex = 48;
-            // 
-            // HostelPanel
-            // 
-            this.HostelPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.HostelPanel.Controls.Add(this.button5);
-            this.HostelPanel.Controls.Add(this.button4);
-            this.HostelPanel.Controls.Add(this.checkBox9);
-            this.HostelPanel.Controls.Add(this.checkBox5);
-            this.HostelPanel.Controls.Add(this.checkBox6);
-            this.HostelPanel.Controls.Add(this.checkBox7);
-            this.HostelPanel.Controls.Add(this.checkBox8);
-            this.HostelPanel.Controls.Add(this.label7);
-            this.HostelPanel.Location = new System.Drawing.Point(753, 0);
-            this.HostelPanel.Name = "HostelPanel";
-            this.HostelPanel.Size = new System.Drawing.Size(342, 895);
-            this.HostelPanel.TabIndex = 72;
-            this.HostelPanel.Visible = false;
-            this.HostelPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.HostelPanel_Paint);
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.Transparent;
-            this.button5.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.question_icon_icons_com_69315;
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button5.Location = new System.Drawing.Point(220, 453);
-            this.button5.Margin = new System.Windows.Forms.Padding(5);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(31, 31);
-            this.button5.TabIndex = 71;
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.question_icon_icons_com_69315;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button4.Location = new System.Drawing.Point(220, 375);
-            this.button4.Margin = new System.Windows.Forms.Padding(5);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(31, 31);
-            this.button4.TabIndex = 62;
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // checkBox9
-            // 
-            this.checkBox9.AutoSize = true;
-            this.checkBox9.Cursor = System.Windows.Forms.Cursors.No;
-            this.checkBox9.Enabled = false;
-            this.checkBox9.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox9.Location = new System.Drawing.Point(58, 455);
-            this.checkBox9.Margin = new System.Windows.Forms.Padding(5, 51, 5, 0);
-            this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(152, 29);
-            this.checkBox9.TabIndex = 70;
-            this.checkBox9.Text = "Комплект -2";
-            this.checkBox9.UseVisualStyleBackColor = true;
-            // 
-            // checkBox5
-            // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Cursor = System.Windows.Forms.Cursors.No;
-            this.checkBox5.Enabled = false;
-            this.checkBox5.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox5.Location = new System.Drawing.Point(58, 375);
-            this.checkBox5.Margin = new System.Windows.Forms.Padding(5, 51, 5, 0);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(152, 29);
-            this.checkBox5.TabIndex = 69;
-            this.checkBox5.Text = "Комплект -1";
-            this.checkBox5.UseVisualStyleBackColor = true;
-            // 
-            // checkBox6
-            // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Cursor = System.Windows.Forms.Cursors.No;
-            this.checkBox6.Enabled = false;
-            this.checkBox6.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox6.Location = new System.Drawing.Point(32, 295);
-            this.checkBox6.Margin = new System.Windows.Forms.Padding(5, 51, 5, 0);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(190, 29);
-            this.checkBox6.TabIndex = 64;
-            this.checkBox6.Text = "Выдавать белье";
-            this.checkBox6.UseVisualStyleBackColor = true;
-            // 
-            // checkBox7
-            // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.Enabled = false;
-            this.checkBox7.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox7.Location = new System.Drawing.Point(32, 215);
-            this.checkBox7.Margin = new System.Windows.Forms.Padding(5, 51, 5, 0);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(273, 29);
-            this.checkBox7.TabIndex = 63;
-            this.checkBox7.Text = "Пожарная безопасность";
-            this.checkBox7.UseVisualStyleBackColor = true;
-            // 
-            // checkBox8
-            // 
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.Enabled = false;
-            this.checkBox8.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox8.Location = new System.Drawing.Point(32, 139);
-            this.checkBox8.Margin = new System.Windows.Forms.Padding(5, 66, 5, 0);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(244, 29);
-            this.checkBox8.TabIndex = 62;
-            this.checkBox8.Text = "Правила проживания";
-            this.checkBox8.UseVisualStyleBackColor = true;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.Location = new System.Drawing.Point(10, 48);
-            this.label7.Margin = new System.Windows.Forms.Padding(123, 48, 5, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(325, 25);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "Свойства карт для проживания";
             // 
             // radioButton2
             // 
@@ -819,20 +722,465 @@
             this.checkBox1.Text = "Меню столовая";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
+            // HostelPanel
+            // 
+            this.HostelPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.HostelPanel.Controls.Add(this.button5);
+            this.HostelPanel.Controls.Add(this.button4);
+            this.HostelPanel.Controls.Add(this.checkBox9);
+            this.HostelPanel.Controls.Add(this.checkBox5);
+            this.HostelPanel.Controls.Add(this.checkBox6);
+            this.HostelPanel.Controls.Add(this.checkBox7);
+            this.HostelPanel.Controls.Add(this.checkBox8);
+            this.HostelPanel.Controls.Add(this.label7);
+            this.HostelPanel.Location = new System.Drawing.Point(753, 0);
+            this.HostelPanel.Name = "HostelPanel";
+            this.HostelPanel.Size = new System.Drawing.Size(342, 895);
+            this.HostelPanel.TabIndex = 72;
+            this.HostelPanel.Visible = false;
+            this.HostelPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.HostelPanel_Paint);
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.Transparent;
+            this.button5.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.question_icon_icons_com_69315;
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button5.Location = new System.Drawing.Point(220, 453);
+            this.button5.Margin = new System.Windows.Forms.Padding(5);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(31, 31);
+            this.button5.TabIndex = 71;
+            this.button5.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Transparent;
+            this.button4.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.question_icon_icons_com_69315;
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button4.Location = new System.Drawing.Point(220, 375);
+            this.button4.Margin = new System.Windows.Forms.Padding(5);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(31, 31);
+            this.button4.TabIndex = 62;
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // checkBox9
+            // 
+            this.checkBox9.AutoSize = true;
+            this.checkBox9.Cursor = System.Windows.Forms.Cursors.No;
+            this.checkBox9.Enabled = false;
+            this.checkBox9.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.checkBox9.Location = new System.Drawing.Point(58, 455);
+            this.checkBox9.Margin = new System.Windows.Forms.Padding(5, 51, 5, 0);
+            this.checkBox9.Name = "checkBox9";
+            this.checkBox9.Size = new System.Drawing.Size(152, 29);
+            this.checkBox9.TabIndex = 70;
+            this.checkBox9.Text = "Комплект -2";
+            this.checkBox9.UseVisualStyleBackColor = true;
+            // 
+            // checkBox5
+            // 
+            this.checkBox5.AutoSize = true;
+            this.checkBox5.Cursor = System.Windows.Forms.Cursors.No;
+            this.checkBox5.Enabled = false;
+            this.checkBox5.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.checkBox5.Location = new System.Drawing.Point(58, 375);
+            this.checkBox5.Margin = new System.Windows.Forms.Padding(5, 51, 5, 0);
+            this.checkBox5.Name = "checkBox5";
+            this.checkBox5.Size = new System.Drawing.Size(152, 29);
+            this.checkBox5.TabIndex = 69;
+            this.checkBox5.Text = "Комплект -1";
+            this.checkBox5.UseVisualStyleBackColor = true;
+            // 
+            // checkBox6
+            // 
+            this.checkBox6.AutoSize = true;
+            this.checkBox6.Cursor = System.Windows.Forms.Cursors.No;
+            this.checkBox6.Enabled = false;
+            this.checkBox6.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.checkBox6.Location = new System.Drawing.Point(32, 295);
+            this.checkBox6.Margin = new System.Windows.Forms.Padding(5, 51, 5, 0);
+            this.checkBox6.Name = "checkBox6";
+            this.checkBox6.Size = new System.Drawing.Size(190, 29);
+            this.checkBox6.TabIndex = 64;
+            this.checkBox6.Text = "Выдавать белье";
+            this.checkBox6.UseVisualStyleBackColor = true;
+            // 
+            // checkBox7
+            // 
+            this.checkBox7.AutoSize = true;
+            this.checkBox7.Enabled = false;
+            this.checkBox7.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.checkBox7.Location = new System.Drawing.Point(32, 215);
+            this.checkBox7.Margin = new System.Windows.Forms.Padding(5, 51, 5, 0);
+            this.checkBox7.Name = "checkBox7";
+            this.checkBox7.Size = new System.Drawing.Size(273, 29);
+            this.checkBox7.TabIndex = 63;
+            this.checkBox7.Text = "Пожарная безопасность";
+            this.checkBox7.UseVisualStyleBackColor = true;
+            // 
+            // checkBox8
+            // 
+            this.checkBox8.AutoSize = true;
+            this.checkBox8.Enabled = false;
+            this.checkBox8.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.checkBox8.Location = new System.Drawing.Point(32, 139);
+            this.checkBox8.Margin = new System.Windows.Forms.Padding(5, 66, 5, 0);
+            this.checkBox8.Name = "checkBox8";
+            this.checkBox8.Size = new System.Drawing.Size(244, 29);
+            this.checkBox8.TabIndex = 62;
+            this.checkBox8.Text = "Правила проживания";
+            this.checkBox8.UseVisualStyleBackColor = true;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.Location = new System.Drawing.Point(10, 48);
+            this.label7.Margin = new System.Windows.Forms.Padding(123, 48, 5, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(325, 25);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "Свойства карт для проживания";
+            // 
+            // PanelCustomer
+            // 
+            this.PanelCustomer.Controls.Add(this.button7);
+            this.PanelCustomer.Controls.Add(this.button6);
+            this.PanelCustomer.Controls.Add(this.textBox4);
+            this.PanelCustomer.Controls.Add(this.textBox3);
+            this.PanelCustomer.Controls.Add(this.textBox2);
+            this.PanelCustomer.Location = new System.Drawing.Point(134, 166);
+            this.PanelCustomer.Name = "PanelCustomer";
+            this.PanelCustomer.Size = new System.Drawing.Size(943, 686);
+            this.PanelCustomer.TabIndex = 73;
+            this.PanelCustomer.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelCustomer_Paint);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(23, 19);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(710, 33);
+            this.textBox2.TabIndex = 0;
+            this.textBox2.Text = "Газпром Развитие";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(23, 76);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 24, 0, 3);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(294, 33);
+            this.textBox3.TabIndex = 1;
+            this.textBox3.Text = "Александр";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(439, 76);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 24, 3, 3);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(294, 33);
+            this.textBox4.TabIndex = 2;
+            this.textBox4.Text = "Александр";
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.Transparent;
+            this.button6.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.pngflow_1;
+            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Location = new System.Drawing.Point(337, 79);
+            this.button6.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(24, 24);
+            this.button6.TabIndex = 3;
+            this.button6.UseVisualStyleBackColor = false;
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.Transparent;
+            this.button7.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.pngflow_1;
+            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Location = new System.Drawing.Point(756, 79);
+            this.button7.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(24, 24);
+            this.button7.TabIndex = 4;
+            this.button7.UseVisualStyleBackColor = false;
+            // 
+            // EditCustomerPanel
+            // 
+            this.EditCustomerPanel.Controls.Add(this.label13);
+            this.EditCustomerPanel.Controls.Add(this.button10);
+            this.EditCustomerPanel.Controls.Add(this.button9);
+            this.EditCustomerPanel.Controls.Add(this.button8);
+            this.EditCustomerPanel.Controls.Add(this.textBox12);
+            this.EditCustomerPanel.Controls.Add(this.textBox13);
+            this.EditCustomerPanel.Controls.Add(this.textBox14);
+            this.EditCustomerPanel.Controls.Add(this.label12);
+            this.EditCustomerPanel.Controls.Add(this.textBox11);
+            this.EditCustomerPanel.Controls.Add(this.textBox10);
+            this.EditCustomerPanel.Controls.Add(this.textBox9);
+            this.EditCustomerPanel.Controls.Add(this.label11);
+            this.EditCustomerPanel.Controls.Add(this.AddCustomers);
+            this.EditCustomerPanel.Controls.Add(this.label10);
+            this.EditCustomerPanel.Controls.Add(this.textBox8);
+            this.EditCustomerPanel.Controls.Add(this.label9);
+            this.EditCustomerPanel.Controls.Add(this.label8);
+            this.EditCustomerPanel.Controls.Add(this.label6);
+            this.EditCustomerPanel.Controls.Add(this.textBox5);
+            this.EditCustomerPanel.Controls.Add(this.textBox6);
+            this.EditCustomerPanel.Controls.Add(this.textBox7);
+            this.EditCustomerPanel.Location = new System.Drawing.Point(133, 163);
+            this.EditCustomerPanel.Name = "EditCustomerPanel";
+            this.EditCustomerPanel.Size = new System.Drawing.Size(957, 686);
+            this.EditCustomerPanel.TabIndex = 74;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(391, 102);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(20, 9, 3, 3);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(343, 33);
+            this.textBox5.TabIndex = 2;
+            this.textBox5.Text = "Александр";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(24, 102);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(3, 8, 0, 3);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(343, 33);
+            this.textBox6.TabIndex = 1;
+            this.textBox6.Text = "Александр";
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(23, 19);
+            this.textBox7.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(710, 33);
+            this.textBox7.TabIndex = 0;
+            this.textBox7.Text = "Локация -1";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(39, 69);
+            this.label6.Margin = new System.Windows.Forms.Padding(3, 16, 0, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(217, 25);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Колличество комнат";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(410, 68);
+            this.label8.Margin = new System.Windows.Forms.Padding(186, 16, 3, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(194, 25);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "Колличество мест";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(39, 175);
+            this.label9.Margin = new System.Windows.Forms.Padding(30, 37, 3, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(334, 25);
+            this.label9.TabIndex = 7;
+            this.label9.Text = "Колличество карт для  локации: ";
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(367, 172);
+            this.textBox8.Margin = new System.Windows.Forms.Padding(3, 8, 0, 3);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(78, 33);
+            this.textBox8.TabIndex = 8;
+            this.textBox8.Text = "2";
+            this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
+            this.label10.Location = new System.Drawing.Point(526, 157);
+            this.label10.Margin = new System.Windows.Forms.Padding(3, 19, 3, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(208, 25);
+            this.label10.TabIndex = 9;
+            this.label10.Text = "+ добавить комнату";
+            // 
+            // AddCustomers
+            // 
+            this.AddCustomers.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.AddCustomers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(82)))), ((int)(((byte)(119)))));
+            this.AddCustomers.FlatAppearance.BorderSize = 0;
+            this.AddCustomers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddCustomers.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AddCustomers.ForeColor = System.Drawing.Color.White;
+            this.AddCustomers.Location = new System.Drawing.Point(769, 102);
+            this.AddCustomers.Margin = new System.Windows.Forms.Padding(30, 34, 3, 3);
+            this.AddCustomers.Name = "AddCustomers";
+            this.AddCustomers.Size = new System.Drawing.Size(131, 33);
+            this.AddCustomers.TabIndex = 52;
+            this.AddCustomers.Text = "Добавить";
+            this.AddCustomers.UseVisualStyleBackColor = false;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(39, 243);
+            this.label11.Margin = new System.Windows.Forms.Padding(30, 43, 3, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(103, 25);
+            this.label11.TabIndex = 53;
+            this.label11.Text = "Комнаты";
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(24, 283);
+            this.textBox9.Margin = new System.Windows.Forms.Padding(3, 15, 0, 3);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(294, 33);
+            this.textBox9.TabIndex = 54;
+            this.textBox9.Text = "323";
+            // 
+            // textBox10
+            // 
+            this.textBox10.Location = new System.Drawing.Point(24, 334);
+            this.textBox10.Margin = new System.Windows.Forms.Padding(3, 15, 0, 3);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(294, 33);
+            this.textBox10.TabIndex = 55;
+            this.textBox10.Text = "323";
+            // 
+            // textBox11
+            // 
+            this.textBox11.Location = new System.Drawing.Point(24, 385);
+            this.textBox11.Margin = new System.Windows.Forms.Padding(3, 15, 0, 3);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(294, 33);
+            this.textBox11.TabIndex = 56;
+            this.textBox11.Text = "323";
+            // 
+            // textBox12
+            // 
+            this.textBox12.Location = new System.Drawing.Point(440, 385);
+            this.textBox12.Margin = new System.Windows.Forms.Padding(3, 15, 0, 3);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(294, 33);
+            this.textBox12.TabIndex = 60;
+            this.textBox12.Text = "323";
+            // 
+            // textBox13
+            // 
+            this.textBox13.Location = new System.Drawing.Point(440, 334);
+            this.textBox13.Margin = new System.Windows.Forms.Padding(3, 15, 0, 3);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(294, 33);
+            this.textBox13.TabIndex = 59;
+            this.textBox13.Text = "323";
+            // 
+            // textBox14
+            // 
+            this.textBox14.Location = new System.Drawing.Point(440, 283);
+            this.textBox14.Margin = new System.Windows.Forms.Padding(3, 15, 0, 3);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(294, 33);
+            this.textBox14.TabIndex = 58;
+            this.textBox14.Text = "323";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(455, 243);
+            this.label12.Margin = new System.Windows.Forms.Padding(30, 43, 3, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(163, 25);
+            this.label12.TabIndex = 57;
+            this.label12.Text = "Спальных мест";
+            // 
+            // button8
+            // 
+            this.button8.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.ExitPlus1;
+            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Location = new System.Drawing.Point(775, 292);
+            this.button8.Margin = new System.Windows.Forms.Padding(41, 3, 3, 3);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(12, 12);
+            this.button8.TabIndex = 61;
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // button9
+            // 
+            this.button9.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.ExitPlus1;
+            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button9.FlatAppearance.BorderSize = 0;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Location = new System.Drawing.Point(775, 343);
+            this.button9.Margin = new System.Windows.Forms.Padding(41, 3, 3, 3);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(12, 12);
+            this.button9.TabIndex = 62;
+            this.button9.UseVisualStyleBackColor = true;
+            // 
+            // button10
+            // 
+            this.button10.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.ExitPlus1;
+            this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button10.FlatAppearance.BorderSize = 0;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Location = new System.Drawing.Point(775, 394);
+            this.button10.Margin = new System.Windows.Forms.Padding(41, 3, 3, 3);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(12, 12);
+            this.button10.TabIndex = 63;
+            this.button10.UseVisualStyleBackColor = true;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(87)))), ((int)(((byte)(87)))));
+            this.label13.Location = new System.Drawing.Point(765, 16);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(170, 38);
+            this.label13.TabIndex = 64;
+            this.label13.Text = "Редактируйте поле\r\nи нажмите сохранить";
+            // 
             // LocationInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.ClientSize = new System.Drawing.Size(1093, 894);
+            this.Controls.Add(this.EditCustomerPanel);
             this.Controls.Add(this.Analyticslabel);
             this.Controls.Add(this.CardPropertiesLabel);
             this.Controls.Add(this.LocationDataLabel);
             this.Controls.Add(this.CustomerLocationNameLabel);
-            this.Controls.Add(this.CardPropertiesPanel);
-            this.Controls.Add(this.LocationInfoPanel);
             this.Controls.Add(this.FoodPanel);
             this.Controls.Add(this.HostelPanel);
+            this.Controls.Add(this.PanelCustomer);
+            this.Controls.Add(this.CardPropertiesPanel);
+            this.Controls.Add(this.LocationInfoPanel);
             this.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(6);
@@ -847,6 +1195,10 @@
             this.FoodPanel.PerformLayout();
             this.HostelPanel.ResumeLayout(false);
             this.HostelPanel.PerformLayout();
+            this.PanelCustomer.ResumeLayout(false);
+            this.PanelCustomer.PerformLayout();
+            this.EditCustomerPanel.ResumeLayout(false);
+            this.EditCustomerPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -908,5 +1260,33 @@
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Panel PanelCustomer;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Panel EditCustomerPanel;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button AddCustomers;
     }
 }

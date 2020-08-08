@@ -140,5 +140,10 @@ namespace Admin_Panel_Hotel.Customers
         {
 
         }
+
+        private void PanelCustomer_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
