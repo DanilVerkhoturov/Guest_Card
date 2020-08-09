@@ -179,6 +179,12 @@
     <Compile Include="Customers\CustomerInfoForm.Designer.cs">
       <DependentUpon>CustomerInfoForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Customers\SubDivisionInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customers\SubDivisionInfoForm.Designer.cs">
+      <DependentUpon>SubDivisionInfoForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Customers\LocationInfoForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -387,6 +393,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Customers\CustomerInfoForm.resx">
       <DependentUpon>CustomerInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customers\SubDivisionInfoForm.resx">
+      <DependentUpon>SubDivisionInfoForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Customers\LocationInfoForm.resx">
       <DependentUpon>LocationInfoForm.cs</DependentUpon>
