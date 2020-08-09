@@ -1,9 +1,9 @@
 ﻿using Admin_Panel_Hotel.Accommodation;
-using Admin_Panel_Hotel.Applications;
+using Admin_Panel_Hotel.ApplicationsFolder;
 using Admin_Panel_Hotel.Cards;
 using Admin_Panel_Hotel.Guests;
 using Admin_Panel_Hotel.Registry;
-using Admin_Panel_Hotel.Users;
+using Admin_Panel_Hotel.UsersFolder;
 using System;
 using System.Data;
 using System.IO.Ports;
@@ -43,8 +43,8 @@ namespace Admin_Panel_Hotel
             Functions.Connection.StateChange += Functions.MySQLConnectionStateChange;
             Functions.Connection.Open();
 
-            NewApplicationsButton.Text = $"Новые   {ApplicationDB.GetNewCount()}";
-            DraftsButton.Text = $"Черновики   {ApplicationDB.GetDraftCount()}";
+            NewApplicationsButton.Text = $"Новые   {Applications.GetNewCount()}";
+            DraftsButton.Text = $"Черновики   {Applications.GetDraftCount()}";
         }
 
         #region Заказчики

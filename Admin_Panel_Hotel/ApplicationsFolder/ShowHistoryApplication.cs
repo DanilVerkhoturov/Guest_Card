@@ -1,8 +1,7 @@
-﻿using MySql.Data.MySqlClient;
-using System;
+﻿using System;
 using System.Windows.Forms;
 
-namespace Admin_Panel_Hotel
+namespace Admin_Panel_Hotel.ApplicationsFolder
 {
     public partial class ShowApplicationHistory : Form
     {
@@ -12,9 +11,9 @@ namespace Admin_Panel_Hotel
 
             Functions.NewlineProcessing(UsersDataGridView);
 
-            UsersDataGridView.DataSource = ApplicationDB.Users.Get();
+            UsersDataGridView.DataSource = Applications.Users.Get();
 
-            ApplicationNameLabel.Text = $"История заявок > {Customer.Name} - {ApplicationDB.Date}";
+            ApplicationNameLabel.Text = $"История заявок > {Customer.Name} - {Applications.Date}";
         }
 
         private void NewApplicationsLabel_Click(object sender, EventArgs e)

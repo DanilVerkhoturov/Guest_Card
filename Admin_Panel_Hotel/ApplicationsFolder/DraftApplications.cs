@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace Admin_Panel_Hotel
+namespace Admin_Panel_Hotel.ApplicationsFolder
 {
     public partial class DraftApplications : Form
     {
@@ -9,7 +9,7 @@ namespace Admin_Panel_Hotel
         {
             InitializeComponent();
 
-            ApplicationsDataGridView.DataSource = ApplicationDB.GetDrafts();
+            ApplicationsDataGridView.DataSource = Applications.GetDrafts();
 
             if (ApplicationsDataGridView.RowCount == 0)
             {
@@ -23,8 +23,8 @@ namespace Admin_Panel_Hotel
             if (e.ColumnIndex == 2)
             {
                 Customer.Name = ApplicationsDataGridView[0, e.RowIndex].Value.ToString();
-                ApplicationDB.Date = ApplicationsDataGridView[1, e.RowIndex].Value.ToString();
-                ApplicationDB.Id = Convert.ToInt64(ApplicationsDataGridView[3, e.RowIndex].Value.ToString());
+                Applications.Date = ApplicationsDataGridView[1, e.RowIndex].Value.ToString();
+                Applications.Id = Convert.ToInt64(ApplicationsDataGridView[3, e.RowIndex].Value.ToString());
                 Functions.OpenChildForm(new ShowApplicationDraft(), MainForm.ContP);
             }
         }

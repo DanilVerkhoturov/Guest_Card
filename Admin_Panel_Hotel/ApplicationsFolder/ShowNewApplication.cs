@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace Admin_Panel_Hotel
+namespace Admin_Panel_Hotel.ApplicationsFolder
 {
     public partial class ShowApplicationNew : Form
     {
@@ -16,9 +16,9 @@ namespace Admin_Panel_Hotel
             locationsColumn.ValueMember = "location_id";
             locationsColumn.DataSource = Locations.GetAll();
 
-            UsersDataGridView.DataSource = ApplicationDB.Users.Get();
+            UsersDataGridView.DataSource = Applications.Users.Get();
 
-            NewApplicationNameLabel.Text = $"Новые заявки > {Customer.Name} - {ApplicationDB.Date}";
+            NewApplicationNameLabel.Text = $"Новые заявки > {Customer.Name} - {Applications.Date}";
         }
 
         private void NewApplicationsLabel_Click(object sender, EventArgs e)

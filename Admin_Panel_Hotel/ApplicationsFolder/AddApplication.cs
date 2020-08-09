@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 using Excel = Microsoft.Office.Interop.Excel;
 
-namespace Admin_Panel_Hotel
+namespace Admin_Panel_Hotel.ApplicationsFolder
 {
     public partial class AddApplication : Form
     {
@@ -70,11 +70,11 @@ namespace Admin_Panel_Hotel
         {
             if (CustomerComboBox.SelectedIndex >= 0 && CheckLastUser()) // Если заполнены все обязательные поля.
             {
-                if (ApplicationDB.Add(out long applicationId, CustomerComboBox.SelectedIndex, 2))
+                if (Applications.Add(out long applicationId, CustomerComboBox.SelectedIndex, 2))
                 {
                     for (int i = 0; i < UsersDataGridView.RowCount; i++)
                     {
-                        if (!ApplicationDB.Users.Add(Convert.ToInt64(UsersDataGridView["fio", i].Value), Convert.ToDateTime(UsersDataGridView["from", i].Value), Convert.ToDateTime(UsersDataGridView["to", i].Value), Convert.ToInt64(UsersDataGridView["location", i].Value), 0))
+                        if (!Applications.Users.Add(Convert.ToInt64(UsersDataGridView["fio", i].Value), Convert.ToDateTime(UsersDataGridView["from", i].Value), Convert.ToDateTime(UsersDataGridView["to", i].Value), Convert.ToInt64(UsersDataGridView["location", i].Value), 0))
                         {
                             MessageBox.Show("Возникла ошибка при добавлении клиента в заявке!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }

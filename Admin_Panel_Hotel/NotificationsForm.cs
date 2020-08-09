@@ -1,4 +1,4 @@
-﻿using Admin_Panel_Hotel.Applications;
+﻿using Admin_Panel_Hotel.ApplicationsFolder;
 using System;
 using System.Windows.Forms;
 

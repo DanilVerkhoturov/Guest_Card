@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Admin_Panel_Hotel.Users
+namespace Admin_Panel_Hotel.UsersFolder
 {
     public partial class RulesUsers : Form
     {

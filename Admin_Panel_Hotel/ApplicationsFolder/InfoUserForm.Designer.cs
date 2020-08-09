@@ -1,4 +1,4 @@
-﻿namespace Admin_Panel_Hotel
+﻿namespace Admin_Panel_Hotel.ApplicationsFolder
 {
     partial class InfoUserForm
     {

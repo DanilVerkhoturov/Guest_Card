@@ -1,8 +1,7 @@
-﻿using Admin_Panel_Hotel.Applications;
-using System;
+﻿using System;
 using System.Windows.Forms;
 
-namespace Admin_Panel_Hotel
+namespace Admin_Panel_Hotel.ApplicationsFolder
 {
     public partial class ShowCurrentApplication : Form
     {
@@ -12,9 +11,9 @@ namespace Admin_Panel_Hotel
 
             Functions.NewlineProcessing(UsersDataGridView);
 
-            UsersDataGridView.DataSource = ApplicationDB.Users.Get();
+            UsersDataGridView.DataSource = Applications.Users.Get();
 
-            ApplicationNameLabel.Text = $"Текущие заявки > {Customer.Name} - {ApplicationDB.Date}";
+            ApplicationNameLabel.Text = $"Текущие заявки > {Customer.Name} - {Applications.Date}";
         }
 
         private void AcceptButton_Click(object sender, EventArgs e)

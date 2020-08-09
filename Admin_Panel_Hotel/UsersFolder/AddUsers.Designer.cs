@@ -1,4 +1,4 @@
-﻿namespace Admin_Panel_Hotel.Users
+﻿namespace Admin_Panel_Hotel.UsersFolder
 {
     partial class AddUsers
     {

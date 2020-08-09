@@ -3,7 +3,7 @@ using System;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace Admin_Panel_Hotel
+namespace Admin_Panel_Hotel.ApplicationsFolder
 {
     public partial class ShowApplicationDraft : Form
     {
@@ -13,9 +13,9 @@ namespace Admin_Panel_Hotel
 
             Functions.NewlineProcessing(UsersDataGridView);
 
-            UsersDataGridView.DataSource = ApplicationDB.Users.Get();
+            UsersDataGridView.DataSource = Applications.Users.Get();
 
-            ApplicationNameLabel.Text = $"Черновик > {Customer.Name} - {ApplicationDB.Date}";
+            ApplicationNameLabel.Text = $"Черновик > {Customer.Name} - {Applications.Date}";
         }
 
         private void DraftApplicationNameLabel_Click(object sender, EventArgs e)

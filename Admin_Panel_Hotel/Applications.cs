@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace Admin_Panel_Hotel
 {
-    class ApplicationDB
+    class Applications
     {
         /// <summary>
         /// Дата заявки.
@@ -140,7 +140,7 @@ namespace Admin_Panel_Hotel
                 if (eventId >= 0)
                 {
                     long id = Functions.SqlInsert($"INSERT INTO applications_user(user_id, application_id, event_id, location_id, application_sum)" +
-                    $" VALUES({userId}, {ApplicationDB.Id}, {eventId}, {locationId}, {sum})");
+                    $" VALUES({userId}, {Applications.Id}, {eventId}, {locationId}, {sum})");
                     if (id >= 0)
                     {
                         return true;
@@ -162,7 +162,7 @@ namespace Admin_Panel_Hotel
             /// <returns>Возвращает таблицу с пользователями из заявки.</returns>
             public static DataTable Get()
             {
-                return Functions.ExecuteSql($"SELECT user_id, fio, tab_number, start_at, end_at, location_id FROM user_list WHERE application_id = {ApplicationDB.Id}");
+                return Functions.ExecuteSql($"SELECT user_id, fio, tab_number, start_at, end_at, location_id FROM user_list WHERE application_id = {Applications.Id}");
             }
         }
     }
