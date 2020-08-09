@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.CustomerLocationNameLabel = new System.Windows.Forms.Label();
             this.LocationDataLabel = new System.Windows.Forms.Label();
             this.CardPropertiesLabel = new System.Windows.Forms.Label();
@@ -45,24 +45,24 @@
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.label5 = new System.Windows.Forms.Label();
             this.FoodPanel = new System.Windows.Forms.Panel();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.MunusSurchargeCheckBox = new System.Windows.Forms.RadioButton();
+            this.MinusCheckBox = new System.Windows.Forms.RadioButton();
+            this.BurningCheckBox = new System.Windows.Forms.CheckBox();
             this.button3 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.DiscountTextBox = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.DiscountCheckBox = new System.Windows.Forms.CheckBox();
+            this.MenuBuffetCheckBox = new System.Windows.Forms.CheckBox();
+            this.MenuCanteenCheckBox = new System.Windows.Forms.CheckBox();
             this.PanelCustomer = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.EditEmailButton = new System.Windows.Forms.Button();
+            this.EditNameButton = new System.Windows.Forms.Button();
             this.EmailTextBox = new System.Windows.Forms.TextBox();
             this.NameTextBox = new System.Windows.Forms.TextBox();
             this.NameOrganiztionTextBox = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.SaveButton = new System.Windows.Forms.Button();
             this.CardPropertiesPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.FoodPanel.SuspendLayout();
@@ -173,14 +173,14 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeight = 35;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -227,9 +227,9 @@
             // 
             this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn3.DataPropertyName = "count_beds";
-            dataGridViewCellStyle4.Format = "N0";
-            dataGridViewCellStyle4.NullValue = "0";
-            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Format = "N0";
+            dataGridViewCellStyle2.NullValue = "0";
+            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewTextBoxColumn3.HeaderText = "";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
@@ -265,60 +265,60 @@
             // FoodPanel
             // 
             this.FoodPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.FoodPanel.Controls.Add(this.radioButton2);
-            this.FoodPanel.Controls.Add(this.radioButton1);
-            this.FoodPanel.Controls.Add(this.checkBox4);
+            this.FoodPanel.Controls.Add(this.MunusSurchargeCheckBox);
+            this.FoodPanel.Controls.Add(this.MinusCheckBox);
+            this.FoodPanel.Controls.Add(this.BurningCheckBox);
             this.FoodPanel.Controls.Add(this.button3);
             this.FoodPanel.Controls.Add(this.label4);
-            this.FoodPanel.Controls.Add(this.textBox1);
+            this.FoodPanel.Controls.Add(this.DiscountTextBox);
             this.FoodPanel.Controls.Add(this.button2);
             this.FoodPanel.Controls.Add(this.button1);
-            this.FoodPanel.Controls.Add(this.checkBox3);
-            this.FoodPanel.Controls.Add(this.checkBox2);
-            this.FoodPanel.Controls.Add(this.checkBox1);
+            this.FoodPanel.Controls.Add(this.DiscountCheckBox);
+            this.FoodPanel.Controls.Add(this.MenuBuffetCheckBox);
+            this.FoodPanel.Controls.Add(this.MenuCanteenCheckBox);
             this.FoodPanel.Controls.Add(this.label5);
             this.FoodPanel.Location = new System.Drawing.Point(752, 0);
             this.FoodPanel.Name = "FoodPanel";
             this.FoodPanel.Size = new System.Drawing.Size(342, 895);
             this.FoodPanel.TabIndex = 48;
             // 
-            // radioButton2
+            // MunusSurchargeCheckBox
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(32, 667);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(3, 41, 3, 0);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(291, 29);
-            this.radioButton2.TabIndex = 71;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Выход в минус с доплатой";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.MunusSurchargeCheckBox.AutoSize = true;
+            this.MunusSurchargeCheckBox.Location = new System.Drawing.Point(32, 667);
+            this.MunusSurchargeCheckBox.Margin = new System.Windows.Forms.Padding(3, 41, 3, 0);
+            this.MunusSurchargeCheckBox.Name = "MunusSurchargeCheckBox";
+            this.MunusSurchargeCheckBox.Size = new System.Drawing.Size(291, 29);
+            this.MunusSurchargeCheckBox.TabIndex = 71;
+            this.MunusSurchargeCheckBox.TabStop = true;
+            this.MunusSurchargeCheckBox.Text = "Выход в минус с доплатой";
+            this.MunusSurchargeCheckBox.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // MinusCheckBox
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(32, 572);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(3, 41, 3, 0);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(192, 54);
-            this.radioButton1.TabIndex = 70;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Выход в минус с\r\nудержанием ";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.MinusCheckBox.AutoSize = true;
+            this.MinusCheckBox.Location = new System.Drawing.Point(32, 572);
+            this.MinusCheckBox.Margin = new System.Windows.Forms.Padding(3, 41, 3, 0);
+            this.MinusCheckBox.Name = "MinusCheckBox";
+            this.MinusCheckBox.Size = new System.Drawing.Size(192, 54);
+            this.MinusCheckBox.TabIndex = 70;
+            this.MinusCheckBox.TabStop = true;
+            this.MinusCheckBox.Text = "Выход в минус с\r\nудержанием ";
+            this.MinusCheckBox.UseVisualStyleBackColor = true;
             // 
-            // checkBox4
+            // BurningCheckBox
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Cursor = System.Windows.Forms.Cursors.No;
-            this.checkBox4.Enabled = false;
-            this.checkBox4.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox4.Location = new System.Drawing.Point(32, 502);
-            this.checkBox4.Margin = new System.Windows.Forms.Padding(5, 51, 5, 0);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(147, 29);
-            this.checkBox4.TabIndex = 69;
-            this.checkBox4.Text = "Сгорающий";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.BurningCheckBox.AutoSize = true;
+            this.BurningCheckBox.Cursor = System.Windows.Forms.Cursors.No;
+            this.BurningCheckBox.Enabled = false;
+            this.BurningCheckBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.BurningCheckBox.Location = new System.Drawing.Point(32, 502);
+            this.BurningCheckBox.Margin = new System.Windows.Forms.Padding(5, 51, 5, 0);
+            this.BurningCheckBox.Name = "BurningCheckBox";
+            this.BurningCheckBox.Size = new System.Drawing.Size(147, 29);
+            this.BurningCheckBox.TabIndex = 69;
+            this.BurningCheckBox.Text = "Сгорающий";
+            this.BurningCheckBox.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
@@ -346,12 +346,12 @@
             this.label4.TabIndex = 67;
             this.label4.Text = "Лимит по карте";
             // 
-            // textBox1
+            // DiscountTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(176, 293);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(64, 33);
-            this.textBox1.TabIndex = 66;
+            this.DiscountTextBox.Location = new System.Drawing.Point(176, 293);
+            this.DiscountTextBox.Name = "DiscountTextBox";
+            this.DiscountTextBox.Size = new System.Drawing.Size(64, 33);
+            this.DiscountTextBox.TabIndex = 66;
             // 
             // button2
             // 
@@ -383,51 +383,51 @@
             this.button1.TabIndex = 62;
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // checkBox3
+            // DiscountCheckBox
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Cursor = System.Windows.Forms.Cursors.No;
-            this.checkBox3.Enabled = false;
-            this.checkBox3.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox3.Location = new System.Drawing.Point(32, 295);
-            this.checkBox3.Margin = new System.Windows.Forms.Padding(5, 51, 5, 0);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(103, 29);
-            this.checkBox3.TabIndex = 64;
-            this.checkBox3.Text = "Скидка";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.DiscountCheckBox.AutoSize = true;
+            this.DiscountCheckBox.Cursor = System.Windows.Forms.Cursors.No;
+            this.DiscountCheckBox.Enabled = false;
+            this.DiscountCheckBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DiscountCheckBox.Location = new System.Drawing.Point(32, 295);
+            this.DiscountCheckBox.Margin = new System.Windows.Forms.Padding(5, 51, 5, 0);
+            this.DiscountCheckBox.Name = "DiscountCheckBox";
+            this.DiscountCheckBox.Size = new System.Drawing.Size(103, 29);
+            this.DiscountCheckBox.TabIndex = 64;
+            this.DiscountCheckBox.Text = "Скидка";
+            this.DiscountCheckBox.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // MenuBuffetCheckBox
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Enabled = false;
-            this.checkBox2.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox2.Location = new System.Drawing.Point(32, 215);
-            this.checkBox2.Margin = new System.Windows.Forms.Padding(5, 51, 5, 0);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(152, 29);
-            this.checkBox2.TabIndex = 63;
-            this.checkBox2.Text = "Меню буфет";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.MenuBuffetCheckBox.AutoSize = true;
+            this.MenuBuffetCheckBox.Enabled = false;
+            this.MenuBuffetCheckBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.MenuBuffetCheckBox.Location = new System.Drawing.Point(32, 215);
+            this.MenuBuffetCheckBox.Margin = new System.Windows.Forms.Padding(5, 51, 5, 0);
+            this.MenuBuffetCheckBox.Name = "MenuBuffetCheckBox";
+            this.MenuBuffetCheckBox.Size = new System.Drawing.Size(152, 29);
+            this.MenuBuffetCheckBox.TabIndex = 63;
+            this.MenuBuffetCheckBox.Text = "Меню буфет";
+            this.MenuBuffetCheckBox.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // MenuCanteenCheckBox
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Enabled = false;
-            this.checkBox1.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox1.Location = new System.Drawing.Point(32, 139);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(5, 66, 5, 0);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(186, 29);
-            this.checkBox1.TabIndex = 62;
-            this.checkBox1.Text = "Меню столовая";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.MenuCanteenCheckBox.AutoSize = true;
+            this.MenuCanteenCheckBox.Enabled = false;
+            this.MenuCanteenCheckBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.MenuCanteenCheckBox.Location = new System.Drawing.Point(32, 139);
+            this.MenuCanteenCheckBox.Margin = new System.Windows.Forms.Padding(5, 66, 5, 0);
+            this.MenuCanteenCheckBox.Name = "MenuCanteenCheckBox";
+            this.MenuCanteenCheckBox.Size = new System.Drawing.Size(186, 29);
+            this.MenuCanteenCheckBox.TabIndex = 62;
+            this.MenuCanteenCheckBox.Text = "Меню столовая";
+            this.MenuCanteenCheckBox.UseVisualStyleBackColor = true;
             // 
             // PanelCustomer
             // 
-            this.PanelCustomer.Controls.Add(this.button4);
-            this.PanelCustomer.Controls.Add(this.button7);
-            this.PanelCustomer.Controls.Add(this.button6);
+            this.PanelCustomer.Controls.Add(this.SaveButton);
+            this.PanelCustomer.Controls.Add(this.EditEmailButton);
+            this.PanelCustomer.Controls.Add(this.EditNameButton);
             this.PanelCustomer.Controls.Add(this.EmailTextBox);
             this.PanelCustomer.Controls.Add(this.NameTextBox);
             this.PanelCustomer.Controls.Add(this.NameOrganiztionTextBox);
@@ -437,33 +437,33 @@
             this.PanelCustomer.TabIndex = 73;
             this.PanelCustomer.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelCustomer_Paint);
             // 
-            // button7
+            // EditEmailButton
             // 
-            this.button7.BackColor = System.Drawing.Color.Transparent;
-            this.button7.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.pngflow_1;
-            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Location = new System.Drawing.Point(756, 79);
-            this.button7.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(24, 24);
-            this.button7.TabIndex = 4;
-            this.button7.UseVisualStyleBackColor = false;
+            this.EditEmailButton.BackColor = System.Drawing.Color.Transparent;
+            this.EditEmailButton.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.pngflow_1;
+            this.EditEmailButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.EditEmailButton.FlatAppearance.BorderSize = 0;
+            this.EditEmailButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EditEmailButton.Location = new System.Drawing.Point(756, 79);
+            this.EditEmailButton.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
+            this.EditEmailButton.Name = "EditEmailButton";
+            this.EditEmailButton.Size = new System.Drawing.Size(24, 24);
+            this.EditEmailButton.TabIndex = 4;
+            this.EditEmailButton.UseVisualStyleBackColor = false;
             // 
-            // button6
+            // EditNameButton
             // 
-            this.button6.BackColor = System.Drawing.Color.Transparent;
-            this.button6.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.pngflow_1;
-            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Location = new System.Drawing.Point(337, 79);
-            this.button6.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(24, 24);
-            this.button6.TabIndex = 3;
-            this.button6.UseVisualStyleBackColor = false;
+            this.EditNameButton.BackColor = System.Drawing.Color.Transparent;
+            this.EditNameButton.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.pngflow_1;
+            this.EditNameButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.EditNameButton.FlatAppearance.BorderSize = 0;
+            this.EditNameButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EditNameButton.Location = new System.Drawing.Point(337, 79);
+            this.EditNameButton.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
+            this.EditNameButton.Name = "EditNameButton";
+            this.EditNameButton.Size = new System.Drawing.Size(24, 24);
+            this.EditNameButton.TabIndex = 3;
+            this.EditNameButton.UseVisualStyleBackColor = false;
             // 
             // EmailTextBox
             // 
@@ -492,19 +492,19 @@
             this.NameOrganiztionTextBox.TabIndex = 0;
             this.NameOrganiztionTextBox.Text = "Газпром Развитие";
             // 
-            // button4
+            // SaveButton
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(532, 633);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(201, 36);
-            this.button4.TabIndex = 61;
-            this.button4.Text = "Сохранить";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Visible = false;
+            this.SaveButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
+            this.SaveButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.SaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SaveButton.ForeColor = System.Drawing.Color.White;
+            this.SaveButton.Location = new System.Drawing.Point(532, 633);
+            this.SaveButton.Name = "SaveButton";
+            this.SaveButton.Size = new System.Drawing.Size(201, 36);
+            this.SaveButton.TabIndex = 61;
+            this.SaveButton.Text = "Сохранить";
+            this.SaveButton.UseVisualStyleBackColor = false;
+            this.SaveButton.Visible = false;
             // 
             // LocationInfoForm
             // 
@@ -512,12 +512,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.ClientSize = new System.Drawing.Size(1093, 894);
-            this.Controls.Add(this.PanelCustomer);
             this.Controls.Add(this.Analyticslabel);
             this.Controls.Add(this.CardPropertiesLabel);
             this.Controls.Add(this.LocationDataLabel);
             this.Controls.Add(this.CustomerLocationNameLabel);
             this.Controls.Add(this.FoodPanel);
+            this.Controls.Add(this.PanelCustomer);
             this.Controls.Add(this.CardPropertiesPanel);
             this.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -552,23 +552,23 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.Panel FoodPanel;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.RadioButton MunusSurchargeCheckBox;
+        private System.Windows.Forms.RadioButton MinusCheckBox;
+        private System.Windows.Forms.CheckBox BurningCheckBox;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox DiscountTextBox;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox DiscountCheckBox;
+        private System.Windows.Forms.CheckBox MenuBuffetCheckBox;
+        private System.Windows.Forms.CheckBox MenuCanteenCheckBox;
         private System.Windows.Forms.Panel PanelCustomer;
         private System.Windows.Forms.TextBox NameTextBox;
         private System.Windows.Forms.TextBox NameOrganiztionTextBox;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button EditEmailButton;
+        private System.Windows.Forms.Button EditNameButton;
         private System.Windows.Forms.TextBox EmailTextBox;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button SaveButton;
     }
 }

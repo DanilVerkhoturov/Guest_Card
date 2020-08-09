@@ -13,20 +13,14 @@ namespace Admin_Panel_Hotel.Customers
             Locations.GetInfo();
 
             NameTextBox.Text = Locations.Name;
-            RoomCountTextBox.Text = Hotels.RoomCount.ToString();
-            BedsCountTextBox.Text = Hotels.BedsCount.ToString();
-            CardsCountTextBox.Text = Hotels.CardsCount.ToString();
-            RoomsDataGridView.DataSource = Hotels.GetRooms();
+            
 
             CustomerLocationNameLabel.Text = $"Мои заказчики > {Customer.Name} > {Locations.Name}";
         }
 
         private void EditNameButton_Click(object sender, EventArgs e)
         {
-            EditNameButton.Visible = false;
-            NameTextBox.Enabled = true;
-            NameHelpLabel.Visible = true;
-            SaveLocationInfoButton.Visible = true;
+            
         }
 
         private void CustomerLocationNameLabel_Click(object sender, EventArgs e)

@@ -46,13 +46,13 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.HostelPanel = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.checkBox9 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
+            this.Set2Button = new System.Windows.Forms.Button();
+            this.Set1Button = new System.Windows.Forms.Button();
+            this.Set2CheckBox = new System.Windows.Forms.CheckBox();
+            this.Set1CheckBox = new System.Windows.Forms.CheckBox();
+            this.GiveLinenCheckBox = new System.Windows.Forms.CheckBox();
+            this.FireSeftyCheckBox = new System.Windows.Forms.CheckBox();
+            this.RulesCheckBox = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
             this.EditCustomerPanel = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
@@ -263,13 +263,13 @@
             // HostelPanel
             // 
             this.HostelPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.HostelPanel.Controls.Add(this.button5);
-            this.HostelPanel.Controls.Add(this.button4);
-            this.HostelPanel.Controls.Add(this.checkBox9);
-            this.HostelPanel.Controls.Add(this.checkBox5);
-            this.HostelPanel.Controls.Add(this.checkBox6);
-            this.HostelPanel.Controls.Add(this.checkBox7);
-            this.HostelPanel.Controls.Add(this.checkBox8);
+            this.HostelPanel.Controls.Add(this.Set2Button);
+            this.HostelPanel.Controls.Add(this.Set1Button);
+            this.HostelPanel.Controls.Add(this.Set2CheckBox);
+            this.HostelPanel.Controls.Add(this.Set1CheckBox);
+            this.HostelPanel.Controls.Add(this.GiveLinenCheckBox);
+            this.HostelPanel.Controls.Add(this.FireSeftyCheckBox);
+            this.HostelPanel.Controls.Add(this.RulesCheckBox);
             this.HostelPanel.Controls.Add(this.label7);
             this.HostelPanel.Location = new System.Drawing.Point(753, 0);
             this.HostelPanel.Name = "HostelPanel";
@@ -278,103 +278,103 @@
             this.HostelPanel.Visible = false;
             this.HostelPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.HostelPanel_Paint);
             // 
-            // button5
+            // Set2Button
             // 
-            this.button5.BackColor = System.Drawing.Color.Transparent;
-            this.button5.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.question_icon_icons_com_69315;
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button5.Location = new System.Drawing.Point(220, 453);
-            this.button5.Margin = new System.Windows.Forms.Padding(5);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(31, 31);
-            this.button5.TabIndex = 71;
-            this.button5.UseVisualStyleBackColor = false;
+            this.Set2Button.BackColor = System.Drawing.Color.Transparent;
+            this.Set2Button.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.question_icon_icons_com_69315;
+            this.Set2Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Set2Button.FlatAppearance.BorderSize = 0;
+            this.Set2Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Set2Button.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Set2Button.Location = new System.Drawing.Point(220, 453);
+            this.Set2Button.Margin = new System.Windows.Forms.Padding(5);
+            this.Set2Button.Name = "Set2Button";
+            this.Set2Button.Size = new System.Drawing.Size(31, 31);
+            this.Set2Button.TabIndex = 71;
+            this.Set2Button.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // Set1Button
             // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.question_icon_icons_com_69315;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button4.Location = new System.Drawing.Point(220, 375);
-            this.button4.Margin = new System.Windows.Forms.Padding(5);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(31, 31);
-            this.button4.TabIndex = 62;
-            this.button4.UseVisualStyleBackColor = false;
+            this.Set1Button.BackColor = System.Drawing.Color.Transparent;
+            this.Set1Button.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.question_icon_icons_com_69315;
+            this.Set1Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Set1Button.FlatAppearance.BorderSize = 0;
+            this.Set1Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Set1Button.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Set1Button.Location = new System.Drawing.Point(220, 375);
+            this.Set1Button.Margin = new System.Windows.Forms.Padding(5);
+            this.Set1Button.Name = "Set1Button";
+            this.Set1Button.Size = new System.Drawing.Size(31, 31);
+            this.Set1Button.TabIndex = 62;
+            this.Set1Button.UseVisualStyleBackColor = false;
             // 
-            // checkBox9
+            // Set2CheckBox
             // 
-            this.checkBox9.AutoSize = true;
-            this.checkBox9.Cursor = System.Windows.Forms.Cursors.No;
-            this.checkBox9.Enabled = false;
-            this.checkBox9.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox9.Location = new System.Drawing.Point(58, 455);
-            this.checkBox9.Margin = new System.Windows.Forms.Padding(5, 51, 5, 0);
-            this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(152, 29);
-            this.checkBox9.TabIndex = 70;
-            this.checkBox9.Text = "Комплект -2";
-            this.checkBox9.UseVisualStyleBackColor = true;
+            this.Set2CheckBox.AutoSize = true;
+            this.Set2CheckBox.Cursor = System.Windows.Forms.Cursors.No;
+            this.Set2CheckBox.Enabled = false;
+            this.Set2CheckBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Set2CheckBox.Location = new System.Drawing.Point(58, 455);
+            this.Set2CheckBox.Margin = new System.Windows.Forms.Padding(5, 51, 5, 0);
+            this.Set2CheckBox.Name = "Set2CheckBox";
+            this.Set2CheckBox.Size = new System.Drawing.Size(152, 29);
+            this.Set2CheckBox.TabIndex = 70;
+            this.Set2CheckBox.Text = "Комплект -2";
+            this.Set2CheckBox.UseVisualStyleBackColor = true;
             // 
-            // checkBox5
+            // Set1CheckBox
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Cursor = System.Windows.Forms.Cursors.No;
-            this.checkBox5.Enabled = false;
-            this.checkBox5.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox5.Location = new System.Drawing.Point(58, 375);
-            this.checkBox5.Margin = new System.Windows.Forms.Padding(5, 51, 5, 0);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(152, 29);
-            this.checkBox5.TabIndex = 69;
-            this.checkBox5.Text = "Комплект -1";
-            this.checkBox5.UseVisualStyleBackColor = true;
+            this.Set1CheckBox.AutoSize = true;
+            this.Set1CheckBox.Cursor = System.Windows.Forms.Cursors.No;
+            this.Set1CheckBox.Enabled = false;
+            this.Set1CheckBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Set1CheckBox.Location = new System.Drawing.Point(58, 375);
+            this.Set1CheckBox.Margin = new System.Windows.Forms.Padding(5, 51, 5, 0);
+            this.Set1CheckBox.Name = "Set1CheckBox";
+            this.Set1CheckBox.Size = new System.Drawing.Size(152, 29);
+            this.Set1CheckBox.TabIndex = 69;
+            this.Set1CheckBox.Text = "Комплект -1";
+            this.Set1CheckBox.UseVisualStyleBackColor = true;
             // 
-            // checkBox6
+            // GiveLinenCheckBox
             // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Cursor = System.Windows.Forms.Cursors.No;
-            this.checkBox6.Enabled = false;
-            this.checkBox6.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox6.Location = new System.Drawing.Point(32, 295);
-            this.checkBox6.Margin = new System.Windows.Forms.Padding(5, 51, 5, 0);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(190, 29);
-            this.checkBox6.TabIndex = 64;
-            this.checkBox6.Text = "Выдавать белье";
-            this.checkBox6.UseVisualStyleBackColor = true;
+            this.GiveLinenCheckBox.AutoSize = true;
+            this.GiveLinenCheckBox.Cursor = System.Windows.Forms.Cursors.No;
+            this.GiveLinenCheckBox.Enabled = false;
+            this.GiveLinenCheckBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.GiveLinenCheckBox.Location = new System.Drawing.Point(32, 295);
+            this.GiveLinenCheckBox.Margin = new System.Windows.Forms.Padding(5, 51, 5, 0);
+            this.GiveLinenCheckBox.Name = "GiveLinenCheckBox";
+            this.GiveLinenCheckBox.Size = new System.Drawing.Size(190, 29);
+            this.GiveLinenCheckBox.TabIndex = 64;
+            this.GiveLinenCheckBox.Text = "Выдавать белье";
+            this.GiveLinenCheckBox.UseVisualStyleBackColor = true;
             // 
-            // checkBox7
+            // FireSeftyCheckBox
             // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.Enabled = false;
-            this.checkBox7.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox7.Location = new System.Drawing.Point(32, 215);
-            this.checkBox7.Margin = new System.Windows.Forms.Padding(5, 51, 5, 0);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(273, 29);
-            this.checkBox7.TabIndex = 63;
-            this.checkBox7.Text = "Пожарная безопасность";
-            this.checkBox7.UseVisualStyleBackColor = true;
+            this.FireSeftyCheckBox.AutoSize = true;
+            this.FireSeftyCheckBox.Enabled = false;
+            this.FireSeftyCheckBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.FireSeftyCheckBox.Location = new System.Drawing.Point(32, 215);
+            this.FireSeftyCheckBox.Margin = new System.Windows.Forms.Padding(5, 51, 5, 0);
+            this.FireSeftyCheckBox.Name = "FireSeftyCheckBox";
+            this.FireSeftyCheckBox.Size = new System.Drawing.Size(273, 29);
+            this.FireSeftyCheckBox.TabIndex = 63;
+            this.FireSeftyCheckBox.Text = "Пожарная безопасность";
+            this.FireSeftyCheckBox.UseVisualStyleBackColor = true;
             // 
-            // checkBox8
+            // RulesCheckBox
             // 
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.Enabled = false;
-            this.checkBox8.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox8.Location = new System.Drawing.Point(32, 139);
-            this.checkBox8.Margin = new System.Windows.Forms.Padding(5, 66, 5, 0);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(244, 29);
-            this.checkBox8.TabIndex = 62;
-            this.checkBox8.Text = "Правила проживания";
-            this.checkBox8.UseVisualStyleBackColor = true;
+            this.RulesCheckBox.AutoSize = true;
+            this.RulesCheckBox.Enabled = false;
+            this.RulesCheckBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.RulesCheckBox.Location = new System.Drawing.Point(32, 139);
+            this.RulesCheckBox.Margin = new System.Windows.Forms.Padding(5, 66, 5, 0);
+            this.RulesCheckBox.Name = "RulesCheckBox";
+            this.RulesCheckBox.Size = new System.Drawing.Size(244, 29);
+            this.RulesCheckBox.TabIndex = 62;
+            this.RulesCheckBox.Text = "Правила проживания";
+            this.RulesCheckBox.UseVisualStyleBackColor = true;
             // 
             // label7
             // 
@@ -610,8 +610,8 @@
             this.Controls.Add(this.LocationDataLabel);
             this.Controls.Add(this.CustomerLocationNameLabel);
             this.Controls.Add(this.HostelPanel);
-            this.Controls.Add(this.CardPropertiesPanel);
             this.Controls.Add(this.EditCustomerPanel);
+            this.Controls.Add(this.CardPropertiesPanel);
             this.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(6);
@@ -645,13 +645,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.Panel HostelPanel;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.CheckBox checkBox9;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.CheckBox checkBox7;
-        private System.Windows.Forms.CheckBox checkBox8;
+        private System.Windows.Forms.Button Set2Button;
+        private System.Windows.Forms.Button Set1Button;
+        private System.Windows.Forms.CheckBox Set2CheckBox;
+        private System.Windows.Forms.CheckBox Set1CheckBox;
+        private System.Windows.Forms.CheckBox GiveLinenCheckBox;
+        private System.Windows.Forms.CheckBox FireSeftyCheckBox;
+        private System.Windows.Forms.CheckBox RulesCheckBox;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel EditCustomerPanel;
         private System.Windows.Forms.TextBox CountPlaceTextBox;
