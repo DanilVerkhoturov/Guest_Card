@@ -12,7 +12,7 @@ namespace Admin_Panel_Hotel
 
             Functions.NewlineProcessing(UsersDataGridView);
 
-            UsersDataGridView.DataSource = ApplicationDB.GetUsers();
+            UsersDataGridView.DataSource = ApplicationDB.Users.Get();
 
             ApplicationNameLabel.Text = $"История заявок > {Customer.Name} - {ApplicationDB.Date}";
         }

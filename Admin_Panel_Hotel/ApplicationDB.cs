@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Data;
+using System.Windows.Forms;
 
 namespace Admin_Panel_Hotel
 {
@@ -14,6 +15,28 @@ namespace Admin_Panel_Hotel
         /// Уникальный номер заявки.
         /// </summary>
         public static long Id { get; set; }
+
+        /// <summary>
+        /// Добавить заявку.
+        /// </summary>
+        /// <param name="applicationId">Возвращает уникальный номер (Id) созданной заявки. -1 - если возникла ошибка.</param>
+        /// <param name="customerId">Уникальный номер (Id) заказчика.</param>
+        /// <param name="type">Тип заявки: 1 - заявка на питание; 2 - заявка на проживание.</param>
+        /// <returns>Возвращает результат добавления.</returns>
+        public static bool Add(out long applicationId, long customerId, int type)
+        {
+            applicationId = Functions.SqlInsert($"INSERT INTO applications(customer_id, status_id, type, created_at)" +
+                $" VALUES({customerId}, {1}, {type}, {Functions.ToUnixTime(DateTime.Now)})");
+            if (applicationId >= 0)
+            {
+                Id = applicationId;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
 
         /// <summary>
         /// Получить количество черновиков.
@@ -67,7 +90,7 @@ namespace Admin_Panel_Hotel
         /// <returns>Возвращает таблицу с новыми заявками.</returns>
         public static DataTable GetNew()
         {
-            return Functions.ExecuteSql("SELECT id, name, created_at as 'date' FROM application_list WHERE status_id = 1");
+            return Functions.ExecuteSql("SELECT application_id, customer_id, name, created_at as 'date' FROM application_list WHERE status_id = 1");
         }
 
         /// <summary>
@@ -98,12 +121,49 @@ namespace Admin_Panel_Hotel
         }
 
         /// <summary>
-        /// Получить список людей из заявки
+        /// Клиенты указанные в заявке.
         /// </summary>
-        /// <returns>Возвращает таблицу с пользователями из заявки.</returns>
-        public static DataTable GetUsers()
+        public class Users
         {
-            return Functions.ExecuteSql($"SELECT id as user_id, fio, tab_number, start_at, end_at, location FROM user_list WHERE application_id = {Id}");
+            /// <summary>
+            /// Добавить клиента в текущую заявку.
+            /// </summary>
+            /// <param name="userId">Уникальный номер (Id) клиента.</param>
+            /// <param name="from">Дата от.</param>
+            /// <param name="to">Дата до.</param>
+            /// <param name="locationId">Уникальный номер (Id) локации.</param>
+            /// <param name="sum">Сумма начисления.</param>
+            /// <returns>Возвращает результат добавления.</returns>
+            public static bool Add(long userId, DateTime from, DateTime to, long locationId, float sum)
+            {
+                long eventId = Functions.SqlInsert($"INSERT INTO event(start_at, end_at, ev_type) VALUES({from}, {to}, {10})");
+                if (eventId >= 0)
+                {
+                    long id = Functions.SqlInsert($"INSERT INTO applications_user(user_id, application_id, event_id, location_id, application_sum)" +
+                    $" VALUES({userId}, {ApplicationDB.Id}, {eventId}, {locationId}, {sum})");
+                    if (id >= 0)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+                else
+                {
+                    return false;
+                }
+            }
+
+            /// <summary>
+            /// Получить список людей из заявки.
+            /// </summary>
+            /// <returns>Возвращает таблицу с пользователями из заявки.</returns>
+            public static DataTable Get()
+            {
+                return Functions.ExecuteSql($"SELECT user_id, fio, tab_number, start_at, end_at, location_id FROM user_list WHERE application_id = {ApplicationDB.Id}");
+            }
         }
     }
 }

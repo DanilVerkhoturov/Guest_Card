@@ -1,42 +1,21 @@
-﻿using System.Data;
-
-namespace Admin_Panel_Hotel
+﻿namespace Admin_Panel_Hotel
 {
     /// <summary>
     /// Текущий пользователь.
     /// </summary>
     class User
     {
-        private static long id;
-        private static string name;
-        private static string role;
-
         /// <summary>
-        /// Получить уникальный номер пользователя.
+        /// Уникальный номер.
         /// </summary>
-        public static long GetId()
-        {
-            return id;
-        }
+        public static long Id { get; set; }
         /// <summary>
-        /// Получить ФИО пользователя.
+        /// ФИО.
         /// </summary>
-        public static string GetName()
-        {
-            return name;
-        }
+        public static string Name { get; set; }
         /// <summary>
-        /// Получить роль пользователя.
+        /// Роль.
         /// </summary>
-        /// <returns></returns>
-        public static string GetRole()
-        {
-            return role;
-        }
-
-        //public static DataTable GetAll()
-        //{
-        //    return Functions.ExecuteSql("SELECT ");
-        //}
+        public static string Role { get; set; }
     }
 }

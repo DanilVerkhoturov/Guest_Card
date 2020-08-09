@@ -9,21 +9,14 @@ namespace Admin_Panel_Hotel
         {
             InitializeComponent();
 
-            DataGridViewComboBoxColumn locationsColumn = UsersDataGridView.Columns["location"] as DataGridViewComboBoxColumn;
-            locationsColumn.DataSource = Locations.GetAll();
-            locationsColumn.DisplayMember = "location_name";
-            locationsColumn.ValueMember = "location_name";
-
             Functions.NewlineProcessing(UsersDataGridView);
 
-            UsersDataGridView.DataSource = ApplicationDB.GetUsers();
+            DataGridViewComboBoxColumn locationsColumn = UsersDataGridView.Columns["location"] as DataGridViewComboBoxColumn;
+            locationsColumn.DisplayMember = "location_name";
+            locationsColumn.ValueMember = "location_id";
+            locationsColumn.DataSource = Locations.GetAll();
 
-            //for (int i = 0; i < UsersDataGridView.RowCount; i++)
-            //{
-            //    var a = Functions.FromUnixTime(Convert.ToInt32(UsersDataGridView["start_at", i].Value.ToString()));
-            //    UsersDataGridView["start_at", i].Value = Functions.FromUnixTime(Convert.ToInt32(UsersDataGridView["start_at", i].Value.ToString()));
-            //    UsersDataGridView["end_at", i].Value = Functions.FromUnixTime(Convert.ToInt32(UsersDataGridView["end_at", i].Value.ToString()));
-            //}
+            UsersDataGridView.DataSource = ApplicationDB.Users.Get();
 
             NewApplicationNameLabel.Text = $"Новые заявки > {Customer.Name} - {ApplicationDB.Date}";
         }

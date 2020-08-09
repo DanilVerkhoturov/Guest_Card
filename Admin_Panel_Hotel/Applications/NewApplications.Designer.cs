@@ -38,12 +38,13 @@
             this.Castomer = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Location = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ApplicationsDataGridView = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.NotificationLabel = new System.Windows.Forms.Label();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.viewing = new System.Windows.Forms.DataGridViewImageColumn();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.NotificationLabel = new System.Windows.Forms.Label();
+            this.applicationid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ApplicationsDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,7 +89,8 @@
             this.name,
             this.date,
             this.viewing,
-            this.id});
+            this.applicationid,
+            this.customerid});
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -136,6 +138,29 @@
             this.ApplicationsDataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.ApplicationsDataGridView_CellMouseClick);
             this.ApplicationsDataGridView.CellMouseMove += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.ApplicationsDataGridView_CellMouseMove);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Roboto", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(70, 44);
+            this.label1.Margin = new System.Windows.Forms.Padding(61, 35, 6, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(212, 35);
+            this.label1.TabIndex = 53;
+            this.label1.Text = "Новые заявки";
+            // 
+            // NotificationLabel
+            // 
+            this.NotificationLabel.AutoSize = true;
+            this.NotificationLabel.Font = new System.Drawing.Font("Roboto", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.NotificationLabel.Location = new System.Drawing.Point(284, 425);
+            this.NotificationLabel.Name = "NotificationLabel";
+            this.NotificationLabel.Size = new System.Drawing.Size(525, 44);
+            this.NotificationLabel.TabIndex = 58;
+            this.NotificationLabel.Text = "У вас пока нет Новых заявок";
+            this.NotificationLabel.Visible = false;
+            // 
             // name
             // 
             this.name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -167,36 +192,21 @@
             this.viewing.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.viewing.Width = 5;
             // 
-            // id
+            // applicationid
             // 
-            this.id.DataPropertyName = "id";
-            this.id.HeaderText = "id";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Visible = false;
+            this.applicationid.DataPropertyName = "application_id";
+            this.applicationid.HeaderText = "applicationid";
+            this.applicationid.Name = "applicationid";
+            this.applicationid.ReadOnly = true;
+            this.applicationid.Visible = false;
             // 
-            // label1
+            // customerid
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Roboto", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(70, 44);
-            this.label1.Margin = new System.Windows.Forms.Padding(61, 35, 6, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(212, 35);
-            this.label1.TabIndex = 53;
-            this.label1.Text = "Новые заявки";
-            // 
-            // NotificationLabel
-            // 
-            this.NotificationLabel.AutoSize = true;
-            this.NotificationLabel.Font = new System.Drawing.Font("Roboto", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.NotificationLabel.Location = new System.Drawing.Point(284, 425);
-            this.NotificationLabel.Name = "NotificationLabel";
-            this.NotificationLabel.Size = new System.Drawing.Size(525, 44);
-            this.NotificationLabel.TabIndex = 58;
-            this.NotificationLabel.Text = "У вас пока нет Новых заявок";
-            this.NotificationLabel.Visible = false;
+            this.customerid.DataPropertyName = "customer_id";
+            this.customerid.HeaderText = "customer_id";
+            this.customerid.Name = "customerid";
+            this.customerid.ReadOnly = true;
+            this.customerid.Visible = false;
             // 
             // NewApplications
             // 
@@ -223,10 +233,11 @@
         private new System.Windows.Forms.DataGridViewTextBoxColumn Location;
         private System.Windows.Forms.DataGridView ApplicationsDataGridView;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label NotificationLabel;
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.DataGridViewTextBoxColumn date;
         private System.Windows.Forms.DataGridViewImageColumn viewing;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.Label NotificationLabel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn applicationid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn customerid;
     }
 }

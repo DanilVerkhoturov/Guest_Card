@@ -179,17 +179,17 @@
     <Compile Include="Customers\CustomerInfoForm.Designer.cs">
       <DependentUpon>CustomerInfoForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Customers\SubDivisionInfoForm.cs">
+    <Compile Include="Customers\LocationInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Customers\SubDivisionInfoForm.Designer.cs">
-      <DependentUpon>SubDivisionInfoForm.cs</DependentUpon>
+    <Compile Include="Customers\LocationInfo.Designer.cs">
+      <DependentUpon>LocationInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Customers\LocationInfoForm.cs">
+    <Compile Include="Customers\SubDivisionInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Customers\LocationInfoForm.Designer.cs">
-      <DependentUpon>LocationInfoForm.cs</DependentUpon>
+    <Compile Include="Customers\SubDivisionInfo.Designer.cs">
+      <DependentUpon>SubDivisionInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Applications\ShowHistoryApplication.cs">
       <SubType>Form</SubType>
@@ -394,11 +394,11 @@
     <EmbeddedResource Include="Customers\CustomerInfoForm.resx">
       <DependentUpon>CustomerInfoForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Customers\SubDivisionInfoForm.resx">
-      <DependentUpon>SubDivisionInfoForm.cs</DependentUpon>
+    <EmbeddedResource Include="Customers\LocationInfo.resx">
+      <DependentUpon>LocationInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Customers\LocationInfoForm.resx">
-      <DependentUpon>LocationInfoForm.cs</DependentUpon>
+    <EmbeddedResource Include="Customers\SubDivisionInfo.resx">
+      <DependentUpon>SubDivisionInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Applications\ShowHistoryApplication.resx">
       <DependentUpon>ShowHistoryApplication.cs</DependentUpon>

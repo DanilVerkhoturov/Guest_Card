@@ -1,6 +1,6 @@
 ﻿namespace Admin_Panel_Hotel.Customers
 {
-    partial class LocationInfoForm
+    partial class SubDivisionInfo
     {
         /// <summary>
         /// Required designer variable.
@@ -30,19 +30,19 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.CustomerLocationNameLabel = new System.Windows.Forms.Label();
-            this.LocationDataLabel = new System.Windows.Forms.Label();
+            this.CustomerSubDivisionNameLabel = new System.Windows.Forms.Label();
+            this.SubDivisionDataLabel = new System.Windows.Forms.Label();
             this.CardPropertiesLabel = new System.Windows.Forms.Label();
-            this.Analyticslabel = new System.Windows.Forms.Label();
+            this.AnalyticsLabel = new System.Windows.Forms.Label();
             this.CardPropertiesPanel = new System.Windows.Forms.Panel();
-            this.SaveCardPropertiesButton = new System.Windows.Forms.Button();
-            this.EditCardPropertiesButton = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.CardPropertiesDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.EditCardPropertiesButton = new System.Windows.Forms.Button();
+            this.SaveCardPropertiesButton = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.FoodPanel = new System.Windows.Forms.Panel();
             this.MunusSurchargeCheckBox = new System.Windows.Forms.RadioButton();
@@ -56,47 +56,50 @@
             this.DiscountCheckBox = new System.Windows.Forms.CheckBox();
             this.MenuBuffetCheckBox = new System.Windows.Forms.CheckBox();
             this.MenuCanteenCheckBox = new System.Windows.Forms.CheckBox();
-            this.PanelCustomer = new System.Windows.Forms.Panel();
-            this.EditEmailButton = new System.Windows.Forms.Button();
+            this.SubDivisionInfoPanel = new System.Windows.Forms.Panel();
             this.EditNameButton = new System.Windows.Forms.Button();
+            this.EditEmailButton = new System.Windows.Forms.Button();
+            this.EditEmailNameButton = new System.Windows.Forms.Button();
             this.EmailTextBox = new System.Windows.Forms.TextBox();
+            this.EmailNameTextBox = new System.Windows.Forms.TextBox();
             this.NameTextBox = new System.Windows.Forms.TextBox();
-            this.NameOrganiztionTextBox = new System.Windows.Forms.TextBox();
-            this.SaveButton = new System.Windows.Forms.Button();
+            this.EditNameTipLabel = new System.Windows.Forms.Label();
+            this.EditEmailTipLabel = new System.Windows.Forms.Label();
+            this.SaveSubDivisionInfoButton = new System.Windows.Forms.Button();
             this.CardPropertiesPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CardPropertiesDataGridView)).BeginInit();
             this.FoodPanel.SuspendLayout();
-            this.PanelCustomer.SuspendLayout();
+            this.SubDivisionInfoPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // CustomerLocationNameLabel
+            // CustomerSubDivisionNameLabel
             // 
-            this.CustomerLocationNameLabel.AutoEllipsis = true;
-            this.CustomerLocationNameLabel.AutoSize = true;
-            this.CustomerLocationNameLabel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CustomerLocationNameLabel.Font = new System.Drawing.Font("Roboto", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CustomerLocationNameLabel.Location = new System.Drawing.Point(70, 44);
-            this.CustomerLocationNameLabel.Margin = new System.Windows.Forms.Padding(61, 35, 3, 0);
-            this.CustomerLocationNameLabel.MaximumSize = new System.Drawing.Size(900, 35);
-            this.CustomerLocationNameLabel.Name = "CustomerLocationNameLabel";
-            this.CustomerLocationNameLabel.Size = new System.Drawing.Size(254, 35);
-            this.CustomerLocationNameLabel.TabIndex = 0;
-            this.CustomerLocationNameLabel.Text = "Мои заказчики > ";
-            this.CustomerLocationNameLabel.Click += new System.EventHandler(this.CustomerLocationNameLabel_Click);
+            this.CustomerSubDivisionNameLabel.AutoEllipsis = true;
+            this.CustomerSubDivisionNameLabel.AutoSize = true;
+            this.CustomerSubDivisionNameLabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CustomerSubDivisionNameLabel.Font = new System.Drawing.Font("Roboto", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CustomerSubDivisionNameLabel.Location = new System.Drawing.Point(70, 44);
+            this.CustomerSubDivisionNameLabel.Margin = new System.Windows.Forms.Padding(61, 35, 3, 0);
+            this.CustomerSubDivisionNameLabel.MaximumSize = new System.Drawing.Size(900, 35);
+            this.CustomerSubDivisionNameLabel.Name = "CustomerSubDivisionNameLabel";
+            this.CustomerSubDivisionNameLabel.Size = new System.Drawing.Size(254, 35);
+            this.CustomerSubDivisionNameLabel.TabIndex = 0;
+            this.CustomerSubDivisionNameLabel.Text = "Мои заказчики > ";
+            this.CustomerSubDivisionNameLabel.Click += new System.EventHandler(this.CustomerSubDivisionNameLabel_Click);
             // 
-            // LocationDataLabel
+            // SubDivisionDataLabel
             // 
-            this.LocationDataLabel.AutoSize = true;
-            this.LocationDataLabel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.LocationDataLabel.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LocationDataLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
-            this.LocationDataLabel.Location = new System.Drawing.Point(151, 114);
-            this.LocationDataLabel.Margin = new System.Windows.Forms.Padding(142, 35, 3, 0);
-            this.LocationDataLabel.Name = "LocationDataLabel";
-            this.LocationDataLabel.Size = new System.Drawing.Size(104, 29);
-            this.LocationDataLabel.TabIndex = 1;
-            this.LocationDataLabel.Text = "Данные";
-            this.LocationDataLabel.Click += new System.EventHandler(this.LocationDataLabel_Click);
+            this.SubDivisionDataLabel.AutoSize = true;
+            this.SubDivisionDataLabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SubDivisionDataLabel.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SubDivisionDataLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
+            this.SubDivisionDataLabel.Location = new System.Drawing.Point(151, 114);
+            this.SubDivisionDataLabel.Margin = new System.Windows.Forms.Padding(142, 35, 3, 0);
+            this.SubDivisionDataLabel.Name = "SubDivisionDataLabel";
+            this.SubDivisionDataLabel.Size = new System.Drawing.Size(104, 29);
+            this.SubDivisionDataLabel.TabIndex = 1;
+            this.SubDivisionDataLabel.Text = "Данные";
+            this.SubDivisionDataLabel.Click += new System.EventHandler(this.SubDivisionDataLabel_Click);
             // 
             // CardPropertiesLabel
             // 
@@ -112,44 +115,120 @@
             this.CardPropertiesLabel.Text = "Свойства карт";
             this.CardPropertiesLabel.Click += new System.EventHandler(this.CardPropertiesLabel_Click);
             // 
-            // Analyticslabel
+            // AnalyticsLabel
             // 
-            this.Analyticslabel.AutoSize = true;
-            this.Analyticslabel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Analyticslabel.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Analyticslabel.ForeColor = System.Drawing.Color.Black;
-            this.Analyticslabel.Location = new System.Drawing.Point(510, 114);
-            this.Analyticslabel.Margin = new System.Windows.Forms.Padding(35, 35, 3, 0);
-            this.Analyticslabel.Name = "Analyticslabel";
-            this.Analyticslabel.Size = new System.Drawing.Size(135, 29);
-            this.Analyticslabel.TabIndex = 3;
-            this.Analyticslabel.Text = "Аналитика";
+            this.AnalyticsLabel.AutoSize = true;
+            this.AnalyticsLabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AnalyticsLabel.Enabled = false;
+            this.AnalyticsLabel.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AnalyticsLabel.ForeColor = System.Drawing.Color.Black;
+            this.AnalyticsLabel.Location = new System.Drawing.Point(510, 114);
+            this.AnalyticsLabel.Margin = new System.Windows.Forms.Padding(35, 35, 3, 0);
+            this.AnalyticsLabel.Name = "AnalyticsLabel";
+            this.AnalyticsLabel.Size = new System.Drawing.Size(135, 29);
+            this.AnalyticsLabel.TabIndex = 3;
+            this.AnalyticsLabel.Text = "Аналитика";
             // 
             // CardPropertiesPanel
             // 
-            this.CardPropertiesPanel.Controls.Add(this.SaveCardPropertiesButton);
+            this.CardPropertiesPanel.Controls.Add(this.CardPropertiesDataGridView);
             this.CardPropertiesPanel.Controls.Add(this.EditCardPropertiesButton);
-            this.CardPropertiesPanel.Controls.Add(this.dataGridView1);
-            this.CardPropertiesPanel.Location = new System.Drawing.Point(133, 165);
+            this.CardPropertiesPanel.Controls.Add(this.SaveCardPropertiesButton);
+            this.CardPropertiesPanel.Location = new System.Drawing.Point(134, 166);
             this.CardPropertiesPanel.Margin = new System.Windows.Forms.Padding(5);
             this.CardPropertiesPanel.Name = "CardPropertiesPanel";
             this.CardPropertiesPanel.Size = new System.Drawing.Size(619, 686);
             this.CardPropertiesPanel.TabIndex = 47;
             this.CardPropertiesPanel.Visible = false;
             // 
-            // SaveCardPropertiesButton
+            // CardPropertiesDataGridView
             // 
-            this.SaveCardPropertiesButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
-            this.SaveCardPropertiesButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.SaveCardPropertiesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SaveCardPropertiesButton.ForeColor = System.Drawing.Color.White;
-            this.SaveCardPropertiesButton.Location = new System.Drawing.Point(403, 16);
-            this.SaveCardPropertiesButton.Name = "SaveCardPropertiesButton";
-            this.SaveCardPropertiesButton.Size = new System.Drawing.Size(201, 36);
-            this.SaveCardPropertiesButton.TabIndex = 60;
-            this.SaveCardPropertiesButton.Text = "Сохранить";
-            this.SaveCardPropertiesButton.UseVisualStyleBackColor = false;
-            this.SaveCardPropertiesButton.Visible = false;
+            this.CardPropertiesDataGridView.AllowUserToAddRows = false;
+            this.CardPropertiesDataGridView.AllowUserToDeleteRows = false;
+            this.CardPropertiesDataGridView.AllowUserToResizeColumns = false;
+            this.CardPropertiesDataGridView.AllowUserToResizeRows = false;
+            this.CardPropertiesDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.CardPropertiesDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.CardPropertiesDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.CardPropertiesDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.CardPropertiesDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.CardPropertiesDataGridView.ColumnHeadersHeight = 35;
+            this.CardPropertiesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.CardPropertiesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewImageColumn1});
+            this.CardPropertiesDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
+            this.CardPropertiesDataGridView.Enabled = false;
+            this.CardPropertiesDataGridView.EnableHeadersVisualStyles = false;
+            this.CardPropertiesDataGridView.GridColor = System.Drawing.Color.Black;
+            this.CardPropertiesDataGridView.Location = new System.Drawing.Point(13, 16);
+            this.CardPropertiesDataGridView.Margin = new System.Windows.Forms.Padding(3, 31, 3, 3);
+            this.CardPropertiesDataGridView.MultiSelect = false;
+            this.CardPropertiesDataGridView.Name = "CardPropertiesDataGridView";
+            this.CardPropertiesDataGridView.ReadOnly = true;
+            this.CardPropertiesDataGridView.RowHeadersVisible = false;
+            this.CardPropertiesDataGridView.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.CardPropertiesDataGridView.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
+            this.CardPropertiesDataGridView.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CardPropertiesDataGridView.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.CardPropertiesDataGridView.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.White;
+            this.CardPropertiesDataGridView.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.CardPropertiesDataGridView.RowTemplate.Height = 30;
+            this.CardPropertiesDataGridView.Size = new System.Drawing.Size(348, 350);
+            this.CardPropertiesDataGridView.TabIndex = 62;
+            this.CardPropertiesDataGridView.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "№";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn2.HeaderText = "Свойства карт";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle2.Format = "N0";
+            dataGridViewCellStyle2.NullValue = "0";
+            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewTextBoxColumn3.HeaderText = "";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "id";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn4.Visible = false;
+            // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.HeaderText = "";
+            this.dataGridViewImageColumn1.Image = global::Admin_Panel_Hotel.Properties.Resources.closeoutline_110831_4;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.ReadOnly = true;
             // 
             // EditCardPropertiesButton
             // 
@@ -165,91 +244,20 @@
             this.EditCardPropertiesButton.UseVisualStyleBackColor = false;
             this.EditCardPropertiesButton.Click += new System.EventHandler(this.EditCardPropertiesButton_Click);
             // 
-            // dataGridView1
+            // SaveCardPropertiesButton
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.ColumnHeadersHeight = 35;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewImageColumn1});
-            this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.dataGridView1.Enabled = false;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 16);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 31, 3, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.dataGridView1.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.dataGridView1.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dataGridView1.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
-            this.dataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.dataGridView1.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridView1.RowTemplate.Height = 30;
-            this.dataGridView1.Size = new System.Drawing.Size(348, 277);
-            this.dataGridView1.TabIndex = 62;
-            this.dataGridView1.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "№";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "name";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Свойства карт";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "count_beds";
-            dataGridViewCellStyle2.Format = "N0";
-            dataGridViewCellStyle2.NullValue = "0";
-            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewTextBoxColumn3.HeaderText = "";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "id";
-            this.dataGridViewTextBoxColumn4.HeaderText = "id";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Visible = false;
-            // 
-            // dataGridViewImageColumn1
-            // 
-            this.dataGridViewImageColumn1.HeaderText = "";
-            this.dataGridViewImageColumn1.Image = global::Admin_Panel_Hotel.Properties.Resources.closeoutline_110831_4;
-            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.ReadOnly = true;
+            this.SaveCardPropertiesButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
+            this.SaveCardPropertiesButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.SaveCardPropertiesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SaveCardPropertiesButton.ForeColor = System.Drawing.Color.White;
+            this.SaveCardPropertiesButton.Location = new System.Drawing.Point(403, 16);
+            this.SaveCardPropertiesButton.Name = "SaveCardPropertiesButton";
+            this.SaveCardPropertiesButton.Size = new System.Drawing.Size(201, 36);
+            this.SaveCardPropertiesButton.TabIndex = 60;
+            this.SaveCardPropertiesButton.Text = "Сохранить";
+            this.SaveCardPropertiesButton.UseVisualStyleBackColor = false;
+            this.SaveCardPropertiesButton.Visible = false;
+            this.SaveCardPropertiesButton.Click += new System.EventHandler(this.SaveCardPropertiesButton_Click);
             // 
             // label5
             // 
@@ -423,19 +431,36 @@
             this.MenuCanteenCheckBox.Text = "Меню столовая";
             this.MenuCanteenCheckBox.UseVisualStyleBackColor = true;
             // 
-            // PanelCustomer
+            // SubDivisionInfoPanel
             // 
-            this.PanelCustomer.Controls.Add(this.SaveButton);
-            this.PanelCustomer.Controls.Add(this.EditEmailButton);
-            this.PanelCustomer.Controls.Add(this.EditNameButton);
-            this.PanelCustomer.Controls.Add(this.EmailTextBox);
-            this.PanelCustomer.Controls.Add(this.NameTextBox);
-            this.PanelCustomer.Controls.Add(this.NameOrganiztionTextBox);
-            this.PanelCustomer.Location = new System.Drawing.Point(134, 166);
-            this.PanelCustomer.Name = "PanelCustomer";
-            this.PanelCustomer.Size = new System.Drawing.Size(943, 686);
-            this.PanelCustomer.TabIndex = 73;
-            this.PanelCustomer.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelCustomer_Paint);
+            this.SubDivisionInfoPanel.Controls.Add(this.EditNameButton);
+            this.SubDivisionInfoPanel.Controls.Add(this.EditEmailButton);
+            this.SubDivisionInfoPanel.Controls.Add(this.EditEmailNameButton);
+            this.SubDivisionInfoPanel.Controls.Add(this.EmailTextBox);
+            this.SubDivisionInfoPanel.Controls.Add(this.EmailNameTextBox);
+            this.SubDivisionInfoPanel.Controls.Add(this.NameTextBox);
+            this.SubDivisionInfoPanel.Controls.Add(this.EditNameTipLabel);
+            this.SubDivisionInfoPanel.Controls.Add(this.EditEmailTipLabel);
+            this.SubDivisionInfoPanel.Controls.Add(this.SaveSubDivisionInfoButton);
+            this.SubDivisionInfoPanel.Location = new System.Drawing.Point(134, 166);
+            this.SubDivisionInfoPanel.Name = "SubDivisionInfoPanel";
+            this.SubDivisionInfoPanel.Size = new System.Drawing.Size(943, 686);
+            this.SubDivisionInfoPanel.TabIndex = 73;
+            // 
+            // EditNameButton
+            // 
+            this.EditNameButton.BackColor = System.Drawing.Color.Transparent;
+            this.EditNameButton.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.pngflow_1;
+            this.EditNameButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.EditNameButton.FlatAppearance.BorderSize = 0;
+            this.EditNameButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EditNameButton.Location = new System.Drawing.Point(756, 22);
+            this.EditNameButton.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
+            this.EditNameButton.Name = "EditNameButton";
+            this.EditNameButton.Size = new System.Drawing.Size(24, 24);
+            this.EditNameButton.TabIndex = 62;
+            this.EditNameButton.UseVisualStyleBackColor = false;
+            this.EditNameButton.Click += new System.EventHandler(this.EditNameButton_Click);
             // 
             // EditEmailButton
             // 
@@ -450,86 +475,118 @@
             this.EditEmailButton.Size = new System.Drawing.Size(24, 24);
             this.EditEmailButton.TabIndex = 4;
             this.EditEmailButton.UseVisualStyleBackColor = false;
+            this.EditEmailButton.Click += new System.EventHandler(this.EditEmailButton_Click);
             // 
-            // EditNameButton
+            // EditEmailNameButton
             // 
-            this.EditNameButton.BackColor = System.Drawing.Color.Transparent;
-            this.EditNameButton.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.pngflow_1;
-            this.EditNameButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.EditNameButton.FlatAppearance.BorderSize = 0;
-            this.EditNameButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EditNameButton.Location = new System.Drawing.Point(337, 79);
-            this.EditNameButton.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
-            this.EditNameButton.Name = "EditNameButton";
-            this.EditNameButton.Size = new System.Drawing.Size(24, 24);
-            this.EditNameButton.TabIndex = 3;
-            this.EditNameButton.UseVisualStyleBackColor = false;
+            this.EditEmailNameButton.BackColor = System.Drawing.Color.Transparent;
+            this.EditEmailNameButton.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.pngflow_1;
+            this.EditEmailNameButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.EditEmailNameButton.FlatAppearance.BorderSize = 0;
+            this.EditEmailNameButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EditEmailNameButton.Location = new System.Drawing.Point(337, 79);
+            this.EditEmailNameButton.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
+            this.EditEmailNameButton.Name = "EditEmailNameButton";
+            this.EditEmailNameButton.Size = new System.Drawing.Size(24, 24);
+            this.EditEmailNameButton.TabIndex = 3;
+            this.EditEmailNameButton.UseVisualStyleBackColor = false;
+            this.EditEmailNameButton.Click += new System.EventHandler(this.EditEmailNameButton_Click);
             // 
             // EmailTextBox
             // 
             this.EmailTextBox.Location = new System.Drawing.Point(439, 76);
             this.EmailTextBox.Margin = new System.Windows.Forms.Padding(3, 24, 3, 3);
             this.EmailTextBox.Name = "EmailTextBox";
+            this.EmailTextBox.ReadOnly = true;
             this.EmailTextBox.Size = new System.Drawing.Size(294, 33);
             this.EmailTextBox.TabIndex = 2;
             this.EmailTextBox.Text = "@gmail";
             // 
+            // EmailNameTextBox
+            // 
+            this.EmailNameTextBox.Location = new System.Drawing.Point(23, 76);
+            this.EmailNameTextBox.Margin = new System.Windows.Forms.Padding(3, 24, 0, 3);
+            this.EmailNameTextBox.Name = "EmailNameTextBox";
+            this.EmailNameTextBox.ReadOnly = true;
+            this.EmailNameTextBox.Size = new System.Drawing.Size(294, 33);
+            this.EmailNameTextBox.TabIndex = 1;
+            this.EmailNameTextBox.Text = "Александр";
+            // 
             // NameTextBox
             // 
-            this.NameTextBox.Location = new System.Drawing.Point(23, 76);
-            this.NameTextBox.Margin = new System.Windows.Forms.Padding(3, 24, 0, 3);
+            this.NameTextBox.Location = new System.Drawing.Point(23, 19);
+            this.NameTextBox.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
             this.NameTextBox.Name = "NameTextBox";
-            this.NameTextBox.Size = new System.Drawing.Size(294, 33);
-            this.NameTextBox.TabIndex = 1;
-            this.NameTextBox.Text = "Александр";
+            this.NameTextBox.ReadOnly = true;
+            this.NameTextBox.Size = new System.Drawing.Size(710, 33);
+            this.NameTextBox.TabIndex = 0;
+            this.NameTextBox.Text = "Газпром Развитие";
             // 
-            // NameOrganiztionTextBox
+            // EditNameTipLabel
             // 
-            this.NameOrganiztionTextBox.Location = new System.Drawing.Point(23, 19);
-            this.NameOrganiztionTextBox.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
-            this.NameOrganiztionTextBox.Name = "NameOrganiztionTextBox";
-            this.NameOrganiztionTextBox.Size = new System.Drawing.Size(710, 33);
-            this.NameOrganiztionTextBox.TabIndex = 0;
-            this.NameOrganiztionTextBox.Text = "Газпром Развитие";
+            this.EditNameTipLabel.AutoSize = true;
+            this.EditNameTipLabel.BackColor = System.Drawing.Color.Transparent;
+            this.EditNameTipLabel.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.EditNameTipLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(87)))), ((int)(((byte)(87)))));
+            this.EditNameTipLabel.Location = new System.Drawing.Point(752, 16);
+            this.EditNameTipLabel.Name = "EditNameTipLabel";
+            this.EditNameTipLabel.Size = new System.Drawing.Size(170, 38);
+            this.EditNameTipLabel.TabIndex = 65;
+            this.EditNameTipLabel.Text = "Редактируйте поле\r\nи нажмите сохранить";
+            this.EditNameTipLabel.Visible = false;
             // 
-            // SaveButton
+            // EditEmailTipLabel
             // 
-            this.SaveButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
-            this.SaveButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.SaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SaveButton.ForeColor = System.Drawing.Color.White;
-            this.SaveButton.Location = new System.Drawing.Point(532, 633);
-            this.SaveButton.Name = "SaveButton";
-            this.SaveButton.Size = new System.Drawing.Size(201, 36);
-            this.SaveButton.TabIndex = 61;
-            this.SaveButton.Text = "Сохранить";
-            this.SaveButton.UseVisualStyleBackColor = false;
-            this.SaveButton.Visible = false;
+            this.EditEmailTipLabel.AutoSize = true;
+            this.EditEmailTipLabel.BackColor = System.Drawing.Color.Transparent;
+            this.EditEmailTipLabel.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.EditEmailTipLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(87)))), ((int)(((byte)(87)))));
+            this.EditEmailTipLabel.Location = new System.Drawing.Point(752, 76);
+            this.EditEmailTipLabel.Name = "EditEmailTipLabel";
+            this.EditEmailTipLabel.Size = new System.Drawing.Size(170, 38);
+            this.EditEmailTipLabel.TabIndex = 66;
+            this.EditEmailTipLabel.Text = "Редактируйте поле\r\nи нажмите сохранить";
+            this.EditEmailTipLabel.Visible = false;
             // 
-            // LocationInfoForm
+            // SaveSubDivisionInfoButton
+            // 
+            this.SaveSubDivisionInfoButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
+            this.SaveSubDivisionInfoButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.SaveSubDivisionInfoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SaveSubDivisionInfoButton.ForeColor = System.Drawing.Color.White;
+            this.SaveSubDivisionInfoButton.Location = new System.Drawing.Point(532, 633);
+            this.SaveSubDivisionInfoButton.Name = "SaveSubDivisionInfoButton";
+            this.SaveSubDivisionInfoButton.Size = new System.Drawing.Size(201, 36);
+            this.SaveSubDivisionInfoButton.TabIndex = 61;
+            this.SaveSubDivisionInfoButton.Text = "Сохранить";
+            this.SaveSubDivisionInfoButton.UseVisualStyleBackColor = false;
+            this.SaveSubDivisionInfoButton.Visible = false;
+            this.SaveSubDivisionInfoButton.Click += new System.EventHandler(this.SaveSubDivisionInfoButton_Click);
+            // 
+            // SubDivisionInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.ClientSize = new System.Drawing.Size(1093, 894);
-            this.Controls.Add(this.Analyticslabel);
+            this.Controls.Add(this.AnalyticsLabel);
             this.Controls.Add(this.CardPropertiesLabel);
-            this.Controls.Add(this.LocationDataLabel);
-            this.Controls.Add(this.CustomerLocationNameLabel);
+            this.Controls.Add(this.SubDivisionDataLabel);
+            this.Controls.Add(this.CustomerSubDivisionNameLabel);
             this.Controls.Add(this.FoodPanel);
-            this.Controls.Add(this.PanelCustomer);
+            this.Controls.Add(this.SubDivisionInfoPanel);
             this.Controls.Add(this.CardPropertiesPanel);
             this.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(6);
-            this.Name = "LocationInfoForm";
-            this.Text = "LocationInfoForm";
+            this.Name = "SubDivisionInfo";
+            this.Text = "SubDivisionInfo";
             this.CardPropertiesPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CardPropertiesDataGridView)).EndInit();
             this.FoodPanel.ResumeLayout(false);
             this.FoodPanel.PerformLayout();
-            this.PanelCustomer.ResumeLayout(false);
-            this.PanelCustomer.PerformLayout();
+            this.SubDivisionInfoPanel.ResumeLayout(false);
+            this.SubDivisionInfoPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -537,20 +594,15 @@
 
         #endregion
 
-        private System.Windows.Forms.Label CustomerLocationNameLabel;
-        private System.Windows.Forms.Label LocationDataLabel;
+        private System.Windows.Forms.Label CustomerSubDivisionNameLabel;
+        private System.Windows.Forms.Label SubDivisionDataLabel;
         private System.Windows.Forms.Label CardPropertiesLabel;
-        private System.Windows.Forms.Label Analyticslabel;
+        private System.Windows.Forms.Label AnalyticsLabel;
         private System.Windows.Forms.Panel CardPropertiesPanel;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button EditCardPropertiesButton;
         private System.Windows.Forms.Button SaveCardPropertiesButton;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+        private System.Windows.Forms.DataGridView CardPropertiesDataGridView;
         private System.Windows.Forms.Panel FoodPanel;
         private System.Windows.Forms.RadioButton MunusSurchargeCheckBox;
         private System.Windows.Forms.RadioButton MinusCheckBox;
@@ -563,12 +615,20 @@
         private System.Windows.Forms.CheckBox DiscountCheckBox;
         private System.Windows.Forms.CheckBox MenuBuffetCheckBox;
         private System.Windows.Forms.CheckBox MenuCanteenCheckBox;
-        private System.Windows.Forms.Panel PanelCustomer;
+        private System.Windows.Forms.Panel SubDivisionInfoPanel;
+        private System.Windows.Forms.TextBox EmailNameTextBox;
         private System.Windows.Forms.TextBox NameTextBox;
-        private System.Windows.Forms.TextBox NameOrganiztionTextBox;
         private System.Windows.Forms.Button EditEmailButton;
-        private System.Windows.Forms.Button EditNameButton;
+        private System.Windows.Forms.Button EditEmailNameButton;
         private System.Windows.Forms.TextBox EmailTextBox;
-        private System.Windows.Forms.Button SaveButton;
+        private System.Windows.Forms.Button SaveSubDivisionInfoButton;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+        private System.Windows.Forms.Button EditNameButton;
+        private System.Windows.Forms.Label EditNameTipLabel;
+        private System.Windows.Forms.Label EditEmailTipLabel;
     }
 }

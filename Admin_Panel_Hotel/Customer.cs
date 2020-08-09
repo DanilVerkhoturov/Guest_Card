@@ -16,10 +16,7 @@ namespace Admin_Panel_Hotel
         /// Уникальный номер организации.
         /// </summary>
         public static long DivisionId { get; set; }
-        /// <summary>
-        /// Уникальный номер подрядной организации.
-        /// </summary>
-        public static long SubdivisionId { get; set; }
+
         /// <summary>
         /// Название.
         /// </summary>
@@ -165,8 +162,8 @@ namespace Admin_Panel_Hotel
         /// <returns>Возвращает уникальный номер (Id) созданной подрядной организации. -1 - если возникла непредвиденная ошибка.</returns>
         public static long AddSubDivision(string subDivisionName)
         {
-            SubdivisionId = Functions.SqlInsert($"INSERT INTO division(parent_id, name) VALUES({DivisionId}, '{subDivisionName.Trim()}')");
-            return SubdivisionId >= 0 ? SubdivisionId : -1;
+            SubDivision.Id = Functions.SqlInsert($"INSERT INTO division(parent_id, name) VALUES({DivisionId}, '{subDivisionName.Trim()}')");
+            return SubDivision.Id >= 0 ? SubDivision.Id : -1;
         }
 
         /// <summary>
@@ -363,6 +360,36 @@ namespace Admin_Panel_Hotel
             {
                 return false;
             }
+        }
+
+        /// <summary>
+        /// Локация заказчика.
+        /// </summary>
+        public class Location
+        {
+            /// <summary>
+            /// Уникальный номер.
+            /// </summary>
+            public static long Id { get; set; }
+            /// <summary>
+            /// Название.
+            /// </summary>
+            public static string Name { get; set; }
+        }
+
+        /// <summary>
+        /// Подрядная организация заказчика.
+        /// </summary>
+        public class SubDivision
+        {
+            /// <summary>
+            /// Уникальный номер.
+            /// </summary>
+            public static long Id { get; set; }
+            /// <summary>
+            /// Название.
+            /// </summary>
+            public static string Name { get; set; }
         }
     }
 }

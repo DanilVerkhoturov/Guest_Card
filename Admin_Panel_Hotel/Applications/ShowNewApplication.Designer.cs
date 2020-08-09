@@ -42,13 +42,13 @@
             this.Acceptbutton = new System.Windows.Forms.Button();
             this.UsersDataGridView = new System.Windows.Forms.DataGridView();
             this.EditButton = new System.Windows.Forms.Button();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.location = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.end_at = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.start_at = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.start_at = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.end_at = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.location = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.UsersDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -212,56 +212,13 @@
             this.EditButton.UseVisualStyleBackColor = false;
             this.EditButton.Click += new System.EventHandler(this.EditButton_Click);
             // 
-            // Column6
+            // Column1
             // 
-            this.Column6.DataPropertyName = "user_id";
-            this.Column6.HeaderText = "Column6";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Visible = false;
-            // 
-            // location
-            // 
-            this.location.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.location.DataPropertyName = "location";
-            this.location.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.location.HeaderText = "Локация";
-            this.location.Items.AddRange(new object[] {
-            "Локация"});
-            this.location.Name = "location";
-            this.location.ReadOnly = true;
-            this.location.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // end_at
-            // 
-            this.end_at.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.end_at.DataPropertyName = "end_at";
-            this.end_at.FillWeight = 112.3096F;
-            this.end_at.HeaderText = "Дата до";
-            this.end_at.MinimumWidth = 10;
-            this.end_at.Name = "end_at";
-            this.end_at.ReadOnly = true;
-            this.end_at.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // start_at
-            // 
-            this.start_at.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.start_at.DataPropertyName = "start_at";
-            this.start_at.FillWeight = 112.3096F;
-            this.start_at.HeaderText = "Дата от";
-            this.start_at.MinimumWidth = 10;
-            this.start_at.Name = "start_at";
-            this.start_at.ReadOnly = true;
-            this.start_at.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column3.DataPropertyName = "tab_number";
-            this.Column3.FillWeight = 112.3096F;
-            this.Column3.HeaderText = "Таб.номер";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.FillWeight = 20F;
+            this.Column1.HeaderText = "№";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // Column2
             // 
@@ -275,13 +232,56 @@
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             // 
-            // Column1
+            // Column3
             // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column1.FillWeight = 20F;
-            this.Column1.HeaderText = "№";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column3.DataPropertyName = "tab_number";
+            this.Column3.FillWeight = 112.3096F;
+            this.Column3.HeaderText = "Таб.номер";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // start_at
+            // 
+            this.start_at.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.start_at.DataPropertyName = "start_at";
+            this.start_at.FillWeight = 112.3096F;
+            this.start_at.HeaderText = "Дата от";
+            this.start_at.MinimumWidth = 10;
+            this.start_at.Name = "start_at";
+            this.start_at.ReadOnly = true;
+            this.start_at.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // end_at
+            // 
+            this.end_at.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.end_at.DataPropertyName = "end_at";
+            this.end_at.FillWeight = 112.3096F;
+            this.end_at.HeaderText = "Дата до";
+            this.end_at.MinimumWidth = 10;
+            this.end_at.Name = "end_at";
+            this.end_at.ReadOnly = true;
+            this.end_at.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // location
+            // 
+            this.location.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.location.DataPropertyName = "location_id";
+            this.location.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.location.HeaderText = "Локация";
+            this.location.Items.AddRange(new object[] {
+            "Локация"});
+            this.location.Name = "location";
+            this.location.ReadOnly = true;
+            this.location.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "user_id";
+            this.Column6.HeaderText = "Column6";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Visible = false;
             // 
             // ShowApplicationNew
             // 

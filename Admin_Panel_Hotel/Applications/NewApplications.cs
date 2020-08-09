@@ -22,9 +22,10 @@ namespace Admin_Panel_Hotel
         {
             if (e.ColumnIndex == 0)
             {
+                Customer.Id = Convert.ToInt64(ApplicationsDataGridView["customerid", e.RowIndex].Value.ToString());
                 Customer.Name = ApplicationsDataGridView["name", e.RowIndex].Value.ToString();
                 ApplicationDB.Date = ApplicationsDataGridView["date", e.RowIndex].Value.ToString();
-                ApplicationDB.Id = Convert.ToInt64(ApplicationsDataGridView["id", e.RowIndex].Value.ToString());
+                ApplicationDB.Id = Convert.ToInt64(ApplicationsDataGridView["applicationid", e.RowIndex].Value.ToString());
                 Functions.OpenChildForm(new ShowApplicationNew(), MainForm.ContP);
             }
         }

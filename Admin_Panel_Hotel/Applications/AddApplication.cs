@@ -10,10 +10,15 @@ namespace Admin_Panel_Hotel
         {
             InitializeComponent();
 
+            Functions.NewlineProcessing(UsersDataGridView);
+
             CustomerComboBox.DataSource = Customer.GetAllDivisions();
             LocationComboBox.DataSource = Locations.GetAll();
 
-            Functions.NewlineProcessing(UsersDataGridView, new string[] { "1", "Введите ФИО", "Таб.номер", "Дата от", "Дата до", "Локация" });
+            DataGridViewComboBoxColumn locationsComboBox = (DataGridViewComboBoxColumn)UsersDataGridView.Columns["location"];
+            locationsComboBox.ValueMember = "location_id";
+            locationsComboBox.DisplayMember = "location_name";
+            locationsComboBox.DataSource = Locations.GetAll();
         }
 
         private void AddUserLabel_Click(object sender, EventArgs e)
@@ -31,17 +36,16 @@ namespace Admin_Panel_Hotel
         private bool CheckLastUser()
         {
             int lastUser = UsersDataGridView.Rows.Count - 1;
-            DataGridViewComboBoxColumn locationsComboBox = (DataGridViewComboBoxColumn)UsersDataGridView.Columns["location"];
             DateTime dateFrom = DateTime.MinValue;
             DateTime dateTo = DateTime.MinValue;
 
             if (UsersDataGridView.Rows.Count == 0
                 || (UsersDataGridView.Rows.Count > 0
-                && UsersDataGridView[1, lastUser].Value != null && UsersDataGridView[1, lastUser].Value.ToString() != UsersDataGridView[0, lastUser].ToolTipText
-                && UsersDataGridView[2, lastUser].Value != null && UsersDataGridView[2, lastUser].Value.ToString() != UsersDataGridView[0, lastUser].ToolTipText
-                && UsersDataGridView[3, lastUser].Value != null && UsersDataGridView[3, lastUser].Value.ToString() != UsersDataGridView[0, lastUser].ToolTipText
-                && UsersDataGridView[4, lastUser].Value != null && UsersDataGridView[4, lastUser].Value.ToString() != UsersDataGridView[0, lastUser].ToolTipText
-                //&& UsersDataGridView[5, lastUser].Value != null && UsersDataGridView[5, lastUser].Value.ToString() != locationsComboBox.Items[0].ToString()
+                && UsersDataGridView["fio", lastUser].Value != null
+                && UsersDataGridView["tabNum", lastUser].Value != null
+                && UsersDataGridView["from", lastUser].Value != null
+                && UsersDataGridView["to", lastUser].Value != null
+                && UsersDataGridView["location", lastUser].Value != null
                 && DateTime.TryParse(UsersDataGridView[3, lastUser].Value.ToString(), out dateFrom)
                 && DateTime.TryParse(UsersDataGridView[4, lastUser].Value.ToString(), out dateTo))
                 && dateFrom < dateTo)
@@ -64,15 +68,26 @@ namespace Admin_Panel_Hotel
 
         private void SendToCustomerButton_Click(object sender, EventArgs e)
         {
-            if (/*CustomerComboBox.SelectedIndex > 0 && LocationComboBox.SelectedIndex > 0 &&*/ CheckLastUser()) // Если заполнены все обязательные поля.
+            if (CustomerComboBox.SelectedIndex >= 0 && CheckLastUser()) // Если заполнены все обязательные поля.
             {
-                string fileExcel = UsersToExcel();
+                if (ApplicationDB.Add(out long applicationId, CustomerComboBox.SelectedIndex, 2))
+                {
+                    for (int i = 0; i < UsersDataGridView.RowCount; i++)
+                    {
+                        if (!ApplicationDB.Users.Add(Convert.ToInt64(UsersDataGridView["fio", i].Value), Convert.ToDateTime(UsersDataGridView["from", i].Value), Convert.ToDateTime(UsersDataGridView["to", i].Value), Convert.ToInt64(UsersDataGridView["location", i].Value), 0))
+                        {
+                            MessageBox.Show("Возникла ошибка при добавлении клиента в заявке!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
 
-                // TODO: Сделать создание заявки в БД.
-
-                // TODO: Сделать отправку письма с файлом на почту заказчика.
-
-                Notify();
+                    //string fileExcel = UsersToExcel();
+                    //// TODO: Сделать отправку письма с файлом на почту заказчика.
+                    //Notify();
+                }
+                else
+                {
+                    MessageBox.Show("Возникла ошибка при добавлении заявки!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {
@@ -165,6 +180,11 @@ namespace Admin_Panel_Hotel
             {
                 Customer.Id = customerId;
                 LocationComboBox.DataSource = Locations.GetAll();
+
+                DataGridViewComboBoxColumn locationsComboBox = (DataGridViewComboBoxColumn)UsersDataGridView.Columns["location"];
+                locationsComboBox.ValueMember = "location_id";
+                locationsComboBox.DisplayMember = "location_name";
+                locationsComboBox.DataSource = Locations.GetAll();
             }
             else
             {
@@ -177,6 +197,11 @@ namespace Admin_Panel_Hotel
                     LocationComboBox.DataSource = null;
                 }
             }
+        }
+
+        private void LocationComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
