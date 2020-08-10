@@ -10,11 +10,13 @@ namespace Admin_Panel_Hotel.Customers
         {
             InitializeComponent();
 
-            Locations.GetInfo();
+            Customer.SubDivision.FillInfo();
 
-            EmailNameTextBox.Text = Locations.Name;
+            NameTextBox.Text = Customer.SubDivision.Name;
+            EmailNameTextBox.Text = Customer.SubDivision.EmailName;
+            EmailTextBox.Text = Customer.SubDivision.Email;
 
-            CustomerSubDivisionNameLabel.Text = $"Мои заказчики > {Customer.Name} > {Locations.Name}";
+            CustomerSubDivisionNameLabel.Text = $"Мои заказчики > {Customer.Name} > {Customer.SubDivision.Name}";
         }
 
         private void CustomerSubDivisionNameLabel_Click(object sender, EventArgs e)
@@ -29,6 +31,7 @@ namespace Admin_Panel_Hotel.Customers
         {
             SubDivisionInfoPanel.Visible = true;
             CardPropertiesPanel.Visible = false;
+            AllCardPropertiesPanel.Visible = false;
 
             SubDivisionDataLabel.ForeColor = MyColors._00A0E3();
 
@@ -42,6 +45,7 @@ namespace Admin_Panel_Hotel.Customers
         {
             SubDivisionInfoPanel.Visible = false;
             CardPropertiesPanel.Visible = true;
+            AllCardPropertiesPanel.Visible = true;
 
             SubDivisionDataLabel.ForeColor = Color.Black;
 

@@ -756,7 +756,7 @@ namespace Admin_Panel_Hotel
             {
                 // Получение информации о локации.
                 Hotels.Id = Convert.ToInt64(LocationsDataGridView["hotel_id", e.RowIndex].Value);
-                Locations.GetInfo();
+                Hotels.FillInfo();
 
                 //RoomsDataGridView.Rows.Clear();
 

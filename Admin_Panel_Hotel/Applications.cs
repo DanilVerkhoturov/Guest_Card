@@ -99,7 +99,7 @@ namespace Admin_Panel_Hotel
         /// <returns>Возвращает таблицу с текущими заявками.</returns>
         public static DataTable GetCurrent()
         {
-            return Functions.ExecuteSql("SELECT id, name, created_at as 'date' FROM application_list WHERE status_id = 2");
+            return Functions.ExecuteSql("SELECT application_id, name, created_at as 'date' FROM application_list WHERE status_id = 2");
         }
 
         /// <summary>
@@ -108,7 +108,7 @@ namespace Admin_Panel_Hotel
         /// <returns>Возвращает таблицу с черновиками заявок.</returns>
         public static DataTable GetDrafts()
         {
-            return Functions.ExecuteSql("SELECT id, name, created_at as 'date' FROM application_list WHERE status_id = 3");
+            return Functions.ExecuteSql("SELECT application_id, name, created_at as 'date' FROM application_list WHERE status_id = 3");
         }
 
         /// <summary>
@@ -117,7 +117,7 @@ namespace Admin_Panel_Hotel
         /// <returns>Возвращает таблицу с заявками из истории.</returns>
         public static DataTable GetHistory()
         {
-            return Functions.ExecuteSql("SELECT id, name, created_at as 'date' FROM application_list WHERE status_id = 4");
+            return Functions.ExecuteSql("SELECT application_id, name, created_at as 'date' FROM application_list WHERE status_id = 4");
         }
 
         /// <summary>

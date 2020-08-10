@@ -179,6 +179,8 @@ namespace Admin_Panel_Hotel.ApplicationsFolder
             if (Customer.GetDivisionId(Convert.ToInt64(CustomerComboBox.SelectedValue), out long divisionId) && Customer.GetCustomerId(divisionId, out long customerId))
             {
                 Customer.Id = customerId;
+                LocationComboBox.ValueMember = "location_id";
+                LocationComboBox.DisplayMember = "location_name";
                 LocationComboBox.DataSource = Locations.GetAll();
 
                 DataGridViewComboBoxColumn locationsComboBox = (DataGridViewComboBoxColumn)UsersDataGridView.Columns["location"];

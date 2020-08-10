@@ -1,7 +1,5 @@
 ﻿using Admin_Panel_Hotel.Customers;
-using MySql.Data.MySqlClient;
 using System;
-using System.Data;
 using System.Windows.Forms;
 
 namespace Admin_Panel_Hotel
@@ -37,6 +35,8 @@ namespace Admin_Panel_Hotel
             {
                 Customer.Name = CustomersDataGridView["name", e.RowIndex].Value.ToString();
                 Customer.Id = Convert.ToInt64(CustomersDataGridView["id", e.RowIndex].Value.ToString());
+                Customer.GetDivisionIdFromCustomerId(Customer.Id, out long divisionId);
+                Customer.DivisionId = divisionId;
                 Functions.OpenChildForm(new CustomerInfoForm(), MainForm.ContP);
             }
         }

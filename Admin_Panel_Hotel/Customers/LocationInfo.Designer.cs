@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.CustomerLocationNameLabel = new System.Windows.Forms.Label();
             this.LocationDataLabel = new System.Windows.Forms.Label();
             this.CardPropertiesLabel = new System.Windows.Forms.Label();
@@ -44,8 +44,8 @@
             this.valueColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.EditCardPropertiesButton = new System.Windows.Forms.Button();
             this.SaveCardPropertiesButton = new System.Windows.Forms.Button();
+            this.EditCardPropertiesButton = new System.Windows.Forms.Button();
             this.AllCardPropertiesPanel = new System.Windows.Forms.Panel();
             this.Set2Button = new System.Windows.Forms.Button();
             this.Set1Button = new System.Windows.Forms.Button();
@@ -56,6 +56,7 @@
             this.RulesCheckBox = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
             this.LocationInfoPanel = new System.Windows.Forms.Panel();
+            this.SaveLocationInfoButton = new System.Windows.Forms.Button();
             this.EditNameButton = new System.Windows.Forms.Button();
             this.EditRoomsButton = new System.Windows.Forms.Button();
             this.AddRoomLabel = new System.Windows.Forms.Label();
@@ -66,14 +67,13 @@
             this.BedsCountTextBox = new System.Windows.Forms.TextBox();
             this.RoomsCountTextBox = new System.Windows.Forms.TextBox();
             this.NameTextBox = new System.Windows.Forms.TextBox();
+            this.EditNameTipLabel = new System.Windows.Forms.Label();
             this.RoomsDataGridView = new System.Windows.Forms.DataGridView();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RoomNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BedsCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.delete = new System.Windows.Forms.DataGridViewImageColumn();
-            this.EditNameTipLabel = new System.Windows.Forms.Label();
-            this.SaveLocationInfoButton = new System.Windows.Forms.Button();
             this.CardPropertiesPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CardPropertiesDataGridView)).BeginInit();
             this.AllCardPropertiesPanel.SuspendLayout();
@@ -83,6 +83,7 @@
             // 
             // CustomerLocationNameLabel
             // 
+            this.CustomerLocationNameLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.CustomerLocationNameLabel.AutoEllipsis = true;
             this.CustomerLocationNameLabel.AutoSize = true;
             this.CustomerLocationNameLabel.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -98,6 +99,7 @@
             // 
             // LocationDataLabel
             // 
+            this.LocationDataLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.LocationDataLabel.AutoSize = true;
             this.LocationDataLabel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.LocationDataLabel.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -112,6 +114,7 @@
             // 
             // CardPropertiesLabel
             // 
+            this.CardPropertiesLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.CardPropertiesLabel.AutoSize = true;
             this.CardPropertiesLabel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CardPropertiesLabel.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -126,6 +129,7 @@
             // 
             // Analyticslabel
             // 
+            this.Analyticslabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Analyticslabel.AutoSize = true;
             this.Analyticslabel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Analyticslabel.Enabled = false;
@@ -140,6 +144,7 @@
             // 
             // CardPropertiesPanel
             // 
+            this.CardPropertiesPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.CardPropertiesPanel.Controls.Add(this.CardPropertiesDataGridView);
             this.CardPropertiesPanel.Controls.Add(this.SaveCardPropertiesButton);
             this.CardPropertiesPanel.Controls.Add(this.EditCardPropertiesButton);
@@ -160,10 +165,10 @@
             this.CardPropertiesDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.CardPropertiesDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.CardPropertiesDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.CardPropertiesDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.CardPropertiesDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.CardPropertiesDataGridView.ColumnHeadersHeight = 35;
             this.CardPropertiesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.CardPropertiesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -181,10 +186,10 @@
             this.CardPropertiesDataGridView.MultiSelect = false;
             this.CardPropertiesDataGridView.Name = "CardPropertiesDataGridView";
             this.CardPropertiesDataGridView.ReadOnly = true;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.CardPropertiesDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.CardPropertiesDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.CardPropertiesDataGridView.RowHeadersVisible = false;
             this.CardPropertiesDataGridView.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             this.CardPropertiesDataGridView.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
@@ -220,8 +225,8 @@
             // valueColumn
             // 
             this.valueColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle17.Format = "N0";
-            this.valueColumn.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle12.Format = "N0";
+            this.valueColumn.DefaultCellStyle = dataGridViewCellStyle12;
             this.valueColumn.HeaderText = "";
             this.valueColumn.Name = "valueColumn";
             this.valueColumn.ReadOnly = true;
@@ -243,20 +248,6 @@
             this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
             this.dataGridViewImageColumn1.ReadOnly = true;
             // 
-            // EditCardPropertiesButton
-            // 
-            this.EditCardPropertiesButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(82)))), ((int)(((byte)(119)))));
-            this.EditCardPropertiesButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.EditCardPropertiesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EditCardPropertiesButton.ForeColor = System.Drawing.Color.White;
-            this.EditCardPropertiesButton.Location = new System.Drawing.Point(403, 16);
-            this.EditCardPropertiesButton.Name = "EditCardPropertiesButton";
-            this.EditCardPropertiesButton.Size = new System.Drawing.Size(201, 36);
-            this.EditCardPropertiesButton.TabIndex = 61;
-            this.EditCardPropertiesButton.Text = "Редактировать";
-            this.EditCardPropertiesButton.UseVisualStyleBackColor = false;
-            this.EditCardPropertiesButton.Click += new System.EventHandler(this.EditCardPropertiesButton_Click);
-            // 
             // SaveCardPropertiesButton
             // 
             this.SaveCardPropertiesButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
@@ -272,6 +263,20 @@
             this.SaveCardPropertiesButton.Visible = false;
             this.SaveCardPropertiesButton.Click += new System.EventHandler(this.SaveCardPropertiesButton_Click);
             // 
+            // EditCardPropertiesButton
+            // 
+            this.EditCardPropertiesButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(82)))), ((int)(((byte)(119)))));
+            this.EditCardPropertiesButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.EditCardPropertiesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EditCardPropertiesButton.ForeColor = System.Drawing.Color.White;
+            this.EditCardPropertiesButton.Location = new System.Drawing.Point(403, 16);
+            this.EditCardPropertiesButton.Name = "EditCardPropertiesButton";
+            this.EditCardPropertiesButton.Size = new System.Drawing.Size(201, 36);
+            this.EditCardPropertiesButton.TabIndex = 61;
+            this.EditCardPropertiesButton.Text = "Редактировать";
+            this.EditCardPropertiesButton.UseVisualStyleBackColor = false;
+            this.EditCardPropertiesButton.Click += new System.EventHandler(this.EditCardPropertiesButton_Click);
+            // 
             // AllCardPropertiesPanel
             // 
             this.AllCardPropertiesPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -283,9 +288,10 @@
             this.AllCardPropertiesPanel.Controls.Add(this.FireSeftyCheckBox);
             this.AllCardPropertiesPanel.Controls.Add(this.RulesCheckBox);
             this.AllCardPropertiesPanel.Controls.Add(this.label7);
-            this.AllCardPropertiesPanel.Location = new System.Drawing.Point(753, 0);
+            this.AllCardPropertiesPanel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.AllCardPropertiesPanel.Location = new System.Drawing.Point(751, 0);
             this.AllCardPropertiesPanel.Name = "AllCardPropertiesPanel";
-            this.AllCardPropertiesPanel.Size = new System.Drawing.Size(342, 895);
+            this.AllCardPropertiesPanel.Size = new System.Drawing.Size(342, 894);
             this.AllCardPropertiesPanel.TabIndex = 72;
             this.AllCardPropertiesPanel.Visible = false;
             // 
@@ -402,6 +408,7 @@
             // 
             // LocationInfoPanel
             // 
+            this.LocationInfoPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.LocationInfoPanel.Controls.Add(this.SaveLocationInfoButton);
             this.LocationInfoPanel.Controls.Add(this.EditNameButton);
             this.LocationInfoPanel.Controls.Add(this.EditRoomsButton);
@@ -419,6 +426,22 @@
             this.LocationInfoPanel.Name = "LocationInfoPanel";
             this.LocationInfoPanel.Size = new System.Drawing.Size(957, 686);
             this.LocationInfoPanel.TabIndex = 74;
+            // 
+            // SaveLocationInfoButton
+            // 
+            this.SaveLocationInfoButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
+            this.SaveLocationInfoButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.SaveLocationInfoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SaveLocationInfoButton.Font = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SaveLocationInfoButton.ForeColor = System.Drawing.Color.White;
+            this.SaveLocationInfoButton.Location = new System.Drawing.Point(531, 629);
+            this.SaveLocationInfoButton.Name = "SaveLocationInfoButton";
+            this.SaveLocationInfoButton.Size = new System.Drawing.Size(202, 54);
+            this.SaveLocationInfoButton.TabIndex = 67;
+            this.SaveLocationInfoButton.Text = "Сохранить";
+            this.SaveLocationInfoButton.UseVisualStyleBackColor = false;
+            this.SaveLocationInfoButton.Visible = false;
+            this.SaveLocationInfoButton.Click += new System.EventHandler(this.SaveLocationInfoButton_Click);
             // 
             // EditNameButton
             // 
@@ -537,6 +560,19 @@
             this.NameTextBox.Size = new System.Drawing.Size(710, 33);
             this.NameTextBox.TabIndex = 0;
             // 
+            // EditNameTipLabel
+            // 
+            this.EditNameTipLabel.AutoSize = true;
+            this.EditNameTipLabel.BackColor = System.Drawing.Color.Transparent;
+            this.EditNameTipLabel.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.EditNameTipLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(87)))), ((int)(((byte)(87)))));
+            this.EditNameTipLabel.Location = new System.Drawing.Point(752, 19);
+            this.EditNameTipLabel.Name = "EditNameTipLabel";
+            this.EditNameTipLabel.Size = new System.Drawing.Size(170, 38);
+            this.EditNameTipLabel.TabIndex = 64;
+            this.EditNameTipLabel.Text = "Редактируйте поле\r\nи нажмите сохранить";
+            this.EditNameTipLabel.Visible = false;
+            // 
             // RoomsDataGridView
             // 
             this.RoomsDataGridView.AllowUserToAddRows = false;
@@ -545,14 +581,14 @@
             this.RoomsDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.RoomsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.RoomsDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.RoomsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.RoomsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.RoomsDataGridView.ColumnHeadersHeight = 35;
             this.RoomsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.RoomsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -600,9 +636,9 @@
             // 
             this.BedsCount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.BedsCount.DataPropertyName = "count_beds";
-            dataGridViewCellStyle20.Format = "N0";
-            dataGridViewCellStyle20.NullValue = "0";
-            this.BedsCount.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle15.Format = "N0";
+            dataGridViewCellStyle15.NullValue = "0";
+            this.BedsCount.DefaultCellStyle = dataGridViewCellStyle15;
             this.BedsCount.HeaderText = "Количество мест";
             this.BedsCount.Name = "BedsCount";
             this.BedsCount.ReadOnly = true;
@@ -625,34 +661,6 @@
             this.delete.ReadOnly = true;
             this.delete.Visible = false;
             // 
-            // EditNameTipLabel
-            // 
-            this.EditNameTipLabel.AutoSize = true;
-            this.EditNameTipLabel.BackColor = System.Drawing.Color.Transparent;
-            this.EditNameTipLabel.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.EditNameTipLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(87)))), ((int)(((byte)(87)))));
-            this.EditNameTipLabel.Location = new System.Drawing.Point(752, 19);
-            this.EditNameTipLabel.Name = "EditNameTipLabel";
-            this.EditNameTipLabel.Size = new System.Drawing.Size(170, 38);
-            this.EditNameTipLabel.TabIndex = 64;
-            this.EditNameTipLabel.Text = "Редактируйте поле\r\nи нажмите сохранить";
-            // 
-            // SaveLocationInfoButton
-            // 
-            this.SaveLocationInfoButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
-            this.SaveLocationInfoButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.SaveLocationInfoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SaveLocationInfoButton.Font = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.SaveLocationInfoButton.ForeColor = System.Drawing.Color.White;
-            this.SaveLocationInfoButton.Location = new System.Drawing.Point(531, 629);
-            this.SaveLocationInfoButton.Name = "SaveLocationInfoButton";
-            this.SaveLocationInfoButton.Size = new System.Drawing.Size(202, 54);
-            this.SaveLocationInfoButton.TabIndex = 67;
-            this.SaveLocationInfoButton.Text = "Сохранить";
-            this.SaveLocationInfoButton.UseVisualStyleBackColor = false;
-            this.SaveLocationInfoButton.Visible = false;
-            this.SaveLocationInfoButton.Click += new System.EventHandler(this.SaveLocationInfoButton_Click);
-            // 
             // LocationInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -663,9 +671,9 @@
             this.Controls.Add(this.CardPropertiesLabel);
             this.Controls.Add(this.LocationDataLabel);
             this.Controls.Add(this.CustomerLocationNameLabel);
+            this.Controls.Add(this.LocationInfoPanel);
             this.Controls.Add(this.CardPropertiesPanel);
             this.Controls.Add(this.AllCardPropertiesPanel);
-            this.Controls.Add(this.LocationInfoPanel);
             this.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(6);

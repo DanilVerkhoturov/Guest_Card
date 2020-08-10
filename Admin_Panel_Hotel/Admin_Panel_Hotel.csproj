@@ -288,6 +288,7 @@
     <Compile Include="Guests\ShowEvictionGuest.Designer.cs">
       <DependentUpon>ShowEvictionGuest.cs</DependentUpon>
     </Compile>
+    <Compile Include="Hotels.cs" />
     <Compile Include="Locations.cs" />
     <Compile Include="MyColors.cs" />
     <Compile Include="NotificationsForm.cs">

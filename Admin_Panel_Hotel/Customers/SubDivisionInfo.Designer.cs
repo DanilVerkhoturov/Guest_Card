@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.CustomerSubDivisionNameLabel = new System.Windows.Forms.Label();
             this.SubDivisionDataLabel = new System.Windows.Forms.Label();
             this.CardPropertiesLabel = new System.Windows.Forms.Label();
@@ -44,7 +44,7 @@
             this.EditCardPropertiesButton = new System.Windows.Forms.Button();
             this.SaveCardPropertiesButton = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.FoodPanel = new System.Windows.Forms.Panel();
+            this.AllCardPropertiesPanel = new System.Windows.Forms.Panel();
             this.MunusSurchargeCheckBox = new System.Windows.Forms.RadioButton();
             this.MinusCheckBox = new System.Windows.Forms.RadioButton();
             this.BurningCheckBox = new System.Windows.Forms.CheckBox();
@@ -68,7 +68,7 @@
             this.SaveSubDivisionInfoButton = new System.Windows.Forms.Button();
             this.CardPropertiesPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CardPropertiesDataGridView)).BeginInit();
-            this.FoodPanel.SuspendLayout();
+            this.AllCardPropertiesPanel.SuspendLayout();
             this.SubDivisionInfoPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -151,14 +151,14 @@
             this.CardPropertiesDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.CardPropertiesDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.CardPropertiesDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.CardPropertiesDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.CardPropertiesDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.CardPropertiesDataGridView.ColumnHeadersHeight = 35;
             this.CardPropertiesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.CardPropertiesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -207,9 +207,9 @@
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle2.Format = "N0";
-            dataGridViewCellStyle2.NullValue = "0";
-            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Format = "N0";
+            dataGridViewCellStyle4.NullValue = "0";
+            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewTextBoxColumn3.HeaderText = "";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
@@ -270,25 +270,26 @@
             this.label5.TabIndex = 11;
             this.label5.Text = "Свойства  карт для питания";
             // 
-            // FoodPanel
+            // AllCardPropertiesPanel
             // 
-            this.FoodPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.FoodPanel.Controls.Add(this.MunusSurchargeCheckBox);
-            this.FoodPanel.Controls.Add(this.MinusCheckBox);
-            this.FoodPanel.Controls.Add(this.BurningCheckBox);
-            this.FoodPanel.Controls.Add(this.button3);
-            this.FoodPanel.Controls.Add(this.label4);
-            this.FoodPanel.Controls.Add(this.DiscountTextBox);
-            this.FoodPanel.Controls.Add(this.button2);
-            this.FoodPanel.Controls.Add(this.button1);
-            this.FoodPanel.Controls.Add(this.DiscountCheckBox);
-            this.FoodPanel.Controls.Add(this.MenuBuffetCheckBox);
-            this.FoodPanel.Controls.Add(this.MenuCanteenCheckBox);
-            this.FoodPanel.Controls.Add(this.label5);
-            this.FoodPanel.Location = new System.Drawing.Point(752, 0);
-            this.FoodPanel.Name = "FoodPanel";
-            this.FoodPanel.Size = new System.Drawing.Size(342, 895);
-            this.FoodPanel.TabIndex = 48;
+            this.AllCardPropertiesPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.AllCardPropertiesPanel.Controls.Add(this.MunusSurchargeCheckBox);
+            this.AllCardPropertiesPanel.Controls.Add(this.MinusCheckBox);
+            this.AllCardPropertiesPanel.Controls.Add(this.BurningCheckBox);
+            this.AllCardPropertiesPanel.Controls.Add(this.button3);
+            this.AllCardPropertiesPanel.Controls.Add(this.label4);
+            this.AllCardPropertiesPanel.Controls.Add(this.DiscountTextBox);
+            this.AllCardPropertiesPanel.Controls.Add(this.button2);
+            this.AllCardPropertiesPanel.Controls.Add(this.button1);
+            this.AllCardPropertiesPanel.Controls.Add(this.DiscountCheckBox);
+            this.AllCardPropertiesPanel.Controls.Add(this.MenuBuffetCheckBox);
+            this.AllCardPropertiesPanel.Controls.Add(this.MenuCanteenCheckBox);
+            this.AllCardPropertiesPanel.Controls.Add(this.label5);
+            this.AllCardPropertiesPanel.Location = new System.Drawing.Point(752, 0);
+            this.AllCardPropertiesPanel.Name = "AllCardPropertiesPanel";
+            this.AllCardPropertiesPanel.Size = new System.Drawing.Size(342, 895);
+            this.AllCardPropertiesPanel.TabIndex = 48;
+            this.AllCardPropertiesPanel.Visible = false;
             // 
             // MunusSurchargeCheckBox
             // 
@@ -573,7 +574,7 @@
             this.Controls.Add(this.CardPropertiesLabel);
             this.Controls.Add(this.SubDivisionDataLabel);
             this.Controls.Add(this.CustomerSubDivisionNameLabel);
-            this.Controls.Add(this.FoodPanel);
+            this.Controls.Add(this.AllCardPropertiesPanel);
             this.Controls.Add(this.SubDivisionInfoPanel);
             this.Controls.Add(this.CardPropertiesPanel);
             this.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -583,8 +584,8 @@
             this.Text = "SubDivisionInfo";
             this.CardPropertiesPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.CardPropertiesDataGridView)).EndInit();
-            this.FoodPanel.ResumeLayout(false);
-            this.FoodPanel.PerformLayout();
+            this.AllCardPropertiesPanel.ResumeLayout(false);
+            this.AllCardPropertiesPanel.PerformLayout();
             this.SubDivisionInfoPanel.ResumeLayout(false);
             this.SubDivisionInfoPanel.PerformLayout();
             this.ResumeLayout(false);
@@ -603,7 +604,7 @@
         private System.Windows.Forms.Button EditCardPropertiesButton;
         private System.Windows.Forms.Button SaveCardPropertiesButton;
         private System.Windows.Forms.DataGridView CardPropertiesDataGridView;
-        private System.Windows.Forms.Panel FoodPanel;
+        private System.Windows.Forms.Panel AllCardPropertiesPanel;
         private System.Windows.Forms.RadioButton MunusSurchargeCheckBox;
         private System.Windows.Forms.RadioButton MinusCheckBox;
         private System.Windows.Forms.CheckBox BurningCheckBox;

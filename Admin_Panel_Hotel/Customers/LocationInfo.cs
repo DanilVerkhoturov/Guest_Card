@@ -10,7 +10,7 @@ namespace Admin_Panel_Hotel.Customers
         {
             InitializeComponent();
 
-            Locations.GetInfo();
+            Hotels.FillInfo();
 
             NameTextBox.Text = Locations.Name;
             RoomsCountTextBox.Text = Hotels.RoomCount.ToString();

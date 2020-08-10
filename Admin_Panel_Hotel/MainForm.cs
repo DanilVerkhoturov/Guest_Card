@@ -31,13 +31,15 @@ namespace Admin_Panel_Hotel
             MyCustomersBtn = MyCustomersButton;
 
             // Подключение магнитного считывателя.
-            Functions.RFID = new SerialPort();
-            Functions.RFID.PortName = "COM3";
-            Functions.RFID.BaudRate = 9600;
-            Functions.RFID.DataBits = 8;
-            Functions.RFID.Parity = Parity.None;
-            Functions.RFID.StopBits = StopBits.One;
-            Functions.RFID.ReadTimeout = 2000;
+            Functions.RFID = new SerialPort
+            {
+                PortName = "COM3",
+                BaudRate = 9600,
+                DataBits = 8,
+                Parity = Parity.None,
+                StopBits = StopBits.One,
+                ReadTimeout = 2000
+            };
             Functions.RFID.DataReceived += new SerialDataReceivedEventHandler(Functions.RFID_DataReceivedHandler);
 
             Functions.Connection.StateChange += Functions.MySQLConnectionStateChange;
