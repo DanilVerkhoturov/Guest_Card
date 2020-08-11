@@ -1,18 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data;
 
 namespace Admin_Panel_Hotel
 {
     class Users
     {
-        // TODO: Сделать получение всех клиентов.
-        //public static DataTable GetAll()
-        //{
-        //    return Functions.ExecuteSql("SELECT ");
-        //}
+        /// <summary>
+        /// Получить список всех пользователей из организации.
+        /// </summary>
+        /// <param name="divisionId">Уникальный номер (Id) организации.</param>
+        /// <returns>Возвращает список пользователей.</returns>
+        public static DataTable GetAll(long divisionId)
+        {
+            return Functions.ExecuteSql($"SELECT user_id, fio FROM user_list WHERE division_id = {divisionId}");
+        }
     }
 }

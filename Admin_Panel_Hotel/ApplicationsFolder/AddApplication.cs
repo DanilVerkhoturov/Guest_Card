@@ -12,21 +12,21 @@ namespace Admin_Panel_Hotel.ApplicationsFolder
 
             Functions.NewlineProcessing(UsersDataGridView);
 
-            CustomerComboBox.DataSource = Customer.GetAllDivisions();
+            DivisionsComboBox.DataSource = Customer.GetAllDivisionsAndSubdivisions();
             LocationComboBox.DataSource = Locations.GetAll();
 
             DataGridViewComboBoxColumn locationsComboBox = (DataGridViewComboBoxColumn)UsersDataGridView.Columns["location"];
+            locationsComboBox.DataSource = Locations.GetAll();
             locationsComboBox.ValueMember = "location_id";
             locationsComboBox.DisplayMember = "location_name";
-            locationsComboBox.DataSource = Locations.GetAll();
         }
 
         private void AddUserLabel_Click(object sender, EventArgs e)
         {
+            AddUserLabel.Focus();
+
             if (CheckLastUser())
-            {
-                UsersDataGridView.Rows.Add();
-            }
+                UsersDataGridView.Rows.Add(null, null, null, null, null, LocationComboBox.SelectedValue);
         }
 
         /// <summary>
@@ -68,9 +68,9 @@ namespace Admin_Panel_Hotel.ApplicationsFolder
 
         private void SendToCustomerButton_Click(object sender, EventArgs e)
         {
-            if (CustomerComboBox.SelectedIndex >= 0 && CheckLastUser()) // Если заполнены все обязательные поля.
+            if (DivisionsComboBox.SelectedIndex >= 0 && CheckLastUser()) // Если заполнены все обязательные поля.
             {
-                if (Applications.Add(out long applicationId, CustomerComboBox.SelectedIndex, 2))
+                if (Applications.Add(out long applicationId, DivisionsComboBox.SelectedIndex, 2))
                 {
                     for (int i = 0; i < UsersDataGridView.RowCount; i++)
                     {
@@ -128,7 +128,7 @@ namespace Admin_Panel_Hotel.ApplicationsFolder
             }
 
             excelapp.AlertBeforeOverwriting = false;
-            workbook.SaveAs($@"{Environment.CurrentDirectory}\{CustomerComboBox.Text} - {DateTime.Now.Date.ToShortDateString()}.xls");
+            workbook.SaveAs($@"{Environment.CurrentDirectory}\{DivisionsComboBox.Text} - {DateTime.Now.Date.ToShortDateString()}.xls");
             excelapp.Quit();
 
             return workbook.FullName;
@@ -174,19 +174,26 @@ namespace Admin_Panel_Hotel.ApplicationsFolder
             }
         }
 
-        private void CustomerComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void DivisionsComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (Customer.GetDivisionId(Convert.ToInt64(CustomerComboBox.SelectedValue), out long divisionId) && Customer.GetCustomerId(divisionId, out long customerId))
+            // Подгрузить список пользователей из выбранной организации.
+            DataGridViewComboBoxColumn usersComboBox = (DataGridViewComboBoxColumn)UsersDataGridView.Columns["fio"];
+            usersComboBox.DataSource = Users.GetAll(Convert.ToInt64(DivisionsComboBox.SelectedValue));
+            usersComboBox.ValueMember = "user_id";
+            usersComboBox.DisplayMember = "fio";
+
+            // Если удалось получить уникальный номер (Id) заказчика.
+            if (Customer.GetDivisionId(Convert.ToInt64(DivisionsComboBox.SelectedValue), out long divisionId) && Customer.GetCustomerId(divisionId, out long customerId))
             {
+                // Подгрузить список локаций в выпадающий список на форме.
                 Customer.Id = customerId;
-                LocationComboBox.ValueMember = "location_id";
-                LocationComboBox.DisplayMember = "location_name";
                 LocationComboBox.DataSource = Locations.GetAll();
 
+                // Подгрузить список локаций в выпадающий список в таблице.
                 DataGridViewComboBoxColumn locationsComboBox = (DataGridViewComboBoxColumn)UsersDataGridView.Columns["location"];
+                locationsComboBox.DataSource = Locations.GetAll();
                 locationsComboBox.ValueMember = "location_id";
                 locationsComboBox.DisplayMember = "location_name";
-                locationsComboBox.DataSource = Locations.GetAll();
             }
             else
             {
@@ -199,11 +206,6 @@ namespace Admin_Panel_Hotel.ApplicationsFolder
                     LocationComboBox.DataSource = null;
                 }
             }
-        }
-
-        private void LocationComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

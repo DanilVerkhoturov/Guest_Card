@@ -38,6 +38,15 @@ namespace Admin_Panel_Hotel
         }
 
         /// <summary>
+        /// Получить список всех организаций и подрядных организаций.
+        /// </summary>
+        /// <returns>Возвращает список всех организаций и подрядных организаций.</returns>
+        public static DataTable GetAllDivisionsAndSubdivisions()
+        {
+            return Functions.ExecuteSql("SELECT * FROM division");
+        }
+
+        /// <summary>
         /// Получить список всех заказчиков.
         /// </summary>
         /// <returns>Возвращает таблицу со списком всех заказчиков.</returns>
@@ -58,7 +67,7 @@ namespace Admin_Panel_Hotel
             {
                 MySqlCommand select = new MySqlCommand($"SELECT parent_id FROM division WHERE id = {subdivisionId}", Functions.Connection);
                 object result = select.ExecuteScalar();
-                if (String.IsNullOrEmpty(result.ToString()))
+                if (result == null)
                 {
                     divisionId = subdivisionId;
                     return true;
