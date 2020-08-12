@@ -20,7 +20,7 @@ namespace Admin_Panel_Hotel.ApplicationsFolder
 
         private void ApplicationsDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            if (e.ColumnIndex == 0)
+            if (ApplicationsDataGridView.Columns[e.ColumnIndex].Name == "showApplication")
             {
                 Customer.Id = Convert.ToInt64(ApplicationsDataGridView["customerid", e.RowIndex].Value.ToString());
                 Customer.Name = ApplicationsDataGridView["name", e.RowIndex].Value.ToString();
@@ -32,13 +32,21 @@ namespace Admin_Panel_Hotel.ApplicationsFolder
 
         private void ApplicationsDataGridView_CellMouseMove(object sender, DataGridViewCellMouseEventArgs e)
         {
-            if (e.ColumnIndex == 0)
+            if (ApplicationsDataGridView.Columns[e.ColumnIndex].Name == "showApplication")
             {
                 ApplicationsDataGridView.Cursor = Cursors.Hand;
             }
             else
             {
                 ApplicationsDataGridView.Cursor = Cursors.Default;
+            }
+        }
+
+        private void ApplicationsDataGridView_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            if (ApplicationsDataGridView.Columns[e.ColumnIndex].Name == "name")
+            {
+                e.AdvancedBorderStyle.Right = DataGridViewAdvancedCellBorderStyle.None;
             }
         }
     }

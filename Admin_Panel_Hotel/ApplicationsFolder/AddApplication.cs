@@ -15,7 +15,7 @@ namespace Admin_Panel_Hotel.ApplicationsFolder
             DivisionsComboBox.DataSource = Customer.GetAllDivisionsAndSubdivisions();
             LocationComboBox.DataSource = Locations.GetAll();
 
-            DataGridViewComboBoxColumn locationsComboBox = (DataGridViewComboBoxColumn)UsersDataGridView.Columns["location"];
+            DataGridViewComboBoxColumn locationsComboBox = (DataGridViewComboBoxColumn)UsersDataGridView.Columns["location_id"];
             locationsComboBox.DataSource = Locations.GetAll();
             locationsComboBox.ValueMember = "location_id";
             locationsComboBox.DisplayMember = "location_name";

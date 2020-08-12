@@ -13,7 +13,6 @@ namespace Admin_Panel_Hotel.ApplicationsFolder
 
             CustomerComboBox.SelectedIndex = 0;
             CustomerComboBox.DataSource = Customer.GetAllDivisions();
-            
 
             if (ApplicationsDataGridView.RowCount == 0)
             {
@@ -26,24 +25,33 @@ namespace Admin_Panel_Hotel.ApplicationsFolder
 
         private void ApplicationsDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            if (e.ColumnIndex == 2)
+            if (ApplicationsDataGridView.Columns[e.ColumnIndex].Name == "showApplication")
             {
-                Customer.Name = ApplicationsDataGridView[0, e.RowIndex].Value.ToString();
-                Applications.Date = ApplicationsDataGridView[1, e.RowIndex].Value.ToString();
-                Applications.Id = Convert.ToInt64(ApplicationsDataGridView[3, e.RowIndex].Value.ToString());
+                Customer.Id = Convert.ToInt64(ApplicationsDataGridView["customerid", e.RowIndex].Value.ToString());
+                Customer.Name = ApplicationsDataGridView["name", e.RowIndex].Value.ToString();
+                Applications.Date = ApplicationsDataGridView["date", e.RowIndex].Value.ToString();
+                Applications.Id = Convert.ToInt64(ApplicationsDataGridView["applicationid", e.RowIndex].Value.ToString());
                 Functions.OpenChildForm(new ShowCurrentApplication(), MainForm.ContP);
             }
         }
 
         private void ApplicationsDataGridView_CellMouseMove(object sender, DataGridViewCellMouseEventArgs e)
         {
-            if (e.ColumnIndex == 2)
+            if (ApplicationsDataGridView.Columns[e.ColumnIndex].Name == "showApplication")
             {
                 ApplicationsDataGridView.Cursor = Cursors.Hand;
             }
             else
             {
                 ApplicationsDataGridView.Cursor = Cursors.Default;
+            }
+        }
+
+        private void ApplicationsDataGridView_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            if (ApplicationsDataGridView.Columns[e.ColumnIndex].Name == "name")
+            {
+                e.AdvancedBorderStyle.Right = DataGridViewAdvancedCellBorderStyle.None;
             }
         }
     }

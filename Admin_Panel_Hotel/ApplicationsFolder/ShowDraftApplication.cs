@@ -12,7 +12,10 @@ namespace Admin_Panel_Hotel.ApplicationsFolder
             InitializeComponent();
 
             Functions.NewlineProcessing(UsersDataGridView);
+            Functions.FillUsersDataGridViewComboBox(UsersDataGridView);
+            Functions.FillLocationsDataGridViewComboBox(UsersDataGridView);
 
+            UsersDataGridView.AutoGenerateColumns = false;
             UsersDataGridView.DataSource = Applications.Users.Get();
 
             ApplicationNameLabel.Text = $"Черновик > {Customer.Name} - {Applications.Date}";

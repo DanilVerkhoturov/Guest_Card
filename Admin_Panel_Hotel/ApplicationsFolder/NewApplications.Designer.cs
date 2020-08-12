@@ -38,13 +38,13 @@
             this.Castomer = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Location = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ApplicationsDataGridView = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.NotificationLabel = new System.Windows.Forms.Label();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.viewing = new System.Windows.Forms.DataGridViewImageColumn();
+            this.showApplication = new System.Windows.Forms.DataGridViewImageColumn();
             this.applicationid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.customerid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.NotificationLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ApplicationsDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,7 +88,7 @@
             this.ApplicationsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.name,
             this.date,
-            this.viewing,
+            this.showApplication,
             this.applicationid,
             this.customerid});
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -137,6 +137,54 @@
             this.ApplicationsDataGridView.TabStop = false;
             this.ApplicationsDataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.ApplicationsDataGridView_CellMouseClick);
             this.ApplicationsDataGridView.CellMouseMove += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.ApplicationsDataGridView_CellMouseMove);
+            this.ApplicationsDataGridView.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.ApplicationsDataGridView_CellPainting);
+            // 
+            // name
+            // 
+            this.name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.name.DataPropertyName = "name";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.name.DefaultCellStyle = dataGridViewCellStyle3;
+            this.name.HeaderText = "Имя";
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            // 
+            // date
+            // 
+            this.date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCellsExceptHeader;
+            this.date.DataPropertyName = "date";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomRight;
+            this.date.DefaultCellStyle = dataGridViewCellStyle4;
+            this.date.HeaderText = "Дата";
+            this.date.Name = "date";
+            this.date.ReadOnly = true;
+            this.date.Width = 5;
+            // 
+            // showApplication
+            // 
+            this.showApplication.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCellsExceptHeader;
+            this.showApplication.HeaderText = "Просмотр";
+            this.showApplication.Image = global::Admin_Panel_Hotel.Properties.Resources.pngwing_8;
+            this.showApplication.Name = "showApplication";
+            this.showApplication.ReadOnly = true;
+            this.showApplication.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.showApplication.Width = 5;
+            // 
+            // applicationid
+            // 
+            this.applicationid.DataPropertyName = "application_id";
+            this.applicationid.HeaderText = "applicationid";
+            this.applicationid.Name = "applicationid";
+            this.applicationid.ReadOnly = true;
+            this.applicationid.Visible = false;
+            // 
+            // customerid
+            // 
+            this.customerid.DataPropertyName = "customer_id";
+            this.customerid.HeaderText = "customer_id";
+            this.customerid.Name = "customerid";
+            this.customerid.ReadOnly = true;
+            this.customerid.Visible = false;
             // 
             // label1
             // 
@@ -160,53 +208,6 @@
             this.NotificationLabel.TabIndex = 58;
             this.NotificationLabel.Text = "У вас пока нет Новых заявок";
             this.NotificationLabel.Visible = false;
-            // 
-            // name
-            // 
-            this.name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.name.DataPropertyName = "name";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.name.DefaultCellStyle = dataGridViewCellStyle3;
-            this.name.HeaderText = "Имя";
-            this.name.Name = "name";
-            this.name.ReadOnly = true;
-            // 
-            // date
-            // 
-            this.date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCellsExceptHeader;
-            this.date.DataPropertyName = "date";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomRight;
-            this.date.DefaultCellStyle = dataGridViewCellStyle4;
-            this.date.HeaderText = "Дата";
-            this.date.Name = "date";
-            this.date.ReadOnly = true;
-            this.date.Width = 5;
-            // 
-            // viewing
-            // 
-            this.viewing.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCellsExceptHeader;
-            this.viewing.HeaderText = "Просмотр";
-            this.viewing.Image = global::Admin_Panel_Hotel.Properties.Resources.pngwing_8;
-            this.viewing.Name = "viewing";
-            this.viewing.ReadOnly = true;
-            this.viewing.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.viewing.Width = 5;
-            // 
-            // applicationid
-            // 
-            this.applicationid.DataPropertyName = "application_id";
-            this.applicationid.HeaderText = "applicationid";
-            this.applicationid.Name = "applicationid";
-            this.applicationid.ReadOnly = true;
-            this.applicationid.Visible = false;
-            // 
-            // customerid
-            // 
-            this.customerid.DataPropertyName = "customer_id";
-            this.customerid.HeaderText = "customer_id";
-            this.customerid.Name = "customerid";
-            this.customerid.ReadOnly = true;
-            this.customerid.Visible = false;
             // 
             // NewApplications
             // 
@@ -236,7 +237,7 @@
         private System.Windows.Forms.Label NotificationLabel;
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.DataGridViewTextBoxColumn date;
-        private System.Windows.Forms.DataGridViewImageColumn viewing;
+        private System.Windows.Forms.DataGridViewImageColumn showApplication;
         private System.Windows.Forms.DataGridViewTextBoxColumn applicationid;
         private System.Windows.Forms.DataGridViewTextBoxColumn customerid;
     }

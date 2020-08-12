@@ -10,7 +10,10 @@ namespace Admin_Panel_Hotel.ApplicationsFolder
             InitializeComponent();
 
             Functions.NewlineProcessing(UsersDataGridView);
+            Functions.FillUsersDataGridViewComboBox(UsersDataGridView);
+            Functions.FillLocationsDataGridViewComboBox(UsersDataGridView);
 
+            UsersDataGridView.AutoGenerateColumns = false;
             UsersDataGridView.DataSource = Applications.Users.Get();
 
             ApplicationNameLabel.Text = $"История заявок > {Customer.Name} - {Applications.Date}";

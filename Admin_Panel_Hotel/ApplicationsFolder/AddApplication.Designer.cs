@@ -37,12 +37,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.UsersDataGridView = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fio = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.tabNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.from = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.to = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.location = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.AddUserLabel = new System.Windows.Forms.Label();
             this.ImportButton = new System.Windows.Forms.Button();
             this.LocationComboBox = new System.Windows.Forms.ComboBox();
@@ -50,6 +44,12 @@
             this.SendToCustomerButton = new System.Windows.Forms.Button();
             this.ToDraftButton = new System.Windows.Forms.Button();
             this.FormNameLabel = new System.Windows.Forms.Label();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fio = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.tabNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.from = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.to = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.location_id = new System.Windows.Forms.DataGridViewComboBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.UsersDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,7 +83,7 @@
             this.tabNum,
             this.from,
             this.to,
-            this.location});
+            this.location_id});
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -120,67 +120,6 @@
             this.UsersDataGridView.Size = new System.Drawing.Size(991, 583);
             this.UsersDataGridView.TabIndex = 51;
             this.UsersDataGridView.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.UsersDataGridView_CellEndEdit);
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Column1.FillWeight = 20F;
-            this.Column1.HeaderText = "№";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 57;
-            // 
-            // fio
-            // 
-            this.fio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.fio.DefaultCellStyle = dataGridViewCellStyle3;
-            this.fio.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.fio.FillWeight = 112.3096F;
-            this.fio.HeaderText = "ФИО";
-            this.fio.Name = "fio";
-            this.fio.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.fio.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // tabNum
-            // 
-            this.tabNum.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.tabNum.FillWeight = 112.3096F;
-            this.tabNum.HeaderText = "Таб.номер";
-            this.tabNum.Name = "tabNum";
-            this.tabNum.Width = 138;
-            // 
-            // from
-            // 
-            this.from.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle4.Format = "dd/MM/yyyy";
-            dataGridViewCellStyle4.NullValue = null;
-            this.from.DefaultCellStyle = dataGridViewCellStyle4;
-            this.from.FillWeight = 112.3096F;
-            this.from.HeaderText = "Дата от";
-            this.from.MinimumWidth = 10;
-            this.from.Name = "from";
-            this.from.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // to
-            // 
-            this.to.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle5.Format = "dd/MM/yyyy";
-            dataGridViewCellStyle5.NullValue = null;
-            this.to.DefaultCellStyle = dataGridViewCellStyle5;
-            this.to.FillWeight = 112.3096F;
-            this.to.HeaderText = "Дата до";
-            this.to.MinimumWidth = 10;
-            this.to.Name = "to";
-            this.to.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // location
-            // 
-            this.location.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.location.HeaderText = "Локация";
-            this.location.Items.AddRange(new object[] {
-            "Локация"});
-            this.location.Name = "location";
-            this.location.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // AddUserLabel
             // 
@@ -289,6 +228,68 @@
             this.FormNameLabel.TabIndex = 50;
             this.FormNameLabel.Text = "Добавить заявку";
             // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Column1.FillWeight = 20F;
+            this.Column1.HeaderText = "№";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 57;
+            // 
+            // fio
+            // 
+            this.fio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.fio.DefaultCellStyle = dataGridViewCellStyle3;
+            this.fio.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.fio.FillWeight = 112.3096F;
+            this.fio.HeaderText = "ФИО";
+            this.fio.Name = "fio";
+            this.fio.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.fio.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // tabNum
+            // 
+            this.tabNum.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.tabNum.FillWeight = 112.3096F;
+            this.tabNum.HeaderText = "Таб.номер";
+            this.tabNum.Name = "tabNum";
+            this.tabNum.Width = 139;
+            // 
+            // from
+            // 
+            this.from.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle4.Format = "dd/MM/yyyy";
+            dataGridViewCellStyle4.NullValue = null;
+            this.from.DefaultCellStyle = dataGridViewCellStyle4;
+            this.from.FillWeight = 112.3096F;
+            this.from.HeaderText = "Дата от";
+            this.from.MinimumWidth = 10;
+            this.from.Name = "from";
+            this.from.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // to
+            // 
+            this.to.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle5.Format = "dd/MM/yyyy";
+            dataGridViewCellStyle5.NullValue = null;
+            this.to.DefaultCellStyle = dataGridViewCellStyle5;
+            this.to.FillWeight = 112.3096F;
+            this.to.HeaderText = "Дата до";
+            this.to.MinimumWidth = 10;
+            this.to.Name = "to";
+            this.to.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // location_id
+            // 
+            this.location_id.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.location_id.HeaderText = "Локация";
+            this.location_id.Items.AddRange(new object[] {
+            "Локация"});
+            this.location_id.Name = "location_id";
+            this.location_id.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
             // AddApplication
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -326,6 +327,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tabNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn from;
         private System.Windows.Forms.DataGridViewTextBoxColumn to;
-        private System.Windows.Forms.DataGridViewComboBoxColumn location;
+        private System.Windows.Forms.DataGridViewComboBoxColumn location_id;
     }
 }

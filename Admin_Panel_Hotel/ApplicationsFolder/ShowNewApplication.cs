@@ -10,12 +10,10 @@ namespace Admin_Panel_Hotel.ApplicationsFolder
             InitializeComponent();
 
             Functions.NewlineProcessing(UsersDataGridView);
+            Functions.FillUsersDataGridViewComboBox(UsersDataGridView);
+            Functions.FillLocationsDataGridViewComboBox(UsersDataGridView);
 
-            DataGridViewComboBoxColumn locationsColumn = UsersDataGridView.Columns["location"] as DataGridViewComboBoxColumn;
-            locationsColumn.DisplayMember = "location_name";
-            locationsColumn.ValueMember = "location_id";
-            locationsColumn.DataSource = Locations.GetAll();
-
+            UsersDataGridView.AutoGenerateColumns = false;
             UsersDataGridView.DataSource = Applications.Users.Get();
 
             NewApplicationNameLabel.Text = $"Новые заявки > {Customer.Name} - {Applications.Date}";

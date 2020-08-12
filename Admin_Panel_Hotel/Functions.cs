@@ -120,6 +120,43 @@ namespace Admin_Panel_Hotel
 
         #endregion
 
+        /// <summary>
+        /// Заполнить выпадающий список локаций в таблице.
+        /// </summary>
+        /// <param name="dgv">Таблица.</param>
+        public static void FillLocationsDataGridViewComboBox(DataGridView dgv)
+        {
+            DataGridViewComboBoxColumn locationsComboBox = (DataGridViewComboBoxColumn)dgv.Columns["location_id"];
+            locationsComboBox.ValueMember = "location_id";
+            locationsComboBox.DisplayMember = "location_name";
+            locationsComboBox.DataSource = Locations.GetAll();
+        }
+
+        /// <summary>
+        /// Заполнить выпадающий список пользователей организации в таблице.
+        /// </summary>
+        /// <param name="dgv">Таблица</param>
+        /// <param name="divisionId">Уникальный номер организации.</param>
+        public static void FillUsersDataGridViewComboBox(DataGridView dgv, long divisionId)
+        {
+            DataGridViewComboBoxColumn usersComboBox = (DataGridViewComboBoxColumn)dgv.Columns["user_id"];
+            usersComboBox.ValueMember = "user_id";
+            usersComboBox.DisplayMember = "fio";
+            usersComboBox.DataSource = Users.GetAll(divisionId);
+        }
+
+        /// <summary>
+        /// Заполнить выпадающий список пользователей организации в таблице.
+        /// </summary>
+        /// <param name="dgv">Таблица</param>
+        public static void FillUsersDataGridViewComboBox(DataGridView dgv)
+        {
+            DataGridViewComboBoxColumn usersComboBox = (DataGridViewComboBoxColumn)dgv.Columns["user_id"];
+            usersComboBox.ValueMember = "user_id";
+            usersComboBox.DisplayMember = "fio";
+            usersComboBox.DataSource = Applications.Users.Get();
+        }
+
         public static void RFID_DataReceivedHandler(object sender, SerialDataReceivedEventArgs e)
         {
             SerialPort serialPort = (SerialPort)sender;
