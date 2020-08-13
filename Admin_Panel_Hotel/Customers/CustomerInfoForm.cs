@@ -16,7 +16,7 @@ namespace Admin_Panel_Hotel.Customers
 
             CustomerNameLabel.Text = $"Мои заказчики > {Customer.Name}"; // Установка названия выбранного заказчика.
 
-            LocationsDataGridView.DataSource = Locations.GetAll();
+            LocationsDataGridView.DataSource = Locations.GetAll(Customer.Id);
         }
 
         private void LocationsDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -90,7 +90,7 @@ namespace Admin_Panel_Hotel.Customers
             LocationsPanel.Visible = true;
             SubDivisionsPanel.Visible = false;
 
-            LocationsDataGridView.DataSource = Locations.GetAll();
+            LocationsDataGridView.DataSource = Locations.GetAll(Customer.Id);
         }
     }
 }

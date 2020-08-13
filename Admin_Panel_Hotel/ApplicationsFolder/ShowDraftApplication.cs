@@ -13,7 +13,7 @@ namespace Admin_Panel_Hotel.ApplicationsFolder
 
             Functions.NewlineProcessing(UsersDataGridView);
             Functions.FillUsersDataGridViewComboBox(UsersDataGridView);
-            Functions.FillLocationsDataGridViewComboBox(UsersDataGridView);
+            Functions.FillLocationsDataGridViewComboBox(UsersDataGridView, Customer.Id);
 
             UsersDataGridView.AutoGenerateColumns = false;
             UsersDataGridView.DataSource = Applications.Users.Get();

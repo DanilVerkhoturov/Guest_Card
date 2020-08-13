@@ -20,6 +20,15 @@ namespace Admin_Panel_Hotel
         }
 
         /// <summary>
+        /// Получить список всех возможных статусов карт.
+        /// </summary>
+        /// <returns>Возвращает список статусов.</returns>
+        public static DataTable GetStatuses()
+        {
+            return Functions.ExecuteSql($"SELECT id as status_id, name as status_name FROM card_status");
+        }
+
+        /// <summary>
         /// Количество всех карт.
         /// </summary>
         /// <returns>Количество карт. -1 если у пользователя нет прав для получения количества карт. -2 если возникла непредвиденная ошибка.</returns>

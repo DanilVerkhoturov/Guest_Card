@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.CustomerSubDivisionNameLabel = new System.Windows.Forms.Label();
             this.SubDivisionDataLabel = new System.Windows.Forms.Label();
             this.CardPropertiesLabel = new System.Windows.Forms.Label();
@@ -125,7 +125,7 @@
             this.AnalyticsLabel.Location = new System.Drawing.Point(510, 114);
             this.AnalyticsLabel.Margin = new System.Windows.Forms.Padding(35, 35, 3, 0);
             this.AnalyticsLabel.Name = "AnalyticsLabel";
-            this.AnalyticsLabel.Size = new System.Drawing.Size(135, 29);
+            this.AnalyticsLabel.Size = new System.Drawing.Size(136, 29);
             this.AnalyticsLabel.TabIndex = 3;
             this.AnalyticsLabel.Text = "Аналитика";
             // 
@@ -151,14 +151,14 @@
             this.CardPropertiesDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.CardPropertiesDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.CardPropertiesDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.CardPropertiesDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.CardPropertiesDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.CardPropertiesDataGridView.ColumnHeadersHeight = 35;
             this.CardPropertiesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.CardPropertiesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -207,9 +207,9 @@
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle4.Format = "N0";
-            dataGridViewCellStyle4.NullValue = "0";
-            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Format = "N0";
+            dataGridViewCellStyle2.NullValue = "0";
+            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewTextBoxColumn3.HeaderText = "";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
@@ -266,7 +266,7 @@
             this.label5.Location = new System.Drawing.Point(27, 48);
             this.label5.Margin = new System.Windows.Forms.Padding(123, 48, 5, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(288, 25);
+            this.label5.Size = new System.Drawing.Size(287, 25);
             this.label5.TabIndex = 11;
             this.label5.Text = "Свойства  карт для питания";
             // 
@@ -285,9 +285,10 @@
             this.AllCardPropertiesPanel.Controls.Add(this.MenuBuffetCheckBox);
             this.AllCardPropertiesPanel.Controls.Add(this.MenuCanteenCheckBox);
             this.AllCardPropertiesPanel.Controls.Add(this.label5);
-            this.AllCardPropertiesPanel.Location = new System.Drawing.Point(752, 0);
+            this.AllCardPropertiesPanel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.AllCardPropertiesPanel.Location = new System.Drawing.Point(751, 0);
             this.AllCardPropertiesPanel.Name = "AllCardPropertiesPanel";
-            this.AllCardPropertiesPanel.Size = new System.Drawing.Size(342, 895);
+            this.AllCardPropertiesPanel.Size = new System.Drawing.Size(342, 894);
             this.AllCardPropertiesPanel.TabIndex = 48;
             this.AllCardPropertiesPanel.Visible = false;
             // 
@@ -351,7 +352,7 @@
             this.label4.Location = new System.Drawing.Point(53, 426);
             this.label4.Margin = new System.Windows.Forms.Padding(123, 102, 5, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(165, 25);
+            this.label4.Size = new System.Drawing.Size(164, 25);
             this.label4.TabIndex = 67;
             this.label4.Text = "Лимит по карте";
             // 

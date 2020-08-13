@@ -28,9 +28,18 @@ namespace Admin_Panel_Hotel
         /// Получить список всех локаций заказчика.
         /// </summary>
         /// <returns>Возвращает таблицу со всеми локациями заказчика.</returns>
+        public static DataTable GetAll(long customerId)
+        {
+            return Functions.ExecuteSql($"SELECT location_id, location_name FROM customer_locations_list WHERE customer_id = {customerId}");
+        }
+
+        /// <summary>
+        /// Получить список всех локаций.
+        /// </summary>
+        /// <returns>Возвращает таблицу со всеми локациями.</returns>
         public static DataTable GetAll()
         {
-            return Functions.ExecuteSql($"SELECT location_id, location_name FROM customer_locations_list WHERE customer_id = {Customer.Id}");
+            return Functions.ExecuteSql($"SELECT location_id, location_name FROM customer_locations_list");
         }
     }
 }

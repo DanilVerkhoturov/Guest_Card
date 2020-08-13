@@ -3,6 +3,8 @@ using System;
 using System.Data;
 using System.Drawing;
 using System.IO.Ports;
+using System.Net;
+using System.Net.Mail;
 using System.Windows.Forms;
 
 namespace Admin_Panel_Hotel
@@ -121,15 +123,53 @@ namespace Admin_Panel_Hotel
         #endregion
 
         /// <summary>
+        /// Отправка письма на почтовый ящик.
+        /// </summary>
+        /// <param name="mailto">Адрес получателя.</param>
+        /// <param name="caption">Тема письма.</param>
+        /// <param name="message">Сообщение.</param>
+        /// <param name="attachFile">Присоединенный файл.</param>
+        public static void SendMail(/*string mailto,*/ string caption, string message, string attachFile = null)
+        {
+            try
+            {
+                string from = "andrey.miolt@mail.ru";
+                string password = "3IRgiiPI7jy$";
+                string mailto = "mio.leantech@gmail.com";
+                MailMessage mail = new MailMessage();
+                mail.From = new MailAddress(from);
+                mail.To.Add(new MailAddress(mailto));
+                mail.Subject = caption;
+                mail.Body = message;
+
+                if (!string.IsNullOrEmpty(attachFile))
+                    mail.Attachments.Add(new Attachment(attachFile));
+
+                SmtpClient client = new SmtpClient();
+                client.Host = "smtp.mail.ru";
+                client.Port = 587;
+                client.EnableSsl = true;
+                client.Credentials = new NetworkCredential(from.Split('@')[0], password);
+                client.DeliveryMethod = SmtpDeliveryMethod.Network;
+                client.Send(mail);
+                mail.Dispose();
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Mail.Send: " + e.Message);
+            }
+        }
+
+        /// <summary>
         /// Заполнить выпадающий список локаций в таблице.
         /// </summary>
         /// <param name="dgv">Таблица.</param>
-        public static void FillLocationsDataGridViewComboBox(DataGridView dgv)
+        public static void FillLocationsDataGridViewComboBox(DataGridView dgv, long customerId)
         {
             DataGridViewComboBoxColumn locationsComboBox = (DataGridViewComboBoxColumn)dgv.Columns["location_id"];
+            locationsComboBox.DataSource = Locations.GetAll(customerId);
             locationsComboBox.ValueMember = "location_id";
             locationsComboBox.DisplayMember = "location_name";
-            locationsComboBox.DataSource = Locations.GetAll();
         }
 
         /// <summary>
@@ -140,9 +180,9 @@ namespace Admin_Panel_Hotel
         public static void FillUsersDataGridViewComboBox(DataGridView dgv, long divisionId)
         {
             DataGridViewComboBoxColumn usersComboBox = (DataGridViewComboBoxColumn)dgv.Columns["user_id"];
+            usersComboBox.DataSource = Users.GetAll(divisionId);
             usersComboBox.ValueMember = "user_id";
             usersComboBox.DisplayMember = "fio";
-            usersComboBox.DataSource = Users.GetAll(divisionId);
         }
 
         /// <summary>
@@ -152,9 +192,9 @@ namespace Admin_Panel_Hotel
         public static void FillUsersDataGridViewComboBox(DataGridView dgv)
         {
             DataGridViewComboBoxColumn usersComboBox = (DataGridViewComboBoxColumn)dgv.Columns["user_id"];
+            usersComboBox.DataSource = Applications.Users.Get();
             usersComboBox.ValueMember = "user_id";
             usersComboBox.DisplayMember = "fio";
-            usersComboBox.DataSource = Applications.Users.Get();
         }
 
         public static void RFID_DataReceivedHandler(object sender, SerialDataReceivedEventArgs e)
@@ -168,7 +208,7 @@ namespace Admin_Panel_Hotel
         /// Конвертировать дату в Unix-формат.
         /// </summary>
         /// <param name="dateTime">Дата для конвертации.</param>
-        /// <returns>Дату в формате Unixtime</returns>
+        /// <returns>Возвращает дату в формате Unixtime</returns>
         public static int ToUnixTime(DateTime dateTime)
         {
             if (dateTime > new DateTime(1970, 1, 1))
@@ -185,7 +225,7 @@ namespace Admin_Panel_Hotel
         /// Получить дату из Unixtime.
         /// </summary>
         /// <param name="unix">Дата в формате Unixtime.</param>
-        /// <returns>Дату в виде "Дата и время".</returns>
+        /// <returns>Возвращает дату в формате "Дата и время".</returns>
         public static DateTime FromUnixTime(int unix)
         {
             return DateTimeOffset.FromUnixTimeSeconds(unix).DateTime;
@@ -303,23 +343,6 @@ namespace Admin_Panel_Hotel
             }
         }
 
-        ///// <summary>
-        ///// Обработка добавления новых строк: установка номера новой строки(в первый столбец!!), заполнение подсказок.
-        ///// </summary>
-        ///// <param name = "dgv" > Объект таблицы для обработки.</param>
-        ///// <param name = "helpTexts" >Тексты для подсказок столбцов (вписать попорядку для каждого столбца). Если текст для столбца не нужен - писать null!</param>
-        //public static void NewlineProcessing(DataGridView dgv, string[] helpTexts)
-        //{
-        //    for (int c = 0; c < dgv.Columns.Count; c++)
-        //    {
-        //        dgv.Columns[c].ToolTipText = helpTexts[c];
-        //    }
-
-        //    dgv.RowsAdded += RowsAdded;
-        //    dgv.CellEnter += CellEnter;
-        //    dgv.CellEndEdit += CellEndEdit;
-        //}
-
         /// <summary>
         /// Обработка добавления новых строк: установка номера новой строки(в первый столбец!).
         /// </summary>
@@ -340,67 +363,6 @@ namespace Admin_Panel_Hotel
 
             // Заполнение номера строки в первый столбец.
             dgv[0, e.RowIndex].Value = e.RowIndex + 1;
-        }
-
-        /// <summary>
-        /// Обработка окончания редактирования ячейки.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private static void CellEndEdit(object sender, DataGridViewCellEventArgs e)
-        {
-            DataGridView dgv = sender as DataGridView;
-
-            // Если был отредактирован не первый столбец (номер строки) и в ячейке нет текста.
-            if (e.ColumnIndex != 0 && (dgv[e.ColumnIndex, e.RowIndex].Value == null
-                || string.IsNullOrEmpty(dgv[e.ColumnIndex, e.RowIndex].Value.ToString().Trim())
-                || dgv[e.ColumnIndex, e.RowIndex].Value.ToString().Trim().ToLower() == dgv.Columns[e.ColumnIndex].ToolTipText.ToLower()))
-            {
-                dgv[e.ColumnIndex, e.RowIndex].Value = dgv.Columns[e.ColumnIndex].ToolTipText;
-            }
-        }
-
-        /// <summary>
-        /// Обработка события добавления новой строки.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private static void RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
-        {
-            DataGridView dgv = sender as DataGridView;
-
-            // Заполнение номера строки в первый столбец.
-            dgv[0, e.RowIndex].Value = e.RowIndex + 1;
-
-            // Заполнение подсказок в новые поля.
-            for (int c = 1; c < dgv.Columns.Count; c++)
-            {
-                if (dgv[c, e.RowIndex] is DataGridViewComboBoxCell) // Выбор первого элемента из списка, являющегося подсказкой.
-                {
-                    DataGridViewComboBoxCell comboBoxCell = (DataGridViewComboBoxCell)dgv[c, e.RowIndex];
-                    dgv[c, e.RowIndex].Value = comboBoxCell.Items[0];
-                }
-                else
-                {
-                    dgv[c, e.RowIndex].Value = dgv.Columns[c].ToolTipText;
-                }
-            }
-        }
-
-        /// <summary>
-        /// Обработка события начала редактирования ячейки.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private static void CellEnter(object sender, DataGridViewCellEventArgs e)
-        {
-            DataGridView dgv = sender as DataGridView;
-
-            // Если началось редактирование не первого столбца (номер строки) и в ячейке есть текст, который является подсказкой.
-            if (e.ColumnIndex != 0 && dgv[e.ColumnIndex, e.RowIndex].Value != null && dgv[e.ColumnIndex, e.RowIndex].Value.ToString() == dgv.Columns[e.ColumnIndex].ToolTipText)
-            {
-                dgv[e.ColumnIndex, e.RowIndex].Value = null;
-            }
         }
 
         /// <summary>

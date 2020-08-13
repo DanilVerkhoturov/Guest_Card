@@ -12,13 +12,14 @@ namespace Admin_Panel_Hotel.ApplicationsFolder
 
             Functions.NewlineProcessing(UsersDataGridView);
 
-            DivisionsComboBox.DataSource = Customer.GetAllDivisionsAndSubdivisions();
-            LocationComboBox.DataSource = Locations.GetAll();
+            UsersDataGridView.Columns["tabNum"].ValueType = Type.GetType("System.Int64");
+            UsersDataGridView.Columns["from"].ValueType = Type.GetType("System.DateTime");
+            UsersDataGridView.Columns["to"].ValueType = Type.GetType("System.DateTime");
 
-            DataGridViewComboBoxColumn locationsComboBox = (DataGridViewComboBoxColumn)UsersDataGridView.Columns["location_id"];
-            locationsComboBox.DataSource = Locations.GetAll();
-            locationsComboBox.ValueMember = "location_id";
-            locationsComboBox.DisplayMember = "location_name";
+            DivisionsComboBox.DataSource = Customer.GetAllDivisionsAndSubdivisions();
+            LocationComboBox.DataSource = Locations.GetAll(Customer.Id);
+
+            Functions.FillLocationsDataGridViewComboBox(UsersDataGridView, Customer.Id);
         }
 
         private void AddUserLabel_Click(object sender, EventArgs e)
@@ -41,11 +42,11 @@ namespace Admin_Panel_Hotel.ApplicationsFolder
 
             if (UsersDataGridView.Rows.Count == 0
                 || (UsersDataGridView.Rows.Count > 0
-                && UsersDataGridView["fio", lastUser].Value != null
+                && UsersDataGridView["user_id", lastUser].Value != null
                 && UsersDataGridView["tabNum", lastUser].Value != null
                 && UsersDataGridView["from", lastUser].Value != null
                 && UsersDataGridView["to", lastUser].Value != null
-                && UsersDataGridView["location", lastUser].Value != null
+                && UsersDataGridView["location_id", lastUser].Value != null
                 && DateTime.TryParse(UsersDataGridView[3, lastUser].Value.ToString(), out dateFrom)
                 && DateTime.TryParse(UsersDataGridView[4, lastUser].Value.ToString(), out dateTo))
                 && dateFrom < dateTo)
@@ -68,21 +69,24 @@ namespace Admin_Panel_Hotel.ApplicationsFolder
 
         private void SendToCustomerButton_Click(object sender, EventArgs e)
         {
-            if (DivisionsComboBox.SelectedIndex >= 0 && CheckLastUser()) // Если заполнены все обязательные поля.
+            if (CheckLastUser()) // Если заполнены все обязательные поля.
             {
-                if (Applications.Add(out long applicationId, DivisionsComboBox.SelectedIndex, 2))
+                if (Customer.GetCustomerId(Convert.ToInt64(DivisionsComboBox.SelectedValue), out long customerId) && Applications.Add(out long applicationId, customerId, 2))
                 {
                     for (int i = 0; i < UsersDataGridView.RowCount; i++)
                     {
-                        if (!Applications.Users.Add(Convert.ToInt64(UsersDataGridView["fio", i].Value), Convert.ToDateTime(UsersDataGridView["from", i].Value), Convert.ToDateTime(UsersDataGridView["to", i].Value), Convert.ToInt64(UsersDataGridView["location", i].Value), 0))
+                        if (!Applications.Users.Add(Convert.ToInt64(UsersDataGridView["user_id", i].Value), Convert.ToDateTime(UsersDataGridView["from", i].Value), Convert.ToDateTime(UsersDataGridView["to", i].Value), Convert.ToInt64(UsersDataGridView["location_id", i].Value), 0))
                         {
                             MessageBox.Show("Возникла ошибка при добавлении клиента в заявке!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
 
-                    //string fileExcel = UsersToExcel();
-                    //// TODO: Сделать отправку письма с файлом на почту заказчика.
-                    //Notify();
+                    string fileExcel = UsersToExcel();
+                    Functions.SendMail($"Заявка на согласование", "", fileExcel);
+                    if (Notify() == DialogResult.Cancel)
+                    {
+                        Functions.OpenChildForm(new NewApplications(), MainForm.ContP);
+                    }
                 }
                 else
                 {
@@ -98,14 +102,14 @@ namespace Admin_Panel_Hotel.ApplicationsFolder
         /// <summary>
         /// Открыть форму уведомления о созданной заявке.
         /// </summary>
-        private void Notify()
+        private DialogResult Notify()
         {
             // Открытие формы уведомления о созданной заявке.
             NotificationsForm notification = new NotificationsForm();
             notification.NotificationLabel.Text = "Заявка добавлена";
             notification.Owner = this;
             notification.StartPosition = FormStartPosition.CenterParent;
-            notification.ShowDialog();
+            return notification.ShowDialog();
         }
 
         /// <summary>
@@ -119,19 +123,30 @@ namespace Admin_Panel_Hotel.ApplicationsFolder
             Excel.Sheets excelsheets = workbook.Worksheets;
             Excel.Worksheet excelworksheet = (Excel.Worksheet)excelsheets.get_Item(1);
 
+            // Заполнение заголовков столбцов.
+            for (int j = 1; j < UsersDataGridView.ColumnCount + 1; j++)
+            {
+                excelworksheet.Rows[1].Columns[j] = UsersDataGridView.Columns[j - 1].HeaderText;
+            }
+
+            // Заполнение данных из таблицы.
             for (int i = 1; i < UsersDataGridView.RowCount + 1; i++)
             {
                 for (int j = 1; j < UsersDataGridView.ColumnCount + 1; j++)
                 {
-                    excelworksheet.Rows[i].Columns[j] = UsersDataGridView.Rows[i - 1].Cells[j - 1].Value;
+                    excelworksheet.Rows[i + 1].Columns[j] = UsersDataGridView.Rows[i - 1].Cells[j - 1].FormattedValue;
                 }
             }
 
+            excelworksheet.Columns.EntireColumn.AutoFit();
+
             excelapp.AlertBeforeOverwriting = false;
-            workbook.SaveAs($@"{Environment.CurrentDirectory}\{DivisionsComboBox.Text} - {DateTime.Now.Date.ToShortDateString()}.xls");
+            workbook.SaveAs($@"{Environment.CurrentDirectory}\{DivisionsComboBox.Text} - {DateTime.Now.Date.ToShortDateString()}.xlsx");
+            string filePath = workbook.FullName;
+            workbook.Close();
             excelapp.Quit();
 
-            return workbook.FullName;
+            return filePath;
         }
 
         private void UsersDataGridView_CellEndEdit(object sender, DataGridViewCellEventArgs e)
@@ -165,7 +180,7 @@ namespace Admin_Panel_Hotel.ApplicationsFolder
                 }
             }
 
-            DataGridViewComboBoxColumn locationsComboBox = (DataGridViewComboBoxColumn)UsersDataGridView.Columns["location"];
+            DataGridViewComboBoxColumn locationsComboBox = (DataGridViewComboBoxColumn)UsersDataGridView.Columns["location_id"];
 
             // Проверка выбора локации.
             if (e.ColumnIndex == 5 && UsersDataGridView[5, e.RowIndex].Value != null)
@@ -176,36 +191,55 @@ namespace Admin_Panel_Hotel.ApplicationsFolder
 
         private void DivisionsComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Подгрузить список пользователей из выбранной организации.
-            DataGridViewComboBoxColumn usersComboBox = (DataGridViewComboBoxColumn)UsersDataGridView.Columns["fio"];
-            usersComboBox.DataSource = Users.GetAll(Convert.ToInt64(DivisionsComboBox.SelectedValue));
-            usersComboBox.ValueMember = "user_id";
-            usersComboBox.DisplayMember = "fio";
-
             // Если удалось получить уникальный номер (Id) заказчика.
-            if (Customer.GetDivisionId(Convert.ToInt64(DivisionsComboBox.SelectedValue), out long divisionId) && Customer.GetCustomerId(divisionId, out long customerId))
+            if (Customer.GetDivisionId(Convert.ToInt64(DivisionsComboBox.SelectedValue), DivisionsComboBox.Text, out long divisionId))
             {
-                // Подгрузить список локаций в выпадающий список на форме.
-                Customer.Id = customerId;
-                LocationComboBox.DataSource = Locations.GetAll();
+                Functions.FillUsersDataGridViewComboBox(UsersDataGridView, Convert.ToInt64(DivisionsComboBox.SelectedValue));
 
-                // Подгрузить список локаций в выпадающий список в таблице.
-                DataGridViewComboBoxColumn locationsComboBox = (DataGridViewComboBoxColumn)UsersDataGridView.Columns["location"];
-                locationsComboBox.DataSource = Locations.GetAll();
-                locationsComboBox.ValueMember = "location_id";
-                locationsComboBox.DisplayMember = "location_name";
-            }
-            else
-            {
-                if (LocationComboBox.DataSource == null)
+                if (Customer.GetCustomerId(divisionId, out long customerId))
                 {
-                    LocationComboBox.Items.Clear();
+                    // Подгрузить список локаций в выпадающий список на форме.
+                    Customer.Id = customerId;
+                    LocationComboBox.DataSource = Locations.GetAll(customerId);
+                    LocationComboBox.DisplayMember = "location_name";
+                    LocationComboBox.ValueMember = "location_id";
+
+                    Functions.FillLocationsDataGridViewComboBox(UsersDataGridView, customerId);
                 }
                 else
                 {
-                    LocationComboBox.DataSource = null;
+                    DataGridViewComboBoxColumn locationComboBox = (DataGridViewComboBoxColumn)UsersDataGridView.Columns["location_id"];
+
+                    if (LocationComboBox.DataSource == null)
+                    {
+                        LocationComboBox.Items.Clear();
+                        locationComboBox.Items.Clear();
+                    }
+                    else
+                    {
+                        LocationComboBox.DataSource = null;
+                        locationComboBox.DataSource = null;
+                    }
                 }
             }
+            else
+            {
+                DataGridViewComboBoxColumn usersComboBox = (DataGridViewComboBoxColumn)UsersDataGridView.Columns["user_id"];
+
+                if (usersComboBox.DataSource == null)
+                {
+                    usersComboBox.Items.Clear();
+                }
+                else
+                {
+                    usersComboBox.DataSource = null;
+                }
+            }
+        }
+
+        private void UsersDataGridView_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            UsersDataGridView[e.ColumnIndex, e.RowIndex].Value = null;
         }
     }
 }

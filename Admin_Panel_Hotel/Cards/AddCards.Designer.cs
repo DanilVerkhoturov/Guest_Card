@@ -38,11 +38,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.LocationComboBox = new System.Windows.Forms.ComboBox();
             this.CardsPanel = new System.Windows.Forms.Panel();
+            this.DivisionsComboBox = new System.Windows.Forms.ComboBox();
             this.CardsDataGridView = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.serialNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.shortName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.status_id = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.location_id = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.ImportButton = new System.Windows.Forms.Button();
             this.CardsPanel.SuspendLayout();
@@ -56,7 +58,7 @@
             this.AcceptButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AcceptButton.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.AcceptButton.ForeColor = System.Drawing.Color.White;
-            this.AcceptButton.Location = new System.Drawing.Point(595, 586);
+            this.AcceptButton.Location = new System.Drawing.Point(690, 582);
             this.AcceptButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.AcceptButton.Name = "AcceptButton";
             this.AcceptButton.Size = new System.Drawing.Size(212, 44);
@@ -87,6 +89,7 @@
             // 
             // LocationComboBox
             // 
+            this.LocationComboBox.DisplayMember = "location_name";
             this.LocationComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.LocationComboBox.FormattingEnabled = true;
             this.LocationComboBox.Items.AddRange(new object[] {
@@ -95,18 +98,29 @@
             this.LocationComboBox.Name = "LocationComboBox";
             this.LocationComboBox.Size = new System.Drawing.Size(298, 33);
             this.LocationComboBox.TabIndex = 54;
+            this.LocationComboBox.ValueMember = "location_id";
             // 
             // CardsPanel
             // 
+            this.CardsPanel.Controls.Add(this.DivisionsComboBox);
             this.CardsPanel.Controls.Add(this.CardsDataGridView);
             this.CardsPanel.Controls.Add(this.LocationComboBox);
             this.CardsPanel.Controls.Add(this.AcceptButton);
             this.CardsPanel.Location = new System.Drawing.Point(76, 201);
             this.CardsPanel.Margin = new System.Windows.Forms.Padding(123, 122, 3, 3);
             this.CardsPanel.Name = "CardsPanel";
-            this.CardsPanel.Size = new System.Drawing.Size(834, 663);
+            this.CardsPanel.Size = new System.Drawing.Size(933, 663);
             this.CardsPanel.TabIndex = 55;
             this.CardsPanel.Visible = false;
+            // 
+            // DivisionsComboBox
+            // 
+            this.DivisionsComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.DivisionsComboBox.FormattingEnabled = true;
+            this.DivisionsComboBox.Location = new System.Drawing.Point(347, 517);
+            this.DivisionsComboBox.Name = "DivisionsComboBox";
+            this.DivisionsComboBox.Size = new System.Drawing.Size(298, 33);
+            this.DivisionsComboBox.TabIndex = 56;
             // 
             // CardsDataGridView
             // 
@@ -129,9 +143,10 @@
             this.CardsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.CardsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4});
+            this.serialNum,
+            this.shortName,
+            this.status_id,
+            this.location_id});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -167,38 +182,48 @@
             this.CardsDataGridView.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.CardsDataGridView.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.CardsDataGridView.RowTemplate.Height = 30;
-            this.CardsDataGridView.Size = new System.Drawing.Size(807, 472);
+            this.CardsDataGridView.Size = new System.Drawing.Size(902, 472);
             this.CardsDataGridView.TabIndex = 55;
             // 
             // Column1
             // 
             this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.DataPropertyName = "№";
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Column1.DefaultCellStyle = dataGridViewCellStyle2;
             this.Column1.HeaderText = "№";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             // 
-            // Column2
+            // serialNum
             // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column2.HeaderText = "ID карты";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
+            this.serialNum.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.serialNum.DataPropertyName = "ID карты";
+            this.serialNum.HeaderText = "ID карты";
+            this.serialNum.Name = "serialNum";
+            this.serialNum.ReadOnly = true;
+            this.serialNum.Visible = false;
             // 
-            // Column3
+            // shortName
             // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column3.HeaderText = "Статус";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
+            this.shortName.DataPropertyName = "Номер карты";
+            this.shortName.HeaderText = "Номер карты";
+            this.shortName.Name = "shortName";
+            this.shortName.ReadOnly = true;
             // 
-            // Column4
+            // status_id
             // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column4.HeaderText = "Местонахождение";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
+            this.status_id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.status_id.HeaderText = "Статус";
+            this.status_id.Name = "status_id";
+            this.status_id.ReadOnly = true;
+            // 
+            // location_id
+            // 
+            this.location_id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.location_id.HeaderText = "Местонахождение";
+            this.location_id.Name = "location_id";
+            this.location_id.ReadOnly = true;
             // 
             // label2
             // 
@@ -255,9 +280,13 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button ImportButton;
         private System.Windows.Forms.DataGridView CardsDataGridView;
+        private System.Windows.Forms.DataGridViewComboBoxColumn status;
+        private System.Windows.Forms.DataGridViewComboBoxColumn location;
+        private System.Windows.Forms.ComboBox DivisionsComboBox;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn serialNum;
+        private System.Windows.Forms.DataGridViewTextBoxColumn shortName;
+        private System.Windows.Forms.DataGridViewComboBoxColumn status_id;
+        private System.Windows.Forms.DataGridViewComboBoxColumn location_id;
     }
 }

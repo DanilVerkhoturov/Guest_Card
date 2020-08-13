@@ -136,7 +136,7 @@ namespace Admin_Panel_Hotel
             /// <returns>Возвращает результат добавления.</returns>
             public static bool Add(long userId, DateTime from, DateTime to, long locationId, float sum)
             {
-                long eventId = Functions.SqlInsert($"INSERT INTO event(start_at, end_at, ev_type) VALUES({from}, {to}, {10})");
+                long eventId = Functions.SqlInsert($"INSERT INTO event(start_at, end_at, ev_type) VALUES({Functions.ToUnixTime(from)}, {Functions.ToUnixTime(to)}, {10})");
                 if (eventId >= 0)
                 {
                     long id = Functions.SqlInsert($"INSERT INTO applications_user(user_id, application_id, event_id, location_id, application_sum)" +

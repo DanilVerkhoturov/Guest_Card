@@ -245,14 +245,7 @@ namespace Admin_Panel_Hotel
                         string emailName = EmailsPanel.Controls[i].Text;
                         string email = EmailsPanel.Controls[i + 1].Text;
 
-                        if (Customer.FindEmail(email, out long emailId)) // Если такая эл.почта существует.
-                        {
-                            Customer.EditEmail(emailId, emailName, email);
-                        }
-                        else // Если такая эл.почта не существует.
-                        {
-                            Customer.AddEmail(emailName, email);
-                        }
+                        Customer.AddEmail(emailName, email);
                     }
 
                     OpenSubDivisionsPanel();
