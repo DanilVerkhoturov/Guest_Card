@@ -238,36 +238,7 @@ namespace Admin_Panel_Hotel
         /// <returns>Возвращает результат поиска подрядной организации.</returns>
         public static bool FindSubDivision(string name, out long subDivisionId)
         {
-            try
-            {
-                subDivisionId = -1;
-
-                MySqlCommand select = new MySqlCommand($"SELECT id FROM division WHERE name = '{name.Trim()}' AND parent_id = {DivisionId}", Functions.Connection);
-                select.CommandTimeout = 999999;
-
-                select.ExecuteNonQuery();
-
-                MySqlDataReader reader = select.ExecuteReader();
-                while (reader.Read())
-                {
-                    subDivisionId = Convert.ToInt64(reader[0].ToString());
-                }
-                reader.Close();
-
-                if (subDivisionId == -1) // Если подрядная организация не найдена.
-                {
-                    return false;
-                }
-                else // Если подрядная организация найдена.
-                {
-                    return true;
-                }
-            }
-            catch (Exception)
-            {
-                subDivisionId = -2;
-                return false;
-            }
+            return Functions.GetId($"SELECT id FROM division WHERE name = '{name.Trim()}' AND parent_id = {DivisionId}", out subDivisionId);
         }
 
         /// <summary>
@@ -278,36 +249,7 @@ namespace Admin_Panel_Hotel
         /// <returns>Возвращает результат поиска.</returns>
         public static bool FindDivision(string name, out long divisionId)
         {
-            try
-            {
-                divisionId = -1;
-
-                MySqlCommand select = new MySqlCommand($"SELECT id FROM division WHERE name = '{name.Trim()}' AND parent_id is null", Functions.Connection);
-                select.CommandTimeout = 999999;
-
-                select.ExecuteNonQuery();
-
-                MySqlDataReader reader = select.ExecuteReader();
-                while (reader.Read())
-                {
-                    divisionId = Convert.ToInt64(reader[0].ToString());
-                }
-                reader.Close();
-
-                if (divisionId == -1) // Если заказчик не найден.
-                {
-                    return false;
-                }
-                else // Если заказчик найден.
-                {
-                    return true;
-                }
-            }
-            catch (Exception)
-            {
-                divisionId = -2;
-                return false;
-            }
+            return Functions.GetId($"SELECT id FROM division WHERE name = '{name.Trim()}' AND parent_id is null", out divisionId);
         }
 
         /// <summary>
@@ -318,37 +260,7 @@ namespace Admin_Panel_Hotel
         /// <returns>Возвращает результат поиска.</returns>
         public static bool FindEmail(string email, out long emailId)
         {
-            try
-            {
-                emailId = -1;
-
-                MySqlCommand select = new MySqlCommand($"SELECT id FROM division_email WHERE division_id = {DivisionId} AND email = '{email}'", Functions.Connection);
-                select.CommandTimeout = 999999;
-
-                select.ExecuteNonQuery();
-
-                MySqlDataReader reader = select.ExecuteReader();
-                while (reader.Read())
-                {
-                    emailId = Convert.ToInt64(reader[0].ToString());
-                    break;
-                }
-                reader.Close();
-
-                if (emailId == -1) // Если эл.почта не найдена.
-                {
-                    return false;
-                }
-                else // Если эл.почта найдена.
-                {
-                    return true;
-                }
-            }
-            catch (Exception)
-            {
-                emailId = -2;
-                return false;
-            }
+            return Functions.GetId($"SELECT id FROM division_email WHERE division_id = {DivisionId} AND email = '{email}'", out emailId);
         }
 
         /// <summary>

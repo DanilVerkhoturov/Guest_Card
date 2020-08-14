@@ -28,49 +28,55 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.CountCardLabel = new System.Windows.Forms.Label();
-            this.FilterComboBox = new System.Windows.Forms.ComboBox();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.CardCountLabel = new System.Windows.Forms.Label();
+            this.FilterLocationComboBox = new System.Windows.Forms.ComboBox();
             this.AcceptButton = new System.Windows.Forms.Button();
-            this.PrintButton = new System.Windows.Forms.Button();
             this.AllCardLabel = new System.Windows.Forms.Label();
-            this.SearchComboBox = new System.Windows.Forms.ComboBox();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.CardsDataGridView = new System.Windows.Forms.DataGridView();
             this.LocationComboBox = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.FromTextBox = new System.Windows.Forms.TextBox();
+            this.ToTextBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.SearchTextBox = new System.Windows.Forms.TextBox();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.serial_num = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.short_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.status_id = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.location_id = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.checkBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.card_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.CardsDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // CountCardLabel
+            // CardCountLabel
             // 
-            this.CountCardLabel.AutoSize = true;
-            this.CountCardLabel.Location = new System.Drawing.Point(71, 784);
-            this.CountCardLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.CountCardLabel.Name = "CountCardLabel";
-            this.CountCardLabel.Size = new System.Drawing.Size(166, 25);
-            this.CountCardLabel.TabIndex = 50;
-            this.CountCardLabel.Text = "Выбрано 0 карт";
+            this.CardCountLabel.AutoSize = true;
+            this.CardCountLabel.Location = new System.Drawing.Point(71, 784);
+            this.CardCountLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.CardCountLabel.Name = "CardCountLabel";
+            this.CardCountLabel.Size = new System.Drawing.Size(172, 25);
+            this.CardCountLabel.TabIndex = 50;
+            this.CardCountLabel.Text = "Карт выбрано: 0";
             // 
-            // FilterComboBox
+            // FilterLocationComboBox
             // 
-            this.FilterComboBox.BackColor = System.Drawing.Color.White;
-            this.FilterComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.FilterComboBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.FilterComboBox.ForeColor = System.Drawing.Color.Black;
-            this.FilterComboBox.FormattingEnabled = true;
-            this.FilterComboBox.Items.AddRange(new object[] {
+            this.FilterLocationComboBox.BackColor = System.Drawing.Color.White;
+            this.FilterLocationComboBox.DisplayMember = "location_name";
+            this.FilterLocationComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.FilterLocationComboBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.FilterLocationComboBox.ForeColor = System.Drawing.Color.Black;
+            this.FilterLocationComboBox.FormattingEnabled = true;
+            this.FilterLocationComboBox.Items.AddRange(new object[] {
             "Офис"});
-            this.FilterComboBox.Location = new System.Drawing.Point(76, 126);
-            this.FilterComboBox.Margin = new System.Windows.Forms.Padding(123, 47, 5, 6);
-            this.FilterComboBox.Name = "FilterComboBox";
-            this.FilterComboBox.Size = new System.Drawing.Size(294, 33);
-            this.FilterComboBox.TabIndex = 47;
+            this.FilterLocationComboBox.Location = new System.Drawing.Point(76, 126);
+            this.FilterLocationComboBox.Margin = new System.Windows.Forms.Padding(123, 47, 5, 6);
+            this.FilterLocationComboBox.Name = "FilterLocationComboBox";
+            this.FilterLocationComboBox.Size = new System.Drawing.Size(294, 33);
+            this.FilterLocationComboBox.TabIndex = 47;
+            this.FilterLocationComboBox.ValueMember = "location_id";
+            this.FilterLocationComboBox.SelectedIndexChanged += new System.EventHandler(this.FilterLocationComboBox_SelectedIndexChanged);
             // 
             // AcceptButton
             // 
@@ -86,22 +92,7 @@
             this.AcceptButton.TabIndex = 45;
             this.AcceptButton.Text = "Подтвердить";
             this.AcceptButton.UseVisualStyleBackColor = false;
-            // 
-            // PrintButton
-            // 
-            this.PrintButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(82)))), ((int)(((byte)(119)))));
-            this.PrintButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
-            this.PrintButton.FlatAppearance.BorderSize = 0;
-            this.PrintButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PrintButton.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.PrintButton.ForeColor = System.Drawing.Color.White;
-            this.PrintButton.Location = new System.Drawing.Point(908, 45);
-            this.PrintButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
-            this.PrintButton.Name = "PrintButton";
-            this.PrintButton.Size = new System.Drawing.Size(126, 40);
-            this.PrintButton.TabIndex = 44;
-            this.PrintButton.Text = "Печать";
-            this.PrintButton.UseVisualStyleBackColor = false;
+            this.AcceptButton.Click += new System.EventHandler(this.AcceptButton_Click);
             // 
             // AllCardLabel
             // 
@@ -115,21 +106,6 @@
             this.AllCardLabel.TabIndex = 43;
             this.AllCardLabel.Text = "Перемещение карт";
             // 
-            // SearchComboBox
-            // 
-            this.SearchComboBox.BackColor = System.Drawing.Color.White;
-            this.SearchComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.SearchComboBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.SearchComboBox.ForeColor = System.Drawing.Color.Black;
-            this.SearchComboBox.FormattingEnabled = true;
-            this.SearchComboBox.Items.AddRange(new object[] {
-            "Поиск"});
-            this.SearchComboBox.Location = new System.Drawing.Point(397, 126);
-            this.SearchComboBox.Margin = new System.Windows.Forms.Padding(22, 6, 5, 6);
-            this.SearchComboBox.Name = "SearchComboBox";
-            this.SearchComboBox.Size = new System.Drawing.Size(294, 33);
-            this.SearchComboBox.TabIndex = 52;
-            // 
             // dataGridViewImageColumn1
             // 
             this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
@@ -139,97 +115,57 @@
             this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewImageColumn1.Width = 30;
             // 
-            // dataGridView1
+            // CardsDataGridView
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.ColumnHeadersHeight = 35;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.CardsDataGridView.AllowUserToAddRows = false;
+            this.CardsDataGridView.AllowUserToDeleteRows = false;
+            this.CardsDataGridView.AllowUserToResizeRows = false;
+            this.CardsDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.CardsDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.CardsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.CardsDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.CardsDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.CardsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.CardsDataGridView.ColumnHeadersHeight = 35;
+            this.CardsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.CardsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6});
-            this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.GridColor = System.Drawing.Color.Black;
-            this.dataGridView1.Location = new System.Drawing.Point(76, 187);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 22, 3, 3);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridView1.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.dataGridView1.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dataGridView1.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
-            this.dataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.dataGridView1.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridView1.RowTemplate.Height = 30;
-            this.dataGridView1.Size = new System.Drawing.Size(958, 408);
-            this.dataGridView1.TabIndex = 54;
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Column1.HeaderText = "№";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 57;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Column2.HeaderText = "ID карты";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 120;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Column3.HeaderText = "Номер карты";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 166;
-            // 
-            // Column4
-            // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column4.HeaderText = "Статус";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column5.HeaderText = "Местонахождение";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Column6.HeaderText = "Все";
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 51;
+            this.serial_num,
+            this.short_name,
+            this.status_id,
+            this.location_id,
+            this.checkBoxColumn,
+            this.card_id});
+            this.CardsDataGridView.EnableHeadersVisualStyles = false;
+            this.CardsDataGridView.GridColor = System.Drawing.Color.Black;
+            this.CardsDataGridView.Location = new System.Drawing.Point(76, 187);
+            this.CardsDataGridView.Margin = new System.Windows.Forms.Padding(3, 22, 3, 3);
+            this.CardsDataGridView.MultiSelect = false;
+            this.CardsDataGridView.Name = "CardsDataGridView";
+            this.CardsDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.CardsDataGridView.RowHeadersVisible = false;
+            this.CardsDataGridView.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.CardsDataGridView.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.CardsDataGridView.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CardsDataGridView.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.CardsDataGridView.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.CardsDataGridView.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.CardsDataGridView.RowTemplate.Height = 30;
+            this.CardsDataGridView.Size = new System.Drawing.Size(958, 408);
+            this.CardsDataGridView.TabIndex = 54;
+            this.CardsDataGridView.CellMouseUp += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.CardsDataGridView_CellMouseUp);
+            this.CardsDataGridView.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.CardsDataGridView_CellValueChanged);
             // 
             // LocationComboBox
             // 
+            this.LocationComboBox.DisplayMember = "location_name";
             this.LocationComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.LocationComboBox.FormattingEnabled = true;
             this.LocationComboBox.Items.AddRange(new object[] {
@@ -238,6 +174,103 @@
             this.LocationComboBox.Name = "LocationComboBox";
             this.LocationComboBox.Size = new System.Drawing.Size(250, 33);
             this.LocationComboBox.TabIndex = 55;
+            this.LocationComboBox.ValueMember = "location_id";
+            this.LocationComboBox.SelectedIndexChanged += new System.EventHandler(this.LocationComboBox_SelectedIndexChanged);
+            // 
+            // FromTextBox
+            // 
+            this.FromTextBox.Location = new System.Drawing.Point(732, 126);
+            this.FromTextBox.Margin = new System.Windows.Forms.Padding(36, 3, 3, 3);
+            this.FromTextBox.Name = "FromTextBox";
+            this.FromTextBox.Size = new System.Drawing.Size(100, 33);
+            this.FromTextBox.TabIndex = 56;
+            this.FromTextBox.TextChanged += new System.EventHandler(this.FromToTextBox_TextChanged);
+            // 
+            // ToTextBox
+            // 
+            this.ToTextBox.Location = new System.Drawing.Point(871, 126);
+            this.ToTextBox.Margin = new System.Windows.Forms.Padding(36, 3, 3, 3);
+            this.ToTextBox.Name = "ToTextBox";
+            this.ToTextBox.Size = new System.Drawing.Size(100, 33);
+            this.ToTextBox.TabIndex = 57;
+            this.ToTextBox.TextChanged += new System.EventHandler(this.FromToTextBox_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(770, 82);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(170, 25);
+            this.label1.TabIndex = 58;
+            this.label1.Text = "Диапазон от/до";
+            // 
+            // SearchTextBox
+            // 
+            this.SearchTextBox.Location = new System.Drawing.Point(399, 126);
+            this.SearchTextBox.Name = "SearchTextBox";
+            this.SearchTextBox.Size = new System.Drawing.Size(294, 33);
+            this.SearchTextBox.TabIndex = 59;
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.HeaderText = "№";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // serial_num
+            // 
+            this.serial_num.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.serial_num.DataPropertyName = "serial_num";
+            this.serial_num.HeaderText = "ID карты";
+            this.serial_num.Name = "serial_num";
+            this.serial_num.ReadOnly = true;
+            this.serial_num.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.serial_num.Visible = false;
+            // 
+            // short_name
+            // 
+            this.short_name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.short_name.DataPropertyName = "short_name";
+            this.short_name.HeaderText = "Номер карты";
+            this.short_name.Name = "short_name";
+            this.short_name.ReadOnly = true;
+            this.short_name.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // status_id
+            // 
+            this.status_id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.status_id.DataPropertyName = "status_id";
+            this.status_id.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.status_id.HeaderText = "Статус";
+            this.status_id.Name = "status_id";
+            this.status_id.ReadOnly = true;
+            this.status_id.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // location_id
+            // 
+            this.location_id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.location_id.DataPropertyName = "location_id";
+            this.location_id.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.location_id.HeaderText = "Местонахождение";
+            this.location_id.Name = "location_id";
+            this.location_id.ReadOnly = true;
+            this.location_id.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // checkBoxColumn
+            // 
+            this.checkBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.checkBoxColumn.HeaderText = "Все";
+            this.checkBoxColumn.Name = "checkBoxColumn";
+            this.checkBoxColumn.Width = 51;
+            // 
+            // card_id
+            // 
+            this.card_id.DataPropertyName = "card_id";
+            this.card_id.HeaderText = "card_id";
+            this.card_id.Name = "card_id";
+            this.card_id.Visible = false;
             // 
             // MovingCards
             // 
@@ -245,39 +278,44 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.ClientSize = new System.Drawing.Size(1093, 894);
+            this.Controls.Add(this.SearchTextBox);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.ToTextBox);
+            this.Controls.Add(this.FromTextBox);
             this.Controls.Add(this.LocationComboBox);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.SearchComboBox);
-            this.Controls.Add(this.CountCardLabel);
-            this.Controls.Add(this.FilterComboBox);
+            this.Controls.Add(this.CardsDataGridView);
+            this.Controls.Add(this.CardCountLabel);
+            this.Controls.Add(this.FilterLocationComboBox);
             this.Controls.Add(this.AcceptButton);
-            this.Controls.Add(this.PrintButton);
             this.Controls.Add(this.AllCardLabel);
             this.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Name = "MovingCards";
             this.Text = "MovingGards";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CardsDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label CountCardLabel;
-        private System.Windows.Forms.ComboBox FilterComboBox;
+        private System.Windows.Forms.Label CardCountLabel;
+        private System.Windows.Forms.ComboBox FilterLocationComboBox;
         private new System.Windows.Forms.Button AcceptButton;
-        private System.Windows.Forms.Button PrintButton;
         private System.Windows.Forms.Label AllCardLabel;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
-        private System.Windows.Forms.ComboBox SearchComboBox;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Column6;
+        private System.Windows.Forms.DataGridView CardsDataGridView;
         private System.Windows.Forms.ComboBox LocationComboBox;
+        private System.Windows.Forms.TextBox FromTextBox;
+        private System.Windows.Forms.TextBox ToTextBox;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox SearchTextBox;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn serial_num;
+        private System.Windows.Forms.DataGridViewTextBoxColumn short_name;
+        private System.Windows.Forms.DataGridViewComboBoxColumn status_id;
+        private System.Windows.Forms.DataGridViewComboBoxColumn location_id;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn checkBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn card_id;
     }
 }

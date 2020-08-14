@@ -120,6 +120,37 @@ namespace Admin_Panel_Hotel
             }
         }
 
+        /// <summary>
+        /// Получить только Id элемента из запроса.
+        /// </summary>
+        /// <param name="query">Запрос.</param>
+        /// <param name="id">Уникальный номер найденного элемента. -1 - если возникла ошибка или элемент не найден.</param>
+        /// <returns>Возвращает результат получения.</returns>
+        public static bool GetId(string query, out long id)
+        {
+            try
+            {
+                id = -1;
+
+                MySqlCommand select = new MySqlCommand(query, Connection);
+                select.CommandTimeout = 999999;
+
+                select.ExecuteNonQuery();
+
+                MySqlDataReader reader = select.ExecuteReader();
+                while (reader.Read())
+                    id = Convert.ToInt64(reader[0].ToString());
+                reader.Close();
+
+                return id != -1;
+            }
+            catch (Exception)
+            {
+                id = -1;
+                return false;
+            }
+        }
+
         #endregion
 
         /// <summary>
@@ -164,10 +195,23 @@ namespace Admin_Panel_Hotel
         /// Заполнить выпадающий список локаций в таблице.
         /// </summary>
         /// <param name="dgv">Таблица.</param>
-        public static void FillLocationsDataGridViewComboBox(DataGridView dgv, long customerId)
+        /// <param name="customerId">Уникальный номер (Id) заказчика.</param>
+        public static void FillLocationsInDataGridViewComboBox(DataGridView dgv, long customerId)
         {
             DataGridViewComboBoxColumn locationsComboBox = (DataGridViewComboBoxColumn)dgv.Columns["location_id"];
             locationsComboBox.DataSource = Locations.GetAll(customerId);
+            locationsComboBox.ValueMember = "location_id";
+            locationsComboBox.DisplayMember = "location_name";
+        }
+
+        /// <summary>
+        /// Заполнить выпадающий список локаций в таблице.
+        /// </summary>
+        /// <param name="dgv">Таблица.</param>
+        public static void FillLocationsInDataGridViewComboBox(DataGridView dgv)
+        {
+            DataGridViewComboBoxColumn locationsComboBox = (DataGridViewComboBoxColumn)dgv.Columns["location_id"];
+            locationsComboBox.DataSource = Locations.GetAll();
             locationsComboBox.ValueMember = "location_id";
             locationsComboBox.DisplayMember = "location_name";
         }
@@ -177,7 +221,7 @@ namespace Admin_Panel_Hotel
         /// </summary>
         /// <param name="dgv">Таблица</param>
         /// <param name="divisionId">Уникальный номер организации.</param>
-        public static void FillUsersDataGridViewComboBox(DataGridView dgv, long divisionId)
+        public static void FillUsersInDataGridViewComboBox(DataGridView dgv, long divisionId)
         {
             DataGridViewComboBoxColumn usersComboBox = (DataGridViewComboBoxColumn)dgv.Columns["user_id"];
             usersComboBox.DataSource = Users.GetAll(divisionId);
@@ -189,12 +233,25 @@ namespace Admin_Panel_Hotel
         /// Заполнить выпадающий список пользователей организации в таблице.
         /// </summary>
         /// <param name="dgv">Таблица</param>
-        public static void FillUsersDataGridViewComboBox(DataGridView dgv)
+        public static void FillUsersInDataGridViewComboBox(DataGridView dgv)
         {
             DataGridViewComboBoxColumn usersComboBox = (DataGridViewComboBoxColumn)dgv.Columns["user_id"];
             usersComboBox.DataSource = Applications.Users.Get();
             usersComboBox.ValueMember = "user_id";
             usersComboBox.DisplayMember = "fio";
+        }
+
+        /// <summary>
+        /// Заполнить выпадающий список статусов в таблице.
+        /// </summary>
+        /// <param name="dgv">Таблица</param>
+        public static void FillCardStatusesInDataGridView(DataGridView dgv)
+        {
+            // Подгрузка статусов карт в выпадающий список таблицы.
+            DataGridViewComboBoxColumn statusesComboBox = (DataGridViewComboBoxColumn)dgv.Columns["status_id"];
+            statusesComboBox.DataSource = Card.GetStatuses();
+            statusesComboBox.ValueMember = "status_id";
+            statusesComboBox.DisplayMember = "status_name";
         }
 
         public static void RFID_DataReceivedHandler(object sender, SerialDataReceivedEventArgs e)
@@ -360,9 +417,13 @@ namespace Admin_Panel_Hotel
         private static void SetRowNumber(object sender, DataGridViewRowsAddedEventArgs e)
         {
             DataGridView dgv = sender as DataGridView;
+            int rowIndex = e.RowIndex;
 
-            // Заполнение номера строки в первый столбец.
-            dgv[0, e.RowIndex].Value = e.RowIndex + 1;
+            for (int i = 0; i < e.RowCount; i++)
+            {
+                // Заполнение номера строки в первый столбец.
+                dgv[0, rowIndex].Value = ++rowIndex;
+            }
         }
 
         /// <summary>

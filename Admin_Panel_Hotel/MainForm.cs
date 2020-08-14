@@ -17,6 +17,9 @@ namespace Admin_Panel_Hotel
         public static Panel CustomersP = null;
         public static Button CustomersBtn = null;
         public static Button MyCustomersBtn = null;
+        public static Panel CardsP = null;
+        public static Button CardsBtn = null;
+        public static Button AllCardsBtn = null;
         private static Button CurrentSubButton = null;
         private static Button CurrentMainButton = null;
         private static Panel CurrentSubMenu = null;
@@ -29,6 +32,9 @@ namespace Admin_Panel_Hotel
             CustomersP = CustomersPanel;
             CustomersBtn = CustomersButton;
             MyCustomersBtn = MyCustomersButton;
+            CardsP = CardsPanel;
+            CardsBtn = CardsButton;
+            AllCardsBtn = AllCardsButton;
 
             // Подключение магнитного считывателя.
             Functions.RFID = new SerialPort

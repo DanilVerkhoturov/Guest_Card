@@ -148,37 +148,7 @@ namespace Admin_Panel_Hotel
         /// <returns>Возвращает результат поиска.</returns>
         public static bool FindRoom(string name, long hotelId, out long roomId)
         {
-            try
-            {
-                roomId = -1;
-
-                MySqlCommand select = new MySqlCommand($"SELECT id FROM room WHERE hotel_id = {hotelId} AND name = \"{name}\"", Functions.Connection);
-                select.CommandTimeout = 999999;
-
-                select.ExecuteNonQuery();
-
-                MySqlDataReader reader = select.ExecuteReader();
-                while (reader.Read())
-                {
-                    roomId = Convert.ToInt64(reader[0].ToString());
-                    break;
-                }
-                reader.Close();
-
-                if (roomId < 0) // Если комната не найдена.
-                {
-                    return false;
-                }
-                else // Если комната найдена.
-                {
-                    return true;
-                }
-            }
-            catch (Exception)
-            {
-                roomId = -2;
-                return false;
-            }
+            return Functions.GetId($"SELECT id FROM room WHERE hotel_id = {hotelId} AND name = \"{name}\"", out roomId);
         }
     }
 }

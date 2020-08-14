@@ -10,8 +10,8 @@ namespace Admin_Panel_Hotel.ApplicationsFolder
             InitializeComponent();
 
             Functions.NewlineProcessing(UsersDataGridView);
-            Functions.FillUsersDataGridViewComboBox(UsersDataGridView);
-            Functions.FillLocationsDataGridViewComboBox(UsersDataGridView, Customer.Id);
+            Functions.FillUsersInDataGridViewComboBox(UsersDataGridView);
+            Functions.FillLocationsInDataGridViewComboBox(UsersDataGridView, Customer.Id);
 
             UsersDataGridView.AutoGenerateColumns = false;
             UsersDataGridView.DataSource = Applications.Users.Get();

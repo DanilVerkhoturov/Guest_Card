@@ -19,7 +19,7 @@ namespace Admin_Panel_Hotel.ApplicationsFolder
             DivisionsComboBox.DataSource = Customer.GetAllDivisionsAndSubdivisions();
             LocationComboBox.DataSource = Locations.GetAll(Customer.Id);
 
-            Functions.FillLocationsDataGridViewComboBox(UsersDataGridView, Customer.Id);
+            Functions.FillLocationsInDataGridViewComboBox(UsersDataGridView, Customer.Id);
         }
 
         private void AddUserLabel_Click(object sender, EventArgs e)
@@ -194,7 +194,7 @@ namespace Admin_Panel_Hotel.ApplicationsFolder
             // Если удалось получить уникальный номер (Id) заказчика.
             if (Customer.GetDivisionId(Convert.ToInt64(DivisionsComboBox.SelectedValue), DivisionsComboBox.Text, out long divisionId))
             {
-                Functions.FillUsersDataGridViewComboBox(UsersDataGridView, Convert.ToInt64(DivisionsComboBox.SelectedValue));
+                Functions.FillUsersInDataGridViewComboBox(UsersDataGridView, Convert.ToInt64(DivisionsComboBox.SelectedValue));
 
                 if (Customer.GetCustomerId(divisionId, out long customerId))
                 {
@@ -204,7 +204,7 @@ namespace Admin_Panel_Hotel.ApplicationsFolder
                     LocationComboBox.DisplayMember = "location_name";
                     LocationComboBox.ValueMember = "location_id";
 
-                    Functions.FillLocationsDataGridViewComboBox(UsersDataGridView, customerId);
+                    Functions.FillLocationsInDataGridViewComboBox(UsersDataGridView, customerId);
                 }
                 else
                 {
