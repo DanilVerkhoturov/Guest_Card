@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.CardCountLabel = new System.Windows.Forms.Label();
             this.FilterLocationComboBox = new System.Windows.Forms.ComboBox();
             this.AcceptButton = new System.Windows.Forms.Button();
@@ -56,7 +56,7 @@
             this.CardCountLabel.Location = new System.Drawing.Point(71, 784);
             this.CardCountLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.CardCountLabel.Name = "CardCountLabel";
-            this.CardCountLabel.Size = new System.Drawing.Size(172, 25);
+            this.CardCountLabel.Size = new System.Drawing.Size(173, 25);
             this.CardCountLabel.TabIndex = 50;
             this.CardCountLabel.Text = "Карт выбрано: 0";
             // 
@@ -125,14 +125,14 @@
             this.CardsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.CardsDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.CardsDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.CardsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.CardsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.CardsDataGridView.ColumnHeadersHeight = 35;
             this.CardsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.CardsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -213,11 +213,12 @@
             // 
             // Column1
             // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.Column1.HeaderText = "№";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column1.Width = 38;
             // 
             // serial_num
             // 
@@ -227,7 +228,6 @@
             this.serial_num.Name = "serial_num";
             this.serial_num.ReadOnly = true;
             this.serial_num.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.serial_num.Visible = false;
             // 
             // short_name
             // 
@@ -250,13 +250,14 @@
             // 
             // location_id
             // 
-            this.location_id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.location_id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.location_id.DataPropertyName = "location_id";
             this.location_id.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
             this.location_id.HeaderText = "Местонахождение";
             this.location_id.Name = "location_id";
             this.location_id.ReadOnly = true;
             this.location_id.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.location_id.Width = 198;
             // 
             // checkBoxColumn
             // 

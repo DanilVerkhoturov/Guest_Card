@@ -175,11 +175,23 @@
     <Compile Include="ApplicationsFolder\DraftApplications.Designer.cs">
       <DependentUpon>DraftApplications.cs</DependentUpon>
     </Compile>
+    <Compile Include="Customers\AddOrganization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customers\AddOrganization.Designer.cs">
+      <DependentUpon>AddOrganization.cs</DependentUpon>
+    </Compile>
     <Compile Include="Customers\CustomerInfoForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Customers\CustomerInfoForm.Designer.cs">
       <DependentUpon>CustomerInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customers\AddLocationInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customers\AddLocationInfo.Designer.cs">
+      <DependentUpon>AddLocationInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Customers\LocationInfo.cs">
       <SubType>Form</SubType>
@@ -353,11 +365,29 @@
     <Compile Include="UsersFolder\AddUsers.Designer.cs">
       <DependentUpon>AddUsers.cs</DependentUpon>
     </Compile>
+    <Compile Include="UsersFolder\AddUsersAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsersFolder\AddUsersAdmin.Designer.cs">
+      <DependentUpon>AddUsersAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UsersFolder\AddUsersCurators.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsersFolder\AddUsersCurators.Designer.cs">
+      <DependentUpon>AddUsersCurators.cs</DependentUpon>
+    </Compile>
     <Compile Include="UsersFolder\RulesUsers.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UsersFolder\RulesUsers.Designer.cs">
       <DependentUpon>RulesUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UsersFolder\ChoseRulesUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsersFolder\ChoseRulesUsers.Designer.cs">
+      <DependentUpon>ChoseRulesUsers.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Accommodation\HistoryAccommodation.resx">
       <DependentUpon>HistoryAccommodation.cs</DependentUpon>
@@ -395,8 +425,14 @@
     <EmbeddedResource Include="ApplicationsFolder\DraftApplications.resx">
       <DependentUpon>DraftApplications.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Customers\AddOrganization.resx">
+      <DependentUpon>AddOrganization.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Customers\CustomerInfoForm.resx">
       <DependentUpon>CustomerInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customers\AddLocationInfo.resx">
+      <DependentUpon>AddLocationInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Customers\LocationInfo.resx">
       <DependentUpon>LocationInfo.cs</DependentUpon>
@@ -481,8 +517,17 @@
     <EmbeddedResource Include="UsersFolder\AddUsers.resx">
       <DependentUpon>AddUsers.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UsersFolder\AddUsersAdmin.resx">
+      <DependentUpon>AddUsersAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsersFolder\AddUsersCurators.resx">
+      <DependentUpon>AddUsersCurators.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UsersFolder\RulesUsers.resx">
       <DependentUpon>RulesUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsersFolder\ChoseRulesUsers.resx">
+      <DependentUpon>ChoseRulesUsers.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

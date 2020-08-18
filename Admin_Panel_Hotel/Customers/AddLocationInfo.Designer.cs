@@ -1,6 +1,6 @@
 ﻿namespace Admin_Panel_Hotel.Customers
 {
-    partial class LocationInfo
+    partial class AddLocationInfo
     {
         /// <summary>
         /// Required designer variable.
@@ -35,8 +35,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.CustomerLocationNameLabel = new System.Windows.Forms.Label();
             this.LocationDataLabel = new System.Windows.Forms.Label();
-            this.CardPropertiesLabel = new System.Windows.Forms.Label();
-            this.Analyticslabel = new System.Windows.Forms.Label();
             this.CardPropertiesPanel = new System.Windows.Forms.Panel();
             this.CardPropertiesDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,16 +44,9 @@
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.SaveCardPropertiesButton = new System.Windows.Forms.Button();
             this.EditCardPropertiesButton = new System.Windows.Forms.Button();
-            this.AllCardPropertiesPanel = new System.Windows.Forms.Panel();
-            this.GiveLinenCheckBox = new System.Windows.Forms.CheckBox();
-            this.FireSeftyCheckBox = new System.Windows.Forms.CheckBox();
-            this.RulesCheckBox = new System.Windows.Forms.CheckBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.LocationInfoPanel = new System.Windows.Forms.Panel();
             this.SaveLocationInfoButton = new System.Windows.Forms.Button();
             this.EditNameButton = new System.Windows.Forms.Button();
-            this.EditRoomsButton = new System.Windows.Forms.Button();
-            this.AddRoomLabel = new System.Windows.Forms.Label();
             this.CardsCountTextBox = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -63,16 +54,18 @@
             this.BedsCountTextBox = new System.Windows.Forms.TextBox();
             this.RoomsCountTextBox = new System.Windows.Forms.TextBox();
             this.NameTextBox = new System.Windows.Forms.TextBox();
-            this.EditNameTipLabel = new System.Windows.Forms.Label();
             this.RoomsDataGridView = new System.Windows.Forms.DataGridView();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RoomNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BedsCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.delete = new System.Windows.Forms.DataGridViewImageColumn();
+            this.AddRoomLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.CardPropertiesPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CardPropertiesDataGridView)).BeginInit();
-            this.AllCardPropertiesPanel.SuspendLayout();
             this.LocationInfoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RoomsDataGridView)).BeginInit();
             this.SuspendLayout();
@@ -99,44 +92,14 @@
             this.LocationDataLabel.AutoSize = true;
             this.LocationDataLabel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.LocationDataLabel.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LocationDataLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
-            this.LocationDataLabel.Location = new System.Drawing.Point(151, 114);
+            this.LocationDataLabel.ForeColor = System.Drawing.Color.Black;
+            this.LocationDataLabel.Location = new System.Drawing.Point(82, 114);
             this.LocationDataLabel.Margin = new System.Windows.Forms.Padding(142, 35, 3, 0);
             this.LocationDataLabel.Name = "LocationDataLabel";
             this.LocationDataLabel.Size = new System.Drawing.Size(104, 29);
             this.LocationDataLabel.TabIndex = 1;
             this.LocationDataLabel.Text = "Данные";
             this.LocationDataLabel.Click += new System.EventHandler(this.LocationDataLabel_Click);
-            // 
-            // CardPropertiesLabel
-            // 
-            this.CardPropertiesLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.CardPropertiesLabel.AutoSize = true;
-            this.CardPropertiesLabel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CardPropertiesLabel.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CardPropertiesLabel.ForeColor = System.Drawing.Color.Black;
-            this.CardPropertiesLabel.Location = new System.Drawing.Point(293, 114);
-            this.CardPropertiesLabel.Margin = new System.Windows.Forms.Padding(35, 35, 3, 0);
-            this.CardPropertiesLabel.Name = "CardPropertiesLabel";
-            this.CardPropertiesLabel.Size = new System.Drawing.Size(179, 29);
-            this.CardPropertiesLabel.TabIndex = 2;
-            this.CardPropertiesLabel.Text = "Свойства карт";
-            this.CardPropertiesLabel.Click += new System.EventHandler(this.CardPropertiesLabel_Click);
-            // 
-            // Analyticslabel
-            // 
-            this.Analyticslabel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Analyticslabel.AutoSize = true;
-            this.Analyticslabel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Analyticslabel.Enabled = false;
-            this.Analyticslabel.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Analyticslabel.ForeColor = System.Drawing.Color.Black;
-            this.Analyticslabel.Location = new System.Drawing.Point(510, 114);
-            this.Analyticslabel.Margin = new System.Windows.Forms.Padding(35, 35, 3, 0);
-            this.Analyticslabel.Name = "Analyticslabel";
-            this.Analyticslabel.Size = new System.Drawing.Size(135, 29);
-            this.Analyticslabel.TabIndex = 3;
-            this.Analyticslabel.Text = "Аналитика";
             // 
             // CardPropertiesPanel
             // 
@@ -273,77 +236,14 @@
             this.EditCardPropertiesButton.UseVisualStyleBackColor = false;
             this.EditCardPropertiesButton.Click += new System.EventHandler(this.EditCardPropertiesButton_Click);
             // 
-            // AllCardPropertiesPanel
-            // 
-            this.AllCardPropertiesPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.AllCardPropertiesPanel.Controls.Add(this.GiveLinenCheckBox);
-            this.AllCardPropertiesPanel.Controls.Add(this.FireSeftyCheckBox);
-            this.AllCardPropertiesPanel.Controls.Add(this.RulesCheckBox);
-            this.AllCardPropertiesPanel.Controls.Add(this.label7);
-            this.AllCardPropertiesPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.AllCardPropertiesPanel.Location = new System.Drawing.Point(751, 0);
-            this.AllCardPropertiesPanel.Name = "AllCardPropertiesPanel";
-            this.AllCardPropertiesPanel.Size = new System.Drawing.Size(342, 894);
-            this.AllCardPropertiesPanel.TabIndex = 72;
-            this.AllCardPropertiesPanel.Visible = false;
-            // 
-            // GiveLinenCheckBox
-            // 
-            this.GiveLinenCheckBox.AutoSize = true;
-            this.GiveLinenCheckBox.Cursor = System.Windows.Forms.Cursors.No;
-            this.GiveLinenCheckBox.Enabled = false;
-            this.GiveLinenCheckBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.GiveLinenCheckBox.Location = new System.Drawing.Point(32, 295);
-            this.GiveLinenCheckBox.Margin = new System.Windows.Forms.Padding(5, 51, 5, 0);
-            this.GiveLinenCheckBox.Name = "GiveLinenCheckBox";
-            this.GiveLinenCheckBox.Size = new System.Drawing.Size(190, 29);
-            this.GiveLinenCheckBox.TabIndex = 64;
-            this.GiveLinenCheckBox.Text = "Выдавать белье";
-            this.GiveLinenCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // FireSeftyCheckBox
-            // 
-            this.FireSeftyCheckBox.AutoSize = true;
-            this.FireSeftyCheckBox.Enabled = false;
-            this.FireSeftyCheckBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.FireSeftyCheckBox.Location = new System.Drawing.Point(32, 215);
-            this.FireSeftyCheckBox.Margin = new System.Windows.Forms.Padding(5, 51, 5, 0);
-            this.FireSeftyCheckBox.Name = "FireSeftyCheckBox";
-            this.FireSeftyCheckBox.Size = new System.Drawing.Size(273, 29);
-            this.FireSeftyCheckBox.TabIndex = 63;
-            this.FireSeftyCheckBox.Text = "Пожарная безопасность";
-            this.FireSeftyCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // RulesCheckBox
-            // 
-            this.RulesCheckBox.AutoSize = true;
-            this.RulesCheckBox.Enabled = false;
-            this.RulesCheckBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.RulesCheckBox.Location = new System.Drawing.Point(32, 139);
-            this.RulesCheckBox.Margin = new System.Windows.Forms.Padding(5, 66, 5, 0);
-            this.RulesCheckBox.Name = "RulesCheckBox";
-            this.RulesCheckBox.Size = new System.Drawing.Size(244, 29);
-            this.RulesCheckBox.TabIndex = 62;
-            this.RulesCheckBox.Text = "Правила проживания";
-            this.RulesCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.Location = new System.Drawing.Point(10, 48);
-            this.label7.Margin = new System.Windows.Forms.Padding(123, 48, 5, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(325, 25);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "Свойства карт для проживания";
-            // 
             // LocationInfoPanel
             // 
             this.LocationInfoPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.LocationInfoPanel.Controls.Add(this.button1);
+            this.LocationInfoPanel.Controls.Add(this.label2);
+            this.LocationInfoPanel.Controls.Add(this.label1);
             this.LocationInfoPanel.Controls.Add(this.SaveLocationInfoButton);
             this.LocationInfoPanel.Controls.Add(this.EditNameButton);
-            this.LocationInfoPanel.Controls.Add(this.EditRoomsButton);
             this.LocationInfoPanel.Controls.Add(this.AddRoomLabel);
             this.LocationInfoPanel.Controls.Add(this.CardsCountTextBox);
             this.LocationInfoPanel.Controls.Add(this.label9);
@@ -352,11 +252,10 @@
             this.LocationInfoPanel.Controls.Add(this.BedsCountTextBox);
             this.LocationInfoPanel.Controls.Add(this.RoomsCountTextBox);
             this.LocationInfoPanel.Controls.Add(this.NameTextBox);
-            this.LocationInfoPanel.Controls.Add(this.EditNameTipLabel);
             this.LocationInfoPanel.Controls.Add(this.RoomsDataGridView);
-            this.LocationInfoPanel.Location = new System.Drawing.Point(133, 163);
+            this.LocationInfoPanel.Location = new System.Drawing.Point(87, 163);
             this.LocationInfoPanel.Name = "LocationInfoPanel";
-            this.LocationInfoPanel.Size = new System.Drawing.Size(957, 686);
+            this.LocationInfoPanel.Size = new System.Drawing.Size(1003, 686);
             this.LocationInfoPanel.TabIndex = 74;
             // 
             // SaveLocationInfoButton
@@ -366,9 +265,9 @@
             this.SaveLocationInfoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SaveLocationInfoButton.Font = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.SaveLocationInfoButton.ForeColor = System.Drawing.Color.White;
-            this.SaveLocationInfoButton.Location = new System.Drawing.Point(531, 629);
+            this.SaveLocationInfoButton.Location = new System.Drawing.Point(532, 635);
             this.SaveLocationInfoButton.Name = "SaveLocationInfoButton";
-            this.SaveLocationInfoButton.Size = new System.Drawing.Size(202, 54);
+            this.SaveLocationInfoButton.Size = new System.Drawing.Size(202, 48);
             this.SaveLocationInfoButton.TabIndex = 67;
             this.SaveLocationInfoButton.Text = "Сохранить";
             this.SaveLocationInfoButton.UseVisualStyleBackColor = false;
@@ -378,11 +277,11 @@
             // EditNameButton
             // 
             this.EditNameButton.BackColor = System.Drawing.Color.Transparent;
-            this.EditNameButton.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.pngflow_1;
+            this.EditNameButton.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.Accept;
             this.EditNameButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.EditNameButton.FlatAppearance.BorderSize = 0;
             this.EditNameButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EditNameButton.Location = new System.Drawing.Point(756, 22);
+            this.EditNameButton.Location = new System.Drawing.Point(745, 22);
             this.EditNameButton.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
             this.EditNameButton.Name = "EditNameButton";
             this.EditNameButton.Size = new System.Drawing.Size(24, 24);
@@ -390,41 +289,9 @@
             this.EditNameButton.UseVisualStyleBackColor = false;
             this.EditNameButton.Click += new System.EventHandler(this.EditNameButton_Click_1);
             // 
-            // EditRoomsButton
-            // 
-            this.EditRoomsButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.EditRoomsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(82)))), ((int)(((byte)(119)))));
-            this.EditRoomsButton.FlatAppearance.BorderSize = 0;
-            this.EditRoomsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EditRoomsButton.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.EditRoomsButton.ForeColor = System.Drawing.Color.White;
-            this.EditRoomsButton.Location = new System.Drawing.Point(756, 102);
-            this.EditRoomsButton.Margin = new System.Windows.Forms.Padding(30, 34, 3, 3);
-            this.EditRoomsButton.Name = "EditRoomsButton";
-            this.EditRoomsButton.Size = new System.Drawing.Size(166, 33);
-            this.EditRoomsButton.TabIndex = 52;
-            this.EditRoomsButton.Text = "Редактировать";
-            this.EditRoomsButton.UseVisualStyleBackColor = false;
-            this.EditRoomsButton.Click += new System.EventHandler(this.EditRoomsButton_Click_1);
-            // 
-            // AddRoomLabel
-            // 
-            this.AddRoomLabel.AutoSize = true;
-            this.AddRoomLabel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.AddRoomLabel.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.AddRoomLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
-            this.AddRoomLabel.Location = new System.Drawing.Point(526, 157);
-            this.AddRoomLabel.Margin = new System.Windows.Forms.Padding(3, 19, 3, 0);
-            this.AddRoomLabel.Name = "AddRoomLabel";
-            this.AddRoomLabel.Size = new System.Drawing.Size(208, 25);
-            this.AddRoomLabel.TabIndex = 9;
-            this.AddRoomLabel.Text = "+ добавить комнату";
-            this.AddRoomLabel.Visible = false;
-            this.AddRoomLabel.Click += new System.EventHandler(this.AddRoomLabel_Click);
-            // 
             // CardsCountTextBox
             // 
-            this.CardsCountTextBox.Location = new System.Drawing.Point(367, 172);
+            this.CardsCountTextBox.Location = new System.Drawing.Point(362, 172);
             this.CardsCountTextBox.Margin = new System.Windows.Forms.Padding(3, 8, 0, 3);
             this.CardsCountTextBox.Name = "CardsCountTextBox";
             this.CardsCountTextBox.ReadOnly = true;
@@ -436,7 +303,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(39, 175);
+            this.label9.Location = new System.Drawing.Point(22, 175);
             this.label9.Margin = new System.Windows.Forms.Padding(30, 37, 3, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(334, 25);
@@ -446,7 +313,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(410, 68);
+            this.label8.Location = new System.Drawing.Point(399, 69);
             this.label8.Margin = new System.Windows.Forms.Padding(186, 16, 3, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(194, 25);
@@ -456,7 +323,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(39, 69);
+            this.label6.Location = new System.Drawing.Point(22, 69);
             this.label6.Margin = new System.Windows.Forms.Padding(3, 16, 0, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(217, 25);
@@ -465,7 +332,7 @@
             // 
             // BedsCountTextBox
             // 
-            this.BedsCountTextBox.Location = new System.Drawing.Point(391, 102);
+            this.BedsCountTextBox.Location = new System.Drawing.Point(375, 102);
             this.BedsCountTextBox.Margin = new System.Windows.Forms.Padding(20, 9, 3, 3);
             this.BedsCountTextBox.Name = "BedsCountTextBox";
             this.BedsCountTextBox.ReadOnly = true;
@@ -475,7 +342,7 @@
             // 
             // RoomsCountTextBox
             // 
-            this.RoomsCountTextBox.Location = new System.Drawing.Point(24, 102);
+            this.RoomsCountTextBox.Location = new System.Drawing.Point(12, 102);
             this.RoomsCountTextBox.Margin = new System.Windows.Forms.Padding(3, 8, 0, 3);
             this.RoomsCountTextBox.Name = "RoomsCountTextBox";
             this.RoomsCountTextBox.ReadOnly = true;
@@ -485,25 +352,12 @@
             // 
             // NameTextBox
             // 
-            this.NameTextBox.Location = new System.Drawing.Point(23, 19);
+            this.NameTextBox.Location = new System.Drawing.Point(12, 19);
             this.NameTextBox.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
             this.NameTextBox.Name = "NameTextBox";
             this.NameTextBox.ReadOnly = true;
             this.NameTextBox.Size = new System.Drawing.Size(710, 33);
             this.NameTextBox.TabIndex = 0;
-            // 
-            // EditNameTipLabel
-            // 
-            this.EditNameTipLabel.AutoSize = true;
-            this.EditNameTipLabel.BackColor = System.Drawing.Color.Transparent;
-            this.EditNameTipLabel.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.EditNameTipLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(87)))), ((int)(((byte)(87)))));
-            this.EditNameTipLabel.Location = new System.Drawing.Point(752, 19);
-            this.EditNameTipLabel.Name = "EditNameTipLabel";
-            this.EditNameTipLabel.Size = new System.Drawing.Size(170, 38);
-            this.EditNameTipLabel.TabIndex = 64;
-            this.EditNameTipLabel.Text = "Редактируйте поле\r\nи нажмите сохранить";
-            this.EditNameTipLabel.Visible = false;
             // 
             // RoomsDataGridView
             // 
@@ -532,7 +386,7 @@
             this.RoomsDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.RoomsDataGridView.Enabled = false;
             this.RoomsDataGridView.EnableHeadersVisualStyles = false;
-            this.RoomsDataGridView.Location = new System.Drawing.Point(24, 239);
+            this.RoomsDataGridView.Location = new System.Drawing.Point(12, 239);
             this.RoomsDataGridView.Margin = new System.Windows.Forms.Padding(3, 31, 3, 3);
             this.RoomsDataGridView.Name = "RoomsDataGridView";
             this.RoomsDataGridView.ReadOnly = true;
@@ -593,15 +447,69 @@
             this.delete.ReadOnly = true;
             this.delete.Visible = false;
             // 
-            // LocationInfo
+            // AddRoomLabel
+            // 
+            this.AddRoomLabel.AutoSize = true;
+            this.AddRoomLabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AddRoomLabel.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AddRoomLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
+            this.AddRoomLabel.Location = new System.Drawing.Point(22, 635);
+            this.AddRoomLabel.Margin = new System.Windows.Forms.Padding(3, 19, 3, 0);
+            this.AddRoomLabel.Name = "AddRoomLabel";
+            this.AddRoomLabel.Size = new System.Drawing.Size(258, 25);
+            this.AddRoomLabel.TabIndex = 9;
+            this.AddRoomLabel.Text = "+ добавить еще локацию";
+            this.AddRoomLabel.Visible = false;
+            this.AddRoomLabel.Click += new System.EventHandler(this.AddRoomLabel_Click);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label1.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(779, 19);
+            this.label1.Margin = new System.Windows.Forms.Padding(142, 35, 3, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(215, 23);
+            this.label1.TabIndex = 75;
+            this.label1.Text = "Добавленные локации";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label2.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
+            this.label2.Location = new System.Drawing.Point(778, 61);
+            this.label2.Margin = new System.Windows.Forms.Padding(3, 19, 3, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(143, 25);
+            this.label2.TabIndex = 76;
+            this.label2.Text = "1. Локация -1";
+            this.label2.Visible = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.closeoutline_110831_4;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(921, 69);
+            this.button1.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(12, 12);
+            this.button1.TabIndex = 77;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // AddLocationInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.ClientSize = new System.Drawing.Size(1093, 894);
-            this.Controls.Add(this.AllCardPropertiesPanel);
-            this.Controls.Add(this.Analyticslabel);
-            this.Controls.Add(this.CardPropertiesLabel);
             this.Controls.Add(this.LocationDataLabel);
             this.Controls.Add(this.CustomerLocationNameLabel);
             this.Controls.Add(this.LocationInfoPanel);
@@ -609,12 +517,10 @@
             this.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(6);
-            this.Name = "LocationInfo";
+            this.Name = "AddLocationInfo";
             this.Text = "SubDivisionInfoForm";
             this.CardPropertiesPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.CardPropertiesDataGridView)).EndInit();
-            this.AllCardPropertiesPanel.ResumeLayout(false);
-            this.AllCardPropertiesPanel.PerformLayout();
             this.LocationInfoPanel.ResumeLayout(false);
             this.LocationInfoPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RoomsDataGridView)).EndInit();
@@ -627,28 +533,18 @@
 
         private System.Windows.Forms.Label CustomerLocationNameLabel;
         private System.Windows.Forms.Label LocationDataLabel;
-        private System.Windows.Forms.Label CardPropertiesLabel;
-        private System.Windows.Forms.Label Analyticslabel;
         private System.Windows.Forms.Panel CardPropertiesPanel;
         private System.Windows.Forms.Button EditCardPropertiesButton;
         private System.Windows.Forms.Button SaveCardPropertiesButton;
         private System.Windows.Forms.DataGridView CardPropertiesDataGridView;
-        private System.Windows.Forms.Panel AllCardPropertiesPanel;
-        private System.Windows.Forms.CheckBox GiveLinenCheckBox;
-        private System.Windows.Forms.CheckBox FireSeftyCheckBox;
-        private System.Windows.Forms.CheckBox RulesCheckBox;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel LocationInfoPanel;
         private System.Windows.Forms.TextBox BedsCountTextBox;
         private System.Windows.Forms.TextBox RoomsCountTextBox;
         private System.Windows.Forms.TextBox NameTextBox;
-        private System.Windows.Forms.Label AddRoomLabel;
         private System.Windows.Forms.TextBox CardsCountTextBox;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label EditNameTipLabel;
-        private System.Windows.Forms.Button EditRoomsButton;
         private System.Windows.Forms.DataGridView RoomsDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn propertyColumn;
@@ -662,5 +558,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewImageColumn delete;
         private System.Windows.Forms.Button SaveLocationInfoButton;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label AddRoomLabel;
     }
 }

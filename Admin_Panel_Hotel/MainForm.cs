@@ -242,7 +242,7 @@ namespace Admin_Panel_Hotel
         private void UsersButton_Click(object sender, EventArgs e)
         {
             SubMenuProcessing(UsersButton, UsersButton);
-            Functions.OpenChildForm(new RulesUsers(), ContentPanel);
+            Functions.OpenChildForm(new ChoseRulesUsers(), ContentPanel);
         }
 
         #endregion

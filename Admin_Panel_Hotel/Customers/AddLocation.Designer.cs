@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.CustomerLocationNameLabel = new System.Windows.Forms.Label();
             this.LocationDataLabel = new System.Windows.Forms.Label();
             this.CardPropertiesLabel = new System.Windows.Forms.Label();
@@ -47,6 +47,10 @@
             this.SaveCardPropertiesButton = new System.Windows.Forms.Button();
             this.EditCardPropertiesButton = new System.Windows.Forms.Button();
             this.AllCardPropertiesPanel = new System.Windows.Forms.Panel();
+            this.Set2Button = new System.Windows.Forms.Button();
+            this.Set1Button = new System.Windows.Forms.Button();
+            this.Set2CheckBox = new System.Windows.Forms.CheckBox();
+            this.Set1CheckBox = new System.Windows.Forms.CheckBox();
             this.GiveLinenCheckBox = new System.Windows.Forms.CheckBox();
             this.FireSeftyCheckBox = new System.Windows.Forms.CheckBox();
             this.RulesCheckBox = new System.Windows.Forms.CheckBox();
@@ -161,10 +165,10 @@
             this.CardPropertiesDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.CardPropertiesDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.CardPropertiesDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.CardPropertiesDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.CardPropertiesDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.CardPropertiesDataGridView.ColumnHeadersHeight = 35;
             this.CardPropertiesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.CardPropertiesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -182,10 +186,10 @@
             this.CardPropertiesDataGridView.MultiSelect = false;
             this.CardPropertiesDataGridView.Name = "CardPropertiesDataGridView";
             this.CardPropertiesDataGridView.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.CardPropertiesDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.CardPropertiesDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.CardPropertiesDataGridView.RowHeadersVisible = false;
             this.CardPropertiesDataGridView.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             this.CardPropertiesDataGridView.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
@@ -221,8 +225,8 @@
             // valueColumn
             // 
             this.valueColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle2.Format = "N0";
-            this.valueColumn.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle12.Format = "N0";
+            this.valueColumn.DefaultCellStyle = dataGridViewCellStyle12;
             this.valueColumn.HeaderText = "";
             this.valueColumn.Name = "valueColumn";
             this.valueColumn.ReadOnly = true;
@@ -276,6 +280,10 @@
             // AllCardPropertiesPanel
             // 
             this.AllCardPropertiesPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.AllCardPropertiesPanel.Controls.Add(this.Set2Button);
+            this.AllCardPropertiesPanel.Controls.Add(this.Set1Button);
+            this.AllCardPropertiesPanel.Controls.Add(this.Set2CheckBox);
+            this.AllCardPropertiesPanel.Controls.Add(this.Set1CheckBox);
             this.AllCardPropertiesPanel.Controls.Add(this.GiveLinenCheckBox);
             this.AllCardPropertiesPanel.Controls.Add(this.FireSeftyCheckBox);
             this.AllCardPropertiesPanel.Controls.Add(this.RulesCheckBox);
@@ -286,6 +294,66 @@
             this.AllCardPropertiesPanel.Size = new System.Drawing.Size(342, 894);
             this.AllCardPropertiesPanel.TabIndex = 72;
             this.AllCardPropertiesPanel.Visible = false;
+            // 
+            // Set2Button
+            // 
+            this.Set2Button.BackColor = System.Drawing.Color.Transparent;
+            this.Set2Button.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.question_icon_icons_com_69315;
+            this.Set2Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Set2Button.Enabled = false;
+            this.Set2Button.FlatAppearance.BorderSize = 0;
+            this.Set2Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Set2Button.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Set2Button.Location = new System.Drawing.Point(220, 453);
+            this.Set2Button.Margin = new System.Windows.Forms.Padding(5);
+            this.Set2Button.Name = "Set2Button";
+            this.Set2Button.Size = new System.Drawing.Size(31, 31);
+            this.Set2Button.TabIndex = 71;
+            this.Set2Button.UseVisualStyleBackColor = false;
+            // 
+            // Set1Button
+            // 
+            this.Set1Button.BackColor = System.Drawing.Color.Transparent;
+            this.Set1Button.BackgroundImage = global::Admin_Panel_Hotel.Properties.Resources.question_icon_icons_com_69315;
+            this.Set1Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Set1Button.Enabled = false;
+            this.Set1Button.FlatAppearance.BorderSize = 0;
+            this.Set1Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Set1Button.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Set1Button.Location = new System.Drawing.Point(220, 375);
+            this.Set1Button.Margin = new System.Windows.Forms.Padding(5);
+            this.Set1Button.Name = "Set1Button";
+            this.Set1Button.Size = new System.Drawing.Size(31, 31);
+            this.Set1Button.TabIndex = 62;
+            this.Set1Button.UseVisualStyleBackColor = false;
+            // 
+            // Set2CheckBox
+            // 
+            this.Set2CheckBox.AutoSize = true;
+            this.Set2CheckBox.Cursor = System.Windows.Forms.Cursors.No;
+            this.Set2CheckBox.Enabled = false;
+            this.Set2CheckBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Set2CheckBox.Location = new System.Drawing.Point(58, 455);
+            this.Set2CheckBox.Margin = new System.Windows.Forms.Padding(5, 51, 5, 0);
+            this.Set2CheckBox.Name = "Set2CheckBox";
+            this.Set2CheckBox.Size = new System.Drawing.Size(152, 29);
+            this.Set2CheckBox.TabIndex = 70;
+            this.Set2CheckBox.Text = "Комплект -2";
+            this.Set2CheckBox.UseVisualStyleBackColor = true;
+            // 
+            // Set1CheckBox
+            // 
+            this.Set1CheckBox.AutoSize = true;
+            this.Set1CheckBox.Cursor = System.Windows.Forms.Cursors.No;
+            this.Set1CheckBox.Enabled = false;
+            this.Set1CheckBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Set1CheckBox.Location = new System.Drawing.Point(58, 375);
+            this.Set1CheckBox.Margin = new System.Windows.Forms.Padding(5, 51, 5, 0);
+            this.Set1CheckBox.Name = "Set1CheckBox";
+            this.Set1CheckBox.Size = new System.Drawing.Size(152, 29);
+            this.Set1CheckBox.TabIndex = 69;
+            this.Set1CheckBox.Text = "Комплект -1";
+            this.Set1CheckBox.UseVisualStyleBackColor = true;
             // 
             // GiveLinenCheckBox
             // 
@@ -513,14 +581,14 @@
             this.RoomsDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.RoomsDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.RoomsDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.RoomsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.RoomsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.RoomsDataGridView.ColumnHeadersHeight = 35;
             this.RoomsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.RoomsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -568,9 +636,9 @@
             // 
             this.BedsCount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.BedsCount.DataPropertyName = "count_beds";
-            dataGridViewCellStyle5.Format = "N0";
-            dataGridViewCellStyle5.NullValue = "0";
-            this.BedsCount.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle15.Format = "N0";
+            dataGridViewCellStyle15.NullValue = "0";
+            this.BedsCount.DefaultCellStyle = dataGridViewCellStyle15;
             this.BedsCount.HeaderText = "Количество мест";
             this.BedsCount.Name = "BedsCount";
             this.BedsCount.ReadOnly = true;
@@ -599,13 +667,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.ClientSize = new System.Drawing.Size(1093, 894);
-            this.Controls.Add(this.AllCardPropertiesPanel);
             this.Controls.Add(this.Analyticslabel);
             this.Controls.Add(this.CardPropertiesLabel);
             this.Controls.Add(this.LocationDataLabel);
             this.Controls.Add(this.CustomerLocationNameLabel);
             this.Controls.Add(this.LocationInfoPanel);
             this.Controls.Add(this.CardPropertiesPanel);
+            this.Controls.Add(this.AllCardPropertiesPanel);
             this.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(6);
@@ -634,6 +702,10 @@
         private System.Windows.Forms.Button SaveCardPropertiesButton;
         private System.Windows.Forms.DataGridView CardPropertiesDataGridView;
         private System.Windows.Forms.Panel AllCardPropertiesPanel;
+        private System.Windows.Forms.Button Set2Button;
+        private System.Windows.Forms.Button Set1Button;
+        private System.Windows.Forms.CheckBox Set2CheckBox;
+        private System.Windows.Forms.CheckBox Set1CheckBox;
         private System.Windows.Forms.CheckBox GiveLinenCheckBox;
         private System.Windows.Forms.CheckBox FireSeftyCheckBox;
         private System.Windows.Forms.CheckBox RulesCheckBox;
