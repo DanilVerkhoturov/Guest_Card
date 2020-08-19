@@ -106,7 +106,7 @@ namespace Admin_Panel_Hotel.ApplicationsFolder
         {
             // Открытие формы уведомления о созданной заявке.
             NotificationsForm notification = new NotificationsForm();
-            notification.NotificationLabel.Text = "Заявка добавлена";
+            notification.NotificationLabel.Text = "Заявка отправлена";
             notification.Owner = this;
             notification.StartPosition = FormStartPosition.CenterParent;
             return notification.ShowDialog();

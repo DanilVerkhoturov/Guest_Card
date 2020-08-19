@@ -4,9 +4,9 @@ using System.Windows.Forms;
 
 namespace Admin_Panel_Hotel.Customers
 {
-    public partial class AddOrganization : Form
+    public partial class AddSubdivision : Form
     {
-        public AddOrganization()
+        public AddSubdivision()
         {
             InitializeComponent();
 

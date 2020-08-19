@@ -39,30 +39,30 @@ namespace Admin_Panel_Hotel
             Functions.OnlyNumbersInTextBox(BedsCountTextBox);
 
             // Установка подсказок обязательных полей.
-            NameErrorProvider.SetError(NameTextBox, "* - обязательное поле");
-            NameErrorProvider.SetIconPadding(NameTextBox, 10);
-            ContractNumberErrorProvider.SetError(ContractNumberTextBox, "* - обязательное поле");
-            ContractNumberErrorProvider.SetIconPadding(ContractNumberTextBox, 10);
-            ToContractTimeErrorProvider.SetError(ToContractTimeDateTimePicker, "* - обязательное поле");
-            ToContractTimeErrorProvider.SetIconPadding(ToContractTimeDateTimePicker, 10);
-            FromContractTimeErrorProvider.SetError(FromContractTimeDateTimePicker, "* - обязательное поле");
-            FromContractTimeErrorProvider.SetIconPadding(FromContractTimeDateTimePicker, 10);
-            LocationNameErrorProvider.SetError(LocationNameTextBox, "* - обязательное поле");
-            LocationNameErrorProvider.SetIconPadding(LocationNameTextBox, 10);
-            RoomCountErrorProvider.SetError(RoomCountTextBox, "* - обязательное поле");
-            RoomCountErrorProvider.SetIconPadding(RoomCountTextBox, 10);
-            BedsCountErrorProvider.SetError(BedsCountTextBox, "* - обязательное поле");
-            BedsCountErrorProvider.SetIconPadding(BedsCountTextBox, 10);
-            EmailNamesErrorProvider.SetError(EmailNameTextBox0, "* - обязательное поле");
-            EmailNamesErrorProvider.SetIconPadding(EmailNameTextBox0, 10);
-            EmailsErrorProvider.SetError(EmailTextBox0, "* - обязательное поле");
-            EmailsErrorProvider.SetIconPadding(EmailTextBox0, 10);
-            SubDivisionNameErrorProvider.SetError(SubDivisionNameTextBox, "* - обязательное поле");
-            SubDivisionNameErrorProvider.SetIconPadding(SubDivisionNameTextBox, 10);
-            SubDivisionEmailNameErrorProvider.SetError(SubDivisionEmailNameTextBox0, "* - обязательное поле");
-            SubDivisionEmailNameErrorProvider.SetIconPadding(SubDivisionEmailNameTextBox0, 10);
-            SubDivisionEmailErrorProvider.SetError(SubDivisionEmailTextBox0, "* - обязательное поле");
-            SubDivisionEmailErrorProvider.SetIconPadding(SubDivisionEmailTextBox0, 10);
+            //NameErrorProvider.SetError(NameTextBox, "* - обязательное поле");
+            //NameErrorProvider.SetIconPadding(NameTextBox, 10);
+            //ContractNumberErrorProvider.SetError(ContractNumberTextBox, "* - обязательное поле");
+            //ContractNumberErrorProvider.SetIconPadding(ContractNumberTextBox, 10);
+            //ToContractTimeErrorProvider.SetError(ToContractTimeDateTimePicker, "* - обязательное поле");
+            //ToContractTimeErrorProvider.SetIconPadding(ToContractTimeDateTimePicker, 10);
+            //FromContractTimeErrorProvider.SetError(FromContractTimeDateTimePicker, "* - обязательное поле");
+            //FromContractTimeErrorProvider.SetIconPadding(FromContractTimeDateTimePicker, 10);
+            //LocationNameErrorProvider.SetError(LocationNameTextBox, "* - обязательное поле");
+            //LocationNameErrorProvider.SetIconPadding(LocationNameTextBox, 10);
+            //RoomCountErrorProvider.SetError(RoomCountTextBox, "* - обязательное поле");
+            //RoomCountErrorProvider.SetIconPadding(RoomCountTextBox, 10);
+            //BedsCountErrorProvider.SetError(BedsCountTextBox, "* - обязательное поле");
+            //BedsCountErrorProvider.SetIconPadding(BedsCountTextBox, 10);
+            //EmailNamesErrorProvider.SetError(EmailNameTextBox0, "* - обязательное поле");
+            //EmailNamesErrorProvider.SetIconPadding(EmailNameTextBox0, 10);
+            //EmailsErrorProvider.SetError(EmailTextBox0, "* - обязательное поле");
+            //EmailsErrorProvider.SetIconPadding(EmailTextBox0, 10);
+            //SubDivisionNameErrorProvider.SetError(SubDivisionNameTextBox, "* - обязательное поле");
+            //SubDivisionNameErrorProvider.SetIconPadding(SubDivisionNameTextBox, 10);
+            //SubDivisionEmailNameErrorProvider.SetError(SubDivisionEmailNameTextBox0, "* - обязательное поле");
+            //SubDivisionEmailNameErrorProvider.SetIconPadding(SubDivisionEmailNameTextBox0, 10);
+            //SubDivisionEmailErrorProvider.SetError(SubDivisionEmailTextBox0, "* - обязательное поле");
+            //SubDivisionEmailErrorProvider.SetIconPadding(SubDivisionEmailTextBox0, 10);
         }
 
         #region Данные заказчика

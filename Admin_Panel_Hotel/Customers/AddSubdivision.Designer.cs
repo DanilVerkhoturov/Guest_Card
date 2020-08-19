@@ -1,6 +1,6 @@
 ﻿namespace Admin_Panel_Hotel.Customers
 {
-    partial class AddOrganization
+    partial class AddSubdivision
     {
         /// <summary>
         /// Required designer variable.
