@@ -38,17 +38,18 @@
             this.SearchTextBox = new System.Windows.Forms.TextBox();
             this.DivisionsComboBox = new System.Windows.Forms.ComboBox();
             this.UsersDataGridView = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ShowUserInfo = new System.Windows.Forms.DataGridViewImageColumn();
             this.ChangeButton = new System.Windows.Forms.Button();
             this.PrintButton = new System.Windows.Forms.Button();
             this.ShowAllLinkLabel = new System.Windows.Forms.LinkLabel();
             this.CardsCountLabel = new System.Windows.Forms.Label();
             this.EmptyRegistryLabel = new System.Windows.Forms.Label();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ShowUserInfo = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.UsersDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -117,6 +118,7 @@
             this.Column1,
             this.Column2,
             this.Column3,
+            this.Column5,
             this.Column7,
             this.Column4,
             this.ShowUserInfo});
@@ -155,66 +157,6 @@
             this.UsersDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.UsersDataGridView.Size = new System.Drawing.Size(957, 441);
             this.UsersDataGridView.TabIndex = 46;
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column1.FillWeight = 20F;
-            this.Column1.Frozen = true;
-            this.Column1.HeaderText = "№";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 33;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Column2.FillWeight = 112.3096F;
-            this.Column2.Frozen = true;
-            this.Column2.HeaderText = "ФИО";
-            this.Column2.MinimumWidth = 100;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column2.Width = 187;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column3.FillWeight = 112.3096F;
-            this.Column3.Frozen = true;
-            this.Column3.HeaderText = "Таб.номер";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 186;
-            // 
-            // Column7
-            // 
-            this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column7.Frozen = true;
-            this.Column7.HeaderText = "Должность";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            this.Column7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column7.Width = 166;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Организация";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // ShowUserInfo
-            // 
-            this.ShowUserInfo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.ShowUserInfo.HeaderText = "Все";
-            this.ShowUserInfo.Image = global::Admin_Panel_Hotel.Properties.Resources.pngwing_8;
-            this.ShowUserInfo.Name = "ShowUserInfo";
-            this.ShowUserInfo.ReadOnly = true;
-            this.ShowUserInfo.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ShowUserInfo.Width = 51;
             // 
             // ChangeButton
             // 
@@ -280,6 +222,71 @@
             this.EmptyRegistryLabel.TabIndex = 51;
             this.EmptyRegistryLabel.Text = "У вас пока нет в Реестре людей";
             // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column1.FillWeight = 20F;
+            this.Column1.Frozen = true;
+            this.Column1.HeaderText = "№";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 33;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Column2.FillWeight = 112.3096F;
+            this.Column2.Frozen = true;
+            this.Column2.HeaderText = "ФИО";
+            this.Column2.MinimumWidth = 100;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column2.Width = 187;
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column3.FillWeight = 112.3096F;
+            this.Column3.Frozen = true;
+            this.Column3.HeaderText = "Таб.номер";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 186;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Карта гостя";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column7
+            // 
+            this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column7.HeaderText = "Должность";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            this.Column7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column7.Width = 166;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Организация";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // ShowUserInfo
+            // 
+            this.ShowUserInfo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.ShowUserInfo.HeaderText = "Все";
+            this.ShowUserInfo.Image = global::Admin_Panel_Hotel.Properties.Resources.pngwing_8;
+            this.ShowUserInfo.Name = "ShowUserInfo";
+            this.ShowUserInfo.ReadOnly = true;
+            this.ShowUserInfo.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ShowUserInfo.Width = 51;
+            // 
             // RegistryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -310,16 +317,17 @@
         private System.Windows.Forms.TextBox SearchTextBox;
         private System.Windows.Forms.ComboBox DivisionsComboBox;
         private System.Windows.Forms.DataGridView UsersDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewImageColumn ShowUserInfo;
         private System.Windows.Forms.Button ChangeButton;
         private System.Windows.Forms.Button PrintButton;
         private System.Windows.Forms.LinkLabel ShowAllLinkLabel;
         private System.Windows.Forms.Label CardsCountLabel;
         private System.Windows.Forms.Label EmptyRegistryLabel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewImageColumn ShowUserInfo;
     }
 }

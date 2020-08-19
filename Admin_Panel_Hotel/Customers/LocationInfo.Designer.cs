@@ -344,7 +344,6 @@
             this.LocationInfoPanel.Controls.Add(this.SaveLocationInfoButton);
             this.LocationInfoPanel.Controls.Add(this.EditNameButton);
             this.LocationInfoPanel.Controls.Add(this.EditRoomsButton);
-            this.LocationInfoPanel.Controls.Add(this.AddRoomLabel);
             this.LocationInfoPanel.Controls.Add(this.CardsCountTextBox);
             this.LocationInfoPanel.Controls.Add(this.label9);
             this.LocationInfoPanel.Controls.Add(this.label8);
@@ -413,7 +412,7 @@
             this.AddRoomLabel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AddRoomLabel.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.AddRoomLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
-            this.AddRoomLabel.Location = new System.Drawing.Point(526, 157);
+            this.AddRoomLabel.Location = new System.Drawing.Point(847, 54);
             this.AddRoomLabel.Margin = new System.Windows.Forms.Padding(3, 19, 3, 0);
             this.AddRoomLabel.Name = "AddRoomLabel";
             this.AddRoomLabel.Size = new System.Drawing.Size(208, 25);
@@ -599,13 +598,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.ClientSize = new System.Drawing.Size(1093, 894);
-            this.Controls.Add(this.AllCardPropertiesPanel);
             this.Controls.Add(this.Analyticslabel);
             this.Controls.Add(this.CardPropertiesLabel);
             this.Controls.Add(this.LocationDataLabel);
             this.Controls.Add(this.CustomerLocationNameLabel);
             this.Controls.Add(this.LocationInfoPanel);
             this.Controls.Add(this.CardPropertiesPanel);
+            this.Controls.Add(this.AllCardPropertiesPanel);
+            this.Controls.Add(this.AddRoomLabel);
             this.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(6);
