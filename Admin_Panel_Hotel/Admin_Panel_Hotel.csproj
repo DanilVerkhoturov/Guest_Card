@@ -175,11 +175,11 @@
     <Compile Include="ApplicationsFolder\DraftApplications.Designer.cs">
       <DependentUpon>DraftApplications.cs</DependentUpon>
     </Compile>
-    <Compile Include="Customers\AddOrganization.cs">
+    <Compile Include="Customers\AddSubdivision.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Customers\AddOrganization.Designer.cs">
-      <DependentUpon>AddOrganization.cs</DependentUpon>
+    <Compile Include="Customers\AddSubdivision.Designer.cs">
+      <DependentUpon>AddSubdivision.cs</DependentUpon>
     </Compile>
     <Compile Include="Customers\CustomerInfoForm.cs">
       <SubType>Form</SubType>
@@ -425,8 +425,8 @@
     <EmbeddedResource Include="ApplicationsFolder\DraftApplications.resx">
       <DependentUpon>DraftApplications.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Customers\AddOrganization.resx">
-      <DependentUpon>AddOrganization.cs</DependentUpon>
+    <EmbeddedResource Include="Customers\AddSubdivision.resx">
+      <DependentUpon>AddSubdivision.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Customers\CustomerInfoForm.resx">
       <DependentUpon>CustomerInfoForm.cs</DependentUpon>

@@ -44,10 +44,10 @@
             this.NotificationLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.NotificationLabel.AutoSize = true;
-            this.NotificationLabel.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.NotificationLabel.Font = new System.Drawing.Font("Roboto", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.NotificationLabel.Location = new System.Drawing.Point(183, 122);
             this.NotificationLabel.Name = "NotificationLabel";
-            this.NotificationLabel.Size = new System.Drawing.Size(284, 45);
+            this.NotificationLabel.Size = new System.Drawing.Size(292, 38);
             this.NotificationLabel.TabIndex = 0;
             this.NotificationLabel.Text = "Заявка добавлена";
             // 
@@ -56,10 +56,10 @@
             this.GoOverText.AutoSize = true;
             this.GoOverText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
             this.GoOverText.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.GoOverText.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.GoOverText.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.GoOverText.Location = new System.Drawing.Point(150, 182);
             this.GoOverText.Name = "GoOverText";
-            this.GoOverText.Size = new System.Drawing.Size(130, 32);
+            this.GoOverText.Size = new System.Drawing.Size(129, 29);
             this.GoOverText.TabIndex = 1;
             this.GoOverText.Text = "Перейти в";
             this.GoOverText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -71,11 +71,11 @@
             this.CurrentApplicationsLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
             this.CurrentApplicationsLabel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CurrentApplicationsLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CurrentApplicationsLabel.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CurrentApplicationsLabel.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CurrentApplicationsLabel.ForeColor = System.Drawing.SystemColors.Highlight;
             this.CurrentApplicationsLabel.Location = new System.Drawing.Point(277, 182);
             this.CurrentApplicationsLabel.Name = "CurrentApplicationsLabel";
-            this.CurrentApplicationsLabel.Size = new System.Drawing.Size(190, 32);
+            this.CurrentApplicationsLabel.Size = new System.Drawing.Size(193, 29);
             this.CurrentApplicationsLabel.TabIndex = 2;
             this.CurrentApplicationsLabel.Text = "текущие заявки";
             this.CurrentApplicationsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -86,10 +86,10 @@
             this.OrText.AutoSize = true;
             this.OrText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
             this.OrText.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.OrText.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.OrText.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.OrText.Location = new System.Drawing.Point(463, 182);
             this.OrText.Name = "OrText";
-            this.OrText.Size = new System.Drawing.Size(56, 32);
+            this.OrText.Size = new System.Drawing.Size(55, 29);
             this.OrText.TabIndex = 3;
             this.OrText.Text = "или\r\n";
             this.OrText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -99,10 +99,10 @@
             this.NotificationLabel2.AutoSize = true;
             this.NotificationLabel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
             this.NotificationLabel2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.NotificationLabel2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.NotificationLabel2.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.NotificationLabel2.Location = new System.Drawing.Point(198, 214);
             this.NotificationLabel2.Name = "NotificationLabel2";
-            this.NotificationLabel2.Size = new System.Drawing.Size(117, 32);
+            this.NotificationLabel2.Size = new System.Drawing.Size(120, 29);
             this.NotificationLabel2.TabIndex = 4;
             this.NotificationLabel2.Text = "добавить";
             this.NotificationLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -113,11 +113,11 @@
             this.AddApplicationsLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
             this.AddApplicationsLabel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AddApplicationsLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddApplicationsLabel.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AddApplicationsLabel.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.AddApplicationsLabel.ForeColor = System.Drawing.SystemColors.Highlight;
             this.AddApplicationsLabel.Location = new System.Drawing.Point(313, 214);
             this.AddApplicationsLabel.Name = "AddApplicationsLabel";
-            this.AddApplicationsLabel.Size = new System.Drawing.Size(167, 32);
+            this.AddApplicationsLabel.Size = new System.Drawing.Size(168, 29);
             this.AddApplicationsLabel.TabIndex = 5;
             this.AddApplicationsLabel.Text = "новую заявку";
             this.AddApplicationsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
