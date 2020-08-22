@@ -119,6 +119,12 @@
       <DependentUpon>LocationsAccommodation.cs</DependentUpon>
     </Compile>
     <Compile Include="Applications.cs" />
+    <Compile Include="ApplicationsFolder\AddApplicationFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationsFolder\AddApplicationFood.Designer.cs">
+      <DependentUpon>AddApplicationFood.cs</DependentUpon>
+    </Compile>
     <Compile Include="ApplicationsFolder\CurrentApplications.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +136,30 @@
     </Compile>
     <Compile Include="ApplicationsFolder\HistoryApplications.Designer.cs">
       <DependentUpon>HistoryApplications.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationsFolder\ShowCurrentApplicationFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationsFolder\ShowCurrentApplicationFood.Designer.cs">
+      <DependentUpon>ShowCurrentApplicationFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationsFolder\ShowDraftApplicationFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationsFolder\ShowDraftApplicationFood.Designer.cs">
+      <DependentUpon>ShowDraftApplicationFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationsFolder\ShowHistoryApplicationFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationsFolder\ShowHistoryApplicationFood.Designer.cs">
+      <DependentUpon>ShowHistoryApplicationFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationsFolder\ShowNewApplicationFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationsFolder\ShowNewApplicationFood.Designer.cs">
+      <DependentUpon>ShowNewApplicationFood.cs</DependentUpon>
     </Compile>
     <Compile Include="Authorization.cs">
       <SubType>Form</SubType>
@@ -395,6 +425,9 @@
     <EmbeddedResource Include="Accommodation\LocationsAccommodation.resx">
       <DependentUpon>LocationsAccommodation.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationsFolder\AddApplicationFood.resx">
+      <DependentUpon>AddApplicationFood.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ApplicationsFolder\CurrentApplications.resx">
       <DependentUpon>CurrentApplications.cs</DependentUpon>
     </EmbeddedResource>
@@ -403,6 +436,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ApplicationsFolder\InfoUserForm.resx">
       <DependentUpon>InfoUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationsFolder\ShowCurrentApplicationFood.resx">
+      <DependentUpon>ShowCurrentApplicationFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationsFolder\ShowDraftApplicationFood.resx">
+      <DependentUpon>ShowDraftApplicationFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationsFolder\ShowHistoryApplicationFood.resx">
+      <DependentUpon>ShowHistoryApplicationFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationsFolder\ShowNewApplicationFood.resx">
+      <DependentUpon>ShowNewApplicationFood.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Authorization.resx">
       <DependentUpon>Authorization.cs</DependentUpon>

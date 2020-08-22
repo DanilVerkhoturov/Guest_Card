@@ -1,6 +1,6 @@
 ﻿namespace Admin_Panel_Hotel.ApplicationsFolder
 {
-    partial class NewApplications
+    partial class AddNewApplications
     {
         /// <summary>
         /// Required designer variable.
@@ -45,7 +45,11 @@
             this.customerid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.NotificationLabel = new System.Windows.Forms.Label();
+            this.PeriodToDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.PeriodFromDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.CustomerComboBox = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.ImportButton = new System.Windows.Forms.Button();
             this.PrintButton = new System.Windows.Forms.Button();
             this.Acceptbutton = new System.Windows.Forms.Button();
             this.AddUserLabel = new System.Windows.Forms.Label();
@@ -213,6 +217,31 @@
             this.NotificationLabel.Text = "У вас пока нет Новых заявок";
             this.NotificationLabel.Visible = false;
             // 
+            // PeriodToDateTimePicker
+            // 
+            this.PeriodToDateTimePicker.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.PeriodToDateTimePicker.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.PeriodToDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.PeriodToDateTimePicker.Location = new System.Drawing.Point(672, 116);
+            this.PeriodToDateTimePicker.Margin = new System.Windows.Forms.Padding(20, 0, 0, 5);
+            this.PeriodToDateTimePicker.Name = "PeriodToDateTimePicker";
+            this.PeriodToDateTimePicker.Size = new System.Drawing.Size(160, 33);
+            this.PeriodToDateTimePicker.TabIndex = 63;
+            // 
+            // PeriodFromDateTimePicker
+            // 
+            this.PeriodFromDateTimePicker.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.PeriodFromDateTimePicker.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
+            this.PeriodFromDateTimePicker.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
+            this.PeriodFromDateTimePicker.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
+            this.PeriodFromDateTimePicker.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.PeriodFromDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.PeriodFromDateTimePicker.Location = new System.Drawing.Point(492, 116);
+            this.PeriodFromDateTimePicker.Margin = new System.Windows.Forms.Padding(20, 0, 0, 5);
+            this.PeriodFromDateTimePicker.Name = "PeriodFromDateTimePicker";
+            this.PeriodFromDateTimePicker.Size = new System.Drawing.Size(160, 33);
+            this.PeriodFromDateTimePicker.TabIndex = 62;
+            // 
             // CustomerComboBox
             // 
             this.CustomerComboBox.BackColor = System.Drawing.Color.White;
@@ -229,6 +258,43 @@
             this.CustomerComboBox.Size = new System.Drawing.Size(188, 33);
             this.CustomerComboBox.TabIndex = 59;
             this.CustomerComboBox.ValueMember = "id";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.Color.White;
+            this.comboBox1.DisplayMember = "name";
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBox1.ForeColor = System.Drawing.Color.Black;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Все заказчики"});
+            this.comboBox1.Location = new System.Drawing.Point(284, 116);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(20, 37, 0, 10);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(188, 33);
+            this.comboBox1.TabIndex = 64;
+            this.comboBox1.ValueMember = "id";
+            // 
+            // ImportButton
+            // 
+            this.ImportButton.BackColor = System.Drawing.Color.White;
+            this.ImportButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(82)))), ((int)(((byte)(119)))));
+            this.ImportButton.FlatAppearance.BorderSize = 2;
+            this.ImportButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ImportButton.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ImportButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(82)))), ((int)(((byte)(119)))));
+            this.ImportButton.Image = global::Admin_Panel_Hotel.Properties.Resources.Import;
+            this.ImportButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ImportButton.Location = new System.Drawing.Point(852, 116);
+            this.ImportButton.Margin = new System.Windows.Forms.Padding(20, 34, 0, 0);
+            this.ImportButton.Name = "ImportButton";
+            this.ImportButton.Size = new System.Drawing.Size(208, 33);
+            this.ImportButton.TabIndex = 65;
+            this.ImportButton.Text = "Импорт данных";
+            this.ImportButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ImportButton.UseVisualStyleBackColor = false;
+            this.ImportButton.Visible = false;
             // 
             // PrintButton
             // 
@@ -274,7 +340,7 @@
             this.AddUserLabel.Text = "+ добавить еще";
             this.AddUserLabel.Visible = false;
             // 
-            // NewApplications
+            // AddNewApplications
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -284,13 +350,17 @@
             this.Controls.Add(this.AddUserLabel);
             this.Controls.Add(this.Acceptbutton);
             this.Controls.Add(this.PrintButton);
+            this.Controls.Add(this.ImportButton);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.PeriodToDateTimePicker);
+            this.Controls.Add(this.PeriodFromDateTimePicker);
             this.Controls.Add(this.CustomerComboBox);
             this.Controls.Add(this.NotificationLabel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ApplicationsDataGridView);
             this.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(6);
-            this.Name = "NewApplications";
+            this.Name = "AddNewApplications";
             this.Text = "Applications";
             ((System.ComponentModel.ISupportInitialize)(this.ApplicationsDataGridView)).EndInit();
             this.ResumeLayout(false);
@@ -309,7 +379,11 @@
         private System.Windows.Forms.DataGridViewImageColumn showApplication;
         private System.Windows.Forms.DataGridViewTextBoxColumn applicationid;
         private System.Windows.Forms.DataGridViewTextBoxColumn customerid;
+        private System.Windows.Forms.DateTimePicker PeriodToDateTimePicker;
+        private System.Windows.Forms.DateTimePicker PeriodFromDateTimePicker;
         private System.Windows.Forms.ComboBox CustomerComboBox;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button ImportButton;
         private System.Windows.Forms.Button PrintButton;
         private System.Windows.Forms.Button Acceptbutton;
         private System.Windows.Forms.Label AddUserLabel;
