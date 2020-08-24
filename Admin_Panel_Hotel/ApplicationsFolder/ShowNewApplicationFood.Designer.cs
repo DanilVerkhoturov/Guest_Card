@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ShowApplicationNewFood));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -38,10 +37,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.NewApplicationNameLabel = new System.Windows.Forms.Label();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.PrintButton = new System.Windows.Forms.Button();
             this.ToDraftButton = new System.Windows.Forms.Button();
             this.Acceptbutton = new System.Windows.Forms.Button();
-            this.EditButton = new System.Windows.Forms.Button();
             this.UsersDataGridView = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.user_id = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -49,6 +46,10 @@
             this.start_at = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.end_at = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.location_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CustomerComboBox = new System.Windows.Forms.ComboBox();
+            this.SearchTextBox = new System.Windows.Forms.TextBox();
+            this.ImportButton = new System.Windows.Forms.Button();
+            this.AddUserLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.UsersDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,21 +79,6 @@
             this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewImageColumn1.Width = 30;
             // 
-            // PrintButton
-            // 
-            this.PrintButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(82)))), ((int)(((byte)(119)))));
-            this.PrintButton.FlatAppearance.BorderSize = 0;
-            this.PrintButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PrintButton.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.PrintButton.ForeColor = System.Drawing.Color.White;
-            this.PrintButton.Location = new System.Drawing.Point(808, 44);
-            this.PrintButton.Margin = new System.Windows.Forms.Padding(0, 38, 22, 0);
-            this.PrintButton.Name = "PrintButton";
-            this.PrintButton.Size = new System.Drawing.Size(115, 35);
-            this.PrintButton.TabIndex = 18;
-            this.PrintButton.Text = "Скачать";
-            this.PrintButton.UseVisualStyleBackColor = false;
-            // 
             // ToDraftButton
             // 
             this.ToDraftButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(82)))), ((int)(((byte)(119)))));
@@ -115,29 +101,13 @@
             this.Acceptbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Acceptbutton.Font = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Acceptbutton.ForeColor = System.Drawing.Color.White;
-            this.Acceptbutton.Location = new System.Drawing.Point(786, 725);
+            this.Acceptbutton.Location = new System.Drawing.Point(761, 809);
             this.Acceptbutton.Margin = new System.Windows.Forms.Padding(3, 46, 3, 3);
             this.Acceptbutton.Name = "Acceptbutton";
-            this.Acceptbutton.Size = new System.Drawing.Size(282, 58);
+            this.Acceptbutton.Size = new System.Drawing.Size(307, 42);
             this.Acceptbutton.TabIndex = 21;
-            this.Acceptbutton.Text = "Подтвердить";
+            this.Acceptbutton.Text = "Отправить заказчику";
             this.Acceptbutton.UseVisualStyleBackColor = false;
-            // 
-            // EditButton
-            // 
-            this.EditButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.EditButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("EditButton.BackgroundImage")));
-            this.EditButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.EditButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
-            this.EditButton.FlatAppearance.BorderSize = 0;
-            this.EditButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EditButton.Location = new System.Drawing.Point(761, 48);
-            this.EditButton.Margin = new System.Windows.Forms.Padding(1077, 38, 16, 46);
-            this.EditButton.Name = "EditButton";
-            this.EditButton.Size = new System.Drawing.Size(31, 24);
-            this.EditButton.TabIndex = 20;
-            this.EditButton.UseVisualStyleBackColor = false;
-            this.EditButton.Click += new System.EventHandler(this.EditButton_Click);
             // 
             // UsersDataGridView
             // 
@@ -179,7 +149,7 @@
             this.UsersDataGridView.DefaultCellStyle = dataGridViewCellStyle5;
             this.UsersDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.UsersDataGridView.EnableHeadersVisualStyles = false;
-            this.UsersDataGridView.Location = new System.Drawing.Point(76, 111);
+            this.UsersDataGridView.Location = new System.Drawing.Point(76, 179);
             this.UsersDataGridView.Margin = new System.Windows.Forms.Padding(122, 21, 123, 5);
             this.UsersDataGridView.MultiSelect = false;
             this.UsersDataGridView.Name = "UsersDataGridView";
@@ -276,16 +246,74 @@
             this.location_id.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.location_id.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
+            // CustomerComboBox
+            // 
+            this.CustomerComboBox.BackColor = System.Drawing.Color.White;
+            this.CustomerComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CustomerComboBox.Enabled = false;
+            this.CustomerComboBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CustomerComboBox.ForeColor = System.Drawing.Color.Black;
+            this.CustomerComboBox.FormattingEnabled = true;
+            this.CustomerComboBox.Items.AddRange(new object[] {
+            "Заказчик"});
+            this.CustomerComboBox.Location = new System.Drawing.Point(76, 125);
+            this.CustomerComboBox.Margin = new System.Windows.Forms.Padding(123, 46, 0, 0);
+            this.CustomerComboBox.Name = "CustomerComboBox";
+            this.CustomerComboBox.Size = new System.Drawing.Size(228, 33);
+            this.CustomerComboBox.TabIndex = 70;
+            // 
+            // SearchTextBox
+            // 
+            this.SearchTextBox.ForeColor = System.Drawing.Color.Black;
+            this.SearchTextBox.Location = new System.Drawing.Point(326, 125);
+            this.SearchTextBox.Margin = new System.Windows.Forms.Padding(22, 3, 0, 3);
+            this.SearchTextBox.Name = "SearchTextBox";
+            this.SearchTextBox.Size = new System.Drawing.Size(243, 33);
+            this.SearchTextBox.TabIndex = 71;
+            this.SearchTextBox.Text = "Сумма";
+            // 
+            // ImportButton
+            // 
+            this.ImportButton.BackColor = System.Drawing.Color.White;
+            this.ImportButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(82)))), ((int)(((byte)(119)))));
+            this.ImportButton.FlatAppearance.BorderSize = 2;
+            this.ImportButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ImportButton.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ImportButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(82)))), ((int)(((byte)(119)))));
+            this.ImportButton.Location = new System.Drawing.Point(591, 125);
+            this.ImportButton.Margin = new System.Windows.Forms.Padding(22, 34, 0, 0);
+            this.ImportButton.Name = "ImportButton";
+            this.ImportButton.Size = new System.Drawing.Size(179, 33);
+            this.ImportButton.TabIndex = 72;
+            this.ImportButton.Text = "Импорт данных";
+            this.ImportButton.UseVisualStyleBackColor = false;
+            // 
+            // AddUserLabel
+            // 
+            this.AddUserLabel.AutoSize = true;
+            this.AddUserLabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AddUserLabel.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AddUserLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
+            this.AddUserLabel.Location = new System.Drawing.Point(818, 128);
+            this.AddUserLabel.Margin = new System.Windows.Forms.Padding(48, 0, 3, 0);
+            this.AddUserLabel.Name = "AddUserLabel";
+            this.AddUserLabel.Size = new System.Drawing.Size(166, 25);
+            this.AddUserLabel.TabIndex = 73;
+            this.AddUserLabel.Text = "+ добавить еще";
+            this.AddUserLabel.Visible = false;
+            // 
             // ShowApplicationNewFood
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.ClientSize = new System.Drawing.Size(1093, 894);
+            this.Controls.Add(this.AddUserLabel);
+            this.Controls.Add(this.ImportButton);
+            this.Controls.Add(this.SearchTextBox);
+            this.Controls.Add(this.CustomerComboBox);
             this.Controls.Add(this.UsersDataGridView);
             this.Controls.Add(this.NewApplicationNameLabel);
-            this.Controls.Add(this.EditButton);
-            this.Controls.Add(this.PrintButton);
             this.Controls.Add(this.ToDraftButton);
             this.Controls.Add(this.Acceptbutton);
             this.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -301,10 +329,8 @@
 
         private System.Windows.Forms.Label NewApplicationNameLabel;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
-        private System.Windows.Forms.Button PrintButton;
         private System.Windows.Forms.Button ToDraftButton;
         private System.Windows.Forms.Button Acceptbutton;
-        private System.Windows.Forms.Button EditButton;
         private System.Windows.Forms.DataGridView UsersDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewComboBoxColumn user_id;
@@ -312,5 +338,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn start_at;
         private System.Windows.Forms.DataGridViewTextBoxColumn end_at;
         private System.Windows.Forms.DataGridViewTextBoxColumn location_id;
+        private System.Windows.Forms.ComboBox CustomerComboBox;
+        private System.Windows.Forms.TextBox SearchTextBox;
+        private System.Windows.Forms.Button ImportButton;
+        private System.Windows.Forms.Label AddUserLabel;
     }
 }

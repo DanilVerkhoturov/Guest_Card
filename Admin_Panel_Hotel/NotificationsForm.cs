@@ -22,7 +22,7 @@ namespace Admin_Panel_Hotel
         private void AddApplicationsLabel_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.OK;
-            Functions.OpenChildForm(new AddApplication(), MainForm.ContP);
+            Functions.OpenChildForm(new AddApplicationFoood(), MainForm.ContP);
         }
 
         private void ClosePictureBox_Click(object sender, EventArgs e)

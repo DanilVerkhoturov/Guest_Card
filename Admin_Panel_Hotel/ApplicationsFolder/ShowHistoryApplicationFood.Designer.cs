@@ -38,7 +38,6 @@
             this.ApplicationNameLabel = new System.Windows.Forms.Label();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.PrintButton = new System.Windows.Forms.Button();
-            this.SendButton = new System.Windows.Forms.Button();
             this.UsersDataGridView = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.user_id = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -89,21 +88,6 @@
             this.PrintButton.TabIndex = 18;
             this.PrintButton.Text = "Скачать";
             this.PrintButton.UseVisualStyleBackColor = false;
-            // 
-            // SendButton
-            // 
-            this.SendButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(82)))), ((int)(((byte)(119)))));
-            this.SendButton.FlatAppearance.BorderSize = 0;
-            this.SendButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SendButton.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.SendButton.ForeColor = System.Drawing.Color.White;
-            this.SendButton.Location = new System.Drawing.Point(812, 43);
-            this.SendButton.Margin = new System.Windows.Forms.Padding(33, 25, 31, 0);
-            this.SendButton.Name = "SendButton";
-            this.SendButton.Size = new System.Drawing.Size(122, 37);
-            this.SendButton.TabIndex = 19;
-            this.SendButton.Text = "Отправить";
-            this.SendButton.UseVisualStyleBackColor = false;
             // 
             // UsersDataGridView
             // 
@@ -249,7 +233,6 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.ClientSize = new System.Drawing.Size(1093, 894);
             this.Controls.Add(this.UsersDataGridView);
-            this.Controls.Add(this.SendButton);
             this.Controls.Add(this.PrintButton);
             this.Controls.Add(this.ApplicationNameLabel);
             this.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -266,7 +249,6 @@
         private System.Windows.Forms.Label ApplicationNameLabel;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.Button PrintButton;
-        private System.Windows.Forms.Button SendButton;
         private System.Windows.Forms.DataGridView UsersDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewComboBoxColumn user_id;

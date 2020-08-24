@@ -55,7 +55,6 @@
             this.SaveLocationInfoButton = new System.Windows.Forms.Button();
             this.EditNameButton = new System.Windows.Forms.Button();
             this.EditRoomsButton = new System.Windows.Forms.Button();
-            this.AddRoomLabel = new System.Windows.Forms.Label();
             this.CardsCountTextBox = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -70,6 +69,7 @@
             this.BedsCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.delete = new System.Windows.Forms.DataGridViewImageColumn();
+            this.AddRoomLabel = new System.Windows.Forms.Label();
             this.CardPropertiesPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CardPropertiesDataGridView)).BeginInit();
             this.AllCardPropertiesPanel.SuspendLayout();
@@ -406,21 +406,6 @@
             this.EditRoomsButton.UseVisualStyleBackColor = false;
             this.EditRoomsButton.Click += new System.EventHandler(this.EditRoomsButton_Click_1);
             // 
-            // AddRoomLabel
-            // 
-            this.AddRoomLabel.AutoSize = true;
-            this.AddRoomLabel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.AddRoomLabel.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.AddRoomLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
-            this.AddRoomLabel.Location = new System.Drawing.Point(847, 54);
-            this.AddRoomLabel.Margin = new System.Windows.Forms.Padding(3, 19, 3, 0);
-            this.AddRoomLabel.Name = "AddRoomLabel";
-            this.AddRoomLabel.Size = new System.Drawing.Size(208, 25);
-            this.AddRoomLabel.TabIndex = 9;
-            this.AddRoomLabel.Text = "+ добавить комнату";
-            this.AddRoomLabel.Visible = false;
-            this.AddRoomLabel.Click += new System.EventHandler(this.AddRoomLabel_Click);
-            // 
             // CardsCountTextBox
             // 
             this.CardsCountTextBox.Location = new System.Drawing.Point(367, 172);
@@ -592,19 +577,34 @@
             this.delete.ReadOnly = true;
             this.delete.Visible = false;
             // 
+            // AddRoomLabel
+            // 
+            this.AddRoomLabel.AutoSize = true;
+            this.AddRoomLabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AddRoomLabel.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AddRoomLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
+            this.AddRoomLabel.Location = new System.Drawing.Point(873, 52);
+            this.AddRoomLabel.Margin = new System.Windows.Forms.Padding(3, 19, 3, 0);
+            this.AddRoomLabel.Name = "AddRoomLabel";
+            this.AddRoomLabel.Size = new System.Drawing.Size(208, 25);
+            this.AddRoomLabel.TabIndex = 9;
+            this.AddRoomLabel.Text = "+ добавить комнату";
+            this.AddRoomLabel.Visible = false;
+            this.AddRoomLabel.Click += new System.EventHandler(this.AddRoomLabel_Click);
+            // 
             // LocationInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.ClientSize = new System.Drawing.Size(1093, 894);
+            this.Controls.Add(this.AllCardPropertiesPanel);
             this.Controls.Add(this.Analyticslabel);
             this.Controls.Add(this.CardPropertiesLabel);
             this.Controls.Add(this.LocationDataLabel);
             this.Controls.Add(this.CustomerLocationNameLabel);
             this.Controls.Add(this.LocationInfoPanel);
             this.Controls.Add(this.CardPropertiesPanel);
-            this.Controls.Add(this.AllCardPropertiesPanel);
             this.Controls.Add(this.AddRoomLabel);
             this.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;

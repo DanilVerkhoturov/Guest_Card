@@ -42,7 +42,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(396, 76);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Вы точно хотите удалить \r\nчерновик?";
+            this.label1.Text = "Вы точно хотите удалить \nлюдей из реестра?";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // NoButton
@@ -84,7 +84,7 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(6);
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "NotificationsRegistryForm";
             this.Opacity = 0.6D;
             this.Text = "NotificationsRegistryForm";
