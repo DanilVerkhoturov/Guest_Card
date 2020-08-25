@@ -37,13 +37,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.UsersDataGridView = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.SearchTextBox = new System.Windows.Forms.TextBox();
+            this.Numb = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TabNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DateStart = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DateEnd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.UsersDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,11 +94,11 @@
             this.UsersDataGridView.ColumnHeadersHeight = 35;
             this.UsersDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.UsersDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
+            this.Numb,
+            this.Fio,
+            this.TabNumber,
+            this.DateStart,
+            this.DateEnd,
             this.Column6});
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
@@ -135,60 +135,6 @@
             this.UsersDataGridView.Size = new System.Drawing.Size(981, 577);
             this.UsersDataGridView.TabIndex = 25;
             // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column1.FillWeight = 20F;
-            this.Column1.HeaderText = "№";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Column2.FillWeight = 112.3096F;
-            this.Column2.HeaderText = "ФИО";
-            this.Column2.MinimumWidth = 100;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column3.FillWeight = 112.3096F;
-            this.Column3.HeaderText = "Таб.номер";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column4.FillWeight = 112.3096F;
-            this.Column4.HeaderText = "Дата от";
-            this.Column4.MinimumWidth = 10;
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column5
-            // 
-            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column5.FillWeight = 112.3096F;
-            this.Column5.HeaderText = "Дата до";
-            this.Column5.MinimumWidth = 10;
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Text = "Заселить";
-            // 
             // SearchTextBox
             // 
             this.SearchTextBox.Location = new System.Drawing.Point(76, 113);
@@ -197,6 +143,60 @@
             this.SearchTextBox.Size = new System.Drawing.Size(318, 33);
             this.SearchTextBox.TabIndex = 44;
             this.SearchTextBox.Text = "Поиск";
+            // 
+            // Numb
+            // 
+            this.Numb.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Numb.FillWeight = 20F;
+            this.Numb.HeaderText = "№";
+            this.Numb.Name = "Numb";
+            this.Numb.ReadOnly = true;
+            // 
+            // Fio
+            // 
+            this.Fio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Fio.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Fio.FillWeight = 112.3096F;
+            this.Fio.HeaderText = "ФИО";
+            this.Fio.MinimumWidth = 100;
+            this.Fio.Name = "Fio";
+            this.Fio.ReadOnly = true;
+            // 
+            // TabNumber
+            // 
+            this.TabNumber.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TabNumber.FillWeight = 112.3096F;
+            this.TabNumber.HeaderText = "Таб.номер";
+            this.TabNumber.Name = "TabNumber";
+            this.TabNumber.ReadOnly = true;
+            // 
+            // DateStart
+            // 
+            this.DateStart.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.DateStart.FillWeight = 112.3096F;
+            this.DateStart.HeaderText = "Дата от";
+            this.DateStart.MinimumWidth = 10;
+            this.DateStart.Name = "DateStart";
+            this.DateStart.ReadOnly = true;
+            this.DateStart.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // DateEnd
+            // 
+            this.DateEnd.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.DateEnd.FillWeight = 112.3096F;
+            this.DateEnd.HeaderText = "Дата до";
+            this.DateEnd.MinimumWidth = 10;
+            this.DateEnd.Name = "DateEnd";
+            this.DateEnd.ReadOnly = true;
+            this.DateEnd.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Text = "Заселить";
             // 
             // NewGuest
             // 
@@ -223,12 +223,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView UsersDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewButtonColumn Column6;
         private System.Windows.Forms.TextBox SearchTextBox;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Numb;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TabNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DateStart;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DateEnd;
+        private System.Windows.Forms.DataGridViewButtonColumn Column6;
     }
 }

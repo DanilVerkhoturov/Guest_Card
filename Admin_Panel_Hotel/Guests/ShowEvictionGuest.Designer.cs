@@ -34,13 +34,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.YesLinenRadioButton = new System.Windows.Forms.RadioButton();
+            this.NoLinenRadioButton = new System.Windows.Forms.RadioButton();
+            this.NoCardRadioButton = new System.Windows.Forms.RadioButton();
+            this.YesCardRadioButton = new System.Windows.Forms.RadioButton();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.CommentTextBox = new System.Windows.Forms.TextBox();
             this.AcceptButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
@@ -109,51 +109,51 @@
             this.label7.TabIndex = 6;
             this.label7.Text = "Сдача белья: Комлект -1";
             // 
-            // radioButton1
+            // YesLinenRadioButton
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(19, 13);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(77, 90, 3, 3);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(80, 29);
-            this.radioButton1.TabIndex = 8;
-            this.radioButton1.Text = "Сдал";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.YesLinenRadioButton.AutoSize = true;
+            this.YesLinenRadioButton.Location = new System.Drawing.Point(19, 13);
+            this.YesLinenRadioButton.Margin = new System.Windows.Forms.Padding(77, 90, 3, 3);
+            this.YesLinenRadioButton.Name = "YesLinenRadioButton";
+            this.YesLinenRadioButton.Size = new System.Drawing.Size(80, 29);
+            this.YesLinenRadioButton.TabIndex = 8;
+            this.YesLinenRadioButton.Text = "Сдал";
+            this.YesLinenRadioButton.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // NoLinenRadioButton
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(176, 13);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(74, 90, 3, 3);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(108, 29);
-            this.radioButton2.TabIndex = 9;
-            this.radioButton2.Text = "Не сдал";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            this.NoLinenRadioButton.AutoSize = true;
+            this.NoLinenRadioButton.Location = new System.Drawing.Point(176, 13);
+            this.NoLinenRadioButton.Margin = new System.Windows.Forms.Padding(74, 90, 3, 3);
+            this.NoLinenRadioButton.Name = "NoLinenRadioButton";
+            this.NoLinenRadioButton.Size = new System.Drawing.Size(108, 29);
+            this.NoLinenRadioButton.TabIndex = 9;
+            this.NoLinenRadioButton.Text = "Не сдал";
+            this.NoLinenRadioButton.UseVisualStyleBackColor = true;
+            this.NoLinenRadioButton.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
-            // radioButton3
+            // NoCardRadioButton
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(645, 302);
-            this.radioButton3.Margin = new System.Windows.Forms.Padding(74, 90, 3, 3);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(108, 29);
-            this.radioButton3.TabIndex = 13;
-            this.radioButton3.Text = "Не сдал";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
+            this.NoCardRadioButton.AutoSize = true;
+            this.NoCardRadioButton.Location = new System.Drawing.Point(645, 302);
+            this.NoCardRadioButton.Margin = new System.Windows.Forms.Padding(74, 90, 3, 3);
+            this.NoCardRadioButton.Name = "NoCardRadioButton";
+            this.NoCardRadioButton.Size = new System.Drawing.Size(108, 29);
+            this.NoCardRadioButton.TabIndex = 13;
+            this.NoCardRadioButton.Text = "Не сдал";
+            this.NoCardRadioButton.UseVisualStyleBackColor = true;
+            this.NoCardRadioButton.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
-            // radioButton4
+            // YesCardRadioButton
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(488, 302);
-            this.radioButton4.Margin = new System.Windows.Forms.Padding(77, 90, 3, 3);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(80, 29);
-            this.radioButton4.TabIndex = 12;
-            this.radioButton4.Text = "Сдал";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.YesCardRadioButton.AutoSize = true;
+            this.YesCardRadioButton.Location = new System.Drawing.Point(488, 302);
+            this.YesCardRadioButton.Margin = new System.Windows.Forms.Padding(77, 90, 3, 3);
+            this.YesCardRadioButton.Name = "YesCardRadioButton";
+            this.YesCardRadioButton.Size = new System.Drawing.Size(80, 29);
+            this.YesCardRadioButton.TabIndex = 12;
+            this.YesCardRadioButton.Text = "Сдал";
+            this.YesCardRadioButton.UseVisualStyleBackColor = true;
             // 
             // label10
             // 
@@ -175,14 +175,14 @@
             this.label11.TabIndex = 14;
             this.label11.Text = "Комментарий";
             // 
-            // textBox1
+            // CommentTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(149, 496);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 13, 3, 3);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(406, 120);
-            this.textBox1.TabIndex = 15;
+            this.CommentTextBox.Location = new System.Drawing.Point(149, 496);
+            this.CommentTextBox.Margin = new System.Windows.Forms.Padding(3, 13, 3, 3);
+            this.CommentTextBox.Multiline = true;
+            this.CommentTextBox.Name = "CommentTextBox";
+            this.CommentTextBox.Size = new System.Drawing.Size(406, 120);
+            this.CommentTextBox.TabIndex = 15;
             // 
             // AcceptButton
             // 
@@ -202,8 +202,8 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.radioButton1);
-            this.panel1.Controls.Add(this.radioButton2);
+            this.panel1.Controls.Add(this.YesLinenRadioButton);
+            this.panel1.Controls.Add(this.NoLinenRadioButton);
             this.panel1.Location = new System.Drawing.Point(469, 220);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(294, 55);
@@ -216,10 +216,10 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.ClientSize = new System.Drawing.Size(1093, 758);
             this.Controls.Add(this.AcceptButton);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.CommentTextBox);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.radioButton3);
-            this.Controls.Add(this.radioButton4);
+            this.Controls.Add(this.NoCardRadioButton);
+            this.Controls.Add(this.YesCardRadioButton);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
@@ -247,13 +247,13 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.RadioButton YesLinenRadioButton;
+        private System.Windows.Forms.RadioButton NoLinenRadioButton;
+        private System.Windows.Forms.RadioButton NoCardRadioButton;
+        private System.Windows.Forms.RadioButton YesCardRadioButton;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox CommentTextBox;
         private new System.Windows.Forms.Button AcceptButton;
         private System.Windows.Forms.Panel panel1;
     }

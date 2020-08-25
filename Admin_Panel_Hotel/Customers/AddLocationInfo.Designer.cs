@@ -59,7 +59,7 @@
             this.RoomsCountTextBox = new System.Windows.Forms.TextBox();
             this.NameTextBox = new System.Windows.Forms.TextBox();
             this.RoomsDataGridView = new System.Windows.Forms.DataGridView();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RoomNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BedsCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -435,7 +435,7 @@
             this.RoomsDataGridView.ColumnHeadersHeight = 35;
             this.RoomsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.RoomsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column2,
+            this.Number,
             this.RoomNumber,
             this.BedsCount,
             this.id,
@@ -459,12 +459,12 @@
             this.RoomsDataGridView.TabIndex = 65;
             this.RoomsDataGridView.Visible = false;
             // 
-            // Column2
+            // Number
             // 
-            this.Column2.HeaderText = "№";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Visible = false;
+            this.Number.HeaderText = "№";
+            this.Number.Name = "Number";
+            this.Number.ReadOnly = true;
+            this.Number.Visible = false;
             // 
             // RoomNumber
             // 
@@ -552,15 +552,15 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.Button EditNameButton;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RoomNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BedsCount;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewImageColumn delete;
         private System.Windows.Forms.Button SaveLocationInfoButton;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label AddRoomLabel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Number;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RoomNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BedsCount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewImageColumn delete;
     }
 }

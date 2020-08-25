@@ -1,6 +1,6 @@
 ﻿namespace Admin_Panel_Hotel
 {
-    partial class NotificationsRegistryForm
+    partial class NotificationsDelDraftForm
     {
         /// <summary>
         /// Required designer variable.

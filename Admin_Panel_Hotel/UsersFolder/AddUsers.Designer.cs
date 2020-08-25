@@ -33,31 +33,31 @@
             this.label3 = new System.Windows.Forms.Label();
             this.emailtextbox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.ChiefAdminGuest = new System.Windows.Forms.RadioButton();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.AdminGuest = new System.Windows.Forms.RadioButton();
             this.label7 = new System.Windows.Forms.Label();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.CheifAdminFood = new System.Windows.Forms.RadioButton();
             this.label8 = new System.Windows.Forms.Label();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.AdminFood = new System.Windows.Forms.RadioButton();
             this.label9 = new System.Windows.Forms.Label();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.FilterComboBox = new System.Windows.Forms.ComboBox();
+            this.AdminHotel = new System.Windows.Forms.RadioButton();
+            this.LocationComboBox = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
+            this.CuratorFood = new System.Windows.Forms.RadioButton();
             this.label11 = new System.Windows.Forms.Label();
-            this.radioButton7 = new System.Windows.Forms.RadioButton();
+            this.CheifCuratorAll = new System.Windows.Forms.RadioButton();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.radioButton8 = new System.Windows.Forms.RadioButton();
-            this.FilterOrganizationComboBox = new System.Windows.Forms.ComboBox();
+            this.CuratorGuest = new System.Windows.Forms.RadioButton();
+            this.FilterOrganizationFoodComboBox = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.radioButton9 = new System.Windows.Forms.RadioButton();
-            this.FilterOrganizationComboBox2 = new System.Windows.Forms.ComboBox();
+            this.OperatorFood = new System.Windows.Forms.RadioButton();
+            this.FilterOrganizationGuestComboBox = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.radioButton10 = new System.Windows.Forms.RadioButton();
-            this.ChangeButton = new System.Windows.Forms.Button();
+            this.OperatorGuest = new System.Windows.Forms.RadioButton();
+            this.AcceptButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -111,18 +111,18 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "Главные роли";
             // 
-            // radioButton1
+            // ChiefAdminGuest
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButton1.Location = new System.Drawing.Point(96, 254);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(87, 9, 3, 3);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(250, 50);
-            this.radioButton1.TabIndex = 5;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Главный администратор\r\nгостиничного хозяйства";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.ChiefAdminGuest.AutoSize = true;
+            this.ChiefAdminGuest.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ChiefAdminGuest.Location = new System.Drawing.Point(96, 254);
+            this.ChiefAdminGuest.Margin = new System.Windows.Forms.Padding(87, 9, 3, 3);
+            this.ChiefAdminGuest.Name = "ChiefAdminGuest";
+            this.ChiefAdminGuest.Size = new System.Drawing.Size(250, 50);
+            this.ChiefAdminGuest.TabIndex = 5;
+            this.ChiefAdminGuest.TabStop = true;
+            this.ChiefAdminGuest.Text = "Главный администратор\r\nгостиничного хозяйства";
+            this.ChiefAdminGuest.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
@@ -149,18 +149,18 @@
             this.label6.Text = "Имеет полный доступ к разделу заявки на проживание, разделу гостиничное хозяйство" +
     ";\r\nможет назначать роли администраторов гостиниц.";
             // 
-            // radioButton2
+            // AdminGuest
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButton2.Location = new System.Drawing.Point(96, 342);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(87, 9, 3, 3);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(246, 50);
-            this.radioButton2.TabIndex = 7;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Администратор \r\nгостиничного хозяйства";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.AdminGuest.AutoSize = true;
+            this.AdminGuest.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AdminGuest.Location = new System.Drawing.Point(96, 342);
+            this.AdminGuest.Margin = new System.Windows.Forms.Padding(87, 9, 3, 3);
+            this.AdminGuest.Name = "AdminGuest";
+            this.AdminGuest.Size = new System.Drawing.Size(246, 50);
+            this.AdminGuest.TabIndex = 7;
+            this.AdminGuest.TabStop = true;
+            this.AdminGuest.Text = "Администратор \r\nгостиничного хозяйства";
+            this.AdminGuest.UseVisualStyleBackColor = true;
             // 
             // label7
             // 
@@ -174,18 +174,18 @@
             this.label7.Text = "Имеет полный доступ к разделу питание; может назначать роли администраторов питан" +
     "ия.";
             // 
-            // radioButton3
+            // CheifAdminFood
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButton3.Location = new System.Drawing.Point(96, 430);
-            this.radioButton3.Margin = new System.Windows.Forms.Padding(87, 9, 3, 3);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(250, 50);
-            this.radioButton3.TabIndex = 9;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Главный администратор\r\nотдела питания";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.CheifAdminFood.AutoSize = true;
+            this.CheifAdminFood.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CheifAdminFood.Location = new System.Drawing.Point(96, 430);
+            this.CheifAdminFood.Margin = new System.Windows.Forms.Padding(87, 9, 3, 3);
+            this.CheifAdminFood.Name = "CheifAdminFood";
+            this.CheifAdminFood.Size = new System.Drawing.Size(250, 50);
+            this.CheifAdminFood.TabIndex = 9;
+            this.CheifAdminFood.TabStop = true;
+            this.CheifAdminFood.Text = "Главный администратор\r\nотдела питания";
+            this.CheifAdminFood.UseVisualStyleBackColor = true;
             // 
             // label8
             // 
@@ -198,18 +198,18 @@
             this.label8.TabIndex = 12;
             this.label8.Text = "Имеет доступ к разделу питание.";
             // 
-            // radioButton4
+            // AdminFood
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButton4.Location = new System.Drawing.Point(97, 505);
-            this.radioButton4.Margin = new System.Windows.Forms.Padding(87, 9, 3, 3);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(240, 50);
-            this.radioButton4.TabIndex = 11;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Администратор отдела \r\nпитания";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.AdminFood.AutoSize = true;
+            this.AdminFood.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AdminFood.Location = new System.Drawing.Point(97, 505);
+            this.AdminFood.Margin = new System.Windows.Forms.Padding(87, 9, 3, 3);
+            this.AdminFood.Name = "AdminFood";
+            this.AdminFood.Size = new System.Drawing.Size(240, 50);
+            this.AdminFood.TabIndex = 11;
+            this.AdminFood.TabStop = true;
+            this.AdminFood.Text = "Администратор отдела \r\nпитания";
+            this.AdminFood.UseVisualStyleBackColor = true;
             // 
             // label9
             // 
@@ -222,33 +222,33 @@
             this.label9.TabIndex = 14;
             this.label9.Text = "Имеет доступ к модулю “Гостиница-фронт”.";
             // 
-            // radioButton5
+            // AdminHotel
             // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButton5.Location = new System.Drawing.Point(96, 580);
-            this.radioButton5.Margin = new System.Windows.Forms.Padding(87, 9, 3, 3);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(174, 50);
-            this.radioButton5.TabIndex = 13;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "Администратор \r\nгостиницы";
-            this.radioButton5.UseVisualStyleBackColor = true;
+            this.AdminHotel.AutoSize = true;
+            this.AdminHotel.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AdminHotel.Location = new System.Drawing.Point(96, 580);
+            this.AdminHotel.Margin = new System.Windows.Forms.Padding(87, 9, 3, 3);
+            this.AdminHotel.Name = "AdminHotel";
+            this.AdminHotel.Size = new System.Drawing.Size(174, 50);
+            this.AdminHotel.TabIndex = 13;
+            this.AdminHotel.TabStop = true;
+            this.AdminHotel.Text = "Администратор \r\nгостиницы";
+            this.AdminHotel.UseVisualStyleBackColor = true;
             // 
-            // FilterComboBox
+            // LocationComboBox
             // 
-            this.FilterComboBox.BackColor = System.Drawing.Color.White;
-            this.FilterComboBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FilterComboBox.ForeColor = System.Drawing.Color.Black;
-            this.FilterComboBox.FormattingEnabled = true;
-            this.FilterComboBox.Items.AddRange(new object[] {
+            this.LocationComboBox.BackColor = System.Drawing.Color.White;
+            this.LocationComboBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LocationComboBox.ForeColor = System.Drawing.Color.Black;
+            this.LocationComboBox.FormattingEnabled = true;
+            this.LocationComboBox.Items.AddRange(new object[] {
             "Все карты"});
-            this.FilterComboBox.Location = new System.Drawing.Point(373, 589);
-            this.FilterComboBox.Margin = new System.Windows.Forms.Padding(100, 48, 5, 4);
-            this.FilterComboBox.Name = "FilterComboBox";
-            this.FilterComboBox.Size = new System.Drawing.Size(276, 33);
-            this.FilterComboBox.TabIndex = 39;
-            this.FilterComboBox.Text = "Локация";
+            this.LocationComboBox.Location = new System.Drawing.Point(373, 589);
+            this.LocationComboBox.Margin = new System.Windows.Forms.Padding(100, 48, 5, 4);
+            this.LocationComboBox.Name = "LocationComboBox";
+            this.LocationComboBox.Size = new System.Drawing.Size(276, 33);
+            this.LocationComboBox.TabIndex = 39;
+            this.LocationComboBox.Text = "Локация";
             // 
             // label10
             // 
@@ -261,18 +261,18 @@
             this.label10.TabIndex = 44;
             this.label10.Text = "Имеет полный доступ к блоку заявкок на питание.";
             // 
-            // radioButton6
+            // CuratorFood
             // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButton6.Location = new System.Drawing.Point(96, 785);
-            this.radioButton6.Margin = new System.Windows.Forms.Padding(87, 9, 3, 3);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(184, 27);
-            this.radioButton6.TabIndex = 43;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "Куратор питания ";
-            this.radioButton6.UseVisualStyleBackColor = true;
+            this.CuratorFood.AutoSize = true;
+            this.CuratorFood.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CuratorFood.Location = new System.Drawing.Point(96, 785);
+            this.CuratorFood.Margin = new System.Windows.Forms.Padding(87, 9, 3, 3);
+            this.CuratorFood.Name = "CuratorFood";
+            this.CuratorFood.Size = new System.Drawing.Size(184, 27);
+            this.CuratorFood.TabIndex = 43;
+            this.CuratorFood.TabStop = true;
+            this.CuratorFood.Text = "Куратор питания ";
+            this.CuratorFood.UseVisualStyleBackColor = true;
             // 
             // label11
             // 
@@ -286,18 +286,18 @@
             this.label11.Text = "Имеет полный доступ к блоку заявкок на питание и проживание.";
             this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
-            // radioButton7
+            // CheifCuratorAll
             // 
-            this.radioButton7.AutoSize = true;
-            this.radioButton7.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButton7.Location = new System.Drawing.Point(96, 710);
-            this.radioButton7.Margin = new System.Windows.Forms.Padding(87, 9, 3, 3);
-            this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(276, 50);
-            this.radioButton7.TabIndex = 41;
-            this.radioButton7.TabStop = true;
-            this.radioButton7.Text = "Главный куратор питания и\r\nгостиничного хозяйства";
-            this.radioButton7.UseVisualStyleBackColor = true;
+            this.CheifCuratorAll.AutoSize = true;
+            this.CheifCuratorAll.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CheifCuratorAll.Location = new System.Drawing.Point(96, 710);
+            this.CheifCuratorAll.Margin = new System.Windows.Forms.Padding(87, 9, 3, 3);
+            this.CheifCuratorAll.Name = "CheifCuratorAll";
+            this.CheifCuratorAll.Size = new System.Drawing.Size(276, 50);
+            this.CheifCuratorAll.TabIndex = 41;
+            this.CheifCuratorAll.TabStop = true;
+            this.CheifCuratorAll.Text = "Главный куратор питания и\r\nгостиничного хозяйства";
+            this.CheifCuratorAll.UseVisualStyleBackColor = true;
             // 
             // label12
             // 
@@ -320,33 +320,33 @@
             this.label13.TabIndex = 46;
             this.label13.Text = "Имеет полный доступ к блоку заявкок на проживание.";
             // 
-            // radioButton8
+            // CuratorGuest
             // 
-            this.radioButton8.AutoSize = true;
-            this.radioButton8.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButton8.Location = new System.Drawing.Point(96, 837);
-            this.radioButton8.Margin = new System.Windows.Forms.Padding(87, 9, 3, 3);
-            this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(228, 50);
-            this.radioButton8.TabIndex = 45;
-            this.radioButton8.TabStop = true;
-            this.radioButton8.Text = "Куратор гостиничного\r\nхозяйства ";
-            this.radioButton8.UseVisualStyleBackColor = true;
+            this.CuratorGuest.AutoSize = true;
+            this.CuratorGuest.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CuratorGuest.Location = new System.Drawing.Point(96, 837);
+            this.CuratorGuest.Margin = new System.Windows.Forms.Padding(87, 9, 3, 3);
+            this.CuratorGuest.Name = "CuratorGuest";
+            this.CuratorGuest.Size = new System.Drawing.Size(228, 50);
+            this.CuratorGuest.TabIndex = 45;
+            this.CuratorGuest.TabStop = true;
+            this.CuratorGuest.Text = "Куратор гостиничного\r\nхозяйства ";
+            this.CuratorGuest.UseVisualStyleBackColor = true;
             // 
-            // FilterOrganizationComboBox
+            // FilterOrganizationFoodComboBox
             // 
-            this.FilterOrganizationComboBox.BackColor = System.Drawing.Color.White;
-            this.FilterOrganizationComboBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FilterOrganizationComboBox.ForeColor = System.Drawing.Color.Black;
-            this.FilterOrganizationComboBox.FormattingEnabled = true;
-            this.FilterOrganizationComboBox.Items.AddRange(new object[] {
+            this.FilterOrganizationFoodComboBox.BackColor = System.Drawing.Color.White;
+            this.FilterOrganizationFoodComboBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FilterOrganizationFoodComboBox.ForeColor = System.Drawing.Color.Black;
+            this.FilterOrganizationFoodComboBox.FormattingEnabled = true;
+            this.FilterOrganizationFoodComboBox.Items.AddRange(new object[] {
             "Все карты"});
-            this.FilterOrganizationComboBox.Location = new System.Drawing.Point(378, 921);
-            this.FilterOrganizationComboBox.Margin = new System.Windows.Forms.Padding(100, 48, 5, 4);
-            this.FilterOrganizationComboBox.Name = "FilterOrganizationComboBox";
-            this.FilterOrganizationComboBox.Size = new System.Drawing.Size(276, 33);
-            this.FilterOrganizationComboBox.TabIndex = 49;
-            this.FilterOrganizationComboBox.Text = "Организация";
+            this.FilterOrganizationFoodComboBox.Location = new System.Drawing.Point(378, 921);
+            this.FilterOrganizationFoodComboBox.Margin = new System.Windows.Forms.Padding(100, 48, 5, 4);
+            this.FilterOrganizationFoodComboBox.Name = "FilterOrganizationFoodComboBox";
+            this.FilterOrganizationFoodComboBox.Size = new System.Drawing.Size(276, 33);
+            this.FilterOrganizationFoodComboBox.TabIndex = 49;
+            this.FilterOrganizationFoodComboBox.Text = "Организация";
             // 
             // label14
             // 
@@ -359,33 +359,33 @@
             this.label14.TabIndex = 48;
             this.label14.Text = "Имеет частичный доступ к блоку заявкок на питание.";
             // 
-            // radioButton9
+            // OperatorFood
             // 
-            this.radioButton9.AutoSize = true;
-            this.radioButton9.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButton9.Location = new System.Drawing.Point(101, 912);
-            this.radioButton9.Margin = new System.Windows.Forms.Padding(87, 9, 3, 3);
-            this.radioButton9.Name = "radioButton9";
-            this.radioButton9.Size = new System.Drawing.Size(181, 50);
-            this.radioButton9.TabIndex = 47;
-            this.radioButton9.TabStop = true;
-            this.radioButton9.Text = "Оператор заявок\r\nна питание";
-            this.radioButton9.UseVisualStyleBackColor = true;
+            this.OperatorFood.AutoSize = true;
+            this.OperatorFood.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.OperatorFood.Location = new System.Drawing.Point(101, 912);
+            this.OperatorFood.Margin = new System.Windows.Forms.Padding(87, 9, 3, 3);
+            this.OperatorFood.Name = "OperatorFood";
+            this.OperatorFood.Size = new System.Drawing.Size(181, 50);
+            this.OperatorFood.TabIndex = 47;
+            this.OperatorFood.TabStop = true;
+            this.OperatorFood.Text = "Оператор заявок\r\nна питание";
+            this.OperatorFood.UseVisualStyleBackColor = true;
             // 
-            // FilterOrganizationComboBox2
+            // FilterOrganizationGuestComboBox
             // 
-            this.FilterOrganizationComboBox2.BackColor = System.Drawing.Color.White;
-            this.FilterOrganizationComboBox2.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FilterOrganizationComboBox2.ForeColor = System.Drawing.Color.Black;
-            this.FilterOrganizationComboBox2.FormattingEnabled = true;
-            this.FilterOrganizationComboBox2.Items.AddRange(new object[] {
+            this.FilterOrganizationGuestComboBox.BackColor = System.Drawing.Color.White;
+            this.FilterOrganizationGuestComboBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FilterOrganizationGuestComboBox.ForeColor = System.Drawing.Color.Black;
+            this.FilterOrganizationGuestComboBox.FormattingEnabled = true;
+            this.FilterOrganizationGuestComboBox.Items.AddRange(new object[] {
             "Все карты"});
-            this.FilterOrganizationComboBox2.Location = new System.Drawing.Point(378, 996);
-            this.FilterOrganizationComboBox2.Margin = new System.Windows.Forms.Padding(100, 48, 5, 4);
-            this.FilterOrganizationComboBox2.Name = "FilterOrganizationComboBox2";
-            this.FilterOrganizationComboBox2.Size = new System.Drawing.Size(276, 33);
-            this.FilterOrganizationComboBox2.TabIndex = 52;
-            this.FilterOrganizationComboBox2.Text = "Организация";
+            this.FilterOrganizationGuestComboBox.Location = new System.Drawing.Point(378, 996);
+            this.FilterOrganizationGuestComboBox.Margin = new System.Windows.Forms.Padding(100, 48, 5, 4);
+            this.FilterOrganizationGuestComboBox.Name = "FilterOrganizationGuestComboBox";
+            this.FilterOrganizationGuestComboBox.Size = new System.Drawing.Size(276, 33);
+            this.FilterOrganizationGuestComboBox.TabIndex = 52;
+            this.FilterOrganizationGuestComboBox.Text = "Организация";
             // 
             // label15
             // 
@@ -398,33 +398,33 @@
             this.label15.TabIndex = 51;
             this.label15.Text = "Имеет частичный доступ к блоку заявкок на проживание.";
             // 
-            // radioButton10
+            // OperatorGuest
             // 
-            this.radioButton10.AutoSize = true;
-            this.radioButton10.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButton10.Location = new System.Drawing.Point(101, 987);
-            this.radioButton10.Margin = new System.Windows.Forms.Padding(87, 9, 3, 3);
-            this.radioButton10.Name = "radioButton10";
-            this.radioButton10.Size = new System.Drawing.Size(181, 50);
-            this.radioButton10.TabIndex = 50;
-            this.radioButton10.TabStop = true;
-            this.radioButton10.Text = "Оператор заявок\r\nна проживание";
-            this.radioButton10.UseVisualStyleBackColor = true;
+            this.OperatorGuest.AutoSize = true;
+            this.OperatorGuest.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.OperatorGuest.Location = new System.Drawing.Point(101, 987);
+            this.OperatorGuest.Margin = new System.Windows.Forms.Padding(87, 9, 3, 3);
+            this.OperatorGuest.Name = "OperatorGuest";
+            this.OperatorGuest.Size = new System.Drawing.Size(181, 50);
+            this.OperatorGuest.TabIndex = 50;
+            this.OperatorGuest.TabStop = true;
+            this.OperatorGuest.Text = "Оператор заявок\r\nна проживание";
+            this.OperatorGuest.UseVisualStyleBackColor = true;
             // 
-            // ChangeButton
+            // AcceptButton
             // 
-            this.ChangeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
-            this.ChangeButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.ChangeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ChangeButton.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ChangeButton.ForeColor = System.Drawing.Color.White;
-            this.ChangeButton.Location = new System.Drawing.Point(778, 1090);
-            this.ChangeButton.Margin = new System.Windows.Forms.Padding(769, 56, 33, 6);
-            this.ChangeButton.Name = "ChangeButton";
-            this.ChangeButton.Size = new System.Drawing.Size(221, 42);
-            this.ChangeButton.TabIndex = 57;
-            this.ChangeButton.Text = "Подтвердить";
-            this.ChangeButton.UseVisualStyleBackColor = false;
+            this.AcceptButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
+            this.AcceptButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.AcceptButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AcceptButton.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AcceptButton.ForeColor = System.Drawing.Color.White;
+            this.AcceptButton.Location = new System.Drawing.Point(778, 1090);
+            this.AcceptButton.Margin = new System.Windows.Forms.Padding(769, 56, 33, 6);
+            this.AcceptButton.Name = "AcceptButton";
+            this.AcceptButton.Size = new System.Drawing.Size(221, 42);
+            this.AcceptButton.TabIndex = 57;
+            this.AcceptButton.Text = "Подтвердить";
+            this.AcceptButton.UseVisualStyleBackColor = false;
             // 
             // AddUsers
             // 
@@ -434,31 +434,31 @@
             this.AutoScrollMargin = new System.Drawing.Size(0, 50);
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.ClientSize = new System.Drawing.Size(1110, 894);
-            this.Controls.Add(this.ChangeButton);
-            this.Controls.Add(this.FilterOrganizationComboBox2);
+            this.Controls.Add(this.AcceptButton);
+            this.Controls.Add(this.FilterOrganizationGuestComboBox);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.radioButton10);
-            this.Controls.Add(this.FilterOrganizationComboBox);
+            this.Controls.Add(this.OperatorGuest);
+            this.Controls.Add(this.FilterOrganizationFoodComboBox);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.radioButton9);
+            this.Controls.Add(this.OperatorFood);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.radioButton8);
+            this.Controls.Add(this.CuratorGuest);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.radioButton6);
+            this.Controls.Add(this.CuratorFood);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.radioButton7);
+            this.Controls.Add(this.CheifCuratorAll);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.FilterComboBox);
+            this.Controls.Add(this.LocationComboBox);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.radioButton5);
+            this.Controls.Add(this.AdminHotel);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.radioButton4);
+            this.Controls.Add(this.AdminFood);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.radioButton3);
+            this.Controls.Add(this.CheifAdminFood);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.radioButton2);
+            this.Controls.Add(this.AdminGuest);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.ChiefAdminGuest);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.emailtextbox);
             this.Controls.Add(this.label3);
@@ -480,30 +480,30 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox emailtextbox;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton ChiefAdminGuest;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton AdminGuest;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton CheifAdminFood;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.RadioButton AdminFood;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.ComboBox FilterComboBox;
+        private System.Windows.Forms.RadioButton AdminHotel;
+        private System.Windows.Forms.ComboBox LocationComboBox;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.RadioButton radioButton6;
+        private System.Windows.Forms.RadioButton CuratorFood;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.RadioButton radioButton7;
+        private System.Windows.Forms.RadioButton CheifCuratorAll;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.RadioButton radioButton8;
-        private System.Windows.Forms.ComboBox FilterOrganizationComboBox;
+        private System.Windows.Forms.RadioButton CuratorGuest;
+        private System.Windows.Forms.ComboBox FilterOrganizationFoodComboBox;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.RadioButton radioButton9;
-        private System.Windows.Forms.ComboBox FilterOrganizationComboBox2;
+        private System.Windows.Forms.RadioButton OperatorFood;
+        private System.Windows.Forms.ComboBox FilterOrganizationGuestComboBox;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.RadioButton radioButton10;
-        private System.Windows.Forms.Button ChangeButton;
+        private System.Windows.Forms.RadioButton OperatorGuest;
+        private System.Windows.Forms.Button AcceptButton;
     }
 }

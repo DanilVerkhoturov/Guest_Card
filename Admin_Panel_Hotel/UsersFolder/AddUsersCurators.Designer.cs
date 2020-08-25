@@ -32,7 +32,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.FilterComboBox = new System.Windows.Forms.ComboBox();
             this.emailtextbox = new System.Windows.Forms.TextBox();
-            this.ChangeButton = new System.Windows.Forms.Button();
+            this.AcceptButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -81,20 +81,20 @@
             this.emailtextbox.TabIndex = 41;
             this.emailtextbox.Text = "Электронная почта";
             // 
-            // ChangeButton
+            // AcceptButton
             // 
-            this.ChangeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
-            this.ChangeButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.ChangeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ChangeButton.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ChangeButton.ForeColor = System.Drawing.Color.White;
-            this.ChangeButton.Location = new System.Drawing.Point(827, 336);
-            this.ChangeButton.Margin = new System.Windows.Forms.Padding(769, 56, 33, 6);
-            this.ChangeButton.Name = "ChangeButton";
-            this.ChangeButton.Size = new System.Drawing.Size(221, 42);
-            this.ChangeButton.TabIndex = 58;
-            this.ChangeButton.Text = "Подтвердить";
-            this.ChangeButton.UseVisualStyleBackColor = false;
+            this.AcceptButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
+            this.AcceptButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.AcceptButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AcceptButton.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AcceptButton.ForeColor = System.Drawing.Color.White;
+            this.AcceptButton.Location = new System.Drawing.Point(827, 336);
+            this.AcceptButton.Margin = new System.Windows.Forms.Padding(769, 56, 33, 6);
+            this.AcceptButton.Name = "AcceptButton";
+            this.AcceptButton.Size = new System.Drawing.Size(221, 42);
+            this.AcceptButton.TabIndex = 58;
+            this.AcceptButton.Text = "Подтвердить";
+            this.AcceptButton.UseVisualStyleBackColor = false;
             // 
             // AddUsersCurators
             // 
@@ -102,7 +102,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.ClientSize = new System.Drawing.Size(1093, 894);
-            this.Controls.Add(this.ChangeButton);
+            this.Controls.Add(this.AcceptButton);
             this.Controls.Add(this.emailtextbox);
             this.Controls.Add(this.FilterComboBox);
             this.Controls.Add(this.label2);
@@ -122,6 +122,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox FilterComboBox;
         private System.Windows.Forms.TextBox emailtextbox;
-        private System.Windows.Forms.Button ChangeButton;
+        private System.Windows.Forms.Button AcceptButton;
     }
 }

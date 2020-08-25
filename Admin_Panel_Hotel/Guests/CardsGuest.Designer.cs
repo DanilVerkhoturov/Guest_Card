@@ -36,15 +36,15 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.RoomsDataGridView = new System.Windows.Forms.DataGridView();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.status = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NumberCard = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.status = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Location = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.RoomsDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,10 +83,10 @@
             this.RoomsDataGridView.ColumnHeadersHeight = 35;
             this.RoomsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.RoomsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column2,
-            this.Column3,
+            this.Number,
+            this.NumberCard,
             this.status,
-            this.Column5});
+            this.Location});
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -122,48 +122,6 @@
             this.RoomsDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.RoomsDataGridView.Size = new System.Drawing.Size(699, 478);
             this.RoomsDataGridView.TabIndex = 27;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Column2.FillWeight = 112.3096F;
-            this.Column2.HeaderText = "№";
-            this.Column2.MinimumWidth = 20;
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 57;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Column3.FillWeight = 112.3096F;
-            this.Column3.HeaderText = "Номер карты";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 166;
-            // 
-            // status
-            // 
-            this.status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.status.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.status.FillWeight = 112.3096F;
-            this.status.HeaderText = "Статус";
-            this.status.Items.AddRange(new object[] {
-            "Жилое",
-            "Ремонт",
-            "Нет койко-место"});
-            this.status.MinimumWidth = 10;
-            this.status.Name = "status";
-            this.status.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // Column5
-            // 
-            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column5.FillWeight = 112.3096F;
-            this.Column5.HeaderText = "Местонахождение";
-            this.Column5.MinimumWidth = 10;
-            this.Column5.Name = "Column5";
-            this.Column5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // label2
             // 
@@ -210,6 +168,48 @@
             this.label6.TabIndex = 32;
             this.label6.Text = "Всего карт в наличии: 1";
             // 
+            // Number
+            // 
+            this.Number.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Number.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Number.FillWeight = 112.3096F;
+            this.Number.HeaderText = "№";
+            this.Number.MinimumWidth = 20;
+            this.Number.Name = "Number";
+            this.Number.Width = 57;
+            // 
+            // NumberCard
+            // 
+            this.NumberCard.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.NumberCard.FillWeight = 112.3096F;
+            this.NumberCard.HeaderText = "Номер карты";
+            this.NumberCard.Name = "NumberCard";
+            this.NumberCard.Width = 166;
+            // 
+            // status
+            // 
+            this.status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.status.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.status.FillWeight = 112.3096F;
+            this.status.HeaderText = "Статус";
+            this.status.Items.AddRange(new object[] {
+            "Жилое",
+            "Ремонт",
+            "Нет койко-место"});
+            this.status.MinimumWidth = 10;
+            this.status.Name = "status";
+            this.status.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // Location
+            // 
+            this.Location.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Location.FillWeight = 112.3096F;
+            this.Location.HeaderText = "Местонахождение";
+            this.Location.MinimumWidth = 10;
+            this.Location.Name = "Location";
+            this.Location.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
             // CardsGuest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -237,14 +237,14 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView RoomsDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewComboBoxColumn status;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Number;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NumberCard;
+        private System.Windows.Forms.DataGridViewComboBoxColumn status;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Location;
     }
 }

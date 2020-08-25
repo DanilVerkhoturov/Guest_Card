@@ -54,13 +54,13 @@
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TypeRoom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Namber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Organization = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DateStart = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DateEnd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Busy = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.UsersDataGridView)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -153,7 +153,7 @@
             this.UsersDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
@@ -162,13 +162,13 @@
             this.UsersDataGridView.ColumnHeadersHeight = 48;
             this.UsersDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.UsersDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column7,
-            this.Column6});
+            this.TypeRoom,
+            this.Namber,
+            this.Fio,
+            this.Organization,
+            this.DateStart,
+            this.DateEnd,
+            this.Busy});
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Roboto", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -359,73 +359,73 @@
             this.label7.Text = "Период до";
             this.label7.Visible = false;
             // 
-            // Column1
+            // TypeRoom
             // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Column1.FillWeight = 20F;
-            this.Column1.HeaderText = "Тип номера";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 150;
+            this.TypeRoom.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.TypeRoom.FillWeight = 20F;
+            this.TypeRoom.HeaderText = "Тип номера";
+            this.TypeRoom.Name = "TypeRoom";
+            this.TypeRoom.ReadOnly = true;
+            this.TypeRoom.Width = 198;
             // 
-            // Column2
+            // Namber
             // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Namber.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Column2.FillWeight = 112.3096F;
-            this.Column2.HeaderText = "Номер";
-            this.Column2.MinimumWidth = 50;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 101;
+            this.Namber.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Namber.FillWeight = 112.3096F;
+            this.Namber.HeaderText = "Номер";
+            this.Namber.MinimumWidth = 50;
+            this.Namber.Name = "Namber";
+            this.Namber.ReadOnly = true;
+            this.Namber.Width = 129;
             // 
-            // Column3
+            // Fio
             // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column3.FillWeight = 112.3096F;
-            this.Column3.HeaderText = "ФИО";
-            this.Column3.MinimumWidth = 100;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
+            this.Fio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Fio.FillWeight = 112.3096F;
+            this.Fio.HeaderText = "ФИО";
+            this.Fio.MinimumWidth = 100;
+            this.Fio.Name = "Fio";
+            this.Fio.ReadOnly = true;
             // 
-            // Column4
+            // Organization
             // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column4.FillWeight = 112.3096F;
-            this.Column4.HeaderText = "Организация";
-            this.Column4.MinimumWidth = 100;
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Organization.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Organization.FillWeight = 112.3096F;
+            this.Organization.HeaderText = "Организация";
+            this.Organization.MinimumWidth = 100;
+            this.Organization.Name = "Organization";
+            this.Organization.ReadOnly = true;
+            this.Organization.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // Column5
+            // DateStart
             // 
-            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Column5.FillWeight = 112.3096F;
-            this.Column5.HeaderText = "Дата заезда";
-            this.Column5.MinimumWidth = 10;
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column5.Width = 137;
+            this.DateStart.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.DateStart.FillWeight = 112.3096F;
+            this.DateStart.HeaderText = "Дата заезда";
+            this.DateStart.MinimumWidth = 10;
+            this.DateStart.Name = "DateStart";
+            this.DateStart.ReadOnly = true;
+            this.DateStart.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.DateStart.Width = 189;
             // 
-            // Column7
+            // DateEnd
             // 
-            this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Column7.HeaderText = "Дата выезда";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            this.Column7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column7.Width = 143;
+            this.DateEnd.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.DateEnd.HeaderText = "Дата выезда";
+            this.DateEnd.Name = "DateEnd";
+            this.DateEnd.ReadOnly = true;
+            this.DateEnd.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.DateEnd.Width = 198;
             // 
-            // Column6
+            // Busy
             // 
-            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column6.HeaderText = "Занято мест";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Busy.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Busy.HeaderText = "Занято мест";
+            this.Busy.Name = "Busy";
+            this.Busy.ReadOnly = true;
+            this.Busy.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // CalendarGuest
             // 
@@ -476,12 +476,12 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TypeRoom;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Namber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Organization;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DateStart;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DateEnd;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Busy;
     }
 }

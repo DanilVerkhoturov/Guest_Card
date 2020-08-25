@@ -39,16 +39,16 @@
             this.DivisionsComboBox = new System.Windows.Forms.ComboBox();
             this.UsersDataGridView = new System.Windows.Forms.DataGridView();
             this.ChangeButton = new System.Windows.Forms.Button();
-            this.PrintButton = new System.Windows.Forms.Button();
+            this.DownloadButton = new System.Windows.Forms.Button();
             this.ShowAllLinkLabel = new System.Windows.Forms.LinkLabel();
             this.CardsCountLabel = new System.Windows.Forms.Label();
             this.EmptyRegistryLabel = new System.Windows.Forms.Label();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TabNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GuestCard = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Position = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Organization = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ShowUserInfo = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.UsersDataGridView)).BeginInit();
             this.SuspendLayout();
@@ -115,12 +115,12 @@
             this.UsersDataGridView.ColumnHeadersHeight = 35;
             this.UsersDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.UsersDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column5,
-            this.Column7,
-            this.Column4,
+            this.Number,
+            this.Fio,
+            this.TabNumber,
+            this.GuestCard,
+            this.Position,
+            this.Organization,
             this.ShowUserInfo});
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
@@ -173,20 +173,20 @@
             this.ChangeButton.Text = "Изменить ";
             this.ChangeButton.UseVisualStyleBackColor = false;
             // 
-            // PrintButton
+            // DownloadButton
             // 
-            this.PrintButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(82)))), ((int)(((byte)(119)))));
-            this.PrintButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.PrintButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PrintButton.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.PrintButton.ForeColor = System.Drawing.Color.White;
-            this.PrintButton.Location = new System.Drawing.Point(938, 48);
-            this.PrintButton.Margin = new System.Windows.Forms.Padding(0, 12, 10, 12);
-            this.PrintButton.Name = "PrintButton";
-            this.PrintButton.Size = new System.Drawing.Size(95, 35);
-            this.PrintButton.TabIndex = 47;
-            this.PrintButton.Text = "Скачать";
-            this.PrintButton.UseVisualStyleBackColor = false;
+            this.DownloadButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(82)))), ((int)(((byte)(119)))));
+            this.DownloadButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.DownloadButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DownloadButton.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DownloadButton.ForeColor = System.Drawing.Color.White;
+            this.DownloadButton.Location = new System.Drawing.Point(938, 48);
+            this.DownloadButton.Margin = new System.Windows.Forms.Padding(0, 12, 10, 12);
+            this.DownloadButton.Name = "DownloadButton";
+            this.DownloadButton.Size = new System.Drawing.Size(95, 35);
+            this.DownloadButton.TabIndex = 47;
+            this.DownloadButton.Text = "Скачать";
+            this.DownloadButton.UseVisualStyleBackColor = false;
             // 
             // ShowAllLinkLabel
             // 
@@ -222,60 +222,60 @@
             this.EmptyRegistryLabel.TabIndex = 51;
             this.EmptyRegistryLabel.Text = "У вас пока нет в Реестре людей";
             // 
-            // Column1
+            // Number
             // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column1.FillWeight = 20F;
-            this.Column1.Frozen = true;
-            this.Column1.HeaderText = "№";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 33;
+            this.Number.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Number.FillWeight = 20F;
+            this.Number.Frozen = true;
+            this.Number.HeaderText = "№";
+            this.Number.Name = "Number";
+            this.Number.ReadOnly = true;
+            this.Number.Width = 33;
             // 
-            // Column2
+            // Fio
             // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Fio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Column2.FillWeight = 112.3096F;
-            this.Column2.Frozen = true;
-            this.Column2.HeaderText = "ФИО";
-            this.Column2.MinimumWidth = 100;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column2.Width = 187;
+            this.Fio.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Fio.FillWeight = 112.3096F;
+            this.Fio.Frozen = true;
+            this.Fio.HeaderText = "ФИО";
+            this.Fio.MinimumWidth = 100;
+            this.Fio.Name = "Fio";
+            this.Fio.ReadOnly = true;
+            this.Fio.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Fio.Width = 187;
             // 
-            // Column3
+            // TabNumber
             // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column3.FillWeight = 112.3096F;
-            this.Column3.Frozen = true;
-            this.Column3.HeaderText = "Таб.номер";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 186;
+            this.TabNumber.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.TabNumber.FillWeight = 112.3096F;
+            this.TabNumber.Frozen = true;
+            this.TabNumber.HeaderText = "Таб.номер";
+            this.TabNumber.Name = "TabNumber";
+            this.TabNumber.ReadOnly = true;
+            this.TabNumber.Width = 186;
             // 
-            // Column5
+            // GuestCard
             // 
-            this.Column5.HeaderText = "Карта гостя";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
+            this.GuestCard.HeaderText = "Карта гостя";
+            this.GuestCard.Name = "GuestCard";
+            this.GuestCard.ReadOnly = true;
             // 
-            // Column7
+            // Position
             // 
-            this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column7.HeaderText = "Должность";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            this.Column7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column7.Width = 166;
+            this.Position.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Position.HeaderText = "Должность";
+            this.Position.Name = "Position";
+            this.Position.ReadOnly = true;
+            this.Position.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Position.Width = 166;
             // 
-            // Column4
+            // Organization
             // 
-            this.Column4.HeaderText = "Организация";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
+            this.Organization.HeaderText = "Организация";
+            this.Organization.Name = "Organization";
+            this.Organization.ReadOnly = true;
             // 
             // ShowUserInfo
             // 
@@ -296,7 +296,7 @@
             this.Controls.Add(this.ShowAllLinkLabel);
             this.Controls.Add(this.CardsCountLabel);
             this.Controls.Add(this.ChangeButton);
-            this.Controls.Add(this.PrintButton);
+            this.Controls.Add(this.DownloadButton);
             this.Controls.Add(this.SearchTextBox);
             this.Controls.Add(this.DivisionsComboBox);
             this.Controls.Add(this.label1);
@@ -318,16 +318,16 @@
         private System.Windows.Forms.ComboBox DivisionsComboBox;
         private System.Windows.Forms.DataGridView UsersDataGridView;
         private System.Windows.Forms.Button ChangeButton;
-        private System.Windows.Forms.Button PrintButton;
+        private System.Windows.Forms.Button DownloadButton;
         private System.Windows.Forms.LinkLabel ShowAllLinkLabel;
         private System.Windows.Forms.Label CardsCountLabel;
         private System.Windows.Forms.Label EmptyRegistryLabel;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Number;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TabNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GuestCard;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Position;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Organization;
         private System.Windows.Forms.DataGridViewImageColumn ShowUserInfo;
     }
 }

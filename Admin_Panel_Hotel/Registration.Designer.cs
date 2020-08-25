@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.ChangeButton = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.RegiserButton = new System.Windows.Forms.Button();
+            this.PasswordAcceptTextBox = new System.Windows.Forms.TextBox();
+            this.EmailTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.NameTextBox = new System.Windows.Forms.TextBox();
+            this.PasswordTextBox = new System.Windows.Forms.TextBox();
+            this.LastNameTextBox = new System.Windows.Forms.TextBox();
+            this.PatronymicTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,38 +51,38 @@
             this.pictureBox1.TabIndex = 57;
             this.pictureBox1.TabStop = false;
             // 
-            // ChangeButton
+            // RegiserButton
             // 
-            this.ChangeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
-            this.ChangeButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.ChangeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ChangeButton.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ChangeButton.ForeColor = System.Drawing.Color.White;
-            this.ChangeButton.Location = new System.Drawing.Point(72, 540);
-            this.ChangeButton.Margin = new System.Windows.Forms.Padding(499, 40, 33, 6);
-            this.ChangeButton.Name = "ChangeButton";
-            this.ChangeButton.Size = new System.Drawing.Size(244, 35);
-            this.ChangeButton.TabIndex = 56;
-            this.ChangeButton.Text = "Зарегистрироваться";
-            this.ChangeButton.UseVisualStyleBackColor = false;
+            this.RegiserButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
+            this.RegiserButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.RegiserButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RegiserButton.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.RegiserButton.ForeColor = System.Drawing.Color.White;
+            this.RegiserButton.Location = new System.Drawing.Point(72, 540);
+            this.RegiserButton.Margin = new System.Windows.Forms.Padding(499, 40, 33, 6);
+            this.RegiserButton.Name = "RegiserButton";
+            this.RegiserButton.Size = new System.Drawing.Size(244, 35);
+            this.RegiserButton.TabIndex = 56;
+            this.RegiserButton.Text = "Зарегистрироваться";
+            this.RegiserButton.UseVisualStyleBackColor = false;
             // 
-            // textBox2
+            // PasswordAcceptTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(72, 467);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 25, 3, 0);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(244, 33);
-            this.textBox2.TabIndex = 55;
-            this.textBox2.Text = "Пароль";
+            this.PasswordAcceptTextBox.Location = new System.Drawing.Point(72, 467);
+            this.PasswordAcceptTextBox.Margin = new System.Windows.Forms.Padding(3, 25, 3, 0);
+            this.PasswordAcceptTextBox.Name = "PasswordAcceptTextBox";
+            this.PasswordAcceptTextBox.Size = new System.Drawing.Size(244, 33);
+            this.PasswordAcceptTextBox.TabIndex = 55;
+            this.PasswordAcceptTextBox.Text = "Пароль";
             // 
-            // textBox1
+            // EmailTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(72, 351);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 25, 3, 0);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(244, 33);
-            this.textBox1.TabIndex = 54;
-            this.textBox1.Text = "Электронная почта";
+            this.EmailTextBox.Location = new System.Drawing.Point(72, 351);
+            this.EmailTextBox.Margin = new System.Windows.Forms.Padding(3, 25, 3, 0);
+            this.EmailTextBox.Name = "EmailTextBox";
+            this.EmailTextBox.Size = new System.Drawing.Size(244, 33);
+            this.EmailTextBox.TabIndex = 54;
+            this.EmailTextBox.Text = "Электронная почта";
             // 
             // label1
             // 
@@ -94,41 +94,41 @@
             this.label1.TabIndex = 53;
             this.label1.Text = "Регистрация";
             // 
-            // textBox3
+            // NameTextBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(72, 177);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 35, 3, 0);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(244, 33);
-            this.textBox3.TabIndex = 58;
-            this.textBox3.Text = "Ваше Имя";
+            this.NameTextBox.Location = new System.Drawing.Point(72, 177);
+            this.NameTextBox.Margin = new System.Windows.Forms.Padding(3, 35, 3, 0);
+            this.NameTextBox.Name = "NameTextBox";
+            this.NameTextBox.Size = new System.Drawing.Size(244, 33);
+            this.NameTextBox.TabIndex = 58;
+            this.NameTextBox.Text = "Ваше Имя";
             // 
-            // textBox4
+            // PasswordTextBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(72, 409);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 25, 3, 0);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(244, 33);
-            this.textBox4.TabIndex = 59;
-            this.textBox4.Text = "Придумайте пароль";
+            this.PasswordTextBox.Location = new System.Drawing.Point(72, 409);
+            this.PasswordTextBox.Margin = new System.Windows.Forms.Padding(3, 25, 3, 0);
+            this.PasswordTextBox.Name = "PasswordTextBox";
+            this.PasswordTextBox.Size = new System.Drawing.Size(244, 33);
+            this.PasswordTextBox.TabIndex = 59;
+            this.PasswordTextBox.Text = "Придумайте пароль";
             // 
-            // textBox5
+            // LastNameTextBox
             // 
-            this.textBox5.Location = new System.Drawing.Point(72, 235);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(3, 25, 3, 0);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(244, 33);
-            this.textBox5.TabIndex = 60;
-            this.textBox5.Text = "Ваша Фамилия";
+            this.LastNameTextBox.Location = new System.Drawing.Point(72, 235);
+            this.LastNameTextBox.Margin = new System.Windows.Forms.Padding(3, 25, 3, 0);
+            this.LastNameTextBox.Name = "LastNameTextBox";
+            this.LastNameTextBox.Size = new System.Drawing.Size(244, 33);
+            this.LastNameTextBox.TabIndex = 60;
+            this.LastNameTextBox.Text = "Ваша Фамилия";
             // 
-            // textBox6
+            // PatronymicTextBox
             // 
-            this.textBox6.Location = new System.Drawing.Point(72, 293);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(3, 25, 3, 0);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(244, 33);
-            this.textBox6.TabIndex = 61;
-            this.textBox6.Text = "Ваше Отчество";
+            this.PatronymicTextBox.Location = new System.Drawing.Point(72, 293);
+            this.PatronymicTextBox.Margin = new System.Windows.Forms.Padding(3, 25, 3, 0);
+            this.PatronymicTextBox.Name = "PatronymicTextBox";
+            this.PatronymicTextBox.Size = new System.Drawing.Size(244, 33);
+            this.PatronymicTextBox.TabIndex = 61;
+            this.PatronymicTextBox.Text = "Ваше Отчество";
             // 
             // Registration
             // 
@@ -136,14 +136,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.ClientSize = new System.Drawing.Size(412, 607);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.PatronymicTextBox);
+            this.Controls.Add(this.LastNameTextBox);
+            this.Controls.Add(this.PasswordTextBox);
+            this.Controls.Add(this.NameTextBox);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.ChangeButton);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.RegiserButton);
+            this.Controls.Add(this.PasswordAcceptTextBox);
+            this.Controls.Add(this.EmailTextBox);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(6);
@@ -157,13 +157,13 @@
 
         #endregion
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button ChangeButton;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button RegiserButton;
+        private System.Windows.Forms.TextBox PasswordAcceptTextBox;
+        private System.Windows.Forms.TextBox EmailTextBox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox NameTextBox;
+        private System.Windows.Forms.TextBox PasswordTextBox;
+        private System.Windows.Forms.TextBox LastNameTextBox;
+        private System.Windows.Forms.TextBox PatronymicTextBox;
     }
 }

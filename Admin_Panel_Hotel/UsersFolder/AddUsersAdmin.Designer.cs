@@ -28,28 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ChangeButton = new System.Windows.Forms.Button();
+            this.AcceptButton = new System.Windows.Forms.Button();
             this.emailtextbox = new System.Windows.Forms.TextBox();
             this.FilterComboBox = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.ДщсфешщтСomboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
-            // ChangeButton
+            // AcceptButton
             // 
-            this.ChangeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
-            this.ChangeButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.ChangeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ChangeButton.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ChangeButton.ForeColor = System.Drawing.Color.White;
-            this.ChangeButton.Location = new System.Drawing.Point(827, 336);
-            this.ChangeButton.Margin = new System.Windows.Forms.Padding(769, 56, 33, 6);
-            this.ChangeButton.Name = "ChangeButton";
-            this.ChangeButton.Size = new System.Drawing.Size(221, 42);
-            this.ChangeButton.TabIndex = 63;
-            this.ChangeButton.Text = "Подтвердить";
-            this.ChangeButton.UseVisualStyleBackColor = false;
+            this.AcceptButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
+            this.AcceptButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.AcceptButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AcceptButton.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AcceptButton.ForeColor = System.Drawing.Color.White;
+            this.AcceptButton.Location = new System.Drawing.Point(827, 336);
+            this.AcceptButton.Margin = new System.Windows.Forms.Padding(769, 56, 33, 6);
+            this.AcceptButton.Name = "AcceptButton";
+            this.AcceptButton.Size = new System.Drawing.Size(221, 42);
+            this.AcceptButton.TabIndex = 63;
+            this.AcceptButton.Text = "Подтвердить";
+            this.AcceptButton.UseVisualStyleBackColor = false;
             // 
             // emailtextbox
             // 
@@ -97,20 +97,20 @@
             this.label1.TabIndex = 59;
             this.label1.Text = "Выбрать роль";
             // 
-            // comboBox1
+            // ДщсфешщтСomboBox
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.White;
-            this.comboBox1.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.ForeColor = System.Drawing.Color.Black;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.ДщсфешщтСomboBox.BackColor = System.Drawing.Color.White;
+            this.ДщсфешщтСomboBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ДщсфешщтСomboBox.ForeColor = System.Drawing.Color.Black;
+            this.ДщсфешщтСomboBox.FormattingEnabled = true;
+            this.ДщсфешщтСomboBox.Items.AddRange(new object[] {
             "Все карты"});
-            this.comboBox1.Location = new System.Drawing.Point(97, 216);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(100, 14, 5, 4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(294, 33);
-            this.comboBox1.TabIndex = 64;
-            this.comboBox1.Text = "Локация";
+            this.ДщсфешщтСomboBox.Location = new System.Drawing.Point(97, 216);
+            this.ДщсфешщтСomboBox.Margin = new System.Windows.Forms.Padding(100, 14, 5, 4);
+            this.ДщсфешщтСomboBox.Name = "ДщсфешщтСomboBox";
+            this.ДщсфешщтСomboBox.Size = new System.Drawing.Size(294, 33);
+            this.ДщсфешщтСomboBox.TabIndex = 64;
+            this.ДщсфешщтСomboBox.Text = "Локация";
             // 
             // AddUsersAdmin
             // 
@@ -118,14 +118,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.ClientSize = new System.Drawing.Size(1110, 894);
-            this.Controls.Add(this.ChangeButton);
+            this.Controls.Add(this.AcceptButton);
             this.Controls.Add(this.emailtextbox);
             this.Controls.Add(this.FilterComboBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.ДщсфешщтСomboBox);
             this.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "AddUsersAdmin";
             this.Text = "AddUsersAdmin";
             this.ResumeLayout(false);
@@ -135,11 +135,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Button ChangeButton;
+        private System.Windows.Forms.Button AcceptButton;
         private System.Windows.Forms.TextBox emailtextbox;
         private System.Windows.Forms.ComboBox FilterComboBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox ДщсфешщтСomboBox;
     }
 }

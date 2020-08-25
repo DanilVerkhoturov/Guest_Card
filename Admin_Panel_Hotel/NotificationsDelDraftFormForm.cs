@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Admin_Panel_Hotel
 {
-    public partial class NotificationsRegistryForm : Form
+    public partial class NotificationsDelDraftForm : Form
     {
-        public NotificationsRegistryForm()
+        public NotificationsDelDraftForm()
         {
             InitializeComponent();
         }
