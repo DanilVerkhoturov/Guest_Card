@@ -96,9 +96,9 @@
             this.LocationDataLabel.Location = new System.Drawing.Point(82, 114);
             this.LocationDataLabel.Margin = new System.Windows.Forms.Padding(142, 35, 3, 0);
             this.LocationDataLabel.Name = "LocationDataLabel";
-            this.LocationDataLabel.Size = new System.Drawing.Size(104, 29);
+            this.LocationDataLabel.Size = new System.Drawing.Size(232, 29);
             this.LocationDataLabel.TabIndex = 1;
-            this.LocationDataLabel.Text = "Данные";
+            this.LocationDataLabel.Text = "Добавить локацию";
             this.LocationDataLabel.Click += new System.EventHandler(this.LocationDataLabel_Click);
             // 
             // CardPropertiesPanel
@@ -363,7 +363,7 @@
             this.label9.Location = new System.Drawing.Point(22, 175);
             this.label9.Margin = new System.Windows.Forms.Padding(30, 37, 3, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(334, 25);
+            this.label9.Size = new System.Drawing.Size(333, 25);
             this.label9.TabIndex = 7;
             this.label9.Text = "Колличество карт для  локации: ";
             // 
@@ -383,7 +383,7 @@
             this.label6.Location = new System.Drawing.Point(22, 69);
             this.label6.Margin = new System.Windows.Forms.Padding(3, 16, 0, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(217, 25);
+            this.label6.Size = new System.Drawing.Size(218, 25);
             this.label6.TabIndex = 5;
             this.label6.Text = "Колличество комнат";
             // 
