@@ -36,15 +36,15 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.ApplicationNameLabel = new System.Windows.Forms.Label();
-            this.PrintButton = new System.Windows.Forms.Button();
+            this.DownloadButton = new System.Windows.Forms.Button();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.UsersDataGridView = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.user_id = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.tabNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.start_at = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.end_at = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.location_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.summ = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.showUser = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.UsersDataGridView)).BeginInit();
             this.SuspendLayout();
@@ -64,20 +64,20 @@
             this.ApplicationNameLabel.Text = "Текущие заявки >";
             this.ApplicationNameLabel.Click += new System.EventHandler(this.ApplicationNameLabel_Click);
             // 
-            // PrintButton
+            // DownloadButton
             // 
-            this.PrintButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(82)))), ((int)(((byte)(119)))));
-            this.PrintButton.FlatAppearance.BorderSize = 0;
-            this.PrintButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PrintButton.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.PrintButton.ForeColor = System.Drawing.Color.White;
-            this.PrintButton.Location = new System.Drawing.Point(943, 32);
-            this.PrintButton.Margin = new System.Windows.Forms.Padding(33, 23, 124, 44);
-            this.PrintButton.Name = "PrintButton";
-            this.PrintButton.Size = new System.Drawing.Size(131, 35);
-            this.PrintButton.TabIndex = 18;
-            this.PrintButton.Text = "Скачать";
-            this.PrintButton.UseVisualStyleBackColor = false;
+            this.DownloadButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(82)))), ((int)(((byte)(119)))));
+            this.DownloadButton.FlatAppearance.BorderSize = 0;
+            this.DownloadButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DownloadButton.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DownloadButton.ForeColor = System.Drawing.Color.White;
+            this.DownloadButton.Location = new System.Drawing.Point(943, 32);
+            this.DownloadButton.Margin = new System.Windows.Forms.Padding(33, 23, 124, 44);
+            this.DownloadButton.Name = "DownloadButton";
+            this.DownloadButton.Size = new System.Drawing.Size(131, 35);
+            this.DownloadButton.TabIndex = 18;
+            this.DownloadButton.Text = "Скачать";
+            this.DownloadButton.UseVisualStyleBackColor = false;
             // 
             // dataGridViewImageColumn1
             // 
@@ -114,12 +114,12 @@
             this.UsersDataGridView.ColumnHeadersHeight = 35;
             this.UsersDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.UsersDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
+            this.Number,
             this.user_id,
             this.tabNum,
             this.start_at,
             this.end_at,
-            this.location_id,
+            this.summ,
             this.showUser});
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
@@ -162,13 +162,13 @@
             this.UsersDataGridView.Size = new System.Drawing.Size(998, 610);
             this.UsersDataGridView.TabIndex = 25;
             // 
-            // Column1
+            // Number
             // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column1.FillWeight = 20F;
-            this.Column1.HeaderText = "№";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
+            this.Number.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Number.FillWeight = 20F;
+            this.Number.HeaderText = "№";
+            this.Number.Name = "Number";
+            this.Number.ReadOnly = true;
             // 
             // user_id
             // 
@@ -216,17 +216,17 @@
             this.end_at.ReadOnly = true;
             this.end_at.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // location_id
+            // summ
             // 
-            this.location_id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.location_id.DataPropertyName = "location_id";
+            this.summ.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.summ.DataPropertyName = "location_id";
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.location_id.DefaultCellStyle = dataGridViewCellStyle4;
-            this.location_id.HeaderText = "Сумма, руб.";
-            this.location_id.Name = "location_id";
-            this.location_id.ReadOnly = true;
-            this.location_id.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.location_id.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.summ.DefaultCellStyle = dataGridViewCellStyle4;
+            this.summ.HeaderText = "Сумма, руб.";
+            this.summ.Name = "summ";
+            this.summ.ReadOnly = true;
+            this.summ.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.summ.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // showUser
             // 
@@ -243,7 +243,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.ClientSize = new System.Drawing.Size(1093, 894);
             this.Controls.Add(this.UsersDataGridView);
-            this.Controls.Add(this.PrintButton);
+            this.Controls.Add(this.DownloadButton);
             this.Controls.Add(this.ApplicationNameLabel);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -258,14 +258,14 @@
 
         private System.Windows.Forms.Label ApplicationNameLabel;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
-        private System.Windows.Forms.Button PrintButton;
+        private System.Windows.Forms.Button DownloadButton;
         private System.Windows.Forms.DataGridView UsersDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Number;
         private System.Windows.Forms.DataGridViewComboBoxColumn user_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn tabNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn start_at;
         private System.Windows.Forms.DataGridViewTextBoxColumn end_at;
-        private System.Windows.Forms.DataGridViewTextBoxColumn location_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn summ;
         private System.Windows.Forms.DataGridViewImageColumn showUser;
     }
 }

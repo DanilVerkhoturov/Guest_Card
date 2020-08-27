@@ -54,14 +54,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.CustomerComboBox = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.DaydateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.DayPicker = new System.Windows.Forms.DateTimePicker();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.FreePlaceLabek = new System.Windows.Forms.Label();
+            this.OtherOrganizationLabel = new System.Windows.Forms.Label();
+            this.GazrpomPlaceLabel = new System.Windows.Forms.Label();
+            this.BusyCountLabel = new System.Windows.Forms.Label();
+            this.AllPlaceLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.UsersDataGridView)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -358,24 +358,24 @@
             this.label5.Text = "День";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
-            // DaydateTimePicker
+            // DayPicker
             // 
-            this.DaydateTimePicker.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DaydateTimePicker.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
-            this.DaydateTimePicker.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
-            this.DaydateTimePicker.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
-            this.DaydateTimePicker.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DaydateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DaydateTimePicker.Location = new System.Drawing.Point(669, 47);
-            this.DaydateTimePicker.Margin = new System.Windows.Forms.Padding(149, 0, 25, 5);
-            this.DaydateTimePicker.Name = "DaydateTimePicker";
-            this.DaydateTimePicker.Size = new System.Drawing.Size(148, 33);
-            this.DaydateTimePicker.TabIndex = 87;
+            this.DayPicker.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DayPicker.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
+            this.DayPicker.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
+            this.DayPicker.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
+            this.DayPicker.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DayPicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DayPicker.Location = new System.Drawing.Point(669, 47);
+            this.DayPicker.Margin = new System.Windows.Forms.Padding(149, 0, 25, 5);
+            this.DayPicker.Name = "DayPicker";
+            this.DayPicker.Size = new System.Drawing.Size(148, 33);
+            this.DayPicker.TabIndex = 87;
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.todayLabel);
-            this.panel1.Controls.Add(this.DaydateTimePicker);
+            this.panel1.Controls.Add(this.DayPicker);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.UsersDataGridView);
             this.panel1.Controls.Add(this.tomorrowLabel);
@@ -387,60 +387,60 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.FreePlaceLabek);
+            this.panel2.Controls.Add(this.OtherOrganizationLabel);
+            this.panel2.Controls.Add(this.GazrpomPlaceLabel);
+            this.panel2.Controls.Add(this.BusyCountLabel);
+            this.panel2.Controls.Add(this.AllPlaceLabel);
             this.panel2.Location = new System.Drawing.Point(745, 44);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(336, 133);
             this.panel2.TabIndex = 91;
             // 
-            // label4
+            // FreePlaceLabek
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 105);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(199, 25);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Свободных мест: 8";
+            this.FreePlaceLabek.AutoSize = true;
+            this.FreePlaceLabek.Location = new System.Drawing.Point(3, 105);
+            this.FreePlaceLabek.Name = "FreePlaceLabek";
+            this.FreePlaceLabek.Size = new System.Drawing.Size(199, 25);
+            this.FreePlaceLabek.TabIndex = 6;
+            this.FreePlaceLabek.Text = "Свободных мест: 8";
             // 
-            // label3
+            // OtherOrganizationLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 80);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(272, 25);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Сторонние организации: 1";
+            this.OtherOrganizationLabel.AutoSize = true;
+            this.OtherOrganizationLabel.Location = new System.Drawing.Point(3, 80);
+            this.OtherOrganizationLabel.Name = "OtherOrganizationLabel";
+            this.OtherOrganizationLabel.Size = new System.Drawing.Size(272, 25);
+            this.OtherOrganizationLabel.TabIndex = 5;
+            this.OtherOrganizationLabel.Text = "Сторонние организации: 1";
             // 
-            // label10
+            // GazrpomPlaceLabel
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(3, 55);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(160, 25);
-            this.label10.TabIndex = 4;
-            this.label10.Text = "Газпром ННГ:1";
+            this.GazrpomPlaceLabel.AutoSize = true;
+            this.GazrpomPlaceLabel.Location = new System.Drawing.Point(3, 55);
+            this.GazrpomPlaceLabel.Name = "GazrpomPlaceLabel";
+            this.GazrpomPlaceLabel.Size = new System.Drawing.Size(160, 25);
+            this.GazrpomPlaceLabel.TabIndex = 4;
+            this.GazrpomPlaceLabel.Text = "Газпром ННГ:1";
             // 
-            // label8
+            // BusyCountLabel
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(3, 30);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(156, 25);
-            this.label8.TabIndex = 2;
-            this.label8.Text = "Занято мест: 2";
+            this.BusyCountLabel.AutoSize = true;
+            this.BusyCountLabel.Location = new System.Drawing.Point(3, 30);
+            this.BusyCountLabel.Name = "BusyCountLabel";
+            this.BusyCountLabel.Size = new System.Drawing.Size(156, 25);
+            this.BusyCountLabel.TabIndex = 2;
+            this.BusyCountLabel.Text = "Занято мест: 2";
             // 
-            // label2
+            // AllPlaceLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 5);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(229, 25);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Всего койко-место: 10";
+            this.AllPlaceLabel.AutoSize = true;
+            this.AllPlaceLabel.Location = new System.Drawing.Point(3, 5);
+            this.AllPlaceLabel.Name = "AllPlaceLabel";
+            this.AllPlaceLabel.Size = new System.Drawing.Size(229, 25);
+            this.AllPlaceLabel.TabIndex = 0;
+            this.AllPlaceLabel.Text = "Всего койко-место: 10";
             // 
             // LocationsAccommodation
             // 
@@ -487,14 +487,14 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox CustomerComboBox;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker DaydateTimePicker;
+        private System.Windows.Forms.DateTimePicker DayPicker;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label FreePlaceLabek;
+        private System.Windows.Forms.Label OtherOrganizationLabel;
+        private System.Windows.Forms.Label GazrpomPlaceLabel;
+        private System.Windows.Forms.Label BusyCountLabel;
+        private System.Windows.Forms.Label AllPlaceLabel;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;

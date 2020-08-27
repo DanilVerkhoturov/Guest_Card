@@ -1,6 +1,6 @@
 ﻿namespace Admin_Panel_Hotel.ApplicationsFolder
 {
-    partial class AddApplicationFoood
+    partial class AddApplicationFood1
     {
         /// <summary>
         /// Required designer variable.
@@ -37,21 +37,21 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.UsersDataGridView = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.user_id = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.tabNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.from = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.to = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.location_id = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.AddUserLabel = new System.Windows.Forms.Label();
-            this.ImportButton = new System.Windows.Forms.Button();
-            this.LocationComboBox = new System.Windows.Forms.ComboBox();
-            this.DivisionsComboBox = new System.Windows.Forms.ComboBox();
             this.SendToCustomerButton = new System.Windows.Forms.Button();
             this.ToDraftButton = new System.Windows.Forms.Button();
             this.FormNameLabel = new System.Windows.Forms.Label();
+            this.PeriodEndDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.PeriodFromDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.ImportButton = new System.Windows.Forms.Button();
+            this.LocationComboBox = new System.Windows.Forms.ComboBox();
+            this.DivisionsComboBox = new System.Windows.Forms.ComboBox();
+            this.Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fio = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.tabNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.from = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.to = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Summ = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.UsersDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,12 +80,12 @@
             this.UsersDataGridView.ColumnHeadersHeight = 35;
             this.UsersDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.UsersDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.user_id,
+            this.Number,
+            this.fio,
             this.tabNum,
             this.from,
             this.to,
-            this.location_id});
+            this.Summ});
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -124,68 +124,6 @@
             this.UsersDataGridView.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.UsersDataGridView_CellEndEdit);
             this.UsersDataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.UsersDataGridView_DataError);
             // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Column1.FillWeight = 20F;
-            this.Column1.HeaderText = "№";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 57;
-            // 
-            // user_id
-            // 
-            this.user_id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.user_id.DefaultCellStyle = dataGridViewCellStyle3;
-            this.user_id.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.user_id.FillWeight = 112.3096F;
-            this.user_id.HeaderText = "ФИО";
-            this.user_id.Name = "user_id";
-            this.user_id.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.user_id.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // tabNum
-            // 
-            this.tabNum.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.tabNum.FillWeight = 112.3096F;
-            this.tabNum.HeaderText = "Таб.номер";
-            this.tabNum.Name = "tabNum";
-            this.tabNum.Width = 138;
-            // 
-            // from
-            // 
-            this.from.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle4.Format = "dd/MM/yyyy";
-            dataGridViewCellStyle4.NullValue = null;
-            this.from.DefaultCellStyle = dataGridViewCellStyle4;
-            this.from.FillWeight = 112.3096F;
-            this.from.HeaderText = "Дата от";
-            this.from.MinimumWidth = 10;
-            this.from.Name = "from";
-            this.from.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // to
-            // 
-            this.to.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle5.Format = "dd/MM/yyyy";
-            dataGridViewCellStyle5.NullValue = null;
-            this.to.DefaultCellStyle = dataGridViewCellStyle5;
-            this.to.FillWeight = 112.3096F;
-            this.to.HeaderText = "Дата до";
-            this.to.MinimumWidth = 10;
-            this.to.Name = "to";
-            this.to.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // location_id
-            // 
-            this.location_id.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.location_id.HeaderText = "Локация";
-            this.location_id.Items.AddRange(new object[] {
-            "Локация"});
-            this.location_id.Name = "location_id";
-            this.location_id.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
             // AddUserLabel
             // 
             this.AddUserLabel.AutoSize = true;
@@ -199,57 +137,6 @@
             this.AddUserLabel.TabIndex = 59;
             this.AddUserLabel.Text = "+ добавить еще";
             this.AddUserLabel.Click += new System.EventHandler(this.AddUserLabel_Click);
-            // 
-            // ImportButton
-            // 
-            this.ImportButton.BackColor = System.Drawing.Color.White;
-            this.ImportButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(82)))), ((int)(((byte)(119)))));
-            this.ImportButton.FlatAppearance.BorderSize = 2;
-            this.ImportButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ImportButton.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ImportButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(82)))), ((int)(((byte)(119)))));
-            this.ImportButton.Location = new System.Drawing.Point(888, 115);
-            this.ImportButton.Margin = new System.Windows.Forms.Padding(22, 34, 0, 0);
-            this.ImportButton.Name = "ImportButton";
-            this.ImportButton.Size = new System.Drawing.Size(179, 33);
-            this.ImportButton.TabIndex = 58;
-            this.ImportButton.Text = "Импорт данных";
-            this.ImportButton.UseVisualStyleBackColor = false;
-            // 
-            // LocationComboBox
-            // 
-            this.LocationComboBox.BackColor = System.Drawing.Color.White;
-            this.LocationComboBox.DisplayMember = "location_name";
-            this.LocationComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.LocationComboBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.LocationComboBox.ForeColor = System.Drawing.Color.Black;
-            this.LocationComboBox.FormattingEnabled = true;
-            this.LocationComboBox.Items.AddRange(new object[] {
-            "Локация"});
-            this.LocationComboBox.Location = new System.Drawing.Point(300, 115);
-            this.LocationComboBox.Margin = new System.Windows.Forms.Padding(22, 6, 0, 0);
-            this.LocationComboBox.Name = "LocationComboBox";
-            this.LocationComboBox.Size = new System.Drawing.Size(202, 33);
-            this.LocationComboBox.TabIndex = 57;
-            this.LocationComboBox.ValueMember = "location_id";
-            // 
-            // DivisionsComboBox
-            // 
-            this.DivisionsComboBox.BackColor = System.Drawing.Color.White;
-            this.DivisionsComboBox.DisplayMember = "name";
-            this.DivisionsComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.DivisionsComboBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DivisionsComboBox.ForeColor = System.Drawing.Color.Black;
-            this.DivisionsComboBox.FormattingEnabled = true;
-            this.DivisionsComboBox.Items.AddRange(new object[] {
-            "Заказчик"});
-            this.DivisionsComboBox.Location = new System.Drawing.Point(76, 115);
-            this.DivisionsComboBox.Margin = new System.Windows.Forms.Padding(123, 48, 0, 0);
-            this.DivisionsComboBox.Name = "DivisionsComboBox";
-            this.DivisionsComboBox.Size = new System.Drawing.Size(202, 33);
-            this.DivisionsComboBox.TabIndex = 56;
-            this.DivisionsComboBox.ValueMember = "id";
-            this.DivisionsComboBox.SelectedIndexChanged += new System.EventHandler(this.DivisionsComboBox_SelectedIndexChanged);
             // 
             // SendToCustomerButton
             // 
@@ -293,6 +180,20 @@
             this.FormNameLabel.TabIndex = 50;
             this.FormNameLabel.Text = "Добавить заявку";
             // 
+            // PeriodEndDateTimePicker
+            // 
+            this.PeriodEndDateTimePicker.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.PeriodEndDateTimePicker.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
+            this.PeriodEndDateTimePicker.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
+            this.PeriodEndDateTimePicker.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
+            this.PeriodEndDateTimePicker.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.PeriodEndDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.PeriodEndDateTimePicker.Location = new System.Drawing.Point(706, 115);
+            this.PeriodEndDateTimePicker.Margin = new System.Windows.Forms.Padding(22, 0, 0, 5);
+            this.PeriodEndDateTimePicker.Name = "PeriodEndDateTimePicker";
+            this.PeriodEndDateTimePicker.Size = new System.Drawing.Size(160, 33);
+            this.PeriodEndDateTimePicker.TabIndex = 66;
+            // 
             // PeriodFromDateTimePicker
             // 
             this.PeriodFromDateTimePicker.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -305,21 +206,117 @@
             this.PeriodFromDateTimePicker.Margin = new System.Windows.Forms.Padding(22, 0, 0, 5);
             this.PeriodFromDateTimePicker.Name = "PeriodFromDateTimePicker";
             this.PeriodFromDateTimePicker.Size = new System.Drawing.Size(160, 33);
-            this.PeriodFromDateTimePicker.TabIndex = 60;
+            this.PeriodFromDateTimePicker.TabIndex = 65;
             // 
-            // dateTimePicker1
+            // ImportButton
             // 
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dateTimePicker1.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
-            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
-            this.dateTimePicker1.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
-            this.dateTimePicker1.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(706, 115);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(22, 0, 0, 5);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(160, 33);
-            this.dateTimePicker1.TabIndex = 61;
+            this.ImportButton.BackColor = System.Drawing.Color.White;
+            this.ImportButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(82)))), ((int)(((byte)(119)))));
+            this.ImportButton.FlatAppearance.BorderSize = 2;
+            this.ImportButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ImportButton.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ImportButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(82)))), ((int)(((byte)(119)))));
+            this.ImportButton.Location = new System.Drawing.Point(888, 115);
+            this.ImportButton.Margin = new System.Windows.Forms.Padding(22, 34, 0, 0);
+            this.ImportButton.Name = "ImportButton";
+            this.ImportButton.Size = new System.Drawing.Size(179, 33);
+            this.ImportButton.TabIndex = 64;
+            this.ImportButton.Text = "Импорт данных";
+            this.ImportButton.UseVisualStyleBackColor = false;
+            // 
+            // LocationComboBox
+            // 
+            this.LocationComboBox.BackColor = System.Drawing.Color.White;
+            this.LocationComboBox.DisplayMember = "location_name";
+            this.LocationComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.LocationComboBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LocationComboBox.ForeColor = System.Drawing.Color.Black;
+            this.LocationComboBox.FormattingEnabled = true;
+            this.LocationComboBox.Items.AddRange(new object[] {
+            "Локация"});
+            this.LocationComboBox.Location = new System.Drawing.Point(300, 115);
+            this.LocationComboBox.Margin = new System.Windows.Forms.Padding(22, 6, 0, 0);
+            this.LocationComboBox.Name = "LocationComboBox";
+            this.LocationComboBox.Size = new System.Drawing.Size(202, 33);
+            this.LocationComboBox.TabIndex = 63;
+            this.LocationComboBox.ValueMember = "location_id";
+            // 
+            // DivisionsComboBox
+            // 
+            this.DivisionsComboBox.BackColor = System.Drawing.Color.White;
+            this.DivisionsComboBox.DisplayMember = "name";
+            this.DivisionsComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.DivisionsComboBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DivisionsComboBox.ForeColor = System.Drawing.Color.Black;
+            this.DivisionsComboBox.FormattingEnabled = true;
+            this.DivisionsComboBox.Items.AddRange(new object[] {
+            "Заказчик"});
+            this.DivisionsComboBox.Location = new System.Drawing.Point(76, 115);
+            this.DivisionsComboBox.Margin = new System.Windows.Forms.Padding(123, 48, 0, 0);
+            this.DivisionsComboBox.Name = "DivisionsComboBox";
+            this.DivisionsComboBox.Size = new System.Drawing.Size(202, 33);
+            this.DivisionsComboBox.TabIndex = 62;
+            this.DivisionsComboBox.ValueMember = "id";
+            // 
+            // Number
+            // 
+            this.Number.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Number.FillWeight = 20F;
+            this.Number.HeaderText = "№";
+            this.Number.Name = "Number";
+            this.Number.ReadOnly = true;
+            this.Number.Width = 57;
+            // 
+            // fio
+            // 
+            this.fio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.fio.DefaultCellStyle = dataGridViewCellStyle3;
+            this.fio.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.fio.FillWeight = 112.3096F;
+            this.fio.HeaderText = "ФИО";
+            this.fio.Name = "fio";
+            this.fio.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.fio.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // tabNum
+            // 
+            this.tabNum.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.tabNum.FillWeight = 112.3096F;
+            this.tabNum.HeaderText = "Таб.номер";
+            this.tabNum.Name = "tabNum";
+            this.tabNum.Width = 138;
+            // 
+            // from
+            // 
+            this.from.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle4.Format = "dd/MM/yyyy";
+            dataGridViewCellStyle4.NullValue = null;
+            this.from.DefaultCellStyle = dataGridViewCellStyle4;
+            this.from.FillWeight = 112.3096F;
+            this.from.HeaderText = "Дата от";
+            this.from.MinimumWidth = 10;
+            this.from.Name = "from";
+            this.from.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // to
+            // 
+            this.to.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle5.Format = "dd/MM/yyyy";
+            dataGridViewCellStyle5.NullValue = null;
+            this.to.DefaultCellStyle = dataGridViewCellStyle5;
+            this.to.FillWeight = 112.3096F;
+            this.to.HeaderText = "Дата до";
+            this.to.MinimumWidth = 10;
+            this.to.Name = "to";
+            this.to.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Summ
+            // 
+            this.Summ.HeaderText = "Сумма, руб.";
+            this.Summ.Name = "Summ";
+            this.Summ.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Summ.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // AddApplication
             // 
@@ -327,16 +324,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.ClientSize = new System.Drawing.Size(1093, 894);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.PeriodEndDateTimePicker);
             this.Controls.Add(this.PeriodFromDateTimePicker);
-            this.Controls.Add(this.AddUserLabel);
             this.Controls.Add(this.ImportButton);
             this.Controls.Add(this.LocationComboBox);
             this.Controls.Add(this.DivisionsComboBox);
+            this.Controls.Add(this.UsersDataGridView);
+            this.Controls.Add(this.AddUserLabel);
             this.Controls.Add(this.SendToCustomerButton);
             this.Controls.Add(this.ToDraftButton);
             this.Controls.Add(this.FormNameLabel);
-            this.Controls.Add(this.UsersDataGridView);
             this.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "AddApplication";
@@ -349,19 +346,19 @@
         #endregion
         private System.Windows.Forms.DataGridView UsersDataGridView;
         private System.Windows.Forms.Label AddUserLabel;
-        private System.Windows.Forms.Button ImportButton;
-        private System.Windows.Forms.ComboBox LocationComboBox;
-        private System.Windows.Forms.ComboBox DivisionsComboBox;
         private System.Windows.Forms.Button SendToCustomerButton;
         private System.Windows.Forms.Button ToDraftButton;
         private System.Windows.Forms.Label FormNameLabel;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewComboBoxColumn user_id;
+        private System.Windows.Forms.DateTimePicker PeriodEndDateTimePicker;
+        private System.Windows.Forms.DateTimePicker PeriodFromDateTimePicker;
+        private System.Windows.Forms.Button ImportButton;
+        private System.Windows.Forms.ComboBox LocationComboBox;
+        private System.Windows.Forms.ComboBox DivisionsComboBox;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Number;
+        private System.Windows.Forms.DataGridViewComboBoxColumn fio;
         private System.Windows.Forms.DataGridViewTextBoxColumn tabNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn from;
         private System.Windows.Forms.DataGridViewTextBoxColumn to;
-        private System.Windows.Forms.DataGridViewComboBoxColumn location_id;
-        private System.Windows.Forms.DateTimePicker PeriodFromDateTimePicker;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Summ;
     }
 }

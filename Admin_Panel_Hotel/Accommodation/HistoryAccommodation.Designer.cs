@@ -28,21 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.UsersDataGridView = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ShowUserInfo = new System.Windows.Forms.DataGridViewImageColumn();
-            this.label1 = new System.Windows.Forms.Label();
+            this.History = new System.Windows.Forms.Label();
             this.PeriodToDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.PeriodFromDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
@@ -52,7 +45,14 @@
             this.LocationComboBox = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.FindTextBox = new System.Windows.Forms.TextBox();
-            this.EditRoomBedsCountButton = new System.Windows.Forms.Button();
+            this.DowonloadButton = new System.Windows.Forms.Button();
+            this.Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TabNamber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DateStart = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DateEnd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Location = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.All = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.UsersDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,157 +61,79 @@
             this.UsersDataGridView.AllowUserToAddRows = false;
             this.UsersDataGridView.AllowUserToDeleteRows = false;
             this.UsersDataGridView.AllowUserToResizeRows = false;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.UsersDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.UsersDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.UsersDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.UsersDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.UsersDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.UsersDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.UsersDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.UsersDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.UsersDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.UsersDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.UsersDataGridView.ColumnHeadersHeight = 35;
             this.UsersDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.UsersDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column7,
-            this.ShowUserInfo});
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.UsersDataGridView.DefaultCellStyle = dataGridViewCellStyle10;
+            this.Number,
+            this.Fio,
+            this.TabNamber,
+            this.DateStart,
+            this.DateEnd,
+            this.Location,
+            this.All});
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.UsersDataGridView.DefaultCellStyle = dataGridViewCellStyle4;
             this.UsersDataGridView.EnableHeadersVisualStyles = false;
             this.UsersDataGridView.Location = new System.Drawing.Point(75, 290);
             this.UsersDataGridView.Margin = new System.Windows.Forms.Padding(122, 42, 51, 5);
             this.UsersDataGridView.Name = "UsersDataGridView";
             this.UsersDataGridView.ReadOnly = true;
             this.UsersDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.UsersDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.UsersDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.UsersDataGridView.RowHeadersVisible = false;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle12.NullValue = null;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            this.UsersDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.NullValue = null;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            this.UsersDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.UsersDataGridView.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.UsersDataGridView.RowTemplate.Height = 30;
             this.UsersDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.UsersDataGridView.Size = new System.Drawing.Size(996, 590);
             this.UsersDataGridView.TabIndex = 18;
             // 
-            // Column1
+            // History
             // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column1.FillWeight = 20F;
-            this.Column1.Frozen = true;
-            this.Column1.HeaderText = "№";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 33;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle9;
-            this.Column2.FillWeight = 112.3096F;
-            this.Column2.Frozen = true;
-            this.Column2.HeaderText = "ФИО";
-            this.Column2.MinimumWidth = 100;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column2.Width = 187;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column3.FillWeight = 112.3096F;
-            this.Column3.Frozen = true;
-            this.Column3.HeaderText = "Таб.номер";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 186;
-            // 
-            // Column4
-            // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column4.FillWeight = 112.3096F;
-            this.Column4.Frozen = true;
-            this.Column4.HeaderText = "Дата от";
-            this.Column4.MinimumWidth = 10;
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column4.Width = 187;
-            // 
-            // Column5
-            // 
-            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column5.FillWeight = 112.3096F;
-            this.Column5.Frozen = true;
-            this.Column5.HeaderText = "Дата до";
-            this.Column5.MinimumWidth = 10;
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column5.Width = 186;
-            // 
-            // Column7
-            // 
-            this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column7.Frozen = true;
-            this.Column7.HeaderText = "Локация";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            this.Column7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column7.Width = 166;
-            // 
-            // ShowUserInfo
-            // 
-            this.ShowUserInfo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.ShowUserInfo.HeaderText = "Все";
-            this.ShowUserInfo.Image = global::Admin_Panel_Hotel.Properties.Resources.pngwing_8;
-            this.ShowUserInfo.Name = "ShowUserInfo";
-            this.ShowUserInfo.ReadOnly = true;
-            this.ShowUserInfo.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ShowUserInfo.Width = 51;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Roboto", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(70, 44);
-            this.label1.Margin = new System.Windows.Forms.Padding(61, 35, 3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 35);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "История";
+            this.History.AutoSize = true;
+            this.History.Font = new System.Drawing.Font("Roboto", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.History.Location = new System.Drawing.Point(70, 44);
+            this.History.Margin = new System.Windows.Forms.Padding(61, 35, 3, 0);
+            this.History.Name = "History";
+            this.History.Size = new System.Drawing.Size(131, 35);
+            this.History.TabIndex = 19;
+            this.History.Text = "История";
             // 
             // PeriodToDateTimePicker
             // 
@@ -329,20 +251,98 @@
             this.FindTextBox.TabIndex = 65;
             this.FindTextBox.Text = "Поиск";
             // 
-            // EditRoomBedsCountButton
+            // DowonloadButton
             // 
-            this.EditRoomBedsCountButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(82)))), ((int)(((byte)(119)))));
-            this.EditRoomBedsCountButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.EditRoomBedsCountButton.FlatAppearance.BorderSize = 0;
-            this.EditRoomBedsCountButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EditRoomBedsCountButton.ForeColor = System.Drawing.Color.White;
-            this.EditRoomBedsCountButton.Location = new System.Drawing.Point(858, 28);
-            this.EditRoomBedsCountButton.Margin = new System.Windows.Forms.Padding(3, 19, 3, 3);
-            this.EditRoomBedsCountButton.Name = "EditRoomBedsCountButton";
-            this.EditRoomBedsCountButton.Size = new System.Drawing.Size(173, 33);
-            this.EditRoomBedsCountButton.TabIndex = 66;
-            this.EditRoomBedsCountButton.Text = "Скачать";
-            this.EditRoomBedsCountButton.UseVisualStyleBackColor = false;
+            this.DowonloadButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(82)))), ((int)(((byte)(119)))));
+            this.DowonloadButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DowonloadButton.FlatAppearance.BorderSize = 0;
+            this.DowonloadButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DowonloadButton.ForeColor = System.Drawing.Color.White;
+            this.DowonloadButton.Location = new System.Drawing.Point(858, 28);
+            this.DowonloadButton.Margin = new System.Windows.Forms.Padding(3, 19, 3, 3);
+            this.DowonloadButton.Name = "DowonloadButton";
+            this.DowonloadButton.Size = new System.Drawing.Size(173, 33);
+            this.DowonloadButton.TabIndex = 66;
+            this.DowonloadButton.Text = "Скачать";
+            this.DowonloadButton.UseVisualStyleBackColor = false;
+            // 
+            // Number
+            // 
+            this.Number.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Number.FillWeight = 20F;
+            this.Number.Frozen = true;
+            this.Number.HeaderText = "№";
+            this.Number.Name = "Number";
+            this.Number.ReadOnly = true;
+            this.Number.Width = 33;
+            // 
+            // Fio
+            // 
+            this.Fio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Fio.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Fio.FillWeight = 112.3096F;
+            this.Fio.Frozen = true;
+            this.Fio.HeaderText = "ФИО";
+            this.Fio.MinimumWidth = 100;
+            this.Fio.Name = "Fio";
+            this.Fio.ReadOnly = true;
+            this.Fio.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Fio.Width = 187;
+            // 
+            // TabNamber
+            // 
+            this.TabNamber.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.TabNamber.FillWeight = 112.3096F;
+            this.TabNamber.Frozen = true;
+            this.TabNamber.HeaderText = "Таб.номер";
+            this.TabNamber.Name = "TabNamber";
+            this.TabNamber.ReadOnly = true;
+            this.TabNamber.Width = 186;
+            // 
+            // DateStart
+            // 
+            this.DateStart.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.DateStart.FillWeight = 112.3096F;
+            this.DateStart.Frozen = true;
+            this.DateStart.HeaderText = "Дата от";
+            this.DateStart.MinimumWidth = 10;
+            this.DateStart.Name = "DateStart";
+            this.DateStart.ReadOnly = true;
+            this.DateStart.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.DateStart.Width = 187;
+            // 
+            // DateEnd
+            // 
+            this.DateEnd.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.DateEnd.FillWeight = 112.3096F;
+            this.DateEnd.Frozen = true;
+            this.DateEnd.HeaderText = "Дата до";
+            this.DateEnd.MinimumWidth = 10;
+            this.DateEnd.Name = "DateEnd";
+            this.DateEnd.ReadOnly = true;
+            this.DateEnd.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.DateEnd.Width = 186;
+            // 
+            // Location
+            // 
+            this.Location.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Location.Frozen = true;
+            this.Location.HeaderText = "Локация";
+            this.Location.Name = "Location";
+            this.Location.ReadOnly = true;
+            this.Location.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Location.Width = 166;
+            // 
+            // All
+            // 
+            this.All.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.All.HeaderText = "Все";
+            this.All.Image = global::Admin_Panel_Hotel.Properties.Resources.pngwing_8;
+            this.All.Name = "All";
+            this.All.ReadOnly = true;
+            this.All.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.All.Width = 51;
             // 
             // HistoryAccommodation
             // 
@@ -350,7 +350,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.ClientSize = new System.Drawing.Size(1093, 894);
-            this.Controls.Add(this.EditRoomBedsCountButton);
+            this.Controls.Add(this.DowonloadButton);
             this.Controls.Add(this.FindTextBox);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.LocationComboBox);
@@ -360,7 +360,7 @@
             this.Controls.Add(this.PeriodFromDateTimePicker);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.History);
             this.Controls.Add(this.UsersDataGridView);
             this.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(6);
@@ -375,14 +375,7 @@
         #endregion
 
         private System.Windows.Forms.DataGridView UsersDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewImageColumn ShowUserInfo;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label History;
         private System.Windows.Forms.DateTimePicker PeriodToDateTimePicker;
         private System.Windows.Forms.DateTimePicker PeriodFromDateTimePicker;
         private System.Windows.Forms.Label label3;
@@ -392,6 +385,13 @@
         private System.Windows.Forms.ComboBox LocationComboBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox FindTextBox;
-        private System.Windows.Forms.Button EditRoomBedsCountButton;
+        private System.Windows.Forms.Button DowonloadButton;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Number;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TabNamber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DateStart;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DateEnd;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Location;
+        private System.Windows.Forms.DataGridViewImageColumn All;
     }
 }

@@ -4,9 +4,9 @@ using Excel = Microsoft.Office.Interop.Excel;
 
 namespace Admin_Panel_Hotel.ApplicationsFolder
 {
-    public partial class AddApplicationFoood : Form
+    public partial class AddApplicationFood1 : Form
     {
-        public AddApplicationFoood()
+        public AddApplicationFood1()
         {
             InitializeComponent();
 

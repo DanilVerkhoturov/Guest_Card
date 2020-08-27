@@ -36,31 +36,31 @@
             this.PositionTextLabel = new System.Windows.Forms.Label();
             this.PositionInfoLabel = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.OrganizationLabe = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.DateStart = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.DateEnd = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.DateArrivalLabel = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
+            this.DateLeftLabel = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
+            this.CardNumberLabel = new System.Windows.Forms.Label();
+            this.LinenLabel = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
+            this.FioGotCardLabel = new System.Windows.Forms.Label();
+            this.FioGiveCardLabel = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
+            this.FioGiveLinenLabel = new System.Windows.Forms.Label();
+            this.FioGotLinenLabel = new System.Windows.Forms.Label();
+            this.FioBrifingPPLabel = new System.Windows.Forms.Label();
+            this.FioBrifingTBLabel = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
+            this.DateBrifingPPLabel = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
+            this.DateBrifingTBLabel = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ClosePictureBox = new System.Windows.Forms.PictureBox();
@@ -138,15 +138,15 @@
             this.label7.TabIndex = 6;
             this.label7.Text = "Цех";
             // 
-            // label8
+            // OrganizationLabe
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(159, 157);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(31, 17);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "РТП";
+            this.OrganizationLabe.AutoSize = true;
+            this.OrganizationLabe.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.OrganizationLabe.Location = new System.Drawing.Point(159, 157);
+            this.OrganizationLabe.Name = "OrganizationLabe";
+            this.OrganizationLabe.Size = new System.Drawing.Size(31, 17);
+            this.OrganizationLabe.TabIndex = 7;
+            this.OrganizationLabe.Text = "РТП";
             // 
             // label9
             // 
@@ -158,15 +158,15 @@
             this.label9.TabIndex = 8;
             this.label9.Text = "Заселение";
             // 
-            // label10
+            // DateStart
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(159, 187);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(70, 17);
-            this.label10.TabIndex = 9;
-            this.label10.Text = "24.01.2021";
+            this.DateStart.AutoSize = true;
+            this.DateStart.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DateStart.Location = new System.Drawing.Point(159, 187);
+            this.DateStart.Name = "DateStart";
+            this.DateStart.Size = new System.Drawing.Size(70, 17);
+            this.DateStart.TabIndex = 9;
+            this.DateStart.Text = "24.01.2021";
             // 
             // label11
             // 
@@ -178,15 +178,15 @@
             this.label11.TabIndex = 10;
             this.label11.Text = "Выселение";
             // 
-            // label12
+            // DateEnd
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label12.Location = new System.Drawing.Point(159, 215);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(70, 17);
-            this.label12.TabIndex = 11;
-            this.label12.Text = "24.02.2021";
+            this.DateEnd.AutoSize = true;
+            this.DateEnd.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DateEnd.Location = new System.Drawing.Point(159, 215);
+            this.DateEnd.Name = "DateEnd";
+            this.DateEnd.Size = new System.Drawing.Size(70, 17);
+            this.DateEnd.TabIndex = 11;
+            this.DateEnd.Text = "24.02.2021";
             // 
             // label13
             // 
@@ -198,15 +198,15 @@
             this.label13.TabIndex = 12;
             this.label13.Text = "Заехал";
             // 
-            // label14
+            // DateArrivalLabel
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label14.Location = new System.Drawing.Point(159, 246);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(70, 17);
-            this.label14.TabIndex = 13;
-            this.label14.Text = "25.01.2021";
+            this.DateArrivalLabel.AutoSize = true;
+            this.DateArrivalLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DateArrivalLabel.Location = new System.Drawing.Point(159, 246);
+            this.DateArrivalLabel.Name = "DateArrivalLabel";
+            this.DateArrivalLabel.Size = new System.Drawing.Size(70, 17);
+            this.DateArrivalLabel.TabIndex = 13;
+            this.DateArrivalLabel.Text = "25.01.2021";
             // 
             // label15
             // 
@@ -218,15 +218,15 @@
             this.label15.TabIndex = 14;
             this.label15.Text = "Выехал";
             // 
-            // label16
+            // DateLeftLabel
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label16.Location = new System.Drawing.Point(159, 277);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(13, 17);
-            this.label16.TabIndex = 15;
-            this.label16.Text = "-";
+            this.DateLeftLabel.AutoSize = true;
+            this.DateLeftLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DateLeftLabel.Location = new System.Drawing.Point(159, 277);
+            this.DateLeftLabel.Name = "DateLeftLabel";
+            this.DateLeftLabel.Size = new System.Drawing.Size(13, 17);
+            this.DateLeftLabel.TabIndex = 15;
+            this.DateLeftLabel.Text = "-";
             // 
             // label17
             // 
@@ -238,25 +238,25 @@
             this.label17.TabIndex = 16;
             this.label17.Text = "Карта";
             // 
-            // label18
+            // CardNumberLabel
             // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label18.Location = new System.Drawing.Point(159, 350);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(50, 17);
-            this.label18.TabIndex = 17;
-            this.label18.Text = "357498";
+            this.CardNumberLabel.AutoSize = true;
+            this.CardNumberLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CardNumberLabel.Location = new System.Drawing.Point(159, 350);
+            this.CardNumberLabel.Name = "CardNumberLabel";
+            this.CardNumberLabel.Size = new System.Drawing.Size(50, 17);
+            this.CardNumberLabel.TabIndex = 17;
+            this.CardNumberLabel.Text = "357498";
             // 
-            // label19
+            // LinenLabel
             // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label19.Location = new System.Drawing.Point(159, 378);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(77, 17);
-            this.label19.TabIndex = 19;
-            this.label19.Text = "Комплект-1";
+            this.LinenLabel.AutoSize = true;
+            this.LinenLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LinenLabel.Location = new System.Drawing.Point(159, 378);
+            this.LinenLabel.Name = "LinenLabel";
+            this.LinenLabel.Size = new System.Drawing.Size(77, 17);
+            this.LinenLabel.TabIndex = 19;
+            this.LinenLabel.Text = "Комплект-1";
             // 
             // label20
             // 
@@ -268,27 +268,27 @@
             this.label20.TabIndex = 18;
             this.label20.Text = "Белье";
             // 
-            // label21
+            // FioGotCardLabel
             // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label21.Location = new System.Drawing.Point(417, 350);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(13, 17);
-            this.label21.TabIndex = 23;
-            this.label21.Text = "-";
-            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.FioGotCardLabel.AutoSize = true;
+            this.FioGotCardLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.FioGotCardLabel.Location = new System.Drawing.Point(417, 350);
+            this.FioGotCardLabel.Name = "FioGotCardLabel";
+            this.FioGotCardLabel.Size = new System.Drawing.Size(13, 17);
+            this.FioGotCardLabel.TabIndex = 23;
+            this.FioGotCardLabel.Text = "-";
+            this.FioGotCardLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label22
+            // FioGiveCardLabel
             // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label22.Location = new System.Drawing.Point(272, 350);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(83, 17);
-            this.label22.TabIndex = 22;
-            this.label22.Text = "Козлова Н.А";
-            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.FioGiveCardLabel.AutoSize = true;
+            this.FioGiveCardLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.FioGiveCardLabel.Location = new System.Drawing.Point(272, 350);
+            this.FioGiveCardLabel.Name = "FioGiveCardLabel";
+            this.FioGiveCardLabel.Size = new System.Drawing.Size(83, 17);
+            this.FioGiveCardLabel.TabIndex = 22;
+            this.FioGiveCardLabel.Text = "Козлова Н.А";
+            this.FioGiveCardLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label23
             // 
@@ -310,49 +310,49 @@
             this.label24.TabIndex = 20;
             this.label24.Text = "Выдал";
             // 
-            // label25
+            // FioGiveLinenLabel
             // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label25.Location = new System.Drawing.Point(272, 378);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(83, 17);
-            this.label25.TabIndex = 24;
-            this.label25.Text = "Козлова Н.А";
-            this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.FioGiveLinenLabel.AutoSize = true;
+            this.FioGiveLinenLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.FioGiveLinenLabel.Location = new System.Drawing.Point(272, 378);
+            this.FioGiveLinenLabel.Name = "FioGiveLinenLabel";
+            this.FioGiveLinenLabel.Size = new System.Drawing.Size(83, 17);
+            this.FioGiveLinenLabel.TabIndex = 24;
+            this.FioGiveLinenLabel.Text = "Козлова Н.А";
+            this.FioGiveLinenLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label26
+            // FioGotLinenLabel
             // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label26.Location = new System.Drawing.Point(417, 378);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(13, 17);
-            this.label26.TabIndex = 25;
-            this.label26.Text = "-";
-            this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.FioGotLinenLabel.AutoSize = true;
+            this.FioGotLinenLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.FioGotLinenLabel.Location = new System.Drawing.Point(417, 378);
+            this.FioGotLinenLabel.Name = "FioGotLinenLabel";
+            this.FioGotLinenLabel.Size = new System.Drawing.Size(13, 17);
+            this.FioGotLinenLabel.TabIndex = 25;
+            this.FioGotLinenLabel.Text = "-";
+            this.FioGotLinenLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label27
+            // FioBrifingPPLabel
             // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label27.Location = new System.Drawing.Point(272, 465);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(83, 17);
-            this.label27.TabIndex = 32;
-            this.label27.Text = "Козлова Н.А";
-            this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.FioBrifingPPLabel.AutoSize = true;
+            this.FioBrifingPPLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.FioBrifingPPLabel.Location = new System.Drawing.Point(272, 465);
+            this.FioBrifingPPLabel.Name = "FioBrifingPPLabel";
+            this.FioBrifingPPLabel.Size = new System.Drawing.Size(83, 17);
+            this.FioBrifingPPLabel.TabIndex = 32;
+            this.FioBrifingPPLabel.Text = "Козлова Н.А";
+            this.FioBrifingPPLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label28
+            // FioBrifingTBLabel
             // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label28.Location = new System.Drawing.Point(272, 437);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(83, 17);
-            this.label28.TabIndex = 31;
-            this.label28.Text = "Козлова Н.А";
-            this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.FioBrifingTBLabel.AutoSize = true;
+            this.FioBrifingTBLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.FioBrifingTBLabel.Location = new System.Drawing.Point(272, 437);
+            this.FioBrifingTBLabel.Name = "FioBrifingTBLabel";
+            this.FioBrifingTBLabel.Size = new System.Drawing.Size(83, 17);
+            this.FioBrifingTBLabel.TabIndex = 31;
+            this.FioBrifingTBLabel.Text = "Козлова Н.А";
+            this.FioBrifingTBLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label29
             // 
@@ -364,15 +364,15 @@
             this.label29.TabIndex = 30;
             this.label29.Text = "Провел";
             // 
-            // label30
+            // DateBrifingPPLabel
             // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label30.Location = new System.Drawing.Point(158, 465);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(70, 17);
-            this.label30.TabIndex = 29;
-            this.label30.Text = "25.01.2021";
+            this.DateBrifingPPLabel.AutoSize = true;
+            this.DateBrifingPPLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DateBrifingPPLabel.Location = new System.Drawing.Point(158, 465);
+            this.DateBrifingPPLabel.Name = "DateBrifingPPLabel";
+            this.DateBrifingPPLabel.Size = new System.Drawing.Size(70, 17);
+            this.DateBrifingPPLabel.TabIndex = 29;
+            this.DateBrifingPPLabel.Text = "25.01.2021";
             // 
             // label31
             // 
@@ -384,15 +384,15 @@
             this.label31.TabIndex = 28;
             this.label31.Text = "Инструктаж ПП";
             // 
-            // label32
+            // DateBrifingTBLabel
             // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label32.Location = new System.Drawing.Point(159, 437);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(50, 17);
-            this.label32.TabIndex = 27;
-            this.label32.Text = "357498";
+            this.DateBrifingTBLabel.AutoSize = true;
+            this.DateBrifingTBLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DateBrifingTBLabel.Location = new System.Drawing.Point(159, 437);
+            this.DateBrifingTBLabel.Name = "DateBrifingTBLabel";
+            this.DateBrifingTBLabel.Size = new System.Drawing.Size(50, 17);
+            this.DateBrifingTBLabel.TabIndex = 27;
+            this.DateBrifingTBLabel.Text = "357498";
             // 
             // label33
             // 
@@ -433,32 +433,32 @@
             this.ClientSize = new System.Drawing.Size(501, 525);
             this.Controls.Add(this.ClosePictureBox);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label27);
-            this.Controls.Add(this.label28);
+            this.Controls.Add(this.FioBrifingPPLabel);
+            this.Controls.Add(this.FioBrifingTBLabel);
             this.Controls.Add(this.label29);
-            this.Controls.Add(this.label30);
+            this.Controls.Add(this.DateBrifingPPLabel);
             this.Controls.Add(this.label31);
-            this.Controls.Add(this.label32);
+            this.Controls.Add(this.DateBrifingTBLabel);
             this.Controls.Add(this.label33);
-            this.Controls.Add(this.label26);
-            this.Controls.Add(this.label25);
-            this.Controls.Add(this.label21);
-            this.Controls.Add(this.label22);
+            this.Controls.Add(this.FioGotLinenLabel);
+            this.Controls.Add(this.FioGiveLinenLabel);
+            this.Controls.Add(this.FioGotCardLabel);
+            this.Controls.Add(this.FioGiveCardLabel);
             this.Controls.Add(this.label23);
             this.Controls.Add(this.label24);
-            this.Controls.Add(this.label19);
+            this.Controls.Add(this.LinenLabel);
             this.Controls.Add(this.label20);
-            this.Controls.Add(this.label18);
+            this.Controls.Add(this.CardNumberLabel);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.label16);
+            this.Controls.Add(this.DateLeftLabel);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.label14);
+            this.Controls.Add(this.DateArrivalLabel);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.label12);
+            this.Controls.Add(this.DateEnd);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
+            this.Controls.Add(this.DateStart);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.OrganizationLabe);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.PositionInfoLabel);
             this.Controls.Add(this.PositionTextLabel);
@@ -487,31 +487,31 @@
         private System.Windows.Forms.Label PositionTextLabel;
         private System.Windows.Forms.Label PositionInfoLabel;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label OrganizationLabe;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label DateStart;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label DateEnd;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label DateArrivalLabel;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label DateLeftLabel;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label CardNumberLabel;
+        private System.Windows.Forms.Label LinenLabel;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label FioGotCardLabel;
+        private System.Windows.Forms.Label FioGiveCardLabel;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label FioGiveLinenLabel;
+        private System.Windows.Forms.Label FioGotLinenLabel;
+        private System.Windows.Forms.Label FioBrifingPPLabel;
+        private System.Windows.Forms.Label FioBrifingTBLabel;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label DateBrifingPPLabel;
         private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label DateBrifingTBLabel;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox ClosePictureBox;

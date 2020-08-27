@@ -43,10 +43,10 @@
             this.showApplication = new System.Windows.Forms.DataGridViewImageColumn();
             this.applicationid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.customerid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
+            this.NewApplicationsLabel = new System.Windows.Forms.Label();
             this.NotificationLabel = new System.Windows.Forms.Label();
             this.CustomerComboBox = new System.Windows.Forms.ComboBox();
-            this.PrintButton = new System.Windows.Forms.Button();
+            this.AddDraftButton = new System.Windows.Forms.Button();
             this.Acceptbutton = new System.Windows.Forms.Button();
             this.AddUserLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ApplicationsDataGridView)).BeginInit();
@@ -190,17 +190,17 @@
             this.customerid.ReadOnly = true;
             this.customerid.Visible = false;
             // 
-            // label1
+            // NewApplicationsLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Roboto", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(70, 44);
-            this.label1.Margin = new System.Windows.Forms.Padding(61, 35, 6, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(212, 35);
-            this.label1.TabIndex = 53;
-            this.label1.Text = "Новые заявки";
+            this.NewApplicationsLabel.AutoSize = true;
+            this.NewApplicationsLabel.BackColor = System.Drawing.Color.Transparent;
+            this.NewApplicationsLabel.Font = new System.Drawing.Font("Roboto", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.NewApplicationsLabel.Location = new System.Drawing.Point(70, 44);
+            this.NewApplicationsLabel.Margin = new System.Windows.Forms.Padding(61, 35, 6, 0);
+            this.NewApplicationsLabel.Name = "NewApplicationsLabel";
+            this.NewApplicationsLabel.Size = new System.Drawing.Size(212, 35);
+            this.NewApplicationsLabel.TabIndex = 53;
+            this.NewApplicationsLabel.Text = "Новые заявки";
             // 
             // NotificationLabel
             // 
@@ -230,20 +230,20 @@
             this.CustomerComboBox.TabIndex = 59;
             this.CustomerComboBox.ValueMember = "id";
             // 
-            // PrintButton
+            // AddDraftButton
             // 
-            this.PrintButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(82)))), ((int)(((byte)(119)))));
-            this.PrintButton.FlatAppearance.BorderSize = 0;
-            this.PrintButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PrintButton.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.PrintButton.ForeColor = System.Drawing.Color.White;
-            this.PrintButton.Location = new System.Drawing.Point(929, 44);
-            this.PrintButton.Margin = new System.Windows.Forms.Padding(33, 23, 124, 44);
-            this.PrintButton.Name = "PrintButton";
-            this.PrintButton.Size = new System.Drawing.Size(131, 35);
-            this.PrintButton.TabIndex = 66;
-            this.PrintButton.Text = "Черновик";
-            this.PrintButton.UseVisualStyleBackColor = false;
+            this.AddDraftButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(82)))), ((int)(((byte)(119)))));
+            this.AddDraftButton.FlatAppearance.BorderSize = 0;
+            this.AddDraftButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddDraftButton.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AddDraftButton.ForeColor = System.Drawing.Color.White;
+            this.AddDraftButton.Location = new System.Drawing.Point(929, 44);
+            this.AddDraftButton.Margin = new System.Windows.Forms.Padding(33, 23, 124, 44);
+            this.AddDraftButton.Name = "AddDraftButton";
+            this.AddDraftButton.Size = new System.Drawing.Size(131, 35);
+            this.AddDraftButton.TabIndex = 66;
+            this.AddDraftButton.Text = "Черновик";
+            this.AddDraftButton.UseVisualStyleBackColor = false;
             // 
             // Acceptbutton
             // 
@@ -283,10 +283,10 @@
             this.ClientSize = new System.Drawing.Size(1093, 894);
             this.Controls.Add(this.AddUserLabel);
             this.Controls.Add(this.Acceptbutton);
-            this.Controls.Add(this.PrintButton);
+            this.Controls.Add(this.AddDraftButton);
             this.Controls.Add(this.CustomerComboBox);
             this.Controls.Add(this.NotificationLabel);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.NewApplicationsLabel);
             this.Controls.Add(this.ApplicationsDataGridView);
             this.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(6);
@@ -302,7 +302,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Castomer;
         private new System.Windows.Forms.DataGridViewTextBoxColumn Location;
         private System.Windows.Forms.DataGridView ApplicationsDataGridView;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label NewApplicationsLabel;
         private System.Windows.Forms.Label NotificationLabel;
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.DataGridViewTextBoxColumn date;
@@ -310,7 +310,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn applicationid;
         private System.Windows.Forms.DataGridViewTextBoxColumn customerid;
         private System.Windows.Forms.ComboBox CustomerComboBox;
-        private System.Windows.Forms.Button PrintButton;
+        private System.Windows.Forms.Button AddDraftButton;
         private System.Windows.Forms.Button Acceptbutton;
         private System.Windows.Forms.Label AddUserLabel;
     }

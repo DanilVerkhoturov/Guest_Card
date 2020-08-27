@@ -41,19 +41,6 @@
             this.tomorrowLabel = new System.Windows.Forms.Label();
             this.todayLabel = new System.Windows.Forms.Label();
             this.UsersDataGridView = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.TypeRoom = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Namber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fio = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,6 +48,19 @@
             this.DateStart = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DateEnd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Busy = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AllStateLabel = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.AllOrganizationLabel = new System.Windows.Forms.Label();
+            this.GazpromnngLabel = new System.Windows.Forms.Label();
+            this.BusyPlaceLabel = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.UsersDataGridView)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -204,25 +204,93 @@
             this.UsersDataGridView.Size = new System.Drawing.Size(990, 577);
             this.UsersDataGridView.TabIndex = 75;
             // 
-            // label2
+            // TypeRoom
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(752, 3);
-            this.label2.Margin = new System.Windows.Forms.Padding(3, 0, 1, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(199, 23);
-            this.label2.TabIndex = 76;
-            this.label2.Text = "Всего койко-место: 1";
+            this.TypeRoom.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.TypeRoom.FillWeight = 20F;
+            this.TypeRoom.HeaderText = "Тип номера";
+            this.TypeRoom.Name = "TypeRoom";
+            this.TypeRoom.ReadOnly = true;
+            this.TypeRoom.Width = 198;
+            // 
+            // Namber
+            // 
+            this.Namber.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Namber.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Namber.FillWeight = 112.3096F;
+            this.Namber.HeaderText = "Номер";
+            this.Namber.MinimumWidth = 50;
+            this.Namber.Name = "Namber";
+            this.Namber.ReadOnly = true;
+            this.Namber.Width = 129;
+            // 
+            // Fio
+            // 
+            this.Fio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Fio.FillWeight = 112.3096F;
+            this.Fio.HeaderText = "ФИО";
+            this.Fio.MinimumWidth = 100;
+            this.Fio.Name = "Fio";
+            this.Fio.ReadOnly = true;
+            // 
+            // Organization
+            // 
+            this.Organization.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Organization.FillWeight = 112.3096F;
+            this.Organization.HeaderText = "Организация";
+            this.Organization.MinimumWidth = 100;
+            this.Organization.Name = "Organization";
+            this.Organization.ReadOnly = true;
+            this.Organization.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // DateStart
+            // 
+            this.DateStart.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.DateStart.FillWeight = 112.3096F;
+            this.DateStart.HeaderText = "Дата заезда";
+            this.DateStart.MinimumWidth = 10;
+            this.DateStart.Name = "DateStart";
+            this.DateStart.ReadOnly = true;
+            this.DateStart.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.DateStart.Width = 189;
+            // 
+            // DateEnd
+            // 
+            this.DateEnd.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.DateEnd.HeaderText = "Дата выезда";
+            this.DateEnd.Name = "DateEnd";
+            this.DateEnd.ReadOnly = true;
+            this.DateEnd.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.DateEnd.Width = 198;
+            // 
+            // Busy
+            // 
+            this.Busy.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Busy.HeaderText = "Занято мест";
+            this.Busy.Name = "Busy";
+            this.Busy.ReadOnly = true;
+            this.Busy.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // AllStateLabel
+            // 
+            this.AllStateLabel.AutoSize = true;
+            this.AllStateLabel.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AllStateLabel.Location = new System.Drawing.Point(752, 3);
+            this.AllStateLabel.Margin = new System.Windows.Forms.Padding(3, 0, 1, 0);
+            this.AllStateLabel.Name = "AllStateLabel";
+            this.AllStateLabel.Size = new System.Drawing.Size(199, 23);
+            this.AllStateLabel.TabIndex = 76;
+            this.AllStateLabel.Text = "Всего койко-место: 1";
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.label11);
-            this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.AllOrganizationLabel);
+            this.panel1.Controls.Add(this.GazpromnngLabel);
+            this.panel1.Controls.Add(this.BusyPlaceLabel);
             this.panel1.Controls.Add(this.UsersDataGridView);
-            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.AllStateLabel);
             this.panel1.Controls.Add(this.todayLabel);
             this.panel1.Controls.Add(this.tomorrowLabel);
             this.panel1.Controls.Add(this.label5);
@@ -243,35 +311,35 @@
             this.label11.TabIndex = 80;
             this.label11.Text = "Свободных мест: 1";
             // 
-            // label10
+            // AllOrganizationLabel
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(752, 72);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(248, 23);
-            this.label10.TabIndex = 79;
-            this.label10.Text = "Сторонние организации: 1";
+            this.AllOrganizationLabel.AutoSize = true;
+            this.AllOrganizationLabel.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AllOrganizationLabel.Location = new System.Drawing.Point(752, 72);
+            this.AllOrganizationLabel.Name = "AllOrganizationLabel";
+            this.AllOrganizationLabel.Size = new System.Drawing.Size(248, 23);
+            this.AllOrganizationLabel.TabIndex = 79;
+            this.AllOrganizationLabel.Text = "Сторонние организации: 1";
             // 
-            // label9
+            // GazpromnngLabel
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.Location = new System.Drawing.Point(752, 49);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(151, 23);
-            this.label9.TabIndex = 78;
-            this.label9.Text = "Газпром ННГ: 1";
+            this.GazpromnngLabel.AutoSize = true;
+            this.GazpromnngLabel.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.GazpromnngLabel.Location = new System.Drawing.Point(752, 49);
+            this.GazpromnngLabel.Name = "GazpromnngLabel";
+            this.GazpromnngLabel.Size = new System.Drawing.Size(151, 23);
+            this.GazpromnngLabel.TabIndex = 78;
+            this.GazpromnngLabel.Text = "Газпром ННГ: 1";
             // 
-            // label8
+            // BusyPlaceLabel
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(752, 26);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(141, 23);
-            this.label8.TabIndex = 77;
-            this.label8.Text = "Занято мест: 1";
+            this.BusyPlaceLabel.AutoSize = true;
+            this.BusyPlaceLabel.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.BusyPlaceLabel.Location = new System.Drawing.Point(752, 26);
+            this.BusyPlaceLabel.Name = "BusyPlaceLabel";
+            this.BusyPlaceLabel.Size = new System.Drawing.Size(141, 23);
+            this.BusyPlaceLabel.TabIndex = 77;
+            this.BusyPlaceLabel.Text = "Занято мест: 1";
             // 
             // panel2
             // 
@@ -359,74 +427,6 @@
             this.label7.Text = "Период до";
             this.label7.Visible = false;
             // 
-            // TypeRoom
-            // 
-            this.TypeRoom.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.TypeRoom.FillWeight = 20F;
-            this.TypeRoom.HeaderText = "Тип номера";
-            this.TypeRoom.Name = "TypeRoom";
-            this.TypeRoom.ReadOnly = true;
-            this.TypeRoom.Width = 198;
-            // 
-            // Namber
-            // 
-            this.Namber.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Namber.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Namber.FillWeight = 112.3096F;
-            this.Namber.HeaderText = "Номер";
-            this.Namber.MinimumWidth = 50;
-            this.Namber.Name = "Namber";
-            this.Namber.ReadOnly = true;
-            this.Namber.Width = 129;
-            // 
-            // Fio
-            // 
-            this.Fio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Fio.FillWeight = 112.3096F;
-            this.Fio.HeaderText = "ФИО";
-            this.Fio.MinimumWidth = 100;
-            this.Fio.Name = "Fio";
-            this.Fio.ReadOnly = true;
-            // 
-            // Organization
-            // 
-            this.Organization.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Organization.FillWeight = 112.3096F;
-            this.Organization.HeaderText = "Организация";
-            this.Organization.MinimumWidth = 100;
-            this.Organization.Name = "Organization";
-            this.Organization.ReadOnly = true;
-            this.Organization.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // DateStart
-            // 
-            this.DateStart.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.DateStart.FillWeight = 112.3096F;
-            this.DateStart.HeaderText = "Дата заезда";
-            this.DateStart.MinimumWidth = 10;
-            this.DateStart.Name = "DateStart";
-            this.DateStart.ReadOnly = true;
-            this.DateStart.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.DateStart.Width = 189;
-            // 
-            // DateEnd
-            // 
-            this.DateEnd.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.DateEnd.HeaderText = "Дата выезда";
-            this.DateEnd.Name = "DateEnd";
-            this.DateEnd.ReadOnly = true;
-            this.DateEnd.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.DateEnd.Width = 198;
-            // 
-            // Busy
-            // 
-            this.Busy.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Busy.HeaderText = "Занято мест";
-            this.Busy.Name = "Busy";
-            this.Busy.ReadOnly = true;
-            this.Busy.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
             // CalendarGuest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 35F);
@@ -463,15 +463,15 @@
         private System.Windows.Forms.Label tomorrowLabel;
         private System.Windows.Forms.Label todayLabel;
         private System.Windows.Forms.DataGridView UsersDataGridView;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label AllStateLabel;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label AllOrganizationLabel;
+        private System.Windows.Forms.Label GazpromnngLabel;
+        private System.Windows.Forms.Label BusyPlaceLabel;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label label6;

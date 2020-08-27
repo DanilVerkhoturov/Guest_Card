@@ -119,11 +119,11 @@
       <DependentUpon>LocationsAccommodation.cs</DependentUpon>
     </Compile>
     <Compile Include="Applications.cs" />
-    <Compile Include="ApplicationsFolder\AddApplication.cs">
+    <Compile Include="ApplicationsFolder\AddApplicationFood1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ApplicationsFolder\AddApplication.Designer.cs">
-      <DependentUpon>AddApplication.cs</DependentUpon>
+    <Compile Include="ApplicationsFolder\AddApplicationFood1.Designer.cs">
+      <DependentUpon>AddApplicationFood1.cs</DependentUpon>
     </Compile>
     <Compile Include="ApplicationsFolder\CurrentApplications.cs">
       <SubType>Form</SubType>
@@ -193,11 +193,11 @@
     <Compile Include="Customers\AddCustomer.Designer.cs">
       <DependentUpon>AddCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="ApplicationsFolder\AddApplicationFoood.cs">
+    <Compile Include="ApplicationsFolder\AddApplication.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ApplicationsFolder\AddApplicationFoood.Designer.cs">
-      <DependentUpon>AddApplicationFoood.cs</DependentUpon>
+    <Compile Include="ApplicationsFolder\AddApplication.Designer.cs">
+      <DependentUpon>AddApplication.cs</DependentUpon>
     </Compile>
     <Compile Include="ApplicationsFolder\DraftApplications.cs">
       <SubType>Form</SubType>
@@ -407,6 +407,12 @@
     <Compile Include="UsersFolder\AddUsersAdmin.Designer.cs">
       <DependentUpon>AddUsersAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="UsersFolder\ChangeRules.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsersFolder\ChangeRules.Designer.cs">
+      <DependentUpon>ChangeRules.cs</DependentUpon>
+    </Compile>
     <Compile Include="UsersFolder\AddUsersCurators.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -431,8 +437,8 @@
     <EmbeddedResource Include="Accommodation\LocationsAccommodation.resx">
       <DependentUpon>LocationsAccommodation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ApplicationsFolder\AddApplication.resx">
-      <DependentUpon>AddApplication.cs</DependentUpon>
+    <EmbeddedResource Include="ApplicationsFolder\AddApplicationFood1.resx">
+      <DependentUpon>AddApplicationFood1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ApplicationsFolder\CurrentApplications.resx">
       <DependentUpon>CurrentApplications.cs</DependentUpon>
@@ -470,8 +476,8 @@
     <EmbeddedResource Include="Customers\AddCustomer.resx">
       <DependentUpon>AddCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ApplicationsFolder\AddApplicationFoood.resx">
-      <DependentUpon>AddApplicationFoood.cs</DependentUpon>
+    <EmbeddedResource Include="ApplicationsFolder\AddApplication.resx">
+      <DependentUpon>AddApplication.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ApplicationsFolder\DraftApplications.resx">
       <DependentUpon>DraftApplications.cs</DependentUpon>
@@ -573,6 +579,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UsersFolder\AddUsersAdmin.resx">
       <DependentUpon>AddUsersAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsersFolder\ChangeRules.resx">
+      <DependentUpon>ChangeRules.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UsersFolder\AddUsersCurators.resx">
       <DependentUpon>AddUsersCurators.cs</DependentUpon>

@@ -38,13 +38,13 @@
             this.Castomer = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Location = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ApplicationsDataGridView = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.NotificationLabel = new System.Windows.Forms.Label();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.showApplication = new System.Windows.Forms.DataGridViewImageColumn();
             this.applicationid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.customerid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DraftLabel = new System.Windows.Forms.Label();
+            this.NotificationLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ApplicationsDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -139,29 +139,6 @@
             this.ApplicationsDataGridView.CellMouseMove += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DraftDataGridView_CellMouseMove);
             this.ApplicationsDataGridView.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.ApplicationsDataGridView_CellPainting);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Roboto", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(70, 44);
-            this.label1.Margin = new System.Windows.Forms.Padding(61, 35, 26, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(174, 35);
-            this.label1.TabIndex = 49;
-            this.label1.Text = "Черновики ";
-            // 
-            // NotificationLabel
-            // 
-            this.NotificationLabel.AutoSize = true;
-            this.NotificationLabel.Font = new System.Drawing.Font("Roboto", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.NotificationLabel.Location = new System.Drawing.Point(268, 425);
-            this.NotificationLabel.Name = "NotificationLabel";
-            this.NotificationLabel.Size = new System.Drawing.Size(492, 44);
-            this.NotificationLabel.TabIndex = 59;
-            this.NotificationLabel.Text = "У вас пока нет Черновиков";
-            this.NotificationLabel.Visible = false;
-            // 
             // name
             // 
             this.name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -209,6 +186,29 @@
             this.customerid.ReadOnly = true;
             this.customerid.Visible = false;
             // 
+            // DraftLabel
+            // 
+            this.DraftLabel.AutoSize = true;
+            this.DraftLabel.BackColor = System.Drawing.Color.Transparent;
+            this.DraftLabel.Font = new System.Drawing.Font("Roboto", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DraftLabel.Location = new System.Drawing.Point(70, 44);
+            this.DraftLabel.Margin = new System.Windows.Forms.Padding(61, 35, 26, 0);
+            this.DraftLabel.Name = "DraftLabel";
+            this.DraftLabel.Size = new System.Drawing.Size(174, 35);
+            this.DraftLabel.TabIndex = 49;
+            this.DraftLabel.Text = "Черновики ";
+            // 
+            // NotificationLabel
+            // 
+            this.NotificationLabel.AutoSize = true;
+            this.NotificationLabel.Font = new System.Drawing.Font("Roboto", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.NotificationLabel.Location = new System.Drawing.Point(268, 425);
+            this.NotificationLabel.Name = "NotificationLabel";
+            this.NotificationLabel.Size = new System.Drawing.Size(491, 44);
+            this.NotificationLabel.TabIndex = 59;
+            this.NotificationLabel.Text = "У вас пока нет Черновиков";
+            this.NotificationLabel.Visible = false;
+            // 
             // DraftApplications
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -219,7 +219,7 @@
             this.ClientSize = new System.Drawing.Size(1093, 894);
             this.Controls.Add(this.NotificationLabel);
             this.Controls.Add(this.ApplicationsDataGridView);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.DraftLabel);
             this.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "DraftApplications";
@@ -234,7 +234,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Castomer;
         private new System.Windows.Forms.DataGridViewTextBoxColumn Location;
         private System.Windows.Forms.DataGridView ApplicationsDataGridView;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label DraftLabel;
         private System.Windows.Forms.Label NotificationLabel;
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.DataGridViewTextBoxColumn date;

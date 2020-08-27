@@ -100,7 +100,7 @@ namespace Admin_Panel_Hotel
         private void AddApplicationButton_Click(object sender, EventArgs e)
         {
             SubMenuProcessing(AddApplicationButton, ApplicationsButton, null);
-            Functions.OpenChildForm(new AddApplicationFoood(), ContentPanel);
+            Functions.OpenChildForm(new AddApplication(), ContentPanel);
         }
 
         private void HistoryApplicationsButton_Click(object sender, EventArgs e)

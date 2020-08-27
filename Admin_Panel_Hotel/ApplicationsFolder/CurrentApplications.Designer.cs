@@ -35,29 +35,29 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.label1 = new System.Windows.Forms.Label();
+            this.CurrentLabel = new System.Windows.Forms.Label();
             this.CustomerComboBox = new System.Windows.Forms.ComboBox();
             this.ApplicationsDataGridView = new System.Windows.Forms.DataGridView();
-            this.NotificationLabel = new System.Windows.Forms.Label();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.showApplication = new System.Windows.Forms.DataGridViewImageColumn();
             this.applicationid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.customerid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NotificationLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ApplicationsDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // CurrentLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Roboto", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(70, 32);
-            this.label1.Margin = new System.Windows.Forms.Padding(61, 23, 6, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(236, 35);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Текущие заявки";
+            this.CurrentLabel.AutoSize = true;
+            this.CurrentLabel.BackColor = System.Drawing.Color.Transparent;
+            this.CurrentLabel.Font = new System.Drawing.Font("Roboto", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CurrentLabel.Location = new System.Drawing.Point(70, 32);
+            this.CurrentLabel.Margin = new System.Windows.Forms.Padding(61, 23, 6, 0);
+            this.CurrentLabel.Name = "CurrentLabel";
+            this.CurrentLabel.Size = new System.Drawing.Size(236, 35);
+            this.CurrentLabel.TabIndex = 2;
+            this.CurrentLabel.Text = "Текущие заявки";
             // 
             // CustomerComboBox
             // 
@@ -154,17 +154,6 @@
             this.ApplicationsDataGridView.CellMouseMove += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.ApplicationsDataGridView_CellMouseMove);
             this.ApplicationsDataGridView.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.ApplicationsDataGridView_CellPainting);
             // 
-            // NotificationLabel
-            // 
-            this.NotificationLabel.AutoSize = true;
-            this.NotificationLabel.Font = new System.Drawing.Font("Roboto", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.NotificationLabel.Location = new System.Drawing.Point(284, 425);
-            this.NotificationLabel.Name = "NotificationLabel";
-            this.NotificationLabel.Size = new System.Drawing.Size(557, 44);
-            this.NotificationLabel.TabIndex = 58;
-            this.NotificationLabel.Text = "У вас пока нет Текущих заявок";
-            this.NotificationLabel.Visible = false;
-            // 
             // name
             // 
             this.name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -212,6 +201,17 @@
             this.customerid.ReadOnly = true;
             this.customerid.Visible = false;
             // 
+            // NotificationLabel
+            // 
+            this.NotificationLabel.AutoSize = true;
+            this.NotificationLabel.Font = new System.Drawing.Font("Roboto", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.NotificationLabel.Location = new System.Drawing.Point(284, 425);
+            this.NotificationLabel.Name = "NotificationLabel";
+            this.NotificationLabel.Size = new System.Drawing.Size(557, 44);
+            this.NotificationLabel.TabIndex = 58;
+            this.NotificationLabel.Text = "У вас пока нет Текущих заявок";
+            this.NotificationLabel.Visible = false;
+            // 
             // CurrentApplications
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -223,7 +223,7 @@
             this.Controls.Add(this.NotificationLabel);
             this.Controls.Add(this.ApplicationsDataGridView);
             this.Controls.Add(this.CustomerComboBox);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.CurrentLabel);
             this.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(6);
@@ -237,7 +237,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label CurrentLabel;
         private System.Windows.Forms.ComboBox CustomerComboBox;
         private System.Windows.Forms.DataGridView ApplicationsDataGridView;
         private System.Windows.Forms.Label NotificationLabel;

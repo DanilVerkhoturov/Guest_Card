@@ -1,6 +1,6 @@
 ﻿namespace Admin_Panel_Hotel.UsersFolder
 {
-    partial class AddUsersCurators
+    partial class ChangeRules
     {
         /// <summary>
         /// Required designer variable.
@@ -53,9 +53,9 @@
             this.label2.Location = new System.Drawing.Point(92, 121);
             this.label2.Margin = new System.Windows.Forms.Padding(83, 42, 3, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(212, 25);
+            this.label2.Size = new System.Drawing.Size(292, 25);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Добавить участника";
+            this.label2.Text = "Сменить роль пользователя";
             // 
             // FilterComboBox
             // 
@@ -65,19 +65,20 @@
             this.FilterComboBox.FormattingEnabled = true;
             this.FilterComboBox.Items.AddRange(new object[] {
             "Все карты"});
-            this.FilterComboBox.Location = new System.Drawing.Point(76, 160);
+            this.FilterComboBox.Location = new System.Drawing.Point(76, 232);
             this.FilterComboBox.Margin = new System.Windows.Forms.Padding(100, 14, 5, 4);
             this.FilterComboBox.Name = "FilterComboBox";
-            this.FilterComboBox.Size = new System.Drawing.Size(919, 33);
+            this.FilterComboBox.Size = new System.Drawing.Size(951, 33);
             this.FilterComboBox.TabIndex = 40;
-            this.FilterComboBox.Text = "Куратор питания";
+            this.FilterComboBox.Text = "Выбрать роль";
             // 
             // emailtextbox
             // 
-            this.emailtextbox.Location = new System.Drawing.Point(76, 216);
+            this.emailtextbox.Location = new System.Drawing.Point(76, 165);
             this.emailtextbox.Margin = new System.Windows.Forms.Padding(61, 19, 3, 3);
+            this.emailtextbox.Multiline = true;
             this.emailtextbox.Name = "emailtextbox";
-            this.emailtextbox.Size = new System.Drawing.Size(294, 33);
+            this.emailtextbox.Size = new System.Drawing.Size(334, 50);
             this.emailtextbox.TabIndex = 41;
             this.emailtextbox.Text = "Электронная почта";
             // 
@@ -88,7 +89,7 @@
             this.AcceptButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AcceptButton.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.AcceptButton.ForeColor = System.Drawing.Color.White;
-            this.AcceptButton.Location = new System.Drawing.Point(774, 333);
+            this.AcceptButton.Location = new System.Drawing.Point(806, 336);
             this.AcceptButton.Margin = new System.Windows.Forms.Padding(769, 56, 33, 6);
             this.AcceptButton.Name = "AcceptButton";
             this.AcceptButton.Size = new System.Drawing.Size(221, 42);
@@ -96,7 +97,7 @@
             this.AcceptButton.Text = "Подтвердить";
             this.AcceptButton.UseVisualStyleBackColor = false;
             // 
-            // AddUsersCurators
+            // ChangeRules
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -109,7 +110,7 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(6);
-            this.Name = "AddUsersCurators";
+            this.Name = "ChangeRules";
             this.Text = "AddUsersCurators";
             this.ResumeLayout(false);
             this.PerformLayout();
