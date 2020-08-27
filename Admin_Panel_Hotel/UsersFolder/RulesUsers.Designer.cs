@@ -191,7 +191,7 @@
             // 
             // DateUpdate
             // 
-            this.DateUpdate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.DateUpdate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.DateUpdate.FillWeight = 112.3096F;
             this.DateUpdate.HeaderText = "Дата обновления";
             this.DateUpdate.MinimumWidth = 10;
