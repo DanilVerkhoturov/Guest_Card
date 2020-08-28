@@ -37,15 +37,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.ImportButton = new System.Windows.Forms.Button();
             this.UsersDataGridView = new System.Windows.Forms.DataGridView();
-            this.SearchTextBox = new System.Windows.Forms.TextBox();
-            this.DivisionsComboBox = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.DownloadButton = new System.Windows.Forms.Button();
-            this.DelUserCountButton = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.Nuber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TabNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,6 +44,13 @@
             this.Position = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Organization = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ShowUserInfo = new System.Windows.Forms.DataGridViewImageColumn();
+            this.SearchTextBox = new System.Windows.Forms.TextBox();
+            this.DivisionsComboBox = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.UsersDataGridView)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -154,124 +152,6 @@
             this.UsersDataGridView.Size = new System.Drawing.Size(967, 586);
             this.UsersDataGridView.TabIndex = 54;
             // 
-            // SearchTextBox
-            // 
-            this.SearchTextBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.SearchTextBox.Location = new System.Drawing.Point(342, 29);
-            this.SearchTextBox.Margin = new System.Windows.Forms.Padding(22, 6, 6, 6);
-            this.SearchTextBox.Name = "SearchTextBox";
-            this.SearchTextBox.Size = new System.Drawing.Size(274, 33);
-            this.SearchTextBox.TabIndex = 57;
-            this.SearchTextBox.Text = "Поиск";
-            // 
-            // DivisionsComboBox
-            // 
-            this.DivisionsComboBox.BackColor = System.Drawing.Color.White;
-            this.DivisionsComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.DivisionsComboBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DivisionsComboBox.ForeColor = System.Drawing.Color.Black;
-            this.DivisionsComboBox.FormattingEnabled = true;
-            this.DivisionsComboBox.Items.AddRange(new object[] {
-            "Все карты"});
-            this.DivisionsComboBox.Location = new System.Drawing.Point(22, 29);
-            this.DivisionsComboBox.Margin = new System.Windows.Forms.Padding(123, 47, 10, 0);
-            this.DivisionsComboBox.Name = "DivisionsComboBox";
-            this.DivisionsComboBox.Size = new System.Drawing.Size(288, 33);
-            this.DivisionsComboBox.TabIndex = 56;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(788, 740);
-            this.button1.Margin = new System.Windows.Forms.Padding(470, 60, 33, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(201, 36);
-            this.button1.TabIndex = 58;
-            this.button1.Text = "Сохранить";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.DownloadButton);
-            this.panel1.Controls.Add(this.DelUserCountButton);
-            this.panel1.Controls.Add(this.UsersDataGridView);
-            this.panel1.Controls.Add(this.SearchTextBox);
-            this.panel1.Controls.Add(this.DivisionsComboBox);
-            this.panel1.Location = new System.Drawing.Point(54, 83);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1010, 789);
-            this.panel1.TabIndex = 59;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(17, 715);
-            this.label3.Margin = new System.Windows.Forms.Padding(61, 35, 6, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(213, 25);
-            this.label3.TabIndex = 61;
-            this.label3.Text = "Выбрано 4 человека";
-            // 
-            // DownloadButton
-            // 
-            this.DownloadButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(82)))), ((int)(((byte)(119)))));
-            this.DownloadButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.DownloadButton.FlatAppearance.BorderSize = 0;
-            this.DownloadButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DownloadButton.ForeColor = System.Drawing.Color.White;
-            this.DownloadButton.Location = new System.Drawing.Point(877, 29);
-            this.DownloadButton.Margin = new System.Windows.Forms.Padding(3, 19, 3, 3);
-            this.DownloadButton.Name = "DownloadButton";
-            this.DownloadButton.Size = new System.Drawing.Size(112, 33);
-            this.DownloadButton.TabIndex = 68;
-            this.DownloadButton.Text = "Скачать";
-            this.DownloadButton.UseVisualStyleBackColor = false;
-            // 
-            // DelUserCountButton
-            // 
-            this.DelUserCountButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(82)))), ((int)(((byte)(119)))));
-            this.DelUserCountButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.DelUserCountButton.FlatAppearance.BorderSize = 0;
-            this.DelUserCountButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DelUserCountButton.ForeColor = System.Drawing.Color.White;
-            this.DelUserCountButton.Location = new System.Drawing.Point(637, 29);
-            this.DelUserCountButton.Margin = new System.Windows.Forms.Padding(3, 19, 3, 3);
-            this.DelUserCountButton.Name = "DelUserCountButton";
-            this.DelUserCountButton.Size = new System.Drawing.Size(221, 33);
-            this.DelUserCountButton.TabIndex = 67;
-            this.DelUserCountButton.Text = "Удалить людей";
-            this.DelUserCountButton.UseVisualStyleBackColor = false;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.ImportButton);
-            this.panel2.Location = new System.Drawing.Point(35, 82);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1029, 800);
-            this.panel2.TabIndex = 60;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Roboto", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(304, 293);
-            this.label2.Margin = new System.Windows.Forms.Padding(61, 230, 6, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(459, 35);
-            this.label2.TabIndex = 61;
-            this.label2.Text = "Импортируйте данные из файла";
-            // 
             // Nuber
             // 
             this.Nuber.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
@@ -336,6 +216,92 @@
             this.ShowUserInfo.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.ShowUserInfo.Width = 51;
             // 
+            // SearchTextBox
+            // 
+            this.SearchTextBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SearchTextBox.Location = new System.Drawing.Point(342, 29);
+            this.SearchTextBox.Margin = new System.Windows.Forms.Padding(22, 6, 6, 6);
+            this.SearchTextBox.Name = "SearchTextBox";
+            this.SearchTextBox.Size = new System.Drawing.Size(274, 33);
+            this.SearchTextBox.TabIndex = 57;
+            this.SearchTextBox.Text = "Поиск";
+            // 
+            // DivisionsComboBox
+            // 
+            this.DivisionsComboBox.BackColor = System.Drawing.Color.White;
+            this.DivisionsComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.DivisionsComboBox.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DivisionsComboBox.ForeColor = System.Drawing.Color.Black;
+            this.DivisionsComboBox.FormattingEnabled = true;
+            this.DivisionsComboBox.Items.AddRange(new object[] {
+            "Все карты"});
+            this.DivisionsComboBox.Location = new System.Drawing.Point(22, 29);
+            this.DivisionsComboBox.Margin = new System.Windows.Forms.Padding(123, 47, 10, 0);
+            this.DivisionsComboBox.Name = "DivisionsComboBox";
+            this.DivisionsComboBox.Size = new System.Drawing.Size(288, 33);
+            this.DivisionsComboBox.TabIndex = 56;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(788, 740);
+            this.button1.Margin = new System.Windows.Forms.Padding(470, 60, 33, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(201, 36);
+            this.button1.TabIndex = 58;
+            this.button1.Text = "Сохранить";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.UsersDataGridView);
+            this.panel1.Controls.Add(this.SearchTextBox);
+            this.panel1.Controls.Add(this.DivisionsComboBox);
+            this.panel1.Location = new System.Drawing.Point(54, 83);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1010, 789);
+            this.panel1.TabIndex = 59;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(17, 715);
+            this.label3.Margin = new System.Windows.Forms.Padding(61, 35, 6, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(213, 25);
+            this.label3.TabIndex = 61;
+            this.label3.Text = "Выбрано 4 человека";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.ImportButton);
+            this.panel2.Location = new System.Drawing.Point(35, 82);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1029, 800);
+            this.panel2.TabIndex = 60;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Roboto", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(304, 293);
+            this.label2.Margin = new System.Windows.Forms.Padding(61, 230, 6, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(459, 35);
+            this.label2.TabIndex = 61;
+            this.label2.Text = "Импортируйте данные из файла";
+            // 
             // AddRegistry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -371,8 +337,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button DownloadButton;
-        private System.Windows.Forms.Button DelUserCountButton;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nuber;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fio;
         private System.Windows.Forms.DataGridViewTextBoxColumn TabNumber;
