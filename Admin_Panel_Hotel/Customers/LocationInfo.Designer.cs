@@ -65,9 +65,9 @@
             this.EditNameTipLabel = new System.Windows.Forms.Label();
             this.RoomsDataGridView = new System.Windows.Forms.DataGridView();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RoomNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BedsCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.roomNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bedsCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.room_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.delete = new System.Windows.Forms.DataGridViewImageColumn();
             this.AddRoomLabel = new System.Windows.Forms.Label();
             this.CardPropertiesPanel.SuspendLayout();
@@ -509,12 +509,11 @@
             this.RoomsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.RoomsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column2,
-            this.RoomNumber,
-            this.BedsCount,
-            this.id,
+            this.roomNumber,
+            this.bedsCount,
+            this.room_id,
             this.delete});
             this.RoomsDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.RoomsDataGridView.Enabled = false;
             this.RoomsDataGridView.EnableHeadersVisualStyles = false;
             this.RoomsDataGridView.Location = new System.Drawing.Point(24, 239);
             this.RoomsDataGridView.Margin = new System.Windows.Forms.Padding(3, 31, 3, 3);
@@ -530,7 +529,9 @@
             this.RoomsDataGridView.RowTemplate.Height = 30;
             this.RoomsDataGridView.Size = new System.Drawing.Size(710, 374);
             this.RoomsDataGridView.TabIndex = 65;
-            this.RoomsDataGridView.Visible = false;
+            this.RoomsDataGridView.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.RoomsDataGridView_CellEndEdit);
+            this.RoomsDataGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.RoomsDataGridView_CellMouseClick);
+            this.RoomsDataGridView.CellMouseMove += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.RoomsDataGridView_CellMouseMove);
             // 
             // Column2
             // 
@@ -539,43 +540,44 @@
             this.Column2.ReadOnly = true;
             this.Column2.Visible = false;
             // 
-            // RoomNumber
+            // roomNumber
             // 
-            this.RoomNumber.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.RoomNumber.DataPropertyName = "name";
-            this.RoomNumber.HeaderText = "Комнаты";
-            this.RoomNumber.Name = "RoomNumber";
-            this.RoomNumber.ReadOnly = true;
-            this.RoomNumber.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.roomNumber.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.roomNumber.DataPropertyName = "room_name";
+            this.roomNumber.HeaderText = "Комнаты";
+            this.roomNumber.Name = "roomNumber";
+            this.roomNumber.ReadOnly = true;
+            this.roomNumber.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // BedsCount
+            // bedsCount
             // 
-            this.BedsCount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.BedsCount.DataPropertyName = "count_beds";
+            this.bedsCount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.bedsCount.DataPropertyName = "beds_count";
             dataGridViewCellStyle5.Format = "N0";
             dataGridViewCellStyle5.NullValue = "0";
-            this.BedsCount.DefaultCellStyle = dataGridViewCellStyle5;
-            this.BedsCount.HeaderText = "Количество мест";
-            this.BedsCount.Name = "BedsCount";
-            this.BedsCount.ReadOnly = true;
-            this.BedsCount.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.bedsCount.DefaultCellStyle = dataGridViewCellStyle5;
+            this.bedsCount.HeaderText = "Количество мест";
+            this.bedsCount.Name = "bedsCount";
+            this.bedsCount.ReadOnly = true;
+            this.bedsCount.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // id
+            // room_id
             // 
-            this.id.DataPropertyName = "id";
-            this.id.HeaderText = "id";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Visible = false;
+            this.room_id.DataPropertyName = "room_id";
+            this.room_id.HeaderText = "id";
+            this.room_id.Name = "room_id";
+            this.room_id.ReadOnly = true;
+            this.room_id.Visible = false;
             // 
             // delete
             // 
+            this.delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.delete.HeaderText = "";
             this.delete.Image = global::Admin_Panel_Hotel.Properties.Resources.closeoutline_110831_4;
-            this.delete.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.delete.Name = "delete";
             this.delete.ReadOnly = true;
             this.delete.Visible = false;
+            this.delete.Width = 5;
             // 
             // AddRoomLabel
             // 
@@ -598,12 +600,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.ClientSize = new System.Drawing.Size(1093, 894);
+            this.Controls.Add(this.LocationInfoPanel);
             this.Controls.Add(this.AllCardPropertiesPanel);
             this.Controls.Add(this.Analyticslabel);
             this.Controls.Add(this.CardPropertiesLabel);
             this.Controls.Add(this.LocationDataLabel);
             this.Controls.Add(this.CustomerLocationNameLabel);
-            this.Controls.Add(this.LocationInfoPanel);
             this.Controls.Add(this.CardPropertiesPanel);
             this.Controls.Add(this.AddRoomLabel);
             this.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -656,11 +658,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.Button EditNameButton;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RoomNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BedsCount;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewImageColumn delete;
         private System.Windows.Forms.Button SaveLocationInfoButton;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn roomNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bedsCount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn room_id;
+        private System.Windows.Forms.DataGridViewImageColumn delete;
     }
 }

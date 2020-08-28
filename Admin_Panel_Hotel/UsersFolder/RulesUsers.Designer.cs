@@ -39,7 +39,7 @@
             this.RuleCheifLabel = new System.Windows.Forms.Label();
             this.RuleCustomersLabel = new System.Windows.Forms.Label();
             this.AddUser = new System.Windows.Forms.Label();
-            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ruke = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DateUpdate = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -73,7 +73,7 @@
             this.UsersDataGridView.ColumnHeadersHeight = 35;
             this.UsersDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.UsersDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Name,
+            this.fio,
             this.Email,
             this.Ruke,
             this.DateUpdate,
@@ -160,16 +160,16 @@
             this.AddUser.TabIndex = 30;
             this.AddUser.Text = "+ добавить участника";
             // 
-            // Name
+            // fio
             // 
-            this.Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.fio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Name.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Name.FillWeight = 112.3096F;
-            this.Name.HeaderText = "Имя";
-            this.Name.MinimumWidth = 100;
-            this.Name.Name = "Name";
-            this.Name.ReadOnly = true;
+            this.fio.DefaultCellStyle = dataGridViewCellStyle3;
+            this.fio.FillWeight = 112.3096F;
+            this.fio.HeaderText = "Имя";
+            this.fio.MinimumWidth = 100;
+            this.fio.Name = "fio";
+            this.fio.ReadOnly = true;
             // 
             // Email
             // 
@@ -241,7 +241,7 @@
         private System.Windows.Forms.Label RuleCheifLabel;
         private System.Windows.Forms.Label RuleCustomersLabel;
         private System.Windows.Forms.Label AddUser;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ruke;
         private System.Windows.Forms.DataGridViewTextBoxColumn DateUpdate;

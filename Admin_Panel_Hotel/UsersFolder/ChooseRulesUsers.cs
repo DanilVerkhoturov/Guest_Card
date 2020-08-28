@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Admin_Panel_Hotel.UsersFolder
 {
-    public partial class ChoseRulesUsers : Form
+    public partial class ChooseRulesUsers : Form
     {
-        public ChoseRulesUsers()
+        public ChooseRulesUsers()
         {
             InitializeComponent();
         }

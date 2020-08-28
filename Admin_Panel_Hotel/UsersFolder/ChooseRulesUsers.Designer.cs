@@ -1,6 +1,6 @@
 ﻿namespace Admin_Panel_Hotel.UsersFolder
 {
-    partial class ChoseRulesUsers
+    partial class ChooseRulesUsers
     {
         /// <summary>
         /// Required designer variable.
@@ -33,24 +33,24 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.MainRulesDataGridView = new System.Windows.Forms.DataGridView();
-            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Button = new System.Windows.Forms.DataGridViewButtonColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.RulesCustomersDataGridView = new System.Windows.Forms.DataGridView();
-            this.Name1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ruleName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Button = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.customerRuleName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Discription1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Button1 = new System.Windows.Forms.DataGridViewButtonColumn();
@@ -84,7 +84,7 @@
             this.MainRulesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.MainRulesDataGridView.ColumnHeadersVisible = false;
             this.MainRulesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Name,
+            this.ruleName,
             this.Description,
             this.Status,
             this.Button});
@@ -122,42 +122,6 @@
             this.MainRulesDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.MainRulesDataGridView.Size = new System.Drawing.Size(980, 304);
             this.MainRulesDataGridView.TabIndex = 26;
-            // 
-            // Name
-            // 
-            this.Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Name.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Name.FillWeight = 112.3096F;
-            this.Name.HeaderText = "Название";
-            this.Name.MinimumWidth = 100;
-            this.Name.Name = "Name";
-            this.Name.ReadOnly = true;
-            // 
-            // Description
-            // 
-            this.Description.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Description.FillWeight = 112.3096F;
-            this.Description.HeaderText = "Описание";
-            this.Description.Name = "Description";
-            this.Description.ReadOnly = true;
-            // 
-            // Status
-            // 
-            this.Status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Status.FillWeight = 112.3096F;
-            this.Status.HeaderText = "Статус";
-            this.Status.MinimumWidth = 10;
-            this.Status.Name = "Status";
-            this.Status.ReadOnly = true;
-            this.Status.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Button
-            // 
-            this.Button.HeaderText = "";
-            this.Button.Name = "Button";
-            this.Button.ReadOnly = true;
-            this.Button.Text = "...";
             // 
             // label1
             // 
@@ -233,7 +197,7 @@
             this.RulesCustomersDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.RulesCustomersDataGridView.ColumnHeadersVisible = false;
             this.RulesCustomersDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Name1,
+            this.customerRuleName,
             this.Discription1,
             this.Status1,
             this.Button1});
@@ -272,16 +236,52 @@
             this.RulesCustomersDataGridView.Size = new System.Drawing.Size(980, 304);
             this.RulesCustomersDataGridView.TabIndex = 33;
             // 
-            // Name1
+            // ruleName
             // 
-            this.Name1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ruleName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ruleName.DefaultCellStyle = dataGridViewCellStyle3;
+            this.ruleName.FillWeight = 112.3096F;
+            this.ruleName.HeaderText = "Название";
+            this.ruleName.MinimumWidth = 100;
+            this.ruleName.Name = "ruleName";
+            this.ruleName.ReadOnly = true;
+            // 
+            // Description
+            // 
+            this.Description.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Description.FillWeight = 112.3096F;
+            this.Description.HeaderText = "Описание";
+            this.Description.Name = "Description";
+            this.Description.ReadOnly = true;
+            // 
+            // Status
+            // 
+            this.Status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Status.FillWeight = 112.3096F;
+            this.Status.HeaderText = "Статус";
+            this.Status.MinimumWidth = 10;
+            this.Status.Name = "Status";
+            this.Status.ReadOnly = true;
+            this.Status.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Button
+            // 
+            this.Button.HeaderText = "";
+            this.Button.Name = "Button";
+            this.Button.ReadOnly = true;
+            this.Button.Text = "...";
+            // 
+            // customerRuleName
+            // 
+            this.customerRuleName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Name1.DefaultCellStyle = dataGridViewCellStyle9;
-            this.Name1.FillWeight = 112.3096F;
-            this.Name1.HeaderText = "Название";
-            this.Name1.MinimumWidth = 100;
-            this.Name1.Name = "Name1";
-            this.Name1.ReadOnly = true;
+            this.customerRuleName.DefaultCellStyle = dataGridViewCellStyle9;
+            this.customerRuleName.FillWeight = 112.3096F;
+            this.customerRuleName.HeaderText = "Название";
+            this.customerRuleName.MinimumWidth = 100;
+            this.customerRuleName.Name = "customerRuleName";
+            this.customerRuleName.ReadOnly = true;
             // 
             // Discription1
             // 
@@ -338,12 +338,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Name;
+        private System.Windows.Forms.DataGridView RulesCustomersDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ruleName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Description;
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
         private System.Windows.Forms.DataGridViewButtonColumn Button;
-        private System.Windows.Forms.DataGridView RulesCustomersDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Name1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn customerRuleName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Discription1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Status1;
         private System.Windows.Forms.DataGridViewButtonColumn Button1;

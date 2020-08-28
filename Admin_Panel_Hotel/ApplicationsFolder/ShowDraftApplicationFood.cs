@@ -77,7 +77,7 @@ namespace Admin_Panel_Hotel.ApplicationsFolder
             SendToCustomerButton.Visible = true;
             AddUserLabel.Visible = true;
             ImportButton.Visible = true;
-            CustomerComboBox.Enabled = true;
+            DivisionsComboBox.Enabled = true;
             LocationComboBox.Enabled = true;
             UsersDataGridView.Enabled = false;
         }

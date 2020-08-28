@@ -64,6 +64,35 @@ namespace Admin_Panel_Hotel
         }
 
         /// <summary>
+        /// Обновить информацию о гостинице.
+        /// </summary>
+        /// <param name="locationId">Уникальный номер (Id) локации.</param>
+        /// <param name="hotelId">Уникальный номер (Id) гостиницы.</param>
+        /// <param name="name">Имя.</param>
+        /// <param name="roomCount">Количество комнат.</param>
+        /// <param name="bedsCount">Количество спальных мест.</param>
+        /// <param name="cardsCount">Количество карт.</param>
+        /// <returns>Возвращает результат обновления данных.</returns>
+        public static bool Update(long locationId, long hotelId, string name, int roomCount, int bedsCount, int cardsCount)
+        {
+            return Functions.SqlUpdate($"UPDATE location SET name = \"{name}\" WHERE id = {locationId}") >= 0
+                ? Functions.SqlUpdate($"UPDATE hotel SET count_rooms = {roomCount}, beds_count = {bedsCount}, cards_count = {cardsCount} WHERE id = {hotelId}") >= 0
+                : false;
+        }
+
+        /// <summary>
+        /// Обновить информацию о комнате.
+        /// </summary>
+        /// <param name="id">Уникальный номер (Id) комнаты.</param>
+        /// <param name="name">Номер комнаты.</param>
+        /// <param name="bedsCount">Количество спальных мест.</param>
+        /// <returns>Возвращает результат обновления данных.</returns>
+        public static bool UpdateRoom(long id, string name, int bedsCount)
+        {
+            return Functions.SqlUpdate($"UPDATE room SET name = \"{name}\", count_beds = {bedsCount} WHERE id = {id}") >= 0;
+        }
+
+        /// <summary>
         /// Изменить информацию о комнате.
         /// </summary>
         /// <param name="roomId">Уникальный номер (Id) комнаты.</param>
@@ -80,7 +109,7 @@ namespace Admin_Panel_Hotel
         /// </summary>
         public static void FillInfo()
         {
-            MySqlCommand select = new MySqlCommand($"SELECT count_rooms, beds_count, cards_count FROM hotel WHERE id = {Hotels.Id}", Functions.Connection);
+            MySqlCommand select = new MySqlCommand($"SELECT count_rooms, beds_count, cards_count, location_id FROM hotel WHERE id = {Id}", Functions.Connection);
             select.CommandTimeout = 999999;
 
             select.ExecuteNonQuery();
@@ -88,9 +117,10 @@ namespace Admin_Panel_Hotel
             MySqlDataReader reader = select.ExecuteReader();
             while (reader.Read())
             {
-                Hotels.RoomCount = Convert.ToInt32(reader[0].ToString());
-                Hotels.BedsCount = Convert.ToInt32(reader[1].ToString());
-                Hotels.CardsCount = Convert.ToInt32(reader[2].ToString());
+                RoomCount = Convert.ToInt32(reader[0]);
+                BedsCount = Convert.ToInt32(reader[1]);
+                CardsCount = Convert.ToInt32(reader[2]);
+                Locations.Id = Convert.ToInt32(reader[3]);
                 break;
             }
             reader.Close();

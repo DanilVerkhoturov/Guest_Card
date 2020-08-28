@@ -425,11 +425,11 @@
     <Compile Include="UsersFolder\RulesUsers.Designer.cs">
       <DependentUpon>RulesUsers.cs</DependentUpon>
     </Compile>
-    <Compile Include="UsersFolder\ChoseRulesUsers.cs">
+    <Compile Include="UsersFolder\ChooseRulesUsers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UsersFolder\ChoseRulesUsers.Designer.cs">
-      <DependentUpon>ChoseRulesUsers.cs</DependentUpon>
+    <Compile Include="UsersFolder\ChooseRulesUsers.Designer.cs">
+      <DependentUpon>ChooseRulesUsers.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Accommodation\HistoryAccommodation.resx">
       <DependentUpon>HistoryAccommodation.cs</DependentUpon>
@@ -589,8 +589,8 @@
     <EmbeddedResource Include="UsersFolder\RulesUsers.resx">
       <DependentUpon>RulesUsers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UsersFolder\ChoseRulesUsers.resx">
-      <DependentUpon>ChoseRulesUsers.cs</DependentUpon>
+    <EmbeddedResource Include="UsersFolder\ChooseRulesUsers.resx">
+      <DependentUpon>ChooseRulesUsers.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -83,16 +83,25 @@ namespace Admin_Panel_Hotel.Customers
             EditRoomsButton.Visible = false;
             RoomsDataGridView.ReadOnly = false;
             RoomsDataGridView.Columns["delete"].Visible = true;
+            CardsCountTextBox.ReadOnly = false;
             AddRoomLabel.Visible = true;
             SaveLocationInfoButton.Visible = true;
         }
 
         private void SaveLocationInfoButton_Click(object sender, EventArgs e)
         {
-            // TODO: Сделать проверку заполнения всех полей.
-            if (true)
+            if (NameTextBox.TextLength > 0)
             {
-                // TODO: Сделать обновление данных в БД.
+                if (Hotels.Update(Locations.Id, Hotels.Id, NameTextBox.Text, Convert.ToInt32(RoomsCountTextBox.Text), Convert.ToInt32(BedsCountTextBox.Text), Convert.ToInt32(CardsCountTextBox.Text)))
+                {
+                    for (int i = 0; i < RoomsDataGridView.RowCount; i++)
+                        if (!Hotels.UpdateRoom(Convert.ToInt32(RoomsDataGridView["room_id", i].Value), RoomsDataGridView["roomNumber", i].Value.ToString(), Convert.ToInt32(RoomsDataGridView["bedsCount", i].Value)))
+                            MessageBox.Show("Возникла непредвиденная ошибка с обновлением данных гостиницы!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show("Возникла непредвиденная ошибка с обновлением данных гостиницы!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -104,6 +113,44 @@ namespace Admin_Panel_Hotel.Customers
         private void AddRoomLabel_Click(object sender, EventArgs e)
         {
             RoomsDataGridView.Rows.Add();
+            RoomsCountTextBox.Text = Convert.ToString(Convert.ToInt32(RoomsCountTextBox.Text) + 1);
+        }
+
+        private void RoomsDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (RoomsDataGridView.Columns[e.ColumnIndex].Name == "delete")
+            {
+                if (MessageBox.Show($"Вы действительно хотите удалить комнату \"{RoomsDataGridView["roomNumber", e.RowIndex].Value}\"?", "Удаление", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    // TODO: Сделать удаление / архивирование комнаты.
+                    RoomsCountTextBox.Text = Convert.ToString(Convert.ToInt32(RoomsCountTextBox.Text) - 1);
+                    BedsCountTextBox.Text = Convert.ToString(Convert.ToInt32(BedsCountTextBox.Text) - Convert.ToInt32(RoomsDataGridView["bedsCount", e.RowIndex]));
+                    RoomsDataGridView.Rows.RemoveAt(e.RowIndex);
+                }
+            }
+        }
+
+        private void RoomsDataGridView_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            if (RoomsDataGridView.Columns[e.ColumnIndex].Name == "bedsCount")
+            {
+                int bedsCount = 0;
+                for (int i = 0; i < RoomsDataGridView.RowCount; i++)
+                    bedsCount += Convert.ToInt32(RoomsDataGridView["bedsCount", i].Value);
+                BedsCountTextBox.Text = bedsCount.ToString();
+            }
+        }
+
+        private void RoomsDataGridView_CellMouseMove(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (RoomsDataGridView.Columns[e.ColumnIndex].Name == "delete")
+            {
+                RoomsDataGridView.Cursor = Cursors.Hand;
+            }
+            else
+            {
+                RoomsDataGridView.Cursor = Cursors.Default;
+            }
         }
     }
 }
