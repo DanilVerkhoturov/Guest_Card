@@ -65,7 +65,7 @@
             this.FilterComboBox.FormattingEnabled = true;
             this.FilterComboBox.Items.AddRange(new object[] {
             "Все карты"});
-            this.FilterComboBox.Location = new System.Drawing.Point(76, 232);
+            this.FilterComboBox.Location = new System.Drawing.Point(76, 215);
             this.FilterComboBox.Margin = new System.Windows.Forms.Padding(100, 14, 5, 4);
             this.FilterComboBox.Name = "FilterComboBox";
             this.FilterComboBox.Size = new System.Drawing.Size(951, 33);
@@ -76,9 +76,8 @@
             // 
             this.emailtextbox.Location = new System.Drawing.Point(76, 165);
             this.emailtextbox.Margin = new System.Windows.Forms.Padding(61, 19, 3, 3);
-            this.emailtextbox.Multiline = true;
             this.emailtextbox.Name = "emailtextbox";
-            this.emailtextbox.Size = new System.Drawing.Size(334, 50);
+            this.emailtextbox.Size = new System.Drawing.Size(334, 33);
             this.emailtextbox.TabIndex = 41;
             this.emailtextbox.Text = "Электронная почта";
             // 
@@ -89,7 +88,7 @@
             this.AcceptButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AcceptButton.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.AcceptButton.ForeColor = System.Drawing.Color.White;
-            this.AcceptButton.Location = new System.Drawing.Point(806, 336);
+            this.AcceptButton.Location = new System.Drawing.Point(806, 308);
             this.AcceptButton.Margin = new System.Windows.Forms.Padding(769, 56, 33, 6);
             this.AcceptButton.Name = "AcceptButton";
             this.AcceptButton.Size = new System.Drawing.Size(221, 42);

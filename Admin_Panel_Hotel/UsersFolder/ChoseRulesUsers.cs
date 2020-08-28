@@ -16,5 +16,7 @@ namespace Admin_Panel_Hotel.UsersFolder
         {
             InitializeComponent();
         }
+
+       
     }
 }
