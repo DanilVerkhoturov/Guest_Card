@@ -50,10 +50,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.RulesCustomersDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewButtonColumn1 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Name1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Discription1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Button1 = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.MainRulesDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RulesCustomersDataGridView)).BeginInit();
             this.SuspendLayout();
@@ -233,10 +233,10 @@
             this.RulesCustomersDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.RulesCustomersDataGridView.ColumnHeadersVisible = false;
             this.RulesCustomersDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewButtonColumn1});
+            this.Name1,
+            this.Discription1,
+            this.Status1,
+            this.Button1});
             dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle10.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -272,41 +272,41 @@
             this.RulesCustomersDataGridView.Size = new System.Drawing.Size(980, 304);
             this.RulesCustomersDataGridView.TabIndex = 33;
             // 
-            // dataGridViewTextBoxColumn1
+            // Name1
             // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Name1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle9;
-            this.dataGridViewTextBoxColumn1.FillWeight = 112.3096F;
-            this.dataGridViewTextBoxColumn1.HeaderText = "Название";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 100;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.Name1.DefaultCellStyle = dataGridViewCellStyle9;
+            this.Name1.FillWeight = 112.3096F;
+            this.Name1.HeaderText = "Название";
+            this.Name1.MinimumWidth = 100;
+            this.Name1.Name = "Name1";
+            this.Name1.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn2
+            // Discription1
             // 
-            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn2.FillWeight = 112.3096F;
-            this.dataGridViewTextBoxColumn2.HeaderText = "Описание";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.Discription1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Discription1.FillWeight = 112.3096F;
+            this.Discription1.HeaderText = "Описание";
+            this.Discription1.Name = "Discription1";
+            this.Discription1.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn3
+            // Status1
             // 
-            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn3.FillWeight = 112.3096F;
-            this.dataGridViewTextBoxColumn3.HeaderText = "Статус";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 10;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Status1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Status1.FillWeight = 112.3096F;
+            this.Status1.HeaderText = "Статус";
+            this.Status1.MinimumWidth = 10;
+            this.Status1.Name = "Status1";
+            this.Status1.ReadOnly = true;
+            this.Status1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // dataGridViewButtonColumn1
+            // Button1
             // 
-            this.dataGridViewButtonColumn1.HeaderText = "";
-            this.dataGridViewButtonColumn1.Name = "dataGridViewButtonColumn1";
-            this.dataGridViewButtonColumn1.ReadOnly = true;
-            this.dataGridViewButtonColumn1.Text = "...";
+            this.Button1.HeaderText = "";
+            this.Button1.Name = "Button1";
+            this.Button1.ReadOnly = true;
+            this.Button1.Text = "...";
             // 
             // ChoseRulesUsers
             // 
@@ -343,9 +343,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
         private System.Windows.Forms.DataGridViewButtonColumn Button;
         private System.Windows.Forms.DataGridView RulesCustomersDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Name1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Discription1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Status1;
+        private System.Windows.Forms.DataGridViewButtonColumn Button1;
     }
 }
