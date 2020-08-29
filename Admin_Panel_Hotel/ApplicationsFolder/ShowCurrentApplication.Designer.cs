@@ -78,6 +78,7 @@
             this.DownloadButton.TabIndex = 18;
             this.DownloadButton.Text = "Скачать";
             this.DownloadButton.UseVisualStyleBackColor = false;
+            this.DownloadButton.Click += new System.EventHandler(this.DownloadButton_Click);
             // 
             // dataGridViewImageColumn1
             // 

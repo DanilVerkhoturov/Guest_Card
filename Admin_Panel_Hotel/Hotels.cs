@@ -55,7 +55,7 @@ namespace Admin_Panel_Hotel
         /// <param name="name">Номер комнаты.</param>
         /// <param name="bedsCount">Количество спальных мест в комнате.</param>
         /// <returns>Возвращает уникальный номер (Id) добавленной комнаты.</returns>
-        public static long AddRoom(long hotelId, string name, string bedsCount)
+        public static long AddRoom(long hotelId, string name, int bedsCount)
         {
             long type = 1; // "Стандарт".
             long statusId = 3; // "Свободно".

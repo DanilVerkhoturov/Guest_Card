@@ -81,7 +81,7 @@ namespace Admin_Panel_Hotel.ApplicationsFolder
                         }
                     }
 
-                    string fileExcel = UsersToExcel();
+                    string fileExcel = Functions.DataGridViewToExcel(UsersDataGridView, $@"{Environment.CurrentDirectory}\{DivisionsComboBox.Text} - {DateTime.Now.Date.ToShortDateString()}", out string filePath);
                     Functions.SendMail($"Заявка на согласование", "", fileExcel);
                     if (Notify() == DialogResult.Cancel)
                     {
@@ -110,43 +110,6 @@ namespace Admin_Panel_Hotel.ApplicationsFolder
             notification.Owner = this;
             notification.StartPosition = FormStartPosition.CenterParent;
             return notification.ShowDialog();
-        }
-
-        /// <summary>
-        /// Загрузка сотрудников из таблицы в файл Excel.
-        /// </summary>
-        /// <returns>Путь к созданному файлу.</returns>
-        private string UsersToExcel()
-        {
-            Excel.Application excelapp = new Excel.Application();
-            Excel.Workbook workbook = excelapp.Workbooks.Add(Type.Missing);
-            Excel.Sheets excelsheets = workbook.Worksheets;
-            Excel.Worksheet excelworksheet = (Excel.Worksheet)excelsheets.get_Item(1);
-
-            // Заполнение заголовков столбцов.
-            for (int j = 1; j < UsersDataGridView.ColumnCount + 1; j++)
-            {
-                excelworksheet.Rows[1].Columns[j] = UsersDataGridView.Columns[j - 1].HeaderText;
-            }
-
-            // Заполнение данных из таблицы.
-            for (int i = 1; i < UsersDataGridView.RowCount + 1; i++)
-            {
-                for (int j = 1; j < UsersDataGridView.ColumnCount + 1; j++)
-                {
-                    excelworksheet.Rows[i + 1].Columns[j] = UsersDataGridView.Rows[i - 1].Cells[j - 1].FormattedValue;
-                }
-            }
-
-            excelworksheet.Columns.EntireColumn.AutoFit();
-
-            excelapp.AlertBeforeOverwriting = false;
-            workbook.SaveAs($@"{Environment.CurrentDirectory}\{DivisionsComboBox.Text} - {DateTime.Now.Date.ToShortDateString()}.xlsx");
-            string filePath = workbook.FullName;
-            workbook.Close();
-            excelapp.Quit();
-
-            return filePath;
         }
 
         private void UsersDataGridView_CellEndEdit(object sender, DataGridViewCellEventArgs e)

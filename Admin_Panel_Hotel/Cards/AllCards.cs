@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace Admin_Panel_Hotel.Cards
@@ -81,6 +82,12 @@ namespace Admin_Panel_Hotel.Cards
         private void LocationComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             CardsDataGridView.DataSource = Card.GetAll(Convert.ToInt64(LocationComboBox.SelectedValue));
+        }
+
+        private void DownloadButton_Click(object sender, EventArgs e)
+        {
+            string fileExcel = Functions.DataGridViewToExcel(CardsDataGridView, $"Все карты {DateTime.Now.ToShortDateString()}", out string filePath);
+            Process.Start(filePath);
         }
     }
 }

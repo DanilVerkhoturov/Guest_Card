@@ -1,11 +1,13 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
 using System.IO.Ports;
 using System.Net;
 using System.Net.Mail;
 using System.Windows.Forms;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace Admin_Panel_Hotel
 {
@@ -152,6 +154,49 @@ namespace Admin_Panel_Hotel
         }
 
         #endregion
+
+        /// <summary>
+        /// Загрузка таблицы в файл Excel.
+        /// </summary>
+        /// <param name="dgv">Таблица с данными.</param>
+        /// <param name="fileName">Название файла Excel.</param>
+        /// <param name="filePath">Путь к файлу.</param>
+        /// <returns>Возвращает полный путь к созданному файлу вместе с названием файла.</returns>
+        public static string DataGridViewToExcel(DataGridView dgv, string fileName, out string filePath)
+        {
+            Excel.Application excelapp = new Excel.Application();
+            Excel.Workbook workbook = excelapp.Workbooks.Add(Type.Missing);
+            Excel.Sheets excelsheets = workbook.Worksheets;
+            Excel.Worksheet excelworksheet = (Excel.Worksheet)excelsheets.get_Item(1);
+            List<DataGridViewColumn> listVisible = new List<DataGridViewColumn>();
+
+            // Получение столбцов для заполнения в Excel.
+            for (int i = 0; i < dgv.ColumnCount; i++)
+                if (dgv.Columns[i].Visible && !(dgv.Columns[i] is DataGridViewImageColumn) && !(dgv.Columns[i] is DataGridViewCheckBoxColumn))
+                    listVisible.Add(dgv.Columns[i]);
+
+            // Заполнение заголовков столбцов.
+            for (int i = 1; i < listVisible.Count + 1; i++)
+                excelworksheet.Rows[1].Columns[i] = listVisible[i - 1].HeaderText;
+
+            // Заполнение данных из таблицы.
+            for (int i = 1; i < dgv.RowCount + 1; i++)
+                for (int j = 1; j < listVisible.Count + 1; j++)
+                    excelworksheet.Rows[i + 1].Columns[j] = dgv.Rows[i - 1].Cells[listVisible[j - 1].Name].FormattedValue;
+
+            excelworksheet.Columns.EntireColumn.AutoFit();
+
+            excelapp.AlertBeforeOverwriting = false;
+
+            workbook.SaveAs($"{fileName}.xlsx");
+            string fullName = workbook.FullName;
+            filePath = workbook.Path;
+
+            workbook.Close();
+            excelapp.Quit();
+
+            return fullName;
+        }
 
         /// <summary>
         /// Отправка письма на почтовый ящик.

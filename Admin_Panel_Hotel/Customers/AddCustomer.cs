@@ -535,7 +535,7 @@ namespace Admin_Panel_Hotel
                             }
                             else
                             {
-                                Hotels.AddRoom(hotelId, roomName, bedsCount);
+                                Hotels.AddRoom(hotelId, roomName, Convert.ToInt32(bedsCount));
                             }
                         }
 

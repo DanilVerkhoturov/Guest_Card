@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -16,7 +17,9 @@ namespace Admin_Panel_Hotel.Customers
             RoomsCountTextBox.Text = Hotels.RoomCount.ToString();
             BedsCountTextBox.Text = Hotels.BedsCount.ToString();
             CardsCountTextBox.Text = Hotels.CardsCount.ToString();
-            RoomsDataGridView.DataSource = Hotels.GetRooms();
+            DataTable rooms = Hotels.GetRooms();
+            for (int i = 0; i < rooms.Rows.Count; i++)
+                RoomsDataGridView.Rows.Add(rooms.Rows[i].ItemArray);
 
             CustomerLocationNameLabel.Text = $"Мои заказчики > {Customer.Name} > {Locations.Name}";
         }
@@ -94,9 +97,26 @@ namespace Admin_Panel_Hotel.Customers
             {
                 if (Hotels.Update(Locations.Id, Hotels.Id, NameTextBox.Text, Convert.ToInt32(RoomsCountTextBox.Text), Convert.ToInt32(BedsCountTextBox.Text), Convert.ToInt32(CardsCountTextBox.Text)))
                 {
+                    // Обновление данных о комнатах.
                     for (int i = 0; i < RoomsDataGridView.RowCount; i++)
-                        if (!Hotels.UpdateRoom(Convert.ToInt32(RoomsDataGridView["room_id", i].Value), RoomsDataGridView["roomNumber", i].Value.ToString(), Convert.ToInt32(RoomsDataGridView["bedsCount", i].Value)))
-                            MessageBox.Show("Возникла непредвиденная ошибка с обновлением данных гостиницы!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    {
+                        if (Hotels.FindRoom(RoomsDataGridView["roomNumber", i].Value.ToString(), Hotels.Id, out long roomId))
+                        {
+                            // Обновление данных комнаты.
+                            if (!Hotels.UpdateRoom(Convert.ToInt32(RoomsDataGridView["room_id", i].Value), RoomsDataGridView["roomNumber", i].Value.ToString(), Convert.ToInt32(RoomsDataGridView["bedsCount", i].Value)))
+                            {
+                                MessageBox.Show("Возникла непредвиденная ошибка с обновлением данных гостиницы!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                        else
+                        {
+                            // Добавление новой комнаты.
+                            if (Hotels.AddRoom(Hotels.Id, RoomsDataGridView["roomNumber", i].Value.ToString(), Convert.ToInt32(RoomsDataGridView["bedsCount", i].Value)) < 0)
+                            {
+                                MessageBox.Show("Возникла непредвиденная ошибка с обновлением данных гостиницы!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                    }
                 }
                 else
                 {
@@ -124,7 +144,7 @@ namespace Admin_Panel_Hotel.Customers
                 {
                     // TODO: Сделать удаление / архивирование комнаты.
                     RoomsCountTextBox.Text = Convert.ToString(Convert.ToInt32(RoomsCountTextBox.Text) - 1);
-                    BedsCountTextBox.Text = Convert.ToString(Convert.ToInt32(BedsCountTextBox.Text) - Convert.ToInt32(RoomsDataGridView["bedsCount", e.RowIndex]));
+                    BedsCountTextBox.Text = Convert.ToString(Convert.ToInt32(BedsCountTextBox.Text) - Convert.ToInt32(RoomsDataGridView["bedsCount", e.RowIndex].Value));
                     RoomsDataGridView.Rows.RemoveAt(e.RowIndex);
                 }
             }

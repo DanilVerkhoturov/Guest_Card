@@ -59,7 +59,7 @@
             this.ApplicationNameLabel.Margin = new System.Windows.Forms.Padding(61, 36, 0, 0);
             this.ApplicationNameLabel.MaximumSize = new System.Drawing.Size(700, 35);
             this.ApplicationNameLabel.Name = "ApplicationNameLabel";
-            this.ApplicationNameLabel.Size = new System.Drawing.Size(263, 35);
+            this.ApplicationNameLabel.Size = new System.Drawing.Size(264, 35);
             this.ApplicationNameLabel.TabIndex = 0;
             this.ApplicationNameLabel.Text = "История заявок > ";
             this.ApplicationNameLabel.Click += new System.EventHandler(this.NewApplicationsLabel_Click);
@@ -89,6 +89,7 @@
             this.PrintButton.TabIndex = 18;
             this.PrintButton.Text = "Скачать";
             this.PrintButton.UseVisualStyleBackColor = false;
+            this.PrintButton.Click += new System.EventHandler(this.DownloadButton_Click);
             // 
             // SendButton
             // 
