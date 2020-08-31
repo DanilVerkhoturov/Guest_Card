@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -6,6 +7,8 @@ namespace Admin_Panel_Hotel.Customers
 {
     public partial class CustomerInfoForm : Form
     {
+        private DataTable AllLocations = Hotels.GetAll(Customer.Id);
+        private DataTable AllSubDivisions = Customer.GetAllSubdivisions();
         public CustomerInfoForm()
         {
             InitializeComponent();
@@ -16,7 +19,7 @@ namespace Admin_Panel_Hotel.Customers
 
             CustomerNameLabel.Text = $"Мои заказчики > {Customer.Name}"; // Установка названия выбранного заказчика.
 
-            LocationsDataGridView.DataSource = Locations.GetAll(Customer.Id);
+            LocationsDataGridView.DataSource = AllLocations;
         }
 
         private void LocationsDataGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -74,10 +77,13 @@ namespace Admin_Panel_Hotel.Customers
             SubDivisionsLabel.Font = new Font(SubDivisionsLabel.Font, FontStyle.Underline);
             SubDivisionsLabel.ForeColor = MyColors._00A0E3();
 
+            AddLocationButton.Visible = false;
+            AddSubDivisionButton.Visible = true;
+
             LocationsPanel.Visible = false;
             SubDivisionsPanel.Visible = true;
 
-            SubDivisionsDataGridView.DataSource = Customer.GetAllSubdivisions();
+            SubDivisionsDataGridView.DataSource = AllSubDivisions;
         }
 
         private void LocationsLabel_Click(object sender, EventArgs e)
@@ -87,10 +93,40 @@ namespace Admin_Panel_Hotel.Customers
             SubDivisionsLabel.Font = new Font(SubDivisionsLabel.Font, FontStyle.Regular);
             SubDivisionsLabel.ForeColor = Color.Black;
 
+            AddLocationButton.Visible = true;
+            AddSubDivisionButton.Visible = false;
+
             LocationsPanel.Visible = true;
             SubDivisionsPanel.Visible = false;
 
-            LocationsDataGridView.DataSource = Locations.GetAll(Customer.Id);
+            LocationsDataGridView.DataSource = AllLocations;
+        }
+
+        private void AddLocationButton_Click(object sender, EventArgs e)
+        {
+            Functions.OpenChildForm(new AddLocationInfo(), MainForm.ContP);
+        }
+
+        private void LocationSearchTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (LocationSearchTextBox.Text != LocationSearchTextBox.Tag.ToString())
+            {
+                DataView dataView = new DataView(AllLocations);
+                dataView.RowFilter = $"location_name LIKE '%{LocationSearchTextBox.Text}%'";
+
+                LocationsDataGridView.DataSource = dataView;
+            }
+        }
+
+        private void SubDivisionSearchTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (SubDivisionSearchTextBox.Text != SubDivisionSearchTextBox.Tag.ToString())
+            {
+                DataView dataView = new DataView(AllSubDivisions);
+                dataView.RowFilter = $"subdivision_name LIKE '%{SubDivisionSearchTextBox.Text}%'";
+
+                SubDivisionsDataGridView.DataSource = dataView;
+            }
         }
     }
 }

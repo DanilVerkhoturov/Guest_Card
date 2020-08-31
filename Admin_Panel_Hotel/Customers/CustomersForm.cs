@@ -1,20 +1,20 @@
 ﻿using Admin_Panel_Hotel.Customers;
 using System;
+using System.Data;
 using System.Windows.Forms;
 
 namespace Admin_Panel_Hotel
 {
     public partial class CustomersForm : Form
     {
+        DataTable AllCustomers = Customer.GetAll();
         public CustomersForm()
         {
             InitializeComponent();
 
-            CustomersComboBox.SelectedIndex = 0;
-
             Functions.SetPlaceholderTextBox(SearchTextBox, "Поиск");
 
-            CustomersDataGridView.DataSource = Customer.GetAll();
+            CustomersDataGridView.DataSource = AllCustomers;
         }
 
         private void CustomersDataGridView_CellMouseMove(object sender, DataGridViewCellMouseEventArgs e)
@@ -38,6 +38,17 @@ namespace Admin_Panel_Hotel
                 Customer.GetDivisionIdFromCustomerId(Customer.Id, out long divisionId);
                 Customer.DivisionId = divisionId;
                 Functions.OpenChildForm(new CustomerInfoForm(), MainForm.ContP);
+            }
+        }
+
+        private void SearchTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (SearchTextBox.Text != SearchTextBox.Tag.ToString())
+            {
+                DataView dataView = new DataView(AllCustomers);
+                dataView.RowFilter = $"name LIKE '%{SearchTextBox.Text}%'";
+
+                CustomersDataGridView.DataSource = dataView;
             }
         }
     }

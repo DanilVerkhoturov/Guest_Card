@@ -103,7 +103,7 @@ namespace Admin_Panel_Hotel.Customers
                         if (Hotels.FindRoom(RoomsDataGridView["roomNumber", i].Value.ToString(), Hotels.Id, out long roomId))
                         {
                             // Обновление данных комнаты.
-                            if (!Hotels.UpdateRoom(Convert.ToInt32(RoomsDataGridView["room_id", i].Value), RoomsDataGridView["roomNumber", i].Value.ToString(), Convert.ToInt32(RoomsDataGridView["bedsCount", i].Value)))
+                            if (!Hotels.EditRoom(Convert.ToInt32(RoomsDataGridView["room_id", i].Value), RoomsDataGridView["roomNumber", i].Value.ToString(), Convert.ToInt32(RoomsDataGridView["bedsCount", i].Value)))
                             {
                                 MessageBox.Show("Возникла непредвиденная ошибка с обновлением данных гостиницы!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }

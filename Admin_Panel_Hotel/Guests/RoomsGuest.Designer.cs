@@ -39,10 +39,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.TypeNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.status = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Comment = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.type_id = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.room_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.status_id = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.room_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.RoomsDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,10 +82,11 @@
             this.RoomsDataGridView.ColumnHeadersHeight = 35;
             this.RoomsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.RoomsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.TypeNumber,
-            this.Number,
-            this.status,
-            this.Comment});
+            this.type_id,
+            this.room_name,
+            this.status_id,
+            this.description,
+            this.room_id});
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -120,6 +122,7 @@
             this.RoomsDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.RoomsDataGridView.Size = new System.Drawing.Size(741, 642);
             this.RoomsDataGridView.TabIndex = 26;
+            this.RoomsDataGridView.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.RoomsDataGridView_CellEndEdit);
             // 
             // label2
             // 
@@ -134,7 +137,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(844, 114);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(217, 25);
+            this.label3.Size = new System.Drawing.Size(219, 25);
             this.label3.TabIndex = 28;
             this.label3.Text = "Всего койко-мест: 10";
             // 
@@ -143,49 +146,67 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(844, 148);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(218, 25);
+            this.label4.Size = new System.Drawing.Size(220, 25);
             this.label4.TabIndex = 29;
             this.label4.Text = "Жилых койко-мест: 7";
             // 
-            // TypeNumber
+            // type_id
             // 
-            this.TypeNumber.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.type_id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.type_id.DataPropertyName = "type_id";
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.TypeNumber.DefaultCellStyle = dataGridViewCellStyle3;
-            this.TypeNumber.FillWeight = 112.3096F;
-            this.TypeNumber.HeaderText = "Тип номера";
-            this.TypeNumber.MinimumWidth = 100;
-            this.TypeNumber.Name = "TypeNumber";
+            this.type_id.DefaultCellStyle = dataGridViewCellStyle3;
+            this.type_id.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.type_id.FillWeight = 112.3096F;
+            this.type_id.HeaderText = "Тип номера";
+            this.type_id.MinimumWidth = 100;
+            this.type_id.Name = "type_id";
+            this.type_id.ReadOnly = true;
+            this.type_id.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.type_id.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
-            // Number
+            // room_name
             // 
-            this.Number.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Number.FillWeight = 112.3096F;
-            this.Number.HeaderText = "Номер";
-            this.Number.Name = "Number";
+            this.room_name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.room_name.DataPropertyName = "room_name";
+            this.room_name.FillWeight = 112.3096F;
+            this.room_name.HeaderText = "Номер";
+            this.room_name.Name = "room_name";
+            this.room_name.ReadOnly = true;
             // 
-            // status
+            // status_id
             // 
-            this.status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.status.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.status.FillWeight = 112.3096F;
-            this.status.HeaderText = "Статус";
-            this.status.Items.AddRange(new object[] {
+            this.status_id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.status_id.DataPropertyName = "status_id";
+            this.status_id.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.status_id.FillWeight = 112.3096F;
+            this.status_id.HeaderText = "Статус";
+            this.status_id.Items.AddRange(new object[] {
             "Жилое",
             "Ремонт",
             "Нет койко-место"});
-            this.status.MinimumWidth = 10;
-            this.status.Name = "status";
-            this.status.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.status_id.MinimumWidth = 10;
+            this.status_id.Name = "status_id";
+            this.status_id.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
-            // Comment
+            // description
             // 
-            this.Comment.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Comment.FillWeight = 112.3096F;
-            this.Comment.HeaderText = "Примечание";
-            this.Comment.MinimumWidth = 10;
-            this.Comment.Name = "Comment";
-            this.Comment.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.description.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.description.DataPropertyName = "description";
+            this.description.FillWeight = 112.3096F;
+            this.description.HeaderText = "Примечание";
+            this.description.MinimumWidth = 10;
+            this.description.Name = "description";
+            this.description.ReadOnly = true;
+            this.description.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // room_id
+            // 
+            this.room_id.DataPropertyName = "room_id";
+            this.room_id.HeaderText = "room_id";
+            this.room_id.Name = "room_id";
+            this.room_id.ReadOnly = true;
+            this.room_id.Visible = false;
             // 
             // RoomsGuest
             // 
@@ -215,9 +236,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TypeNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Number;
-        private System.Windows.Forms.DataGridViewComboBoxColumn status;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Comment;
+        private System.Windows.Forms.DataGridViewComboBoxColumn type_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn room_name;
+        private System.Windows.Forms.DataGridViewComboBoxColumn status_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn description;
+        private System.Windows.Forms.DataGridViewTextBoxColumn room_id;
     }
 }

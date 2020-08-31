@@ -1,6 +1,6 @@
 ﻿namespace Admin_Panel_Hotel
 {
-    partial class NotificationsDelDraftForm
+    partial class YesNoNotification
     {
         /// <summary>
         /// Required designer variable.
@@ -28,22 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.NotificationTextLabel = new System.Windows.Forms.Label();
             this.NoButton = new System.Windows.Forms.Button();
             this.YesButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // NotificationTextLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Roboto", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(110, 114);
-            this.label1.Margin = new System.Windows.Forms.Padding(117, 105, 6, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(396, 76);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Вы точно хотите удалить \nлюдей из реестра?";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.NotificationTextLabel.Font = new System.Drawing.Font("Roboto", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.NotificationTextLabel.Location = new System.Drawing.Point(77, 52);
+            this.NotificationTextLabel.Margin = new System.Windows.Forms.Padding(117, 105, 6, 0);
+            this.NotificationTextLabel.Name = "NotificationTextLabel";
+            this.NotificationTextLabel.Size = new System.Drawing.Size(461, 138);
+            this.NotificationTextLabel.TabIndex = 0;
+            this.NotificationTextLabel.Text = "Вы точно хотите удалить \nлюдей из реестра?";
+            this.NotificationTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // NoButton
             // 
@@ -58,6 +57,7 @@
             this.NoButton.TabIndex = 1;
             this.NoButton.Text = "Нет";
             this.NoButton.UseVisualStyleBackColor = false;
+            this.NoButton.Click += new System.EventHandler(this.NoButton_Click);
             // 
             // YesButton
             // 
@@ -72,8 +72,9 @@
             this.YesButton.TabIndex = 2;
             this.YesButton.Text = "Да";
             this.YesButton.UseVisualStyleBackColor = false;
+            this.YesButton.Click += new System.EventHandler(this.YesButton_Click);
             // 
-            // NotificationsRegistryForm
+            // YesNoNotification
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -81,21 +82,21 @@
             this.ClientSize = new System.Drawing.Size(604, 398);
             this.Controls.Add(this.YesButton);
             this.Controls.Add(this.NoButton);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.NotificationTextLabel);
             this.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.Name = "NotificationsRegistryForm";
+            this.Margin = new System.Windows.Forms.Padding(6);
+            this.Name = "YesNoNotification";
             this.Opacity = 0.6D;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "NotificationsRegistryForm";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label NotificationTextLabel;
         private System.Windows.Forms.Button NoButton;
         private System.Windows.Forms.Button YesButton;
     }

@@ -8,23 +8,18 @@ namespace Admin_Panel_Hotel.Guests
 {
     public partial class NotificationsEvictionGuest : Form
     {
-        public NotificationsEvictionGuest()
-        {
-            InitializeComponent();
-        }
-
         /// <summary>
         /// Отобразить уведомление.
         /// </summary>
         /// <param name="parent">Родительская форма.</param>
         /// <param name="notificationText">Текст уведомления.</param>
         /// <param name="notificationImage">Иконка уведомления.</param>
-        public void Open(string notificationText, Bitmap notificationImage)
+        public NotificationsEvictionGuest(string notificationText, Bitmap notificationImage)
         {
             NotificationTextLabel.Text = notificationText;
             NotificationImagePictureBox.Image = notificationImage;
 
-            ShowDialog();
+            InitializeComponent();
         }
 
         private void CheckCard()

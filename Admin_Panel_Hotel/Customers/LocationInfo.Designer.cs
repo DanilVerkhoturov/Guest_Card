@@ -134,7 +134,7 @@
             this.Analyticslabel.Location = new System.Drawing.Point(510, 114);
             this.Analyticslabel.Margin = new System.Windows.Forms.Padding(35, 35, 3, 0);
             this.Analyticslabel.Name = "Analyticslabel";
-            this.Analyticslabel.Size = new System.Drawing.Size(135, 29);
+            this.Analyticslabel.Size = new System.Drawing.Size(136, 29);
             this.Analyticslabel.TabIndex = 3;
             this.Analyticslabel.Text = "Аналитика";
             // 
@@ -330,11 +330,13 @@
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.Dock = System.Windows.Forms.DockStyle.Top;
             this.label7.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.Location = new System.Drawing.Point(10, 48);
+            this.label7.Location = new System.Drawing.Point(0, 0);
             this.label7.Margin = new System.Windows.Forms.Padding(123, 48, 5, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(325, 25);
+            this.label7.Padding = new System.Windows.Forms.Padding(10, 48, 0, 0);
+            this.label7.Size = new System.Drawing.Size(334, 73);
             this.label7.TabIndex = 11;
             this.label7.Text = "Свойства карт для проживания";
             // 
@@ -423,7 +425,7 @@
             this.label9.Location = new System.Drawing.Point(39, 175);
             this.label9.Margin = new System.Windows.Forms.Padding(30, 37, 3, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(334, 25);
+            this.label9.Size = new System.Drawing.Size(333, 25);
             this.label9.TabIndex = 7;
             this.label9.Text = "Колличество карт для  локации: ";
             // 
@@ -443,7 +445,7 @@
             this.label6.Location = new System.Drawing.Point(39, 69);
             this.label6.Margin = new System.Windows.Forms.Padding(3, 16, 0, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(217, 25);
+            this.label6.Size = new System.Drawing.Size(218, 25);
             this.label6.TabIndex = 5;
             this.label6.Text = "Колличество комнат";
             // 
@@ -588,7 +590,7 @@
             this.AddRoomLabel.Location = new System.Drawing.Point(873, 52);
             this.AddRoomLabel.Margin = new System.Windows.Forms.Padding(3, 19, 3, 0);
             this.AddRoomLabel.Name = "AddRoomLabel";
-            this.AddRoomLabel.Size = new System.Drawing.Size(208, 25);
+            this.AddRoomLabel.Size = new System.Drawing.Size(209, 25);
             this.AddRoomLabel.TabIndex = 9;
             this.AddRoomLabel.Text = "+ добавить комнату";
             this.AddRoomLabel.Visible = false;
@@ -600,8 +602,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.ClientSize = new System.Drawing.Size(1093, 894);
-            this.Controls.Add(this.LocationInfoPanel);
             this.Controls.Add(this.AllCardPropertiesPanel);
+            this.Controls.Add(this.LocationInfoPanel);
             this.Controls.Add(this.Analyticslabel);
             this.Controls.Add(this.CardPropertiesLabel);
             this.Controls.Add(this.LocationDataLabel);

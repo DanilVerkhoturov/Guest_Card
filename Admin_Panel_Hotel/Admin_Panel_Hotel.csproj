@@ -119,11 +119,11 @@
       <DependentUpon>LocationsAccommodation.cs</DependentUpon>
     </Compile>
     <Compile Include="Applications.cs" />
-    <Compile Include="ApplicationsFolder\AddApplicationFood1.cs">
+    <Compile Include="ApplicationsFolder\AddApplicationFood.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ApplicationsFolder\AddApplicationFood1.Designer.cs">
-      <DependentUpon>AddApplicationFood1.cs</DependentUpon>
+    <Compile Include="ApplicationsFolder\AddApplicationFood.Designer.cs">
+      <DependentUpon>AddApplicationFood.cs</DependentUpon>
     </Compile>
     <Compile Include="ApplicationsFolder\CurrentApplications.cs">
       <SubType>Form</SubType>
@@ -205,11 +205,11 @@
     <Compile Include="ApplicationsFolder\DraftApplications.Designer.cs">
       <DependentUpon>DraftApplications.cs</DependentUpon>
     </Compile>
-    <Compile Include="Customers\AddSubdivision.cs">
+    <Compile Include="Customers\AddSubDivision.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Customers\AddSubdivision.Designer.cs">
-      <DependentUpon>AddSubdivision.cs</DependentUpon>
+    <Compile Include="Customers\AddSubDivision.Designer.cs">
+      <DependentUpon>AddSubDivision.cs</DependentUpon>
     </Compile>
     <Compile Include="Customers\CustomerInfoForm.cs">
       <SubType>Form</SubType>
@@ -360,11 +360,11 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="NotificationsDelDraftFormForm.cs">
+    <Compile Include="YesNoNotification.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NotificationsDelDraftFormForm.Designer.cs">
-      <DependentUpon>NotificationsDelDraftFormForm.cs</DependentUpon>
+    <Compile Include="YesNoNotification.Designer.cs">
+      <DependentUpon>YesNoNotification.cs</DependentUpon>
     </Compile>
     <Compile Include="NotificationsRegistryForm.cs">
       <SubType>Form</SubType>
@@ -437,8 +437,8 @@
     <EmbeddedResource Include="Accommodation\LocationsAccommodation.resx">
       <DependentUpon>LocationsAccommodation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ApplicationsFolder\AddApplicationFood1.resx">
-      <DependentUpon>AddApplicationFood1.cs</DependentUpon>
+    <EmbeddedResource Include="ApplicationsFolder\AddApplicationFood.resx">
+      <DependentUpon>AddApplicationFood.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ApplicationsFolder\CurrentApplications.resx">
       <DependentUpon>CurrentApplications.cs</DependentUpon>
@@ -482,8 +482,8 @@
     <EmbeddedResource Include="ApplicationsFolder\DraftApplications.resx">
       <DependentUpon>DraftApplications.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Customers\AddSubdivision.resx">
-      <DependentUpon>AddSubdivision.cs</DependentUpon>
+    <EmbeddedResource Include="Customers\AddSubDivision.resx">
+      <DependentUpon>AddSubDivision.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Customers\CustomerInfoForm.resx">
       <DependentUpon>CustomerInfoForm.cs</DependentUpon>
@@ -554,8 +554,8 @@
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NotificationsDelDraftFormForm.resx">
-      <DependentUpon>NotificationsDelDraftFormForm.cs</DependentUpon>
+    <EmbeddedResource Include="YesNoNotification.resx">
+      <DependentUpon>YesNoNotification.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NotificationsRegistryForm.resx">
       <DependentUpon>NotificationsRegistryForm.cs</DependentUpon>

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -41,6 +40,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.ContractNumberTextBox = new System.Windows.Forms.TextBox();
             this.NameTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -63,10 +63,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.AddCustomerLocationPanel = new System.Windows.Forms.Panel();
             this.RoomsDataGridView = new System.Windows.Forms.DataGridView();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RoomNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BedsCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.roomid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AddRoomsLabel = new System.Windows.Forms.Label();
             this.AddLocationLinkLabel = new System.Windows.Forms.LinkLabel();
             this.label9 = new System.Windows.Forms.Label();
@@ -104,6 +100,10 @@
             this.SubDivisionNameErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.SubDivisionEmailNameErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.SubDivisionEmailErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RoomNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BedsCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.roomid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CustomerInfoPanel.SuspendLayout();
             this.EmailsPanel.SuspendLayout();
             this.AddCustomerLocationPanel.SuspendLayout();
@@ -307,7 +307,7 @@
             this.label7.Location = new System.Drawing.Point(92, 219);
             this.label7.Margin = new System.Windows.Forms.Padding(144, 37, 5, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(312, 25);
+            this.label7.Size = new System.Drawing.Size(311, 25);
             this.label7.TabIndex = 40;
             this.label7.Text = "Количество карт для локации:";
             // 
@@ -443,37 +443,6 @@
             this.RoomsDataGridView.Visible = false;
             this.RoomsDataGridView.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.RoomsDataGridView_CellEndEdit);
             // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "№";
-            this.Column2.Name = "Column2";
-            // 
-            // RoomNumber
-            // 
-            this.RoomNumber.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.RoomNumber.DataPropertyName = "room_name";
-            this.RoomNumber.HeaderText = "Номер комнаты";
-            this.RoomNumber.Name = "RoomNumber";
-            this.RoomNumber.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // BedsCount
-            // 
-            this.BedsCount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.BedsCount.DataPropertyName = "beds_count";
-            dataGridViewCellStyle1.Format = "N0";
-            dataGridViewCellStyle1.NullValue = "0";
-            this.BedsCount.DefaultCellStyle = dataGridViewCellStyle1;
-            this.BedsCount.HeaderText = "Количество мест";
-            this.BedsCount.Name = "BedsCount";
-            this.BedsCount.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // roomid
-            // 
-            this.roomid.DataPropertyName = "room_id";
-            this.roomid.HeaderText = "roomid";
-            this.roomid.Name = "roomid";
-            this.roomid.Visible = false;
-            // 
             // AddRoomsLabel
             // 
             this.AddRoomsLabel.AutoSize = true;
@@ -481,7 +450,7 @@
             this.AddRoomsLabel.Location = new System.Drawing.Point(71, 296);
             this.AddRoomsLabel.Margin = new System.Windows.Forms.Padding(142, 52, 5, 0);
             this.AddRoomsLabel.Name = "AddRoomsLabel";
-            this.AddRoomsLabel.Size = new System.Drawing.Size(224, 29);
+            this.AddRoomsLabel.Size = new System.Drawing.Size(225, 29);
             this.AddRoomsLabel.TabIndex = 55;
             this.AddRoomsLabel.Text = "Добавить комнату";
             this.AddRoomsLabel.Visible = false;
@@ -964,6 +933,38 @@
             this.SubDivisionEmailErrorProvider.ContainerControl = this;
             this.SubDivisionEmailErrorProvider.Icon = ((System.Drawing.Icon)(resources.GetObject("SubDivisionEmailErrorProvider.Icon")));
             // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "№";
+            this.Column2.Name = "Column2";
+            this.Column2.Visible = false;
+            // 
+            // RoomNumber
+            // 
+            this.RoomNumber.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.RoomNumber.DataPropertyName = "room_name";
+            this.RoomNumber.HeaderText = "Номер комнаты";
+            this.RoomNumber.Name = "RoomNumber";
+            this.RoomNumber.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // BedsCount
+            // 
+            this.BedsCount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.BedsCount.DataPropertyName = "beds_count";
+            dataGridViewCellStyle1.Format = "N0";
+            dataGridViewCellStyle1.NullValue = "0";
+            this.BedsCount.DefaultCellStyle = dataGridViewCellStyle1;
+            this.BedsCount.HeaderText = "Количество мест";
+            this.BedsCount.Name = "BedsCount";
+            this.BedsCount.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // roomid
+            // 
+            this.roomid.DataPropertyName = "room_id";
+            this.roomid.HeaderText = "roomid";
+            this.roomid.Name = "roomid";
+            this.roomid.Visible = false;
+            // 
             // AddCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -1069,13 +1070,13 @@
         private System.Windows.Forms.DataGridViewLinkColumn subdivisionName;
         private System.Windows.Forms.DataGridViewImageColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn customer_id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RoomNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BedsCount;
-        private System.Windows.Forms.DataGridViewTextBoxColumn roomid;
         private System.Windows.Forms.DataGridViewTextBoxColumn Num;
         private System.Windows.Forms.DataGridViewLinkColumn LocationName;
         private System.Windows.Forms.DataGridViewImageColumn DeleteLocation;
         private System.Windows.Forms.DataGridViewTextBoxColumn hotel_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RoomNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BedsCount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn roomid;
     }
 }

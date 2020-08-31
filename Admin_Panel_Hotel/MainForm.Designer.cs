@@ -30,6 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.LeftMenu = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.AddUserButton = new System.Windows.Forms.Button();
+            this.PickButton = new System.Windows.Forms.Button();
+            this.RulesButton = new System.Windows.Forms.Button();
             this.UsersButton = new System.Windows.Forms.Button();
             this.AccommodationPanel = new System.Windows.Forms.Panel();
             this.AccommodationHistoryButton = new System.Windows.Forms.Button();
@@ -74,11 +78,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.TopPanel = new System.Windows.Forms.Panel();
             this.UserButton = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.PickButton = new System.Windows.Forms.Button();
-            this.RulesButton = new System.Windows.Forms.Button();
-            this.AddUserButton = new System.Windows.Forms.Button();
             this.LeftMenu.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.AccommodationPanel.SuspendLayout();
             this.GuestsPanel.SuspendLayout();
             this.RegistryPanel.SuspendLayout();
@@ -95,7 +96,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.TopPanel.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // LeftMenu
@@ -125,6 +125,73 @@
             this.LeftMenu.Name = "LeftMenu";
             this.LeftMenu.Size = new System.Drawing.Size(313, 985);
             this.LeftMenu.TabIndex = 0;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.AddUserButton);
+            this.panel1.Controls.Add(this.PickButton);
+            this.panel1.Controls.Add(this.RulesButton);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 1352);
+            this.panel1.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(296, 138);
+            this.panel1.TabIndex = 22;
+            this.panel1.Visible = false;
+            // 
+            // AddUserButton
+            // 
+            this.AddUserButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.AddUserButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.AddUserButton.FlatAppearance.BorderSize = 0;
+            this.AddUserButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddUserButton.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AddUserButton.ForeColor = System.Drawing.Color.White;
+            this.AddUserButton.Location = new System.Drawing.Point(0, 86);
+            this.AddUserButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.AddUserButton.Name = "AddUserButton";
+            this.AddUserButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.AddUserButton.Size = new System.Drawing.Size(296, 43);
+            this.AddUserButton.TabIndex = 4;
+            this.AddUserButton.Text = "Добавить";
+            this.AddUserButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AddUserButton.UseVisualStyleBackColor = true;
+            // 
+            // PickButton
+            // 
+            this.PickButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.PickButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PickButton.FlatAppearance.BorderSize = 0;
+            this.PickButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PickButton.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.PickButton.ForeColor = System.Drawing.Color.White;
+            this.PickButton.Location = new System.Drawing.Point(0, 43);
+            this.PickButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.PickButton.Name = "PickButton";
+            this.PickButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.PickButton.Size = new System.Drawing.Size(296, 43);
+            this.PickButton.TabIndex = 3;
+            this.PickButton.Text = "Выбрать";
+            this.PickButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.PickButton.UseVisualStyleBackColor = true;
+            // 
+            // RulesButton
+            // 
+            this.RulesButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.RulesButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.RulesButton.FlatAppearance.BorderSize = 0;
+            this.RulesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RulesButton.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.RulesButton.ForeColor = System.Drawing.Color.White;
+            this.RulesButton.Location = new System.Drawing.Point(0, 0);
+            this.RulesButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.RulesButton.Name = "RulesButton";
+            this.RulesButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.RulesButton.Size = new System.Drawing.Size(296, 43);
+            this.RulesButton.TabIndex = 2;
+            this.RulesButton.Text = "Роли";
+            this.RulesButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.RulesButton.UseVisualStyleBackColor = true;
             // 
             // UsersButton
             // 
@@ -853,73 +920,6 @@
             this.UserButton.TabIndex = 0;
             this.UserButton.UseVisualStyleBackColor = true;
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.AddUserButton);
-            this.panel1.Controls.Add(this.PickButton);
-            this.panel1.Controls.Add(this.RulesButton);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 1352);
-            this.panel1.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(296, 138);
-            this.panel1.TabIndex = 22;
-            this.panel1.Visible = false;
-            // 
-            // PickButton
-            // 
-            this.PickButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.PickButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PickButton.FlatAppearance.BorderSize = 0;
-            this.PickButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PickButton.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.PickButton.ForeColor = System.Drawing.Color.White;
-            this.PickButton.Location = new System.Drawing.Point(0, 43);
-            this.PickButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
-            this.PickButton.Name = "PickButton";
-            this.PickButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.PickButton.Size = new System.Drawing.Size(296, 43);
-            this.PickButton.TabIndex = 3;
-            this.PickButton.Text = "Выбрать";
-            this.PickButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.PickButton.UseVisualStyleBackColor = true;
-            // 
-            // RulesButton
-            // 
-            this.RulesButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.RulesButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.RulesButton.FlatAppearance.BorderSize = 0;
-            this.RulesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RulesButton.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.RulesButton.ForeColor = System.Drawing.Color.White;
-            this.RulesButton.Location = new System.Drawing.Point(0, 0);
-            this.RulesButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
-            this.RulesButton.Name = "RulesButton";
-            this.RulesButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.RulesButton.Size = new System.Drawing.Size(296, 43);
-            this.RulesButton.TabIndex = 2;
-            this.RulesButton.Text = "Роли";
-            this.RulesButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.RulesButton.UseVisualStyleBackColor = true;
-            // 
-            // AddUserButton
-            // 
-            this.AddUserButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.AddUserButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.AddUserButton.FlatAppearance.BorderSize = 0;
-            this.AddUserButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddUserButton.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.AddUserButton.ForeColor = System.Drawing.Color.White;
-            this.AddUserButton.Location = new System.Drawing.Point(0, 86);
-            this.AddUserButton.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
-            this.AddUserButton.Name = "AddUserButton";
-            this.AddUserButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.AddUserButton.Size = new System.Drawing.Size(296, 43);
-            this.AddUserButton.TabIndex = 4;
-            this.AddUserButton.Text = "Добавить";
-            this.AddUserButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AddUserButton.UseVisualStyleBackColor = true;
-            // 
             // MainForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -940,6 +940,7 @@
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.Shown += new System.EventHandler(this.MainForm_Shown);
             this.LeftMenu.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.AccommodationPanel.ResumeLayout(false);
             this.GuestsPanel.ResumeLayout(false);
             this.RegistryPanel.ResumeLayout(false);
@@ -956,7 +957,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.TopPanel.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

@@ -86,7 +86,7 @@ namespace Admin_Panel_Hotel.Cards
 
         private void DownloadButton_Click(object sender, EventArgs e)
         {
-            string fileExcel = Functions.DataGridViewToExcel(CardsDataGridView, $"Все карты {DateTime.Now.ToShortDateString()}", out string filePath);
+            string fileExcel = Functions.DataGridViewToExcel(CardsDataGridView, $@"{Environment.CurrentDirectory}\Все карты {DateTime.Now.ToShortDateString()}", out string filePath);
             Process.Start(filePath);
         }
     }

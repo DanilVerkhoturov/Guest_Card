@@ -27,7 +27,7 @@ namespace Admin_Panel_Hotel.ApplicationsFolder
 
         private void DownloadButton_Click(object sender, EventArgs e)
         {
-            string fileExcel = Functions.DataGridViewToExcel(UsersDataGridView, $"История заявок - {Customer.Name} - {Applications.Date}", out string filePath);
+            string fileExcel = Functions.DataGridViewToExcel(UsersDataGridView, $@"{Environment.CurrentDirectory}\Проживание - История заявок - {Customer.Name} - {Applications.Date}", out string filePath);
             Process.Start(filePath);
         }
     }

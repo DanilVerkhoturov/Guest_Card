@@ -63,7 +63,7 @@ namespace Admin_Panel_Hotel.ApplicationsFolder
 
         private void DownloadButton_Click(object sender, EventArgs e)
         {
-            string fileExcel = Functions.DataGridViewToExcel(UsersDataGridView, $"Текущие заявки - {Customer.Name} - {Applications.Date}", out string filePath);
+            string fileExcel = Functions.DataGridViewToExcel(UsersDataGridView, $@"{Environment.CurrentDirectory}\Проживание - Текущие заявки - {Customer.Name} - {Applications.Date}", out string filePath);
             Process.Start(filePath);
         }
     }

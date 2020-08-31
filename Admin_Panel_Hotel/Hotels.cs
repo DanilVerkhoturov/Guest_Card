@@ -81,27 +81,26 @@ namespace Admin_Panel_Hotel
         }
 
         /// <summary>
-        /// Обновить информацию о комнате.
-        /// </summary>
-        /// <param name="id">Уникальный номер (Id) комнаты.</param>
-        /// <param name="name">Номер комнаты.</param>
-        /// <param name="bedsCount">Количество спальных мест.</param>
-        /// <returns>Возвращает результат обновления данных.</returns>
-        public static bool UpdateRoom(long id, string name, int bedsCount)
-        {
-            return Functions.SqlUpdate($"UPDATE room SET name = \"{name}\", count_beds = {bedsCount} WHERE id = {id}") >= 0;
-        }
-
-        /// <summary>
         /// Изменить информацию о комнате.
         /// </summary>
         /// <param name="roomId">Уникальный номер (Id) комнаты.</param>
         /// <param name="name">Номер комнаты.</param>
         /// <param name="bedsCount">Количество спальных мест в комнате.</param>
         /// <returns>Возвращает уникальный номер (Id) изменённой комнаты.</returns>
-        public static long EditRoom(long roomId, string name, string bedsCount)
+        public static bool EditRoom(long roomId, string name, long bedsCount)
         {
-            return Functions.SqlUpdate($"UPDATE room SET name = \"{name}\", count_beds = {bedsCount} WHERE id = {roomId}");
+            return Functions.SqlUpdate($"UPDATE room SET name = \"{name}\", count_beds = {bedsCount} WHERE id = {roomId}") >= 0;
+        }
+
+        /// <summary>
+        /// Изменить статус комнаты.
+        /// </summary>
+        /// <param name="roomId">Уникальный номер (Id) комнаты.</param>
+        /// <param name="statusId">Уникальный номер (Id) статуса.</param>
+        /// <returns>Возвращает результат изменения.</returns>
+        public static bool EditRoomStatus(long roomId, long statusId)
+        {
+            return Functions.SqlUpdate($"UPDATE room SET status_id = {statusId} WHERE id = {roomId}") >= 0;
         }
 
         /// <summary>
@@ -129,10 +128,11 @@ namespace Admin_Panel_Hotel
         /// <summary>
         /// Получить список всех гостиниц заказчика.
         /// </summary>
+        /// <param name="customerId">Уникальный номер (Id) заказчика.</param>
         /// <returns>Возвращает таблицу со всеми гостиницами заказчика.</returns>
-        public static DataTable GetAll()
+        public static DataTable GetAll(long customerId)
         {
-            return Functions.ExecuteSql($"SELECT hotel_id, location_name FROM customer_locations_list WHERE customer_id = {Customer.Id}");
+            return Functions.ExecuteSql($"SELECT hotel_id, location_name FROM customer_locations_list WHERE customer_id = {customerId}");
         }
 
         /// <summary>
@@ -142,6 +142,34 @@ namespace Admin_Panel_Hotel
         public static DataTable GetRooms()
         {
             return Functions.ExecuteSql($"SELECT id as room_id, name as room_name, count_beds as beds_count FROM room WHERE hotel_id = {Id}");
+        }
+
+        /// <summary>
+        /// Получить список комнат гостиницы.
+        /// </summary>
+        /// <param name="locationId">Уникальный номер (Id) локации.</param>
+        /// <returns>Возвращает список всех комнат гостиницы.</returns>
+        public static DataTable GetRooms(long locationId)
+        {
+            return Functions.ExecuteSql($"SELECT room_id, type_id, status_id, room_name, description FROM room_list WHERE location_id = {locationId}");
+        }
+
+        /// <summary>
+        /// Получить список типов комнат гостиницы.
+        /// </summary>
+        /// <returns>Возвращает список всех типов комнат гостиницы.</returns>
+        public static DataTable GetRoomTypes()
+        {
+            return Functions.ExecuteSql("SELECT id as type_id, name as type_name FROM room_type");
+        }
+
+        /// <summary>
+        /// Получить список статусов комнат гостиницы.
+        /// </summary>
+        /// <returns>Возвращает список всех статусов комнат гостиницы.</returns>
+        public static DataTable GetRoomStatuses()
+        {
+            return Functions.ExecuteSql("SELECT id as status_id, name as status_name FROM room_status");
         }
 
         /// <summary>

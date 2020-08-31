@@ -17,5 +17,9 @@
         /// Роль.
         /// </summary>
         public static string Role { get; set; }
+        /// <summary>
+        /// Уникальный номер (Id) локации пользователя.
+        /// </summary>
+        public static long LocationId { get; set; }
     }
 }

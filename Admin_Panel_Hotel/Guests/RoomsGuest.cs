@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 
 namespace Admin_Panel_Hotel.Guests
 {
@@ -8,19 +9,21 @@ namespace Admin_Panel_Hotel.Guests
         {
             InitializeComponent();
 
-            RoomsDataGridView.Rows.Add("Стандарт 2-х местный", "112", "Жилое");
-            RoomsDataGridView.Rows.Add("Стандарт 2-х местный", "112", "Жилое");
+            Functions.FillRoomTypesInDataGridView(RoomsDataGridView);
+            Functions.FillRoomStatusesInDataGridView(RoomsDataGridView);
 
-            RoomsDataGridView.Rows.Add("Стандарт 2-х местный", "113", "Ремонт", "Ремонт до 30.02.2020");
-            RoomsDataGridView.Rows.Add("Стандарт 2-х местный", "113", "Ремонт", "Ремонт до 30.02.2020");
+            RoomsDataGridView.AutoGenerateColumns = false;
+            RoomsDataGridView.DataSource = Hotels.GetRooms(User.LocationId);
+        }
 
-            RoomsDataGridView.Rows.Add("Стандарт 2-х местный", "114", "Жилое");
-            RoomsDataGridView.Rows.Add("Стандарт 2-х местный", "114", "Жилое");
-
-            RoomsDataGridView.Rows.Add("Стандарт 4-х местный", "112", "Жилое");
-            RoomsDataGridView.Rows.Add("Стандарт 4-х местный", "112", "Жилое");
-            RoomsDataGridView.Rows.Add("Стандарт 4-х местный", "112", "Нет койко-место", "Сломана спинка");
-            RoomsDataGridView.Rows.Add("Стандарт 4-х местный", "112", "Жилое");
+        private void RoomsDataGridView_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            YesNoNotification yesNo = new YesNoNotification($"Изменить статус комнаты {RoomsDataGridView["room_name", e.RowIndex].Value}: \"{RoomsDataGridView["status_id", e.RowIndex].FormattedValue}\"");
+            yesNo.Owner = this;
+            if (yesNo.ShowDialog() == DialogResult.Yes)
+            {
+                Hotels.EditRoomStatus(Convert.ToInt64(RoomsDataGridView["room_id", e.RowIndex].Value), Convert.ToInt64(RoomsDataGridView["status_id", e.RowIndex].Value));
+            }
         }
     }
 }

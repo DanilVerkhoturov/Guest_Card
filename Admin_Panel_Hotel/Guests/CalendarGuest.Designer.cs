@@ -41,13 +41,6 @@
             this.tomorrowLabel = new System.Windows.Forms.Label();
             this.todayLabel = new System.Windows.Forms.Label();
             this.UsersDataGridView = new System.Windows.Forms.DataGridView();
-            this.TypeRoom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Namber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Organization = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DateStart = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DateEnd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Busy = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AllStateLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
@@ -61,6 +54,13 @@
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.TypeRoom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Namber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Organization = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DateStart = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DateEnd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Busy = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.UsersDataGridView)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -153,7 +153,7 @@
             this.UsersDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(160)))), ((int)(((byte)(227)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
@@ -203,74 +203,6 @@
             this.UsersDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.UsersDataGridView.Size = new System.Drawing.Size(990, 577);
             this.UsersDataGridView.TabIndex = 75;
-            // 
-            // TypeRoom
-            // 
-            this.TypeRoom.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.TypeRoom.FillWeight = 20F;
-            this.TypeRoom.HeaderText = "Тип номера";
-            this.TypeRoom.Name = "TypeRoom";
-            this.TypeRoom.ReadOnly = true;
-            this.TypeRoom.Width = 198;
-            // 
-            // Namber
-            // 
-            this.Namber.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Namber.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Namber.FillWeight = 112.3096F;
-            this.Namber.HeaderText = "Номер";
-            this.Namber.MinimumWidth = 50;
-            this.Namber.Name = "Namber";
-            this.Namber.ReadOnly = true;
-            this.Namber.Width = 129;
-            // 
-            // Fio
-            // 
-            this.Fio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Fio.FillWeight = 112.3096F;
-            this.Fio.HeaderText = "ФИО";
-            this.Fio.MinimumWidth = 100;
-            this.Fio.Name = "Fio";
-            this.Fio.ReadOnly = true;
-            // 
-            // Organization
-            // 
-            this.Organization.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Organization.FillWeight = 112.3096F;
-            this.Organization.HeaderText = "Организация";
-            this.Organization.MinimumWidth = 100;
-            this.Organization.Name = "Organization";
-            this.Organization.ReadOnly = true;
-            this.Organization.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // DateStart
-            // 
-            this.DateStart.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.DateStart.FillWeight = 112.3096F;
-            this.DateStart.HeaderText = "Дата заезда";
-            this.DateStart.MinimumWidth = 10;
-            this.DateStart.Name = "DateStart";
-            this.DateStart.ReadOnly = true;
-            this.DateStart.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.DateStart.Width = 189;
-            // 
-            // DateEnd
-            // 
-            this.DateEnd.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.DateEnd.HeaderText = "Дата выезда";
-            this.DateEnd.Name = "DateEnd";
-            this.DateEnd.ReadOnly = true;
-            this.DateEnd.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.DateEnd.Width = 198;
-            // 
-            // Busy
-            // 
-            this.Busy.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Busy.HeaderText = "Занято мест";
-            this.Busy.Name = "Busy";
-            this.Busy.ReadOnly = true;
-            this.Busy.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // AllStateLabel
             // 
@@ -426,6 +358,70 @@
             this.label7.TabIndex = 82;
             this.label7.Text = "Период до";
             this.label7.Visible = false;
+            // 
+            // TypeRoom
+            // 
+            this.TypeRoom.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TypeRoom.FillWeight = 112F;
+            this.TypeRoom.HeaderText = "Тип номера";
+            this.TypeRoom.Name = "TypeRoom";
+            this.TypeRoom.ReadOnly = true;
+            // 
+            // Namber
+            // 
+            this.Namber.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Namber.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Namber.FillWeight = 112.3096F;
+            this.Namber.HeaderText = "Номер";
+            this.Namber.MinimumWidth = 50;
+            this.Namber.Name = "Namber";
+            this.Namber.ReadOnly = true;
+            // 
+            // Fio
+            // 
+            this.Fio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Fio.FillWeight = 112.3096F;
+            this.Fio.HeaderText = "ФИО";
+            this.Fio.MinimumWidth = 100;
+            this.Fio.Name = "Fio";
+            this.Fio.ReadOnly = true;
+            // 
+            // Organization
+            // 
+            this.Organization.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Organization.FillWeight = 112.3096F;
+            this.Organization.HeaderText = "Организация";
+            this.Organization.MinimumWidth = 100;
+            this.Organization.Name = "Organization";
+            this.Organization.ReadOnly = true;
+            this.Organization.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // DateStart
+            // 
+            this.DateStart.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.DateStart.FillWeight = 112.3096F;
+            this.DateStart.HeaderText = "Дата заезда";
+            this.DateStart.MinimumWidth = 10;
+            this.DateStart.Name = "DateStart";
+            this.DateStart.ReadOnly = true;
+            this.DateStart.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // DateEnd
+            // 
+            this.DateEnd.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.DateEnd.HeaderText = "Дата выезда";
+            this.DateEnd.Name = "DateEnd";
+            this.DateEnd.ReadOnly = true;
+            this.DateEnd.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Busy
+            // 
+            this.Busy.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Busy.HeaderText = "Занято мест";
+            this.Busy.Name = "Busy";
+            this.Busy.ReadOnly = true;
+            this.Busy.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // CalendarGuest
             // 

@@ -264,7 +264,7 @@ namespace Admin_Panel_Hotel
         /// <summary>
         /// Заполнить выпадающий список пользователей организации в таблице.
         /// </summary>
-        /// <param name="dgv">Таблица</param>
+        /// <param name="dgv">Таблица.</param>
         /// <param name="divisionId">Уникальный номер организации.</param>
         public static void FillUsersInDataGridViewComboBox(DataGridView dgv, long divisionId)
         {
@@ -277,7 +277,7 @@ namespace Admin_Panel_Hotel
         /// <summary>
         /// Заполнить выпадающий список пользователей организации в таблице.
         /// </summary>
-        /// <param name="dgv">Таблица</param>
+        /// <param name="dgv">Таблица.</param>
         public static void FillUsersInDataGridViewComboBox(DataGridView dgv)
         {
             DataGridViewComboBoxColumn usersComboBox = (DataGridViewComboBoxColumn)dgv.Columns["user_id"];
@@ -289,12 +289,38 @@ namespace Admin_Panel_Hotel
         /// <summary>
         /// Заполнить выпадающий список статусов в таблице.
         /// </summary>
-        /// <param name="dgv">Таблица</param>
+        /// <param name="dgv">Таблица.</param>
         public static void FillCardStatusesInDataGridView(DataGridView dgv)
         {
             // Подгрузка статусов карт в выпадающий список таблицы.
             DataGridViewComboBoxColumn statusesComboBox = (DataGridViewComboBoxColumn)dgv.Columns["status_id"];
             statusesComboBox.DataSource = Card.GetStatuses();
+            statusesComboBox.ValueMember = "status_id";
+            statusesComboBox.DisplayMember = "status_name";
+        }
+
+        /// <summary>
+        /// Заполнить выпадающий список типов комнат в таблице.
+        /// </summary>
+        /// <param name="dgv">Таблица.</param>
+        public static void FillRoomTypesInDataGridView(DataGridView dgv)
+        {
+            // Подгрузка типов комнат в выпадающий список таблицы.
+            DataGridViewComboBoxColumn typesComboBox = (DataGridViewComboBoxColumn)dgv.Columns["type_id"];
+            typesComboBox.DataSource = Hotels.GetRoomTypes();
+            typesComboBox.ValueMember = "type_id";
+            typesComboBox.DisplayMember = "type_name";
+        }
+
+        /// <summary>
+        /// Заполнить выпадающий список статусов комнат в таблице.
+        /// </summary>
+        /// <param name="dgv">Таблица.</param>
+        public static void FillRoomStatusesInDataGridView(DataGridView dgv)
+        {
+            // Подгрузка статусов комнат в выпадающий список таблицы.
+            DataGridViewComboBoxColumn statusesComboBox = (DataGridViewComboBoxColumn)dgv.Columns["status_id"];
+            statusesComboBox.DataSource = Hotels.GetRoomStatuses();
             statusesComboBox.ValueMember = "status_id";
             statusesComboBox.DisplayMember = "status_name";
         }

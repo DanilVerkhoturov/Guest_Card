@@ -1,6 +1,6 @@
 ﻿namespace Admin_Panel_Hotel.ApplicationsFolder
 {
-    partial class AddApplicationFood1
+    partial class AddApplicationFood
     {
         /// <summary>
         /// Required designer variable.

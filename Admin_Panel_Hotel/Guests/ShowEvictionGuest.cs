@@ -12,9 +12,8 @@ namespace Admin_Panel_Hotel.Guests
 
         private void AcceptButton_Click(object sender, EventArgs e)
         {
-            NotificationsEvictionGuest notificationsEvictionGuest = new NotificationsEvictionGuest();
+            NotificationsEvictionGuest notificationsEvictionGuest = new NotificationsEvictionGuest("Для подтверждения поднесите карту к магнитному считывателю", Properties.Resources.ToAccept);
             notificationsEvictionGuest.Owner = this;
-            notificationsEvictionGuest.Open("Для подтверждения поднесите карту к магнитному считывателю", Properties.Resources.ToAccept);
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)

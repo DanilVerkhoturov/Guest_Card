@@ -50,7 +50,7 @@
             this.LocationSearchTextBox = new System.Windows.Forms.TextBox();
             this.LocationsLabel = new System.Windows.Forms.Label();
             this.SubDivisionsLabel = new System.Windows.Forms.Label();
-            this.AddCustomers = new System.Windows.Forms.Button();
+            this.AddSubDivisionButton = new System.Windows.Forms.Button();
             this.LocationsPanel = new System.Windows.Forms.Panel();
             this.SubDivisionsPanel = new System.Windows.Forms.Panel();
             this.SubDivisionSearchTextBox = new System.Windows.Forms.TextBox();
@@ -178,7 +178,7 @@
             // 
             // id
             // 
-            this.id.DataPropertyName = "location_id";
+            this.id.DataPropertyName = "hotel_id";
             this.id.HeaderText = "id";
             this.id.Name = "id";
             this.id.ReadOnly = true;
@@ -208,6 +208,7 @@
             this.AddLocationButton.TabIndex = 2;
             this.AddLocationButton.Text = "Добавить";
             this.AddLocationButton.UseVisualStyleBackColor = false;
+            this.AddLocationButton.Click += new System.EventHandler(this.AddLocationButton_Click);
             // 
             // LocationSearchTextBox
             // 
@@ -221,6 +222,7 @@
             this.LocationSearchTextBox.Size = new System.Drawing.Size(258, 33);
             this.LocationSearchTextBox.TabIndex = 4;
             this.LocationSearchTextBox.Text = "Поиск";
+            this.LocationSearchTextBox.TextChanged += new System.EventHandler(this.LocationSearchTextBox_TextChanged);
             // 
             // LocationsLabel
             // 
@@ -248,21 +250,22 @@
             this.SubDivisionsLabel.Text = "Организации";
             this.SubDivisionsLabel.Click += new System.EventHandler(this.SubDivisionsLabel_Click);
             // 
-            // AddCustomers
+            // AddSubDivisionButton
             // 
-            this.AddCustomers.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.AddCustomers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(82)))), ((int)(((byte)(119)))));
-            this.AddCustomers.FlatAppearance.BorderSize = 0;
-            this.AddCustomers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddCustomers.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.AddCustomers.ForeColor = System.Drawing.Color.White;
-            this.AddCustomers.Location = new System.Drawing.Point(768, 47);
-            this.AddCustomers.Margin = new System.Windows.Forms.Padding(0, 34, 3, 3);
-            this.AddCustomers.Name = "AddCustomers";
-            this.AddCustomers.Size = new System.Drawing.Size(131, 37);
-            this.AddCustomers.TabIndex = 51;
-            this.AddCustomers.Text = "Добавить";
-            this.AddCustomers.UseVisualStyleBackColor = false;
+            this.AddSubDivisionButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.AddSubDivisionButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(82)))), ((int)(((byte)(119)))));
+            this.AddSubDivisionButton.FlatAppearance.BorderSize = 0;
+            this.AddSubDivisionButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddSubDivisionButton.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AddSubDivisionButton.ForeColor = System.Drawing.Color.White;
+            this.AddSubDivisionButton.Location = new System.Drawing.Point(768, 47);
+            this.AddSubDivisionButton.Margin = new System.Windows.Forms.Padding(0, 34, 3, 3);
+            this.AddSubDivisionButton.Name = "AddSubDivisionButton";
+            this.AddSubDivisionButton.Size = new System.Drawing.Size(131, 37);
+            this.AddSubDivisionButton.TabIndex = 51;
+            this.AddSubDivisionButton.Text = "Добавить";
+            this.AddSubDivisionButton.UseVisualStyleBackColor = false;
+            this.AddSubDivisionButton.Visible = false;
             // 
             // LocationsPanel
             // 
@@ -281,6 +284,7 @@
             this.SubDivisionsPanel.Name = "SubDivisionsPanel";
             this.SubDivisionsPanel.Size = new System.Drawing.Size(911, 610);
             this.SubDivisionsPanel.TabIndex = 53;
+            this.SubDivisionsPanel.Visible = false;
             // 
             // SubDivisionSearchTextBox
             // 
@@ -294,6 +298,7 @@
             this.SubDivisionSearchTextBox.Size = new System.Drawing.Size(258, 33);
             this.SubDivisionSearchTextBox.TabIndex = 4;
             this.SubDivisionSearchTextBox.Text = "Поиск";
+            this.SubDivisionSearchTextBox.TextChanged += new System.EventHandler(this.SubDivisionSearchTextBox_TextChanged);
             // 
             // SubDivisionsDataGridView
             // 
@@ -421,14 +426,14 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.ClientSize = new System.Drawing.Size(1013, 894);
-            this.Controls.Add(this.AddCustomers);
             this.Controls.Add(this.SubDivisionsLabel);
             this.Controls.Add(this.LocationsLabel);
             this.Controls.Add(this.AddLocationButton);
             this.Controls.Add(this.CustomerNameLabel);
+            this.Controls.Add(this.AddLocations);
+            this.Controls.Add(this.AddSubDivisionButton);
             this.Controls.Add(this.LocationsPanel);
             this.Controls.Add(this.SubDivisionsPanel);
-            this.Controls.Add(this.AddLocations);
             this.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(6);
@@ -455,17 +460,17 @@
         private System.Windows.Forms.TextBox LocationSearchTextBox;
         private System.Windows.Forms.Label LocationsLabel;
         private System.Windows.Forms.Label SubDivisionsLabel;
-        private System.Windows.Forms.Button AddCustomers;
+        private System.Windows.Forms.Button AddSubDivisionButton;
         private System.Windows.Forms.Panel LocationsPanel;
         private System.Windows.Forms.Panel SubDivisionsPanel;
         private System.Windows.Forms.TextBox SubDivisionSearchTextBox;
         private System.Windows.Forms.DataGridView SubDivisionsDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn name;
-        private System.Windows.Forms.DataGridViewImageColumn showLocation;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn subdivision_name;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn subdivision_id;
         private System.Windows.Forms.Button AddLocations;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name;
+        private System.Windows.Forms.DataGridViewImageColumn showLocation;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
     }
 }
